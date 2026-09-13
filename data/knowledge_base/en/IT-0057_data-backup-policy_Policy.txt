@@ -1,0 +1,27 @@
+Title: Data Backup Policy
+Document ID: IT-0057
+Department: Information Technology
+Type: Policy
+Version: 3.2
+Effective date: 2025-01-31
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: IT-0111, LEG-0047
+
+1. Purpose
+This policy explains what is backed up and how often.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Files on approved company storage are backed up automatically every 4 hours.
+- Backups are kept for 30 days and are tested every quarter.
+- Files kept only on a local laptop are not backed up and may be lost.
+
+4. Exceptions
+Exceptions need written approval from IT Service Desk.
+
+5. Contact
+For questions, contact it@t2.example.

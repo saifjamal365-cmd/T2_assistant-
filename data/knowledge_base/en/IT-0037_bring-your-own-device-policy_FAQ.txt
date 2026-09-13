@@ -1,0 +1,17 @@
+Title: Bring Your Own Device - FAQ
+Document ID: IT-0037
+Department: Information Technology
+Type: FAQ
+Version: 3.2
+Effective date: 2024-09-16
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: IT-0031, IT-0015
+
+Frequently asked questions about bring your own device - faq.
+
+Q: Can I read work email on my own phone?
+A: Yes, if it is enrolled in mobile management and has a screen lock.
+
+More detail is in the matching policy document.

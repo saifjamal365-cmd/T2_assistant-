@@ -1,0 +1,19 @@
+Title: Meeting Room Booking - Quick Reference (Riyadh Office)
+Document ID: FAC-0083
+Department: Facilities
+Type: Quick Reference
+Version: 2.2
+Effective date: 2024-09-08
+Status: Active
+Owner: Facilities Management
+Applies to: Riyadh Office employees
+Related documents: FAC-0031, FAC-0015
+
+Quick reference - Meeting Room Booking - Quick Reference (Riyadh Office).
+
+Key points
+- Rooms are booked through the shared calendar. Walk-in use is allowed only if the room is free for the next 30 minutes.
+- Bookings longer than 3 hours need an office administrator to approve.
+- If a meeting ends early or is cancelled, release the room in the calendar.
+
+Owner: Facilities Management. Full policy: FAC policy set.

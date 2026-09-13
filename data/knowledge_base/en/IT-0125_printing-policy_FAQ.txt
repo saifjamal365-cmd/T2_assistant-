@@ -1,0 +1,17 @@
+Title: Printing - FAQ
+Document ID: IT-0125
+Department: Information Technology
+Type: FAQ
+Version: 3.4
+Effective date: 2024-05-21
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: IT-0119
+
+Frequently asked questions about printing - faq.
+
+Q: Why didn't my document print straight away?
+A: You must tap your badge at the printer to release it.
+
+More detail is in the matching policy document.

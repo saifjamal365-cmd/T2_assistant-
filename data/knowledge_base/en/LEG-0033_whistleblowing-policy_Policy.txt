@@ -1,0 +1,27 @@
+Title: Whistleblowing Policy
+Document ID: LEG-0033
+Department: Legal & Compliance
+Type: Policy
+Version: 3.1
+Effective date: 2024-07-09
+Status: Active
+Owner: Legal & Compliance Office
+Applies to: All employees
+Related documents: HR-0151, LEG-0031, HR-0143
+
+1. Purpose
+This policy explains how to report serious wrongdoing safely.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Serious concerns - fraud, safety risks, law breaking - can be raised through the confidential channel.
+- Reports can be anonymous, and are handled by people independent of the area concerned.
+- Retaliation against a good-faith reporter is a serious disciplinary matter.
+
+4. Exceptions
+Exceptions need written approval from Legal & Compliance Office.
+
+5. Contact
+For questions, contact leg@t2.example.

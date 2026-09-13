@@ -1,0 +1,28 @@
+Title: Anti-Harassment - Procedure
+Document ID: HR-0147
+Department: Human Resources
+Type: Procedure
+Version: 3.1
+Effective date: 2023-09-19
+Status: Active
+Owner: HR Operations
+Applies to: All employees
+Related documents: HR-0143, HR-0159, LEG-0039
+
+Purpose
+This policy prohibits harassment and explains how to report it.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- Harassment of any kind is prohibited and is treated as serious misconduct.
+- Reports can be made to the manager, HR, or the confidential channel, and may be anonymous.
+- Retaliation against someone who reports in good faith is itself a violation.
+
+Contact
+HR Operations: hr@t2.example

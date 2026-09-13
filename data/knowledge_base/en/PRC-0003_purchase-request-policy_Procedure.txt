@@ -1,0 +1,28 @@
+Title: Purchase Request - Procedure
+Document ID: PRC-0003
+Department: Procurement
+Type: Procedure
+Version: 3.0
+Effective date: 2025-04-23
+Status: Active
+Owner: Procurement Office
+Applies to: All employees
+Related documents: FIN-0039, FIN-0055, PRC-0015
+
+Purpose
+This policy explains how to raise a purchase request.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- A purchase request states what is needed, why, the budget line and the preferred supplier.
+- Do not commit to a supplier or place an order before the request is approved.
+- Approved requests become a purchase order sent to the supplier by Procurement.
+
+Contact
+Procurement Office: prc@t2.example

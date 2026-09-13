@@ -1,0 +1,17 @@
+Title: Security Incident Reporting - FAQ
+Document ID: IT-0093
+Department: Information Technology
+Type: FAQ
+Version: 3.4
+Effective date: 2025-06-13
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: IT-0103, LEG-0007, IT-0015
+
+Frequently asked questions about security incident reporting - faq.
+
+Q: How fast must I report a lost work phone?
+A: Within 2 hour(s).
+
+More detail is in the matching policy document.

@@ -1,0 +1,121 @@
+"""The one entry point the rest of the app calls.
+
+`chat()` is pure: a message (plus the earlier turns) in, a reply out, as one
+MLflow trace.
+
+`run_turn()` wraps it with memory: it loads the conversation's history from the
+store, calls `chat()`, then saves both turns and a run record. This is what the
+API uses.
+"""
+
+from __future__ import annotations
+
+import time
+from dataclasses import dataclass
+
+import mlflow
+from langchain_core.messages import AIMessage, AnyMessage, HumanMessage
+from mlflow.entities import SpanType
+
+from t2_assistant import store
+from t2_assistant.agents.graph import compiled_graph
+from t2_assistant.agents.state import Route
+from t2_assistant.tracing import init_tracing
+
+# Configure MLflow tracing as soon as this module is imported.
+init_tracing()
+
+
+@dataclass
+class ChatResult:
+    """What `chat()` returns."""
+
+    reply: str
+    route: Route
+    route_reason: str
+
+
+@dataclass
+class TurnResult:
+    """What `run_turn()` returns - a ChatResult plus the conversation and run it belongs to."""
+
+    conversation_id: str
+    run_id: str
+    trace_id: str | None
+    reply: str
+    route: Route
+    route_reason: str
+
+
+@mlflow.trace(span_type=SpanType.AGENT)
+def chat(message: str, history: list[AnyMessage] | None = None) -> ChatResult:
+    """Answer one user message.
+
+    `history` is the earlier conversation (list of messages), or None for a new
+    conversation.
+    """
+    messages: list[AnyMessage] = [*(history or []), HumanMessage(message)]
+
+    final_state = compiled_graph.invoke({"messages": messages, "route": None, "route_reason": None})
+
+    last = final_state["messages"][-1]
+    assert isinstance(last, AIMessage)  # the specialist always adds an AI reply
+
+    return ChatResult(
+        reply=str(last.content),
+        route=final_state["route"] or "clarify",
+        route_reason=final_state["route_reason"] or "",
+    )
+
+
+def _to_messages(stored: list[store.Message]) -> list[AnyMessage]:
+    out: list[AnyMessage] = []
+    for message in stored:
+        if message.role == "user":
+            out.append(HumanMessage(message.content))
+        else:
+            out.append(AIMessage(message.content))
+    return out
+
+
+def _title_from(message: str) -> str:
+    text = " ".join(message.split())
+    return text[:60] + ("..." if len(text) > 60 else "")
+
+
+def run_turn(message: str, conversation_id: str | None = None) -> TurnResult:
+    """Answer a message inside a conversation, saving the turn and a run record.
+
+    Starts a new conversation when `conversation_id` is None.
+    """
+    if conversation_id is None or not store.conversation_exists(conversation_id):
+        conversation_id = store.create_conversation(_title_from(message))
+
+    history = _to_messages(store.get_messages(conversation_id))
+
+    started = time.perf_counter()
+    result = chat(message, history=history)
+    duration_ms = int((time.perf_counter() - started) * 1000)
+
+    trace_id = mlflow.get_last_active_trace_id()
+
+    store.add_message(conversation_id, "user", message)
+    store.add_message(conversation_id, "assistant", result.reply)
+    run_id = store.save_run(
+        conversation_id=conversation_id,
+        user_message=message,
+        route=result.route,
+        route_reason=result.route_reason,
+        reply=result.reply,
+        trace_id=trace_id,
+        duration_ms=duration_ms,
+    )
+
+    return TurnResult(
+        conversation_id=conversation_id,
+        run_id=run_id,
+        trace_id=trace_id,
+        reply=result.reply,
+        route=result.route,
+        route_reason=result.route_reason,
+    )

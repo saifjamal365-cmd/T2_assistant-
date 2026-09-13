@@ -1,0 +1,27 @@
+Title: Onboarding Policy
+Document ID: HR-0105
+Department: Human Resources
+Type: Policy
+Version: 3.3
+Effective date: 2023-05-02
+Status: Active
+Owner: HR Operations
+Applies to: All employees
+Related documents: HR-0079, HR-0143, IT-0023
+
+1. Purpose
+This policy lists what must happen when a new employee joins.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Before day one, HR sends a welcome email with the start date, location and documents to bring.
+- On day one, the manager introduces the team and confirms system access is active.
+- Within the first 4 weeks, the employee completes mandatory training on conduct, privacy and security.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

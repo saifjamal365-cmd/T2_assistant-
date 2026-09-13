@@ -1,0 +1,28 @@
+Title: Training and Development - Procedure
+Document ID: HR-0171
+Department: Human Resources
+Type: Procedure
+Version: 3.2
+Effective date: 2023-01-15
+Status: Active
+Owner: HR Operations
+Applies to: All employees
+Related documents: HR-0087
+
+Purpose
+This policy covers the training budget and study support.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- Each employee has an annual training budget of 8000 SAR.
+- Courses must be approved by the manager and be relevant to the current or next role.
+- For a certification the company pays for, the employee agrees to stay 6 months or repay pro-rata.
+
+Contact
+HR Operations: hr@t2.example

@@ -1,0 +1,28 @@
+Title: Grievance - Procedure
+Document ID: HR-0155
+Department: Human Resources
+Type: Procedure
+Version: 3.1
+Effective date: 2023-08-15
+Status: Active
+Owner: HR Operations
+Applies to: All employees
+Related documents: HR-0151, HR-0143
+
+Purpose
+This policy explains how to raise a formal complaint at work.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- Raise the issue informally with the manager first where possible.
+- A formal grievance is submitted in writing and acknowledged within 5 working days.
+- A hearing is held within 10 working days, and the outcome is given in writing.
+
+Contact
+HR Operations: hr@t2.example

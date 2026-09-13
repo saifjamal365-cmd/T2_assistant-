@@ -1,0 +1,17 @@
+Title: Payroll Schedule - FAQ
+Document ID: FIN-0069
+Department: Finance
+Type: FAQ
+Version: 3.1
+Effective date: 2023-08-26
+Status: Active
+Owner: Finance Shared Services
+Applies to: All employees
+Related documents: HR-0103, FIN-0079
+
+Frequently asked questions about payroll schedule - faq.
+
+Q: When are salaries paid?
+A: On the 25th of each month.
+
+More detail is in the matching policy document.

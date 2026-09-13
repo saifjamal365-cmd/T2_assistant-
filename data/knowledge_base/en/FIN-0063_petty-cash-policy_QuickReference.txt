@@ -1,0 +1,19 @@
+Title: Petty Cash - Quick Reference
+Document ID: FIN-0063
+Department: Finance
+Type: Quick Reference
+Version: 3.4
+Effective date: 2023-12-03
+Status: Active
+Owner: Finance Shared Services
+Applies to: All employees
+Related documents: FIN-0007
+
+Quick reference - Petty Cash - Quick Reference.
+
+Key points
+- Petty cash is for small items only, up to 100 SAR per payment.
+- Every payment needs a receipt and a signed voucher.
+- The float is reconciled and topped up every month.
+
+Owner: Finance Shared Services. Full policy: FIN policy set.

@@ -1,0 +1,17 @@
+Title: Relocation Support - FAQ
+Document ID: HR-0189
+Department: Human Resources
+Type: FAQ
+Version: 3.2
+Effective date: 2024-05-07
+Status: Active
+Owner: HR Operations
+Applies to: All employees
+Related documents: HR-0183, HR-0023
+
+Frequently asked questions about relocation support - faq.
+
+Q: Is there a relocation allowance?
+A: Yes, 10000 SAR, paid once on arrival.
+
+More detail is in the matching policy document.

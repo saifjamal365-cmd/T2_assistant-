@@ -1,0 +1,28 @@
+Title: Visitor Management - Procedure
+Document ID: FAC-0027
+Department: Facilities
+Type: Procedure
+Version: 3.4
+Effective date: 2023-11-25
+Status: Active
+Owner: Facilities Management
+Applies to: All employees
+Related documents: FAC-0023, LEG-0007
+
+Purpose
+This policy covers hosting visitors in the office.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- Visitors are registered in advance and are met and escorted by their host.
+- Visitors sign in at reception, wear a badge, and sign out when leaving.
+- Visitors are not left alone in areas with client or personal data.
+
+Contact
+Facilities Management: fac@t2.example

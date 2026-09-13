@@ -1,0 +1,17 @@
+Title: Working Hours - FAQ
+Document ID: HR-0045
+Department: Human Resources
+Type: FAQ
+Version: 3.3
+Effective date: 2023-05-13
+Status: Active
+Owner: HR Operations
+Applies to: All employees
+Related documents: HR-0055, HR-0071, HR-0063
+
+Frequently asked questions about working hours - faq.
+
+Q: What are the core hours?
+A: 10:00 to 16:00.
+
+More detail is in the matching policy document.

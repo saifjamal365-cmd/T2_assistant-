@@ -1,0 +1,27 @@
+Title: Event and Sponsorship Approval Policy
+Document ID: MKT-0033
+Department: Marketing & Communications
+Type: Policy
+Version: 3.2
+Effective date: 2024-10-07
+Status: Active
+Owner: Corporate Communications
+Applies to: All employees
+Related documents: FIN-0055, MKT-0023
+
+1. Purpose
+This policy covers approving company events and sponsorships.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Any event or sponsorship using the T2 name needs Corporate Communications approval before commitments are made.
+- Requests are submitted at least 4 weeks ahead with a budget and objective.
+- Sponsorships over 50000 SAR also need Finance approval.
+
+4. Exceptions
+Exceptions need written approval from Corporate Communications.
+
+5. Contact
+For questions, contact mkt@t2.example.

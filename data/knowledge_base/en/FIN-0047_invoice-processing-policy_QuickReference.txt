@@ -1,0 +1,19 @@
+Title: Invoice Processing - Quick Reference
+Document ID: FIN-0047
+Department: Finance
+Type: Quick Reference
+Version: 3.1
+Effective date: 2025-06-01
+Status: Active
+Owner: Finance Shared Services
+Applies to: All employees
+Related documents: FIN-0039, FIN-0087
+
+Quick reference - Invoice Processing - Quick Reference.
+
+Key points
+- An invoice is paid only against an approved purchase order and a goods-received note.
+- Standard payment terms are 60 days from the invoice date.
+- Invoices without a purchase order are returned to the supplier.
+
+Owner: Finance Shared Services. Full policy: FIN policy set.

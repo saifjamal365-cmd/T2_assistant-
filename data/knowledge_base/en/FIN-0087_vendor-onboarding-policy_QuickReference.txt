@@ -1,0 +1,19 @@
+Title: Vendor Onboarding - Quick Reference
+Document ID: FIN-0087
+Department: Finance
+Type: Quick Reference
+Version: 3.2
+Effective date: 2024-09-19
+Status: Active
+Owner: Finance Shared Services
+Applies to: All employees
+Related documents: FIN-0047, LEG-0031
+
+Quick reference - Vendor Onboarding - Quick Reference.
+
+Key points
+- A new vendor provides a trade licence, bank letter and tax registration before setup.
+- Bank details are verified by a call-back to a number on the trade licence, not the invoice.
+- Vendor records are reviewed every 12 months.
+
+Owner: Finance Shared Services. Full policy: FIN policy set.

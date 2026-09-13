@@ -1,0 +1,19 @@
+Title: Phishing Reporting - Quick Reference
+Document ID: IT-0103
+Department: Information Technology
+Type: Quick Reference
+Version: 3.3
+Effective date: 2024-07-22
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: IT-0095, IT-0055
+
+Quick reference - Phishing Reporting - Quick Reference.
+
+Key points
+- Do not click links or open attachments in a suspicious email.
+- Use the "Report Phishing" button, or forward the email to phishing@t2.example.
+- If you already clicked, disconnect from the network and call the service desk.
+
+Owner: IT Service Desk. Full policy: IT policy set.

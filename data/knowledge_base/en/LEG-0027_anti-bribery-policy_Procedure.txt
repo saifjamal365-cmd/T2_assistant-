@@ -1,0 +1,28 @@
+Title: Anti-Bribery - Procedure
+Document ID: LEG-0027
+Department: Legal & Compliance
+Type: Procedure
+Version: 3.1
+Effective date: 2023-09-11
+Status: Active
+Owner: Legal & Compliance Office
+Applies to: All employees
+Related documents: LEG-0023, LEG-0063, LEG-0039
+
+Purpose
+This policy prohibits bribery and improper payments.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- Never offer, give, request or accept a bribe, in any form, to win business or influence a decision.
+- Facilitation payments are not allowed, even where they are common.
+- Any request for a bribe is reported to the Legal & Compliance Office immediately.
+
+Contact
+Legal & Compliance Office: leg@t2.example

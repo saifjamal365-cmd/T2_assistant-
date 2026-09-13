@@ -1,0 +1,17 @@
+Title: Intellectual Property - FAQ
+Document ID: LEG-0069
+Department: Legal & Compliance
+Type: FAQ
+Version: 3.2
+Effective date: 2023-11-08
+Status: Active
+Owner: Legal & Compliance Office
+Applies to: All employees
+Related documents: LEG-0015, IT-0071
+
+Frequently asked questions about intellectual property - faq.
+
+Q: Who owns code I write for my job?
+A: The company, if it was created as part of your job.
+
+More detail is in the matching policy document.

@@ -1,0 +1,27 @@
+Title: Confidentiality Policy
+Document ID: LEG-0009
+Department: Legal & Compliance
+Type: Policy
+Version: 3.3
+Effective date: 2024-05-01
+Status: Active
+Owner: Legal & Compliance Office
+Applies to: All employees
+Related documents: LEG-0007, LEG-0071, MKT-0015
+
+1. Purpose
+This policy covers keeping company and client information confidential.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Do not share confidential information outside the company without written approval.
+- Confidentiality continues after employment ends.
+- Mark documents with the correct sensitivity label before sharing internally.
+
+4. Exceptions
+Exceptions need written approval from Legal & Compliance Office.
+
+5. Contact
+For questions, contact leg@t2.example.

@@ -1,0 +1,28 @@
+Title: System Access Request Policy
+Document ID: IT-0017
+Department: Information Technology
+Type: Policy
+Version: 3.4
+Effective date: 2024-02-09
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: IT-0007, IT-0031, HR-0111
+
+1. Purpose
+This policy explains how access to systems is requested and reviewed.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Access is requested through the service desk, stating the system and the business reason.
+- Access to client or financial data needs the manager and the system owner to approve.
+- Access unused for 60 days may be revoked and must be requested again.
+- All access is reviewed every quarter.
+
+4. Exceptions
+Exceptions need written approval from IT Service Desk.
+
+5. Contact
+For questions, contact it@t2.example.

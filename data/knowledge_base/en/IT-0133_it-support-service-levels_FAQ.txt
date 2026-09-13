@@ -1,0 +1,17 @@
+Title: IT Support Service Levels - FAQ
+Document ID: IT-0133
+Department: Information Technology
+Type: FAQ
+Version: 3.2
+Effective date: 2024-08-22
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: IT-0023, IT-0079
+
+Frequently asked questions about it support service levels - faq.
+
+Q: How fast is a critical IT issue handled?
+A: Within 2 hour(s) during business hours.
+
+More detail is in the matching policy document.

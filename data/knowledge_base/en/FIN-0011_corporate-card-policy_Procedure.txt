@@ -1,0 +1,28 @@
+Title: Corporate Card - Procedure
+Document ID: FIN-0011
+Department: Finance
+Type: Procedure
+Version: 3.1
+Effective date: 2024-06-18
+Status: Active
+Owner: Finance Shared Services
+Applies to: All employees
+Related documents: FIN-0007, FIN-0023
+
+Purpose
+This policy covers the company credit card.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- The card is for business expenses only; personal use is not allowed.
+- Receipts and a short note are uploaded within 7 days of each transaction.
+- Undocumented transactions after 45 days may be deducted from salary.
+
+Contact
+Finance Shared Services: fin@t2.example

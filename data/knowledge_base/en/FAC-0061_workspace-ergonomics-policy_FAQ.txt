@@ -1,0 +1,17 @@
+Title: Workspace Ergonomics - FAQ
+Document ID: FAC-0061
+Department: Facilities
+Type: FAQ
+Version: 3.4
+Effective date: 2023-09-05
+Status: Active
+Owner: Facilities Management
+Applies to: All employees
+Related documents: IT-0079, FAC-0039, HR-0063
+
+Frequently asked questions about workspace ergonomics - faq.
+
+Q: Can I get help setting up my desk?
+A: Yes, a workstation assessment is offered on request.
+
+More detail is in the matching policy document.

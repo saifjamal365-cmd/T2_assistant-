@@ -1,0 +1,27 @@
+Title: Gifts and Hospitality Policy
+Document ID: LEG-0057
+Department: Legal & Compliance
+Type: Policy
+Version: 3.4
+Effective date: 2024-01-20
+Status: Active
+Owner: Legal & Compliance Office
+Applies to: All employees
+Related documents: LEG-0023, LEG-0031
+
+1. Purpose
+This policy sets limits on giving and receiving gifts and hospitality.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Gifts or hospitality worth more than 500 AED must be declared in the register.
+- Never accept cash or a cash equivalent.
+- Do not give or accept anything around the time of a tender or contract decision.
+
+4. Exceptions
+Exceptions need written approval from Legal & Compliance Office.
+
+5. Contact
+For questions, contact leg@t2.example.

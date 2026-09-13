@@ -1,0 +1,28 @@
+Title: Whistleblowing - Procedure
+Document ID: LEG-0035
+Department: Legal & Compliance
+Type: Procedure
+Version: 3.4
+Effective date: 2025-01-25
+Status: Active
+Owner: Legal & Compliance Office
+Applies to: All employees
+Related documents: HR-0151, LEG-0031, HR-0143
+
+Purpose
+This policy explains how to report serious wrongdoing safely.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- Serious concerns - fraud, safety risks, law breaking - can be raised through the confidential channel.
+- Reports can be anonymous, and are handled by people independent of the area concerned.
+- Retaliation against a good-faith reporter is a serious disciplinary matter.
+
+Contact
+Legal & Compliance Office: leg@t2.example

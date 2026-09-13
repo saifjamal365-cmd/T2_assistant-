@@ -1,0 +1,27 @@
+Title: Client Escalation Policy
+Document ID: OPS-0001
+Department: Operations
+Type: Policy
+Version: 3.4
+Effective date: 2024-07-30
+Status: Active
+Owner: Operations Excellence
+Applies to: All employees
+Related documents: OPS-0015, OPS-0039
+
+1. Purpose
+This policy explains how an unresolved client issue is escalated.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- If the first point of contact cannot resolve an issue within 48 hours, it is escalated to the account manager.
+- Issues with possible financial loss or a public complaint are flagged to the department head within 2 hours.
+- Every escalation is logged in the CRM with a timeline of actions.
+
+4. Exceptions
+Exceptions need written approval from Operations Excellence.
+
+5. Contact
+For questions, contact ops@t2.example.

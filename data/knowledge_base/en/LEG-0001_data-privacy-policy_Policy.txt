@@ -1,0 +1,28 @@
+Title: Data Privacy Policy
+Document ID: LEG-0001
+Department: Legal & Compliance
+Type: Policy
+Version: 3.3
+Effective date: 2025-06-05
+Status: Active
+Owner: Legal & Compliance Office
+Applies to: All employees
+Related documents: LEG-0015, LEG-0047, IT-0095
+
+1. Purpose
+This policy covers how personal and client data must be handled.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Personal and client data is used only for the purpose it was collected for.
+- Do not store client or personal data on personal devices or personal cloud accounts.
+- A suspected data breach is reported to the security team within 2 hour(s).
+- Access to personal data is limited to those who need it for their work.
+
+4. Exceptions
+Exceptions need written approval from Legal & Compliance Office.
+
+5. Contact
+For questions, contact leg@t2.example.

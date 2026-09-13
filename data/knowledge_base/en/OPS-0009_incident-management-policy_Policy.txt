@@ -1,0 +1,27 @@
+Title: Incident Management Policy
+Document ID: OPS-0009
+Department: Operations
+Type: Policy
+Version: 3.1
+Effective date: 2024-04-12
+Status: Active
+Owner: Operations Excellence
+Applies to: All employees
+Related documents: OPS-0007, OPS-0023, OPS-0047
+
+1. Purpose
+This policy explains how service incidents are handled.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Incidents are logged with a severity from 1 (critical) to 4 (low).
+- Severity 1 incidents get an incident commander and updates every 30 minutes.
+- A written post-incident review is completed within 3 working days.
+
+4. Exceptions
+Exceptions need written approval from Operations Excellence.
+
+5. Contact
+For questions, contact ops@t2.example.

@@ -1,0 +1,17 @@
+Title: Multi-Factor Authentication - FAQ
+Document ID: IT-0013
+Department: Information Technology
+Type: FAQ
+Version: 3.3
+Effective date: 2024-10-31
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: IT-0007, IT-0047
+
+Frequently asked questions about multi-factor authentication - faq.
+
+Q: Is SMS allowed for MFA?
+A: Only as a fallback; the app is preferred.
+
+More detail is in the matching policy document.

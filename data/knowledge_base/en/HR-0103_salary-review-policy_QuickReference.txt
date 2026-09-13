@@ -1,0 +1,19 @@
+Title: Salary Review - Quick Reference
+Document ID: HR-0103
+Department: Human Resources
+Type: Quick Reference
+Version: 3.4
+Effective date: 2023-08-11
+Status: Active
+Owner: HR Operations
+Applies to: All employees
+Related documents: HR-0087, HR-0095
+
+Quick reference - Salary Review - Quick Reference.
+
+Key points
+- Salaries are reviewed once a year, effective 1 January.
+- Adjustments depend on the performance rating, the salary band and the annual budget.
+- Out-of-cycle adjustments need Compensation Committee approval.
+
+Owner: HR Operations. Full policy: HR policy set.

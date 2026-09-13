@@ -1,0 +1,20 @@
+Title: System Access Request - Quick Reference
+Document ID: IT-0023
+Department: Information Technology
+Type: Quick Reference
+Version: 3.3
+Effective date: 2023-10-04
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: IT-0007, IT-0031, HR-0111
+
+Quick reference - System Access Request - Quick Reference.
+
+Key points
+- Access is requested through the service desk, stating the system and the business reason.
+- Access to client or financial data needs the manager and the system owner to approve.
+- Access unused for 60 days may be revoked and must be requested again.
+- All access is reviewed every quarter.
+
+Owner: IT Service Desk. Full policy: IT policy set.

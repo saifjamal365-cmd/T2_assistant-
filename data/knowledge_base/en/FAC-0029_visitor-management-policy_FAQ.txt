@@ -1,0 +1,17 @@
+Title: Visitor Management - FAQ
+Document ID: FAC-0029
+Department: Facilities
+Type: FAQ
+Version: 3.4
+Effective date: 2023-01-26
+Status: Active
+Owner: Facilities Management
+Applies to: All employees
+Related documents: FAC-0023, LEG-0007
+
+Frequently asked questions about visitor management - faq.
+
+Q: Do I need to register a visitor in advance?
+A: Yes, and you must meet and escort them.
+
+More detail is in the matching policy document.

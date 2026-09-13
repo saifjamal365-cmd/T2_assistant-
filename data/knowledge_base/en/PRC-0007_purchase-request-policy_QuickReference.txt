@@ -1,0 +1,19 @@
+Title: Purchase Request - Quick Reference
+Document ID: PRC-0007
+Department: Procurement
+Type: Quick Reference
+Version: 3.3
+Effective date: 2023-08-30
+Status: Active
+Owner: Procurement Office
+Applies to: All employees
+Related documents: FIN-0039, FIN-0055, PRC-0015
+
+Quick reference - Purchase Request - Quick Reference.
+
+Key points
+- A purchase request states what is needed, why, the budget line and the preferred supplier.
+- Do not commit to a supplier or place an order before the request is approved.
+- Approved requests become a purchase order sent to the supplier by Procurement.
+
+Owner: Procurement Office. Full policy: PRC policy set.

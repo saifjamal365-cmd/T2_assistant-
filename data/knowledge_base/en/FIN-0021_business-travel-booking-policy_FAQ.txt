@@ -1,0 +1,17 @@
+Title: Business Travel Booking - FAQ
+Document ID: FIN-0021
+Department: Finance
+Type: FAQ
+Version: 3.3
+Effective date: 2024-03-10
+Status: Active
+Owner: Finance Shared Services
+Applies to: All employees
+Related documents: FIN-0007, FIN-0031, FIN-0015
+
+Frequently asked questions about business travel booking - faq.
+
+Q: Can I book my own flight directly with the airline?
+A: No. All travel is booked through the corporate travel portal.
+
+More detail is in the matching policy document.

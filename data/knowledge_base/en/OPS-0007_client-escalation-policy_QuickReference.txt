@@ -1,0 +1,19 @@
+Title: Client Escalation - Quick Reference
+Document ID: OPS-0007
+Department: Operations
+Type: Quick Reference
+Version: 3.0
+Effective date: 2023-03-28
+Status: Active
+Owner: Operations Excellence
+Applies to: All employees
+Related documents: OPS-0015, OPS-0039
+
+Quick reference - Client Escalation - Quick Reference.
+
+Key points
+- If the first point of contact cannot resolve an issue within 48 hours, it is escalated to the account manager.
+- Issues with possible financial loss or a public complaint are flagged to the department head within 2 hours.
+- Every escalation is logged in the CRM with a timeline of actions.
+
+Owner: Operations Excellence. Full policy: OPS policy set.

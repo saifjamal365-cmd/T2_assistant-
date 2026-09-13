@@ -1,0 +1,27 @@
+Title: Performance Review Policy
+Document ID: HR-0081
+Department: Human Resources
+Type: Policy
+Version: 3.1
+Effective date: 2025-03-07
+Status: Active
+Owner: HR Operations
+Applies to: All employees
+Related documents: HR-0079, HR-0095, HR-0103
+
+1. Purpose
+This policy explains how and when performance is reviewed.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Formal reviews take place 1 times a year, in March, June, September and December.
+- Each review includes a self-assessment, manager feedback and, for senior roles, peer input.
+- A rating of "needs improvement" for two cycles in a row triggers a performance plan.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

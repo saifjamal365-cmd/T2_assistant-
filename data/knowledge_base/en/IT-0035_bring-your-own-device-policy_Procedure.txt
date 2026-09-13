@@ -1,0 +1,28 @@
+Title: Bring Your Own Device - Procedure
+Document ID: IT-0035
+Department: Information Technology
+Type: Procedure
+Version: 3.3
+Effective date: 2024-12-04
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: IT-0031, IT-0015
+
+Purpose
+This policy covers using personal phones or laptops for work.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- Personal devices may access email and calendar only, and must be enrolled in mobile management.
+- The device must have a screen lock and up-to-date operating system.
+- The company can remotely wipe work data from a lost or stolen device.
+
+Contact
+IT Service Desk: it@t2.example

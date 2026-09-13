@@ -1,0 +1,17 @@
+Title: Phishing Reporting - FAQ
+Document ID: IT-0101
+Department: Information Technology
+Type: FAQ
+Version: 3.0
+Effective date: 2024-12-01
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: IT-0095, IT-0055
+
+Frequently asked questions about phishing reporting - faq.
+
+Q: What do I do with a phishing email?
+A: Report it with the button or forward it to phishing@t2.example. Do not click anything.
+
+More detail is in the matching policy document.

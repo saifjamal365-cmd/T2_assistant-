@@ -1,0 +1,19 @@
+Title: Business Continuity - Quick Reference
+Document ID: OPS-0031
+Department: Operations
+Type: Quick Reference
+Version: 3.4
+Effective date: 2023-10-29
+Status: Active
+Owner: Operations Excellence
+Applies to: All employees
+Related documents: OPS-0023, OPS-0015
+
+Quick reference - Business Continuity - Quick Reference.
+
+Key points
+- Each team has a continuity plan naming its critical services and recovery time objective.
+- Continuity plans are tested at least once a year.
+- During a major disruption, the crisis team leads and communicates every 4 hour(s).
+
+Owner: Operations Excellence. Full policy: OPS policy set.

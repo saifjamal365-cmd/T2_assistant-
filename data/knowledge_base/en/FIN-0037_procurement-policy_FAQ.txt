@@ -1,0 +1,17 @@
+Title: Procurement - FAQ
+Document ID: FIN-0037
+Department: Finance
+Type: FAQ
+Version: 3.2
+Effective date: 2024-06-30
+Status: Active
+Owner: Finance Shared Services
+Applies to: All employees
+Related documents: PRC-0007, PRC-0015, FIN-0055
+
+Frequently asked questions about procurement - faq.
+
+Q: How many quotes do I need for a 5000 EGP purchase?
+A: One quote up to 5000 EGP.
+
+More detail is in the matching policy document.

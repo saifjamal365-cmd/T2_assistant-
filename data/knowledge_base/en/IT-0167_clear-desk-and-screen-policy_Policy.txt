@@ -1,0 +1,27 @@
+Title: Clear Desk and Screen Policy (Riyadh Office)
+Document ID: IT-0167
+Department: Information Technology
+Type: Policy
+Version: 2.0
+Effective date: 2023-03-06
+Status: Active
+Owner: IT Service Desk
+Applies to: Riyadh Office employees
+Related documents: IT-0127, LEG-0007
+
+1. Purpose
+This policy protects information left on desks and screens.
+
+2. Scope
+This policy applies to Riyadh Office employees.
+
+3. Policy
+- Lock your screen whenever you leave your desk.
+- Documents with client or personal data are locked away at the end of the day.
+- Printouts left on the printer for more than 15 minutes are shredded.
+
+4. Exceptions
+Exceptions need written approval from IT Service Desk.
+
+5. Contact
+For questions, contact it@t2.example.

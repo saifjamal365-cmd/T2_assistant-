@@ -1,0 +1,19 @@
+Title: Printing - Quick Reference (Riyadh Office)
+Document ID: IT-0175
+Department: Information Technology
+Type: Quick Reference
+Version: 2.2
+Effective date: 2024-05-13
+Status: Active
+Owner: IT Service Desk
+Applies to: Riyadh Office employees
+Related documents: IT-0119
+
+Quick reference - Printing - Quick Reference (Riyadh Office).
+
+Key points
+- Printing needs a badge tap at the printer to release the job.
+- Default printing is double-sided and black-and-white.
+- Unreleased jobs are deleted after 24 hours.
+
+Owner: IT Service Desk. Full policy: IT policy set.

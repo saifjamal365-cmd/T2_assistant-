@@ -1,0 +1,19 @@
+Title: Service Level - Quick Reference
+Document ID: OPS-0039
+Department: Operations
+Type: Quick Reference
+Version: 3.2
+Effective date: 2023-01-13
+Status: Active
+Owner: Operations Excellence
+Applies to: All employees
+Related documents: OPS-0007, OPS-0015
+
+Quick reference - Service Level - Quick Reference.
+
+Key points
+- First response to a client request is within 8 business hours.
+- Standard requests are resolved within 5 business days.
+- Service levels are reviewed with each client every quarter.
+
+Owner: Operations Excellence. Full policy: OPS policy set.

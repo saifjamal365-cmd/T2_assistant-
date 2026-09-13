@@ -1,0 +1,41 @@
+# Secrets
+.env
+.env.local
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# The knowledge base under data/knowledge_base/ is generated (see
+# scripts/generate_kb.py) but kept in the repo so it can be reviewed.
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# Vector store / local databases  (rebuild with: python -m t2_assistant.knowledge.ingest)
+chroma/
+chroma_db/
+*.db
+*.sqlite3
+
+# Logs and traces
+logs/
+mlruns/
+mlartifacts/
+
+# Editor / tooling
+.claude/
+.vscode/
+.idea/
+
+# OS junk
+.DS_Store
+Thumbs.db
+~$*

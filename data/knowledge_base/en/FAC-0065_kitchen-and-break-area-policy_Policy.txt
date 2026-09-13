@@ -1,0 +1,26 @@
+Title: Kitchen and Break Area Policy
+Document ID: FAC-0065
+Department: Facilities
+Type: Policy
+Version: 3.1
+Effective date: 2023-03-09
+Status: Active
+Owner: Facilities Management
+Applies to: All employees
+
+1. Purpose
+This policy covers shared kitchens and break areas.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Clean up after yourself; label personal food with your name and the date.
+- The fridge is emptied every Friday; anything unlabelled is thrown away.
+- Report broken appliances to facilities.
+
+4. Exceptions
+Exceptions need written approval from Facilities Management.
+
+5. Contact
+For questions, contact fac@t2.example.

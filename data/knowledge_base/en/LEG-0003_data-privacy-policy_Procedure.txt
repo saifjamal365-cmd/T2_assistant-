@@ -1,0 +1,29 @@
+Title: Data Privacy - Procedure
+Document ID: LEG-0003
+Department: Legal & Compliance
+Type: Procedure
+Version: 3.2
+Effective date: 2023-11-03
+Status: Active
+Owner: Legal & Compliance Office
+Applies to: All employees
+Related documents: LEG-0015, LEG-0047, IT-0095
+
+Purpose
+This policy covers how personal and client data must be handled.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- Personal and client data is used only for the purpose it was collected for.
+- Do not store client or personal data on personal devices or personal cloud accounts.
+- A suspected data breach is reported to the security team within 4 hour(s).
+- Access to personal data is limited to those who need it for their work.
+
+Contact
+Legal & Compliance Office: leg@t2.example

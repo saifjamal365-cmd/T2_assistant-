@@ -1,0 +1,27 @@
+Title: Contract Renewal Policy
+Document ID: PRC-0017
+Department: Procurement
+Type: Policy
+Version: 3.1
+Effective date: 2024-02-22
+Status: Active
+Owner: Procurement Office
+Applies to: All employees
+Related documents: FIN-0039, FIN-0047
+
+1. Purpose
+This policy makes sure supplier contracts are reviewed before they renew.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Procurement reviews every contract 3 months before its renewal date.
+- Auto-renewal clauses are avoided; renewals are an active decision.
+- The review checks price, usage, service quality and whether the need still exists.
+
+4. Exceptions
+Exceptions need written approval from Procurement Office.
+
+5. Contact
+For questions, contact prc@t2.example.

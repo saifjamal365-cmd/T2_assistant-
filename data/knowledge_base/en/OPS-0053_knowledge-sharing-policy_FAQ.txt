@@ -1,0 +1,17 @@
+Title: Knowledge Sharing - FAQ
+Document ID: OPS-0053
+Department: Operations
+Type: FAQ
+Version: 3.0
+Effective date: 2023-10-31
+Status: Active
+Owner: Operations Excellence
+Applies to: All employees
+Related documents: OPS-0015, HR-0111
+
+Frequently asked questions about knowledge sharing - faq.
+
+Q: Where do I document a recurring task?
+A: As a short procedure in the shared knowledge base.
+
+More detail is in the matching policy document.

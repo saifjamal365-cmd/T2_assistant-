@@ -1,0 +1,28 @@
+Title: Purchase Approval Thresholds - Procedure
+Document ID: PRC-0027
+Department: Procurement
+Type: Procedure
+Version: 3.0
+Effective date: 2023-02-14
+Status: Active
+Owner: Procurement Office
+Applies to: All employees
+Related documents: FIN-0055, FIN-0039, PRC-0007
+
+Purpose
+This quick reference lists the approval level needed for each spend amount.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- Up to 10000 EGP: line manager.
+- 10000 to 50000 EGP: department head.
+- Over 50000 EGP: Procurement Committee and CFO.
+
+Contact
+Procurement Office: prc@t2.example

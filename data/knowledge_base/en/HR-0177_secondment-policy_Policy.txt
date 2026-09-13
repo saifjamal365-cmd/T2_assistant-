@@ -1,0 +1,26 @@
+Title: Secondment Policy
+Document ID: HR-0177
+Department: Human Resources
+Type: Policy
+Version: 3.3
+Effective date: 2025-06-16
+Status: Active
+Owner: HR Operations
+Applies to: All employees
+Related documents: HR-0191, HR-0095
+
+1. Purpose
+This policy covers temporary moves to another team or office.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- A secondment lasts 6 to 12 months and needs both managers to agree.
+- The employee returns to their original role or an equivalent one at the end.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

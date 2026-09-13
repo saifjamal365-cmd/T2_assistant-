@@ -1,0 +1,20 @@
+Title: Business Travel Booking - Quick Reference
+Document ID: FIN-0023
+Department: Finance
+Type: Quick Reference
+Version: 3.1
+Effective date: 2023-03-31
+Status: Active
+Owner: Finance Shared Services
+Applies to: All employees
+Related documents: FIN-0007, FIN-0031, FIN-0015
+
+Quick reference - Business Travel Booking - Quick Reference.
+
+Key points
+- All travel is booked through the corporate travel portal, not directly with airlines or hotels.
+- Economy class is standard; flights over 8 hours may be premium economy with manager approval.
+- Hotels must not exceed the nightly cap for the destination shown in the portal.
+- Book at least 7 days ahead where possible.
+
+Owner: Finance Shared Services. Full policy: FIN policy set.

@@ -1,0 +1,27 @@
+Title: Invoice Processing Policy
+Document ID: FIN-0041
+Department: Finance
+Type: Policy
+Version: 3.1
+Effective date: 2024-06-19
+Status: Active
+Owner: Finance Shared Services
+Applies to: All employees
+Related documents: FIN-0039, FIN-0087
+
+1. Purpose
+This policy explains how supplier invoices are approved and paid.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- An invoice is paid only against an approved purchase order and a goods-received note.
+- Standard payment terms are 30 days from the invoice date.
+- Invoices without a purchase order are returned to the supplier.
+
+4. Exceptions
+Exceptions need written approval from Finance Shared Services.
+
+5. Contact
+For questions, contact fin@t2.example.

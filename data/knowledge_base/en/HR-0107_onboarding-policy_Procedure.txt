@@ -1,0 +1,28 @@
+Title: Onboarding - Procedure
+Document ID: HR-0107
+Department: Human Resources
+Type: Procedure
+Version: 3.4
+Effective date: 2023-04-15
+Status: Active
+Owner: HR Operations
+Applies to: All employees
+Related documents: HR-0079, HR-0143, IT-0023
+
+Purpose
+This policy lists what must happen when a new employee joins.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- Before day one, HR sends a welcome email with the start date, location and documents to bring.
+- On day one, the manager introduces the team and confirms system access is active.
+- Within the first 2 weeks, the employee completes mandatory training on conduct, privacy and security.
+
+Contact
+HR Operations: hr@t2.example

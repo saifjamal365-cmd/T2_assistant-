@@ -1,0 +1,27 @@
+Title: Phishing Reporting Policy
+Document ID: IT-0097
+Department: Information Technology
+Type: Policy
+Version: 3.4
+Effective date: 2024-05-03
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: IT-0095, IT-0055
+
+1. Purpose
+This policy explains what to do with a suspicious email.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Do not click links or open attachments in a suspicious email.
+- Use the "Report Phishing" button, or forward the email to phishing@t2.example.
+- If you already clicked, disconnect from the network and call the service desk.
+
+4. Exceptions
+Exceptions need written approval from IT Service Desk.
+
+5. Contact
+For questions, contact it@t2.example.

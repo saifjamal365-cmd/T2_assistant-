@@ -1,0 +1,17 @@
+Title: First Aid - FAQ
+Document ID: FAC-0053
+Department: Facilities
+Type: FAQ
+Version: 3.3
+Effective date: 2024-10-28
+Status: Active
+Owner: Facilities Management
+Applies to: All employees
+Related documents: FAC-0039
+
+Frequently asked questions about first aid - faq.
+
+Q: Where do I find a first aider?
+A: On the intranet and the notice board by the lifts.
+
+More detail is in the matching policy document.

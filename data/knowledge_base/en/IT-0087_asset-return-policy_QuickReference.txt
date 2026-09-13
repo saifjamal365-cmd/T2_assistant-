@@ -1,0 +1,19 @@
+Title: Asset Return - Quick Reference
+Document ID: IT-0087
+Department: Information Technology
+Type: Quick Reference
+Version: 3.1
+Effective date: 2023-03-07
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: HR-0119, IT-0079
+
+Quick reference - Asset Return - Quick Reference.
+
+Key points
+- All company equipment remains company property and is returned on the last working day.
+- Damaged or missing items beyond normal wear may be charged to the employee.
+- Equipment for a role change is swapped through the service desk.
+
+Owner: IT Service Desk. Full policy: IT policy set.

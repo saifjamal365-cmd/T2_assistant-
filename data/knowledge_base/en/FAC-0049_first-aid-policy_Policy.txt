@@ -1,0 +1,27 @@
+Title: First Aid Policy
+Document ID: FAC-0049
+Department: Facilities
+Type: Policy
+Version: 3.3
+Effective date: 2024-05-15
+Status: Active
+Owner: Facilities Management
+Applies to: All employees
+Related documents: FAC-0039
+
+1. Purpose
+This policy covers first-aid cover in the office.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Each floor has at least one trained first aider and a stocked first-aid kit.
+- First aiders are listed on the intranet and on the notice board by the lifts.
+- Call emergency services first for anything serious, then a first aider.
+
+4. Exceptions
+Exceptions need written approval from Facilities Management.
+
+5. Contact
+For questions, contact fac@t2.example.

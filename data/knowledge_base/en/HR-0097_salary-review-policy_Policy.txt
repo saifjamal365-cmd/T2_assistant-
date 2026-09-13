@@ -1,0 +1,27 @@
+Title: Salary Review Policy
+Document ID: HR-0097
+Department: Human Resources
+Type: Policy
+Version: 3.3
+Effective date: 2023-01-24
+Status: Active
+Owner: HR Operations
+Applies to: All employees
+Related documents: HR-0087, HR-0095
+
+1. Purpose
+This policy explains the annual salary review.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Salaries are reviewed once a year, effective 1 April.
+- Adjustments depend on the performance rating, the salary band and the annual budget.
+- Out-of-cycle adjustments need Compensation Committee approval.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

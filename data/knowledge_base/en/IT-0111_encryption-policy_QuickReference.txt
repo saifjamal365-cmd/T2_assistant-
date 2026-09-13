@@ -1,0 +1,19 @@
+Title: Encryption - Quick Reference
+Document ID: IT-0111
+Department: Information Technology
+Type: Quick Reference
+Version: 3.1
+Effective date: 2024-05-13
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: IT-0063, LEG-0007
+
+Quick reference - Encryption - Quick Reference.
+
+Key points
+- All company laptops and phones must have full-disk encryption enabled.
+- Client or financial data sent outside the company must be encrypted or sent via the secure portal.
+- Encryption keys are managed by IT and never shared by email.
+
+Owner: IT Service Desk. Full policy: IT policy set.

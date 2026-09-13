@@ -1,0 +1,17 @@
+Title: Purchase Approval Thresholds - FAQ
+Document ID: PRC-0029
+Department: Procurement
+Type: FAQ
+Version: 3.4
+Effective date: 2023-11-25
+Status: Active
+Owner: Procurement Office
+Applies to: All employees
+Related documents: FIN-0055, FIN-0039, PRC-0007
+
+Frequently asked questions about purchase approval thresholds - faq.
+
+Q: Who approves a 5000 AED purchase?
+A: Your line manager, up to 5000 AED.
+
+More detail is in the matching policy document.

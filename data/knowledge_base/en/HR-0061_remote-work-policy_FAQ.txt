@@ -1,0 +1,20 @@
+Title: Remote Work - FAQ
+Document ID: HR-0061
+Department: Human Resources
+Type: FAQ
+Version: 3.3
+Effective date: 2023-09-06
+Status: Active
+Owner: HR Operations
+Applies to: All employees
+Related documents: HR-0047, IT-0047, IT-0079
+
+Frequently asked questions about remote work - faq.
+
+Q: How many days can I work from home?
+A: Up to 3 days per week.
+
+Q: Do I need the VPN when working remotely?
+A: Yes, company equipment must use the approved VPN.
+
+More detail is in the matching policy document.

@@ -1,0 +1,17 @@
+Title: Contract Signing Authority - FAQ
+Document ID: LEG-0053
+Department: Legal & Compliance
+Type: FAQ
+Version: 3.4
+Effective date: 2024-11-14
+Status: Active
+Owner: Legal & Compliance Office
+Applies to: All employees
+Related documents: FIN-0039, FIN-0055
+
+Frequently asked questions about contract signing authority - faq.
+
+Q: Can I sign a supplier contract myself?
+A: Only if you are a named signatory in the authority matrix.
+
+More detail is in the matching policy document.

@@ -1,0 +1,28 @@
+Title: Unpaid Leave - Procedure
+Document ID: HR-0035
+Department: Human Resources
+Type: Procedure
+Version: 3.4
+Effective date: 2025-04-29
+Status: Active
+Owner: HR Operations
+Applies to: All employees
+Related documents: HR-0007, HR-0015
+
+Purpose
+This policy explains when employees can take unpaid leave.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- Unpaid leave of up to 12 months may be requested after paid leave is exhausted.
+- Approval requires the line manager and the department head to sign off.
+- Benefits are paused during unpaid leave longer than 30 days.
+
+Contact
+HR Operations: hr@t2.example

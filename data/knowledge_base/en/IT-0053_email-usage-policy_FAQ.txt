@@ -1,0 +1,17 @@
+Title: Email Usage - FAQ
+Document ID: IT-0053
+Department: Information Technology
+Type: FAQ
+Version: 3.2
+Effective date: 2024-07-30
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: IT-0031, IT-0103, LEG-0047
+
+Frequently asked questions about email usage - faq.
+
+Q: Can I forward my work email to Gmail?
+A: No. Auto-forwarding to a personal account is not allowed.
+
+More detail is in the matching policy document.

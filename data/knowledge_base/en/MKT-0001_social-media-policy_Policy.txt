@@ -1,0 +1,27 @@
+Title: Social Media Policy
+Document ID: MKT-0001
+Department: Marketing & Communications
+Type: Policy
+Version: 3.3
+Effective date: 2024-04-03
+Status: Active
+Owner: Corporate Communications
+Applies to: All employees
+Related documents: MKT-0015, LEG-0015, MKT-0023
+
+1. Purpose
+This policy covers talking about work on personal social media.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- You may discuss your work on personal accounts, but not confidential or unreleased information.
+- Make clear that opinions are your own, not an official position of T2.
+- Only the Corporate Communications team posts on official T2 accounts.
+
+4. Exceptions
+Exceptions need written approval from Corporate Communications.
+
+5. Contact
+For questions, contact mkt@t2.example.

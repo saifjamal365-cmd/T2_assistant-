@@ -1,0 +1,28 @@
+Title: Code of Conduct - Procedure
+Document ID: HR-0139
+Department: Human Resources
+Type: Procedure
+Version: 3.4
+Effective date: 2025-01-01
+Status: Active
+Owner: HR Operations
+Applies to: All employees
+Related documents: HR-0151, LEG-0023, LEG-0063
+
+Purpose
+The code sets the standard of behaviour expected from every employee.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- Treat colleagues and clients with respect; discrimination and harassment are not tolerated.
+- Any conflict of interest must be disclosed in writing to HR Operations.
+- Breaching the code may lead to disciplinary action up to termination.
+
+Contact
+HR Operations: hr@t2.example

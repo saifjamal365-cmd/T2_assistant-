@@ -1,0 +1,19 @@
+Title: Knowledge Sharing - Quick Reference
+Document ID: OPS-0055
+Department: Operations
+Type: Quick Reference
+Version: 3.1
+Effective date: 2023-03-01
+Status: Active
+Owner: Operations Excellence
+Applies to: All employees
+Related documents: OPS-0015, HR-0111
+
+Quick reference - Knowledge Sharing - Quick Reference.
+
+Key points
+- Every recurring task should have a short written procedure in the shared knowledge base.
+- Post-incident reviews and design decisions are written up and shared, not kept private.
+- Pages unreviewed for 6 months are flagged for an owner to update or archive.
+
+Owner: Operations Excellence. Full policy: OPS policy set.

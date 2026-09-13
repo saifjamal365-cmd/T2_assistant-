@@ -1,0 +1,61 @@
+# pyproject.toml — the single place that describes this Python project:
+# its name, its Python version, the libraries it needs, and how the tools
+# (ruff, mypy, pytest) are configured.
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "t2-assistant"
+version = "0.1.0"
+description = "Agentic AI knowledge assistant for company policy questions and meeting-note summaries (Arabic + English)."
+requires-python = ">=3.12"
+
+# Libraries the application needs to run. Versions are pinned to exactly what
+# was installed and tested, so every machine gets the same setup.
+dependencies = [
+    "langgraph==1.2.11",         # builds the team of agents as a graph
+    "langchain-core==1.6.2",     # shared message / model types used by langgraph
+    "langchain-groq==1.1.3",     # talk to the Groq LLM
+    "mlflow==3.16.0",            # tracing / observability (local)
+    "fastapi==0.141.1",          # the HTTP API
+    "uvicorn[standard]==0.52.4", # the web server that runs FastAPI
+    "pydantic-settings==2.15.0", # load settings from .env into a typed object
+    "chromadb==1.5.9",          # local vector index (needs: pip install --only-binary=:all:)
+    "sentence-transformers==3.4.1", # BGE-M3 embeddings, run locally (pulls in torch)
+]
+
+# Extra libraries only needed while developing (tests, linting).
+[project.optional-dependencies]
+dev = [
+    "ruff==0.16.6",      # formats and lints the code
+    "mypy==2.3.1",       # checks types
+    "pytest==9.1.1",     # runs the tests
+    "httpx==0.28.1",     # used by the API tests to call endpoints
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/t2_assistant"]
+
+# ---- tool configuration --------------------------------------------------
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+# a sensible default set: pycodestyle, pyflakes, isort, bugbear, pyupgrade
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+markers = [
+    "integration: test makes a real call to the Groq API (deselect with '-m \"not integration\"')",
+]

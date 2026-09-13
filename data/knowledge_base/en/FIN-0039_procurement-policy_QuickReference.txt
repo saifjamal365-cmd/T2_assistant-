@@ -1,0 +1,19 @@
+Title: Procurement - Quick Reference
+Document ID: FIN-0039
+Department: Finance
+Type: Quick Reference
+Version: 3.2
+Effective date: 2023-09-02
+Status: Active
+Owner: Finance Shared Services
+Applies to: All employees
+Related documents: PRC-0007, PRC-0015, FIN-0055
+
+Quick reference - Procurement - Quick Reference.
+
+Key points
+- A purchase request is raised before any commitment to a supplier.
+- Purchases up to 10000 AED need one quote; above 10000 need 2 quotes.
+- Purchases over 100000 AED go to the Procurement Committee.
+
+Owner: Finance Shared Services. Full policy: FIN policy set.

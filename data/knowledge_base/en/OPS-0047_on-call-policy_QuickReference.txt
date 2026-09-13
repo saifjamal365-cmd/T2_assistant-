@@ -1,0 +1,19 @@
+Title: On-Call - Quick Reference
+Document ID: OPS-0047
+Department: Operations
+Type: Quick Reference
+Version: 3.0
+Effective date: 2024-10-18
+Status: Active
+Owner: Operations Excellence
+Applies to: All employees
+Related documents: HR-0055, OPS-0015
+
+Quick reference - On-Call - Quick Reference.
+
+Key points
+- On-call runs in 1-week rotations; the schedule is published a month ahead.
+- An on-call allowance of 300 SAR per week is paid, plus overtime for call-outs.
+- The on-call engineer acknowledges an alert within 15 minutes.
+
+Owner: Operations Excellence. Full policy: OPS policy set.

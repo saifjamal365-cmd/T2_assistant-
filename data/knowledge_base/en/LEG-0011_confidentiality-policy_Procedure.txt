@@ -1,0 +1,28 @@
+Title: Confidentiality - Procedure
+Document ID: LEG-0011
+Department: Legal & Compliance
+Type: Procedure
+Version: 3.3
+Effective date: 2025-02-20
+Status: Active
+Owner: Legal & Compliance Office
+Applies to: All employees
+Related documents: LEG-0007, LEG-0071, MKT-0015
+
+Purpose
+This policy covers keeping company and client information confidential.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- Do not share confidential information outside the company without written approval.
+- Confidentiality continues after employment ends.
+- Mark documents with the correct sensitivity label before sharing internally.
+
+Contact
+Legal & Compliance Office: leg@t2.example

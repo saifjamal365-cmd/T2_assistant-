@@ -1,0 +1,27 @@
+Title: Promotion Policy
+Document ID: HR-0089
+Department: Human Resources
+Type: Policy
+Version: 3.3
+Effective date: 2024-07-04
+Status: Active
+Owner: HR Operations
+Applies to: All employees
+Related documents: HR-0087, HR-0103
+
+1. Purpose
+This policy describes how promotions are proposed and approved.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Promotions are considered 2 time(s) a year, aligned with the review cycle.
+- An employee must have at least 12 months in role and a rating of "meets" or above.
+- Promotions require the department head and HR to approve.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

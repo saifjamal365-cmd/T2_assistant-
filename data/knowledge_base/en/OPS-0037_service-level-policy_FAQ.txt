@@ -1,0 +1,17 @@
+Title: Service Level - FAQ
+Document ID: OPS-0037
+Department: Operations
+Type: FAQ
+Version: 3.2
+Effective date: 2023-11-15
+Status: Active
+Owner: Operations Excellence
+Applies to: All employees
+Related documents: OPS-0007, OPS-0015
+
+Frequently asked questions about service level - faq.
+
+Q: How quickly do we respond to a client request?
+A: Within 4 business hours.
+
+More detail is in the matching policy document.

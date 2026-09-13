@@ -1,0 +1,27 @@
+Title: Meeting Room Booking Policy
+Document ID: FAC-0001
+Department: Facilities
+Type: Policy
+Version: 3.1
+Effective date: 2023-03-18
+Status: Active
+Owner: Facilities Management
+Applies to: All employees
+Related documents: FAC-0031, FAC-0015
+
+1. Purpose
+This policy explains how to reserve and use meeting rooms.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Rooms are booked through the shared calendar. Walk-in use is allowed only if the room is free for the next 30 minutes.
+- Bookings longer than 3 hours need an office administrator to approve.
+- If a meeting ends early or is cancelled, release the room in the calendar.
+
+4. Exceptions
+Exceptions need written approval from Facilities Management.
+
+5. Contact
+For questions, contact fac@t2.example.

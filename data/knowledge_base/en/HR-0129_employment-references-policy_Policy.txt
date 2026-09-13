@@ -1,0 +1,26 @@
+Title: Employment References Policy
+Document ID: HR-0129
+Department: Human Resources
+Type: Policy
+Version: 3.1
+Effective date: 2023-05-30
+Status: Active
+Owner: HR Operations
+Applies to: All employees
+Related documents: HR-0119, LEG-0015
+
+1. Purpose
+This policy states how the company responds to reference requests.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Only HR may issue an official reference; it confirms title and dates of employment only.
+- Personal references from managers must state that they are personal, not on behalf of T2.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

@@ -1,0 +1,17 @@
+Title: Invoice Processing - FAQ
+Document ID: FIN-0045
+Department: Finance
+Type: FAQ
+Version: 3.3
+Effective date: 2023-06-23
+Status: Active
+Owner: Finance Shared Services
+Applies to: All employees
+Related documents: FIN-0039, FIN-0087
+
+Frequently asked questions about invoice processing - faq.
+
+Q: What are the standard payment terms?
+A: 30 days from the invoice date.
+
+More detail is in the matching policy document.

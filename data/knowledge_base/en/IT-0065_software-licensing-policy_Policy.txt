@@ -1,0 +1,27 @@
+Title: Software Licensing Policy
+Document ID: IT-0065
+Department: Information Technology
+Type: Policy
+Version: 3.3
+Effective date: 2023-01-18
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: IT-0031, IT-0079
+
+1. Purpose
+This policy explains which software may be installed.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Only software approved and licensed by IT may be installed on company devices.
+- Free or trial software may be used for evaluation for up to 14 days, then licensed or removed.
+- Using pirated software is a serious policy violation.
+
+4. Exceptions
+Exceptions need written approval from IT Service Desk.
+
+5. Contact
+For questions, contact it@t2.example.

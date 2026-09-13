@@ -1,0 +1,28 @@
+Title: Email Usage - Procedure
+Document ID: IT-0051
+Department: Information Technology
+Type: Procedure
+Version: 3.4
+Effective date: 2025-03-14
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: IT-0031, IT-0103, LEG-0047
+
+Purpose
+This policy covers correct use of company email.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- Company email is for business communication and is a company record.
+- Do not auto-forward company email to a personal account.
+- External emails with attachments over 20 MB should use the file-share link instead.
+
+Contact
+IT Service Desk: it@t2.example

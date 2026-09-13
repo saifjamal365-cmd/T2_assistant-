@@ -1,0 +1,27 @@
+Title: Code of Conduct
+Document ID: HR-0137
+Department: Human Resources
+Type: Policy
+Version: 3.0
+Effective date: 2024-09-14
+Status: Active
+Owner: HR Operations
+Applies to: All employees
+Related documents: HR-0151, LEG-0023, LEG-0063
+
+1. Purpose
+The code sets the standard of behaviour expected from every employee.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Treat colleagues and clients with respect; discrimination and harassment are not tolerated.
+- Any conflict of interest must be disclosed in writing to HR Operations.
+- Breaching the code may lead to disciplinary action up to termination.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

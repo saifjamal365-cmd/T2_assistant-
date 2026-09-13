@@ -1,0 +1,17 @@
+Title: Acceptable Use - FAQ
+Document ID: IT-0029
+Department: Information Technology
+Type: FAQ
+Version: 3.3
+Effective date: 2025-04-07
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: IT-0071, IT-0039
+
+Frequently asked questions about acceptable use - faq.
+
+Q: Can I use my work laptop for personal things?
+A: Limited personal use is allowed if it does not break policy or law.
+
+More detail is in the matching policy document.

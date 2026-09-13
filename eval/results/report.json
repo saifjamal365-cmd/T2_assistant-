@@ -1,0 +1,68 @@
+{
+  "metrics": {
+    "dataset_size": 50,
+    "answerable_count": 39,
+    "unanswerable_count": 11,
+    "retrieval_recall_at_k": 100.0,
+    "answer_accuracy_answerable": 100.0,
+    "honesty_rate_unanswerable": 90.9,
+    "false_answer_rate_unanswerable": 9.1,
+    "overall_accuracy": 98.0,
+    "error_rate": 0.0,
+    "avg_duration_ms": 11781,
+    "p95_duration_ms": 25876
+  },
+  "by_family": {
+    "faq_paraphrased": {
+      "total": 20,
+      "correct": 20
+    },
+    "faq_exact": {
+      "total": 19,
+      "correct": 19
+    },
+    "unanswerable": {
+      "total": 11,
+      "correct": 10
+    }
+  },
+  "by_department": {
+    "FAC": {
+      "total": 7,
+      "correct": 7
+    },
+    "HR": {
+      "total": 12,
+      "correct": 12
+    },
+    "IT": {
+      "total": 7,
+      "correct": 7
+    },
+    "FIN": {
+      "total": 5,
+      "correct": 5
+    },
+    "MKT": {
+      "total": 4,
+      "correct": 4
+    },
+    "LEG": {
+      "total": 4,
+      "correct": 4
+    }
+  },
+  "by_language": {
+    "en": {
+      "total": 25,
+      "correct": 25
+    },
+    "ar": {
+      "total": 25,
+      "correct": 24
+    }
+  },
+  "route_counts": {
+    "answer": 50
+  }
+}

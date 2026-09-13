@@ -1,0 +1,17 @@
+Title: Social Media - FAQ
+Document ID: MKT-0005
+Department: Marketing & Communications
+Type: FAQ
+Version: 3.3
+Effective date: 2023-04-01
+Status: Active
+Owner: Corporate Communications
+Applies to: All employees
+Related documents: MKT-0015, LEG-0015, MKT-0023
+
+Frequently asked questions about social media - faq.
+
+Q: Who can post on the company's official social media?
+A: Only the Corporate Communications team.
+
+More detail is in the matching policy document.

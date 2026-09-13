@@ -1,0 +1,17 @@
+Title: Probation - FAQ
+Document ID: HR-0077
+Department: Human Resources
+Type: FAQ
+Version: 3.2
+Effective date: 2023-02-14
+Status: Active
+Owner: HR Operations
+Applies to: All employees
+Related documents: HR-0111, HR-0087, HR-0127
+
+Frequently asked questions about probation - faq.
+
+Q: How long is probation?
+A: 3 months.
+
+More detail is in the matching policy document.

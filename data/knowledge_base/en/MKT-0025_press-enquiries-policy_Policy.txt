@@ -1,0 +1,27 @@
+Title: Press Enquiries Policy
+Document ID: MKT-0025
+Department: Marketing & Communications
+Type: Policy
+Version: 3.0
+Effective date: 2024-04-17
+Status: Active
+Owner: Corporate Communications
+Applies to: All employees
+Related documents: MKT-0015
+
+1. Purpose
+This policy explains what to do when a journalist makes contact.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Do not confirm, deny or comment on anything, even off the record.
+- Take the journalist's name, outlet, question and deadline, and pass them to Corporate Communications the same day.
+- Corporate Communications coordinates a single approved response.
+
+4. Exceptions
+Exceptions need written approval from Corporate Communications.
+
+5. Contact
+For questions, contact mkt@t2.example.

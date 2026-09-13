@@ -1,0 +1,1001 @@
+doc_id,file,title,topic_key,department,department_code,type,language,office,office_code,version,status,effective_date,superseded_by,related
+HR-0001,en/HR-0001_annual-leave-policy_Policy.txt,Annual Leave Policy,annual_leave,Human Resources,HR,Policy,en,Head Office,HO,3.2,Active,2023-07-05,,HR-0015 HR-0023 HR-0039
+IT-0001,en/IT-0001_password-policy_Policy.txt,Password Policy,password_policy,Information Technology,IT,Policy,en,Head Office,HO,3.1,Active,2023-01-28,,IT-0015 IT-0023 IT-0095
+FIN-0001,en/FIN-0001_expense-reimbursement-policy_Policy.txt,Expense Reimbursement Policy,expense_reimbursement,Finance,FIN,Policy,en,Head Office,HO,3.4,Active,2025-05-04,,FIN-0015 FIN-0023 FIN-0031
+FAC-0001,en/FAC-0001_meeting-room-booking-policy_Policy.txt,Meeting Room Booking Policy,meeting_room_booking,Facilities,FAC,Policy,en,Head Office,HO,3.1,Active,2023-03-18,,FAC-0031 FAC-0015
+LEG-0001,en/LEG-0001_data-privacy-policy_Policy.txt,Data Privacy Policy,data_privacy,Legal & Compliance,LEG,Policy,en,Head Office,HO,3.3,Active,2025-06-05,,LEG-0015 LEG-0047 IT-0095
+OPS-0001,en/OPS-0001_client-escalation-policy_Policy.txt,Client Escalation Policy,client_escalation,Operations,OPS,Policy,en,Head Office,HO,3.4,Active,2024-07-30,,OPS-0015 OPS-0039
+MKT-0001,en/MKT-0001_social-media-policy_Policy.txt,Social Media Policy,social_media,Marketing & Communications,MKT,Policy,en,Head Office,HO,3.3,Active,2024-04-03,,MKT-0015 LEG-0015 MKT-0023
+PRC-0001,en/PRC-0001_purchase-request-policy_Policy.txt,Purchase Request Policy,purchase_request,Procurement,PRC,Policy,en,Head Office,HO,3.2,Active,2023-07-19,,FIN-0039 FIN-0055 PRC-0015
+HR-0002,ar/HR-0002_annual-leave-policy_Policy.txt,سياسة الإجازة السنوية,annual_leave,Human Resources,HR,Policy,ar,المكتب الرئيسي,HO,3.3,Active,2023-10-20,,HR-0016 HR-0024 HR-0040
+IT-0002,ar/IT-0002_password-policy_Policy.txt,سياسة كلمات المرور,password_policy,Information Technology,IT,Policy,ar,المكتب الرئيسي,HO,3.3,Active,2024-12-14,,IT-0016 IT-0024 IT-0096
+FIN-0002,ar/FIN-0002_expense-reimbursement-policy_Policy.txt,سياسة استرداد المصروفات,expense_reimbursement,Finance,FIN,Policy,ar,المكتب الرئيسي,HO,3.2,Active,2024-08-12,,FIN-0016 FIN-0024 FIN-0032
+FAC-0002,ar/FAC-0002_meeting-room-booking-policy_Policy.txt,سياسة حجز قاعات الاجتماعات,meeting_room_booking,Facilities,FAC,Policy,ar,المكتب الرئيسي,HO,3.2,Active,2024-01-12,,FAC-0032 FAC-0016
+LEG-0002,ar/LEG-0002_data-privacy-policy_Policy.txt,سياسة خصوصية البيانات,data_privacy,Legal & Compliance,LEG,Policy,ar,المكتب الرئيسي,HO,3.0,Active,2023-12-15,,LEG-0016 LEG-0048 IT-0096
+OPS-0002,ar/OPS-0002_client-escalation-policy_Policy.txt,سياسة تصعيد شكاوى العملاء,client_escalation,Operations,OPS,Policy,ar,المكتب الرئيسي,HO,3.1,Active,2024-01-19,,OPS-0016 OPS-0040
+MKT-0002,ar/MKT-0002_social-media-policy_Policy.txt,سياسة وسائل التواصل الاجتماعي,social_media,Marketing & Communications,MKT,Policy,ar,المكتب الرئيسي,HO,3.4,Active,2023-02-01,,MKT-0016 LEG-0016 MKT-0024
+PRC-0002,ar/PRC-0002_purchase-request-policy_Policy.txt,سياسة طلب الشراء,purchase_request,Procurement,PRC,Policy,ar,المكتب الرئيسي,HO,3.2,Active,2024-09-13,,FIN-0040 FIN-0056 PRC-0016
+HR-0003,en/HR-0003_annual-leave-policy_Procedure.txt,Annual Leave - Procedure,annual_leave,Human Resources,HR,Procedure,en,Head Office,HO,3.2,Active,2024-08-02,,HR-0015 HR-0023 HR-0039
+IT-0003,en/IT-0003_password-policy_Procedure.txt,Password - Procedure,password_policy,Information Technology,IT,Procedure,en,Head Office,HO,3.4,Active,2025-03-10,,IT-0015 IT-0023 IT-0095
+FIN-0003,en/FIN-0003_expense-reimbursement-policy_Procedure.txt,Expense Reimbursement - Procedure,expense_reimbursement,Finance,FIN,Procedure,en,Head Office,HO,3.0,Active,2025-01-25,,FIN-0015 FIN-0023 FIN-0031
+FAC-0003,en/FAC-0003_meeting-room-booking-policy_Procedure.txt,Meeting Room Booking - Procedure,meeting_room_booking,Facilities,FAC,Procedure,en,Head Office,HO,3.3,Active,2025-06-02,,FAC-0031 FAC-0015
+LEG-0003,en/LEG-0003_data-privacy-policy_Procedure.txt,Data Privacy - Procedure,data_privacy,Legal & Compliance,LEG,Procedure,en,Head Office,HO,3.2,Active,2023-11-03,,LEG-0015 LEG-0047 IT-0095
+OPS-0003,en/OPS-0003_client-escalation-policy_Procedure.txt,Client Escalation - Procedure,client_escalation,Operations,OPS,Procedure,en,Head Office,HO,3.0,Active,2024-03-20,,OPS-0015 OPS-0039
+MKT-0003,en/MKT-0003_social-media-policy_Procedure.txt,Social Media - Procedure,social_media,Marketing & Communications,MKT,Procedure,en,Head Office,HO,3.3,Active,2024-01-01,,MKT-0015 LEG-0015 MKT-0023
+PRC-0003,en/PRC-0003_purchase-request-policy_Procedure.txt,Purchase Request - Procedure,purchase_request,Procurement,PRC,Procedure,en,Head Office,HO,3.0,Active,2025-04-23,,FIN-0039 FIN-0055 PRC-0015
+HR-0004,ar/HR-0004_annual-leave-policy_Procedure.txt,الإجازة السنوية - إجراء,annual_leave,Human Resources,HR,Procedure,ar,المكتب الرئيسي,HO,3.3,Active,2023-08-20,,HR-0016 HR-0024 HR-0040
+IT-0004,ar/IT-0004_password-policy_Procedure.txt,كلمات المرور - إجراء,password_policy,Information Technology,IT,Procedure,ar,المكتب الرئيسي,HO,3.4,Active,2023-12-14,,IT-0016 IT-0024 IT-0096
+FIN-0004,ar/FIN-0004_expense-reimbursement-policy_Procedure.txt,استرداد المصروفات - إجراء,expense_reimbursement,Finance,FIN,Procedure,ar,المكتب الرئيسي,HO,3.0,Active,2025-02-01,,FIN-0016 FIN-0024 FIN-0032
+FAC-0004,ar/FAC-0004_meeting-room-booking-policy_Procedure.txt,حجز قاعات الاجتماعات - إجراء,meeting_room_booking,Facilities,FAC,Procedure,ar,المكتب الرئيسي,HO,3.0,Active,2024-06-13,,FAC-0032 FAC-0016
+LEG-0004,ar/LEG-0004_data-privacy-policy_Procedure.txt,خصوصية البيانات - إجراء,data_privacy,Legal & Compliance,LEG,Procedure,ar,المكتب الرئيسي,HO,3.1,Active,2024-06-10,,LEG-0016 LEG-0048 IT-0096
+OPS-0004,ar/OPS-0004_client-escalation-policy_Procedure.txt,تصعيد شكاوى العملاء - إجراء,client_escalation,Operations,OPS,Procedure,ar,المكتب الرئيسي,HO,3.0,Active,2023-01-15,,OPS-0016 OPS-0040
+MKT-0004,ar/MKT-0004_social-media-policy_Procedure.txt,وسائل التواصل الاجتماعي - إجراء,social_media,Marketing & Communications,MKT,Procedure,ar,المكتب الرئيسي,HO,3.1,Active,2024-01-05,,MKT-0016 LEG-0016 MKT-0024
+PRC-0004,ar/PRC-0004_purchase-request-policy_Procedure.txt,طلب الشراء - إجراء,purchase_request,Procurement,PRC,Procedure,ar,المكتب الرئيسي,HO,3.0,Active,2025-01-29,,FIN-0040 FIN-0056 PRC-0016
+HR-0005,en/HR-0005_annual-leave-policy_FAQ.txt,Annual Leave - FAQ,annual_leave,Human Resources,HR,FAQ,en,Head Office,HO,3.2,Active,2025-01-30,,HR-0015 HR-0023 HR-0039
+IT-0005,en/IT-0005_password-policy_FAQ.txt,Password - FAQ,password_policy,Information Technology,IT,FAQ,en,Head Office,HO,3.2,Active,2023-02-27,,IT-0015 IT-0023 IT-0095
+FIN-0005,en/FIN-0005_expense-reimbursement-policy_FAQ.txt,Expense Reimbursement - FAQ,expense_reimbursement,Finance,FIN,FAQ,en,Head Office,HO,3.0,Active,2023-12-18,,FIN-0015 FIN-0023 FIN-0031
+FAC-0005,en/FAC-0005_meeting-room-booking-policy_FAQ.txt,Meeting Room Booking - FAQ,meeting_room_booking,Facilities,FAC,FAQ,en,Head Office,HO,3.1,Active,2025-02-13,,FAC-0031 FAC-0015
+LEG-0005,en/LEG-0005_data-privacy-policy_FAQ.txt,Data Privacy - FAQ,data_privacy,Legal & Compliance,LEG,FAQ,en,Head Office,HO,3.0,Active,2024-12-08,,LEG-0015 LEG-0047 IT-0095
+OPS-0005,en/OPS-0005_client-escalation-policy_FAQ.txt,Client Escalation - FAQ,client_escalation,Operations,OPS,FAQ,en,Head Office,HO,3.2,Active,2023-10-01,,OPS-0015 OPS-0039
+MKT-0005,en/MKT-0005_social-media-policy_FAQ.txt,Social Media - FAQ,social_media,Marketing & Communications,MKT,FAQ,en,Head Office,HO,3.3,Active,2023-04-01,,MKT-0015 LEG-0015 MKT-0023
+PRC-0005,en/PRC-0005_purchase-request-policy_FAQ.txt,Purchase Request - FAQ,purchase_request,Procurement,PRC,FAQ,en,Head Office,HO,3.1,Active,2025-02-04,,FIN-0039 FIN-0055 PRC-0015
+HR-0006,ar/HR-0006_annual-leave-policy_FAQ.txt,الإجازة السنوية - أسئلة شائعة,annual_leave,Human Resources,HR,FAQ,ar,المكتب الرئيسي,HO,3.4,Active,2023-08-30,,HR-0016 HR-0024 HR-0040
+IT-0006,ar/IT-0006_password-policy_FAQ.txt,كلمات المرور - أسئلة شائعة,password_policy,Information Technology,IT,FAQ,ar,المكتب الرئيسي,HO,3.3,Active,2023-04-15,,IT-0016 IT-0024 IT-0096
+FIN-0006,ar/FIN-0006_expense-reimbursement-policy_FAQ.txt,استرداد المصروفات - أسئلة شائعة,expense_reimbursement,Finance,FIN,FAQ,ar,المكتب الرئيسي,HO,3.3,Active,2024-05-28,,FIN-0016 FIN-0024 FIN-0032
+FAC-0006,ar/FAC-0006_meeting-room-booking-policy_FAQ.txt,حجز قاعات الاجتماعات - أسئلة شائعة,meeting_room_booking,Facilities,FAC,FAQ,ar,المكتب الرئيسي,HO,3.2,Active,2024-09-23,,FAC-0032 FAC-0016
+LEG-0006,ar/LEG-0006_data-privacy-policy_FAQ.txt,خصوصية البيانات - أسئلة شائعة,data_privacy,Legal & Compliance,LEG,FAQ,ar,المكتب الرئيسي,HO,3.2,Active,2023-08-22,,LEG-0016 LEG-0048 IT-0096
+OPS-0006,ar/OPS-0006_client-escalation-policy_FAQ.txt,تصعيد شكاوى العملاء - أسئلة شائعة,client_escalation,Operations,OPS,FAQ,ar,المكتب الرئيسي,HO,3.4,Active,2023-10-18,,OPS-0016 OPS-0040
+MKT-0006,ar/MKT-0006_social-media-policy_FAQ.txt,وسائل التواصل الاجتماعي - أسئلة شائعة,social_media,Marketing & Communications,MKT,FAQ,ar,المكتب الرئيسي,HO,3.3,Active,2025-05-25,,MKT-0016 LEG-0016 MKT-0024
+PRC-0006,ar/PRC-0006_purchase-request-policy_FAQ.txt,طلب الشراء - أسئلة شائعة,purchase_request,Procurement,PRC,FAQ,ar,المكتب الرئيسي,HO,3.3,Active,2023-01-31,,FIN-0040 FIN-0056 PRC-0016
+HR-0007,en/HR-0007_annual-leave-policy_QuickReference.txt,Annual Leave - Quick Reference,annual_leave,Human Resources,HR,Quick Reference,en,Head Office,HO,3.3,Active,2023-01-05,,HR-0015 HR-0023 HR-0039
+IT-0007,en/IT-0007_password-policy_QuickReference.txt,Password - Quick Reference,password_policy,Information Technology,IT,Quick Reference,en,Head Office,HO,3.2,Active,2024-05-12,,IT-0015 IT-0023 IT-0095
+FIN-0007,en/FIN-0007_expense-reimbursement-policy_QuickReference.txt,Expense Reimbursement - Quick Reference,expense_reimbursement,Finance,FIN,Quick Reference,en,Head Office,HO,3.3,Active,2024-06-04,,FIN-0015 FIN-0023 FIN-0031
+FAC-0007,en/FAC-0007_meeting-room-booking-policy_QuickReference.txt,Meeting Room Booking - Quick Reference,meeting_room_booking,Facilities,FAC,Quick Reference,en,Head Office,HO,3.2,Active,2025-04-29,,FAC-0031 FAC-0015
+LEG-0007,en/LEG-0007_data-privacy-policy_QuickReference.txt,Data Privacy - Quick Reference,data_privacy,Legal & Compliance,LEG,Quick Reference,en,Head Office,HO,3.1,Active,2024-09-25,,LEG-0015 LEG-0047 IT-0095
+OPS-0007,en/OPS-0007_client-escalation-policy_QuickReference.txt,Client Escalation - Quick Reference,client_escalation,Operations,OPS,Quick Reference,en,Head Office,HO,3.0,Active,2023-03-28,,OPS-0015 OPS-0039
+MKT-0007,en/MKT-0007_social-media-policy_QuickReference.txt,Social Media - Quick Reference,social_media,Marketing & Communications,MKT,Quick Reference,en,Head Office,HO,3.1,Active,2024-11-27,,MKT-0015 LEG-0015 MKT-0023
+PRC-0007,en/PRC-0007_purchase-request-policy_QuickReference.txt,Purchase Request - Quick Reference,purchase_request,Procurement,PRC,Quick Reference,en,Head Office,HO,3.3,Active,2023-08-30,,FIN-0039 FIN-0055 PRC-0015
+HR-0008,ar/HR-0008_annual-leave-policy_QuickReference.txt,الإجازة السنوية - مرجع سريع,annual_leave,Human Resources,HR,Quick Reference,ar,المكتب الرئيسي,HO,3.1,Active,2023-03-20,,HR-0016 HR-0024 HR-0040
+IT-0008,ar/IT-0008_password-policy_QuickReference.txt,كلمات المرور - مرجع سريع,password_policy,Information Technology,IT,Quick Reference,ar,المكتب الرئيسي,HO,3.4,Active,2023-06-05,,IT-0016 IT-0024 IT-0096
+FIN-0008,ar/FIN-0008_expense-reimbursement-policy_QuickReference.txt,استرداد المصروفات - مرجع سريع,expense_reimbursement,Finance,FIN,Quick Reference,ar,المكتب الرئيسي,HO,3.1,Active,2025-04-16,,FIN-0016 FIN-0024 FIN-0032
+FAC-0008,ar/FAC-0008_meeting-room-booking-policy_QuickReference.txt,حجز قاعات الاجتماعات - مرجع سريع,meeting_room_booking,Facilities,FAC,Quick Reference,ar,المكتب الرئيسي,HO,3.4,Active,2024-08-28,,FAC-0032 FAC-0016
+LEG-0008,ar/LEG-0008_data-privacy-policy_QuickReference.txt,خصوصية البيانات - مرجع سريع,data_privacy,Legal & Compliance,LEG,Quick Reference,ar,المكتب الرئيسي,HO,3.3,Active,2023-05-25,,LEG-0016 LEG-0048 IT-0096
+OPS-0008,ar/OPS-0008_client-escalation-policy_QuickReference.txt,تصعيد شكاوى العملاء - مرجع سريع,client_escalation,Operations,OPS,Quick Reference,ar,المكتب الرئيسي,HO,3.0,Active,2023-02-02,,OPS-0016 OPS-0040
+MKT-0008,ar/MKT-0008_social-media-policy_QuickReference.txt,وسائل التواصل الاجتماعي - مرجع سريع,social_media,Marketing & Communications,MKT,Quick Reference,ar,المكتب الرئيسي,HO,3.3,Active,2024-07-22,,MKT-0016 LEG-0016 MKT-0024
+PRC-0008,ar/PRC-0008_purchase-request-policy_QuickReference.txt,طلب الشراء - مرجع سريع,purchase_request,Procurement,PRC,Quick Reference,ar,المكتب الرئيسي,HO,3.1,Active,2023-11-29,,FIN-0040 FIN-0056 PRC-0016
+HR-0009,en/HR-0009_sick-leave-policy_Policy.txt,Sick Leave Policy,sick_leave,Human Resources,HR,Policy,en,Head Office,HO,3.2,Active,2025-05-18,,HR-0007 HR-0039 FAC-0063
+IT-0009,en/IT-0009_multi-factor-authentication-policy_Policy.txt,Multi-Factor Authentication Policy,mfa,Information Technology,IT,Policy,en,Head Office,HO,3.2,Active,2024-12-09,,IT-0007 IT-0047
+FIN-0009,en/FIN-0009_corporate-card-policy_Policy.txt,Corporate Card Policy,corporate_card,Finance,FIN,Policy,en,Head Office,HO,3.2,Active,2023-10-26,,FIN-0007 FIN-0023
+FAC-0009,en/FAC-0009_parking-policy_Policy.txt,Parking Policy,parking,Facilities,FAC,Policy,en,Head Office,HO,3.1,Active,2024-02-29,,FAC-0023
+LEG-0009,en/LEG-0009_confidentiality-policy_Policy.txt,Confidentiality Policy,confidentiality,Legal & Compliance,LEG,Policy,en,Head Office,HO,3.3,Active,2024-05-01,,LEG-0007 LEG-0071 MKT-0015
+OPS-0009,en/OPS-0009_incident-management-policy_Policy.txt,Incident Management Policy,incident_management,Operations,OPS,Policy,en,Head Office,HO,3.1,Active,2024-04-12,,OPS-0007 OPS-0023 OPS-0047
+MKT-0009,en/MKT-0009_external-communications-policy_Policy.txt,External Communications Policy,external_communications,Marketing & Communications,MKT,Policy,en,Head Office,HO,3.1,Active,2023-06-01,,MKT-0007 MKT-0031 LEG-0079
+PRC-0009,en/PRC-0009_supplier-selection-policy_Policy.txt,Supplier Selection Policy,supplier_selection,Procurement,PRC,Policy,en,Head Office,HO,3.4,Active,2023-10-18,,PRC-0007 FIN-0039 LEG-0023
+HR-0010,ar/HR-0010_sick-leave-policy_Policy.txt,سياسة الإجازة المرضية,sick_leave,Human Resources,HR,Policy,ar,المكتب الرئيسي,HO,3.0,Active,2025-06-05,,HR-0008 HR-0040 FAC-0064
+IT-0010,ar/IT-0010_multi-factor-authentication-policy_Policy.txt,سياسة المصادقة متعددة العوامل,mfa,Information Technology,IT,Policy,ar,المكتب الرئيسي,HO,3.3,Active,2023-09-27,,IT-0008 IT-0048
+FIN-0010,ar/FIN-0010_corporate-card-policy_Policy.txt,سياسة بطاقة الشركة,corporate_card,Finance,FIN,Policy,ar,المكتب الرئيسي,HO,3.0,Active,2024-03-07,,FIN-0008 FIN-0024
+FAC-0010,ar/FAC-0010_parking-policy_Policy.txt,سياسة مواقف السيارات,parking,Facilities,FAC,Policy,ar,المكتب الرئيسي,HO,3.0,Active,2023-10-27,,FAC-0024
+LEG-0010,ar/LEG-0010_confidentiality-policy_Policy.txt,سياسة السرية,confidentiality,Legal & Compliance,LEG,Policy,ar,المكتب الرئيسي,HO,3.1,Active,2023-07-24,,LEG-0008 LEG-0072 MKT-0016
+OPS-0010,ar/OPS-0010_incident-management-policy_Policy.txt,سياسة إدارة الحوادث,incident_management,Operations,OPS,Policy,ar,المكتب الرئيسي,HO,3.0,Active,2023-11-26,,OPS-0008 OPS-0024 OPS-0048
+MKT-0010,ar/MKT-0010_external-communications-policy_Policy.txt,سياسة الاتصالات الخارجية,external_communications,Marketing & Communications,MKT,Policy,ar,المكتب الرئيسي,HO,3.2,Active,2024-04-24,,MKT-0008 MKT-0032 LEG-0080
+PRC-0010,ar/PRC-0010_supplier-selection-policy_Policy.txt,سياسة اختيار الموردين,supplier_selection,Procurement,PRC,Policy,ar,المكتب الرئيسي,HO,3.4,Active,2024-02-19,,PRC-0008 FIN-0040 LEG-0024
+HR-0011,en/HR-0011_sick-leave-policy_Procedure.txt,Sick Leave - Procedure,sick_leave,Human Resources,HR,Procedure,en,Head Office,HO,3.0,Active,2023-11-22,,HR-0007 HR-0039 FAC-0063
+IT-0011,en/IT-0011_multi-factor-authentication-policy_Procedure.txt,Multi-Factor Authentication - Procedure,mfa,Information Technology,IT,Procedure,en,Head Office,HO,3.3,Active,2023-01-20,,IT-0007 IT-0047
+FIN-0011,en/FIN-0011_corporate-card-policy_Procedure.txt,Corporate Card - Procedure,corporate_card,Finance,FIN,Procedure,en,Head Office,HO,3.1,Active,2024-06-18,,FIN-0007 FIN-0023
+FAC-0011,en/FAC-0011_parking-policy_Procedure.txt,Parking - Procedure,parking,Facilities,FAC,Procedure,en,Head Office,HO,3.3,Active,2023-04-19,,FAC-0023
+LEG-0011,en/LEG-0011_confidentiality-policy_Procedure.txt,Confidentiality - Procedure,confidentiality,Legal & Compliance,LEG,Procedure,en,Head Office,HO,3.3,Active,2025-02-20,,LEG-0007 LEG-0071 MKT-0015
+OPS-0011,en/OPS-0011_incident-management-policy_Procedure.txt,Incident Management - Procedure,incident_management,Operations,OPS,Procedure,en,Head Office,HO,3.1,Active,2023-10-20,,OPS-0007 OPS-0023 OPS-0047
+MKT-0011,en/MKT-0011_external-communications-policy_Procedure.txt,External Communications - Procedure,external_communications,Marketing & Communications,MKT,Procedure,en,Head Office,HO,3.0,Active,2023-11-10,,MKT-0007 MKT-0031 LEG-0079
+PRC-0011,en/PRC-0011_supplier-selection-policy_Procedure.txt,Supplier Selection - Procedure,supplier_selection,Procurement,PRC,Procedure,en,Head Office,HO,3.1,Active,2024-07-14,,PRC-0007 FIN-0039 LEG-0023
+HR-0012,ar/HR-0012_sick-leave-policy_Procedure.txt,الإجازة المرضية - إجراء,sick_leave,Human Resources,HR,Procedure,ar,المكتب الرئيسي,HO,3.0,Active,2024-11-25,,HR-0008 HR-0040 FAC-0064
+IT-0012,ar/IT-0012_multi-factor-authentication-policy_Procedure.txt,المصادقة متعددة العوامل - إجراء,mfa,Information Technology,IT,Procedure,ar,المكتب الرئيسي,HO,3.2,Active,2024-11-01,,IT-0008 IT-0048
+FIN-0012,ar/FIN-0012_corporate-card-policy_Procedure.txt,بطاقة الشركة - إجراء,corporate_card,Finance,FIN,Procedure,ar,المكتب الرئيسي,HO,3.4,Active,2024-03-10,,FIN-0008 FIN-0024
+FAC-0012,ar/FAC-0012_parking-policy_Procedure.txt,مواقف السيارات - إجراء,parking,Facilities,FAC,Procedure,ar,المكتب الرئيسي,HO,3.4,Active,2023-04-07,,FAC-0024
+LEG-0012,ar/LEG-0012_confidentiality-policy_Procedure.txt,السرية - إجراء,confidentiality,Legal & Compliance,LEG,Procedure,ar,المكتب الرئيسي,HO,3.2,Active,2023-08-07,,LEG-0008 LEG-0072 MKT-0016
+OPS-0012,ar/OPS-0012_incident-management-policy_Procedure.txt,إدارة الحوادث - إجراء,incident_management,Operations,OPS,Procedure,ar,المكتب الرئيسي,HO,3.1,Active,2023-08-07,,OPS-0008 OPS-0024 OPS-0048
+MKT-0012,ar/MKT-0012_external-communications-policy_Procedure.txt,الاتصالات الخارجية - إجراء,external_communications,Marketing & Communications,MKT,Procedure,ar,المكتب الرئيسي,HO,3.1,Active,2023-10-04,,MKT-0008 MKT-0032 LEG-0080
+PRC-0012,ar/PRC-0012_supplier-selection-policy_Procedure.txt,اختيار الموردين - إجراء,supplier_selection,Procurement,PRC,Procedure,ar,المكتب الرئيسي,HO,3.0,Active,2025-01-30,,PRC-0008 FIN-0040 LEG-0024
+HR-0013,en/HR-0013_sick-leave-policy_FAQ.txt,Sick Leave - FAQ,sick_leave,Human Resources,HR,FAQ,en,Head Office,HO,3.3,Active,2023-05-30,,HR-0007 HR-0039 FAC-0063
+IT-0013,en/IT-0013_multi-factor-authentication-policy_FAQ.txt,Multi-Factor Authentication - FAQ,mfa,Information Technology,IT,FAQ,en,Head Office,HO,3.3,Active,2024-10-31,,IT-0007 IT-0047
+FIN-0013,en/FIN-0013_corporate-card-policy_FAQ.txt,Corporate Card - FAQ,corporate_card,Finance,FIN,FAQ,en,Head Office,HO,3.2,Active,2024-07-24,,FIN-0007 FIN-0023
+FAC-0013,en/FAC-0013_parking-policy_FAQ.txt,Parking - FAQ,parking,Facilities,FAC,FAQ,en,Head Office,HO,3.1,Active,2023-07-19,,FAC-0023
+LEG-0013,en/LEG-0013_confidentiality-policy_FAQ.txt,Confidentiality - FAQ,confidentiality,Legal & Compliance,LEG,FAQ,en,Head Office,HO,3.3,Active,2024-12-08,,LEG-0007 LEG-0071 MKT-0015
+OPS-0013,en/OPS-0013_incident-management-policy_FAQ.txt,Incident Management - FAQ,incident_management,Operations,OPS,FAQ,en,Head Office,HO,3.0,Active,2024-06-20,,OPS-0007 OPS-0023 OPS-0047
+MKT-0013,en/MKT-0013_external-communications-policy_FAQ.txt,External Communications - FAQ,external_communications,Marketing & Communications,MKT,FAQ,en,Head Office,HO,3.3,Active,2024-08-01,,MKT-0007 MKT-0031 LEG-0079
+PRC-0013,en/PRC-0013_supplier-selection-policy_FAQ.txt,Supplier Selection - FAQ,supplier_selection,Procurement,PRC,FAQ,en,Head Office,HO,3.2,Active,2023-07-01,,PRC-0007 FIN-0039 LEG-0023
+HR-0014,ar/HR-0014_sick-leave-policy_FAQ.txt,الإجازة المرضية - أسئلة شائعة,sick_leave,Human Resources,HR,FAQ,ar,المكتب الرئيسي,HO,3.1,Active,2023-01-22,,HR-0008 HR-0040 FAC-0064
+IT-0014,ar/IT-0014_multi-factor-authentication-policy_FAQ.txt,المصادقة متعددة العوامل - أسئلة شائعة,mfa,Information Technology,IT,FAQ,ar,المكتب الرئيسي,HO,3.4,Active,2025-01-30,,IT-0008 IT-0048
+FIN-0014,ar/FIN-0014_corporate-card-policy_FAQ.txt,بطاقة الشركة - أسئلة شائعة,corporate_card,Finance,FIN,FAQ,ar,المكتب الرئيسي,HO,3.3,Active,2023-10-03,,FIN-0008 FIN-0024
+FAC-0014,ar/FAC-0014_parking-policy_FAQ.txt,مواقف السيارات - أسئلة شائعة,parking,Facilities,FAC,FAQ,ar,المكتب الرئيسي,HO,3.2,Active,2025-02-03,,FAC-0024
+LEG-0014,ar/LEG-0014_confidentiality-policy_FAQ.txt,السرية - أسئلة شائعة,confidentiality,Legal & Compliance,LEG,FAQ,ar,المكتب الرئيسي,HO,3.4,Active,2024-01-01,,LEG-0008 LEG-0072 MKT-0016
+OPS-0014,ar/OPS-0014_incident-management-policy_FAQ.txt,إدارة الحوادث - أسئلة شائعة,incident_management,Operations,OPS,FAQ,ar,المكتب الرئيسي,HO,3.4,Active,2024-02-03,,OPS-0008 OPS-0024 OPS-0048
+MKT-0014,ar/MKT-0014_external-communications-policy_FAQ.txt,الاتصالات الخارجية - أسئلة شائعة,external_communications,Marketing & Communications,MKT,FAQ,ar,المكتب الرئيسي,HO,3.3,Active,2025-02-19,,MKT-0008 MKT-0032 LEG-0080
+PRC-0014,ar/PRC-0014_supplier-selection-policy_FAQ.txt,اختيار الموردين - أسئلة شائعة,supplier_selection,Procurement,PRC,FAQ,ar,المكتب الرئيسي,HO,3.0,Active,2023-07-02,,PRC-0008 FIN-0040 LEG-0024
+HR-0015,en/HR-0015_sick-leave-policy_QuickReference.txt,Sick Leave - Quick Reference,sick_leave,Human Resources,HR,Quick Reference,en,Head Office,HO,3.3,Active,2024-06-16,,HR-0007 HR-0039 FAC-0063
+IT-0015,en/IT-0015_multi-factor-authentication-policy_QuickReference.txt,Multi-Factor Authentication - Quick Reference,mfa,Information Technology,IT,Quick Reference,en,Head Office,HO,3.4,Active,2024-02-08,,IT-0007 IT-0047
+FIN-0015,en/FIN-0015_corporate-card-policy_QuickReference.txt,Corporate Card - Quick Reference,corporate_card,Finance,FIN,Quick Reference,en,Head Office,HO,3.0,Active,2024-09-01,,FIN-0007 FIN-0023
+FAC-0015,en/FAC-0015_parking-policy_QuickReference.txt,Parking - Quick Reference,parking,Facilities,FAC,Quick Reference,en,Head Office,HO,3.4,Active,2024-03-31,,FAC-0023
+LEG-0015,en/LEG-0015_confidentiality-policy_QuickReference.txt,Confidentiality - Quick Reference,confidentiality,Legal & Compliance,LEG,Quick Reference,en,Head Office,HO,3.1,Active,2024-07-27,,LEG-0007 LEG-0071 MKT-0015
+OPS-0015,en/OPS-0015_incident-management-policy_QuickReference.txt,Incident Management - Quick Reference,incident_management,Operations,OPS,Quick Reference,en,Head Office,HO,3.4,Active,2023-12-01,,OPS-0007 OPS-0023 OPS-0047
+MKT-0015,en/MKT-0015_external-communications-policy_QuickReference.txt,External Communications - Quick Reference,external_communications,Marketing & Communications,MKT,Quick Reference,en,Head Office,HO,3.2,Active,2023-04-07,,MKT-0007 MKT-0031 LEG-0079
+PRC-0015,en/PRC-0015_supplier-selection-policy_QuickReference.txt,Supplier Selection - Quick Reference,supplier_selection,Procurement,PRC,Quick Reference,en,Head Office,HO,3.2,Active,2023-03-08,,PRC-0007 FIN-0039 LEG-0023
+HR-0016,ar/HR-0016_sick-leave-policy_QuickReference.txt,الإجازة المرضية - مرجع سريع,sick_leave,Human Resources,HR,Quick Reference,ar,المكتب الرئيسي,HO,3.2,Active,2024-12-20,,HR-0008 HR-0040 FAC-0064
+IT-0016,ar/IT-0016_multi-factor-authentication-policy_QuickReference.txt,المصادقة متعددة العوامل - مرجع سريع,mfa,Information Technology,IT,Quick Reference,ar,المكتب الرئيسي,HO,3.1,Active,2024-03-04,,IT-0008 IT-0048
+FIN-0016,ar/FIN-0016_corporate-card-policy_QuickReference.txt,بطاقة الشركة - مرجع سريع,corporate_card,Finance,FIN,Quick Reference,ar,المكتب الرئيسي,HO,3.1,Active,2024-01-02,,FIN-0008 FIN-0024
+FAC-0016,ar/FAC-0016_parking-policy_QuickReference.txt,مواقف السيارات - مرجع سريع,parking,Facilities,FAC,Quick Reference,ar,المكتب الرئيسي,HO,3.4,Active,2023-06-13,,FAC-0024
+LEG-0016,ar/LEG-0016_confidentiality-policy_QuickReference.txt,السرية - مرجع سريع,confidentiality,Legal & Compliance,LEG,Quick Reference,ar,المكتب الرئيسي,HO,3.4,Active,2024-09-12,,LEG-0008 LEG-0072 MKT-0016
+OPS-0016,ar/OPS-0016_incident-management-policy_QuickReference.txt,إدارة الحوادث - مرجع سريع,incident_management,Operations,OPS,Quick Reference,ar,المكتب الرئيسي,HO,3.2,Active,2023-10-01,,OPS-0008 OPS-0024 OPS-0048
+MKT-0016,ar/MKT-0016_external-communications-policy_QuickReference.txt,الاتصالات الخارجية - مرجع سريع,external_communications,Marketing & Communications,MKT,Quick Reference,ar,المكتب الرئيسي,HO,3.2,Active,2023-04-02,,MKT-0008 MKT-0032 LEG-0080
+PRC-0016,ar/PRC-0016_supplier-selection-policy_QuickReference.txt,اختيار الموردين - مرجع سريع,supplier_selection,Procurement,PRC,Quick Reference,ar,المكتب الرئيسي,HO,3.0,Active,2024-01-24,,PRC-0008 FIN-0040 LEG-0024
+HR-0017,en/HR-0017_parental-leave-policy_Policy.txt,Parental Leave Policy,parental_leave,Human Resources,HR,Policy,en,Head Office,HO,3.4,Active,2025-06-07,,HR-0007 HR-0015 HR-0191
+IT-0017,en/IT-0017_system-access-request-policy_Policy.txt,System Access Request Policy,system_access,Information Technology,IT,Policy,en,Head Office,HO,3.4,Active,2024-02-09,,IT-0007 IT-0031 HR-0111
+FIN-0017,en/FIN-0017_business-travel-booking-policy_Policy.txt,Business Travel Booking Policy,travel_booking,Finance,FIN,Policy,en,Head Office,HO,3.0,Active,2023-02-16,,FIN-0007 FIN-0031 FIN-0015
+FAC-0017,en/FAC-0017_building-access-policy_Policy.txt,Building Access Policy,building_access,Facilities,FAC,Policy,en,Head Office,HO,3.1,Active,2024-07-13,,FAC-0015 FAC-0031
+LEG-0017,en/LEG-0017_conflict-of-interest-policy_Policy.txt,Conflict of Interest Policy,conflict_of_interest,Legal & Compliance,LEG,Policy,en,Head Office,HO,3.0,Active,2023-12-11,,HR-0143 LEG-0063 LEG-0031
+OPS-0017,en/OPS-0017_change-management-policy_Policy.txt,Change Management Policy,change_management,Operations,OPS,Policy,en,Head Office,HO,3.3,Active,2023-02-04,,OPS-0015 OPS-0031
+MKT-0017,en/MKT-0017_brand-usage-policy_Policy.txt,Brand Usage Policy,brand_usage,Marketing & Communications,MKT,Policy,en,Head Office,HO,3.1,Active,2024-05-28,,MKT-0007 MKT-0015
+PRC-0017,en/PRC-0017_contract-renewal-policy_Policy.txt,Contract Renewal Policy,contract_renewal,Procurement,PRC,Policy,en,Head Office,HO,3.1,Active,2024-02-22,,FIN-0039 FIN-0047
+HR-0018,ar/HR-0018_parental-leave-policy_Policy.txt,سياسة إجازة الوالدية,parental_leave,Human Resources,HR,Policy,ar,المكتب الرئيسي,HO,3.1,Active,2023-06-07,,HR-0008 HR-0016 HR-0192
+IT-0018,ar/IT-0018_system-access-request-policy_Policy.txt,سياسة طلب الوصول إلى الأنظمة,system_access,Information Technology,IT,Policy,ar,المكتب الرئيسي,HO,3.4,Active,2023-05-07,,IT-0008 IT-0032 HR-0112
+FIN-0018,ar/FIN-0018_business-travel-booking-policy_Policy.txt,سياسة حجز السفر للعمل,travel_booking,Finance,FIN,Policy,ar,المكتب الرئيسي,HO,3.1,Active,2024-02-05,,FIN-0008 FIN-0032 FIN-0016
+FAC-0018,ar/FAC-0018_building-access-policy_Policy.txt,سياسة الدخول إلى المبنى,building_access,Facilities,FAC,Policy,ar,المكتب الرئيسي,HO,3.4,Active,2025-06-17,,FAC-0016 FAC-0032
+LEG-0018,ar/LEG-0018_conflict-of-interest-policy_Policy.txt,سياسة تضارب المصالح,conflict_of_interest,Legal & Compliance,LEG,Policy,ar,المكتب الرئيسي,HO,3.4,Active,2024-05-11,,HR-0144 LEG-0064 LEG-0032
+OPS-0018,ar/OPS-0018_change-management-policy_Policy.txt,سياسة إدارة التغيير,change_management,Operations,OPS,Policy,ar,المكتب الرئيسي,HO,3.0,Active,2023-10-17,,OPS-0016 OPS-0032
+MKT-0018,ar/MKT-0018_brand-usage-policy_Policy.txt,سياسة استخدام العلامة التجارية,brand_usage,Marketing & Communications,MKT,Policy,ar,المكتب الرئيسي,HO,3.1,Active,2025-06-15,,MKT-0008 MKT-0016
+PRC-0018,ar/PRC-0018_contract-renewal-policy_Policy.txt,سياسة تجديد العقود,contract_renewal,Procurement,PRC,Policy,ar,المكتب الرئيسي,HO,3.4,Active,2023-02-08,,FIN-0040 FIN-0048
+HR-0019,en/HR-0019_parental-leave-policy_Procedure.txt,Parental Leave - Procedure,parental_leave,Human Resources,HR,Procedure,en,Head Office,HO,3.1,Active,2024-05-07,,HR-0007 HR-0015 HR-0191
+IT-0019,en/IT-0019_system-access-request-policy_Procedure.txt,System Access Request - Procedure,system_access,Information Technology,IT,Procedure,en,Head Office,HO,3.4,Active,2024-01-21,,IT-0007 IT-0031 HR-0111
+FIN-0019,en/FIN-0019_business-travel-booking-policy_Procedure.txt,Business Travel Booking - Procedure,travel_booking,Finance,FIN,Procedure,en,Head Office,HO,3.0,Active,2024-08-09,,FIN-0007 FIN-0031 FIN-0015
+FAC-0019,en/FAC-0019_building-access-policy_Procedure.txt,Building Access - Procedure,building_access,Facilities,FAC,Procedure,en,Head Office,HO,3.1,Active,2023-09-18,,FAC-0015 FAC-0031
+LEG-0019,en/LEG-0019_conflict-of-interest-policy_Procedure.txt,Conflict of Interest - Procedure,conflict_of_interest,Legal & Compliance,LEG,Procedure,en,Head Office,HO,3.4,Active,2023-02-22,,HR-0143 LEG-0063 LEG-0031
+OPS-0019,en/OPS-0019_change-management-policy_Procedure.txt,Change Management - Procedure,change_management,Operations,OPS,Procedure,en,Head Office,HO,3.3,Active,2024-01-15,,OPS-0015 OPS-0031
+MKT-0019,en/MKT-0019_brand-usage-policy_Procedure.txt,Brand Usage - Procedure,brand_usage,Marketing & Communications,MKT,Procedure,en,Head Office,HO,3.3,Active,2023-10-13,,MKT-0007 MKT-0015
+PRC-0019,en/PRC-0019_contract-renewal-policy_Procedure.txt,Contract Renewal - Procedure,contract_renewal,Procurement,PRC,Procedure,en,Head Office,HO,3.1,Active,2023-08-25,,FIN-0039 FIN-0047
+HR-0020,ar/HR-0020_parental-leave-policy_Procedure.txt,إجازة الوالدية - إجراء,parental_leave,Human Resources,HR,Procedure,ar,المكتب الرئيسي,HO,3.3,Active,2024-07-18,,HR-0008 HR-0016 HR-0192
+IT-0020,ar/IT-0020_system-access-request-policy_Procedure.txt,طلب الوصول إلى الأنظمة - إجراء,system_access,Information Technology,IT,Procedure,ar,المكتب الرئيسي,HO,3.0,Active,2024-03-25,,IT-0008 IT-0032 HR-0112
+FIN-0020,ar/FIN-0020_business-travel-booking-policy_Procedure.txt,حجز السفر للعمل - إجراء,travel_booking,Finance,FIN,Procedure,ar,المكتب الرئيسي,HO,3.1,Active,2024-06-20,,FIN-0008 FIN-0032 FIN-0016
+FAC-0020,ar/FAC-0020_building-access-policy_Procedure.txt,الدخول إلى المبنى - إجراء,building_access,Facilities,FAC,Procedure,ar,المكتب الرئيسي,HO,3.2,Active,2024-05-26,,FAC-0016 FAC-0032
+LEG-0020,ar/LEG-0020_conflict-of-interest-policy_Procedure.txt,تضارب المصالح - إجراء,conflict_of_interest,Legal & Compliance,LEG,Procedure,ar,المكتب الرئيسي,HO,3.1,Active,2024-09-26,,HR-0144 LEG-0064 LEG-0032
+OPS-0020,ar/OPS-0020_change-management-policy_Procedure.txt,إدارة التغيير - إجراء,change_management,Operations,OPS,Procedure,ar,المكتب الرئيسي,HO,3.3,Active,2023-06-25,,OPS-0016 OPS-0032
+MKT-0020,ar/MKT-0020_brand-usage-policy_Procedure.txt,استخدام العلامة التجارية - إجراء,brand_usage,Marketing & Communications,MKT,Procedure,ar,المكتب الرئيسي,HO,3.0,Active,2023-07-30,,MKT-0008 MKT-0016
+PRC-0020,ar/PRC-0020_contract-renewal-policy_Procedure.txt,تجديد العقود - إجراء,contract_renewal,Procurement,PRC,Procedure,ar,المكتب الرئيسي,HO,3.0,Active,2023-08-31,,FIN-0040 FIN-0048
+HR-0021,en/HR-0021_parental-leave-policy_FAQ.txt,Parental Leave - FAQ,parental_leave,Human Resources,HR,FAQ,en,Head Office,HO,3.4,Active,2023-11-28,,HR-0007 HR-0015 HR-0191
+IT-0021,en/IT-0021_system-access-request-policy_FAQ.txt,System Access Request - FAQ,system_access,Information Technology,IT,FAQ,en,Head Office,HO,3.1,Active,2023-05-31,,IT-0007 IT-0031 HR-0111
+FIN-0021,en/FIN-0021_business-travel-booking-policy_FAQ.txt,Business Travel Booking - FAQ,travel_booking,Finance,FIN,FAQ,en,Head Office,HO,3.3,Active,2024-03-10,,FIN-0007 FIN-0031 FIN-0015
+FAC-0021,en/FAC-0021_building-access-policy_FAQ.txt,Building Access - FAQ,building_access,Facilities,FAC,FAQ,en,Head Office,HO,3.1,Active,2024-11-13,,FAC-0015 FAC-0031
+LEG-0021,en/LEG-0021_conflict-of-interest-policy_FAQ.txt,Conflict of Interest - FAQ,conflict_of_interest,Legal & Compliance,LEG,FAQ,en,Head Office,HO,3.0,Active,2025-04-13,,HR-0143 LEG-0063 LEG-0031
+OPS-0021,en/OPS-0021_change-management-policy_FAQ.txt,Change Management - FAQ,change_management,Operations,OPS,FAQ,en,Head Office,HO,3.1,Active,2025-05-24,,OPS-0015 OPS-0031
+MKT-0021,en/MKT-0021_brand-usage-policy_FAQ.txt,Brand Usage - FAQ,brand_usage,Marketing & Communications,MKT,FAQ,en,Head Office,HO,3.1,Active,2023-03-19,,MKT-0007 MKT-0015
+PRC-0021,en/PRC-0021_contract-renewal-policy_FAQ.txt,Contract Renewal - FAQ,contract_renewal,Procurement,PRC,FAQ,en,Head Office,HO,3.4,Active,2023-11-27,,FIN-0039 FIN-0047
+HR-0022,ar/HR-0022_parental-leave-policy_FAQ.txt,إجازة الوالدية - أسئلة شائعة,parental_leave,Human Resources,HR,FAQ,ar,المكتب الرئيسي,HO,3.1,Active,2023-03-11,,HR-0008 HR-0016 HR-0192
+IT-0022,ar/IT-0022_system-access-request-policy_FAQ.txt,طلب الوصول إلى الأنظمة - أسئلة شائعة,system_access,Information Technology,IT,FAQ,ar,المكتب الرئيسي,HO,3.3,Active,2025-05-26,,IT-0008 IT-0032 HR-0112
+FIN-0022,ar/FIN-0022_business-travel-booking-policy_FAQ.txt,حجز السفر للعمل - أسئلة شائعة,travel_booking,Finance,FIN,FAQ,ar,المكتب الرئيسي,HO,3.4,Active,2023-11-04,,FIN-0008 FIN-0032 FIN-0016
+FAC-0022,ar/FAC-0022_building-access-policy_FAQ.txt,الدخول إلى المبنى - أسئلة شائعة,building_access,Facilities,FAC,FAQ,ar,المكتب الرئيسي,HO,3.0,Active,2024-02-08,,FAC-0016 FAC-0032
+LEG-0022,ar/LEG-0022_conflict-of-interest-policy_FAQ.txt,تضارب المصالح - أسئلة شائعة,conflict_of_interest,Legal & Compliance,LEG,FAQ,ar,المكتب الرئيسي,HO,3.4,Active,2023-04-26,,HR-0144 LEG-0064 LEG-0032
+OPS-0022,ar/OPS-0022_change-management-policy_FAQ.txt,إدارة التغيير - أسئلة شائعة,change_management,Operations,OPS,FAQ,ar,المكتب الرئيسي,HO,3.4,Active,2024-10-31,,OPS-0016 OPS-0032
+MKT-0022,ar/MKT-0022_brand-usage-policy_FAQ.txt,استخدام العلامة التجارية - أسئلة شائعة,brand_usage,Marketing & Communications,MKT,FAQ,ar,المكتب الرئيسي,HO,3.4,Active,2023-11-20,,MKT-0008 MKT-0016
+PRC-0022,ar/PRC-0022_contract-renewal-policy_FAQ.txt,تجديد العقود - أسئلة شائعة,contract_renewal,Procurement,PRC,FAQ,ar,المكتب الرئيسي,HO,3.2,Active,2023-02-21,,FIN-0040 FIN-0048
+HR-0023,en/HR-0023_parental-leave-policy_QuickReference.txt,Parental Leave - Quick Reference,parental_leave,Human Resources,HR,Quick Reference,en,Head Office,HO,3.2,Active,2023-05-24,,HR-0007 HR-0015 HR-0191
+IT-0023,en/IT-0023_system-access-request-policy_QuickReference.txt,System Access Request - Quick Reference,system_access,Information Technology,IT,Quick Reference,en,Head Office,HO,3.3,Active,2023-10-04,,IT-0007 IT-0031 HR-0111
+FIN-0023,en/FIN-0023_business-travel-booking-policy_QuickReference.txt,Business Travel Booking - Quick Reference,travel_booking,Finance,FIN,Quick Reference,en,Head Office,HO,3.1,Active,2023-03-31,,FIN-0007 FIN-0031 FIN-0015
+FAC-0023,en/FAC-0023_building-access-policy_QuickReference.txt,Building Access - Quick Reference,building_access,Facilities,FAC,Quick Reference,en,Head Office,HO,3.1,Active,2024-02-14,,FAC-0015 FAC-0031
+LEG-0023,en/LEG-0023_conflict-of-interest-policy_QuickReference.txt,Conflict of Interest - Quick Reference,conflict_of_interest,Legal & Compliance,LEG,Quick Reference,en,Head Office,HO,3.4,Active,2024-12-25,,HR-0143 LEG-0063 LEG-0031
+OPS-0023,en/OPS-0023_change-management-policy_QuickReference.txt,Change Management - Quick Reference,change_management,Operations,OPS,Quick Reference,en,Head Office,HO,3.2,Active,2023-12-25,,OPS-0015 OPS-0031
+MKT-0023,en/MKT-0023_brand-usage-policy_QuickReference.txt,Brand Usage - Quick Reference,brand_usage,Marketing & Communications,MKT,Quick Reference,en,Head Office,HO,3.3,Active,2023-08-05,,MKT-0007 MKT-0015
+PRC-0023,en/PRC-0023_contract-renewal-policy_QuickReference.txt,Contract Renewal - Quick Reference,contract_renewal,Procurement,PRC,Quick Reference,en,Head Office,HO,3.0,Active,2023-06-20,,FIN-0039 FIN-0047
+HR-0024,ar/HR-0024_parental-leave-policy_QuickReference.txt,إجازة الوالدية - مرجع سريع,parental_leave,Human Resources,HR,Quick Reference,ar,المكتب الرئيسي,HO,3.3,Active,2024-01-10,,HR-0008 HR-0016 HR-0192
+IT-0024,ar/IT-0024_system-access-request-policy_QuickReference.txt,طلب الوصول إلى الأنظمة - مرجع سريع,system_access,Information Technology,IT,Quick Reference,ar,المكتب الرئيسي,HO,3.2,Active,2024-02-25,,IT-0008 IT-0032 HR-0112
+FIN-0024,ar/FIN-0024_business-travel-booking-policy_QuickReference.txt,حجز السفر للعمل - مرجع سريع,travel_booking,Finance,FIN,Quick Reference,ar,المكتب الرئيسي,HO,3.1,Active,2024-01-21,,FIN-0008 FIN-0032 FIN-0016
+FAC-0024,ar/FAC-0024_building-access-policy_QuickReference.txt,الدخول إلى المبنى - مرجع سريع,building_access,Facilities,FAC,Quick Reference,ar,المكتب الرئيسي,HO,3.0,Active,2023-12-19,,FAC-0016 FAC-0032
+LEG-0024,ar/LEG-0024_conflict-of-interest-policy_QuickReference.txt,تضارب المصالح - مرجع سريع,conflict_of_interest,Legal & Compliance,LEG,Quick Reference,ar,المكتب الرئيسي,HO,3.0,Active,2023-11-20,,HR-0144 LEG-0064 LEG-0032
+OPS-0024,ar/OPS-0024_change-management-policy_QuickReference.txt,إدارة التغيير - مرجع سريع,change_management,Operations,OPS,Quick Reference,ar,المكتب الرئيسي,HO,3.4,Active,2024-07-13,,OPS-0016 OPS-0032
+MKT-0024,ar/MKT-0024_brand-usage-policy_QuickReference.txt,استخدام العلامة التجارية - مرجع سريع,brand_usage,Marketing & Communications,MKT,Quick Reference,ar,المكتب الرئيسي,HO,3.4,Active,2025-02-20,,MKT-0008 MKT-0016
+PRC-0024,ar/PRC-0024_contract-renewal-policy_QuickReference.txt,تجديد العقود - مرجع سريع,contract_renewal,Procurement,PRC,Quick Reference,ar,المكتب الرئيسي,HO,3.0,Active,2024-01-12,,FIN-0040 FIN-0048
+HR-0025,en/HR-0025_bereavement-leave-policy_Policy.txt,Bereavement Leave Policy,bereavement_leave,Human Resources,HR,Policy,en,Head Office,HO,3.4,Active,2023-11-19,,HR-0007 HR-0159
+IT-0025,en/IT-0025_acceptable-use-policy_Policy.txt,Acceptable Use Policy,acceptable_use,Information Technology,IT,Policy,en,Head Office,HO,3.1,Active,2023-11-26,,IT-0071 IT-0039
+FIN-0025,en/FIN-0025_per-diem-policy_Policy.txt,Per Diem Policy,per_diem,Finance,FIN,Policy,en,Head Office,HO,3.1,Active,2023-02-06,,FIN-0023 FIN-0007
+FAC-0025,en/FAC-0025_visitor-management-policy_Policy.txt,Visitor Management Policy,visitor_management,Facilities,FAC,Policy,en,Head Office,HO,3.2,Active,2023-12-20,,FAC-0023 LEG-0007
+LEG-0025,en/LEG-0025_anti-bribery-policy_Policy.txt,Anti-Bribery Policy,anti_bribery,Legal & Compliance,LEG,Policy,en,Head Office,HO,3.3,Active,2023-07-24,,LEG-0023 LEG-0063 LEG-0039
+OPS-0025,en/OPS-0025_business-continuity-policy_Policy.txt,Business Continuity Policy,business_continuity,Operations,OPS,Policy,en,Head Office,HO,3.0,Active,2024-10-01,,OPS-0023 OPS-0015
+MKT-0025,en/MKT-0025_press-enquiries-policy_Policy.txt,Press Enquiries Policy,press_enquiries,Marketing & Communications,MKT,Policy,en,Head Office,HO,3.0,Active,2024-04-17,,MKT-0015
+PRC-0025,en/PRC-0025_purchase-approval-thresholds_Policy.txt,Purchase Approval Thresholds,purchase_thresholds,Procurement,PRC,Policy,en,Head Office,HO,3.4,Active,2023-02-07,,FIN-0055 FIN-0039 PRC-0007
+HR-0026,ar/HR-0026_bereavement-leave-policy_Policy.txt,سياسة إجازة الوفاة,bereavement_leave,Human Resources,HR,Policy,ar,المكتب الرئيسي,HO,3.4,Active,2024-03-07,,HR-0008 HR-0160
+IT-0026,ar/IT-0026_acceptable-use-policy_Policy.txt,سياسة الاستخدام المقبول,acceptable_use,Information Technology,IT,Policy,ar,المكتب الرئيسي,HO,3.0,Active,2025-05-07,,IT-0072 IT-0040
+FIN-0026,ar/FIN-0026_per-diem-policy_Policy.txt,سياسة بدل الإقامة اليومي,per_diem,Finance,FIN,Policy,ar,المكتب الرئيسي,HO,3.1,Active,2024-11-18,,FIN-0024 FIN-0008
+FAC-0026,ar/FAC-0026_visitor-management-policy_Policy.txt,سياسة إدارة الزوار,visitor_management,Facilities,FAC,Policy,ar,المكتب الرئيسي,HO,3.0,Active,2024-07-13,,FAC-0024 LEG-0008
+LEG-0026,ar/LEG-0026_anti-bribery-policy_Policy.txt,سياسة مكافحة الرشوة,anti_bribery,Legal & Compliance,LEG,Policy,ar,المكتب الرئيسي,HO,3.2,Active,2024-11-16,,LEG-0024 LEG-0064 LEG-0040
+OPS-0026,ar/OPS-0026_business-continuity-policy_Policy.txt,سياسة استمرارية الأعمال,business_continuity,Operations,OPS,Policy,ar,المكتب الرئيسي,HO,3.1,Active,2024-12-05,,OPS-0024 OPS-0016
+MKT-0026,ar/MKT-0026_press-enquiries-policy_Policy.txt,سياسة استفسارات الصحافة,press_enquiries,Marketing & Communications,MKT,Policy,ar,المكتب الرئيسي,HO,3.1,Active,2024-06-11,,MKT-0016
+PRC-0026,ar/PRC-0026_purchase-approval-thresholds_Policy.txt,حدود اعتماد المشتريات,purchase_thresholds,Procurement,PRC,Policy,ar,المكتب الرئيسي,HO,3.0,Active,2024-05-22,,FIN-0056 FIN-0040 PRC-0008
+HR-0027,en/HR-0027_bereavement-leave-policy_Procedure.txt,Bereavement Leave - Procedure,bereavement_leave,Human Resources,HR,Procedure,en,Head Office,HO,3.2,Active,2025-05-30,,HR-0007 HR-0159
+IT-0027,en/IT-0027_acceptable-use-policy_Procedure.txt,Acceptable Use - Procedure,acceptable_use,Information Technology,IT,Procedure,en,Head Office,HO,3.4,Active,2024-05-24,,IT-0071 IT-0039
+FIN-0027,en/FIN-0027_per-diem-policy_Procedure.txt,Per Diem - Procedure,per_diem,Finance,FIN,Procedure,en,Head Office,HO,3.3,Active,2023-01-01,,FIN-0023 FIN-0007
+FAC-0027,en/FAC-0027_visitor-management-policy_Procedure.txt,Visitor Management - Procedure,visitor_management,Facilities,FAC,Procedure,en,Head Office,HO,3.4,Active,2023-11-25,,FAC-0023 LEG-0007
+LEG-0027,en/LEG-0027_anti-bribery-policy_Procedure.txt,Anti-Bribery - Procedure,anti_bribery,Legal & Compliance,LEG,Procedure,en,Head Office,HO,3.1,Active,2023-09-11,,LEG-0023 LEG-0063 LEG-0039
+OPS-0027,en/OPS-0027_business-continuity-policy_Procedure.txt,Business Continuity - Procedure,business_continuity,Operations,OPS,Procedure,en,Head Office,HO,3.3,Active,2023-10-23,,OPS-0023 OPS-0015
+MKT-0027,en/MKT-0027_press-enquiries-policy_Procedure.txt,Press Enquiries - Procedure,press_enquiries,Marketing & Communications,MKT,Procedure,en,Head Office,HO,3.2,Active,2023-08-12,,MKT-0015
+PRC-0027,en/PRC-0027_purchase-approval-thresholds_Procedure.txt,Purchase Approval Thresholds - Procedure,purchase_thresholds,Procurement,PRC,Procedure,en,Head Office,HO,3.0,Active,2023-02-14,,FIN-0055 FIN-0039 PRC-0007
+HR-0028,ar/HR-0028_bereavement-leave-policy_Procedure.txt,إجازة الوفاة - إجراء,bereavement_leave,Human Resources,HR,Procedure,ar,المكتب الرئيسي,HO,3.3,Active,2023-11-06,,HR-0008 HR-0160
+IT-0028,ar/IT-0028_acceptable-use-policy_Procedure.txt,الاستخدام المقبول - إجراء,acceptable_use,Information Technology,IT,Procedure,ar,المكتب الرئيسي,HO,3.3,Active,2023-03-07,,IT-0072 IT-0040
+FIN-0028,ar/FIN-0028_per-diem-policy_Procedure.txt,بدل الإقامة اليومي - إجراء,per_diem,Finance,FIN,Procedure,ar,المكتب الرئيسي,HO,3.0,Active,2024-11-24,,FIN-0024 FIN-0008
+FAC-0028,ar/FAC-0028_visitor-management-policy_Procedure.txt,إدارة الزوار - إجراء,visitor_management,Facilities,FAC,Procedure,ar,المكتب الرئيسي,HO,3.4,Active,2024-06-11,,FAC-0024 LEG-0008
+LEG-0028,ar/LEG-0028_anti-bribery-policy_Procedure.txt,مكافحة الرشوة - إجراء,anti_bribery,Legal & Compliance,LEG,Procedure,ar,المكتب الرئيسي,HO,3.2,Active,2024-01-15,,LEG-0024 LEG-0064 LEG-0040
+OPS-0028,ar/OPS-0028_business-continuity-policy_Procedure.txt,استمرارية الأعمال - إجراء,business_continuity,Operations,OPS,Procedure,ar,المكتب الرئيسي,HO,3.4,Active,2023-02-28,,OPS-0024 OPS-0016
+MKT-0028,ar/MKT-0028_press-enquiries-policy_Procedure.txt,استفسارات الصحافة - إجراء,press_enquiries,Marketing & Communications,MKT,Procedure,ar,المكتب الرئيسي,HO,3.3,Active,2024-04-28,,MKT-0016
+PRC-0028,ar/PRC-0028_purchase-approval-thresholds_Procedure.txt,حدود اعتماد المشتريات - إجراء,purchase_thresholds,Procurement,PRC,Procedure,ar,المكتب الرئيسي,HO,3.1,Active,2023-02-15,,FIN-0056 FIN-0040 PRC-0008
+HR-0029,en/HR-0029_bereavement-leave-policy_FAQ.txt,Bereavement Leave - FAQ,bereavement_leave,Human Resources,HR,FAQ,en,Head Office,HO,3.0,Active,2023-04-07,,HR-0007 HR-0159
+IT-0029,en/IT-0029_acceptable-use-policy_FAQ.txt,Acceptable Use - FAQ,acceptable_use,Information Technology,IT,FAQ,en,Head Office,HO,3.3,Active,2025-04-07,,IT-0071 IT-0039
+FIN-0029,en/FIN-0029_per-diem-policy_FAQ.txt,Per Diem - FAQ,per_diem,Finance,FIN,FAQ,en,Head Office,HO,3.2,Active,2024-12-08,,FIN-0023 FIN-0007
+FAC-0029,en/FAC-0029_visitor-management-policy_FAQ.txt,Visitor Management - FAQ,visitor_management,Facilities,FAC,FAQ,en,Head Office,HO,3.4,Active,2023-01-26,,FAC-0023 LEG-0007
+LEG-0029,en/LEG-0029_anti-bribery-policy_FAQ.txt,Anti-Bribery - FAQ,anti_bribery,Legal & Compliance,LEG,FAQ,en,Head Office,HO,3.4,Active,2024-06-13,,LEG-0023 LEG-0063 LEG-0039
+OPS-0029,en/OPS-0029_business-continuity-policy_FAQ.txt,Business Continuity - FAQ,business_continuity,Operations,OPS,FAQ,en,Head Office,HO,3.2,Active,2023-02-05,,OPS-0023 OPS-0015
+MKT-0029,en/MKT-0029_press-enquiries-policy_FAQ.txt,Press Enquiries - FAQ,press_enquiries,Marketing & Communications,MKT,FAQ,en,Head Office,HO,3.0,Active,2023-07-13,,MKT-0015
+PRC-0029,en/PRC-0029_purchase-approval-thresholds_FAQ.txt,Purchase Approval Thresholds - FAQ,purchase_thresholds,Procurement,PRC,FAQ,en,Head Office,HO,3.4,Active,2023-11-25,,FIN-0055 FIN-0039 PRC-0007
+HR-0030,ar/HR-0030_bereavement-leave-policy_FAQ.txt,إجازة الوفاة - أسئلة شائعة,bereavement_leave,Human Resources,HR,FAQ,ar,المكتب الرئيسي,HO,3.2,Active,2025-02-12,,HR-0008 HR-0160
+IT-0030,ar/IT-0030_acceptable-use-policy_FAQ.txt,الاستخدام المقبول - أسئلة شائعة,acceptable_use,Information Technology,IT,FAQ,ar,المكتب الرئيسي,HO,3.4,Active,2023-04-26,,IT-0072 IT-0040
+FIN-0030,ar/FIN-0030_per-diem-policy_FAQ.txt,بدل الإقامة اليومي - أسئلة شائعة,per_diem,Finance,FIN,FAQ,ar,المكتب الرئيسي,HO,3.1,Active,2024-10-02,,FIN-0024 FIN-0008
+FAC-0030,ar/FAC-0030_visitor-management-policy_FAQ.txt,إدارة الزوار - أسئلة شائعة,visitor_management,Facilities,FAC,FAQ,ar,المكتب الرئيسي,HO,3.3,Active,2023-09-19,,FAC-0024 LEG-0008
+LEG-0030,ar/LEG-0030_anti-bribery-policy_FAQ.txt,مكافحة الرشوة - أسئلة شائعة,anti_bribery,Legal & Compliance,LEG,FAQ,ar,المكتب الرئيسي,HO,3.3,Active,2024-11-01,,LEG-0024 LEG-0064 LEG-0040
+OPS-0030,ar/OPS-0030_business-continuity-policy_FAQ.txt,استمرارية الأعمال - أسئلة شائعة,business_continuity,Operations,OPS,FAQ,ar,المكتب الرئيسي,HO,3.2,Active,2023-03-07,,OPS-0024 OPS-0016
+MKT-0030,ar/MKT-0030_press-enquiries-policy_FAQ.txt,استفسارات الصحافة - أسئلة شائعة,press_enquiries,Marketing & Communications,MKT,FAQ,ar,المكتب الرئيسي,HO,3.1,Active,2024-06-25,,MKT-0016
+PRC-0030,ar/PRC-0030_purchase-approval-thresholds_FAQ.txt,حدود اعتماد المشتريات - أسئلة شائعة,purchase_thresholds,Procurement,PRC,FAQ,ar,المكتب الرئيسي,HO,3.4,Active,2024-05-25,,FIN-0056 FIN-0040 PRC-0008
+HR-0031,en/HR-0031_bereavement-leave-policy_QuickReference.txt,Bereavement Leave - Quick Reference,bereavement_leave,Human Resources,HR,Quick Reference,en,Head Office,HO,3.1,Active,2023-12-03,,HR-0007 HR-0159
+IT-0031,en/IT-0031_acceptable-use-policy_QuickReference.txt,Acceptable Use - Quick Reference,acceptable_use,Information Technology,IT,Quick Reference,en,Head Office,HO,3.1,Active,2023-05-20,,IT-0071 IT-0039
+FIN-0031,en/FIN-0031_per-diem-policy_QuickReference.txt,Per Diem - Quick Reference,per_diem,Finance,FIN,Quick Reference,en,Head Office,HO,3.3,Active,2025-01-31,,FIN-0023 FIN-0007
+FAC-0031,en/FAC-0031_visitor-management-policy_QuickReference.txt,Visitor Management - Quick Reference,visitor_management,Facilities,FAC,Quick Reference,en,Head Office,HO,3.3,Active,2024-04-30,,FAC-0023 LEG-0007
+LEG-0031,en/LEG-0031_anti-bribery-policy_QuickReference.txt,Anti-Bribery - Quick Reference,anti_bribery,Legal & Compliance,LEG,Quick Reference,en,Head Office,HO,3.1,Active,2023-03-22,,LEG-0023 LEG-0063 LEG-0039
+OPS-0031,en/OPS-0031_business-continuity-policy_QuickReference.txt,Business Continuity - Quick Reference,business_continuity,Operations,OPS,Quick Reference,en,Head Office,HO,3.4,Active,2023-10-29,,OPS-0023 OPS-0015
+MKT-0031,en/MKT-0031_press-enquiries-policy_QuickReference.txt,Press Enquiries - Quick Reference,press_enquiries,Marketing & Communications,MKT,Quick Reference,en,Head Office,HO,3.4,Active,2025-05-06,,MKT-0015
+PRC-0031,en/PRC-0031_purchase-approval-thresholds_QuickReference.txt,Purchase Approval Thresholds - Quick Reference,purchase_thresholds,Procurement,PRC,Quick Reference,en,Head Office,HO,3.1,Active,2023-01-24,,FIN-0055 FIN-0039 PRC-0007
+HR-0032,ar/HR-0032_bereavement-leave-policy_QuickReference.txt,إجازة الوفاة - مرجع سريع,bereavement_leave,Human Resources,HR,Quick Reference,ar,المكتب الرئيسي,HO,3.3,Active,2023-12-06,,HR-0008 HR-0160
+IT-0032,ar/IT-0032_acceptable-use-policy_QuickReference.txt,الاستخدام المقبول - مرجع سريع,acceptable_use,Information Technology,IT,Quick Reference,ar,المكتب الرئيسي,HO,3.1,Active,2025-01-23,,IT-0072 IT-0040
+FIN-0032,ar/FIN-0032_per-diem-policy_QuickReference.txt,بدل الإقامة اليومي - مرجع سريع,per_diem,Finance,FIN,Quick Reference,ar,المكتب الرئيسي,HO,3.4,Active,2024-06-22,,FIN-0024 FIN-0008
+FAC-0032,ar/FAC-0032_visitor-management-policy_QuickReference.txt,إدارة الزوار - مرجع سريع,visitor_management,Facilities,FAC,Quick Reference,ar,المكتب الرئيسي,HO,3.1,Active,2025-01-24,,FAC-0024 LEG-0008
+LEG-0032,ar/LEG-0032_anti-bribery-policy_QuickReference.txt,مكافحة الرشوة - مرجع سريع,anti_bribery,Legal & Compliance,LEG,Quick Reference,ar,المكتب الرئيسي,HO,3.2,Active,2023-02-09,,LEG-0024 LEG-0064 LEG-0040
+OPS-0032,ar/OPS-0032_business-continuity-policy_QuickReference.txt,استمرارية الأعمال - مرجع سريع,business_continuity,Operations,OPS,Quick Reference,ar,المكتب الرئيسي,HO,3.0,Active,2024-05-10,,OPS-0024 OPS-0016
+MKT-0032,ar/MKT-0032_press-enquiries-policy_QuickReference.txt,استفسارات الصحافة - مرجع سريع,press_enquiries,Marketing & Communications,MKT,Quick Reference,ar,المكتب الرئيسي,HO,3.2,Active,2025-06-16,,MKT-0016
+PRC-0032,ar/PRC-0032_purchase-approval-thresholds_QuickReference.txt,حدود اعتماد المشتريات - مرجع سريع,purchase_thresholds,Procurement,PRC,Quick Reference,ar,المكتب الرئيسي,HO,3.4,Active,2023-04-10,,FIN-0056 FIN-0040 PRC-0008
+HR-0033,en/HR-0033_unpaid-leave-policy_Policy.txt,Unpaid Leave Policy,unpaid_leave,Human Resources,HR,Policy,en,Head Office,HO,3.1,Active,2024-02-18,,HR-0007 HR-0015
+IT-0033,en/IT-0033_bring-your-own-device-policy_Policy.txt,Bring Your Own Device Policy,byod,Information Technology,IT,Policy,en,Head Office,HO,3.0,Active,2023-01-11,,IT-0031 IT-0015
+FIN-0033,en/FIN-0033_procurement-policy_Policy.txt,Procurement Policy,procurement,Finance,FIN,Policy,en,Head Office,HO,3.0,Active,2025-06-06,,PRC-0007 PRC-0015 FIN-0055
+FAC-0033,en/FAC-0033_workplace-health-and-safety-policy_Policy.txt,Workplace Health and Safety Policy,health_safety,Facilities,FAC,Policy,en,Head Office,HO,3.3,Active,2024-08-04,,FAC-0047 FAC-0055 FAC-0063
+LEG-0033,en/LEG-0033_whistleblowing-policy_Policy.txt,Whistleblowing Policy,whistleblowing,Legal & Compliance,LEG,Policy,en,Head Office,HO,3.1,Active,2024-07-09,,HR-0151 LEG-0031 HR-0143
+OPS-0033,en/OPS-0033_service-level-policy_Policy.txt,Service Level Policy,service_levels,Operations,OPS,Policy,en,Head Office,HO,3.2,Active,2024-10-30,,OPS-0007 OPS-0015
+MKT-0033,en/MKT-0033_event-and-sponsorship-approval-policy_Policy.txt,Event and Sponsorship Approval Policy,event_approval,Marketing & Communications,MKT,Policy,en,Head Office,HO,3.2,Active,2024-10-07,,FIN-0055 MKT-0023
+HR-0034,ar/HR-0034_unpaid-leave-policy_Policy.txt,سياسة الإجازة غير المدفوعة,unpaid_leave,Human Resources,HR,Policy,ar,المكتب الرئيسي,HO,3.0,Active,2023-09-18,,HR-0008 HR-0016
+IT-0034,ar/IT-0034_bring-your-own-device-policy_Policy.txt,سياسة استخدام الأجهزة الشخصية,byod,Information Technology,IT,Policy,ar,المكتب الرئيسي,HO,3.4,Active,2024-01-28,,IT-0032 IT-0016
+FIN-0034,ar/FIN-0034_procurement-policy_Policy.txt,سياسة الشراء,procurement,Finance,FIN,Policy,ar,المكتب الرئيسي,HO,3.1,Active,2023-08-31,,PRC-0008 PRC-0016 FIN-0056
+FAC-0034,ar/FAC-0034_workplace-health-and-safety-policy_Policy.txt,سياسة الصحة والسلامة في مكان العمل,health_safety,Facilities,FAC,Policy,ar,المكتب الرئيسي,HO,3.1,Active,2024-01-22,,FAC-0048 FAC-0056 FAC-0064
+LEG-0034,ar/LEG-0034_whistleblowing-policy_Policy.txt,سياسة الإبلاغ عن المخالفات,whistleblowing,Legal & Compliance,LEG,Policy,ar,المكتب الرئيسي,HO,3.1,Active,2024-11-10,,HR-0152 LEG-0032 HR-0144
+OPS-0034,ar/OPS-0034_service-level-policy_Policy.txt,سياسة مستويات الخدمة,service_levels,Operations,OPS,Policy,ar,المكتب الرئيسي,HO,3.4,Active,2024-03-27,,OPS-0008 OPS-0016
+MKT-0034,ar/MKT-0034_event-and-sponsorship-approval-policy_Policy.txt,سياسة اعتماد الفعاليات والرعاية,event_approval,Marketing & Communications,MKT,Policy,ar,المكتب الرئيسي,HO,3.3,Active,2023-02-19,,FIN-0056 MKT-0024
+HR-0035,en/HR-0035_unpaid-leave-policy_Procedure.txt,Unpaid Leave - Procedure,unpaid_leave,Human Resources,HR,Procedure,en,Head Office,HO,3.4,Active,2025-04-29,,HR-0007 HR-0015
+IT-0035,en/IT-0035_bring-your-own-device-policy_Procedure.txt,Bring Your Own Device - Procedure,byod,Information Technology,IT,Procedure,en,Head Office,HO,3.3,Active,2024-12-04,,IT-0031 IT-0015
+FIN-0035,en/FIN-0035_procurement-policy_Procedure.txt,Procurement - Procedure,procurement,Finance,FIN,Procedure,en,Head Office,HO,3.1,Active,2024-01-12,,PRC-0007 PRC-0015 FIN-0055
+FAC-0035,en/FAC-0035_workplace-health-and-safety-policy_Procedure.txt,Workplace Health and Safety - Procedure,health_safety,Facilities,FAC,Procedure,en,Head Office,HO,3.2,Active,2024-09-18,,FAC-0047 FAC-0055 FAC-0063
+LEG-0035,en/LEG-0035_whistleblowing-policy_Procedure.txt,Whistleblowing - Procedure,whistleblowing,Legal & Compliance,LEG,Procedure,en,Head Office,HO,3.4,Active,2025-01-25,,HR-0151 LEG-0031 HR-0143
+OPS-0035,en/OPS-0035_service-level-policy_Procedure.txt,Service Level - Procedure,service_levels,Operations,OPS,Procedure,en,Head Office,HO,3.4,Active,2023-10-30,,OPS-0007 OPS-0015
+MKT-0035,en/MKT-0035_event-and-sponsorship-approval-policy_Procedure.txt,Event and Sponsorship Approval - Procedure,event_approval,Marketing & Communications,MKT,Procedure,en,Head Office,HO,3.4,Active,2024-09-18,,FIN-0055 MKT-0023
+HR-0036,ar/HR-0036_unpaid-leave-policy_Procedure.txt,الإجازة غير المدفوعة - إجراء,unpaid_leave,Human Resources,HR,Procedure,ar,المكتب الرئيسي,HO,3.3,Active,2023-02-12,,HR-0008 HR-0016
+IT-0036,ar/IT-0036_bring-your-own-device-policy_Procedure.txt,استخدام الأجهزة الشخصية - إجراء,byod,Information Technology,IT,Procedure,ar,المكتب الرئيسي,HO,3.4,Active,2023-11-14,,IT-0032 IT-0016
+FIN-0036,ar/FIN-0036_procurement-policy_Procedure.txt,الشراء - إجراء,procurement,Finance,FIN,Procedure,ar,المكتب الرئيسي,HO,3.2,Active,2023-08-23,,PRC-0008 PRC-0016 FIN-0056
+FAC-0036,ar/FAC-0036_workplace-health-and-safety-policy_Procedure.txt,الصحة والسلامة في مكان العمل - إجراء,health_safety,Facilities,FAC,Procedure,ar,المكتب الرئيسي,HO,3.1,Active,2024-06-08,,FAC-0048 FAC-0056 FAC-0064
+LEG-0036,ar/LEG-0036_whistleblowing-policy_Procedure.txt,الإبلاغ عن المخالفات - إجراء,whistleblowing,Legal & Compliance,LEG,Procedure,ar,المكتب الرئيسي,HO,3.2,Active,2024-05-25,,HR-0152 LEG-0032 HR-0144
+OPS-0036,ar/OPS-0036_service-level-policy_Procedure.txt,مستويات الخدمة - إجراء,service_levels,Operations,OPS,Procedure,ar,المكتب الرئيسي,HO,3.0,Active,2025-03-20,,OPS-0008 OPS-0016
+MKT-0036,ar/MKT-0036_event-and-sponsorship-approval-policy_Procedure.txt,اعتماد الفعاليات والرعاية - إجراء,event_approval,Marketing & Communications,MKT,Procedure,ar,المكتب الرئيسي,HO,3.2,Active,2023-12-14,,FIN-0056 MKT-0024
+HR-0037,en/HR-0037_unpaid-leave-policy_FAQ.txt,Unpaid Leave - FAQ,unpaid_leave,Human Resources,HR,FAQ,en,Head Office,HO,3.1,Active,2024-03-22,,HR-0007 HR-0015
+IT-0037,en/IT-0037_bring-your-own-device-policy_FAQ.txt,Bring Your Own Device - FAQ,byod,Information Technology,IT,FAQ,en,Head Office,HO,3.2,Active,2024-09-16,,IT-0031 IT-0015
+FIN-0037,en/FIN-0037_procurement-policy_FAQ.txt,Procurement - FAQ,procurement,Finance,FIN,FAQ,en,Head Office,HO,3.2,Active,2024-06-30,,PRC-0007 PRC-0015 FIN-0055
+FAC-0037,en/FAC-0037_workplace-health-and-safety-policy_FAQ.txt,Workplace Health and Safety - FAQ,health_safety,Facilities,FAC,FAQ,en,Head Office,HO,3.3,Active,2023-07-15,,FAC-0047 FAC-0055 FAC-0063
+LEG-0037,en/LEG-0037_whistleblowing-policy_FAQ.txt,Whistleblowing - FAQ,whistleblowing,Legal & Compliance,LEG,FAQ,en,Head Office,HO,3.3,Active,2023-06-27,,HR-0151 LEG-0031 HR-0143
+OPS-0037,en/OPS-0037_service-level-policy_FAQ.txt,Service Level - FAQ,service_levels,Operations,OPS,FAQ,en,Head Office,HO,3.2,Active,2023-11-15,,OPS-0007 OPS-0015
+MKT-0037,en/MKT-0037_event-and-sponsorship-approval-policy_FAQ.txt,Event and Sponsorship Approval - FAQ,event_approval,Marketing & Communications,MKT,FAQ,en,Head Office,HO,3.1,Active,2023-11-12,,FIN-0055 MKT-0023
+HR-0038,ar/HR-0038_unpaid-leave-policy_FAQ.txt,الإجازة غير المدفوعة - أسئلة شائعة,unpaid_leave,Human Resources,HR,FAQ,ar,المكتب الرئيسي,HO,3.1,Active,2024-03-07,,HR-0008 HR-0016
+IT-0038,ar/IT-0038_bring-your-own-device-policy_FAQ.txt,استخدام الأجهزة الشخصية - أسئلة شائعة,byod,Information Technology,IT,FAQ,ar,المكتب الرئيسي,HO,3.1,Active,2024-04-14,,IT-0032 IT-0016
+FIN-0038,ar/FIN-0038_procurement-policy_FAQ.txt,الشراء - أسئلة شائعة,procurement,Finance,FIN,FAQ,ar,المكتب الرئيسي,HO,3.3,Active,2025-03-02,,PRC-0008 PRC-0016 FIN-0056
+FAC-0038,ar/FAC-0038_workplace-health-and-safety-policy_FAQ.txt,الصحة والسلامة في مكان العمل - أسئلة شائعة,health_safety,Facilities,FAC,FAQ,ar,المكتب الرئيسي,HO,3.0,Active,2025-01-23,,FAC-0048 FAC-0056 FAC-0064
+LEG-0038,ar/LEG-0038_whistleblowing-policy_FAQ.txt,الإبلاغ عن المخالفات - أسئلة شائعة,whistleblowing,Legal & Compliance,LEG,FAQ,ar,المكتب الرئيسي,HO,3.0,Active,2023-10-05,,HR-0152 LEG-0032 HR-0144
+OPS-0038,ar/OPS-0038_service-level-policy_FAQ.txt,مستويات الخدمة - أسئلة شائعة,service_levels,Operations,OPS,FAQ,ar,المكتب الرئيسي,HO,3.2,Active,2025-01-07,,OPS-0008 OPS-0016
+MKT-0038,ar/MKT-0038_event-and-sponsorship-approval-policy_FAQ.txt,اعتماد الفعاليات والرعاية - أسئلة شائعة,event_approval,Marketing & Communications,MKT,FAQ,ar,المكتب الرئيسي,HO,3.0,Active,2024-12-07,,FIN-0056 MKT-0024
+HR-0039,en/HR-0039_unpaid-leave-policy_QuickReference.txt,Unpaid Leave - Quick Reference,unpaid_leave,Human Resources,HR,Quick Reference,en,Head Office,HO,3.2,Active,2023-09-10,,HR-0007 HR-0015
+IT-0039,en/IT-0039_bring-your-own-device-policy_QuickReference.txt,Bring Your Own Device - Quick Reference,byod,Information Technology,IT,Quick Reference,en,Head Office,HO,3.0,Active,2024-09-14,,IT-0031 IT-0015
+FIN-0039,en/FIN-0039_procurement-policy_QuickReference.txt,Procurement - Quick Reference,procurement,Finance,FIN,Quick Reference,en,Head Office,HO,3.2,Active,2023-09-02,,PRC-0007 PRC-0015 FIN-0055
+FAC-0039,en/FAC-0039_workplace-health-and-safety-policy_QuickReference.txt,Workplace Health and Safety - Quick Reference,health_safety,Facilities,FAC,Quick Reference,en,Head Office,HO,3.2,Active,2024-08-21,,FAC-0047 FAC-0055 FAC-0063
+LEG-0039,en/LEG-0039_whistleblowing-policy_QuickReference.txt,Whistleblowing - Quick Reference,whistleblowing,Legal & Compliance,LEG,Quick Reference,en,Head Office,HO,3.0,Active,2023-10-22,,HR-0151 LEG-0031 HR-0143
+OPS-0039,en/OPS-0039_service-level-policy_QuickReference.txt,Service Level - Quick Reference,service_levels,Operations,OPS,Quick Reference,en,Head Office,HO,3.2,Active,2023-01-13,,OPS-0007 OPS-0015
+MKT-0039,en/MKT-0039_event-and-sponsorship-approval-policy_QuickReference.txt,Event and Sponsorship Approval - Quick Reference,event_approval,Marketing & Communications,MKT,Quick Reference,en,Head Office,HO,3.4,Active,2025-04-29,,FIN-0055 MKT-0023
+HR-0040,ar/HR-0040_unpaid-leave-policy_QuickReference.txt,الإجازة غير المدفوعة - مرجع سريع,unpaid_leave,Human Resources,HR,Quick Reference,ar,المكتب الرئيسي,HO,3.0,Active,2023-10-18,,HR-0008 HR-0016
+IT-0040,ar/IT-0040_bring-your-own-device-policy_QuickReference.txt,استخدام الأجهزة الشخصية - مرجع سريع,byod,Information Technology,IT,Quick Reference,ar,المكتب الرئيسي,HO,3.1,Active,2023-11-24,,IT-0032 IT-0016
+FIN-0040,ar/FIN-0040_procurement-policy_QuickReference.txt,الشراء - مرجع سريع,procurement,Finance,FIN,Quick Reference,ar,المكتب الرئيسي,HO,3.0,Active,2024-04-27,,PRC-0008 PRC-0016 FIN-0056
+FAC-0040,ar/FAC-0040_workplace-health-and-safety-policy_QuickReference.txt,الصحة والسلامة في مكان العمل - مرجع سريع,health_safety,Facilities,FAC,Quick Reference,ar,المكتب الرئيسي,HO,3.3,Active,2024-05-06,,FAC-0048 FAC-0056 FAC-0064
+LEG-0040,ar/LEG-0040_whistleblowing-policy_QuickReference.txt,الإبلاغ عن المخالفات - مرجع سريع,whistleblowing,Legal & Compliance,LEG,Quick Reference,ar,المكتب الرئيسي,HO,3.2,Active,2023-07-12,,HR-0152 LEG-0032 HR-0144
+OPS-0040,ar/OPS-0040_service-level-policy_QuickReference.txt,مستويات الخدمة - مرجع سريع,service_levels,Operations,OPS,Quick Reference,ar,المكتب الرئيسي,HO,3.2,Active,2024-02-14,,OPS-0008 OPS-0016
+MKT-0040,ar/MKT-0040_event-and-sponsorship-approval-policy_QuickReference.txt,اعتماد الفعاليات والرعاية - مرجع سريع,event_approval,Marketing & Communications,MKT,Quick Reference,ar,المكتب الرئيسي,HO,3.3,Active,2024-11-12,,FIN-0056 MKT-0024
+HR-0041,en/HR-0041_working-hours-policy_Policy.txt,Working Hours Policy,working_hours,Human Resources,HR,Policy,en,Head Office,HO,3.0,Active,2025-06-05,,HR-0055 HR-0071 HR-0063
+IT-0041,en/IT-0041_vpn-and-remote-access-policy_Policy.txt,VPN and Remote Access Policy,vpn_remote_access,Information Technology,IT,Policy,en,Head Office,HO,3.3,Active,2025-02-23,,HR-0063 IT-0015
+FIN-0041,en/FIN-0041_invoice-processing-policy_Policy.txt,Invoice Processing Policy,invoice_processing,Finance,FIN,Policy,en,Head Office,HO,3.1,Active,2024-06-19,,FIN-0039 FIN-0087
+FAC-0041,en/FAC-0041_fire-safety-policy_Policy.txt,Fire Safety Policy,fire_safety,Facilities,FAC,Policy,en,Head Office,HO,3.4,Active,2024-12-18,,FAC-0039 FAC-0023
+LEG-0041,en/LEG-0041_records-retention-policy_Policy.txt,Records Retention Policy,records_retention,Legal & Compliance,LEG,Policy,en,Head Office,HO,3.4,Active,2023-02-04,,LEG-0007 IT-0063 IT-0055
+OPS-0041,en/OPS-0041_on-call-policy_Policy.txt,On-Call Policy,on_call,Operations,OPS,Policy,en,Head Office,HO,3.0,Active,2023-12-08,,HR-0055 OPS-0015
+HR-0042,ar/HR-0042_working-hours-policy_Policy.txt,سياسة ساعات العمل,working_hours,Human Resources,HR,Policy,ar,المكتب الرئيسي,HO,3.2,Active,2023-10-28,,HR-0056 HR-0072 HR-0064
+IT-0042,ar/IT-0042_vpn-and-remote-access-policy_Policy.txt,سياسة الوصول عن بُعد و VPN,vpn_remote_access,Information Technology,IT,Policy,ar,المكتب الرئيسي,HO,3.4,Active,2025-05-29,,HR-0064 IT-0016
+FIN-0042,ar/FIN-0042_invoice-processing-policy_Policy.txt,سياسة معالجة الفواتير,invoice_processing,Finance,FIN,Policy,ar,المكتب الرئيسي,HO,3.4,Active,2024-11-11,,FIN-0040 FIN-0088
+FAC-0042,ar/FAC-0042_fire-safety-policy_Policy.txt,سياسة السلامة من الحرائق,fire_safety,Facilities,FAC,Policy,ar,المكتب الرئيسي,HO,3.4,Active,2023-10-24,,FAC-0040 FAC-0024
+LEG-0042,ar/LEG-0042_records-retention-policy_Policy.txt,سياسة الاحتفاظ بالسجلات,records_retention,Legal & Compliance,LEG,Policy,ar,المكتب الرئيسي,HO,3.4,Active,2024-07-10,,LEG-0008 IT-0064 IT-0056
+OPS-0042,ar/OPS-0042_on-call-policy_Policy.txt,سياسة المناوبة,on_call,Operations,OPS,Policy,ar,المكتب الرئيسي,HO,3.0,Active,2023-06-17,,HR-0056 OPS-0016
+HR-0043,en/HR-0043_working-hours-policy_Procedure.txt,Working Hours - Procedure,working_hours,Human Resources,HR,Procedure,en,Head Office,HO,3.0,Active,2024-06-17,,HR-0055 HR-0071 HR-0063
+IT-0043,en/IT-0043_vpn-and-remote-access-policy_Procedure.txt,VPN and Remote Access - Procedure,vpn_remote_access,Information Technology,IT,Procedure,en,Head Office,HO,3.0,Active,2024-10-10,,HR-0063 IT-0015
+FIN-0043,en/FIN-0043_invoice-processing-policy_Procedure.txt,Invoice Processing - Procedure,invoice_processing,Finance,FIN,Procedure,en,Head Office,HO,3.2,Active,2023-05-28,,FIN-0039 FIN-0087
+FAC-0043,en/FAC-0043_fire-safety-policy_Procedure.txt,Fire Safety - Procedure,fire_safety,Facilities,FAC,Procedure,en,Head Office,HO,3.4,Active,2024-04-29,,FAC-0039 FAC-0023
+LEG-0043,en/LEG-0043_records-retention-policy_Procedure.txt,Records Retention - Procedure,records_retention,Legal & Compliance,LEG,Procedure,en,Head Office,HO,3.2,Active,2023-12-01,,LEG-0007 IT-0063 IT-0055
+OPS-0043,en/OPS-0043_on-call-policy_Procedure.txt,On-Call - Procedure,on_call,Operations,OPS,Procedure,en,Head Office,HO,3.4,Active,2024-01-23,,HR-0055 OPS-0015
+HR-0044,ar/HR-0044_working-hours-policy_Procedure.txt,ساعات العمل - إجراء,working_hours,Human Resources,HR,Procedure,ar,المكتب الرئيسي,HO,3.4,Active,2025-02-18,,HR-0056 HR-0072 HR-0064
+IT-0044,ar/IT-0044_vpn-and-remote-access-policy_Procedure.txt,الوصول عن بُعد و VPN - إجراء,vpn_remote_access,Information Technology,IT,Procedure,ar,المكتب الرئيسي,HO,3.2,Active,2023-05-26,,HR-0064 IT-0016
+FIN-0044,ar/FIN-0044_invoice-processing-policy_Procedure.txt,معالجة الفواتير - إجراء,invoice_processing,Finance,FIN,Procedure,ar,المكتب الرئيسي,HO,3.4,Active,2023-08-08,,FIN-0040 FIN-0088
+FAC-0044,ar/FAC-0044_fire-safety-policy_Procedure.txt,السلامة من الحرائق - إجراء,fire_safety,Facilities,FAC,Procedure,ar,المكتب الرئيسي,HO,3.0,Active,2024-07-28,,FAC-0040 FAC-0024
+LEG-0044,ar/LEG-0044_records-retention-policy_Procedure.txt,الاحتفاظ بالسجلات - إجراء,records_retention,Legal & Compliance,LEG,Procedure,ar,المكتب الرئيسي,HO,3.4,Active,2024-05-28,,LEG-0008 IT-0064 IT-0056
+OPS-0044,ar/OPS-0044_on-call-policy_Procedure.txt,المناوبة - إجراء,on_call,Operations,OPS,Procedure,ar,المكتب الرئيسي,HO,3.2,Active,2024-11-13,,HR-0056 OPS-0016
+HR-0045,en/HR-0045_working-hours-policy_FAQ.txt,Working Hours - FAQ,working_hours,Human Resources,HR,FAQ,en,Head Office,HO,3.3,Active,2023-05-13,,HR-0055 HR-0071 HR-0063
+IT-0045,en/IT-0045_vpn-and-remote-access-policy_FAQ.txt,VPN and Remote Access - FAQ,vpn_remote_access,Information Technology,IT,FAQ,en,Head Office,HO,3.3,Active,2024-10-09,,HR-0063 IT-0015
+FIN-0045,en/FIN-0045_invoice-processing-policy_FAQ.txt,Invoice Processing - FAQ,invoice_processing,Finance,FIN,FAQ,en,Head Office,HO,3.3,Active,2023-06-23,,FIN-0039 FIN-0087
+FAC-0045,en/FAC-0045_fire-safety-policy_FAQ.txt,Fire Safety - FAQ,fire_safety,Facilities,FAC,FAQ,en,Head Office,HO,3.1,Active,2023-06-23,,FAC-0039 FAC-0023
+LEG-0045,en/LEG-0045_records-retention-policy_FAQ.txt,Records Retention - FAQ,records_retention,Legal & Compliance,LEG,FAQ,en,Head Office,HO,3.1,Active,2023-01-28,,LEG-0007 IT-0063 IT-0055
+OPS-0045,en/OPS-0045_on-call-policy_FAQ.txt,On-Call - FAQ,on_call,Operations,OPS,FAQ,en,Head Office,HO,3.1,Active,2024-05-15,,HR-0055 OPS-0015
+HR-0046,ar/HR-0046_working-hours-policy_FAQ.txt,ساعات العمل - أسئلة شائعة,working_hours,Human Resources,HR,FAQ,ar,المكتب الرئيسي,HO,3.0,Active,2023-09-28,,HR-0056 HR-0072 HR-0064
+IT-0046,ar/IT-0046_vpn-and-remote-access-policy_FAQ.txt,الوصول عن بُعد و VPN - أسئلة شائعة,vpn_remote_access,Information Technology,IT,FAQ,ar,المكتب الرئيسي,HO,3.0,Active,2024-05-20,,HR-0064 IT-0016
+FIN-0046,ar/FIN-0046_invoice-processing-policy_FAQ.txt,معالجة الفواتير - أسئلة شائعة,invoice_processing,Finance,FIN,FAQ,ar,المكتب الرئيسي,HO,3.0,Active,2024-03-17,,FIN-0040 FIN-0088
+FAC-0046,ar/FAC-0046_fire-safety-policy_FAQ.txt,السلامة من الحرائق - أسئلة شائعة,fire_safety,Facilities,FAC,FAQ,ar,المكتب الرئيسي,HO,3.4,Active,2024-10-10,,FAC-0040 FAC-0024
+LEG-0046,ar/LEG-0046_records-retention-policy_FAQ.txt,الاحتفاظ بالسجلات - أسئلة شائعة,records_retention,Legal & Compliance,LEG,FAQ,ar,المكتب الرئيسي,HO,3.4,Active,2023-03-09,,LEG-0008 IT-0064 IT-0056
+OPS-0046,ar/OPS-0046_on-call-policy_FAQ.txt,المناوبة - أسئلة شائعة,on_call,Operations,OPS,FAQ,ar,المكتب الرئيسي,HO,3.1,Active,2023-10-27,,HR-0056 OPS-0016
+HR-0047,en/HR-0047_working-hours-policy_QuickReference.txt,Working Hours - Quick Reference,working_hours,Human Resources,HR,Quick Reference,en,Head Office,HO,3.3,Active,2023-05-06,,HR-0055 HR-0071 HR-0063
+IT-0047,en/IT-0047_vpn-and-remote-access-policy_QuickReference.txt,VPN and Remote Access - Quick Reference,vpn_remote_access,Information Technology,IT,Quick Reference,en,Head Office,HO,3.3,Active,2024-06-03,,HR-0063 IT-0015
+FIN-0047,en/FIN-0047_invoice-processing-policy_QuickReference.txt,Invoice Processing - Quick Reference,invoice_processing,Finance,FIN,Quick Reference,en,Head Office,HO,3.1,Active,2025-06-01,,FIN-0039 FIN-0087
+FAC-0047,en/FAC-0047_fire-safety-policy_QuickReference.txt,Fire Safety - Quick Reference,fire_safety,Facilities,FAC,Quick Reference,en,Head Office,HO,3.0,Active,2025-05-31,,FAC-0039 FAC-0023
+LEG-0047,en/LEG-0047_records-retention-policy_QuickReference.txt,Records Retention - Quick Reference,records_retention,Legal & Compliance,LEG,Quick Reference,en,Head Office,HO,3.0,Active,2024-08-09,,LEG-0007 IT-0063 IT-0055
+OPS-0047,en/OPS-0047_on-call-policy_QuickReference.txt,On-Call - Quick Reference,on_call,Operations,OPS,Quick Reference,en,Head Office,HO,3.0,Active,2024-10-18,,HR-0055 OPS-0015
+HR-0048,ar/HR-0048_working-hours-policy_QuickReference.txt,ساعات العمل - مرجع سريع,working_hours,Human Resources,HR,Quick Reference,ar,المكتب الرئيسي,HO,3.1,Active,2023-01-30,,HR-0056 HR-0072 HR-0064
+IT-0048,ar/IT-0048_vpn-and-remote-access-policy_QuickReference.txt,الوصول عن بُعد و VPN - مرجع سريع,vpn_remote_access,Information Technology,IT,Quick Reference,ar,المكتب الرئيسي,HO,3.4,Active,2024-07-05,,HR-0064 IT-0016
+FIN-0048,ar/FIN-0048_invoice-processing-policy_QuickReference.txt,معالجة الفواتير - مرجع سريع,invoice_processing,Finance,FIN,Quick Reference,ar,المكتب الرئيسي,HO,3.1,Active,2023-11-27,,FIN-0040 FIN-0088
+FAC-0048,ar/FAC-0048_fire-safety-policy_QuickReference.txt,السلامة من الحرائق - مرجع سريع,fire_safety,Facilities,FAC,Quick Reference,ar,المكتب الرئيسي,HO,3.4,Active,2024-03-05,,FAC-0040 FAC-0024
+LEG-0048,ar/LEG-0048_records-retention-policy_QuickReference.txt,الاحتفاظ بالسجلات - مرجع سريع,records_retention,Legal & Compliance,LEG,Quick Reference,ar,المكتب الرئيسي,HO,3.2,Active,2023-02-18,,LEG-0008 IT-0064 IT-0056
+OPS-0048,ar/OPS-0048_on-call-policy_QuickReference.txt,المناوبة - مرجع سريع,on_call,Operations,OPS,Quick Reference,ar,المكتب الرئيسي,HO,3.3,Active,2023-04-23,,HR-0056 OPS-0016
+HR-0049,en/HR-0049_overtime-policy_Policy.txt,Overtime Policy,overtime,Human Resources,HR,Policy,en,Head Office,HO,3.2,Active,2024-03-26,,HR-0047 OPS-0047
+IT-0049,en/IT-0049_email-usage-policy_Policy.txt,Email Usage Policy,email_usage,Information Technology,IT,Policy,en,Head Office,HO,3.4,Active,2024-05-31,,IT-0031 IT-0103 LEG-0047
+FIN-0049,en/FIN-0049_budget-approval-policy_Policy.txt,Budget Approval Policy,budget_approval,Finance,FIN,Policy,en,Head Office,HO,3.1,Active,2023-09-03,,FIN-0039 PRC-0031
+FAC-0049,en/FAC-0049_first-aid-policy_Policy.txt,First Aid Policy,first_aid,Facilities,FAC,Policy,en,Head Office,HO,3.3,Active,2024-05-15,,FAC-0039
+LEG-0049,en/LEG-0049_contract-signing-authority-policy_Policy.txt,Contract Signing Authority Policy,contract_signing_authority,Legal & Compliance,LEG,Policy,en,Head Office,HO,3.2,Active,2024-02-25,,FIN-0039 FIN-0055
+OPS-0049,en/OPS-0049_knowledge-sharing-policy_Policy.txt,Knowledge Sharing Policy,knowledge_sharing,Operations,OPS,Policy,en,Head Office,HO,3.3,Active,2023-02-03,,OPS-0015 HR-0111
+HR-0050,ar/HR-0050_overtime-policy_Policy.txt,سياسة العمل الإضافي,overtime,Human Resources,HR,Policy,ar,المكتب الرئيسي,HO,3.3,Active,2023-05-06,,HR-0048 OPS-0048
+IT-0050,ar/IT-0050_email-usage-policy_Policy.txt,سياسة استخدام البريد الإلكتروني,email_usage,Information Technology,IT,Policy,ar,المكتب الرئيسي,HO,3.1,Active,2023-11-24,,IT-0032 IT-0104 LEG-0048
+FIN-0050,ar/FIN-0050_budget-approval-policy_Policy.txt,سياسة اعتماد الميزانية,budget_approval,Finance,FIN,Policy,ar,المكتب الرئيسي,HO,3.4,Active,2023-08-30,,FIN-0040 PRC-0032
+FAC-0050,ar/FAC-0050_first-aid-policy_Policy.txt,سياسة الإسعافات الأولية,first_aid,Facilities,FAC,Policy,ar,المكتب الرئيسي,HO,3.0,Active,2023-03-20,,FAC-0040
+LEG-0050,ar/LEG-0050_contract-signing-authority-policy_Policy.txt,سياسة صلاحية توقيع العقود,contract_signing_authority,Legal & Compliance,LEG,Policy,ar,المكتب الرئيسي,HO,3.0,Active,2024-10-02,,FIN-0040 FIN-0056
+OPS-0050,ar/OPS-0050_knowledge-sharing-policy_Policy.txt,سياسة مشاركة المعرفة,knowledge_sharing,Operations,OPS,Policy,ar,المكتب الرئيسي,HO,3.1,Active,2023-01-04,,OPS-0016 HR-0112
+HR-0051,en/HR-0051_overtime-policy_Procedure.txt,Overtime - Procedure,overtime,Human Resources,HR,Procedure,en,Head Office,HO,3.4,Active,2023-12-22,,HR-0047 OPS-0047
+IT-0051,en/IT-0051_email-usage-policy_Procedure.txt,Email Usage - Procedure,email_usage,Information Technology,IT,Procedure,en,Head Office,HO,3.4,Active,2025-03-14,,IT-0031 IT-0103 LEG-0047
+FIN-0051,en/FIN-0051_budget-approval-policy_Procedure.txt,Budget Approval - Procedure,budget_approval,Finance,FIN,Procedure,en,Head Office,HO,3.3,Active,2024-04-02,,FIN-0039 PRC-0031
+FAC-0051,en/FAC-0051_first-aid-policy_Procedure.txt,First Aid - Procedure,first_aid,Facilities,FAC,Procedure,en,Head Office,HO,3.0,Active,2023-05-05,,FAC-0039
+LEG-0051,en/LEG-0051_contract-signing-authority-policy_Procedure.txt,Contract Signing Authority - Procedure,contract_signing_authority,Legal & Compliance,LEG,Procedure,en,Head Office,HO,3.1,Active,2023-05-23,,FIN-0039 FIN-0055
+OPS-0051,en/OPS-0051_knowledge-sharing-policy_Procedure.txt,Knowledge Sharing - Procedure,knowledge_sharing,Operations,OPS,Procedure,en,Head Office,HO,3.3,Active,2024-04-30,,OPS-0015 HR-0111
+HR-0052,ar/HR-0052_overtime-policy_Procedure.txt,العمل الإضافي - إجراء,overtime,Human Resources,HR,Procedure,ar,المكتب الرئيسي,HO,3.4,Active,2023-03-22,,HR-0048 OPS-0048
+IT-0052,ar/IT-0052_email-usage-policy_Procedure.txt,استخدام البريد الإلكتروني - إجراء,email_usage,Information Technology,IT,Procedure,ar,المكتب الرئيسي,HO,3.1,Active,2024-10-20,,IT-0032 IT-0104 LEG-0048
+FIN-0052,ar/FIN-0052_budget-approval-policy_Procedure.txt,اعتماد الميزانية - إجراء,budget_approval,Finance,FIN,Procedure,ar,المكتب الرئيسي,HO,3.2,Active,2024-04-05,,FIN-0040 PRC-0032
+FAC-0052,ar/FAC-0052_first-aid-policy_Procedure.txt,الإسعافات الأولية - إجراء,first_aid,Facilities,FAC,Procedure,ar,المكتب الرئيسي,HO,3.1,Active,2025-04-22,,FAC-0040
+LEG-0052,ar/LEG-0052_contract-signing-authority-policy_Procedure.txt,صلاحية توقيع العقود - إجراء,contract_signing_authority,Legal & Compliance,LEG,Procedure,ar,المكتب الرئيسي,HO,3.1,Active,2025-04-23,,FIN-0040 FIN-0056
+OPS-0052,ar/OPS-0052_knowledge-sharing-policy_Procedure.txt,مشاركة المعرفة - إجراء,knowledge_sharing,Operations,OPS,Procedure,ar,المكتب الرئيسي,HO,3.3,Active,2023-07-03,,OPS-0016 HR-0112
+HR-0053,en/HR-0053_overtime-policy_FAQ.txt,Overtime - FAQ,overtime,Human Resources,HR,FAQ,en,Head Office,HO,3.1,Active,2024-03-24,,HR-0047 OPS-0047
+IT-0053,en/IT-0053_email-usage-policy_FAQ.txt,Email Usage - FAQ,email_usage,Information Technology,IT,FAQ,en,Head Office,HO,3.2,Active,2024-07-30,,IT-0031 IT-0103 LEG-0047
+FIN-0053,en/FIN-0053_budget-approval-policy_FAQ.txt,Budget Approval - FAQ,budget_approval,Finance,FIN,FAQ,en,Head Office,HO,3.4,Active,2023-02-20,,FIN-0039 PRC-0031
+FAC-0053,en/FAC-0053_first-aid-policy_FAQ.txt,First Aid - FAQ,first_aid,Facilities,FAC,FAQ,en,Head Office,HO,3.3,Active,2024-10-28,,FAC-0039
+LEG-0053,en/LEG-0053_contract-signing-authority-policy_FAQ.txt,Contract Signing Authority - FAQ,contract_signing_authority,Legal & Compliance,LEG,FAQ,en,Head Office,HO,3.4,Active,2024-11-14,,FIN-0039 FIN-0055
+OPS-0053,en/OPS-0053_knowledge-sharing-policy_FAQ.txt,Knowledge Sharing - FAQ,knowledge_sharing,Operations,OPS,FAQ,en,Head Office,HO,3.0,Active,2023-10-31,,OPS-0015 HR-0111
+HR-0054,ar/HR-0054_overtime-policy_FAQ.txt,العمل الإضافي - أسئلة شائعة,overtime,Human Resources,HR,FAQ,ar,المكتب الرئيسي,HO,3.1,Active,2024-05-04,,HR-0048 OPS-0048
+IT-0054,ar/IT-0054_email-usage-policy_FAQ.txt,استخدام البريد الإلكتروني - أسئلة شائعة,email_usage,Information Technology,IT,FAQ,ar,المكتب الرئيسي,HO,3.3,Active,2023-06-21,,IT-0032 IT-0104 LEG-0048
+FIN-0054,ar/FIN-0054_budget-approval-policy_FAQ.txt,اعتماد الميزانية - أسئلة شائعة,budget_approval,Finance,FIN,FAQ,ar,المكتب الرئيسي,HO,3.4,Active,2024-02-12,,FIN-0040 PRC-0032
+FAC-0054,ar/FAC-0054_first-aid-policy_FAQ.txt,الإسعافات الأولية - أسئلة شائعة,first_aid,Facilities,FAC,FAQ,ar,المكتب الرئيسي,HO,3.0,Active,2024-03-15,,FAC-0040
+LEG-0054,ar/LEG-0054_contract-signing-authority-policy_FAQ.txt,صلاحية توقيع العقود - أسئلة شائعة,contract_signing_authority,Legal & Compliance,LEG,FAQ,ar,المكتب الرئيسي,HO,3.3,Active,2023-12-03,,FIN-0040 FIN-0056
+OPS-0054,ar/OPS-0054_knowledge-sharing-policy_FAQ.txt,مشاركة المعرفة - أسئلة شائعة,knowledge_sharing,Operations,OPS,FAQ,ar,المكتب الرئيسي,HO,3.1,Active,2024-11-20,,OPS-0016 HR-0112
+HR-0055,en/HR-0055_overtime-policy_QuickReference.txt,Overtime - Quick Reference,overtime,Human Resources,HR,Quick Reference,en,Head Office,HO,3.1,Active,2023-10-09,,HR-0047 OPS-0047
+IT-0055,en/IT-0055_email-usage-policy_QuickReference.txt,Email Usage - Quick Reference,email_usage,Information Technology,IT,Quick Reference,en,Head Office,HO,3.1,Active,2025-03-12,,IT-0031 IT-0103 LEG-0047
+FIN-0055,en/FIN-0055_budget-approval-policy_QuickReference.txt,Budget Approval - Quick Reference,budget_approval,Finance,FIN,Quick Reference,en,Head Office,HO,3.3,Active,2024-07-28,,FIN-0039 PRC-0031
+FAC-0055,en/FAC-0055_first-aid-policy_QuickReference.txt,First Aid - Quick Reference,first_aid,Facilities,FAC,Quick Reference,en,Head Office,HO,3.2,Active,2023-09-27,,FAC-0039
+LEG-0055,en/LEG-0055_contract-signing-authority-policy_QuickReference.txt,Contract Signing Authority - Quick Reference,contract_signing_authority,Legal & Compliance,LEG,Quick Reference,en,Head Office,HO,3.1,Active,2024-11-28,,FIN-0039 FIN-0055
+OPS-0055,en/OPS-0055_knowledge-sharing-policy_QuickReference.txt,Knowledge Sharing - Quick Reference,knowledge_sharing,Operations,OPS,Quick Reference,en,Head Office,HO,3.1,Active,2023-03-01,,OPS-0015 HR-0111
+HR-0056,ar/HR-0056_overtime-policy_QuickReference.txt,العمل الإضافي - مرجع سريع,overtime,Human Resources,HR,Quick Reference,ar,المكتب الرئيسي,HO,3.4,Active,2024-03-08,,HR-0048 OPS-0048
+IT-0056,ar/IT-0056_email-usage-policy_QuickReference.txt,استخدام البريد الإلكتروني - مرجع سريع,email_usage,Information Technology,IT,Quick Reference,ar,المكتب الرئيسي,HO,3.0,Active,2024-03-22,,IT-0032 IT-0104 LEG-0048
+FIN-0056,ar/FIN-0056_budget-approval-policy_QuickReference.txt,اعتماد الميزانية - مرجع سريع,budget_approval,Finance,FIN,Quick Reference,ar,المكتب الرئيسي,HO,3.2,Active,2025-05-22,,FIN-0040 PRC-0032
+FAC-0056,ar/FAC-0056_first-aid-policy_QuickReference.txt,الإسعافات الأولية - مرجع سريع,first_aid,Facilities,FAC,Quick Reference,ar,المكتب الرئيسي,HO,3.4,Active,2023-08-10,,FAC-0040
+LEG-0056,ar/LEG-0056_contract-signing-authority-policy_QuickReference.txt,صلاحية توقيع العقود - مرجع سريع,contract_signing_authority,Legal & Compliance,LEG,Quick Reference,ar,المكتب الرئيسي,HO,3.1,Active,2024-12-27,,FIN-0040 FIN-0056
+OPS-0056,ar/OPS-0056_knowledge-sharing-policy_QuickReference.txt,مشاركة المعرفة - مرجع سريع,knowledge_sharing,Operations,OPS,Quick Reference,ar,المكتب الرئيسي,HO,3.2,Active,2023-04-01,,OPS-0016 HR-0112
+HR-0057,en/HR-0057_remote-work-policy_Policy.txt,Remote Work Policy,remote_work,Human Resources,HR,Policy,en,Head Office,HO,3.2,Active,2023-04-10,,HR-0047 IT-0047 IT-0079
+IT-0057,en/IT-0057_data-backup-policy_Policy.txt,Data Backup Policy,data_backup,Information Technology,IT,Policy,en,Head Office,HO,3.2,Active,2025-01-31,,IT-0111 LEG-0047
+FIN-0057,en/FIN-0057_petty-cash-policy_Policy.txt,Petty Cash Policy,petty_cash,Finance,FIN,Policy,en,Head Office,HO,3.3,Active,2023-03-06,,FIN-0007
+FAC-0057,en/FAC-0057_workspace-ergonomics-policy_Policy.txt,Workspace Ergonomics Policy,workspace_ergonomics,Facilities,FAC,Policy,en,Head Office,HO,3.0,Active,2024-01-16,,IT-0079 FAC-0039 HR-0063
+LEG-0057,en/LEG-0057_gifts-and-hospitality-policy_Policy.txt,Gifts and Hospitality Policy,gifts_hospitality,Legal & Compliance,LEG,Policy,en,Head Office,HO,3.4,Active,2024-01-20,,LEG-0023 LEG-0031
+HR-0058,ar/HR-0058_remote-work-policy_Policy.txt,سياسة العمل عن بُعد,remote_work,Human Resources,HR,Policy,ar,المكتب الرئيسي,HO,3.4,Active,2024-08-05,,HR-0048 IT-0048 IT-0080
+IT-0058,ar/IT-0058_data-backup-policy_Policy.txt,سياسة النسخ الاحتياطي للبيانات,data_backup,Information Technology,IT,Policy,ar,المكتب الرئيسي,HO,3.0,Active,2023-12-17,,IT-0112 LEG-0048
+FIN-0058,ar/FIN-0058_petty-cash-policy_Policy.txt,سياسة المصروفات النثرية,petty_cash,Finance,FIN,Policy,ar,المكتب الرئيسي,HO,3.4,Active,2024-12-01,,FIN-0008
+FAC-0058,ar/FAC-0058_workspace-ergonomics-policy_Policy.txt,سياسة بيئة العمل المريحة,workspace_ergonomics,Facilities,FAC,Policy,ar,المكتب الرئيسي,HO,3.3,Active,2023-04-19,,IT-0080 FAC-0040 HR-0064
+LEG-0058,ar/LEG-0058_gifts-and-hospitality-policy_Policy.txt,سياسة الهدايا والضيافة,gifts_hospitality,Legal & Compliance,LEG,Policy,ar,المكتب الرئيسي,HO,3.0,Active,2024-05-04,,LEG-0024 LEG-0032
+HR-0059,en/HR-0059_remote-work-policy_Procedure.txt,Remote Work - Procedure,remote_work,Human Resources,HR,Procedure,en,Head Office,HO,3.2,Active,2024-03-09,,HR-0047 IT-0047 IT-0079
+IT-0059,en/IT-0059_data-backup-policy_Procedure.txt,Data Backup - Procedure,data_backup,Information Technology,IT,Procedure,en,Head Office,HO,3.1,Active,2023-08-28,,IT-0111 LEG-0047
+FIN-0059,en/FIN-0059_petty-cash-policy_Procedure.txt,Petty Cash - Procedure,petty_cash,Finance,FIN,Procedure,en,Head Office,HO,3.0,Active,2024-08-31,,FIN-0007
+FAC-0059,en/FAC-0059_workspace-ergonomics-policy_Procedure.txt,Workspace Ergonomics - Procedure,workspace_ergonomics,Facilities,FAC,Procedure,en,Head Office,HO,3.1,Active,2024-04-27,,IT-0079 FAC-0039 HR-0063
+LEG-0059,en/LEG-0059_gifts-and-hospitality-policy_Procedure.txt,Gifts and Hospitality - Procedure,gifts_hospitality,Legal & Compliance,LEG,Procedure,en,Head Office,HO,3.3,Active,2025-01-02,,LEG-0023 LEG-0031
+HR-0060,ar/HR-0060_remote-work-policy_Procedure.txt,العمل عن بُعد - إجراء,remote_work,Human Resources,HR,Procedure,ar,المكتب الرئيسي,HO,3.1,Active,2023-06-09,,HR-0048 IT-0048 IT-0080
+IT-0060,ar/IT-0060_data-backup-policy_Procedure.txt,النسخ الاحتياطي للبيانات - إجراء,data_backup,Information Technology,IT,Procedure,ar,المكتب الرئيسي,HO,3.0,Active,2024-05-07,,IT-0112 LEG-0048
+FIN-0060,ar/FIN-0060_petty-cash-policy_Procedure.txt,المصروفات النثرية - إجراء,petty_cash,Finance,FIN,Procedure,ar,المكتب الرئيسي,HO,3.2,Active,2023-12-05,,FIN-0008
+FAC-0060,ar/FAC-0060_workspace-ergonomics-policy_Procedure.txt,بيئة العمل المريحة - إجراء,workspace_ergonomics,Facilities,FAC,Procedure,ar,المكتب الرئيسي,HO,3.1,Active,2023-01-11,,IT-0080 FAC-0040 HR-0064
+LEG-0060,ar/LEG-0060_gifts-and-hospitality-policy_Procedure.txt,الهدايا والضيافة - إجراء,gifts_hospitality,Legal & Compliance,LEG,Procedure,ar,المكتب الرئيسي,HO,3.4,Active,2025-05-22,,LEG-0024 LEG-0032
+HR-0061,en/HR-0061_remote-work-policy_FAQ.txt,Remote Work - FAQ,remote_work,Human Resources,HR,FAQ,en,Head Office,HO,3.3,Active,2023-09-06,,HR-0047 IT-0047 IT-0079
+IT-0061,en/IT-0061_data-backup-policy_FAQ.txt,Data Backup - FAQ,data_backup,Information Technology,IT,FAQ,en,Head Office,HO,3.2,Active,2025-04-18,,IT-0111 LEG-0047
+FIN-0061,en/FIN-0061_petty-cash-policy_FAQ.txt,Petty Cash - FAQ,petty_cash,Finance,FIN,FAQ,en,Head Office,HO,3.2,Active,2024-10-07,,FIN-0007
+FAC-0061,en/FAC-0061_workspace-ergonomics-policy_FAQ.txt,Workspace Ergonomics - FAQ,workspace_ergonomics,Facilities,FAC,FAQ,en,Head Office,HO,3.4,Active,2023-09-05,,IT-0079 FAC-0039 HR-0063
+LEG-0061,en/LEG-0061_gifts-and-hospitality-policy_FAQ.txt,Gifts and Hospitality - FAQ,gifts_hospitality,Legal & Compliance,LEG,FAQ,en,Head Office,HO,3.0,Active,2024-03-09,,LEG-0023 LEG-0031
+HR-0062,ar/HR-0062_remote-work-policy_FAQ.txt,العمل عن بُعد - أسئلة شائعة,remote_work,Human Resources,HR,FAQ,ar,المكتب الرئيسي,HO,3.3,Active,2025-02-02,,HR-0048 IT-0048 IT-0080
+IT-0062,ar/IT-0062_data-backup-policy_FAQ.txt,النسخ الاحتياطي للبيانات - أسئلة شائعة,data_backup,Information Technology,IT,FAQ,ar,المكتب الرئيسي,HO,3.2,Active,2025-03-28,,IT-0112 LEG-0048
+FIN-0062,ar/FIN-0062_petty-cash-policy_FAQ.txt,المصروفات النثرية - أسئلة شائعة,petty_cash,Finance,FIN,FAQ,ar,المكتب الرئيسي,HO,3.1,Active,2025-03-18,,FIN-0008
+FAC-0062,ar/FAC-0062_workspace-ergonomics-policy_FAQ.txt,بيئة العمل المريحة - أسئلة شائعة,workspace_ergonomics,Facilities,FAC,FAQ,ar,المكتب الرئيسي,HO,3.1,Active,2025-05-19,,IT-0080 FAC-0040 HR-0064
+LEG-0062,ar/LEG-0062_gifts-and-hospitality-policy_FAQ.txt,الهدايا والضيافة - أسئلة شائعة,gifts_hospitality,Legal & Compliance,LEG,FAQ,ar,المكتب الرئيسي,HO,3.2,Active,2023-11-27,,LEG-0024 LEG-0032
+HR-0063,en/HR-0063_remote-work-policy_QuickReference.txt,Remote Work - Quick Reference,remote_work,Human Resources,HR,Quick Reference,en,Head Office,HO,3.0,Active,2023-10-08,,HR-0047 IT-0047 IT-0079
+IT-0063,en/IT-0063_data-backup-policy_QuickReference.txt,Data Backup - Quick Reference,data_backup,Information Technology,IT,Quick Reference,en,Head Office,HO,3.1,Active,2025-01-31,,IT-0111 LEG-0047
+FIN-0063,en/FIN-0063_petty-cash-policy_QuickReference.txt,Petty Cash - Quick Reference,petty_cash,Finance,FIN,Quick Reference,en,Head Office,HO,3.4,Active,2023-12-03,,FIN-0007
+FAC-0063,en/FAC-0063_workspace-ergonomics-policy_QuickReference.txt,Workspace Ergonomics - Quick Reference,workspace_ergonomics,Facilities,FAC,Quick Reference,en,Head Office,HO,3.3,Active,2024-02-06,,IT-0079 FAC-0039 HR-0063
+LEG-0063,en/LEG-0063_gifts-and-hospitality-policy_QuickReference.txt,Gifts and Hospitality - Quick Reference,gifts_hospitality,Legal & Compliance,LEG,Quick Reference,en,Head Office,HO,3.4,Active,2023-08-06,,LEG-0023 LEG-0031
+HR-0064,ar/HR-0064_remote-work-policy_QuickReference.txt,العمل عن بُعد - مرجع سريع,remote_work,Human Resources,HR,Quick Reference,ar,المكتب الرئيسي,HO,3.0,Active,2023-11-14,,HR-0048 IT-0048 IT-0080
+IT-0064,ar/IT-0064_data-backup-policy_QuickReference.txt,النسخ الاحتياطي للبيانات - مرجع سريع,data_backup,Information Technology,IT,Quick Reference,ar,المكتب الرئيسي,HO,3.0,Active,2023-08-09,,IT-0112 LEG-0048
+FIN-0064,ar/FIN-0064_petty-cash-policy_QuickReference.txt,المصروفات النثرية - مرجع سريع,petty_cash,Finance,FIN,Quick Reference,ar,المكتب الرئيسي,HO,3.1,Active,2023-12-26,,FIN-0008
+FAC-0064,ar/FAC-0064_workspace-ergonomics-policy_QuickReference.txt,بيئة العمل المريحة - مرجع سريع,workspace_ergonomics,Facilities,FAC,Quick Reference,ar,المكتب الرئيسي,HO,3.3,Active,2023-07-16,,IT-0080 FAC-0040 HR-0064
+LEG-0064,ar/LEG-0064_gifts-and-hospitality-policy_QuickReference.txt,الهدايا والضيافة - مرجع سريع,gifts_hospitality,Legal & Compliance,LEG,Quick Reference,ar,المكتب الرئيسي,HO,3.2,Active,2023-10-25,,LEG-0024 LEG-0032
+HR-0065,en/HR-0065_flexible-hours-policy_Policy.txt,Flexible Hours Policy,flexible_hours,Human Resources,HR,Policy,en,Head Office,HO,3.3,Active,2023-05-10,,HR-0047 HR-0063
+IT-0065,en/IT-0065_software-licensing-policy_Policy.txt,Software Licensing Policy,software_licensing,Information Technology,IT,Policy,en,Head Office,HO,3.3,Active,2023-01-18,,IT-0031 IT-0079
+FIN-0065,en/FIN-0065_payroll-schedule-policy_Policy.txt,Payroll Schedule Policy,payroll_schedule,Finance,FIN,Policy,en,Head Office,HO,3.4,Active,2024-12-28,,HR-0103 FIN-0079
+FAC-0065,en/FAC-0065_kitchen-and-break-area-policy_Policy.txt,Kitchen and Break Area Policy,kitchen_use,Facilities,FAC,Policy,en,Head Office,HO,3.1,Active,2023-03-09,,
+LEG-0065,en/LEG-0065_intellectual-property-policy_Policy.txt,Intellectual Property Policy,intellectual_property,Legal & Compliance,LEG,Policy,en,Head Office,HO,3.3,Active,2025-06-05,,LEG-0015 IT-0071
+HR-0066,ar/HR-0066_flexible-hours-policy_Policy.txt,سياسة ساعات العمل المرنة,flexible_hours,Human Resources,HR,Policy,ar,المكتب الرئيسي,HO,3.3,Active,2024-09-06,,HR-0048 HR-0064
+IT-0066,ar/IT-0066_software-licensing-policy_Policy.txt,سياسة تراخيص البرمجيات,software_licensing,Information Technology,IT,Policy,ar,المكتب الرئيسي,HO,3.3,Active,2023-01-15,,IT-0032 IT-0080
+FIN-0066,ar/FIN-0066_payroll-schedule-policy_Policy.txt,سياسة جدول الرواتب,payroll_schedule,Finance,FIN,Policy,ar,المكتب الرئيسي,HO,3.2,Active,2023-07-30,,HR-0104 FIN-0080
+FAC-0066,ar/FAC-0066_kitchen-and-break-area-policy_Policy.txt,سياسة المطبخ ومناطق الاستراحة,kitchen_use,Facilities,FAC,Policy,ar,المكتب الرئيسي,HO,3.3,Active,2023-08-07,,
+LEG-0066,ar/LEG-0066_intellectual-property-policy_Policy.txt,سياسة الملكية الفكرية,intellectual_property,Legal & Compliance,LEG,Policy,ar,المكتب الرئيسي,HO,3.3,Active,2024-07-15,,LEG-0016 IT-0072
+HR-0067,en/HR-0067_flexible-hours-policy_Procedure.txt,Flexible Hours - Procedure,flexible_hours,Human Resources,HR,Procedure,en,Head Office,HO,3.3,Active,2023-07-04,,HR-0047 HR-0063
+IT-0067,en/IT-0067_software-licensing-policy_Procedure.txt,Software Licensing - Procedure,software_licensing,Information Technology,IT,Procedure,en,Head Office,HO,3.2,Active,2025-01-25,,IT-0031 IT-0079
+FIN-0067,en/FIN-0067_payroll-schedule-policy_Procedure.txt,Payroll Schedule - Procedure,payroll_schedule,Finance,FIN,Procedure,en,Head Office,HO,3.3,Active,2023-10-08,,HR-0103 FIN-0079
+FAC-0067,en/FAC-0067_kitchen-and-break-area-policy_Procedure.txt,Kitchen and Break Area - Procedure,kitchen_use,Facilities,FAC,Procedure,en,Head Office,HO,3.3,Active,2023-05-12,,
+LEG-0067,en/LEG-0067_intellectual-property-policy_Procedure.txt,Intellectual Property - Procedure,intellectual_property,Legal & Compliance,LEG,Procedure,en,Head Office,HO,3.0,Active,2024-12-28,,LEG-0015 IT-0071
+HR-0068,ar/HR-0068_flexible-hours-policy_Procedure.txt,ساعات العمل المرنة - إجراء,flexible_hours,Human Resources,HR,Procedure,ar,المكتب الرئيسي,HO,3.1,Active,2023-09-29,,HR-0048 HR-0064
+IT-0068,ar/IT-0068_software-licensing-policy_Procedure.txt,تراخيص البرمجيات - إجراء,software_licensing,Information Technology,IT,Procedure,ar,المكتب الرئيسي,HO,3.2,Active,2023-09-23,,IT-0032 IT-0080
+FIN-0068,ar/FIN-0068_payroll-schedule-policy_Procedure.txt,جدول الرواتب - إجراء,payroll_schedule,Finance,FIN,Procedure,ar,المكتب الرئيسي,HO,3.0,Active,2023-11-29,,HR-0104 FIN-0080
+FAC-0068,ar/FAC-0068_kitchen-and-break-area-policy_Procedure.txt,المطبخ ومناطق الاستراحة - إجراء,kitchen_use,Facilities,FAC,Procedure,ar,المكتب الرئيسي,HO,3.3,Active,2023-06-15,,
+LEG-0068,ar/LEG-0068_intellectual-property-policy_Procedure.txt,الملكية الفكرية - إجراء,intellectual_property,Legal & Compliance,LEG,Procedure,ar,المكتب الرئيسي,HO,3.0,Active,2024-09-19,,LEG-0016 IT-0072
+HR-0069,en/HR-0069_flexible-hours-policy_FAQ.txt,Flexible Hours - FAQ,flexible_hours,Human Resources,HR,FAQ,en,Head Office,HO,3.3,Active,2025-03-17,,HR-0047 HR-0063
+IT-0069,en/IT-0069_software-licensing-policy_FAQ.txt,Software Licensing - FAQ,software_licensing,Information Technology,IT,FAQ,en,Head Office,HO,3.2,Active,2025-02-19,,IT-0031 IT-0079
+FIN-0069,en/FIN-0069_payroll-schedule-policy_FAQ.txt,Payroll Schedule - FAQ,payroll_schedule,Finance,FIN,FAQ,en,Head Office,HO,3.1,Active,2023-08-26,,HR-0103 FIN-0079
+FAC-0069,en/FAC-0069_kitchen-and-break-area-policy_FAQ.txt,Kitchen and Break Area - FAQ,kitchen_use,Facilities,FAC,FAQ,en,Head Office,HO,3.3,Active,2025-05-01,,
+LEG-0069,en/LEG-0069_intellectual-property-policy_FAQ.txt,Intellectual Property - FAQ,intellectual_property,Legal & Compliance,LEG,FAQ,en,Head Office,HO,3.2,Active,2023-11-08,,LEG-0015 IT-0071
+HR-0070,ar/HR-0070_flexible-hours-policy_FAQ.txt,ساعات العمل المرنة - أسئلة شائعة,flexible_hours,Human Resources,HR,FAQ,ar,المكتب الرئيسي,HO,3.0,Active,2025-03-30,,HR-0048 HR-0064
+IT-0070,ar/IT-0070_software-licensing-policy_FAQ.txt,تراخيص البرمجيات - أسئلة شائعة,software_licensing,Information Technology,IT,FAQ,ar,المكتب الرئيسي,HO,3.4,Active,2023-06-26,,IT-0032 IT-0080
+FIN-0070,ar/FIN-0070_payroll-schedule-policy_FAQ.txt,جدول الرواتب - أسئلة شائعة,payroll_schedule,Finance,FIN,FAQ,ar,المكتب الرئيسي,HO,3.2,Active,2025-02-16,,HR-0104 FIN-0080
+FAC-0070,ar/FAC-0070_kitchen-and-break-area-policy_FAQ.txt,المطبخ ومناطق الاستراحة - أسئلة شائعة,kitchen_use,Facilities,FAC,FAQ,ar,المكتب الرئيسي,HO,3.3,Active,2023-02-05,,
+LEG-0070,ar/LEG-0070_intellectual-property-policy_FAQ.txt,الملكية الفكرية - أسئلة شائعة,intellectual_property,Legal & Compliance,LEG,FAQ,ar,المكتب الرئيسي,HO,3.2,Active,2023-03-28,,LEG-0016 IT-0072
+HR-0071,en/HR-0071_flexible-hours-policy_QuickReference.txt,Flexible Hours - Quick Reference,flexible_hours,Human Resources,HR,Quick Reference,en,Head Office,HO,3.0,Active,2024-01-24,,HR-0047 HR-0063
+IT-0071,en/IT-0071_software-licensing-policy_QuickReference.txt,Software Licensing - Quick Reference,software_licensing,Information Technology,IT,Quick Reference,en,Head Office,HO,3.0,Active,2024-12-29,,IT-0031 IT-0079
+FIN-0071,en/FIN-0071_payroll-schedule-policy_QuickReference.txt,Payroll Schedule - Quick Reference,payroll_schedule,Finance,FIN,Quick Reference,en,Head Office,HO,3.3,Active,2023-11-17,,HR-0103 FIN-0079
+FAC-0071,en/FAC-0071_kitchen-and-break-area-policy_QuickReference.txt,Kitchen and Break Area - Quick Reference,kitchen_use,Facilities,FAC,Quick Reference,en,Head Office,HO,3.3,Active,2023-05-28,,
+LEG-0071,en/LEG-0071_intellectual-property-policy_QuickReference.txt,Intellectual Property - Quick Reference,intellectual_property,Legal & Compliance,LEG,Quick Reference,en,Head Office,HO,3.1,Active,2024-02-24,,LEG-0015 IT-0071
+HR-0072,ar/HR-0072_flexible-hours-policy_QuickReference.txt,ساعات العمل المرنة - مرجع سريع,flexible_hours,Human Resources,HR,Quick Reference,ar,المكتب الرئيسي,HO,3.0,Active,2025-01-28,,HR-0048 HR-0064
+IT-0072,ar/IT-0072_software-licensing-policy_QuickReference.txt,تراخيص البرمجيات - مرجع سريع,software_licensing,Information Technology,IT,Quick Reference,ar,المكتب الرئيسي,HO,3.4,Active,2024-03-29,,IT-0032 IT-0080
+FIN-0072,ar/FIN-0072_payroll-schedule-policy_QuickReference.txt,جدول الرواتب - مرجع سريع,payroll_schedule,Finance,FIN,Quick Reference,ar,المكتب الرئيسي,HO,3.4,Active,2023-02-28,,HR-0104 FIN-0080
+FAC-0072,ar/FAC-0072_kitchen-and-break-area-policy_QuickReference.txt,المطبخ ومناطق الاستراحة - مرجع سريع,kitchen_use,Facilities,FAC,Quick Reference,ar,المكتب الرئيسي,HO,3.1,Active,2025-05-31,,
+LEG-0072,ar/LEG-0072_intellectual-property-policy_QuickReference.txt,الملكية الفكرية - مرجع سريع,intellectual_property,Legal & Compliance,LEG,Quick Reference,ar,المكتب الرئيسي,HO,3.4,Active,2023-09-07,,LEG-0016 IT-0072
+HR-0073,en/HR-0073_probation-policy_Policy.txt,Probation Policy,probation,Human Resources,HR,Policy,en,Head Office,HO,3.0,Active,2024-01-22,,HR-0111 HR-0087 HR-0127
+IT-0073,en/IT-0073_hardware-request-policy_Policy.txt,Hardware Request Policy,hardware_request,Information Technology,IT,Policy,en,Head Office,HO,3.4,Active,2023-05-19,,IT-0087 IT-0071 FAC-0063
+FIN-0073,en/FIN-0073_tax-documents-policy_Policy.txt,Tax Documents Policy,tax_documents,Finance,FIN,Policy,en,Head Office,HO,3.0,Active,2024-09-16,,FIN-0071
+FAC-0073,en/FAC-0073_mail-and-courier-policy_Policy.txt,Mail and Courier Policy,mail_courier,Facilities,FAC,Policy,en,Head Office,HO,3.4,Active,2024-02-03,,
+LEG-0073,en/LEG-0073_competition-law-policy_Policy.txt,Competition Law Policy,competition_law,Legal & Compliance,LEG,Policy,en,Head Office,HO,3.3,Active,2024-12-21,,LEG-0015 MKT-0015
+HR-0074,ar/HR-0074_probation-policy_Policy.txt,سياسة فترة التجربة,probation,Human Resources,HR,Policy,ar,المكتب الرئيسي,HO,3.3,Active,2023-02-18,,HR-0112 HR-0088 HR-0128
+IT-0074,ar/IT-0074_hardware-request-policy_Policy.txt,سياسة طلب الأجهزة,hardware_request,Information Technology,IT,Policy,ar,المكتب الرئيسي,HO,3.1,Active,2025-03-13,,IT-0088 IT-0072 FAC-0064
+FIN-0074,ar/FIN-0074_tax-documents-policy_Policy.txt,سياسة المستندات الضريبية,tax_documents,Finance,FIN,Policy,ar,المكتب الرئيسي,HO,3.0,Active,2025-04-21,,FIN-0072
+FAC-0074,ar/FAC-0074_mail-and-courier-policy_Policy.txt,سياسة البريد والشحن,mail_courier,Facilities,FAC,Policy,ar,المكتب الرئيسي,HO,3.1,Active,2025-04-21,,
+LEG-0074,ar/LEG-0074_competition-law-policy_Policy.txt,سياسة قانون المنافسة,competition_law,Legal & Compliance,LEG,Policy,ar,المكتب الرئيسي,HO,3.0,Active,2023-11-11,,LEG-0016 MKT-0016
+HR-0075,en/HR-0075_probation-policy_Procedure.txt,Probation - Procedure,probation,Human Resources,HR,Procedure,en,Head Office,HO,3.2,Active,2023-10-09,,HR-0111 HR-0087 HR-0127
+IT-0075,en/IT-0075_hardware-request-policy_Procedure.txt,Hardware Request - Procedure,hardware_request,Information Technology,IT,Procedure,en,Head Office,HO,3.4,Active,2024-10-28,,IT-0087 IT-0071 FAC-0063
+FIN-0075,en/FIN-0075_tax-documents-policy_Procedure.txt,Tax Documents - Procedure,tax_documents,Finance,FIN,Procedure,en,Head Office,HO,3.1,Active,2025-03-04,,FIN-0071
+FAC-0075,en/FAC-0075_mail-and-courier-policy_Procedure.txt,Mail and Courier - Procedure,mail_courier,Facilities,FAC,Procedure,en,Head Office,HO,3.3,Active,2024-01-26,,
+LEG-0075,en/LEG-0075_competition-law-policy_Procedure.txt,Competition Law - Procedure,competition_law,Legal & Compliance,LEG,Procedure,en,Head Office,HO,3.2,Active,2024-05-07,,LEG-0015 MKT-0015
+HR-0076,ar/HR-0076_probation-policy_Procedure.txt,فترة التجربة - إجراء,probation,Human Resources,HR,Procedure,ar,المكتب الرئيسي,HO,3.4,Active,2023-10-18,,HR-0112 HR-0088 HR-0128
+IT-0076,ar/IT-0076_hardware-request-policy_Procedure.txt,طلب الأجهزة - إجراء,hardware_request,Information Technology,IT,Procedure,ar,المكتب الرئيسي,HO,3.2,Active,2024-01-05,,IT-0088 IT-0072 FAC-0064
+FIN-0076,ar/FIN-0076_tax-documents-policy_Procedure.txt,المستندات الضريبية - إجراء,tax_documents,Finance,FIN,Procedure,ar,المكتب الرئيسي,HO,3.0,Active,2024-03-31,,FIN-0072
+FAC-0076,ar/FAC-0076_mail-and-courier-policy_Procedure.txt,البريد والشحن - إجراء,mail_courier,Facilities,FAC,Procedure,ar,المكتب الرئيسي,HO,3.0,Active,2023-03-24,,
+LEG-0076,ar/LEG-0076_competition-law-policy_Procedure.txt,قانون المنافسة - إجراء,competition_law,Legal & Compliance,LEG,Procedure,ar,المكتب الرئيسي,HO,3.4,Active,2023-11-04,,LEG-0016 MKT-0016
+HR-0077,en/HR-0077_probation-policy_FAQ.txt,Probation - FAQ,probation,Human Resources,HR,FAQ,en,Head Office,HO,3.2,Active,2023-02-14,,HR-0111 HR-0087 HR-0127
+IT-0077,en/IT-0077_hardware-request-policy_FAQ.txt,Hardware Request - FAQ,hardware_request,Information Technology,IT,FAQ,en,Head Office,HO,3.3,Active,2024-03-27,,IT-0087 IT-0071 FAC-0063
+FIN-0077,en/FIN-0077_tax-documents-policy_FAQ.txt,Tax Documents - FAQ,tax_documents,Finance,FIN,FAQ,en,Head Office,HO,3.3,Active,2025-03-23,,FIN-0071
+FAC-0077,en/FAC-0077_mail-and-courier-policy_FAQ.txt,Mail and Courier - FAQ,mail_courier,Facilities,FAC,FAQ,en,Head Office,HO,3.2,Active,2024-07-25,,
+LEG-0077,en/LEG-0077_competition-law-policy_FAQ.txt,Competition Law - FAQ,competition_law,Legal & Compliance,LEG,FAQ,en,Head Office,HO,3.3,Active,2024-05-01,,LEG-0015 MKT-0015
+HR-0078,ar/HR-0078_probation-policy_FAQ.txt,فترة التجربة - أسئلة شائعة,probation,Human Resources,HR,FAQ,ar,المكتب الرئيسي,HO,3.2,Active,2024-12-27,,HR-0112 HR-0088 HR-0128
+IT-0078,ar/IT-0078_hardware-request-policy_FAQ.txt,طلب الأجهزة - أسئلة شائعة,hardware_request,Information Technology,IT,FAQ,ar,المكتب الرئيسي,HO,3.0,Active,2024-10-13,,IT-0088 IT-0072 FAC-0064
+FIN-0078,ar/FIN-0078_tax-documents-policy_FAQ.txt,المستندات الضريبية - أسئلة شائعة,tax_documents,Finance,FIN,FAQ,ar,المكتب الرئيسي,HO,3.0,Active,2023-11-12,,FIN-0072
+FAC-0078,ar/FAC-0078_mail-and-courier-policy_FAQ.txt,البريد والشحن - أسئلة شائعة,mail_courier,Facilities,FAC,FAQ,ar,المكتب الرئيسي,HO,3.0,Active,2025-01-23,,
+LEG-0078,ar/LEG-0078_competition-law-policy_FAQ.txt,قانون المنافسة - أسئلة شائعة,competition_law,Legal & Compliance,LEG,FAQ,ar,المكتب الرئيسي,HO,3.1,Active,2024-11-08,,LEG-0016 MKT-0016
+HR-0079,en/HR-0079_probation-policy_QuickReference.txt,Probation - Quick Reference,probation,Human Resources,HR,Quick Reference,en,Head Office,HO,3.1,Active,2024-09-02,,HR-0111 HR-0087 HR-0127
+IT-0079,en/IT-0079_hardware-request-policy_QuickReference.txt,Hardware Request - Quick Reference,hardware_request,Information Technology,IT,Quick Reference,en,Head Office,HO,3.0,Active,2023-12-19,,IT-0087 IT-0071 FAC-0063
+FIN-0079,en/FIN-0079_tax-documents-policy_QuickReference.txt,Tax Documents - Quick Reference,tax_documents,Finance,FIN,Quick Reference,en,Head Office,HO,3.2,Active,2025-06-11,,FIN-0071
+FAC-0079,en/FAC-0079_mail-and-courier-policy_QuickReference.txt,Mail and Courier - Quick Reference,mail_courier,Facilities,FAC,Quick Reference,en,Head Office,HO,3.4,Active,2024-11-18,,
+LEG-0079,en/LEG-0079_competition-law-policy_QuickReference.txt,Competition Law - Quick Reference,competition_law,Legal & Compliance,LEG,Quick Reference,en,Head Office,HO,3.4,Active,2023-11-26,,LEG-0015 MKT-0015
+HR-0080,ar/HR-0080_probation-policy_QuickReference.txt,فترة التجربة - مرجع سريع,probation,Human Resources,HR,Quick Reference,ar,المكتب الرئيسي,HO,3.2,Active,2024-04-25,,HR-0112 HR-0088 HR-0128
+IT-0080,ar/IT-0080_hardware-request-policy_QuickReference.txt,طلب الأجهزة - مرجع سريع,hardware_request,Information Technology,IT,Quick Reference,ar,المكتب الرئيسي,HO,3.1,Active,2023-06-06,,IT-0088 IT-0072 FAC-0064
+FIN-0080,ar/FIN-0080_tax-documents-policy_QuickReference.txt,المستندات الضريبية - مرجع سريع,tax_documents,Finance,FIN,Quick Reference,ar,المكتب الرئيسي,HO,3.4,Active,2024-09-19,,FIN-0072
+FAC-0080,ar/FAC-0080_mail-and-courier-policy_QuickReference.txt,البريد والشحن - مرجع سريع,mail_courier,Facilities,FAC,Quick Reference,ar,المكتب الرئيسي,HO,3.1,Active,2024-08-20,,
+LEG-0080,ar/LEG-0080_competition-law-policy_QuickReference.txt,قانون المنافسة - مرجع سريع,competition_law,Legal & Compliance,LEG,Quick Reference,ar,المكتب الرئيسي,HO,3.4,Active,2024-01-17,,LEG-0016 MKT-0016
+HR-0081,en/HR-0081_performance-review-policy_Policy.txt,Performance Review Policy,performance_review,Human Resources,HR,Policy,en,Head Office,HO,3.1,Active,2025-03-07,,HR-0079 HR-0095 HR-0103
+IT-0081,en/IT-0081_asset-return-policy_Policy.txt,Asset Return Policy,asset_return,Information Technology,IT,Policy,en,Head Office,HO,3.3,Active,2024-02-25,,HR-0119 IT-0079
+FIN-0081,en/FIN-0081_vendor-onboarding-policy_Policy.txt,Vendor Onboarding Policy,vendor_onboarding,Finance,FIN,Policy,en,Head Office,HO,3.3,Active,2023-11-26,,FIN-0047 LEG-0031
+HR-0082,ar/HR-0082_performance-review-policy_Policy.txt,سياسة تقييم الأداء,performance_review,Human Resources,HR,Policy,ar,المكتب الرئيسي,HO,3.4,Active,2023-08-22,,HR-0080 HR-0096 HR-0104
+IT-0082,ar/IT-0082_asset-return-policy_Policy.txt,سياسة إعادة الأصول,asset_return,Information Technology,IT,Policy,ar,المكتب الرئيسي,HO,3.0,Active,2023-08-18,,HR-0120 IT-0080
+FIN-0082,ar/FIN-0082_vendor-onboarding-policy_Policy.txt,سياسة اعتماد الموردين,vendor_onboarding,Finance,FIN,Policy,ar,المكتب الرئيسي,HO,3.3,Active,2023-10-22,,FIN-0048 LEG-0032
+HR-0083,en/HR-0083_performance-review-policy_Procedure.txt,Performance Review - Procedure,performance_review,Human Resources,HR,Procedure,en,Head Office,HO,3.3,Active,2024-08-10,,HR-0079 HR-0095 HR-0103
+IT-0083,en/IT-0083_asset-return-policy_Procedure.txt,Asset Return - Procedure,asset_return,Information Technology,IT,Procedure,en,Head Office,HO,3.2,Active,2025-05-21,,HR-0119 IT-0079
+FIN-0083,en/FIN-0083_vendor-onboarding-policy_Procedure.txt,Vendor Onboarding - Procedure,vendor_onboarding,Finance,FIN,Procedure,en,Head Office,HO,3.2,Active,2024-09-29,,FIN-0047 LEG-0031
+HR-0084,ar/HR-0084_performance-review-policy_Procedure.txt,تقييم الأداء - إجراء,performance_review,Human Resources,HR,Procedure,ar,المكتب الرئيسي,HO,3.0,Active,2023-11-11,,HR-0080 HR-0096 HR-0104
+IT-0084,ar/IT-0084_asset-return-policy_Procedure.txt,إعادة الأصول - إجراء,asset_return,Information Technology,IT,Procedure,ar,المكتب الرئيسي,HO,3.0,Active,2023-06-20,,HR-0120 IT-0080
+FIN-0084,ar/FIN-0084_vendor-onboarding-policy_Procedure.txt,اعتماد الموردين - إجراء,vendor_onboarding,Finance,FIN,Procedure,ar,المكتب الرئيسي,HO,3.1,Active,2023-08-02,,FIN-0048 LEG-0032
+HR-0085,en/HR-0085_performance-review-policy_FAQ.txt,Performance Review - FAQ,performance_review,Human Resources,HR,FAQ,en,Head Office,HO,3.0,Active,2024-07-20,,HR-0079 HR-0095 HR-0103
+IT-0085,en/IT-0085_asset-return-policy_FAQ.txt,Asset Return - FAQ,asset_return,Information Technology,IT,FAQ,en,Head Office,HO,3.4,Active,2024-10-22,,HR-0119 IT-0079
+FIN-0085,en/FIN-0085_vendor-onboarding-policy_FAQ.txt,Vendor Onboarding - FAQ,vendor_onboarding,Finance,FIN,FAQ,en,Head Office,HO,3.4,Active,2024-03-01,,FIN-0047 LEG-0031
+HR-0086,ar/HR-0086_performance-review-policy_FAQ.txt,تقييم الأداء - أسئلة شائعة,performance_review,Human Resources,HR,FAQ,ar,المكتب الرئيسي,HO,3.0,Active,2025-04-03,,HR-0080 HR-0096 HR-0104
+IT-0086,ar/IT-0086_asset-return-policy_FAQ.txt,إعادة الأصول - أسئلة شائعة,asset_return,Information Technology,IT,FAQ,ar,المكتب الرئيسي,HO,3.4,Active,2023-10-01,,HR-0120 IT-0080
+FIN-0086,ar/FIN-0086_vendor-onboarding-policy_FAQ.txt,اعتماد الموردين - أسئلة شائعة,vendor_onboarding,Finance,FIN,FAQ,ar,المكتب الرئيسي,HO,3.0,Active,2024-12-17,,FIN-0048 LEG-0032
+HR-0087,en/HR-0087_performance-review-policy_QuickReference.txt,Performance Review - Quick Reference,performance_review,Human Resources,HR,Quick Reference,en,Head Office,HO,3.0,Active,2024-03-02,,HR-0079 HR-0095 HR-0103
+IT-0087,en/IT-0087_asset-return-policy_QuickReference.txt,Asset Return - Quick Reference,asset_return,Information Technology,IT,Quick Reference,en,Head Office,HO,3.1,Active,2023-03-07,,HR-0119 IT-0079
+FIN-0087,en/FIN-0087_vendor-onboarding-policy_QuickReference.txt,Vendor Onboarding - Quick Reference,vendor_onboarding,Finance,FIN,Quick Reference,en,Head Office,HO,3.2,Active,2024-09-19,,FIN-0047 LEG-0031
+HR-0088,ar/HR-0088_performance-review-policy_QuickReference.txt,تقييم الأداء - مرجع سريع,performance_review,Human Resources,HR,Quick Reference,ar,المكتب الرئيسي,HO,3.1,Active,2024-10-07,,HR-0080 HR-0096 HR-0104
+IT-0088,ar/IT-0088_asset-return-policy_QuickReference.txt,إعادة الأصول - مرجع سريع,asset_return,Information Technology,IT,Quick Reference,ar,المكتب الرئيسي,HO,3.4,Active,2025-04-20,,HR-0120 IT-0080
+FIN-0088,ar/FIN-0088_vendor-onboarding-policy_QuickReference.txt,اعتماد الموردين - مرجع سريع,vendor_onboarding,Finance,FIN,Quick Reference,ar,المكتب الرئيسي,HO,3.3,Active,2025-02-20,,FIN-0048 LEG-0032
+HR-0089,en/HR-0089_promotion-policy_Policy.txt,Promotion Policy,promotion,Human Resources,HR,Policy,en,Head Office,HO,3.3,Active,2024-07-04,,HR-0087 HR-0103
+IT-0089,en/IT-0089_security-incident-reporting-policy_Policy.txt,Security Incident Reporting Policy,security_incident,Information Technology,IT,Policy,en,Head Office,HO,3.3,Active,2023-01-07,,IT-0103 LEG-0007 IT-0015
+HR-0090,ar/HR-0090_promotion-policy_Policy.txt,سياسة الترقية,promotion,Human Resources,HR,Policy,ar,المكتب الرئيسي,HO,3.0,Active,2023-06-23,,HR-0088 HR-0104
+IT-0090,ar/IT-0090_security-incident-reporting-policy_Policy.txt,سياسة الإبلاغ عن الحوادث الأمنية,security_incident,Information Technology,IT,Policy,ar,المكتب الرئيسي,HO,3.0,Active,2023-07-17,,IT-0104 LEG-0008 IT-0016
+HR-0091,en/HR-0091_promotion-policy_Procedure.txt,Promotion - Procedure,promotion,Human Resources,HR,Procedure,en,Head Office,HO,3.3,Active,2024-08-31,,HR-0087 HR-0103
+IT-0091,en/IT-0091_security-incident-reporting-policy_Procedure.txt,Security Incident Reporting - Procedure,security_incident,Information Technology,IT,Procedure,en,Head Office,HO,3.2,Active,2023-02-17,,IT-0103 LEG-0007 IT-0015
+HR-0092,ar/HR-0092_promotion-policy_Procedure.txt,الترقية - إجراء,promotion,Human Resources,HR,Procedure,ar,المكتب الرئيسي,HO,3.2,Active,2024-11-01,,HR-0088 HR-0104
+IT-0092,ar/IT-0092_security-incident-reporting-policy_Procedure.txt,الإبلاغ عن الحوادث الأمنية - إجراء,security_incident,Information Technology,IT,Procedure,ar,المكتب الرئيسي,HO,3.2,Active,2023-09-26,,IT-0104 LEG-0008 IT-0016
+HR-0093,en/HR-0093_promotion-policy_FAQ.txt,Promotion - FAQ,promotion,Human Resources,HR,FAQ,en,Head Office,HO,3.0,Active,2025-01-11,,HR-0087 HR-0103
+IT-0093,en/IT-0093_security-incident-reporting-policy_FAQ.txt,Security Incident Reporting - FAQ,security_incident,Information Technology,IT,FAQ,en,Head Office,HO,3.4,Active,2025-06-13,,IT-0103 LEG-0007 IT-0015
+HR-0094,ar/HR-0094_promotion-policy_FAQ.txt,الترقية - أسئلة شائعة,promotion,Human Resources,HR,FAQ,ar,المكتب الرئيسي,HO,3.3,Active,2025-03-02,,HR-0088 HR-0104
+IT-0094,ar/IT-0094_security-incident-reporting-policy_FAQ.txt,الإبلاغ عن الحوادث الأمنية - أسئلة شائعة,security_incident,Information Technology,IT,FAQ,ar,المكتب الرئيسي,HO,3.3,Active,2024-07-07,,IT-0104 LEG-0008 IT-0016
+HR-0095,en/HR-0095_promotion-policy_QuickReference.txt,Promotion - Quick Reference,promotion,Human Resources,HR,Quick Reference,en,Head Office,HO,3.1,Active,2024-12-09,,HR-0087 HR-0103
+IT-0095,en/IT-0095_security-incident-reporting-policy_QuickReference.txt,Security Incident Reporting - Quick Reference,security_incident,Information Technology,IT,Quick Reference,en,Head Office,HO,3.4,Active,2023-01-09,,IT-0103 LEG-0007 IT-0015
+HR-0096,ar/HR-0096_promotion-policy_QuickReference.txt,الترقية - مرجع سريع,promotion,Human Resources,HR,Quick Reference,ar,المكتب الرئيسي,HO,3.3,Active,2023-07-29,,HR-0088 HR-0104
+IT-0096,ar/IT-0096_security-incident-reporting-policy_QuickReference.txt,الإبلاغ عن الحوادث الأمنية - مرجع سريع,security_incident,Information Technology,IT,Quick Reference,ar,المكتب الرئيسي,HO,3.2,Active,2025-06-19,,IT-0104 LEG-0008 IT-0016
+HR-0097,en/HR-0097_salary-review-policy_Policy.txt,Salary Review Policy,salary_review,Human Resources,HR,Policy,en,Head Office,HO,3.3,Active,2023-01-24,,HR-0087 HR-0095
+IT-0097,en/IT-0097_phishing-reporting-policy_Policy.txt,Phishing Reporting Policy,phishing_reporting,Information Technology,IT,Policy,en,Head Office,HO,3.4,Active,2024-05-03,,IT-0095 IT-0055
+HR-0098,ar/HR-0098_salary-review-policy_Policy.txt,سياسة مراجعة الرواتب,salary_review,Human Resources,HR,Policy,ar,المكتب الرئيسي,HO,3.3,Active,2025-01-23,,HR-0088 HR-0096
+IT-0098,ar/IT-0098_phishing-reporting-policy_Policy.txt,سياسة الإبلاغ عن التصيد,phishing_reporting,Information Technology,IT,Policy,ar,المكتب الرئيسي,HO,3.2,Active,2024-11-01,,IT-0096 IT-0056
+HR-0099,en/HR-0099_salary-review-policy_Procedure.txt,Salary Review - Procedure,salary_review,Human Resources,HR,Procedure,en,Head Office,HO,3.1,Active,2023-03-10,,HR-0087 HR-0095
+IT-0099,en/IT-0099_phishing-reporting-policy_Procedure.txt,Phishing Reporting - Procedure,phishing_reporting,Information Technology,IT,Procedure,en,Head Office,HO,3.3,Active,2023-08-03,,IT-0095 IT-0055
+HR-0100,ar/HR-0100_salary-review-policy_Procedure.txt,مراجعة الرواتب - إجراء,salary_review,Human Resources,HR,Procedure,ar,المكتب الرئيسي,HO,3.1,Active,2024-09-20,,HR-0088 HR-0096
+IT-0100,ar/IT-0100_phishing-reporting-policy_Procedure.txt,الإبلاغ عن التصيد - إجراء,phishing_reporting,Information Technology,IT,Procedure,ar,المكتب الرئيسي,HO,3.1,Active,2024-12-31,,IT-0096 IT-0056
+HR-0101,en/HR-0101_salary-review-policy_FAQ.txt,Salary Review - FAQ,salary_review,Human Resources,HR,FAQ,en,Head Office,HO,3.4,Active,2023-01-01,,HR-0087 HR-0095
+IT-0101,en/IT-0101_phishing-reporting-policy_FAQ.txt,Phishing Reporting - FAQ,phishing_reporting,Information Technology,IT,FAQ,en,Head Office,HO,3.0,Active,2024-12-01,,IT-0095 IT-0055
+HR-0102,ar/HR-0102_salary-review-policy_FAQ.txt,مراجعة الرواتب - أسئلة شائعة,salary_review,Human Resources,HR,FAQ,ar,المكتب الرئيسي,HO,3.3,Active,2023-10-04,,HR-0088 HR-0096
+IT-0102,ar/IT-0102_phishing-reporting-policy_FAQ.txt,الإبلاغ عن التصيد - أسئلة شائعة,phishing_reporting,Information Technology,IT,FAQ,ar,المكتب الرئيسي,HO,3.1,Active,2024-05-14,,IT-0096 IT-0056
+HR-0103,en/HR-0103_salary-review-policy_QuickReference.txt,Salary Review - Quick Reference,salary_review,Human Resources,HR,Quick Reference,en,Head Office,HO,3.4,Active,2023-08-11,,HR-0087 HR-0095
+IT-0103,en/IT-0103_phishing-reporting-policy_QuickReference.txt,Phishing Reporting - Quick Reference,phishing_reporting,Information Technology,IT,Quick Reference,en,Head Office,HO,3.3,Active,2024-07-22,,IT-0095 IT-0055
+HR-0104,ar/HR-0104_salary-review-policy_QuickReference.txt,مراجعة الرواتب - مرجع سريع,salary_review,Human Resources,HR,Quick Reference,ar,المكتب الرئيسي,HO,3.3,Active,2024-12-04,,HR-0088 HR-0096
+IT-0104,ar/IT-0104_phishing-reporting-policy_QuickReference.txt,الإبلاغ عن التصيد - مرجع سريع,phishing_reporting,Information Technology,IT,Quick Reference,ar,المكتب الرئيسي,HO,3.2,Active,2024-05-17,,IT-0096 IT-0056
+HR-0105,en/HR-0105_onboarding-policy_Policy.txt,Onboarding Policy,onboarding,Human Resources,HR,Policy,en,Head Office,HO,3.3,Active,2023-05-02,,HR-0079 HR-0143 IT-0023
+IT-0105,en/IT-0105_encryption-policy_Policy.txt,Encryption Policy,encryption,Information Technology,IT,Policy,en,Head Office,HO,3.0,Active,2024-07-13,,IT-0063 LEG-0007
+HR-0106,ar/HR-0106_onboarding-policy_Policy.txt,سياسة الإلحاق الوظيفي,onboarding,Human Resources,HR,Policy,ar,المكتب الرئيسي,HO,3.4,Active,2025-01-15,,HR-0080 HR-0144 IT-0024
+IT-0106,ar/IT-0106_encryption-policy_Policy.txt,سياسة التشفير,encryption,Information Technology,IT,Policy,ar,المكتب الرئيسي,HO,3.2,Active,2024-03-22,,IT-0064 LEG-0008
+HR-0107,en/HR-0107_onboarding-policy_Procedure.txt,Onboarding - Procedure,onboarding,Human Resources,HR,Procedure,en,Head Office,HO,3.4,Active,2023-04-15,,HR-0079 HR-0143 IT-0023
+IT-0107,en/IT-0107_encryption-policy_Procedure.txt,Encryption - Procedure,encryption,Information Technology,IT,Procedure,en,Head Office,HO,3.1,Active,2024-06-25,,IT-0063 LEG-0007
+HR-0108,ar/HR-0108_onboarding-policy_Procedure.txt,الإلحاق الوظيفي - إجراء,onboarding,Human Resources,HR,Procedure,ar,المكتب الرئيسي,HO,3.0,Active,2025-03-16,,HR-0080 HR-0144 IT-0024
+IT-0108,ar/IT-0108_encryption-policy_Procedure.txt,التشفير - إجراء,encryption,Information Technology,IT,Procedure,ar,المكتب الرئيسي,HO,3.3,Active,2024-01-31,,IT-0064 LEG-0008
+HR-0109,en/HR-0109_onboarding-policy_FAQ.txt,Onboarding - FAQ,onboarding,Human Resources,HR,FAQ,en,Head Office,HO,3.1,Active,2023-08-20,,HR-0079 HR-0143 IT-0023
+IT-0109,en/IT-0109_encryption-policy_FAQ.txt,Encryption - FAQ,encryption,Information Technology,IT,FAQ,en,Head Office,HO,3.4,Active,2023-11-14,,IT-0063 LEG-0007
+HR-0110,ar/HR-0110_onboarding-policy_FAQ.txt,الإلحاق الوظيفي - أسئلة شائعة,onboarding,Human Resources,HR,FAQ,ar,المكتب الرئيسي,HO,3.0,Active,2024-10-22,,HR-0080 HR-0144 IT-0024
+IT-0110,ar/IT-0110_encryption-policy_FAQ.txt,التشفير - أسئلة شائعة,encryption,Information Technology,IT,FAQ,ar,المكتب الرئيسي,HO,3.4,Active,2023-09-01,,IT-0064 LEG-0008
+HR-0111,en/HR-0111_onboarding-policy_QuickReference.txt,Onboarding - Quick Reference,onboarding,Human Resources,HR,Quick Reference,en,Head Office,HO,3.4,Active,2025-04-27,,HR-0079 HR-0143 IT-0023
+IT-0111,en/IT-0111_encryption-policy_QuickReference.txt,Encryption - Quick Reference,encryption,Information Technology,IT,Quick Reference,en,Head Office,HO,3.1,Active,2024-05-13,,IT-0063 LEG-0007
+HR-0112,ar/HR-0112_onboarding-policy_QuickReference.txt,الإلحاق الوظيفي - مرجع سريع,onboarding,Human Resources,HR,Quick Reference,ar,المكتب الرئيسي,HO,3.2,Active,2024-01-11,,HR-0080 HR-0144 IT-0024
+IT-0112,ar/IT-0112_encryption-policy_QuickReference.txt,التشفير - مرجع سريع,encryption,Information Technology,IT,Quick Reference,ar,المكتب الرئيسي,HO,3.3,Active,2023-08-09,,IT-0064 LEG-0008
+HR-0113,en/HR-0113_offboarding-policy_Policy.txt,Offboarding Policy,offboarding,Human Resources,HR,Policy,en,Head Office,HO,3.0,Active,2024-06-11,,HR-0127 IT-0087 IT-0023
+IT-0113,en/IT-0113_clear-desk-and-screen-policy_Policy.txt,Clear Desk and Screen Policy,clear_desk,Information Technology,IT,Policy,en,Head Office,HO,3.4,Active,2024-01-01,,IT-0127 LEG-0007
+HR-0114,ar/HR-0114_offboarding-policy_Policy.txt,سياسة إنهاء الخدمة,offboarding,Human Resources,HR,Policy,ar,المكتب الرئيسي,HO,3.0,Active,2023-11-20,,HR-0128 IT-0088 IT-0024
+IT-0114,ar/IT-0114_clear-desk-and-screen-policy_Policy.txt,سياسة المكتب والشاشة النظيفين,clear_desk,Information Technology,IT,Policy,ar,المكتب الرئيسي,HO,3.3,Active,2024-05-13,,IT-0128 LEG-0008
+HR-0115,en/HR-0115_offboarding-policy_Procedure.txt,Offboarding - Procedure,offboarding,Human Resources,HR,Procedure,en,Head Office,HO,3.1,Active,2023-05-17,,HR-0127 IT-0087 IT-0023
+IT-0115,en/IT-0115_clear-desk-and-screen-policy_Procedure.txt,Clear Desk and Screen - Procedure,clear_desk,Information Technology,IT,Procedure,en,Head Office,HO,3.3,Active,2023-02-01,,IT-0127 LEG-0007
+HR-0116,ar/HR-0116_offboarding-policy_Procedure.txt,إنهاء الخدمة - إجراء,offboarding,Human Resources,HR,Procedure,ar,المكتب الرئيسي,HO,3.3,Active,2024-04-24,,HR-0128 IT-0088 IT-0024
+IT-0116,ar/IT-0116_clear-desk-and-screen-policy_Procedure.txt,المكتب والشاشة النظيفين - إجراء,clear_desk,Information Technology,IT,Procedure,ar,المكتب الرئيسي,HO,3.0,Active,2024-06-27,,IT-0128 LEG-0008
+HR-0117,en/HR-0117_offboarding-policy_FAQ.txt,Offboarding - FAQ,offboarding,Human Resources,HR,FAQ,en,Head Office,HO,3.2,Active,2023-01-04,,HR-0127 IT-0087 IT-0023
+IT-0117,en/IT-0117_clear-desk-and-screen-policy_FAQ.txt,Clear Desk and Screen - FAQ,clear_desk,Information Technology,IT,FAQ,en,Head Office,HO,3.4,Active,2023-05-17,,IT-0127 LEG-0007
+HR-0118,ar/HR-0118_offboarding-policy_FAQ.txt,إنهاء الخدمة - أسئلة شائعة,offboarding,Human Resources,HR,FAQ,ar,المكتب الرئيسي,HO,3.4,Active,2023-01-20,,HR-0128 IT-0088 IT-0024
+IT-0118,ar/IT-0118_clear-desk-and-screen-policy_FAQ.txt,المكتب والشاشة النظيفين - أسئلة شائعة,clear_desk,Information Technology,IT,FAQ,ar,المكتب الرئيسي,HO,3.3,Active,2024-05-14,,IT-0128 LEG-0008
+HR-0119,en/HR-0119_offboarding-policy_QuickReference.txt,Offboarding - Quick Reference,offboarding,Human Resources,HR,Quick Reference,en,Head Office,HO,3.2,Active,2024-09-25,,HR-0127 IT-0087 IT-0023
+IT-0119,en/IT-0119_clear-desk-and-screen-policy_QuickReference.txt,Clear Desk and Screen - Quick Reference,clear_desk,Information Technology,IT,Quick Reference,en,Head Office,HO,3.0,Active,2023-10-27,,IT-0127 LEG-0007
+HR-0120,ar/HR-0120_offboarding-policy_QuickReference.txt,إنهاء الخدمة - مرجع سريع,offboarding,Human Resources,HR,Quick Reference,ar,المكتب الرئيسي,HO,3.0,Active,2024-12-11,,HR-0128 IT-0088 IT-0024
+IT-0120,ar/IT-0120_clear-desk-and-screen-policy_QuickReference.txt,المكتب والشاشة النظيفين - مرجع سريع,clear_desk,Information Technology,IT,Quick Reference,ar,المكتب الرئيسي,HO,3.0,Active,2024-03-11,,IT-0128 LEG-0008
+HR-0121,en/HR-0121_resignation-and-notice-policy_Policy.txt,Resignation and Notice Policy,resignation_notice,Human Resources,HR,Policy,en,Head Office,HO,3.4,Active,2024-01-31,,HR-0119 HR-0135
+IT-0121,en/IT-0121_printing-policy_Policy.txt,Printing Policy,printing,Information Technology,IT,Policy,en,Head Office,HO,3.2,Active,2023-01-15,,IT-0119
+HR-0122,ar/HR-0122_resignation-and-notice-policy_Policy.txt,سياسة الاستقالة ومدة الإشعار,resignation_notice,Human Resources,HR,Policy,ar,المكتب الرئيسي,HO,3.1,Active,2025-03-16,,HR-0120 HR-0136
+IT-0122,ar/IT-0122_printing-policy_Policy.txt,سياسة الطباعة,printing,Information Technology,IT,Policy,ar,المكتب الرئيسي,HO,3.4,Active,2023-01-16,,IT-0120
+HR-0123,en/HR-0123_resignation-and-notice-policy_Procedure.txt,Resignation and Notice - Procedure,resignation_notice,Human Resources,HR,Procedure,en,Head Office,HO,3.0,Active,2025-04-25,,HR-0119 HR-0135
+IT-0123,en/IT-0123_printing-policy_Procedure.txt,Printing - Procedure,printing,Information Technology,IT,Procedure,en,Head Office,HO,3.0,Active,2025-02-15,,IT-0119
+HR-0124,ar/HR-0124_resignation-and-notice-policy_Procedure.txt,الاستقالة ومدة الإشعار - إجراء,resignation_notice,Human Resources,HR,Procedure,ar,المكتب الرئيسي,HO,3.0,Active,2024-11-17,,HR-0120 HR-0136
+IT-0124,ar/IT-0124_printing-policy_Procedure.txt,الطباعة - إجراء,printing,Information Technology,IT,Procedure,ar,المكتب الرئيسي,HO,3.1,Active,2023-05-22,,IT-0120
+HR-0125,en/HR-0125_resignation-and-notice-policy_FAQ.txt,Resignation and Notice - FAQ,resignation_notice,Human Resources,HR,FAQ,en,Head Office,HO,3.1,Active,2024-07-07,,HR-0119 HR-0135
+IT-0125,en/IT-0125_printing-policy_FAQ.txt,Printing - FAQ,printing,Information Technology,IT,FAQ,en,Head Office,HO,3.4,Active,2024-05-21,,IT-0119
+HR-0126,ar/HR-0126_resignation-and-notice-policy_FAQ.txt,الاستقالة ومدة الإشعار - أسئلة شائعة,resignation_notice,Human Resources,HR,FAQ,ar,المكتب الرئيسي,HO,3.2,Active,2024-09-10,,HR-0120 HR-0136
+IT-0126,ar/IT-0126_printing-policy_FAQ.txt,الطباعة - أسئلة شائعة,printing,Information Technology,IT,FAQ,ar,المكتب الرئيسي,HO,3.0,Active,2023-08-04,,IT-0120
+HR-0127,en/HR-0127_resignation-and-notice-policy_QuickReference.txt,Resignation and Notice - Quick Reference,resignation_notice,Human Resources,HR,Quick Reference,en,Head Office,HO,3.4,Active,2025-04-24,,HR-0119 HR-0135
+IT-0127,en/IT-0127_printing-policy_QuickReference.txt,Printing - Quick Reference,printing,Information Technology,IT,Quick Reference,en,Head Office,HO,3.0,Active,2023-06-27,,IT-0119
+HR-0128,ar/HR-0128_resignation-and-notice-policy_QuickReference.txt,الاستقالة ومدة الإشعار - مرجع سريع,resignation_notice,Human Resources,HR,Quick Reference,ar,المكتب الرئيسي,HO,3.1,Active,2023-07-20,,HR-0120 HR-0136
+IT-0128,ar/IT-0128_printing-policy_QuickReference.txt,الطباعة - مرجع سريع,printing,Information Technology,IT,Quick Reference,ar,المكتب الرئيسي,HO,3.1,Active,2023-12-20,,IT-0120
+HR-0129,en/HR-0129_employment-references-policy_Policy.txt,Employment References Policy,references,Human Resources,HR,Policy,en,Head Office,HO,3.1,Active,2023-05-30,,HR-0119 LEG-0015
+IT-0129,en/IT-0129_it-support-service-levels_Policy.txt,IT Support Service Levels,help_desk_sla,Information Technology,IT,Policy,en,Head Office,HO,3.3,Active,2025-03-09,,IT-0023 IT-0079
+HR-0130,ar/HR-0130_employment-references-policy_Policy.txt,سياسة توصيات التوظيف,references,Human Resources,HR,Policy,ar,المكتب الرئيسي,HO,3.3,Active,2024-11-12,,HR-0120 LEG-0016
+IT-0130,ar/IT-0130_it-support-service-levels_Policy.txt,مستويات خدمة الدعم التقني,help_desk_sla,Information Technology,IT,Policy,ar,المكتب الرئيسي,HO,3.0,Active,2024-01-11,,IT-0024 IT-0080
+HR-0131,en/HR-0131_employment-references-policy_Procedure.txt,Employment References - Procedure,references,Human Resources,HR,Procedure,en,Head Office,HO,3.2,Active,2025-02-06,,HR-0119 LEG-0015
+IT-0131,en/IT-0131_it-support-service-levels_Procedure.txt,IT Support Service Levels - Procedure,help_desk_sla,Information Technology,IT,Procedure,en,Head Office,HO,3.0,Active,2023-02-03,,IT-0023 IT-0079
+HR-0132,ar/HR-0132_employment-references-policy_Procedure.txt,توصيات التوظيف - إجراء,references,Human Resources,HR,Procedure,ar,المكتب الرئيسي,HO,3.1,Active,2023-09-22,,HR-0120 LEG-0016
+IT-0132,ar/IT-0132_it-support-service-levels_Procedure.txt,مستويات خدمة الدعم التقني - إجراء,help_desk_sla,Information Technology,IT,Procedure,ar,المكتب الرئيسي,HO,3.0,Active,2024-03-09,,IT-0024 IT-0080
+HR-0133,en/HR-0133_employment-references-policy_FAQ.txt,Employment References - FAQ,references,Human Resources,HR,FAQ,en,Head Office,HO,3.4,Active,2025-06-07,,HR-0119 LEG-0015
+IT-0133,en/IT-0133_it-support-service-levels_FAQ.txt,IT Support Service Levels - FAQ,help_desk_sla,Information Technology,IT,FAQ,en,Head Office,HO,3.2,Active,2024-08-22,,IT-0023 IT-0079
+HR-0134,ar/HR-0134_employment-references-policy_FAQ.txt,توصيات التوظيف - أسئلة شائعة,references,Human Resources,HR,FAQ,ar,المكتب الرئيسي,HO,3.4,Active,2024-08-03,,HR-0120 LEG-0016
+IT-0134,ar/IT-0134_it-support-service-levels_FAQ.txt,مستويات خدمة الدعم التقني - أسئلة شائعة,help_desk_sla,Information Technology,IT,FAQ,ar,المكتب الرئيسي,HO,3.3,Active,2023-09-07,,IT-0024 IT-0080
+HR-0135,en/HR-0135_employment-references-policy_QuickReference.txt,Employment References - Quick Reference,references,Human Resources,HR,Quick Reference,en,Head Office,HO,3.3,Active,2024-02-03,,HR-0119 LEG-0015
+IT-0135,en/IT-0135_it-support-service-levels_QuickReference.txt,IT Support Service Levels - Quick Reference,help_desk_sla,Information Technology,IT,Quick Reference,en,Head Office,HO,3.2,Active,2023-04-09,,IT-0023 IT-0079
+HR-0136,ar/HR-0136_employment-references-policy_QuickReference.txt,توصيات التوظيف - مرجع سريع,references,Human Resources,HR,Quick Reference,ar,المكتب الرئيسي,HO,3.2,Active,2023-04-21,,HR-0120 LEG-0016
+IT-0136,ar/IT-0136_it-support-service-levels_QuickReference.txt,مستويات خدمة الدعم التقني - مرجع سريع,help_desk_sla,Information Technology,IT,Quick Reference,ar,المكتب الرئيسي,HO,3.0,Active,2023-05-18,,IT-0024 IT-0080
+HR-0137,en/HR-0137_code-of-conduct_Policy.txt,Code of Conduct,code_of_conduct,Human Resources,HR,Policy,en,Head Office,HO,3.0,Active,2024-09-14,,HR-0151 LEG-0023 LEG-0063
+HR-0138,ar/HR-0138_code-of-conduct_Policy.txt,مدونة السلوك,code_of_conduct,Human Resources,HR,Policy,ar,المكتب الرئيسي,HO,3.0,Active,2023-12-09,,HR-0152 LEG-0024 LEG-0064
+HR-0139,en/HR-0139_code-of-conduct_Procedure.txt,Code of Conduct - Procedure,code_of_conduct,Human Resources,HR,Procedure,en,Head Office,HO,3.4,Active,2025-01-01,,HR-0151 LEG-0023 LEG-0063
+HR-0140,ar/HR-0140_code-of-conduct_Procedure.txt,مدونة السلوك - إجراء,code_of_conduct,Human Resources,HR,Procedure,ar,المكتب الرئيسي,HO,3.0,Active,2024-05-26,,HR-0152 LEG-0024 LEG-0064
+HR-0141,en/HR-0141_code-of-conduct_FAQ.txt,Code of Conduct - FAQ,code_of_conduct,Human Resources,HR,FAQ,en,Head Office,HO,3.1,Active,2024-08-08,,HR-0151 LEG-0023 LEG-0063
+HR-0142,ar/HR-0142_code-of-conduct_FAQ.txt,مدونة السلوك - أسئلة شائعة,code_of_conduct,Human Resources,HR,FAQ,ar,المكتب الرئيسي,HO,3.1,Active,2024-01-20,,HR-0152 LEG-0024 LEG-0064
+HR-0143,en/HR-0143_code-of-conduct_QuickReference.txt,Code of Conduct - Quick Reference,code_of_conduct,Human Resources,HR,Quick Reference,en,Head Office,HO,3.3,Active,2024-03-13,,HR-0151 LEG-0023 LEG-0063
+HR-0144,ar/HR-0144_code-of-conduct_QuickReference.txt,مدونة السلوك - مرجع سريع,code_of_conduct,Human Resources,HR,Quick Reference,ar,المكتب الرئيسي,HO,3.1,Active,2024-03-29,,HR-0152 LEG-0024 LEG-0064
+HR-0145,en/HR-0145_anti-harassment-policy_Policy.txt,Anti-Harassment Policy,anti_harassment,Human Resources,HR,Policy,en,Head Office,HO,3.3,Active,2023-05-14,,HR-0143 HR-0159 LEG-0039
+HR-0146,ar/HR-0146_anti-harassment-policy_Policy.txt,سياسة مكافحة التحرش,anti_harassment,Human Resources,HR,Policy,ar,المكتب الرئيسي,HO,3.2,Active,2024-01-05,,HR-0144 HR-0160 LEG-0040
+HR-0147,en/HR-0147_anti-harassment-policy_Procedure.txt,Anti-Harassment - Procedure,anti_harassment,Human Resources,HR,Procedure,en,Head Office,HO,3.1,Active,2023-09-19,,HR-0143 HR-0159 LEG-0039
+HR-0148,ar/HR-0148_anti-harassment-policy_Procedure.txt,مكافحة التحرش - إجراء,anti_harassment,Human Resources,HR,Procedure,ar,المكتب الرئيسي,HO,3.2,Active,2025-05-11,,HR-0144 HR-0160 LEG-0040
+HR-0149,en/HR-0149_anti-harassment-policy_FAQ.txt,Anti-Harassment - FAQ,anti_harassment,Human Resources,HR,FAQ,en,Head Office,HO,3.1,Active,2023-12-06,,HR-0143 HR-0159 LEG-0039
+HR-0150,ar/HR-0150_anti-harassment-policy_FAQ.txt,مكافحة التحرش - أسئلة شائعة,anti_harassment,Human Resources,HR,FAQ,ar,المكتب الرئيسي,HO,3.4,Active,2023-07-10,,HR-0144 HR-0160 LEG-0040
+HR-0151,en/HR-0151_anti-harassment-policy_QuickReference.txt,Anti-Harassment - Quick Reference,anti_harassment,Human Resources,HR,Quick Reference,en,Head Office,HO,3.0,Active,2024-08-14,,HR-0143 HR-0159 LEG-0039
+HR-0152,ar/HR-0152_anti-harassment-policy_QuickReference.txt,مكافحة التحرش - مرجع سريع,anti_harassment,Human Resources,HR,Quick Reference,ar,المكتب الرئيسي,HO,3.2,Active,2023-08-20,,HR-0144 HR-0160 LEG-0040
+HR-0153,en/HR-0153_grievance-policy_Policy.txt,Grievance Policy,grievance,Human Resources,HR,Policy,en,Head Office,HO,3.1,Active,2024-01-28,,HR-0151 HR-0143
+HR-0154,ar/HR-0154_grievance-policy_Policy.txt,سياسة التظلمات,grievance,Human Resources,HR,Policy,ar,المكتب الرئيسي,HO,3.4,Active,2025-04-16,,HR-0152 HR-0144
+HR-0155,en/HR-0155_grievance-policy_Procedure.txt,Grievance - Procedure,grievance,Human Resources,HR,Procedure,en,Head Office,HO,3.1,Active,2023-08-15,,HR-0151 HR-0143
+HR-0156,ar/HR-0156_grievance-policy_Procedure.txt,التظلمات - إجراء,grievance,Human Resources,HR,Procedure,ar,المكتب الرئيسي,HO,3.4,Active,2024-11-12,,HR-0152 HR-0144
+HR-0157,en/HR-0157_grievance-policy_FAQ.txt,Grievance - FAQ,grievance,Human Resources,HR,FAQ,en,Head Office,HO,3.1,Active,2023-05-28,,HR-0151 HR-0143
+HR-0158,ar/HR-0158_grievance-policy_FAQ.txt,التظلمات - أسئلة شائعة,grievance,Human Resources,HR,FAQ,ar,المكتب الرئيسي,HO,3.3,Active,2023-12-08,,HR-0152 HR-0144
+HR-0159,en/HR-0159_grievance-policy_QuickReference.txt,Grievance - Quick Reference,grievance,Human Resources,HR,Quick Reference,en,Head Office,HO,3.1,Active,2025-02-20,,HR-0151 HR-0143
+HR-0160,ar/HR-0160_grievance-policy_QuickReference.txt,التظلمات - مرجع سريع,grievance,Human Resources,HR,Quick Reference,ar,المكتب الرئيسي,HO,3.0,Active,2023-04-06,,HR-0152 HR-0144
+HR-0161,en/HR-0161_dress-code-policy_Policy.txt,Dress Code Policy,dress_code,Human Resources,HR,Policy,en,Head Office,HO,3.1,Active,2023-06-24,,FAC-0031
+HR-0162,ar/HR-0162_dress-code-policy_Policy.txt,سياسة الزي في العمل,dress_code,Human Resources,HR,Policy,ar,المكتب الرئيسي,HO,3.4,Active,2023-03-04,,FAC-0032
+HR-0163,en/HR-0163_dress-code-policy_Procedure.txt,Dress Code - Procedure,dress_code,Human Resources,HR,Procedure,en,Head Office,HO,3.0,Active,2024-09-26,,FAC-0031
+HR-0164,ar/HR-0164_dress-code-policy_Procedure.txt,الزي في العمل - إجراء,dress_code,Human Resources,HR,Procedure,ar,المكتب الرئيسي,HO,3.1,Active,2023-12-07,,FAC-0032
+HR-0165,en/HR-0165_dress-code-policy_FAQ.txt,Dress Code - FAQ,dress_code,Human Resources,HR,FAQ,en,Head Office,HO,3.2,Active,2023-08-20,,FAC-0031
+HR-0166,ar/HR-0166_dress-code-policy_FAQ.txt,الزي في العمل - أسئلة شائعة,dress_code,Human Resources,HR,FAQ,ar,المكتب الرئيسي,HO,3.0,Active,2023-12-16,,FAC-0032
+HR-0167,en/HR-0167_dress-code-policy_QuickReference.txt,Dress Code - Quick Reference,dress_code,Human Resources,HR,Quick Reference,en,Head Office,HO,3.1,Active,2023-09-05,,FAC-0031
+HR-0168,ar/HR-0168_dress-code-policy_QuickReference.txt,الزي في العمل - مرجع سريع,dress_code,Human Resources,HR,Quick Reference,ar,المكتب الرئيسي,HO,3.2,Active,2023-07-06,,FAC-0032
+HR-0169,en/HR-0169_training-and-development-policy_Policy.txt,Training and Development Policy,training_development,Human Resources,HR,Policy,en,Head Office,HO,3.1,Active,2023-05-06,,HR-0087
+HR-0170,ar/HR-0170_training-and-development-policy_Policy.txt,سياسة التدريب والتطوير,training_development,Human Resources,HR,Policy,ar,المكتب الرئيسي,HO,3.4,Active,2023-10-19,,HR-0088
+HR-0171,en/HR-0171_training-and-development-policy_Procedure.txt,Training and Development - Procedure,training_development,Human Resources,HR,Procedure,en,Head Office,HO,3.2,Active,2023-01-15,,HR-0087
+HR-0172,ar/HR-0172_training-and-development-policy_Procedure.txt,التدريب والتطوير - إجراء,training_development,Human Resources,HR,Procedure,ar,المكتب الرئيسي,HO,3.2,Active,2023-11-01,,HR-0088
+HR-0173,en/HR-0173_training-and-development-policy_FAQ.txt,Training and Development - FAQ,training_development,Human Resources,HR,FAQ,en,Head Office,HO,3.0,Active,2023-11-15,,HR-0087
+HR-0174,ar/HR-0174_training-and-development-policy_FAQ.txt,التدريب والتطوير - أسئلة شائعة,training_development,Human Resources,HR,FAQ,ar,المكتب الرئيسي,HO,3.2,Active,2023-12-31,,HR-0088
+HR-0175,en/HR-0175_training-and-development-policy_QuickReference.txt,Training and Development - Quick Reference,training_development,Human Resources,HR,Quick Reference,en,Head Office,HO,3.2,Active,2023-08-22,,HR-0087
+HR-0176,ar/HR-0176_training-and-development-policy_QuickReference.txt,التدريب والتطوير - مرجع سريع,training_development,Human Resources,HR,Quick Reference,ar,المكتب الرئيسي,HO,3.4,Active,2023-03-14,,HR-0088
+HR-0177,en/HR-0177_secondment-policy_Policy.txt,Secondment Policy,secondment,Human Resources,HR,Policy,en,Head Office,HO,3.3,Active,2025-06-16,,HR-0191 HR-0095
+HR-0178,ar/HR-0178_secondment-policy_Policy.txt,سياسة الإعارة الداخلية,secondment,Human Resources,HR,Policy,ar,المكتب الرئيسي,HO,3.0,Active,2023-01-24,,HR-0192 HR-0096
+HR-0179,en/HR-0179_secondment-policy_Procedure.txt,Secondment - Procedure,secondment,Human Resources,HR,Procedure,en,Head Office,HO,3.4,Active,2024-07-30,,HR-0191 HR-0095
+HR-0180,ar/HR-0180_secondment-policy_Procedure.txt,الإعارة الداخلية - إجراء,secondment,Human Resources,HR,Procedure,ar,المكتب الرئيسي,HO,3.2,Active,2025-03-04,,HR-0192 HR-0096
+HR-0181,en/HR-0181_secondment-policy_FAQ.txt,Secondment - FAQ,secondment,Human Resources,HR,FAQ,en,Head Office,HO,3.3,Active,2023-07-01,,HR-0191 HR-0095
+HR-0182,ar/HR-0182_secondment-policy_FAQ.txt,الإعارة الداخلية - أسئلة شائعة,secondment,Human Resources,HR,FAQ,ar,المكتب الرئيسي,HO,3.4,Active,2024-10-07,,HR-0192 HR-0096
+HR-0183,en/HR-0183_secondment-policy_QuickReference.txt,Secondment - Quick Reference,secondment,Human Resources,HR,Quick Reference,en,Head Office,HO,3.2,Active,2025-01-30,,HR-0191 HR-0095
+HR-0184,ar/HR-0184_secondment-policy_QuickReference.txt,الإعارة الداخلية - مرجع سريع,secondment,Human Resources,HR,Quick Reference,ar,المكتب الرئيسي,HO,3.4,Active,2023-07-31,,HR-0192 HR-0096
+HR-0185,en/HR-0185_relocation-support-policy_Policy.txt,Relocation Support Policy,relocation,Human Resources,HR,Policy,en,Head Office,HO,3.2,Active,2024-12-07,,HR-0183 HR-0023
+HR-0186,ar/HR-0186_relocation-support-policy_Policy.txt,سياسة دعم الانتقال,relocation,Human Resources,HR,Policy,ar,المكتب الرئيسي,HO,3.0,Active,2025-04-23,,HR-0184 HR-0024
+HR-0187,en/HR-0187_relocation-support-policy_Procedure.txt,Relocation Support - Procedure,relocation,Human Resources,HR,Procedure,en,Head Office,HO,3.3,Active,2025-05-05,,HR-0183 HR-0023
+HR-0188,ar/HR-0188_relocation-support-policy_Procedure.txt,دعم الانتقال - إجراء,relocation,Human Resources,HR,Procedure,ar,المكتب الرئيسي,HO,3.0,Active,2023-09-12,,HR-0184 HR-0024
+HR-0189,en/HR-0189_relocation-support-policy_FAQ.txt,Relocation Support - FAQ,relocation,Human Resources,HR,FAQ,en,Head Office,HO,3.2,Active,2024-05-07,,HR-0183 HR-0023
+HR-0190,ar/HR-0190_relocation-support-policy_FAQ.txt,دعم الانتقال - أسئلة شائعة,relocation,Human Resources,HR,FAQ,ar,المكتب الرئيسي,HO,3.0,Active,2024-01-19,,HR-0184 HR-0024
+HR-0191,en/HR-0191_relocation-support-policy_QuickReference.txt,Relocation Support - Quick Reference,relocation,Human Resources,HR,Quick Reference,en,Head Office,HO,3.0,Active,2023-04-21,,HR-0183 HR-0023
+HR-0192,ar/HR-0192_relocation-support-policy_QuickReference.txt,دعم الانتقال - مرجع سريع,relocation,Human Resources,HR,Quick Reference,ar,المكتب الرئيسي,HO,3.1,Active,2023-10-10,,HR-0184 HR-0024
+HR-0193,en/HR-0193_annual-leave-policy_Policy.txt,Annual Leave Policy (Riyadh Office),annual_leave,Human Resources,HR,Policy,en,Riyadh Office,RUH,2.3,Active,2025-03-30,,HR-0015 HR-0023 HR-0039
+IT-0137,en/IT-0137_password-policy_Policy.txt,Password Policy (Riyadh Office),password_policy,Information Technology,IT,Policy,en,Riyadh Office,RUH,2.1,Active,2024-07-16,,IT-0015 IT-0023 IT-0095
+FIN-0089,en/FIN-0089_expense-reimbursement-policy_Policy.txt,Expense Reimbursement Policy (Riyadh Office),expense_reimbursement,Finance,FIN,Policy,en,Riyadh Office,RUH,2.4,Active,2024-04-28,,FIN-0015 FIN-0023 FIN-0031
+FAC-0081,en/FAC-0081_meeting-room-booking-policy_Policy.txt,Meeting Room Booking Policy (Riyadh Office),meeting_room_booking,Facilities,FAC,Policy,en,Riyadh Office,RUH,2.3,Active,2024-04-07,,FAC-0031 FAC-0015
+HR-0194,ar/HR-0194_annual-leave-policy_Policy.txt,سياسة الإجازة السنوية (مكتب الرياض),annual_leave,Human Resources,HR,Policy,ar,مكتب الرياض,RUH,2.2,Active,2024-09-28,,HR-0016 HR-0024 HR-0040
+IT-0138,ar/IT-0138_password-policy_Policy.txt,سياسة كلمات المرور (مكتب الرياض),password_policy,Information Technology,IT,Policy,ar,مكتب الرياض,RUH,2.2,Active,2023-08-27,,IT-0016 IT-0024 IT-0096
+FIN-0090,ar/FIN-0090_expense-reimbursement-policy_Policy.txt,سياسة استرداد المصروفات (مكتب الرياض),expense_reimbursement,Finance,FIN,Policy,ar,مكتب الرياض,RUH,1.1,Superseded,2023-07-05,FIN-0002,FIN-0016 FIN-0024 FIN-0032
+FAC-0082,ar/FAC-0082_meeting-room-booking-policy_Policy.txt,سياسة حجز قاعات الاجتماعات (مكتب الرياض),meeting_room_booking,Facilities,FAC,Policy,ar,مكتب الرياض,RUH,2.1,Active,2023-11-09,,FAC-0032 FAC-0016
+HR-0195,en/HR-0195_annual-leave-policy_QuickReference.txt,Annual Leave - Quick Reference (Riyadh Office),annual_leave,Human Resources,HR,Quick Reference,en,Riyadh Office,RUH,2.3,Active,2023-08-13,,HR-0015 HR-0023 HR-0039
+IT-0139,en/IT-0139_password-policy_QuickReference.txt,Password - Quick Reference (Riyadh Office),password_policy,Information Technology,IT,Quick Reference,en,Riyadh Office,RUH,2.1,Active,2023-11-06,,IT-0015 IT-0023 IT-0095
+FIN-0091,en/FIN-0091_expense-reimbursement-policy_QuickReference.txt,Expense Reimbursement - Quick Reference (Riyadh Office),expense_reimbursement,Finance,FIN,Quick Reference,en,Riyadh Office,RUH,2.1,Active,2025-03-24,,FIN-0015 FIN-0023 FIN-0031
+FAC-0083,en/FAC-0083_meeting-room-booking-policy_QuickReference.txt,Meeting Room Booking - Quick Reference (Riyadh Office),meeting_room_booking,Facilities,FAC,Quick Reference,en,Riyadh Office,RUH,2.2,Active,2024-09-08,,FAC-0031 FAC-0015
+HR-0196,ar/HR-0196_annual-leave-policy_QuickReference.txt,الإجازة السنوية - مرجع سريع (مكتب الرياض),annual_leave,Human Resources,HR,Quick Reference,ar,مكتب الرياض,RUH,2.4,Active,2025-03-16,,HR-0016 HR-0024 HR-0040
+IT-0140,ar/IT-0140_password-policy_QuickReference.txt,كلمات المرور - مرجع سريع (مكتب الرياض),password_policy,Information Technology,IT,Quick Reference,ar,مكتب الرياض,RUH,2.0,Active,2023-11-01,,IT-0016 IT-0024 IT-0096
+FIN-0092,ar/FIN-0092_expense-reimbursement-policy_QuickReference.txt,استرداد المصروفات - مرجع سريع (مكتب الرياض),expense_reimbursement,Finance,FIN,Quick Reference,ar,مكتب الرياض,RUH,1.2,Superseded,2023-10-17,FIN-0008,FIN-0016 FIN-0024 FIN-0032
+FAC-0084,ar/FAC-0084_meeting-room-booking-policy_QuickReference.txt,حجز قاعات الاجتماعات - مرجع سريع (مكتب الرياض),meeting_room_booking,Facilities,FAC,Quick Reference,ar,مكتب الرياض,RUH,2.0,Active,2024-07-27,,FAC-0032 FAC-0016
+HR-0197,en/HR-0197_annual-leave-policy_Procedure.txt,Annual Leave - Procedure (Riyadh Office),annual_leave,Human Resources,HR,Procedure,en,Riyadh Office,RUH,2.3,Active,2024-02-10,,HR-0015 HR-0023 HR-0039
+IT-0141,en/IT-0141_password-policy_Procedure.txt,Password - Procedure (Riyadh Office),password_policy,Information Technology,IT,Procedure,en,Riyadh Office,RUH,2.0,Active,2024-02-28,,IT-0015 IT-0023 IT-0095
+FIN-0093,en/FIN-0093_expense-reimbursement-policy_Procedure.txt,Expense Reimbursement - Procedure (Riyadh Office),expense_reimbursement,Finance,FIN,Procedure,en,Riyadh Office,RUH,2.2,Active,2023-05-08,,FIN-0015 FIN-0023 FIN-0031
+FAC-0085,en/FAC-0085_meeting-room-booking-policy_Procedure.txt,Meeting Room Booking - Procedure (Riyadh Office),meeting_room_booking,Facilities,FAC,Procedure,en,Riyadh Office,RUH,2.0,Active,2023-12-08,,FAC-0031 FAC-0015
+HR-0198,ar/HR-0198_annual-leave-policy_Procedure.txt,الإجازة السنوية - إجراء (مكتب الرياض),annual_leave,Human Resources,HR,Procedure,ar,مكتب الرياض,RUH,2.3,Active,2023-09-10,,HR-0016 HR-0024 HR-0040
+IT-0142,ar/IT-0142_password-policy_Procedure.txt,كلمات المرور - إجراء (مكتب الرياض),password_policy,Information Technology,IT,Procedure,ar,مكتب الرياض,RUH,2.2,Active,2025-05-05,,IT-0016 IT-0024 IT-0096
+FIN-0094,ar/FIN-0094_expense-reimbursement-policy_Procedure.txt,استرداد المصروفات - إجراء (مكتب الرياض),expense_reimbursement,Finance,FIN,Procedure,ar,مكتب الرياض,RUH,1.2,Superseded,2024-01-05,FIN-0004,FIN-0016 FIN-0024 FIN-0032
+FAC-0086,ar/FAC-0086_meeting-room-booking-policy_Procedure.txt,حجز قاعات الاجتماعات - إجراء (مكتب الرياض),meeting_room_booking,Facilities,FAC,Procedure,ar,مكتب الرياض,RUH,2.2,Active,2023-06-03,,FAC-0032 FAC-0016
+HR-0199,en/HR-0199_sick-leave-policy_Policy.txt,Sick Leave Policy (Riyadh Office),sick_leave,Human Resources,HR,Policy,en,Riyadh Office,RUH,2.1,Active,2023-12-16,,HR-0007 HR-0039 FAC-0063
+IT-0143,en/IT-0143_multi-factor-authentication-policy_Policy.txt,Multi-Factor Authentication Policy (Riyadh Office),mfa,Information Technology,IT,Policy,en,Riyadh Office,RUH,2.1,Active,2024-12-07,,IT-0007 IT-0047
+FIN-0095,en/FIN-0095_petty-cash-policy_Policy.txt,Petty Cash Policy (Riyadh Office),petty_cash,Finance,FIN,Policy,en,Riyadh Office,RUH,2.2,Active,2023-05-06,,FIN-0007
+FAC-0087,en/FAC-0087_parking-policy_Policy.txt,Parking Policy (Riyadh Office),parking,Facilities,FAC,Policy,en,Riyadh Office,RUH,2.4,Active,2024-02-24,,FAC-0023
+HR-0200,ar/HR-0200_sick-leave-policy_Policy.txt,سياسة الإجازة المرضية (مكتب الرياض),sick_leave,Human Resources,HR,Policy,ar,مكتب الرياض,RUH,2.1,Active,2025-02-21,,HR-0008 HR-0040 FAC-0064
+IT-0144,ar/IT-0144_multi-factor-authentication-policy_Policy.txt,سياسة المصادقة متعددة العوامل (مكتب الرياض),mfa,Information Technology,IT,Policy,ar,مكتب الرياض,RUH,2.1,Active,2025-06-19,,IT-0008 IT-0048
+FIN-0096,ar/FIN-0096_petty-cash-policy_Policy.txt,سياسة المصروفات النثرية (مكتب الرياض),petty_cash,Finance,FIN,Policy,ar,مكتب الرياض,RUH,2.0,Active,2025-02-28,,FIN-0008
+FAC-0088,ar/FAC-0088_parking-policy_Policy.txt,سياسة مواقف السيارات (مكتب الرياض),parking,Facilities,FAC,Policy,ar,مكتب الرياض,RUH,2.3,Active,2023-09-22,,FAC-0024
+HR-0201,en/HR-0201_sick-leave-policy_QuickReference.txt,Sick Leave - Quick Reference (Riyadh Office),sick_leave,Human Resources,HR,Quick Reference,en,Riyadh Office,RUH,2.0,Active,2024-10-14,,HR-0007 HR-0039 FAC-0063
+IT-0145,en/IT-0145_multi-factor-authentication-policy_QuickReference.txt,Multi-Factor Authentication - Quick Reference (Riyadh Office),mfa,Information Technology,IT,Quick Reference,en,Riyadh Office,RUH,2.2,Active,2024-06-23,,IT-0007 IT-0047
+FIN-0097,en/FIN-0097_petty-cash-policy_QuickReference.txt,Petty Cash - Quick Reference (Riyadh Office),petty_cash,Finance,FIN,Quick Reference,en,Riyadh Office,RUH,2.4,Active,2024-10-20,,FIN-0007
+FAC-0089,en/FAC-0089_parking-policy_QuickReference.txt,Parking - Quick Reference (Riyadh Office),parking,Facilities,FAC,Quick Reference,en,Riyadh Office,RUH,2.1,Active,2023-06-22,,FAC-0023
+HR-0202,ar/HR-0202_sick-leave-policy_QuickReference.txt,الإجازة المرضية - مرجع سريع (مكتب الرياض),sick_leave,Human Resources,HR,Quick Reference,ar,مكتب الرياض,RUH,1.6,Superseded,2023-09-30,HR-0016,HR-0008 HR-0040 FAC-0064
+IT-0146,ar/IT-0146_multi-factor-authentication-policy_QuickReference.txt,المصادقة متعددة العوامل - مرجع سريع (مكتب الرياض),mfa,Information Technology,IT,Quick Reference,ar,مكتب الرياض,RUH,1.1,Superseded,2023-10-07,IT-0016,IT-0008 IT-0048
+FIN-0098,ar/FIN-0098_petty-cash-policy_QuickReference.txt,المصروفات النثرية - مرجع سريع (مكتب الرياض),petty_cash,Finance,FIN,Quick Reference,ar,مكتب الرياض,RUH,2.0,Active,2025-01-14,,FIN-0008
+FAC-0090,ar/FAC-0090_parking-policy_QuickReference.txt,مواقف السيارات - مرجع سريع (مكتب الرياض),parking,Facilities,FAC,Quick Reference,ar,مكتب الرياض,RUH,2.3,Active,2024-04-16,,FAC-0024
+HR-0203,en/HR-0203_sick-leave-policy_Procedure.txt,Sick Leave - Procedure (Riyadh Office),sick_leave,Human Resources,HR,Procedure,en,Riyadh Office,RUH,2.3,Active,2023-01-28,,HR-0007 HR-0039 FAC-0063
+IT-0147,en/IT-0147_multi-factor-authentication-policy_Procedure.txt,Multi-Factor Authentication - Procedure (Riyadh Office),mfa,Information Technology,IT,Procedure,en,Riyadh Office,RUH,2.1,Active,2023-07-06,,IT-0007 IT-0047
+FIN-0099,en/FIN-0099_petty-cash-policy_Procedure.txt,Petty Cash - Procedure (Riyadh Office),petty_cash,Finance,FIN,Procedure,en,Riyadh Office,RUH,2.4,Active,2023-04-29,,FIN-0007
+FAC-0091,en/FAC-0091_parking-policy_Procedure.txt,Parking - Procedure (Riyadh Office),parking,Facilities,FAC,Procedure,en,Riyadh Office,RUH,1.6,Superseded,2023-02-22,FAC-0011,FAC-0023
+HR-0204,ar/HR-0204_sick-leave-policy_Procedure.txt,الإجازة المرضية - إجراء (مكتب الرياض),sick_leave,Human Resources,HR,Procedure,ar,مكتب الرياض,RUH,2.0,Active,2023-10-08,,HR-0008 HR-0040 FAC-0064
+IT-0148,ar/IT-0148_multi-factor-authentication-policy_Procedure.txt,المصادقة متعددة العوامل - إجراء (مكتب الرياض),mfa,Information Technology,IT,Procedure,ar,مكتب الرياض,RUH,2.0,Active,2025-02-28,,IT-0008 IT-0048
+FIN-0100,ar/FIN-0100_petty-cash-policy_Procedure.txt,المصروفات النثرية - إجراء (مكتب الرياض),petty_cash,Finance,FIN,Procedure,ar,مكتب الرياض,RUH,2.1,Active,2023-08-16,,FIN-0008
+FAC-0092,ar/FAC-0092_parking-policy_Procedure.txt,مواقف السيارات - إجراء (مكتب الرياض),parking,Facilities,FAC,Procedure,ar,مكتب الرياض,RUH,2.1,Active,2023-09-09,,FAC-0024
+HR-0205,en/HR-0205_parental-leave-policy_Policy.txt,Parental Leave Policy (Riyadh Office),parental_leave,Human Resources,HR,Policy,en,Riyadh Office,RUH,2.1,Active,2023-06-19,,HR-0007 HR-0015 HR-0191
+IT-0149,en/IT-0149_system-access-request-policy_Policy.txt,System Access Request Policy (Riyadh Office),system_access,Information Technology,IT,Policy,en,Riyadh Office,RUH,2.2,Active,2025-01-19,,IT-0007 IT-0031 HR-0111
+FIN-0101,en/FIN-0101_payroll-schedule-policy_Policy.txt,Payroll Schedule Policy (Riyadh Office),payroll_schedule,Finance,FIN,Policy,en,Riyadh Office,RUH,1.3,Superseded,2024-01-19,FIN-0065,HR-0103 FIN-0079
+FAC-0093,en/FAC-0093_building-access-policy_Policy.txt,Building Access Policy (Riyadh Office),building_access,Facilities,FAC,Policy,en,Riyadh Office,RUH,2.2,Active,2024-01-30,,FAC-0015 FAC-0031
+HR-0206,ar/HR-0206_parental-leave-policy_Policy.txt,سياسة إجازة الوالدية (مكتب الرياض),parental_leave,Human Resources,HR,Policy,ar,مكتب الرياض,RUH,2.2,Active,2025-05-30,,HR-0008 HR-0016 HR-0192
+IT-0150,ar/IT-0150_system-access-request-policy_Policy.txt,سياسة طلب الوصول إلى الأنظمة (مكتب الرياض),system_access,Information Technology,IT,Policy,ar,مكتب الرياض,RUH,2.4,Active,2023-01-07,,IT-0008 IT-0032 HR-0112
+FIN-0102,ar/FIN-0102_payroll-schedule-policy_Policy.txt,سياسة جدول الرواتب (مكتب الرياض),payroll_schedule,Finance,FIN,Policy,ar,مكتب الرياض,RUH,2.4,Active,2023-07-15,,HR-0104 FIN-0080
+FAC-0094,ar/FAC-0094_building-access-policy_Policy.txt,سياسة الدخول إلى المبنى (مكتب الرياض),building_access,Facilities,FAC,Policy,ar,مكتب الرياض,RUH,2.1,Active,2023-10-28,,FAC-0016 FAC-0032
+HR-0207,en/HR-0207_parental-leave-policy_QuickReference.txt,Parental Leave - Quick Reference (Riyadh Office),parental_leave,Human Resources,HR,Quick Reference,en,Riyadh Office,RUH,2.2,Active,2024-10-20,,HR-0007 HR-0015 HR-0191
+IT-0151,en/IT-0151_system-access-request-policy_QuickReference.txt,System Access Request - Quick Reference (Riyadh Office),system_access,Information Technology,IT,Quick Reference,en,Riyadh Office,RUH,2.3,Active,2025-05-21,,IT-0007 IT-0031 HR-0111
+FIN-0103,en/FIN-0103_payroll-schedule-policy_QuickReference.txt,Payroll Schedule - Quick Reference (Riyadh Office),payroll_schedule,Finance,FIN,Quick Reference,en,Riyadh Office,RUH,2.1,Active,2024-11-29,,HR-0103 FIN-0079
+FAC-0095,en/FAC-0095_building-access-policy_QuickReference.txt,Building Access - Quick Reference (Riyadh Office),building_access,Facilities,FAC,Quick Reference,en,Riyadh Office,RUH,2.0,Active,2023-02-02,,FAC-0015 FAC-0031
+HR-0208,ar/HR-0208_parental-leave-policy_QuickReference.txt,إجازة الوالدية - مرجع سريع (مكتب الرياض),parental_leave,Human Resources,HR,Quick Reference,ar,مكتب الرياض,RUH,2.3,Active,2023-01-26,,HR-0008 HR-0016 HR-0192
+IT-0152,ar/IT-0152_system-access-request-policy_QuickReference.txt,طلب الوصول إلى الأنظمة - مرجع سريع (مكتب الرياض),system_access,Information Technology,IT,Quick Reference,ar,مكتب الرياض,RUH,2.0,Active,2025-05-09,,IT-0008 IT-0032 HR-0112
+FIN-0104,ar/FIN-0104_payroll-schedule-policy_QuickReference.txt,جدول الرواتب - مرجع سريع (مكتب الرياض),payroll_schedule,Finance,FIN,Quick Reference,ar,مكتب الرياض,RUH,2.1,Active,2025-02-16,,HR-0104 FIN-0080
+FAC-0096,ar/FAC-0096_building-access-policy_QuickReference.txt,الدخول إلى المبنى - مرجع سريع (مكتب الرياض),building_access,Facilities,FAC,Quick Reference,ar,مكتب الرياض,RUH,2.0,Active,2024-05-04,,FAC-0016 FAC-0032
+HR-0209,en/HR-0209_parental-leave-policy_Procedure.txt,Parental Leave - Procedure (Riyadh Office),parental_leave,Human Resources,HR,Procedure,en,Riyadh Office,RUH,2.4,Active,2024-06-16,,HR-0007 HR-0015 HR-0191
+IT-0153,en/IT-0153_system-access-request-policy_Procedure.txt,System Access Request - Procedure (Riyadh Office),system_access,Information Technology,IT,Procedure,en,Riyadh Office,RUH,2.1,Active,2024-04-15,,IT-0007 IT-0031 HR-0111
+FIN-0105,en/FIN-0105_payroll-schedule-policy_Procedure.txt,Payroll Schedule - Procedure (Riyadh Office),payroll_schedule,Finance,FIN,Procedure,en,Riyadh Office,RUH,2.1,Active,2023-12-11,,HR-0103 FIN-0079
+FAC-0097,en/FAC-0097_building-access-policy_Procedure.txt,Building Access - Procedure (Riyadh Office),building_access,Facilities,FAC,Procedure,en,Riyadh Office,RUH,2.3,Active,2023-06-08,,FAC-0015 FAC-0031
+HR-0210,ar/HR-0210_parental-leave-policy_Procedure.txt,إجازة الوالدية - إجراء (مكتب الرياض),parental_leave,Human Resources,HR,Procedure,ar,مكتب الرياض,RUH,2.2,Active,2024-05-20,,HR-0008 HR-0016 HR-0192
+IT-0154,ar/IT-0154_system-access-request-policy_Procedure.txt,طلب الوصول إلى الأنظمة - إجراء (مكتب الرياض),system_access,Information Technology,IT,Procedure,ar,مكتب الرياض,RUH,1.2,Superseded,2024-01-04,IT-0020,IT-0008 IT-0032 HR-0112
+FIN-0106,ar/FIN-0106_payroll-schedule-policy_Procedure.txt,جدول الرواتب - إجراء (مكتب الرياض),payroll_schedule,Finance,FIN,Procedure,ar,مكتب الرياض,RUH,2.2,Active,2024-07-13,,HR-0104 FIN-0080
+FAC-0098,ar/FAC-0098_building-access-policy_Procedure.txt,الدخول إلى المبنى - إجراء (مكتب الرياض),building_access,Facilities,FAC,Procedure,ar,مكتب الرياض,RUH,2.2,Active,2023-11-26,,FAC-0016 FAC-0032
+HR-0211,en/HR-0211_bereavement-leave-policy_Policy.txt,Bereavement Leave Policy (Riyadh Office),bereavement_leave,Human Resources,HR,Policy,en,Riyadh Office,RUH,2.1,Active,2025-06-09,,HR-0007 HR-0159
+IT-0155,en/IT-0155_vpn-and-remote-access-policy_Policy.txt,VPN and Remote Access Policy (Riyadh Office),vpn_remote_access,Information Technology,IT,Policy,en,Riyadh Office,RUH,2.4,Active,2025-01-02,,HR-0063 IT-0015
+FIN-0107,en/FIN-0107_expense-reimbursement-policy_Policy.txt,Expense Reimbursement Policy (Jeddah Office),expense_reimbursement,Finance,FIN,Policy,en,Jeddah Office,JED,2.0,Active,2024-08-09,,FIN-0015 FIN-0023 FIN-0031
+FAC-0099,en/FAC-0099_visitor-management-policy_Policy.txt,Visitor Management Policy (Riyadh Office),visitor_management,Facilities,FAC,Policy,en,Riyadh Office,RUH,2.3,Active,2023-10-28,,FAC-0023 LEG-0007
+HR-0212,ar/HR-0212_bereavement-leave-policy_Policy.txt,سياسة إجازة الوفاة (مكتب الرياض),bereavement_leave,Human Resources,HR,Policy,ar,مكتب الرياض,RUH,2.2,Active,2024-06-24,,HR-0008 HR-0160
+IT-0156,ar/IT-0156_vpn-and-remote-access-policy_Policy.txt,سياسة الوصول عن بُعد و VPN (مكتب الرياض),vpn_remote_access,Information Technology,IT,Policy,ar,مكتب الرياض,RUH,2.1,Active,2023-06-18,,HR-0064 IT-0016
+FIN-0108,ar/FIN-0108_expense-reimbursement-policy_Policy.txt,سياسة استرداد المصروفات (مكتب جدة),expense_reimbursement,Finance,FIN,Policy,ar,مكتب جدة,JED,2.3,Active,2023-09-09,,FIN-0016 FIN-0024 FIN-0032
+FAC-0100,ar/FAC-0100_visitor-management-policy_Policy.txt,سياسة إدارة الزوار (مكتب الرياض),visitor_management,Facilities,FAC,Policy,ar,مكتب الرياض,RUH,2.0,Active,2025-01-19,,FAC-0024 LEG-0008
+HR-0213,en/HR-0213_bereavement-leave-policy_QuickReference.txt,Bereavement Leave - Quick Reference (Riyadh Office),bereavement_leave,Human Resources,HR,Quick Reference,en,Riyadh Office,RUH,2.2,Active,2023-11-24,,HR-0007 HR-0159
+IT-0157,en/IT-0157_vpn-and-remote-access-policy_QuickReference.txt,VPN and Remote Access - Quick Reference (Riyadh Office),vpn_remote_access,Information Technology,IT,Quick Reference,en,Riyadh Office,RUH,2.1,Active,2025-01-24,,HR-0063 IT-0015
+FIN-0109,en/FIN-0109_expense-reimbursement-policy_QuickReference.txt,Expense Reimbursement - Quick Reference (Jeddah Office),expense_reimbursement,Finance,FIN,Quick Reference,en,Jeddah Office,JED,2.3,Active,2024-01-31,,FIN-0015 FIN-0023 FIN-0031
+FAC-0101,en/FAC-0101_visitor-management-policy_QuickReference.txt,Visitor Management - Quick Reference (Riyadh Office),visitor_management,Facilities,FAC,Quick Reference,en,Riyadh Office,RUH,2.2,Active,2025-02-12,,FAC-0023 LEG-0007
+HR-0214,ar/HR-0214_bereavement-leave-policy_QuickReference.txt,إجازة الوفاة - مرجع سريع (مكتب الرياض),bereavement_leave,Human Resources,HR,Quick Reference,ar,مكتب الرياض,RUH,2.0,Active,2025-05-31,,HR-0008 HR-0160
+IT-0158,ar/IT-0158_vpn-and-remote-access-policy_QuickReference.txt,الوصول عن بُعد و VPN - مرجع سريع (مكتب الرياض),vpn_remote_access,Information Technology,IT,Quick Reference,ar,مكتب الرياض,RUH,2.4,Active,2023-01-21,,HR-0064 IT-0016
+FIN-0110,ar/FIN-0110_expense-reimbursement-policy_QuickReference.txt,استرداد المصروفات - مرجع سريع (مكتب جدة),expense_reimbursement,Finance,FIN,Quick Reference,ar,مكتب جدة,JED,2.4,Active,2024-10-02,,FIN-0016 FIN-0024 FIN-0032
+FAC-0102,ar/FAC-0102_visitor-management-policy_QuickReference.txt,إدارة الزوار - مرجع سريع (مكتب الرياض),visitor_management,Facilities,FAC,Quick Reference,ar,مكتب الرياض,RUH,2.3,Active,2024-11-15,,FAC-0024 LEG-0008
+HR-0215,en/HR-0215_bereavement-leave-policy_Procedure.txt,Bereavement Leave - Procedure (Riyadh Office),bereavement_leave,Human Resources,HR,Procedure,en,Riyadh Office,RUH,2.0,Active,2023-03-07,,HR-0007 HR-0159
+IT-0159,en/IT-0159_vpn-and-remote-access-policy_Procedure.txt,VPN and Remote Access - Procedure (Riyadh Office),vpn_remote_access,Information Technology,IT,Procedure,en,Riyadh Office,RUH,1.1,Superseded,2023-04-23,IT-0043,HR-0063 IT-0015
+FIN-0111,en/FIN-0111_expense-reimbursement-policy_Procedure.txt,Expense Reimbursement - Procedure (Jeddah Office),expense_reimbursement,Finance,FIN,Procedure,en,Jeddah Office,JED,2.3,Active,2024-07-31,,FIN-0015 FIN-0023 FIN-0031
+FAC-0103,en/FAC-0103_visitor-management-policy_Procedure.txt,Visitor Management - Procedure (Riyadh Office),visitor_management,Facilities,FAC,Procedure,en,Riyadh Office,RUH,2.3,Active,2023-10-26,,FAC-0023 LEG-0007
+HR-0216,ar/HR-0216_bereavement-leave-policy_Procedure.txt,إجازة الوفاة - إجراء (مكتب الرياض),bereavement_leave,Human Resources,HR,Procedure,ar,مكتب الرياض,RUH,2.3,Active,2023-10-28,,HR-0008 HR-0160
+IT-0160,ar/IT-0160_vpn-and-remote-access-policy_Procedure.txt,الوصول عن بُعد و VPN - إجراء (مكتب الرياض),vpn_remote_access,Information Technology,IT,Procedure,ar,مكتب الرياض,RUH,2.2,Active,2023-10-24,,HR-0064 IT-0016
+FIN-0112,ar/FIN-0112_expense-reimbursement-policy_Procedure.txt,استرداد المصروفات - إجراء (مكتب جدة),expense_reimbursement,Finance,FIN,Procedure,ar,مكتب جدة,JED,2.3,Active,2023-10-11,,FIN-0016 FIN-0024 FIN-0032
+FAC-0104,ar/FAC-0104_visitor-management-policy_Procedure.txt,إدارة الزوار - إجراء (مكتب الرياض),visitor_management,Facilities,FAC,Procedure,ar,مكتب الرياض,RUH,1.2,Superseded,2023-03-06,FAC-0028,FAC-0024 LEG-0008
+HR-0217,en/HR-0217_unpaid-leave-policy_Policy.txt,Unpaid Leave Policy (Riyadh Office),unpaid_leave,Human Resources,HR,Policy,en,Riyadh Office,RUH,2.4,Active,2024-03-04,,HR-0007 HR-0015
+IT-0161,en/IT-0161_hardware-request-policy_Policy.txt,Hardware Request Policy (Riyadh Office),hardware_request,Information Technology,IT,Policy,en,Riyadh Office,RUH,2.1,Active,2023-01-02,,IT-0087 IT-0071 FAC-0063
+FIN-0113,en/FIN-0113_petty-cash-policy_Policy.txt,Petty Cash Policy (Jeddah Office),petty_cash,Finance,FIN,Policy,en,Jeddah Office,JED,2.3,Active,2023-10-12,,FIN-0007
+FAC-0105,en/FAC-0105_workplace-health-and-safety-policy_Policy.txt,Workplace Health and Safety Policy (Riyadh Office),health_safety,Facilities,FAC,Policy,en,Riyadh Office,RUH,2.0,Active,2024-11-19,,FAC-0047 FAC-0055 FAC-0063
+HR-0218,ar/HR-0218_unpaid-leave-policy_Policy.txt,سياسة الإجازة غير المدفوعة (مكتب الرياض),unpaid_leave,Human Resources,HR,Policy,ar,مكتب الرياض,RUH,2.4,Active,2023-07-24,,HR-0008 HR-0016
+IT-0162,ar/IT-0162_hardware-request-policy_Policy.txt,سياسة طلب الأجهزة (مكتب الرياض),hardware_request,Information Technology,IT,Policy,ar,مكتب الرياض,RUH,2.4,Active,2024-04-20,,IT-0088 IT-0072 FAC-0064
+FIN-0114,ar/FIN-0114_petty-cash-policy_Policy.txt,سياسة المصروفات النثرية (مكتب جدة),petty_cash,Finance,FIN,Policy,ar,مكتب جدة,JED,2.1,Active,2023-12-13,,FIN-0008
+FAC-0106,ar/FAC-0106_workplace-health-and-safety-policy_Policy.txt,سياسة الصحة والسلامة في مكان العمل (مكتب الرياض),health_safety,Facilities,FAC,Policy,ar,مكتب الرياض,RUH,2.3,Active,2023-08-15,,FAC-0048 FAC-0056 FAC-0064
+HR-0219,en/HR-0219_unpaid-leave-policy_QuickReference.txt,Unpaid Leave - Quick Reference (Riyadh Office),unpaid_leave,Human Resources,HR,Quick Reference,en,Riyadh Office,RUH,2.1,Active,2023-03-08,,HR-0007 HR-0015
+IT-0163,en/IT-0163_hardware-request-policy_QuickReference.txt,Hardware Request - Quick Reference (Riyadh Office),hardware_request,Information Technology,IT,Quick Reference,en,Riyadh Office,RUH,2.4,Active,2024-11-06,,IT-0087 IT-0071 FAC-0063
+FIN-0115,en/FIN-0115_petty-cash-policy_QuickReference.txt,Petty Cash - Quick Reference (Jeddah Office),petty_cash,Finance,FIN,Quick Reference,en,Jeddah Office,JED,2.3,Active,2025-05-12,,FIN-0007
+FAC-0107,en/FAC-0107_workplace-health-and-safety-policy_QuickReference.txt,Workplace Health and Safety - Quick Reference (Riyadh Office),health_safety,Facilities,FAC,Quick Reference,en,Riyadh Office,RUH,1.5,Superseded,2023-01-15,FAC-0039,FAC-0047 FAC-0055 FAC-0063
+HR-0220,ar/HR-0220_unpaid-leave-policy_QuickReference.txt,الإجازة غير المدفوعة - مرجع سريع (مكتب الرياض),unpaid_leave,Human Resources,HR,Quick Reference,ar,مكتب الرياض,RUH,1.3,Superseded,2023-06-18,HR-0040,HR-0008 HR-0016
+IT-0164,ar/IT-0164_hardware-request-policy_QuickReference.txt,طلب الأجهزة - مرجع سريع (مكتب الرياض),hardware_request,Information Technology,IT,Quick Reference,ar,مكتب الرياض,RUH,2.0,Active,2023-07-04,,IT-0088 IT-0072 FAC-0064
+FIN-0116,ar/FIN-0116_petty-cash-policy_QuickReference.txt,المصروفات النثرية - مرجع سريع (مكتب جدة),petty_cash,Finance,FIN,Quick Reference,ar,مكتب جدة,JED,2.0,Active,2024-11-23,,FIN-0008
+FAC-0108,ar/FAC-0108_workplace-health-and-safety-policy_QuickReference.txt,الصحة والسلامة في مكان العمل - مرجع سريع (مكتب الرياض),health_safety,Facilities,FAC,Quick Reference,ar,مكتب الرياض,RUH,2.3,Active,2024-03-18,,FAC-0048 FAC-0056 FAC-0064
+HR-0221,en/HR-0221_unpaid-leave-policy_Procedure.txt,Unpaid Leave - Procedure (Riyadh Office),unpaid_leave,Human Resources,HR,Procedure,en,Riyadh Office,RUH,2.0,Active,2025-05-30,,HR-0007 HR-0015
+IT-0165,en/IT-0165_hardware-request-policy_Procedure.txt,Hardware Request - Procedure (Riyadh Office),hardware_request,Information Technology,IT,Procedure,en,Riyadh Office,RUH,2.0,Active,2023-07-18,,IT-0087 IT-0071 FAC-0063
+FIN-0117,en/FIN-0117_petty-cash-policy_Procedure.txt,Petty Cash - Procedure (Jeddah Office),petty_cash,Finance,FIN,Procedure,en,Jeddah Office,JED,2.0,Active,2025-04-11,,FIN-0007
+FAC-0109,en/FAC-0109_workplace-health-and-safety-policy_Procedure.txt,Workplace Health and Safety - Procedure (Riyadh Office),health_safety,Facilities,FAC,Procedure,en,Riyadh Office,RUH,2.3,Active,2023-09-23,,FAC-0047 FAC-0055 FAC-0063
+HR-0222,ar/HR-0222_unpaid-leave-policy_Procedure.txt,الإجازة غير المدفوعة - إجراء (مكتب الرياض),unpaid_leave,Human Resources,HR,Procedure,ar,مكتب الرياض,RUH,2.2,Active,2024-12-16,,HR-0008 HR-0016
+IT-0166,ar/IT-0166_hardware-request-policy_Procedure.txt,طلب الأجهزة - إجراء (مكتب الرياض),hardware_request,Information Technology,IT,Procedure,ar,مكتب الرياض,RUH,2.1,Active,2024-03-22,,IT-0088 IT-0072 FAC-0064
+FIN-0118,ar/FIN-0118_petty-cash-policy_Procedure.txt,المصروفات النثرية - إجراء (مكتب جدة),petty_cash,Finance,FIN,Procedure,ar,مكتب جدة,JED,2.4,Active,2023-04-03,,FIN-0008
+FAC-0110,ar/FAC-0110_workplace-health-and-safety-policy_Procedure.txt,الصحة والسلامة في مكان العمل - إجراء (مكتب الرياض),health_safety,Facilities,FAC,Procedure,ar,مكتب الرياض,RUH,2.4,Active,2024-08-19,,FAC-0048 FAC-0056 FAC-0064
+HR-0223,en/HR-0223_working-hours-policy_Policy.txt,Working Hours Policy (Riyadh Office),working_hours,Human Resources,HR,Policy,en,Riyadh Office,RUH,2.3,Active,2023-05-22,,HR-0055 HR-0071 HR-0063
+IT-0167,en/IT-0167_clear-desk-and-screen-policy_Policy.txt,Clear Desk and Screen Policy (Riyadh Office),clear_desk,Information Technology,IT,Policy,en,Riyadh Office,RUH,2.0,Active,2023-03-06,,IT-0127 LEG-0007
+FIN-0119,en/FIN-0119_payroll-schedule-policy_Policy.txt,Payroll Schedule Policy (Jeddah Office),payroll_schedule,Finance,FIN,Policy,en,Jeddah Office,JED,2.3,Active,2023-11-20,,HR-0103 FIN-0079
+FAC-0111,en/FAC-0111_fire-safety-policy_Policy.txt,Fire Safety Policy (Riyadh Office),fire_safety,Facilities,FAC,Policy,en,Riyadh Office,RUH,2.3,Active,2023-12-16,,FAC-0039 FAC-0023
+HR-0224,ar/HR-0224_working-hours-policy_Policy.txt,سياسة ساعات العمل (مكتب الرياض),working_hours,Human Resources,HR,Policy,ar,مكتب الرياض,RUH,2.2,Active,2024-05-29,,HR-0056 HR-0072 HR-0064
+IT-0168,ar/IT-0168_clear-desk-and-screen-policy_Policy.txt,سياسة المكتب والشاشة النظيفين (مكتب الرياض),clear_desk,Information Technology,IT,Policy,ar,مكتب الرياض,RUH,2.2,Active,2023-12-11,,IT-0128 LEG-0008
+FIN-0120,ar/FIN-0120_payroll-schedule-policy_Policy.txt,سياسة جدول الرواتب (مكتب جدة),payroll_schedule,Finance,FIN,Policy,ar,مكتب جدة,JED,2.2,Active,2023-04-13,,HR-0104 FIN-0080
+FAC-0112,ar/FAC-0112_fire-safety-policy_Policy.txt,سياسة السلامة من الحرائق (مكتب الرياض),fire_safety,Facilities,FAC,Policy,ar,مكتب الرياض,RUH,2.0,Active,2025-02-08,,FAC-0040 FAC-0024
+HR-0225,en/HR-0225_working-hours-policy_QuickReference.txt,Working Hours - Quick Reference (Riyadh Office),working_hours,Human Resources,HR,Quick Reference,en,Riyadh Office,RUH,2.1,Active,2023-07-04,,HR-0055 HR-0071 HR-0063
+IT-0169,en/IT-0169_clear-desk-and-screen-policy_QuickReference.txt,Clear Desk and Screen - Quick Reference (Riyadh Office),clear_desk,Information Technology,IT,Quick Reference,en,Riyadh Office,RUH,2.4,Active,2025-02-19,,IT-0127 LEG-0007
+FIN-0121,en/FIN-0121_payroll-schedule-policy_QuickReference.txt,Payroll Schedule - Quick Reference (Jeddah Office),payroll_schedule,Finance,FIN,Quick Reference,en,Jeddah Office,JED,1.6,Superseded,2023-06-19,FIN-0071,HR-0103 FIN-0079
+FAC-0113,en/FAC-0113_fire-safety-policy_QuickReference.txt,Fire Safety - Quick Reference (Riyadh Office),fire_safety,Facilities,FAC,Quick Reference,en,Riyadh Office,RUH,2.1,Active,2023-09-28,,FAC-0039 FAC-0023
+HR-0226,ar/HR-0226_working-hours-policy_QuickReference.txt,ساعات العمل - مرجع سريع (مكتب الرياض),working_hours,Human Resources,HR,Quick Reference,ar,مكتب الرياض,RUH,2.2,Active,2024-03-11,,HR-0056 HR-0072 HR-0064
+IT-0170,ar/IT-0170_clear-desk-and-screen-policy_QuickReference.txt,المكتب والشاشة النظيفين - مرجع سريع (مكتب الرياض),clear_desk,Information Technology,IT,Quick Reference,ar,مكتب الرياض,RUH,2.0,Active,2025-05-15,,IT-0128 LEG-0008
+FIN-0122,ar/FIN-0122_payroll-schedule-policy_QuickReference.txt,جدول الرواتب - مرجع سريع (مكتب جدة),payroll_schedule,Finance,FIN,Quick Reference,ar,مكتب جدة,JED,2.1,Active,2024-11-05,,HR-0104 FIN-0080
+FAC-0114,ar/FAC-0114_fire-safety-policy_QuickReference.txt,السلامة من الحرائق - مرجع سريع (مكتب الرياض),fire_safety,Facilities,FAC,Quick Reference,ar,مكتب الرياض,RUH,2.3,Active,2023-06-18,,FAC-0040 FAC-0024
+HR-0227,en/HR-0227_working-hours-policy_Procedure.txt,Working Hours - Procedure (Riyadh Office),working_hours,Human Resources,HR,Procedure,en,Riyadh Office,RUH,2.3,Active,2025-02-13,,HR-0055 HR-0071 HR-0063
+IT-0171,en/IT-0171_clear-desk-and-screen-policy_Procedure.txt,Clear Desk and Screen - Procedure (Riyadh Office),clear_desk,Information Technology,IT,Procedure,en,Riyadh Office,RUH,2.0,Active,2023-10-14,,IT-0127 LEG-0007
+FIN-0123,en/FIN-0123_payroll-schedule-policy_Procedure.txt,Payroll Schedule - Procedure (Jeddah Office),payroll_schedule,Finance,FIN,Procedure,en,Jeddah Office,JED,2.4,Active,2025-01-29,,HR-0103 FIN-0079
+FAC-0115,en/FAC-0115_fire-safety-policy_Procedure.txt,Fire Safety - Procedure (Riyadh Office),fire_safety,Facilities,FAC,Procedure,en,Riyadh Office,RUH,2.1,Active,2024-04-19,,FAC-0039 FAC-0023
+HR-0228,ar/HR-0228_working-hours-policy_Procedure.txt,ساعات العمل - إجراء (مكتب الرياض),working_hours,Human Resources,HR,Procedure,ar,مكتب الرياض,RUH,2.3,Active,2024-04-13,,HR-0056 HR-0072 HR-0064
+IT-0172,ar/IT-0172_clear-desk-and-screen-policy_Procedure.txt,المكتب والشاشة النظيفين - إجراء (مكتب الرياض),clear_desk,Information Technology,IT,Procedure,ar,مكتب الرياض,RUH,2.4,Active,2025-02-26,,IT-0128 LEG-0008
+FIN-0124,ar/FIN-0124_payroll-schedule-policy_Procedure.txt,جدول الرواتب - إجراء (مكتب جدة),payroll_schedule,Finance,FIN,Procedure,ar,مكتب جدة,JED,2.2,Active,2023-09-01,,HR-0104 FIN-0080
+FAC-0116,ar/FAC-0116_fire-safety-policy_Procedure.txt,السلامة من الحرائق - إجراء (مكتب الرياض),fire_safety,Facilities,FAC,Procedure,ar,مكتب الرياض,RUH,2.2,Active,2023-10-12,,FAC-0040 FAC-0024
+HR-0229,en/HR-0229_overtime-policy_Policy.txt,Overtime Policy (Riyadh Office),overtime,Human Resources,HR,Policy,en,Riyadh Office,RUH,2.3,Active,2023-04-27,,HR-0047 OPS-0047
+IT-0173,en/IT-0173_printing-policy_Policy.txt,Printing Policy (Riyadh Office),printing,Information Technology,IT,Policy,en,Riyadh Office,RUH,2.0,Active,2024-04-04,,IT-0119
+FIN-0125,en/FIN-0125_expense-reimbursement-policy_Policy.txt,Expense Reimbursement Policy (Dubai Office),expense_reimbursement,Finance,FIN,Policy,en,Dubai Office,DXB,2.2,Active,2023-02-15,,FIN-0015 FIN-0023 FIN-0031
+FAC-0117,en/FAC-0117_workspace-ergonomics-policy_Policy.txt,Workspace Ergonomics Policy (Riyadh Office),workspace_ergonomics,Facilities,FAC,Policy,en,Riyadh Office,RUH,2.0,Active,2025-05-23,,IT-0079 FAC-0039 HR-0063
+HR-0230,ar/HR-0230_overtime-policy_Policy.txt,سياسة العمل الإضافي (مكتب الرياض),overtime,Human Resources,HR,Policy,ar,مكتب الرياض,RUH,1.0,Superseded,2023-07-18,HR-0050,HR-0048 OPS-0048
+IT-0174,ar/IT-0174_printing-policy_Policy.txt,سياسة الطباعة (مكتب الرياض),printing,Information Technology,IT,Policy,ar,مكتب الرياض,RUH,2.4,Active,2025-01-15,,IT-0120
+FIN-0126,ar/FIN-0126_expense-reimbursement-policy_Policy.txt,سياسة استرداد المصروفات (مكتب دبي),expense_reimbursement,Finance,FIN,Policy,ar,مكتب دبي,DXB,2.4,Active,2023-01-06,,FIN-0016 FIN-0024 FIN-0032
+FAC-0118,ar/FAC-0118_workspace-ergonomics-policy_Policy.txt,سياسة بيئة العمل المريحة (مكتب الرياض),workspace_ergonomics,Facilities,FAC,Policy,ar,مكتب الرياض,RUH,2.2,Active,2023-01-12,,IT-0080 FAC-0040 HR-0064
+HR-0231,en/HR-0231_overtime-policy_QuickReference.txt,Overtime - Quick Reference (Riyadh Office),overtime,Human Resources,HR,Quick Reference,en,Riyadh Office,RUH,2.2,Active,2024-10-09,,HR-0047 OPS-0047
+IT-0175,en/IT-0175_printing-policy_QuickReference.txt,Printing - Quick Reference (Riyadh Office),printing,Information Technology,IT,Quick Reference,en,Riyadh Office,RUH,2.2,Active,2024-05-13,,IT-0119
+FIN-0127,en/FIN-0127_expense-reimbursement-policy_QuickReference.txt,Expense Reimbursement - Quick Reference (Dubai Office),expense_reimbursement,Finance,FIN,Quick Reference,en,Dubai Office,DXB,2.2,Active,2024-04-27,,FIN-0015 FIN-0023 FIN-0031
+FAC-0119,en/FAC-0119_workspace-ergonomics-policy_QuickReference.txt,Workspace Ergonomics - Quick Reference (Riyadh Office),workspace_ergonomics,Facilities,FAC,Quick Reference,en,Riyadh Office,RUH,2.1,Active,2023-03-09,,IT-0079 FAC-0039 HR-0063
+HR-0232,ar/HR-0232_overtime-policy_QuickReference.txt,العمل الإضافي - مرجع سريع (مكتب الرياض),overtime,Human Resources,HR,Quick Reference,ar,مكتب الرياض,RUH,1.4,Superseded,2024-01-16,HR-0056,HR-0048 OPS-0048
+IT-0176,ar/IT-0176_printing-policy_QuickReference.txt,الطباعة - مرجع سريع (مكتب الرياض),printing,Information Technology,IT,Quick Reference,ar,مكتب الرياض,RUH,2.1,Active,2023-08-25,,IT-0120
+FIN-0128,ar/FIN-0128_expense-reimbursement-policy_QuickReference.txt,استرداد المصروفات - مرجع سريع (مكتب دبي),expense_reimbursement,Finance,FIN,Quick Reference,ar,مكتب دبي,DXB,1.2,Superseded,2023-03-11,FIN-0008,FIN-0016 FIN-0024 FIN-0032
+FAC-0120,ar/FAC-0120_workspace-ergonomics-policy_QuickReference.txt,بيئة العمل المريحة - مرجع سريع (مكتب الرياض),workspace_ergonomics,Facilities,FAC,Quick Reference,ar,مكتب الرياض,RUH,2.2,Active,2025-04-21,,IT-0080 FAC-0040 HR-0064
+HR-0233,en/HR-0233_overtime-policy_Procedure.txt,Overtime - Procedure (Riyadh Office),overtime,Human Resources,HR,Procedure,en,Riyadh Office,RUH,2.0,Active,2025-05-22,,HR-0047 OPS-0047
+IT-0177,en/IT-0177_printing-policy_Procedure.txt,Printing - Procedure (Riyadh Office),printing,Information Technology,IT,Procedure,en,Riyadh Office,RUH,2.0,Active,2025-01-13,,IT-0119
+FIN-0129,en/FIN-0129_expense-reimbursement-policy_Procedure.txt,Expense Reimbursement - Procedure (Dubai Office),expense_reimbursement,Finance,FIN,Procedure,en,Dubai Office,DXB,2.2,Active,2025-01-15,,FIN-0015 FIN-0023 FIN-0031
+FAC-0121,en/FAC-0121_workspace-ergonomics-policy_Procedure.txt,Workspace Ergonomics - Procedure (Riyadh Office),workspace_ergonomics,Facilities,FAC,Procedure,en,Riyadh Office,RUH,2.3,Active,2023-06-29,,IT-0079 FAC-0039 HR-0063
+HR-0234,ar/HR-0234_overtime-policy_Procedure.txt,العمل الإضافي - إجراء (مكتب الرياض),overtime,Human Resources,HR,Procedure,ar,مكتب الرياض,RUH,2.3,Active,2024-08-11,,HR-0048 OPS-0048
+IT-0178,ar/IT-0178_printing-policy_Procedure.txt,الطباعة - إجراء (مكتب الرياض),printing,Information Technology,IT,Procedure,ar,مكتب الرياض,RUH,2.4,Active,2023-06-19,,IT-0120
+FIN-0130,ar/FIN-0130_expense-reimbursement-policy_Procedure.txt,استرداد المصروفات - إجراء (مكتب دبي),expense_reimbursement,Finance,FIN,Procedure,ar,مكتب دبي,DXB,2.1,Active,2024-12-23,,FIN-0016 FIN-0024 FIN-0032
+FAC-0122,ar/FAC-0122_workspace-ergonomics-policy_Procedure.txt,بيئة العمل المريحة - إجراء (مكتب الرياض),workspace_ergonomics,Facilities,FAC,Procedure,ar,مكتب الرياض,RUH,2.1,Active,2023-10-31,,IT-0080 FAC-0040 HR-0064
+HR-0235,en/HR-0235_remote-work-policy_Policy.txt,Remote Work Policy (Riyadh Office),remote_work,Human Resources,HR,Policy,en,Riyadh Office,RUH,2.2,Active,2023-02-15,,HR-0047 IT-0047 IT-0079
+IT-0179,en/IT-0179_it-support-service-levels_Policy.txt,IT Support Service Levels (Riyadh Office),help_desk_sla,Information Technology,IT,Policy,en,Riyadh Office,RUH,2.4,Active,2024-05-09,,IT-0023 IT-0079
+FIN-0131,en/FIN-0131_petty-cash-policy_Policy.txt,Petty Cash Policy (Dubai Office),petty_cash,Finance,FIN,Policy,en,Dubai Office,DXB,2.2,Active,2024-08-25,,FIN-0007
+FAC-0123,en/FAC-0123_kitchen-and-break-area-policy_Policy.txt,Kitchen and Break Area Policy (Riyadh Office),kitchen_use,Facilities,FAC,Policy,en,Riyadh Office,RUH,2.0,Active,2025-04-21,,
+HR-0236,ar/HR-0236_remote-work-policy_Policy.txt,سياسة العمل عن بُعد (مكتب الرياض),remote_work,Human Resources,HR,Policy,ar,مكتب الرياض,RUH,2.2,Active,2023-05-01,,HR-0048 IT-0048 IT-0080
+IT-0180,ar/IT-0180_it-support-service-levels_Policy.txt,مستويات خدمة الدعم التقني (مكتب الرياض),help_desk_sla,Information Technology,IT,Policy,ar,مكتب الرياض,RUH,2.1,Active,2024-06-30,,IT-0024 IT-0080
+FIN-0132,ar/FIN-0132_petty-cash-policy_Policy.txt,سياسة المصروفات النثرية (مكتب دبي),petty_cash,Finance,FIN,Policy,ar,مكتب دبي,DXB,1.4,Superseded,2023-08-01,FIN-0058,FIN-0008
+FAC-0124,ar/FAC-0124_kitchen-and-break-area-policy_Policy.txt,سياسة المطبخ ومناطق الاستراحة (مكتب الرياض),kitchen_use,Facilities,FAC,Policy,ar,مكتب الرياض,RUH,2.2,Active,2024-10-24,,
+HR-0237,en/HR-0237_remote-work-policy_QuickReference.txt,Remote Work - Quick Reference (Riyadh Office),remote_work,Human Resources,HR,Quick Reference,en,Riyadh Office,RUH,2.3,Active,2023-09-10,,HR-0047 IT-0047 IT-0079
+IT-0181,en/IT-0181_it-support-service-levels_QuickReference.txt,IT Support Service Levels - Quick Reference (Riyadh Office),help_desk_sla,Information Technology,IT,Quick Reference,en,Riyadh Office,RUH,2.4,Active,2023-09-16,,IT-0023 IT-0079
+FIN-0133,en/FIN-0133_petty-cash-policy_QuickReference.txt,Petty Cash - Quick Reference (Dubai Office),petty_cash,Finance,FIN,Quick Reference,en,Dubai Office,DXB,2.4,Active,2025-06-03,,FIN-0007
+FAC-0125,en/FAC-0125_kitchen-and-break-area-policy_QuickReference.txt,Kitchen and Break Area - Quick Reference (Riyadh Office),kitchen_use,Facilities,FAC,Quick Reference,en,Riyadh Office,RUH,2.0,Active,2025-04-01,,
+HR-0238,ar/HR-0238_remote-work-policy_QuickReference.txt,العمل عن بُعد - مرجع سريع (مكتب الرياض),remote_work,Human Resources,HR,Quick Reference,ar,مكتب الرياض,RUH,2.3,Active,2023-05-29,,HR-0048 IT-0048 IT-0080
+IT-0182,ar/IT-0182_it-support-service-levels_QuickReference.txt,مستويات خدمة الدعم التقني - مرجع سريع (مكتب الرياض),help_desk_sla,Information Technology,IT,Quick Reference,ar,مكتب الرياض,RUH,2.2,Active,2023-11-22,,IT-0024 IT-0080
+FIN-0134,ar/FIN-0134_petty-cash-policy_QuickReference.txt,المصروفات النثرية - مرجع سريع (مكتب دبي),petty_cash,Finance,FIN,Quick Reference,ar,مكتب دبي,DXB,2.1,Active,2025-01-13,,FIN-0008
+FAC-0126,ar/FAC-0126_kitchen-and-break-area-policy_QuickReference.txt,المطبخ ومناطق الاستراحة - مرجع سريع (مكتب الرياض),kitchen_use,Facilities,FAC,Quick Reference,ar,مكتب الرياض,RUH,2.1,Active,2025-05-24,,
+HR-0239,en/HR-0239_remote-work-policy_Procedure.txt,Remote Work - Procedure (Riyadh Office),remote_work,Human Resources,HR,Procedure,en,Riyadh Office,RUH,2.0,Active,2023-03-31,,HR-0047 IT-0047 IT-0079
+IT-0183,en/IT-0183_it-support-service-levels_Procedure.txt,IT Support Service Levels - Procedure (Riyadh Office),help_desk_sla,Information Technology,IT,Procedure,en,Riyadh Office,RUH,2.3,Active,2025-06-15,,IT-0023 IT-0079
+FIN-0135,en/FIN-0135_petty-cash-policy_Procedure.txt,Petty Cash - Procedure (Dubai Office),petty_cash,Finance,FIN,Procedure,en,Dubai Office,DXB,2.0,Active,2023-04-03,,FIN-0007
+FAC-0127,en/FAC-0127_kitchen-and-break-area-policy_Procedure.txt,Kitchen and Break Area - Procedure (Riyadh Office),kitchen_use,Facilities,FAC,Procedure,en,Riyadh Office,RUH,2.4,Active,2024-09-21,,
+HR-0240,ar/HR-0240_remote-work-policy_Procedure.txt,العمل عن بُعد - إجراء (مكتب الرياض),remote_work,Human Resources,HR,Procedure,ar,مكتب الرياض,RUH,2.0,Active,2023-07-07,,HR-0048 IT-0048 IT-0080
+IT-0184,ar/IT-0184_it-support-service-levels_Procedure.txt,مستويات خدمة الدعم التقني - إجراء (مكتب الرياض),help_desk_sla,Information Technology,IT,Procedure,ar,مكتب الرياض,RUH,2.2,Active,2024-02-17,,IT-0024 IT-0080
+FIN-0136,ar/FIN-0136_petty-cash-policy_Procedure.txt,المصروفات النثرية - إجراء (مكتب دبي),petty_cash,Finance,FIN,Procedure,ar,مكتب دبي,DXB,2.3,Active,2024-07-18,,FIN-0008
+FAC-0128,ar/FAC-0128_kitchen-and-break-area-policy_Procedure.txt,المطبخ ومناطق الاستراحة - إجراء (مكتب الرياض),kitchen_use,Facilities,FAC,Procedure,ar,مكتب الرياض,RUH,2.3,Active,2023-12-22,,
+HR-0241,en/HR-0241_flexible-hours-policy_Policy.txt,Flexible Hours Policy (Riyadh Office),flexible_hours,Human Resources,HR,Policy,en,Riyadh Office,RUH,2.3,Active,2025-01-22,,HR-0047 HR-0063
+IT-0185,en/IT-0185_password-policy_Policy.txt,Password Policy (Jeddah Office),password_policy,Information Technology,IT,Policy,en,Jeddah Office,JED,1.3,Superseded,2023-05-15,IT-0001,IT-0015 IT-0023 IT-0095
+FIN-0137,en/FIN-0137_payroll-schedule-policy_Policy.txt,Payroll Schedule Policy (Dubai Office),payroll_schedule,Finance,FIN,Policy,en,Dubai Office,DXB,2.1,Active,2025-02-19,,HR-0103 FIN-0079
+FAC-0129,en/FAC-0129_mail-and-courier-policy_Policy.txt,Mail and Courier Policy (Riyadh Office),mail_courier,Facilities,FAC,Policy,en,Riyadh Office,RUH,2.3,Active,2024-05-02,,
+HR-0242,ar/HR-0242_flexible-hours-policy_Policy.txt,سياسة ساعات العمل المرنة (مكتب الرياض),flexible_hours,Human Resources,HR,Policy,ar,مكتب الرياض,RUH,2.0,Active,2025-02-25,,HR-0048 HR-0064
+IT-0186,ar/IT-0186_password-policy_Policy.txt,سياسة كلمات المرور (مكتب جدة),password_policy,Information Technology,IT,Policy,ar,مكتب جدة,JED,2.2,Active,2024-02-11,,IT-0016 IT-0024 IT-0096
+FIN-0138,ar/FIN-0138_payroll-schedule-policy_Policy.txt,سياسة جدول الرواتب (مكتب دبي),payroll_schedule,Finance,FIN,Policy,ar,مكتب دبي,DXB,2.2,Active,2024-09-18,,HR-0104 FIN-0080
+FAC-0130,ar/FAC-0130_mail-and-courier-policy_Policy.txt,سياسة البريد والشحن (مكتب الرياض),mail_courier,Facilities,FAC,Policy,ar,مكتب الرياض,RUH,2.2,Active,2023-06-14,,
+HR-0243,en/HR-0243_flexible-hours-policy_QuickReference.txt,Flexible Hours - Quick Reference (Riyadh Office),flexible_hours,Human Resources,HR,Quick Reference,en,Riyadh Office,RUH,2.2,Active,2024-09-12,,HR-0047 HR-0063
+IT-0187,en/IT-0187_password-policy_QuickReference.txt,Password - Quick Reference (Jeddah Office),password_policy,Information Technology,IT,Quick Reference,en,Jeddah Office,JED,2.0,Active,2023-05-31,,IT-0015 IT-0023 IT-0095
+FIN-0139,en/FIN-0139_payroll-schedule-policy_QuickReference.txt,Payroll Schedule - Quick Reference (Dubai Office),payroll_schedule,Finance,FIN,Quick Reference,en,Dubai Office,DXB,2.4,Active,2024-12-07,,HR-0103 FIN-0079
+FAC-0131,en/FAC-0131_mail-and-courier-policy_QuickReference.txt,Mail and Courier - Quick Reference (Riyadh Office),mail_courier,Facilities,FAC,Quick Reference,en,Riyadh Office,RUH,2.1,Active,2023-12-27,,
+HR-0244,ar/HR-0244_flexible-hours-policy_QuickReference.txt,ساعات العمل المرنة - مرجع سريع (مكتب الرياض),flexible_hours,Human Resources,HR,Quick Reference,ar,مكتب الرياض,RUH,2.1,Active,2025-06-17,,HR-0048 HR-0064
+IT-0188,ar/IT-0188_password-policy_QuickReference.txt,كلمات المرور - مرجع سريع (مكتب جدة),password_policy,Information Technology,IT,Quick Reference,ar,مكتب جدة,JED,2.4,Active,2024-03-26,,IT-0016 IT-0024 IT-0096
+FIN-0140,ar/FIN-0140_payroll-schedule-policy_QuickReference.txt,جدول الرواتب - مرجع سريع (مكتب دبي),payroll_schedule,Finance,FIN,Quick Reference,ar,مكتب دبي,DXB,2.4,Active,2023-12-08,,HR-0104 FIN-0080
+FAC-0132,ar/FAC-0132_mail-and-courier-policy_QuickReference.txt,البريد والشحن - مرجع سريع (مكتب الرياض),mail_courier,Facilities,FAC,Quick Reference,ar,مكتب الرياض,RUH,2.4,Active,2023-11-05,,
+HR-0245,en/HR-0245_flexible-hours-policy_Procedure.txt,Flexible Hours - Procedure (Riyadh Office),flexible_hours,Human Resources,HR,Procedure,en,Riyadh Office,RUH,2.2,Active,2023-05-08,,HR-0047 HR-0063
+IT-0189,en/IT-0189_password-policy_Procedure.txt,Password - Procedure (Jeddah Office),password_policy,Information Technology,IT,Procedure,en,Jeddah Office,JED,2.0,Active,2025-01-31,,IT-0015 IT-0023 IT-0095
+FIN-0141,en/FIN-0141_payroll-schedule-policy_Procedure.txt,Payroll Schedule - Procedure (Dubai Office),payroll_schedule,Finance,FIN,Procedure,en,Dubai Office,DXB,2.0,Active,2023-05-12,,HR-0103 FIN-0079
+FAC-0133,en/FAC-0133_mail-and-courier-policy_Procedure.txt,Mail and Courier - Procedure (Riyadh Office),mail_courier,Facilities,FAC,Procedure,en,Riyadh Office,RUH,2.4,Active,2024-07-14,,
+HR-0246,ar/HR-0246_flexible-hours-policy_Procedure.txt,ساعات العمل المرنة - إجراء (مكتب الرياض),flexible_hours,Human Resources,HR,Procedure,ar,مكتب الرياض,RUH,2.2,Active,2023-03-10,,HR-0048 HR-0064
+IT-0190,ar/IT-0190_password-policy_Procedure.txt,كلمات المرور - إجراء (مكتب جدة),password_policy,Information Technology,IT,Procedure,ar,مكتب جدة,JED,2.2,Active,2023-09-11,,IT-0016 IT-0024 IT-0096
+FIN-0142,ar/FIN-0142_payroll-schedule-policy_Procedure.txt,جدول الرواتب - إجراء (مكتب دبي),payroll_schedule,Finance,FIN,Procedure,ar,مكتب دبي,DXB,2.4,Active,2025-03-16,,HR-0104 FIN-0080
+FAC-0134,ar/FAC-0134_mail-and-courier-policy_Procedure.txt,البريد والشحن - إجراء (مكتب الرياض),mail_courier,Facilities,FAC,Procedure,ar,مكتب الرياض,RUH,1.3,Superseded,2023-01-11,FAC-0076,
+HR-0247,en/HR-0247_probation-policy_Policy.txt,Probation Policy (Riyadh Office),probation,Human Resources,HR,Policy,en,Riyadh Office,RUH,2.0,Active,2023-03-10,,HR-0111 HR-0087 HR-0127
+IT-0191,en/IT-0191_multi-factor-authentication-policy_Policy.txt,Multi-Factor Authentication Policy (Jeddah Office),mfa,Information Technology,IT,Policy,en,Jeddah Office,JED,2.1,Active,2024-10-01,,IT-0007 IT-0047
+FIN-0143,en/FIN-0143_expense-reimbursement-policy_Policy.txt,Expense Reimbursement Policy (Cairo Office),expense_reimbursement,Finance,FIN,Policy,en,Cairo Office,CAI,2.3,Active,2025-04-23,,FIN-0015 FIN-0023 FIN-0031
+FAC-0135,en/FAC-0135_meeting-room-booking-policy_Policy.txt,Meeting Room Booking Policy (Jeddah Office),meeting_room_booking,Facilities,FAC,Policy,en,Jeddah Office,JED,2.4,Active,2024-11-11,,FAC-0031 FAC-0015
+HR-0248,ar/HR-0248_probation-policy_Policy.txt,سياسة فترة التجربة (مكتب الرياض),probation,Human Resources,HR,Policy,ar,مكتب الرياض,RUH,2.4,Active,2024-08-03,,HR-0112 HR-0088 HR-0128
+IT-0192,ar/IT-0192_multi-factor-authentication-policy_Policy.txt,سياسة المصادقة متعددة العوامل (مكتب جدة),mfa,Information Technology,IT,Policy,ar,مكتب جدة,JED,2.2,Active,2023-10-16,,IT-0008 IT-0048
+FIN-0144,ar/FIN-0144_expense-reimbursement-policy_Policy.txt,سياسة استرداد المصروفات (مكتب القاهرة),expense_reimbursement,Finance,FIN,Policy,ar,مكتب القاهرة,CAI,2.1,Active,2023-07-27,,FIN-0016 FIN-0024 FIN-0032
+FAC-0136,ar/FAC-0136_meeting-room-booking-policy_Policy.txt,سياسة حجز قاعات الاجتماعات (مكتب جدة),meeting_room_booking,Facilities,FAC,Policy,ar,مكتب جدة,JED,2.3,Active,2023-12-14,,FAC-0032 FAC-0016
+HR-0249,en/HR-0249_probation-policy_QuickReference.txt,Probation - Quick Reference (Riyadh Office),probation,Human Resources,HR,Quick Reference,en,Riyadh Office,RUH,2.4,Active,2024-10-24,,HR-0111 HR-0087 HR-0127
+IT-0193,en/IT-0193_multi-factor-authentication-policy_QuickReference.txt,Multi-Factor Authentication - Quick Reference (Jeddah Office),mfa,Information Technology,IT,Quick Reference,en,Jeddah Office,JED,2.1,Active,2025-05-25,,IT-0007 IT-0047
+FIN-0145,en/FIN-0145_expense-reimbursement-policy_QuickReference.txt,Expense Reimbursement - Quick Reference (Cairo Office),expense_reimbursement,Finance,FIN,Quick Reference,en,Cairo Office,CAI,2.3,Active,2023-11-05,,FIN-0015 FIN-0023 FIN-0031
+FAC-0137,en/FAC-0137_meeting-room-booking-policy_QuickReference.txt,Meeting Room Booking - Quick Reference (Jeddah Office),meeting_room_booking,Facilities,FAC,Quick Reference,en,Jeddah Office,JED,2.1,Active,2025-06-19,,FAC-0031 FAC-0015
+HR-0250,ar/HR-0250_probation-policy_QuickReference.txt,فترة التجربة - مرجع سريع (مكتب الرياض),probation,Human Resources,HR,Quick Reference,ar,مكتب الرياض,RUH,2.2,Active,2024-08-29,,HR-0112 HR-0088 HR-0128
+IT-0194,ar/IT-0194_multi-factor-authentication-policy_QuickReference.txt,المصادقة متعددة العوامل - مرجع سريع (مكتب جدة),mfa,Information Technology,IT,Quick Reference,ar,مكتب جدة,JED,2.3,Active,2023-09-15,,IT-0008 IT-0048
+FIN-0146,ar/FIN-0146_expense-reimbursement-policy_QuickReference.txt,استرداد المصروفات - مرجع سريع (مكتب القاهرة),expense_reimbursement,Finance,FIN,Quick Reference,ar,مكتب القاهرة,CAI,2.4,Active,2023-06-15,,FIN-0016 FIN-0024 FIN-0032
+FAC-0138,ar/FAC-0138_meeting-room-booking-policy_QuickReference.txt,حجز قاعات الاجتماعات - مرجع سريع (مكتب جدة),meeting_room_booking,Facilities,FAC,Quick Reference,ar,مكتب جدة,JED,2.4,Active,2025-02-16,,FAC-0032 FAC-0016
+HR-0251,en/HR-0251_probation-policy_Procedure.txt,Probation - Procedure (Riyadh Office),probation,Human Resources,HR,Procedure,en,Riyadh Office,RUH,1.5,Superseded,2023-05-06,HR-0075,HR-0111 HR-0087 HR-0127
+IT-0195,en/IT-0195_multi-factor-authentication-policy_Procedure.txt,Multi-Factor Authentication - Procedure (Jeddah Office),mfa,Information Technology,IT,Procedure,en,Jeddah Office,JED,2.4,Active,2025-05-14,,IT-0007 IT-0047
+FIN-0147,en/FIN-0147_expense-reimbursement-policy_Procedure.txt,Expense Reimbursement - Procedure (Cairo Office),expense_reimbursement,Finance,FIN,Procedure,en,Cairo Office,CAI,2.1,Active,2023-08-26,,FIN-0015 FIN-0023 FIN-0031
+FAC-0139,en/FAC-0139_meeting-room-booking-policy_Procedure.txt,Meeting Room Booking - Procedure (Jeddah Office),meeting_room_booking,Facilities,FAC,Procedure,en,Jeddah Office,JED,2.1,Active,2023-06-23,,FAC-0031 FAC-0015
+HR-0252,ar/HR-0252_probation-policy_Procedure.txt,فترة التجربة - إجراء (مكتب الرياض),probation,Human Resources,HR,Procedure,ar,مكتب الرياض,RUH,2.2,Active,2024-11-24,,HR-0112 HR-0088 HR-0128
+IT-0196,ar/IT-0196_multi-factor-authentication-policy_Procedure.txt,المصادقة متعددة العوامل - إجراء (مكتب جدة),mfa,Information Technology,IT,Procedure,ar,مكتب جدة,JED,2.3,Active,2023-11-02,,IT-0008 IT-0048
+FIN-0148,ar/FIN-0148_expense-reimbursement-policy_Procedure.txt,استرداد المصروفات - إجراء (مكتب القاهرة),expense_reimbursement,Finance,FIN,Procedure,ar,مكتب القاهرة,CAI,2.0,Active,2023-08-01,,FIN-0016 FIN-0024 FIN-0032
+FAC-0140,ar/FAC-0140_meeting-room-booking-policy_Procedure.txt,حجز قاعات الاجتماعات - إجراء (مكتب جدة),meeting_room_booking,Facilities,FAC,Procedure,ar,مكتب جدة,JED,2.1,Active,2024-08-29,,FAC-0032 FAC-0016
+HR-0253,en/HR-0253_performance-review-policy_Policy.txt,Performance Review Policy (Riyadh Office),performance_review,Human Resources,HR,Policy,en,Riyadh Office,RUH,2.1,Active,2024-11-20,,HR-0079 HR-0095 HR-0103
+IT-0197,en/IT-0197_system-access-request-policy_Policy.txt,System Access Request Policy (Jeddah Office),system_access,Information Technology,IT,Policy,en,Jeddah Office,JED,2.2,Active,2025-05-17,,IT-0007 IT-0031 HR-0111
+FIN-0149,en/FIN-0149_petty-cash-policy_Policy.txt,Petty Cash Policy (Cairo Office),petty_cash,Finance,FIN,Policy,en,Cairo Office,CAI,2.4,Active,2024-03-06,,FIN-0007
+FAC-0141,en/FAC-0141_parking-policy_Policy.txt,Parking Policy (Jeddah Office),parking,Facilities,FAC,Policy,en,Jeddah Office,JED,2.1,Active,2024-12-29,,FAC-0023
+HR-0254,ar/HR-0254_performance-review-policy_Policy.txt,سياسة تقييم الأداء (مكتب الرياض),performance_review,Human Resources,HR,Policy,ar,مكتب الرياض,RUH,2.4,Active,2025-05-25,,HR-0080 HR-0096 HR-0104
+IT-0198,ar/IT-0198_system-access-request-policy_Policy.txt,سياسة طلب الوصول إلى الأنظمة (مكتب جدة),system_access,Information Technology,IT,Policy,ar,مكتب جدة,JED,2.1,Active,2023-04-09,,IT-0008 IT-0032 HR-0112
+FIN-0150,ar/FIN-0150_petty-cash-policy_Policy.txt,سياسة المصروفات النثرية (مكتب القاهرة),petty_cash,Finance,FIN,Policy,ar,مكتب القاهرة,CAI,2.0,Active,2024-03-11,,FIN-0008
+FAC-0142,ar/FAC-0142_parking-policy_Policy.txt,سياسة مواقف السيارات (مكتب جدة),parking,Facilities,FAC,Policy,ar,مكتب جدة,JED,2.2,Active,2024-09-22,,FAC-0024
+HR-0255,en/HR-0255_performance-review-policy_QuickReference.txt,Performance Review - Quick Reference (Riyadh Office),performance_review,Human Resources,HR,Quick Reference,en,Riyadh Office,RUH,2.3,Active,2025-02-17,,HR-0079 HR-0095 HR-0103
+IT-0199,en/IT-0199_system-access-request-policy_QuickReference.txt,System Access Request - Quick Reference (Jeddah Office),system_access,Information Technology,IT,Quick Reference,en,Jeddah Office,JED,2.3,Active,2024-10-10,,IT-0007 IT-0031 HR-0111
+FIN-0151,en/FIN-0151_petty-cash-policy_QuickReference.txt,Petty Cash - Quick Reference (Cairo Office),petty_cash,Finance,FIN,Quick Reference,en,Cairo Office,CAI,2.3,Active,2024-05-06,,FIN-0007
+FAC-0143,en/FAC-0143_parking-policy_QuickReference.txt,Parking - Quick Reference (Jeddah Office),parking,Facilities,FAC,Quick Reference,en,Jeddah Office,JED,2.1,Active,2023-06-06,,FAC-0023
+HR-0256,ar/HR-0256_performance-review-policy_QuickReference.txt,تقييم الأداء - مرجع سريع (مكتب الرياض),performance_review,Human Resources,HR,Quick Reference,ar,مكتب الرياض,RUH,2.3,Active,2025-02-07,,HR-0080 HR-0096 HR-0104
+IT-0200,ar/IT-0200_system-access-request-policy_QuickReference.txt,طلب الوصول إلى الأنظمة - مرجع سريع (مكتب جدة),system_access,Information Technology,IT,Quick Reference,ar,مكتب جدة,JED,2.1,Active,2023-11-21,,IT-0008 IT-0032 HR-0112
+FIN-0152,ar/FIN-0152_petty-cash-policy_QuickReference.txt,المصروفات النثرية - مرجع سريع (مكتب القاهرة),petty_cash,Finance,FIN,Quick Reference,ar,مكتب القاهرة,CAI,2.2,Active,2024-07-31,,FIN-0008
+FAC-0144,ar/FAC-0144_parking-policy_QuickReference.txt,مواقف السيارات - مرجع سريع (مكتب جدة),parking,Facilities,FAC,Quick Reference,ar,مكتب جدة,JED,2.2,Active,2025-05-17,,FAC-0024
+HR-0257,en/HR-0257_performance-review-policy_Procedure.txt,Performance Review - Procedure (Riyadh Office),performance_review,Human Resources,HR,Procedure,en,Riyadh Office,RUH,2.4,Active,2023-11-28,,HR-0079 HR-0095 HR-0103
+IT-0201,en/IT-0201_system-access-request-policy_Procedure.txt,System Access Request - Procedure (Jeddah Office),system_access,Information Technology,IT,Procedure,en,Jeddah Office,JED,2.1,Active,2024-10-22,,IT-0007 IT-0031 HR-0111
+FIN-0153,en/FIN-0153_petty-cash-policy_Procedure.txt,Petty Cash - Procedure (Cairo Office),petty_cash,Finance,FIN,Procedure,en,Cairo Office,CAI,2.0,Active,2023-06-12,,FIN-0007
+FAC-0145,en/FAC-0145_parking-policy_Procedure.txt,Parking - Procedure (Jeddah Office),parking,Facilities,FAC,Procedure,en,Jeddah Office,JED,2.3,Active,2025-02-13,,FAC-0023
+HR-0258,ar/HR-0258_performance-review-policy_Procedure.txt,تقييم الأداء - إجراء (مكتب الرياض),performance_review,Human Resources,HR,Procedure,ar,مكتب الرياض,RUH,2.1,Active,2025-04-29,,HR-0080 HR-0096 HR-0104
+IT-0202,ar/IT-0202_system-access-request-policy_Procedure.txt,طلب الوصول إلى الأنظمة - إجراء (مكتب جدة),system_access,Information Technology,IT,Procedure,ar,مكتب جدة,JED,2.1,Active,2025-03-24,,IT-0008 IT-0032 HR-0112
+FIN-0154,ar/FIN-0154_petty-cash-policy_Procedure.txt,المصروفات النثرية - إجراء (مكتب القاهرة),petty_cash,Finance,FIN,Procedure,ar,مكتب القاهرة,CAI,2.3,Active,2024-08-20,,FIN-0008
+FAC-0146,ar/FAC-0146_parking-policy_Procedure.txt,مواقف السيارات - إجراء (مكتب جدة),parking,Facilities,FAC,Procedure,ar,مكتب جدة,JED,2.0,Active,2024-11-06,,FAC-0024
+HR-0259,en/HR-0259_promotion-policy_Policy.txt,Promotion Policy (Riyadh Office),promotion,Human Resources,HR,Policy,en,Riyadh Office,RUH,2.4,Active,2024-10-15,,HR-0087 HR-0103
+IT-0203,en/IT-0203_vpn-and-remote-access-policy_Policy.txt,VPN and Remote Access Policy (Jeddah Office),vpn_remote_access,Information Technology,IT,Policy,en,Jeddah Office,JED,2.2,Active,2024-01-27,,HR-0063 IT-0015
+FIN-0155,en/FIN-0155_payroll-schedule-policy_Policy.txt,Payroll Schedule Policy (Cairo Office),payroll_schedule,Finance,FIN,Policy,en,Cairo Office,CAI,2.4,Active,2024-03-08,,HR-0103 FIN-0079
+FAC-0147,en/FAC-0147_building-access-policy_Policy.txt,Building Access Policy (Jeddah Office),building_access,Facilities,FAC,Policy,en,Jeddah Office,JED,2.2,Active,2023-05-20,,FAC-0015 FAC-0031
+HR-0260,ar/HR-0260_promotion-policy_Policy.txt,سياسة الترقية (مكتب الرياض),promotion,Human Resources,HR,Policy,ar,مكتب الرياض,RUH,2.3,Active,2024-07-12,,HR-0088 HR-0104
+IT-0204,ar/IT-0204_vpn-and-remote-access-policy_Policy.txt,سياسة الوصول عن بُعد و VPN (مكتب جدة),vpn_remote_access,Information Technology,IT,Policy,ar,مكتب جدة,JED,1.4,Superseded,2023-12-13,IT-0042,HR-0064 IT-0016
+FIN-0156,ar/FIN-0156_payroll-schedule-policy_Policy.txt,سياسة جدول الرواتب (مكتب القاهرة),payroll_schedule,Finance,FIN,Policy,ar,مكتب القاهرة,CAI,2.3,Active,2025-02-21,,HR-0104 FIN-0080
+FAC-0148,ar/FAC-0148_building-access-policy_Policy.txt,سياسة الدخول إلى المبنى (مكتب جدة),building_access,Facilities,FAC,Policy,ar,مكتب جدة,JED,1.0,Superseded,2023-08-24,FAC-0018,FAC-0016 FAC-0032
+HR-0261,en/HR-0261_promotion-policy_QuickReference.txt,Promotion - Quick Reference (Riyadh Office),promotion,Human Resources,HR,Quick Reference,en,Riyadh Office,RUH,1.4,Superseded,2023-01-02,HR-0095,HR-0087 HR-0103
+IT-0205,en/IT-0205_vpn-and-remote-access-policy_QuickReference.txt,VPN and Remote Access - Quick Reference (Jeddah Office),vpn_remote_access,Information Technology,IT,Quick Reference,en,Jeddah Office,JED,2.0,Active,2024-11-08,,HR-0063 IT-0015
+FIN-0157,en/FIN-0157_payroll-schedule-policy_QuickReference.txt,Payroll Schedule - Quick Reference (Cairo Office),payroll_schedule,Finance,FIN,Quick Reference,en,Cairo Office,CAI,2.4,Active,2024-11-18,,HR-0103 FIN-0079
+FAC-0149,en/FAC-0149_building-access-policy_QuickReference.txt,Building Access - Quick Reference (Jeddah Office),building_access,Facilities,FAC,Quick Reference,en,Jeddah Office,JED,2.4,Active,2024-12-21,,FAC-0015 FAC-0031
+HR-0262,ar/HR-0262_promotion-policy_QuickReference.txt,الترقية - مرجع سريع (مكتب الرياض),promotion,Human Resources,HR,Quick Reference,ar,مكتب الرياض,RUH,2.4,Active,2025-04-08,,HR-0088 HR-0104
+IT-0206,ar/IT-0206_vpn-and-remote-access-policy_QuickReference.txt,الوصول عن بُعد و VPN - مرجع سريع (مكتب جدة),vpn_remote_access,Information Technology,IT,Quick Reference,ar,مكتب جدة,JED,2.2,Active,2025-02-22,,HR-0064 IT-0016
+FIN-0158,ar/FIN-0158_payroll-schedule-policy_QuickReference.txt,جدول الرواتب - مرجع سريع (مكتب القاهرة),payroll_schedule,Finance,FIN,Quick Reference,ar,مكتب القاهرة,CAI,2.2,Active,2024-10-28,,HR-0104 FIN-0080
+FAC-0150,ar/FAC-0150_building-access-policy_QuickReference.txt,الدخول إلى المبنى - مرجع سريع (مكتب جدة),building_access,Facilities,FAC,Quick Reference,ar,مكتب جدة,JED,2.4,Active,2024-04-20,,FAC-0016 FAC-0032
+HR-0263,en/HR-0263_promotion-policy_Procedure.txt,Promotion - Procedure (Riyadh Office),promotion,Human Resources,HR,Procedure,en,Riyadh Office,RUH,2.0,Active,2025-05-14,,HR-0087 HR-0103
+IT-0207,en/IT-0207_vpn-and-remote-access-policy_Procedure.txt,VPN and Remote Access - Procedure (Jeddah Office),vpn_remote_access,Information Technology,IT,Procedure,en,Jeddah Office,JED,2.2,Active,2025-02-23,,HR-0063 IT-0015
+FIN-0159,en/FIN-0159_payroll-schedule-policy_Procedure.txt,Payroll Schedule - Procedure (Cairo Office),payroll_schedule,Finance,FIN,Procedure,en,Cairo Office,CAI,2.2,Active,2024-07-11,,HR-0103 FIN-0079
+FAC-0151,en/FAC-0151_building-access-policy_Procedure.txt,Building Access - Procedure (Jeddah Office),building_access,Facilities,FAC,Procedure,en,Jeddah Office,JED,2.1,Active,2024-12-21,,FAC-0015 FAC-0031
+HR-0264,ar/HR-0264_promotion-policy_Procedure.txt,الترقية - إجراء (مكتب الرياض),promotion,Human Resources,HR,Procedure,ar,مكتب الرياض,RUH,2.0,Active,2023-05-12,,HR-0088 HR-0104
+IT-0208,ar/IT-0208_vpn-and-remote-access-policy_Procedure.txt,الوصول عن بُعد و VPN - إجراء (مكتب جدة),vpn_remote_access,Information Technology,IT,Procedure,ar,مكتب جدة,JED,2.0,Active,2024-02-11,,HR-0064 IT-0016
+FIN-0160,ar/FIN-0160_payroll-schedule-policy_Procedure.txt,جدول الرواتب - إجراء (مكتب القاهرة),payroll_schedule,Finance,FIN,Procedure,ar,مكتب القاهرة,CAI,2.1,Active,2023-12-24,,HR-0104 FIN-0080
+FAC-0152,ar/FAC-0152_building-access-policy_Procedure.txt,الدخول إلى المبنى - إجراء (مكتب جدة),building_access,Facilities,FAC,Procedure,ar,مكتب جدة,JED,2.4,Active,2023-05-19,,FAC-0016 FAC-0032
+HR-0265,en/HR-0265_salary-review-policy_Policy.txt,Salary Review Policy (Riyadh Office),salary_review,Human Resources,HR,Policy,en,Riyadh Office,RUH,2.2,Active,2023-12-02,,HR-0087 HR-0095
+IT-0209,en/IT-0209_hardware-request-policy_Policy.txt,Hardware Request Policy (Jeddah Office),hardware_request,Information Technology,IT,Policy,en,Jeddah Office,JED,2.0,Active,2023-04-01,,IT-0087 IT-0071 FAC-0063
+FIN-0161,en/FIN-0161_expense-reimbursement-policy_Policy.txt,Expense Reimbursement Policy (Remote-first Teams),expense_reimbursement,Finance,FIN,Policy,en,Remote-first Teams,REM,2.0,Active,2024-08-20,,FIN-0015 FIN-0023 FIN-0031
+FAC-0153,en/FAC-0153_visitor-management-policy_Policy.txt,Visitor Management Policy (Jeddah Office),visitor_management,Facilities,FAC,Policy,en,Jeddah Office,JED,2.4,Active,2023-10-22,,FAC-0023 LEG-0007
+HR-0266,ar/HR-0266_salary-review-policy_Policy.txt,سياسة مراجعة الرواتب (مكتب الرياض),salary_review,Human Resources,HR,Policy,ar,مكتب الرياض,RUH,2.0,Active,2024-08-03,,HR-0088 HR-0096
+IT-0210,ar/IT-0210_hardware-request-policy_Policy.txt,سياسة طلب الأجهزة (مكتب جدة),hardware_request,Information Technology,IT,Policy,ar,مكتب جدة,JED,2.3,Active,2024-03-17,,IT-0088 IT-0072 FAC-0064
+FIN-0162,ar/FIN-0162_expense-reimbursement-policy_Policy.txt,سياسة استرداد المصروفات (الفرق العاملة عن بُعد),expense_reimbursement,Finance,FIN,Policy,ar,الفرق العاملة عن بُعد,REM,2.0,Active,2023-08-25,,FIN-0016 FIN-0024 FIN-0032
+FAC-0154,ar/FAC-0154_visitor-management-policy_Policy.txt,سياسة إدارة الزوار (مكتب جدة),visitor_management,Facilities,FAC,Policy,ar,مكتب جدة,JED,1.0,Superseded,2023-12-12,FAC-0026,FAC-0024 LEG-0008

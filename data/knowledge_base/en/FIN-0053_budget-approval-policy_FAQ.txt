@@ -1,0 +1,17 @@
+Title: Budget Approval - FAQ
+Document ID: FIN-0053
+Department: Finance
+Type: FAQ
+Version: 3.4
+Effective date: 2023-02-20
+Status: Active
+Owner: Finance Shared Services
+Applies to: All employees
+Related documents: FIN-0039, PRC-0031
+
+Frequently asked questions about budget approval - faq.
+
+Q: What can my manager approve?
+A: Up to 5000 SAR per item within budget.
+
+More detail is in the matching policy document.

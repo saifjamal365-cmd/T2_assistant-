@@ -1,0 +1,17 @@
+Title: Hardware Request - FAQ
+Document ID: IT-0077
+Department: Information Technology
+Type: FAQ
+Version: 3.3
+Effective date: 2024-03-27
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: IT-0087, IT-0071, FAC-0063
+
+Frequently asked questions about hardware request - faq.
+
+Q: How long to get a second monitor?
+A: Standard requests are fulfilled within 3 working days.
+
+More detail is in the matching policy document.

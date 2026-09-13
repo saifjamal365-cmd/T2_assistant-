@@ -1,0 +1,19 @@
+Title: Contract Signing Authority - Quick Reference
+Document ID: LEG-0055
+Department: Legal & Compliance
+Type: Quick Reference
+Version: 3.1
+Effective date: 2024-11-28
+Status: Active
+Owner: Legal & Compliance Office
+Applies to: All employees
+Related documents: FIN-0039, FIN-0055
+
+Quick reference - Contract Signing Authority - Quick Reference.
+
+Key points
+- Only named signatories in the authority matrix may sign contracts for T2.
+- Contracts over 500000 SAR or longer than 5 years need board approval.
+- Legal reviews every contract before signing.
+
+Owner: Legal & Compliance Office. Full policy: LEG policy set.

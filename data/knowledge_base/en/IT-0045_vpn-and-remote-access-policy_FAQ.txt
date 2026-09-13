@@ -1,0 +1,17 @@
+Title: VPN and Remote Access - FAQ
+Document ID: IT-0045
+Department: Information Technology
+Type: FAQ
+Version: 3.3
+Effective date: 2024-10-09
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: HR-0063, IT-0015
+
+Frequently asked questions about vpn and remote access - faq.
+
+Q: How do I reach internal systems from home?
+A: Through the approved VPN with MFA.
+
+More detail is in the matching policy document.

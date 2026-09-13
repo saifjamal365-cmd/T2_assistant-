@@ -1,0 +1,27 @@
+Title: Working Hours Policy
+Document ID: HR-0041
+Department: Human Resources
+Type: Policy
+Version: 3.0
+Effective date: 2025-06-05
+Status: Active
+Owner: HR Operations
+Applies to: All employees
+Related documents: HR-0055, HR-0071, HR-0063
+
+1. Purpose
+This policy defines standard working hours and core hours.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- The standard work week is 42 hours over 5 days.
+- Core hours, when everyone must be reachable, are 10:00 to 16:00.
+- Time is recorded in the HR system; managers review timesheets weekly.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

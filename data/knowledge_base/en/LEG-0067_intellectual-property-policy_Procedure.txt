@@ -1,0 +1,28 @@
+Title: Intellectual Property - Procedure
+Document ID: LEG-0067
+Department: Legal & Compliance
+Type: Procedure
+Version: 3.0
+Effective date: 2024-12-28
+Status: Active
+Owner: Legal & Compliance Office
+Applies to: All employees
+Related documents: LEG-0015, IT-0071
+
+Purpose
+This policy states who owns work created during employment.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- Work created for T2 as part of your job belongs to T2.
+- Using third-party code or content requires a compatible licence, checked with Legal.
+- Personal projects on your own time and equipment remain yours, if unrelated to company work.
+
+Contact
+Legal & Compliance Office: leg@t2.example

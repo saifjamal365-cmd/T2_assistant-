@@ -1,0 +1,17 @@
+Title: Purchase Request - FAQ
+Document ID: PRC-0005
+Department: Procurement
+Type: FAQ
+Version: 3.1
+Effective date: 2025-02-04
+Status: Active
+Owner: Procurement Office
+Applies to: All employees
+Related documents: FIN-0039, FIN-0055, PRC-0015
+
+Frequently asked questions about purchase request - faq.
+
+Q: Can I order first and raise the request later?
+A: No. The request must be approved before any commitment.
+
+More detail is in the matching policy document.

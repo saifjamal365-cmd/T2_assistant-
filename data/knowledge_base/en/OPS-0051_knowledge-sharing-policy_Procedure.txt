@@ -1,0 +1,28 @@
+Title: Knowledge Sharing - Procedure
+Document ID: OPS-0051
+Department: Operations
+Type: Procedure
+Version: 3.3
+Effective date: 2024-04-30
+Status: Active
+Owner: Operations Excellence
+Applies to: All employees
+Related documents: OPS-0015, HR-0111
+
+Purpose
+This policy encourages writing down and sharing how things are done.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- Every recurring task should have a short written procedure in the shared knowledge base.
+- Post-incident reviews and design decisions are written up and shared, not kept private.
+- Pages unreviewed for 12 months are flagged for an owner to update or archive.
+
+Contact
+Operations Excellence: ops@t2.example

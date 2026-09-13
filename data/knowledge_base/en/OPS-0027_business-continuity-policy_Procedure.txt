@@ -1,0 +1,28 @@
+Title: Business Continuity - Procedure
+Document ID: OPS-0027
+Department: Operations
+Type: Procedure
+Version: 3.3
+Effective date: 2023-10-23
+Status: Active
+Owner: Operations Excellence
+Applies to: All employees
+Related documents: OPS-0023, OPS-0015
+
+Purpose
+This policy covers keeping key services running during a disruption.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- Each team has a continuity plan naming its critical services and recovery time objective.
+- Continuity plans are tested at least once a year.
+- During a major disruption, the crisis team leads and communicates every 2 hour(s).
+
+Contact
+Operations Excellence: ops@t2.example

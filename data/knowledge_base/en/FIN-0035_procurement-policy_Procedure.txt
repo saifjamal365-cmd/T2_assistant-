@@ -1,0 +1,28 @@
+Title: Procurement - Procedure
+Document ID: FIN-0035
+Department: Finance
+Type: Procedure
+Version: 3.1
+Effective date: 2024-01-12
+Status: Active
+Owner: Finance Shared Services
+Applies to: All employees
+Related documents: PRC-0007, PRC-0015, FIN-0055
+
+Purpose
+This policy explains how the company buys goods and services.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- A purchase request is raised before any commitment to a supplier.
+- Purchases up to 10000 EGP need one quote; above 10000 need 3 quotes.
+- Purchases over 100000 EGP go to the Procurement Committee.
+
+Contact
+Finance Shared Services: fin@t2.example

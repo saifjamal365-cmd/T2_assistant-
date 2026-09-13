@@ -1,0 +1,27 @@
+Title: Competition Law Policy
+Document ID: LEG-0073
+Department: Legal & Compliance
+Type: Policy
+Version: 3.3
+Effective date: 2024-12-21
+Status: Active
+Owner: Legal & Compliance Office
+Applies to: All employees
+Related documents: LEG-0015, MKT-0015
+
+1. Purpose
+This policy helps employees avoid anti-competitive behaviour.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Do not discuss prices, customers or markets with competitors.
+- Leave any meeting where competitors start such a discussion, and tell Legal.
+- Market information about competitors is gathered only from public sources.
+
+4. Exceptions
+Exceptions need written approval from Legal & Compliance Office.
+
+5. Contact
+For questions, contact leg@t2.example.

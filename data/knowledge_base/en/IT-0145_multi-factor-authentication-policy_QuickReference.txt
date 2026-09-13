@@ -1,0 +1,19 @@
+Title: Multi-Factor Authentication - Quick Reference (Riyadh Office)
+Document ID: IT-0145
+Department: Information Technology
+Type: Quick Reference
+Version: 2.2
+Effective date: 2024-06-23
+Status: Active
+Owner: IT Service Desk
+Applies to: Riyadh Office employees
+Related documents: IT-0007, IT-0047
+
+Quick reference - Multi-Factor Authentication - Quick Reference (Riyadh Office).
+
+Key points
+- MFA is required for email, the VPN and any system holding client or financial data.
+- The approved second factor is the authenticator app; SMS is allowed only as a fallback.
+- Lost devices must be reported to the service desk within 4 hours.
+
+Owner: IT Service Desk. Full policy: IT policy set.

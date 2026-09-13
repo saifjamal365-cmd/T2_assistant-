@@ -1,0 +1,19 @@
+Title: Data Backup - Quick Reference
+Document ID: IT-0063
+Department: Information Technology
+Type: Quick Reference
+Version: 3.1
+Effective date: 2025-01-31
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: IT-0111, LEG-0047
+
+Quick reference - Data Backup - Quick Reference.
+
+Key points
+- Files on approved company storage are backed up automatically every 4 hours.
+- Backups are kept for 90 days and are tested every quarter.
+- Files kept only on a local laptop are not backed up and may be lost.
+
+Owner: IT Service Desk. Full policy: IT policy set.

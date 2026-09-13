@@ -1,0 +1,19 @@
+Title: Multi-Factor Authentication - Quick Reference
+Document ID: IT-0015
+Department: Information Technology
+Type: Quick Reference
+Version: 3.4
+Effective date: 2024-02-08
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: IT-0007, IT-0047
+
+Quick reference - Multi-Factor Authentication - Quick Reference.
+
+Key points
+- MFA is required for email, the VPN and any system holding client or financial data.
+- The approved second factor is the authenticator app; SMS is allowed only as a fallback.
+- Lost devices must be reported to the service desk within 1 hours.
+
+Owner: IT Service Desk. Full policy: IT policy set.

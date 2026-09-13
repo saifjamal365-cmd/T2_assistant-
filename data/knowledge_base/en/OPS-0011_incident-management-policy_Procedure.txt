@@ -1,0 +1,28 @@
+Title: Incident Management - Procedure
+Document ID: OPS-0011
+Department: Operations
+Type: Procedure
+Version: 3.1
+Effective date: 2023-10-20
+Status: Active
+Owner: Operations Excellence
+Applies to: All employees
+Related documents: OPS-0007, OPS-0023, OPS-0047
+
+Purpose
+This policy explains how service incidents are handled.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- Incidents are logged with a severity from 1 (critical) to 4 (low).
+- Severity 1 incidents get an incident commander and updates every 30 minutes.
+- A written post-incident review is completed within 3 working days.
+
+Contact
+Operations Excellence: ops@t2.example

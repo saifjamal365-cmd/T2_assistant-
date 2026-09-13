@@ -1,0 +1,28 @@
+Title: Bereavement Leave - Procedure
+Document ID: HR-0027
+Department: Human Resources
+Type: Procedure
+Version: 3.2
+Effective date: 2025-05-30
+Status: Active
+Owner: HR Operations
+Applies to: All employees
+Related documents: HR-0007, HR-0159
+
+Purpose
+This policy sets paid leave after the death of a close family member.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- Employees receive 7 paid days on the death of a spouse, parent, child or sibling.
+- For other relatives, 2 paid day(s) are granted.
+- The manager may approve additional unpaid days on request.
+
+Contact
+HR Operations: hr@t2.example

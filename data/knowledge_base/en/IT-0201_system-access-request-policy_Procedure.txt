@@ -1,0 +1,29 @@
+Title: System Access Request - Procedure (Jeddah Office)
+Document ID: IT-0201
+Department: Information Technology
+Type: Procedure
+Version: 2.1
+Effective date: 2024-10-22
+Status: Active
+Owner: IT Service Desk
+Applies to: Jeddah Office employees
+Related documents: IT-0007, IT-0031, HR-0111
+
+Purpose
+This policy explains how access to systems is requested and reviewed.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- Access is requested through the service desk, stating the system and the business reason.
+- Access to client or financial data needs the manager and the system owner to approve.
+- Access unused for 60 days may be revoked and must be requested again.
+- All access is reviewed every quarter.
+
+Contact
+IT Service Desk: it@t2.example

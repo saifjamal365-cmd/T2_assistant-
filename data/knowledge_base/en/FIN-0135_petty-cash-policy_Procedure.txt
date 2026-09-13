@@ -1,0 +1,28 @@
+Title: Petty Cash - Procedure (Dubai Office)
+Document ID: FIN-0135
+Department: Finance
+Type: Procedure
+Version: 2.0
+Effective date: 2023-04-03
+Status: Active
+Owner: Finance Shared Services
+Applies to: Dubai Office employees
+Related documents: FIN-0007
+
+Purpose
+This policy covers small cash payments held at each office.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- Petty cash is for small items only, up to 300 EGP per payment.
+- Every payment needs a receipt and a signed voucher.
+- The float is reconciled and topped up every month.
+
+Contact
+Finance Shared Services: fin@t2.example

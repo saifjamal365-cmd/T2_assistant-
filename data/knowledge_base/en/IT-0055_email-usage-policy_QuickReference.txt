@@ -1,0 +1,19 @@
+Title: Email Usage - Quick Reference
+Document ID: IT-0055
+Department: Information Technology
+Type: Quick Reference
+Version: 3.1
+Effective date: 2025-03-12
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: IT-0031, IT-0103, LEG-0047
+
+Quick reference - Email Usage - Quick Reference.
+
+Key points
+- Company email is for business communication and is a company record.
+- Do not auto-forward company email to a personal account.
+- External emails with attachments over 10 MB should use the file-share link instead.
+
+Owner: IT Service Desk. Full policy: IT policy set.

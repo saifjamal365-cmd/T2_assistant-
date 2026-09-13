@@ -1,0 +1,17 @@
+Title: Client Escalation - FAQ
+Document ID: OPS-0005
+Department: Operations
+Type: FAQ
+Version: 3.2
+Effective date: 2023-10-01
+Status: Active
+Owner: Operations Excellence
+Applies to: All employees
+Related documents: OPS-0015, OPS-0039
+
+Frequently asked questions about client escalation - faq.
+
+Q: A client problem is not fixed in a day - what happens next?
+A: It is escalated to the account manager.
+
+More detail is in the matching policy document.

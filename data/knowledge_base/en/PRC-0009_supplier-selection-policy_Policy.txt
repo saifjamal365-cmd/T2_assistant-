@@ -1,0 +1,27 @@
+Title: Supplier Selection Policy
+Document ID: PRC-0009
+Department: Procurement
+Type: Policy
+Version: 3.4
+Effective date: 2023-10-18
+Status: Active
+Owner: Procurement Office
+Applies to: All employees
+Related documents: PRC-0007, FIN-0039, LEG-0023
+
+1. Purpose
+This policy explains how suppliers are chosen fairly.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Selection is based on written criteria: price, quality, delivery, and risk.
+- For spend over 25000 EGP, at least 2 suppliers are invited to quote.
+- A conflict of interest with a supplier is declared and the person steps out of the decision.
+
+4. Exceptions
+Exceptions need written approval from Procurement Office.
+
+5. Contact
+For questions, contact prc@t2.example.

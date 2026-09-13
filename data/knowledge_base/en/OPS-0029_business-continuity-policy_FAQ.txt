@@ -1,0 +1,17 @@
+Title: Business Continuity - FAQ
+Document ID: OPS-0029
+Department: Operations
+Type: FAQ
+Version: 3.2
+Effective date: 2023-02-05
+Status: Active
+Owner: Operations Excellence
+Applies to: All employees
+Related documents: OPS-0023, OPS-0015
+
+Frequently asked questions about business continuity - faq.
+
+Q: How often are continuity plans tested?
+A: At least once a year.
+
+More detail is in the matching policy document.

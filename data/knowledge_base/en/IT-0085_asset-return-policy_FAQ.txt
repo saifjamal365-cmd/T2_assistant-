@@ -1,0 +1,17 @@
+Title: Asset Return - FAQ
+Document ID: IT-0085
+Department: Information Technology
+Type: FAQ
+Version: 3.4
+Effective date: 2024-10-22
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: HR-0119, IT-0079
+
+Frequently asked questions about asset return - faq.
+
+Q: When do I return my laptop?
+A: On your last working day.
+
+More detail is in the matching policy document.

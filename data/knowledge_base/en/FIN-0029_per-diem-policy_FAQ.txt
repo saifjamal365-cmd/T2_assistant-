@@ -1,0 +1,17 @@
+Title: Per Diem - FAQ
+Document ID: FIN-0029
+Department: Finance
+Type: FAQ
+Version: 3.2
+Effective date: 2024-12-08
+Status: Active
+Owner: Finance Shared Services
+Applies to: All employees
+Related documents: FIN-0023, FIN-0007
+
+Frequently asked questions about per diem - faq.
+
+Q: Do I keep meal receipts if I get a per diem?
+A: No. The per diem removes the need for individual meal receipts.
+
+More detail is in the matching policy document.

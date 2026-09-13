@@ -1,0 +1,28 @@
+Title: Contract Renewal - Procedure
+Document ID: PRC-0019
+Department: Procurement
+Type: Procedure
+Version: 3.1
+Effective date: 2023-08-25
+Status: Active
+Owner: Procurement Office
+Applies to: All employees
+Related documents: FIN-0039, FIN-0047
+
+Purpose
+This policy makes sure supplier contracts are reviewed before they renew.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- Procurement reviews every contract 6 months before its renewal date.
+- Auto-renewal clauses are avoided; renewals are an active decision.
+- The review checks price, usage, service quality and whether the need still exists.
+
+Contact
+Procurement Office: prc@t2.example

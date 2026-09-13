@@ -1,0 +1,28 @@
+Title: Acceptable Use - Procedure
+Document ID: IT-0027
+Department: Information Technology
+Type: Procedure
+Version: 3.4
+Effective date: 2024-05-24
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: IT-0071, IT-0039
+
+Purpose
+This policy sets what company devices and networks may be used for.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- Company systems are for work. Limited personal use is allowed if it does not break policy or law.
+- Installing unlicensed software or bypassing security controls is prohibited.
+- The company may monitor use of its systems for security and compliance.
+
+Contact
+IT Service Desk: it@t2.example

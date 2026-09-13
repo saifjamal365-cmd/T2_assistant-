@@ -1,0 +1,27 @@
+Title: On-Call Policy
+Document ID: OPS-0041
+Department: Operations
+Type: Policy
+Version: 3.0
+Effective date: 2023-12-08
+Status: Active
+Owner: Operations Excellence
+Applies to: All employees
+Related documents: HR-0055, OPS-0015
+
+1. Purpose
+This policy covers out-of-hours on-call duty.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- On-call runs in 1-week rotations; the schedule is published a month ahead.
+- An on-call allowance of 300 SAR per week is paid, plus overtime for call-outs.
+- The on-call engineer acknowledges an alert within 15 minutes.
+
+4. Exceptions
+Exceptions need written approval from Operations Excellence.
+
+5. Contact
+For questions, contact ops@t2.example.

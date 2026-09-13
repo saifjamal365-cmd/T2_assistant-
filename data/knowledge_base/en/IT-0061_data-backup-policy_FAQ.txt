@@ -1,0 +1,17 @@
+Title: Data Backup - FAQ
+Document ID: IT-0061
+Department: Information Technology
+Type: FAQ
+Version: 3.2
+Effective date: 2025-04-18
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: IT-0111, LEG-0047
+
+Frequently asked questions about data backup - faq.
+
+Q: Are files on my laptop backed up?
+A: Only if they are on approved company storage.
+
+More detail is in the matching policy document.

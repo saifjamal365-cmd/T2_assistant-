@@ -1,0 +1,19 @@
+Title: Corporate Card - Quick Reference
+Document ID: FIN-0015
+Department: Finance
+Type: Quick Reference
+Version: 3.0
+Effective date: 2024-09-01
+Status: Active
+Owner: Finance Shared Services
+Applies to: All employees
+Related documents: FIN-0007, FIN-0023
+
+Quick reference - Corporate Card - Quick Reference.
+
+Key points
+- The card is for business expenses only; personal use is not allowed.
+- Receipts and a short note are uploaded within 5 days of each transaction.
+- Undocumented transactions after 30 days may be deducted from salary.
+
+Owner: Finance Shared Services. Full policy: FIN policy set.

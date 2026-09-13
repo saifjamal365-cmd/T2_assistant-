@@ -1,0 +1,23 @@
+Title: Annual Leave - FAQ
+Document ID: HR-0005
+Department: Human Resources
+Type: FAQ
+Version: 3.2
+Effective date: 2025-01-30
+Status: Active
+Owner: HR Operations
+Applies to: All employees
+Related documents: HR-0015, HR-0023, HR-0039
+
+Frequently asked questions about annual leave - faq.
+
+Q: How many annual leave days do I get?
+A: Full-time employees get 25 paid days per year.
+
+Q: How far in advance must I request leave?
+A: At least 3 working days before the leave starts.
+
+Q: Can I carry unused days to next year?
+A: Yes, up to 7 days; the rest is lost.
+
+More detail is in the matching policy document.

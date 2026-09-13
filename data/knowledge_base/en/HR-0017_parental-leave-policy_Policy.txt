@@ -1,0 +1,28 @@
+Title: Parental Leave Policy
+Document ID: HR-0017
+Department: Human Resources
+Type: Policy
+Version: 3.4
+Effective date: 2025-06-07
+Status: Active
+Owner: HR Operations
+Applies to: All employees
+Related documents: HR-0007, HR-0015, HR-0191
+
+1. Purpose
+This policy covers paid leave for the birth or adoption of a child.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- The primary caregiver receives 60 paid days; the secondary caregiver receives 5 paid days.
+- Requests should reach HR at least 30 days before the expected start date with supporting documents.
+- Leave may be split into two blocks within the first year after the birth or adoption.
+- Job protection applies: the employee returns to the same or an equivalent role.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

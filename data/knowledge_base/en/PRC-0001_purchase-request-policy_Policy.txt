@@ -1,0 +1,27 @@
+Title: Purchase Request Policy
+Document ID: PRC-0001
+Department: Procurement
+Type: Policy
+Version: 3.2
+Effective date: 2023-07-19
+Status: Active
+Owner: Procurement Office
+Applies to: All employees
+Related documents: FIN-0039, FIN-0055, PRC-0015
+
+1. Purpose
+This policy explains how to raise a purchase request.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- A purchase request states what is needed, why, the budget line and the preferred supplier.
+- Do not commit to a supplier or place an order before the request is approved.
+- Approved requests become a purchase order sent to the supplier by Procurement.
+
+4. Exceptions
+Exceptions need written approval from Procurement Office.
+
+5. Contact
+For questions, contact prc@t2.example.

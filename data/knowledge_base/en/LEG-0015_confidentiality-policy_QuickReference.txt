@@ -1,0 +1,19 @@
+Title: Confidentiality - Quick Reference
+Document ID: LEG-0015
+Department: Legal & Compliance
+Type: Quick Reference
+Version: 3.1
+Effective date: 2024-07-27
+Status: Active
+Owner: Legal & Compliance Office
+Applies to: All employees
+Related documents: LEG-0007, LEG-0071, MKT-0015
+
+Quick reference - Confidentiality - Quick Reference.
+
+Key points
+- Do not share confidential information outside the company without written approval.
+- Confidentiality continues after employment ends.
+- Mark documents with the correct sensitivity label before sharing internally.
+
+Owner: Legal & Compliance Office. Full policy: LEG policy set.

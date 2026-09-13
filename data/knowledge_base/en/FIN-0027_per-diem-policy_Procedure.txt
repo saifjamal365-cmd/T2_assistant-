@@ -1,0 +1,28 @@
+Title: Per Diem - Procedure
+Document ID: FIN-0027
+Department: Finance
+Type: Procedure
+Version: 3.3
+Effective date: 2023-01-01
+Status: Active
+Owner: Finance Shared Services
+Applies to: All employees
+Related documents: FIN-0023, FIN-0007
+
+Purpose
+This policy sets the daily allowance for meals and incidentals while travelling.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- The per diem covers meals and small incidentals and removes the need for individual meal receipts.
+- The daily rate is 250 EGP for domestic travel and 400 EGP for international travel.
+- The per diem is not paid for days where all meals are provided.
+
+Contact
+Finance Shared Services: fin@t2.example

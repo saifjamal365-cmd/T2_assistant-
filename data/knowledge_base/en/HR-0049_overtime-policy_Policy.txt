@@ -1,0 +1,27 @@
+Title: Overtime Policy
+Document ID: HR-0049
+Department: Human Resources
+Type: Policy
+Version: 3.2
+Effective date: 2024-03-26
+Status: Active
+Owner: HR Operations
+Applies to: All employees
+Related documents: HR-0047, OPS-0047
+
+1. Purpose
+This policy explains when overtime is paid and how it is approved.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Overtime must be approved in writing by the manager before it is worked.
+- Overtime is paid at 1.5 times the normal hourly rate.
+- Employees at grade M3 and above are not eligible for overtime pay.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

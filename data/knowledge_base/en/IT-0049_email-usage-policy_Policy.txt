@@ -1,0 +1,27 @@
+Title: Email Usage Policy
+Document ID: IT-0049
+Department: Information Technology
+Type: Policy
+Version: 3.4
+Effective date: 2024-05-31
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: IT-0031, IT-0103, LEG-0047
+
+1. Purpose
+This policy covers correct use of company email.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Company email is for business communication and is a company record.
+- Do not auto-forward company email to a personal account.
+- External emails with attachments over 10 MB should use the file-share link instead.
+
+4. Exceptions
+Exceptions need written approval from IT Service Desk.
+
+5. Contact
+For questions, contact it@t2.example.

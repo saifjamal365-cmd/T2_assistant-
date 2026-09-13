@@ -1,0 +1,16 @@
+Title: Mail and Courier - FAQ
+Document ID: FAC-0077
+Department: Facilities
+Type: FAQ
+Version: 3.2
+Effective date: 2024-07-25
+Status: Active
+Owner: Facilities Management
+Applies to: All employees
+
+Frequently asked questions about mail and courier - faq.
+
+Q: Can I ship a personal package to the office?
+A: No, personal parcels should not be sent to the office address.
+
+More detail is in the matching policy document.

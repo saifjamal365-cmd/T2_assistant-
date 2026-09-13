@@ -1,0 +1,27 @@
+Title: Intellectual Property Policy
+Document ID: LEG-0065
+Department: Legal & Compliance
+Type: Policy
+Version: 3.3
+Effective date: 2025-06-05
+Status: Active
+Owner: Legal & Compliance Office
+Applies to: All employees
+Related documents: LEG-0015, IT-0071
+
+1. Purpose
+This policy states who owns work created during employment.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Work created for T2 as part of your job belongs to T2.
+- Using third-party code or content requires a compatible licence, checked with Legal.
+- Personal projects on your own time and equipment remain yours, if unrelated to company work.
+
+4. Exceptions
+Exceptions need written approval from Legal & Compliance Office.
+
+5. Contact
+For questions, contact leg@t2.example.

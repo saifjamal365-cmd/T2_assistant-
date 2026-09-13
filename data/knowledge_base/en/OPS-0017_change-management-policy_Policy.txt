@@ -1,0 +1,27 @@
+Title: Change Management Policy
+Document ID: OPS-0017
+Department: Operations
+Type: Policy
+Version: 3.3
+Effective date: 2023-02-04
+Status: Active
+Owner: Operations Excellence
+Applies to: All employees
+Related documents: OPS-0015, OPS-0031
+
+1. Purpose
+This policy explains how changes to live systems are approved.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Every change to a live system is recorded with a plan, a test and a rollback step.
+- Standard low-risk changes are pre-approved; other changes go to the change board.
+- Changes are not deployed on Friday or during a change freeze.
+
+4. Exceptions
+Exceptions need written approval from Operations Excellence.
+
+5. Contact
+For questions, contact ops@t2.example.

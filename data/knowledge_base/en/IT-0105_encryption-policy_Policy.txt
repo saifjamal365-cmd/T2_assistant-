@@ -1,0 +1,27 @@
+Title: Encryption Policy
+Document ID: IT-0105
+Department: Information Technology
+Type: Policy
+Version: 3.0
+Effective date: 2024-07-13
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: IT-0063, LEG-0007
+
+1. Purpose
+This policy states where encryption is required.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- All company laptops and phones must have full-disk encryption enabled.
+- Client or financial data sent outside the company must be encrypted or sent via the secure portal.
+- Encryption keys are managed by IT and never shared by email.
+
+4. Exceptions
+Exceptions need written approval from IT Service Desk.
+
+5. Contact
+For questions, contact it@t2.example.

@@ -1,0 +1,18 @@
+Title: Flexible Hours - Quick Reference
+Document ID: HR-0071
+Department: Human Resources
+Type: Quick Reference
+Version: 3.0
+Effective date: 2024-01-24
+Status: Active
+Owner: HR Operations
+Applies to: All employees
+Related documents: HR-0047, HR-0063
+
+Quick reference - Flexible Hours - Quick Reference.
+
+Key points
+- Start time may be chosen between 07:00 and 09:30, keeping the full daily hours.
+- Any flexible arrangement must still cover the core hours.
+
+Owner: HR Operations. Full policy: HR policy set.

@@ -1,0 +1,27 @@
+Title: Bring Your Own Device Policy
+Document ID: IT-0033
+Department: Information Technology
+Type: Policy
+Version: 3.0
+Effective date: 2023-01-11
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: IT-0031, IT-0015
+
+1. Purpose
+This policy covers using personal phones or laptops for work.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Personal devices may access email and calendar only, and must be enrolled in mobile management.
+- The device must have a screen lock and up-to-date operating system.
+- The company can remotely wipe work data from a lost or stolen device.
+
+4. Exceptions
+Exceptions need written approval from IT Service Desk.
+
+5. Contact
+For questions, contact it@t2.example.

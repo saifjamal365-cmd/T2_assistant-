@@ -1,0 +1,27 @@
+Title: Workplace Health and Safety Policy (Riyadh Office)
+Document ID: FAC-0105
+Department: Facilities
+Type: Policy
+Version: 2.0
+Effective date: 2024-11-19
+Status: Active
+Owner: Facilities Management
+Applies to: Riyadh Office employees
+Related documents: FAC-0047, FAC-0055, FAC-0063
+
+1. Purpose
+This policy sets basic health and safety rules for the office.
+
+2. Scope
+This policy applies to Riyadh Office employees.
+
+3. Policy
+- Any workplace injury, however minor, is reported to the office manager within 24 hours using the incident form.
+- Keep walkways and fire exits clear at all times.
+- Employees with symptoms of a contagious illness work from home instead of coming in.
+
+4. Exceptions
+Exceptions need written approval from Facilities Management.
+
+5. Contact
+For questions, contact fac@t2.example.

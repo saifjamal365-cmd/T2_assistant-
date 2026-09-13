@@ -1,0 +1,27 @@
+Title: Fire Safety Policy
+Document ID: FAC-0041
+Department: Facilities
+Type: Policy
+Version: 3.4
+Effective date: 2024-12-18
+Status: Active
+Owner: Facilities Management
+Applies to: All employees
+Related documents: FAC-0039, FAC-0023
+
+1. Purpose
+This policy covers fire drills and evacuation.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Fire drills are held 2 times a year and attendance is mandatory for everyone on site.
+- On the alarm, leave by the nearest exit and go to the assembly point. Do not use lifts.
+- Fire wardens check their area and report headcount at the assembly point.
+
+4. Exceptions
+Exceptions need written approval from Facilities Management.
+
+5. Contact
+For questions, contact fac@t2.example.

@@ -1,0 +1,27 @@
+Title: Knowledge Sharing Policy
+Document ID: OPS-0049
+Department: Operations
+Type: Policy
+Version: 3.3
+Effective date: 2023-02-03
+Status: Active
+Owner: Operations Excellence
+Applies to: All employees
+Related documents: OPS-0015, HR-0111
+
+1. Purpose
+This policy encourages writing down and sharing how things are done.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Every recurring task should have a short written procedure in the shared knowledge base.
+- Post-incident reviews and design decisions are written up and shared, not kept private.
+- Pages unreviewed for 12 months are flagged for an owner to update or archive.
+
+4. Exceptions
+Exceptions need written approval from Operations Excellence.
+
+5. Contact
+For questions, contact ops@t2.example.

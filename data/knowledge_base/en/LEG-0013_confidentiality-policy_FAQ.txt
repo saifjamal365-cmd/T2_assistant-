@@ -1,0 +1,17 @@
+Title: Confidentiality - FAQ
+Document ID: LEG-0013
+Department: Legal & Compliance
+Type: FAQ
+Version: 3.3
+Effective date: 2024-12-08
+Status: Active
+Owner: Legal & Compliance Office
+Applies to: All employees
+Related documents: LEG-0007, LEG-0071, MKT-0015
+
+Frequently asked questions about confidentiality - faq.
+
+Q: Does confidentiality end when I leave?
+A: No. It continues after employment ends.
+
+More detail is in the matching policy document.

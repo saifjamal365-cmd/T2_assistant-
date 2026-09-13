@@ -1,0 +1,17 @@
+Title: Code of Conduct - FAQ
+Document ID: HR-0141
+Department: Human Resources
+Type: FAQ
+Version: 3.1
+Effective date: 2024-08-08
+Status: Active
+Owner: HR Operations
+Applies to: All employees
+Related documents: HR-0151, LEG-0023, LEG-0063
+
+Frequently asked questions about code of conduct - faq.
+
+Q: Where do I report a conflict of interest?
+A: In writing to HR Operations.
+
+More detail is in the matching policy document.

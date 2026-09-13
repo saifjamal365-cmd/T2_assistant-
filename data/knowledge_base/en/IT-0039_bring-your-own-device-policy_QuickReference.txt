@@ -1,0 +1,19 @@
+Title: Bring Your Own Device - Quick Reference
+Document ID: IT-0039
+Department: Information Technology
+Type: Quick Reference
+Version: 3.0
+Effective date: 2024-09-14
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: IT-0031, IT-0015
+
+Quick reference - Bring Your Own Device - Quick Reference.
+
+Key points
+- Personal devices may access email and calendar only, and must be enrolled in mobile management.
+- The device must have a screen lock and up-to-date operating system.
+- The company can remotely wipe work data from a lost or stolen device.
+
+Owner: IT Service Desk. Full policy: IT policy set.

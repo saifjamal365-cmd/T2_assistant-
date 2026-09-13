@@ -1,0 +1,17 @@
+Title: Encryption - FAQ
+Document ID: IT-0109
+Department: Information Technology
+Type: FAQ
+Version: 3.4
+Effective date: 2023-11-14
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: IT-0063, LEG-0007
+
+Frequently asked questions about encryption - faq.
+
+Q: Is my work laptop encrypted?
+A: It must have full-disk encryption enabled.
+
+More detail is in the matching policy document.

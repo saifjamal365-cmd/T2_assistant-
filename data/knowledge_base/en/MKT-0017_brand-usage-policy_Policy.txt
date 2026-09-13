@@ -1,0 +1,27 @@
+Title: Brand Usage Policy
+Document ID: MKT-0017
+Department: Marketing & Communications
+Type: Policy
+Version: 3.1
+Effective date: 2024-05-28
+Status: Active
+Owner: Corporate Communications
+Applies to: All employees
+Related documents: MKT-0007, MKT-0015
+
+1. Purpose
+This policy covers correct use of the company logo and name.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Use only the current logo files from the brand portal; do not stretch, recolour or add effects.
+- Partners and suppliers need written permission to use the T2 name or logo.
+- Templates for slides, documents and email signatures are in the brand portal.
+
+4. Exceptions
+Exceptions need written approval from Corporate Communications.
+
+5. Contact
+For questions, contact mkt@t2.example.

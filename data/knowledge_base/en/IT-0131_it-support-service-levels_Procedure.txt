@@ -1,0 +1,28 @@
+Title: IT Support Service Levels - Procedure
+Document ID: IT-0131
+Department: Information Technology
+Type: Procedure
+Version: 3.0
+Effective date: 2023-02-03
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: IT-0023, IT-0079
+
+Purpose
+This document sets response times for IT support tickets.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- Standard tickets are responded to within 1 business day(s).
+- Critical issues, such as a full outage, are responded to within 4 hour(s) during business hours.
+- Raise a ticket through the service desk portal, not by contacting staff directly.
+
+Contact
+IT Service Desk: it@t2.example

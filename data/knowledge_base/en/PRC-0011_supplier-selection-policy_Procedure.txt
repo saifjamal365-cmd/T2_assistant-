@@ -1,0 +1,28 @@
+Title: Supplier Selection - Procedure
+Document ID: PRC-0011
+Department: Procurement
+Type: Procedure
+Version: 3.1
+Effective date: 2024-07-14
+Status: Active
+Owner: Procurement Office
+Applies to: All employees
+Related documents: PRC-0007, FIN-0039, LEG-0023
+
+Purpose
+This policy explains how suppliers are chosen fairly.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- Selection is based on written criteria: price, quality, delivery, and risk.
+- For spend over 25000 AED, at least 3 suppliers are invited to quote.
+- A conflict of interest with a supplier is declared and the person steps out of the decision.
+
+Contact
+Procurement Office: prc@t2.example

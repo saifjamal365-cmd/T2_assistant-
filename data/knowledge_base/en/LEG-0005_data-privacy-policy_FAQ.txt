@@ -1,0 +1,20 @@
+Title: Data Privacy - FAQ
+Document ID: LEG-0005
+Department: Legal & Compliance
+Type: FAQ
+Version: 3.0
+Effective date: 2024-12-08
+Status: Active
+Owner: Legal & Compliance Office
+Applies to: All employees
+Related documents: LEG-0015, LEG-0047, IT-0095
+
+Frequently asked questions about data privacy - faq.
+
+Q: Where can I store customer data?
+A: Only on approved company systems, never on personal devices.
+
+Q: How fast must a data breach be reported?
+A: Within 4 hour(s) of discovering it.
+
+More detail is in the matching policy document.

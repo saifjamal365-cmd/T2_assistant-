@@ -1,0 +1,28 @@
+Title: Contract Signing Authority - Procedure
+Document ID: LEG-0051
+Department: Legal & Compliance
+Type: Procedure
+Version: 3.1
+Effective date: 2023-05-23
+Status: Active
+Owner: Legal & Compliance Office
+Applies to: All employees
+Related documents: FIN-0039, FIN-0055
+
+Purpose
+This policy states who is allowed to sign contracts on behalf of the company.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- Only named signatories in the authority matrix may sign contracts for T2.
+- Contracts over 1000000 EGP or longer than 5 years need board approval.
+- Legal reviews every contract before signing.
+
+Contact
+Legal & Compliance Office: leg@t2.example

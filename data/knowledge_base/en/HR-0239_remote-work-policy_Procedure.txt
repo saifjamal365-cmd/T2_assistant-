@@ -1,0 +1,29 @@
+Title: Remote Work - Procedure (Riyadh Office)
+Document ID: HR-0239
+Department: Human Resources
+Type: Procedure
+Version: 2.0
+Effective date: 2023-03-31
+Status: Active
+Owner: HR Operations
+Applies to: Riyadh Office employees
+Related documents: HR-0047, IT-0047, IT-0079
+
+Purpose
+This policy covers working from home and fully remote arrangements.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- Approved employees may work remotely up to 3 days per week.
+- Remote employees must join scheduled meetings with the camera on unless agreed otherwise.
+- Company equipment used remotely must connect only through the approved VPN.
+- A fully remote arrangement needs HR approval and is reviewed every 12 months.
+
+Contact
+HR Operations: hr@t2.example
