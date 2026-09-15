@@ -2,12 +2,13 @@ Title: Building Access - Procedure (Jeddah Office)
 Document ID: FAC-0151
 Department: Facilities
 Type: Procedure
-Version: 2.1
-Effective date: 2024-12-21
-Status: Active
+Version: 1.4
+Effective date: 2023-04-07
+Status: Superseded
 Owner: Facilities Management
 Applies to: Jeddah Office employees
 Related documents: FAC-0015, FAC-0031
+Superseded by: FAC-0019
 
 Purpose
 This policy covers access cards and entry to the office.
@@ -21,7 +22,7 @@ Steps
 
 Rules that apply
 - Every employee has an access card. Do not let anyone "tailgate" in behind you.
-- Lost cards are reported the same day; a replacement costs 25 AED.
+- Lost cards are reported the same day; a replacement costs 25 EGP.
 - After-hours access is logged and may need manager approval.
 
 Contact

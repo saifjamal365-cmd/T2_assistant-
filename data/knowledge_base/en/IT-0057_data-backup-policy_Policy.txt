@@ -3,7 +3,7 @@ Document ID: IT-0057
 Department: Information Technology
 Type: Policy
 Version: 3.2
-Effective date: 2025-01-31
+Effective date: 2024-10-19
 Status: Active
 Owner: IT Service Desk
 Applies to: All employees
@@ -16,7 +16,7 @@ This policy explains what is backed up and how often.
 This policy applies to all employees.
 
 3. Policy
-- Files on approved company storage are backed up automatically every 4 hours.
+- Files on approved company storage are backed up automatically every night.
 - Backups are kept for 30 days and are tested every quarter.
 - Files kept only on a local laptop are not backed up and may be lost.
 

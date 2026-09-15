@@ -2,8 +2,8 @@ Title: Performance Review - FAQ
 Document ID: HR-0085
 Department: Human Resources
 Type: FAQ
-Version: 3.0
-Effective date: 2024-07-20
+Version: 3.4
+Effective date: 2023-07-26
 Status: Active
 Owner: HR Operations
 Applies to: All employees
@@ -12,6 +12,6 @@ Related documents: HR-0079, HR-0095, HR-0103
 Frequently asked questions about performance review - faq.
 
 Q: How often are performance reviews?
-A: 1 times a year.
+A: 2 times a year.
 
 More detail is in the matching policy document.

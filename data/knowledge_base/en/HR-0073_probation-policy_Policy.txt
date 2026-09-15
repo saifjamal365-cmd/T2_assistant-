@@ -2,8 +2,8 @@ Title: Probation Policy
 Document ID: HR-0073
 Department: Human Resources
 Type: Policy
-Version: 3.0
-Effective date: 2024-01-22
+Version: 3.1
+Effective date: 2023-03-19
 Status: Active
 Owner: HR Operations
 Applies to: All employees
@@ -16,7 +16,7 @@ This policy sets the probation period for new hires and how it is assessed.
 This policy applies to all employees.
 
 3. Policy
-- The probation period is 3 months from the start date.
+- The probation period is 6 months from the start date.
 - A review meeting is held at the midpoint and at the end of probation.
 - During probation, either side may end the contract with 7 days' notice.
 

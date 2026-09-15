@@ -2,8 +2,8 @@ Title: Hardware Request - Procedure (Riyadh Office)
 Document ID: IT-0165
 Department: Information Technology
 Type: Procedure
-Version: 2.0
-Effective date: 2023-07-18
+Version: 2.2
+Effective date: 2023-03-03
 Status: Active
 Owner: IT Service Desk
 Applies to: Riyadh Office employees

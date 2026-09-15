@@ -2,8 +2,8 @@ Title: Promotion Policy
 Document ID: HR-0089
 Department: Human Resources
 Type: Policy
-Version: 3.3
-Effective date: 2024-07-04
+Version: 3.4
+Effective date: 2023-12-01
 Status: Active
 Owner: HR Operations
 Applies to: All employees

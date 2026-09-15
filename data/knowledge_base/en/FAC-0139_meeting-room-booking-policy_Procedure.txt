@@ -3,7 +3,7 @@ Document ID: FAC-0139
 Department: Facilities
 Type: Procedure
 Version: 2.1
-Effective date: 2023-06-23
+Effective date: 2025-05-03
 Status: Active
 Owner: Facilities Management
 Applies to: Jeddah Office employees

@@ -2,8 +2,8 @@ Title: Remote Work - Quick Reference
 Document ID: HR-0063
 Department: Human Resources
 Type: Quick Reference
-Version: 3.0
-Effective date: 2023-10-08
+Version: 3.1
+Effective date: 2023-12-07
 Status: Active
 Owner: HR Operations
 Applies to: All employees
@@ -15,6 +15,6 @@ Key points
 - Approved employees may work remotely up to 3 days per week.
 - Remote employees must join scheduled meetings with the camera on unless agreed otherwise.
 - Company equipment used remotely must connect only through the approved VPN.
-- A fully remote arrangement needs HR approval and is reviewed every 6 months.
+- A fully remote arrangement needs HR approval and is reviewed every 12 months.
 
 Owner: HR Operations. Full policy: HR policy set.

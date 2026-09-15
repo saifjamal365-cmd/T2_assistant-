@@ -42,6 +42,8 @@ _META_FIELDS = (
     "superseded_by",
 )
 
+# 256, not 512: the embedding model's 8191-token limit is easier to stay under
+# in smaller batches, since some passages are long.
 _BATCH = 256
 
 

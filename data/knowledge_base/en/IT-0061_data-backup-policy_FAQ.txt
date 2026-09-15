@@ -2,8 +2,8 @@ Title: Data Backup - FAQ
 Document ID: IT-0061
 Department: Information Technology
 Type: FAQ
-Version: 3.2
-Effective date: 2025-04-18
+Version: 3.4
+Effective date: 2023-09-08
 Status: Active
 Owner: IT Service Desk
 Applies to: All employees

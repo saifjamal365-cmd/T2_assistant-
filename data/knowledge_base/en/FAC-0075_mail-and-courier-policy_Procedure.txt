@@ -3,7 +3,7 @@ Document ID: FAC-0075
 Department: Facilities
 Type: Procedure
 Version: 3.3
-Effective date: 2024-01-26
+Effective date: 2023-01-21
 Status: Active
 Owner: Facilities Management
 Applies to: All employees
@@ -21,7 +21,7 @@ Steps
 Rules that apply
 - Personal parcels should not be sent to the office address.
 - Outgoing business courier is booked through reception with a cost code.
-- Reception holds parcels for 5 days before returning them to sender.
+- Reception holds parcels for 7 days before returning them to sender.
 
 Contact
 Facilities Management: fac@t2.example

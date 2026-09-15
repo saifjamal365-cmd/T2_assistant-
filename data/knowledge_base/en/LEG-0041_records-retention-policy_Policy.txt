@@ -3,7 +3,7 @@ Document ID: LEG-0041
 Department: Legal & Compliance
 Type: Policy
 Version: 3.4
-Effective date: 2023-02-04
+Effective date: 2024-01-17
 Status: Active
 Owner: Legal & Compliance Office
 Applies to: All employees
@@ -16,7 +16,7 @@ This policy states how long different records are kept.
 This policy applies to all employees.
 
 3. Policy
-- Financial records are kept for 10 years; HR records for 5 years after an employee leaves.
+- Financial records are kept for 7 years; HR records for 7 years after an employee leaves.
 - Records past their retention period are deleted in a controlled way, with a log.
 - Do not delete records that are subject to a legal hold.
 

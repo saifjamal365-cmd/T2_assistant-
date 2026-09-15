@@ -2,8 +2,8 @@ Title: Working Hours - Procedure (Riyadh Office)
 Document ID: HR-0227
 Department: Human Resources
 Type: Procedure
-Version: 2.3
-Effective date: 2025-02-13
+Version: 2.1
+Effective date: 2023-02-21
 Status: Active
 Owner: HR Operations
 Applies to: Riyadh Office employees
@@ -20,7 +20,7 @@ Steps
 5. Keep a copy of the approval for your records.
 
 Rules that apply
-- The standard work week is 40 hours over 5 days.
+- The standard work week is 45 hours over 5 days.
 - Core hours, when everyone must be reachable, are 10:00 to 15:00.
 - Time is recorded in the HR system; managers review timesheets weekly.
 

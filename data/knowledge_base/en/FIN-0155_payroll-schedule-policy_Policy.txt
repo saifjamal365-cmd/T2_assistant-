@@ -2,8 +2,8 @@ Title: Payroll Schedule Policy (Cairo Office)
 Document ID: FIN-0155
 Department: Finance
 Type: Policy
-Version: 2.4
-Effective date: 2024-03-08
+Version: 2.0
+Effective date: 2023-08-05
 Status: Active
 Owner: Finance Shared Services
 Applies to: Cairo Office employees
@@ -16,7 +16,7 @@ This document states when salaries are paid.
 This policy applies to Cairo Office employees.
 
 3. Policy
-- Salaries are paid on the last day of each month, or the previous working day if that is a weekend or holiday.
+- Salaries are paid on the 27th of each month, or the previous working day if that is a weekend or holiday.
 - Changes to bank details must reach Payroll 3 working days before payday.
 - Payslips are available in the HR system on payday.
 

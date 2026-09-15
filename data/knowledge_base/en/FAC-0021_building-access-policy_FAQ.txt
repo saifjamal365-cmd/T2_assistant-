@@ -2,8 +2,8 @@ Title: Building Access - FAQ
 Document ID: FAC-0021
 Department: Facilities
 Type: FAQ
-Version: 3.1
-Effective date: 2024-11-13
+Version: 3.3
+Effective date: 2025-03-26
 Status: Active
 Owner: Facilities Management
 Applies to: All employees
@@ -12,6 +12,6 @@ Related documents: FAC-0015, FAC-0031
 Frequently asked questions about building access - faq.
 
 Q: What if I lose my access card?
-A: Report it the same day; a replacement costs 100 AED.
+A: Report it the same day; a replacement costs 100 SAR.
 
 More detail is in the matching policy document.

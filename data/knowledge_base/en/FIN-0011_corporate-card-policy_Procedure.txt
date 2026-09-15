@@ -2,8 +2,8 @@ Title: Corporate Card - Procedure
 Document ID: FIN-0011
 Department: Finance
 Type: Procedure
-Version: 3.1
-Effective date: 2024-06-18
+Version: 3.2
+Effective date: 2024-08-29
 Status: Active
 Owner: Finance Shared Services
 Applies to: All employees
@@ -21,8 +21,8 @@ Steps
 
 Rules that apply
 - The card is for business expenses only; personal use is not allowed.
-- Receipts and a short note are uploaded within 7 days of each transaction.
-- Undocumented transactions after 45 days may be deducted from salary.
+- Receipts and a short note are uploaded within 5 days of each transaction.
+- Undocumented transactions after 30 days may be deducted from salary.
 
 Contact
 Finance Shared Services: fin@t2.example

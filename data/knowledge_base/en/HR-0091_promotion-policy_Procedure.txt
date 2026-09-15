@@ -2,8 +2,8 @@ Title: Promotion - Procedure
 Document ID: HR-0091
 Department: Human Resources
 Type: Procedure
-Version: 3.3
-Effective date: 2024-08-31
+Version: 3.0
+Effective date: 2023-10-17
 Status: Active
 Owner: HR Operations
 Applies to: All employees
@@ -20,8 +20,8 @@ Steps
 5. Keep a copy of the approval for your records.
 
 Rules that apply
-- Promotions are considered 1 time(s) a year, aligned with the review cycle.
-- An employee must have at least 18 months in role and a rating of "meets" or above.
+- Promotions are considered 2 time(s) a year, aligned with the review cycle.
+- An employee must have at least 12 months in role and a rating of "meets" or above.
 - Promotions require the department head and HR to approve.
 
 Contact

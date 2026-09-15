@@ -2,8 +2,8 @@ Title: Invoice Processing - FAQ
 Document ID: FIN-0045
 Department: Finance
 Type: FAQ
-Version: 3.3
-Effective date: 2023-06-23
+Version: 3.1
+Effective date: 2023-06-17
 Status: Active
 Owner: Finance Shared Services
 Applies to: All employees

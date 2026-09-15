@@ -12,6 +12,6 @@ Related documents: FAC-0023
 Frequently asked questions about parking - faq.
 
 Q: How do I get a parking space?
-A: Join the waiting list; spaces are reviewed every 3 months.
+A: Join the waiting list; spaces are reviewed every 6 months.
 
 More detail is in the matching policy document.

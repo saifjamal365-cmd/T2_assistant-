@@ -2,8 +2,8 @@ Title: Printing - Quick Reference
 Document ID: IT-0127
 Department: Information Technology
 Type: Quick Reference
-Version: 3.0
-Effective date: 2023-06-27
+Version: 3.4
+Effective date: 2024-10-19
 Status: Active
 Owner: IT Service Desk
 Applies to: All employees
@@ -14,6 +14,6 @@ Quick reference - Printing - Quick Reference.
 Key points
 - Printing needs a badge tap at the printer to release the job.
 - Default printing is double-sided and black-and-white.
-- Unreleased jobs are deleted after 24 hours.
+- Unreleased jobs are deleted after 2 hours.
 
 Owner: IT Service Desk. Full policy: IT policy set.

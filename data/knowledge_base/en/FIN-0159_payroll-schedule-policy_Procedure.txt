@@ -2,12 +2,13 @@ Title: Payroll Schedule - Procedure (Cairo Office)
 Document ID: FIN-0159
 Department: Finance
 Type: Procedure
-Version: 2.2
-Effective date: 2024-07-11
-Status: Active
+Version: 1.2
+Effective date: 2023-10-06
+Status: Superseded
 Owner: Finance Shared Services
 Applies to: Cairo Office employees
 Related documents: HR-0103, FIN-0079
+Superseded by: FIN-0067
 
 Purpose
 This document states when salaries are paid.
@@ -20,7 +21,7 @@ Steps
 5. Keep a copy of the approval for your records.
 
 Rules that apply
-- Salaries are paid on the 25th of each month, or the previous working day if that is a weekend or holiday.
+- Salaries are paid on the 27th of each month, or the previous working day if that is a weekend or holiday.
 - Changes to bank details must reach Payroll 3 working days before payday.
 - Payslips are available in the HR system on payday.
 

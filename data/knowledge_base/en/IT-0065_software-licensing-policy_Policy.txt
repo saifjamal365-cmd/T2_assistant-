@@ -17,7 +17,7 @@ This policy applies to all employees.
 
 3. Policy
 - Only software approved and licensed by IT may be installed on company devices.
-- Free or trial software may be used for evaluation for up to 14 days, then licensed or removed.
+- Free or trial software may be used for evaluation for up to 30 days, then licensed or removed.
 - Using pirated software is a serious policy violation.
 
 4. Exceptions

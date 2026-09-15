@@ -2,8 +2,8 @@ Title: Security Incident Reporting - Procedure
 Document ID: IT-0091
 Department: Information Technology
 Type: Procedure
-Version: 3.2
-Effective date: 2023-02-17
+Version: 3.0
+Effective date: 2024-12-12
 Status: Active
 Owner: IT Service Desk
 Applies to: All employees
@@ -20,7 +20,7 @@ Steps
 5. Keep a copy of the approval for your records.
 
 Rules that apply
-- Report any suspected breach, lost device or leaked data to the security team within 1 hour(s).
+- Report any suspected breach, lost device or leaked data to the security team within 2 hour(s).
 - Do not try to investigate or fix it yourself; preserve evidence.
 - A written summary is filed within 1 working day(s) of the report.
 

@@ -9,7 +9,10 @@ For a policy question it:
   4. if the first answer is "I don't know" and it still has tries left, asks the
      model for a better search query and tries once more.
 
-It never uses knowledge from outside the retrieved passages (FR-03, FR-05).
+It never invents a policy fact from outside the retrieved passages (FR-03,
+FR-05). It is also given the recent conversation, so a question about the
+conversation itself ("what did I ask you first?") is answered from that
+history instead of being searched for in the documents.
 """
 
 from __future__ import annotations
@@ -24,20 +27,29 @@ _DONT_KNOW = "I don't know based on the current company documents."
 
 ANSWER_SYSTEM = f"""You are T2 Assistant, an internal company assistant.
 
-Answer the user's question using ONLY the passages below. Each passage starts
-with its document code, like "HR-0003". The passages come from T2's current
-policy documents.
+You are given the recent conversation and passages retrieved from T2's current
+policy documents. Each passage starts with its document code, like "HR-0003".
 
 Rules:
-- If the passages contain the answer: give a short, direct answer (2-4 sentences).
-  Then, on a new line, write "Sources: " followed by the document codes you used
-  (for example: "Sources: HR-0003, HR-0005").
+- If the question is about company policy: answer using ONLY the passages below.
+  If the passages contain the answer, give a short, direct answer (2-4 sentences),
+  then on a new line write "Sources: " followed by the document codes you used
+  (for example: "Sources: HR-0003, HR-0005"). If the passages do NOT contain the
+  answer, reply with exactly this sentence and nothing else: "{_DONT_KNOW}"
+- The question may assume something wrong (a number, a frequency, a rule) - for
+  example "since it happens every 6 months, when's the next one?" when it is
+  actually yearly. If the passages show the assumption is wrong, say so and give
+  the real answer from the passages - do not reply "{_DONT_KNOW}" just because
+  the question's assumption does not match the passages. Only use "{_DONT_KNOW}"
+  when the passages do not cover the topic at all.
 - If some passages are for a specific office (the title says so) and the question
   does not mention an office, use the general (Head Office) figure and add one
   line that some offices differ.
-- If the passages do NOT contain the answer: reply with exactly this sentence and
-  nothing else: "{_DONT_KNOW}"
-- Never add facts that are not in the passages.
+- If the question is instead about the conversation itself (for example "what did
+  I ask you first?" or "what did you just say?"), answer briefly using the
+  conversation shown below - do not use the passages for this, and do not say
+  "{_DONT_KNOW}".
+- Never add a policy fact that is not in the passages.
 - Reply in the same language as the question.
 """
 
@@ -57,16 +69,21 @@ def _last_user_text(messages: list[AnyMessage]) -> str:
     return ""
 
 
-def _standalone_question(messages: list[AnyMessage]) -> str:
+def _transcript(messages: list[AnyMessage]) -> str:
+    return "\n".join(
+        f"{'User' if isinstance(m, HumanMessage) else 'Assistant'}: {m.content}"
+        for m in messages
+        if isinstance(m, HumanMessage | AIMessage)
+    )
+
+
+def _standalone_question(messages: list[AnyMessage], transcript: str) -> str:
     """The latest question, with earlier context folded in (for follow-ups)."""
     latest = _last_user_text(messages)
     earlier = [m for m in messages if isinstance(m, HumanMessage | AIMessage)][:-1]
     if not earlier:
         return latest
 
-    transcript = "\n".join(
-        f"{'User' if isinstance(m, HumanMessage) else 'Assistant'}: {m.content}" for m in messages
-    )
     reply = get_llm().invoke([SystemMessage(_STANDALONE_SYSTEM), HumanMessage(transcript)])
     return str(reply.content).strip() or latest
 
@@ -79,11 +96,17 @@ def _format_passages(passages: list[Passage]) -> str:
     return "\n\n".join(blocks)
 
 
-def _write_answer(question: str, passages: list[Passage]) -> str:
+def _write_answer(question: str, passages: list[Passage], transcript: str) -> str:
     if not passages:
         return _DONT_KNOW
     prompt = [
-        SystemMessage(ANSWER_SYSTEM + "\n\nPassages:\n" + _format_passages(passages)),
+        SystemMessage(
+            ANSWER_SYSTEM
+            + "\n\nRecent conversation:\n"
+            + transcript
+            + "\n\nPassages:\n"
+            + _format_passages(passages)
+        ),
         HumanMessage(question),
     ]
     reply = get_llm().invoke(prompt)
@@ -97,13 +120,14 @@ def _better_query(question: str) -> str:
 
 def respond(messages: list[AnyMessage]) -> AIMessage:
     """Answer the latest question from the knowledge base."""
-    question = _standalone_question(messages)
+    transcript = _transcript(messages)
+    question = _standalone_question(messages, transcript)
 
     query = question
     answer = _DONT_KNOW
     for attempt in range(settings.max_retrieval_tries):
         passages = search(query)
-        answer = _write_answer(question, passages)
+        answer = _write_answer(question, passages, transcript)
         if not answer.startswith(_DONT_KNOW[:15]):
             break
         if attempt + 1 < settings.max_retrieval_tries:

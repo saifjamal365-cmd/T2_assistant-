@@ -2,8 +2,8 @@ Title: Security Incident Reporting - Quick Reference
 Document ID: IT-0095
 Department: Information Technology
 Type: Quick Reference
-Version: 3.4
-Effective date: 2023-01-09
+Version: 3.0
+Effective date: 2024-02-18
 Status: Active
 Owner: IT Service Desk
 Applies to: All employees
@@ -12,8 +12,8 @@ Related documents: IT-0103, LEG-0007, IT-0015
 Quick reference - Security Incident Reporting - Quick Reference.
 
 Key points
-- Report any suspected breach, lost device or leaked data to the security team within 1 hour(s).
+- Report any suspected breach, lost device or leaked data to the security team within 2 hour(s).
 - Do not try to investigate or fix it yourself; preserve evidence.
-- A written summary is filed within 2 working day(s) of the report.
+- A written summary is filed within 1 working day(s) of the report.
 
 Owner: IT Service Desk. Full policy: IT policy set.

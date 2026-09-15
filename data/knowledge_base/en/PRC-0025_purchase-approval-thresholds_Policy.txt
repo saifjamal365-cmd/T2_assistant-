@@ -2,8 +2,8 @@ Title: Purchase Approval Thresholds
 Document ID: PRC-0025
 Department: Procurement
 Type: Policy
-Version: 3.4
-Effective date: 2023-02-07
+Version: 3.1
+Effective date: 2023-09-08
 Status: Active
 Owner: Procurement Office
 Applies to: All employees
@@ -16,9 +16,9 @@ This quick reference lists the approval level needed for each spend amount.
 This policy applies to all employees.
 
 3. Policy
-- Up to 5000 AED: line manager.
-- 5000 to 100000 AED: department head.
-- Over 100000 AED: Procurement Committee and CFO.
+- Up to 10000 AED: line manager.
+- 10000 to 50000 AED: department head.
+- Over 50000 AED: Procurement Committee and CFO.
 
 4. Exceptions
 Exceptions need written approval from Procurement Office.

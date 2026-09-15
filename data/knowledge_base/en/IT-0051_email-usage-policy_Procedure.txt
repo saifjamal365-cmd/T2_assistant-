@@ -22,7 +22,7 @@ Steps
 Rules that apply
 - Company email is for business communication and is a company record.
 - Do not auto-forward company email to a personal account.
-- External emails with attachments over 20 MB should use the file-share link instead.
+- External emails with attachments over 10 MB should use the file-share link instead.
 
 Contact
 IT Service Desk: it@t2.example

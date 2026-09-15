@@ -2,8 +2,8 @@ Title: Overtime - Procedure
 Document ID: HR-0051
 Department: Human Resources
 Type: Procedure
-Version: 3.4
-Effective date: 2023-12-22
+Version: 3.1
+Effective date: 2023-06-27
 Status: Active
 Owner: HR Operations
 Applies to: All employees
@@ -21,7 +21,7 @@ Steps
 
 Rules that apply
 - Overtime must be approved in writing by the manager before it is worked.
-- Overtime is paid at 1.25 times the normal hourly rate.
+- Overtime is paid at 2 times the normal hourly rate.
 - Employees at grade M3 and above are not eligible for overtime pay.
 
 Contact

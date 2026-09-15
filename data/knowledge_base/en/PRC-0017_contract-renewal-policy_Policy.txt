@@ -16,7 +16,7 @@ This policy makes sure supplier contracts are reviewed before they renew.
 This policy applies to all employees.
 
 3. Policy
-- Procurement reviews every contract 3 months before its renewal date.
+- Procurement reviews every contract 2 months before its renewal date.
 - Auto-renewal clauses are avoided; renewals are an active decision.
 - The review checks price, usage, service quality and whether the need still exists.
 

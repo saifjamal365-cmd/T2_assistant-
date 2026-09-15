@@ -2,8 +2,8 @@ Title: System Access Request - Procedure (Riyadh Office)
 Document ID: IT-0153
 Department: Information Technology
 Type: Procedure
-Version: 2.1
-Effective date: 2024-04-15
+Version: 2.3
+Effective date: 2023-12-15
 Status: Active
 Owner: IT Service Desk
 Applies to: Riyadh Office employees

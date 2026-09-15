@@ -2,8 +2,8 @@ Title: Data Privacy Policy
 Document ID: LEG-0001
 Department: Legal & Compliance
 Type: Policy
-Version: 3.3
-Effective date: 2025-06-05
+Version: 3.0
+Effective date: 2024-12-04
 Status: Active
 Owner: Legal & Compliance Office
 Applies to: All employees
@@ -18,7 +18,7 @@ This policy applies to all employees.
 3. Policy
 - Personal and client data is used only for the purpose it was collected for.
 - Do not store client or personal data on personal devices or personal cloud accounts.
-- A suspected data breach is reported to the security team within 2 hour(s).
+- A suspected data breach is reported to the security team within 4 hour(s).
 - Access to personal data is limited to those who need it for their work.
 
 4. Exceptions

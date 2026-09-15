@@ -2,8 +2,8 @@ Title: Business Continuity Policy
 Document ID: OPS-0025
 Department: Operations
 Type: Policy
-Version: 3.0
-Effective date: 2024-10-01
+Version: 3.1
+Effective date: 2023-02-12
 Status: Active
 Owner: Operations Excellence
 Applies to: All employees
@@ -18,7 +18,7 @@ This policy applies to all employees.
 3. Policy
 - Each team has a continuity plan naming its critical services and recovery time objective.
 - Continuity plans are tested at least once a year.
-- During a major disruption, the crisis team leads and communicates every 1 hour(s).
+- During a major disruption, the crisis team leads and communicates every 4 hour(s).
 
 4. Exceptions
 Exceptions need written approval from Operations Excellence.

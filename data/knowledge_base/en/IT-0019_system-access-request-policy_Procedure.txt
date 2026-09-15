@@ -2,8 +2,8 @@ Title: System Access Request - Procedure
 Document ID: IT-0019
 Department: Information Technology
 Type: Procedure
-Version: 3.4
-Effective date: 2024-01-21
+Version: 3.2
+Effective date: 2024-01-02
 Status: Active
 Owner: IT Service Desk
 Applies to: All employees
@@ -22,7 +22,7 @@ Steps
 Rules that apply
 - Access is requested through the service desk, stating the system and the business reason.
 - Access to client or financial data needs the manager and the system owner to approve.
-- Access unused for 90 days may be revoked and must be requested again.
+- Access unused for 60 days may be revoked and must be requested again.
 - All access is reviewed every quarter.
 
 Contact

@@ -3,7 +3,7 @@ Document ID: OPS-0051
 Department: Operations
 Type: Procedure
 Version: 3.3
-Effective date: 2024-04-30
+Effective date: 2024-04-03
 Status: Active
 Owner: Operations Excellence
 Applies to: All employees
@@ -22,7 +22,7 @@ Steps
 Rules that apply
 - Every recurring task should have a short written procedure in the shared knowledge base.
 - Post-incident reviews and design decisions are written up and shared, not kept private.
-- Pages unreviewed for 12 months are flagged for an owner to update or archive.
+- Pages unreviewed for 6 months are flagged for an owner to update or archive.
 
 Contact
 Operations Excellence: ops@t2.example

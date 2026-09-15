@@ -3,7 +3,7 @@ Document ID: HR-0201
 Department: Human Resources
 Type: Quick Reference
 Version: 2.0
-Effective date: 2024-10-14
+Effective date: 2023-06-09
 Status: Active
 Owner: HR Operations
 Applies to: Riyadh Office employees
@@ -12,8 +12,8 @@ Related documents: HR-0007, HR-0039, FAC-0063
 Quick reference - Sick Leave - Quick Reference (Riyadh Office).
 
 Key points
-- Employees may take up to 10 paid sick days per year.
-- A medical report is required for any sick leave longer than 2 consecutive days.
+- Employees may take up to 12 paid sick days per year.
+- A medical report is required for any sick leave longer than 5 consecutive days.
 - The employee must notify their manager on the first day of absence.
 - Unused sick days do not carry over and are not paid out.
 

@@ -2,8 +2,8 @@ Title: Overtime - Procedure (Riyadh Office)
 Document ID: HR-0233
 Department: Human Resources
 Type: Procedure
-Version: 2.0
-Effective date: 2025-05-22
+Version: 2.1
+Effective date: 2024-07-16
 Status: Active
 Owner: HR Operations
 Applies to: Riyadh Office employees

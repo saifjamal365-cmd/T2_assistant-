@@ -2,8 +2,8 @@ Title: Kitchen and Break Area - Procedure
 Document ID: FAC-0067
 Department: Facilities
 Type: Procedure
-Version: 3.3
-Effective date: 2023-05-12
+Version: 3.4
+Effective date: 2025-04-08
 Status: Active
 Owner: Facilities Management
 Applies to: All employees
@@ -20,7 +20,7 @@ Steps
 
 Rules that apply
 - Clean up after yourself; label personal food with your name and the date.
-- The fridge is emptied every Friday; anything unlabelled is thrown away.
+- The fridge is emptied every Thursday; anything unlabelled is thrown away.
 - Report broken appliances to facilities.
 
 Contact

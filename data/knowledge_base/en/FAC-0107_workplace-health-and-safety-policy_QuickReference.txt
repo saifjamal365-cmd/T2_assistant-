@@ -13,7 +13,7 @@ Superseded by: FAC-0039
 Quick reference - Workplace Health and Safety - Quick Reference (Riyadh Office).
 
 Key points
-- Any workplace injury, however minor, is reported to the office manager within 24 hours using the incident form.
+- Any workplace injury, however minor, is reported to the office manager within 48 hours using the incident form.
 - Keep walkways and fire exits clear at all times.
 - Employees with symptoms of a contagious illness work from home instead of coming in.
 

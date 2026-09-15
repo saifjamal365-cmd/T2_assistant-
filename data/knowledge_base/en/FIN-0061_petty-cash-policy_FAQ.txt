@@ -2,8 +2,8 @@ Title: Petty Cash - FAQ
 Document ID: FIN-0061
 Department: Finance
 Type: FAQ
-Version: 3.2
-Effective date: 2024-10-07
+Version: 3.3
+Effective date: 2023-12-25
 Status: Active
 Owner: Finance Shared Services
 Applies to: All employees
@@ -12,6 +12,6 @@ Related documents: FIN-0007
 Frequently asked questions about petty cash - faq.
 
 Q: What is the petty cash limit per payment?
-A: Up to 200 AED.
+A: Up to 100 SAR.
 
 More detail is in the matching policy document.

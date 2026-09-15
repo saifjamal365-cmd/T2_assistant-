@@ -1262,8 +1262,8 @@ TOPICS: list[Topic] = [
        ("Every escalation is logged in the CRM with a timeline of actions.",
         "يُسجَّل كل تصعيد في نظام إدارة علاقات العملاء مع جدول زمني للإجراءات.")],
       {"hours": [24, 48], "flag": [2, 4]},
-      [("A client problem is not fixed in a day - what happens next?",
-        "مشكلة عميل لم تُحل في يوم - ماذا يحدث؟",
+      [("A client problem is not fixed within {hours} hours - what happens next?",
+        "مشكلة عميل لم تُحل خلال {hours} ساعة - ماذا يحدث؟",
         "It is escalated to the account manager.", "تُصعَّد إلى مدير الحساب.")],
       ["incident_management", "service_levels"], office_specific=False),
 
@@ -1770,9 +1770,17 @@ def build(out_dir: Path, target: int) -> None:
         id_by_key_typed[(s.topic.key, s.lang, s.office_key, s.doc_type)] = s._doc_id  # type: ignore[attr-defined]
 
     for s in specs:
-        rng2 = random.Random(f"{SEED}:{s.topic.key}:{s.doc_type}:{s.lang}:{s.office_key}")
-        values = pick_params(s.topic, rng2, s.shift)
+        # Seeded by topic+office ONLY - not doc_type, not language - so every
+        # document describing the same real-world policy (Policy, Procedure,
+        # FAQ, Quick Reference, English or Arabic) states the same facts,
+        # instead of each document type or translation independently rolling
+        # its own numbers. (Found the hard way: the English and Arabic
+        # Policy for the same topic used to disagree - e.g. one said pages
+        # are archived after 6 months, the other after 12.)
+        facts_rng = random.Random(f"{SEED}:{s.topic.key}:{s.office_key}:facts")
+        values = pick_params(s.topic, facts_rng, s.shift)
 
+        rng2 = random.Random(f"{SEED}:{s.topic.key}:{s.doc_type}:{s.lang}:{s.office_key}")
         # ~12% of documents are an older, superseded version
         superseded = rng2.random() < 0.12
         version = f"{s.version_major}.{rng2.randint(0, 4)}"

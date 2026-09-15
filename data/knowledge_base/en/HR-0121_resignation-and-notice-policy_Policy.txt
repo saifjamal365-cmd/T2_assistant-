@@ -2,8 +2,8 @@ Title: Resignation and Notice Policy
 Document ID: HR-0121
 Department: Human Resources
 Type: Policy
-Version: 3.4
-Effective date: 2024-01-31
+Version: 3.1
+Effective date: 2025-02-20
 Status: Active
 Owner: HR Operations
 Applies to: All employees
@@ -16,7 +16,7 @@ This policy sets the notice period for resignation.
 This policy applies to all employees.
 
 3. Policy
-- Employees give 4 weeks' written notice; grade M3 and above give 12 weeks.
+- Employees give 4 weeks' written notice; grade M4 and above give 8 weeks.
 - Notice may be shortened only with the manager's written agreement.
 - An exit interview is offered before the last day.
 

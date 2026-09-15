@@ -2,8 +2,8 @@ Title: Bereavement Leave - Procedure (Riyadh Office)
 Document ID: HR-0215
 Department: Human Resources
 Type: Procedure
-Version: 2.0
-Effective date: 2023-03-07
+Version: 2.1
+Effective date: 2024-06-07
 Status: Active
 Owner: HR Operations
 Applies to: Riyadh Office employees

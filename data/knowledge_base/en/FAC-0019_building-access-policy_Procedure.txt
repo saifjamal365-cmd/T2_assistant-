@@ -2,8 +2,8 @@ Title: Building Access - Procedure
 Document ID: FAC-0019
 Department: Facilities
 Type: Procedure
-Version: 3.1
-Effective date: 2023-09-18
+Version: 3.2
+Effective date: 2024-01-03
 Status: Active
 Owner: Facilities Management
 Applies to: All employees
@@ -21,7 +21,7 @@ Steps
 
 Rules that apply
 - Every employee has an access card. Do not let anyone "tailgate" in behind you.
-- Lost cards are reported the same day; a replacement costs 25 EGP.
+- Lost cards are reported the same day; a replacement costs 100 SAR.
 - After-hours access is logged and may need manager approval.
 
 Contact

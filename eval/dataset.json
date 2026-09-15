@@ -101,7 +101,7 @@
       "HR-0007",
       "HR-0008"
     ],
-    "expected_fact": "Yes, up to 7 days; the rest is lost.",
+    "expected_fact": "Yes, up to 5 days; the rest is lost.",
     "answerable": true
   },
   {
@@ -122,7 +122,7 @@
       "HR-0007",
       "HR-0008"
     ],
-    "expected_fact": "Yes, up to 7 days; the rest is lost.",
+    "expected_fact": "Yes, up to 5 days; the rest is lost.",
     "answerable": true
   },
   {
@@ -185,7 +185,7 @@
       "HR-0007",
       "HR-0008"
     ],
-    "expected_fact": "قبل 7 أيام عمل على الأقل من بدء الإجازة.",
+    "expected_fact": "قبل 3 أيام عمل على الأقل من بدء الإجازة.",
     "answerable": true
   },
   {
@@ -206,7 +206,7 @@
       "HR-0007",
       "HR-0008"
     ],
-    "expected_fact": "قبل 7 أيام عمل على الأقل من بدء الإجازة.",
+    "expected_fact": "قبل 3 أيام عمل على الأقل من بدء الإجازة.",
     "answerable": true
   },
   {
@@ -227,7 +227,7 @@
       "HR-0007",
       "HR-0008"
     ],
-    "expected_fact": "نعم، حتى 7 أيام، ويُفقد الباقي.",
+    "expected_fact": "نعم، حتى 5 أيام، ويُفقد الباقي.",
     "answerable": true
   },
   {
@@ -248,7 +248,7 @@
       "HR-0007",
       "HR-0008"
     ],
-    "expected_fact": "نعم، حتى 7 أيام، ويُفقد الباقي.",
+    "expected_fact": "نعم، حتى 5 أيام، ويُفقد الباقي.",
     "answerable": true
   },
   {
@@ -269,7 +269,7 @@
       "HR-0015",
       "HR-0016"
     ],
-    "expected_fact": "No. A report is only needed after 2 consecutive days.",
+    "expected_fact": "No. A report is only needed after 3 consecutive days.",
     "answerable": true
   },
   {
@@ -290,7 +290,7 @@
       "HR-0015",
       "HR-0016"
     ],
-    "expected_fact": "No. A report is only needed after 2 consecutive days.",
+    "expected_fact": "No. A report is only needed after 3 consecutive days.",
     "answerable": true
   },
   {
@@ -311,7 +311,7 @@
       "HR-0015",
       "HR-0016"
     ],
-    "expected_fact": "Up to 15 days.",
+    "expected_fact": "Up to 10 days.",
     "answerable": true
   },
   {
@@ -332,7 +332,7 @@
       "HR-0015",
       "HR-0016"
     ],
-    "expected_fact": "Up to 15 days.",
+    "expected_fact": "Up to 10 days.",
     "answerable": true
   },
   {
@@ -353,7 +353,7 @@
       "HR-0015",
       "HR-0016"
     ],
-    "expected_fact": "لا. يلزم التقرير فقط بعد 5 أيام متتالية.",
+    "expected_fact": "لا. يلزم التقرير فقط بعد 3 أيام متتالية.",
     "answerable": true
   },
   {
@@ -374,7 +374,7 @@
       "HR-0015",
       "HR-0016"
     ],
-    "expected_fact": "لا. يلزم التقرير فقط بعد 5 أيام متتالية.",
+    "expected_fact": "لا. يلزم التقرير فقط بعد 3 أيام متتالية.",
     "answerable": true
   },
   {
@@ -437,7 +437,7 @@
       "HR-0023",
       "HR-0024"
     ],
-    "expected_fact": "45 paid days.",
+    "expected_fact": "90 paid days.",
     "answerable": true
   },
   {
@@ -458,7 +458,7 @@
       "HR-0023",
       "HR-0024"
     ],
-    "expected_fact": "45 paid days.",
+    "expected_fact": "90 paid days.",
     "answerable": true
   },
   {
@@ -521,7 +521,7 @@
       "HR-0023",
       "HR-0024"
     ],
-    "expected_fact": "60 يومًا مدفوعًا.",
+    "expected_fact": "90 يومًا مدفوعًا.",
     "answerable": true
   },
   {
@@ -542,7 +542,7 @@
       "HR-0023",
       "HR-0024"
     ],
-    "expected_fact": "60 يومًا مدفوعًا.",
+    "expected_fact": "90 يومًا مدفوعًا.",
     "answerable": true
   },
   {
@@ -731,7 +731,7 @@
       "HR-0039",
       "HR-0040"
     ],
-    "expected_fact": "حتى 3 أشهر.",
+    "expected_fact": "حتى 6 أشهر.",
     "answerable": true
   },
   {
@@ -752,7 +752,7 @@
       "HR-0039",
       "HR-0040"
     ],
-    "expected_fact": "حتى 3 أشهر.",
+    "expected_fact": "حتى 6 أشهر.",
     "answerable": true
   },
   {
@@ -1193,7 +1193,7 @@
       "HR-0079",
       "HR-0080"
     ],
-    "expected_fact": "3 months.",
+    "expected_fact": "6 months.",
     "answerable": true
   },
   {
@@ -1214,7 +1214,7 @@
       "HR-0079",
       "HR-0080"
     ],
-    "expected_fact": "3 months.",
+    "expected_fact": "6 months.",
     "answerable": true
   },
   {
@@ -1277,7 +1277,7 @@
       "HR-0087",
       "HR-0088"
     ],
-    "expected_fact": "1 times a year.",
+    "expected_fact": "2 times a year.",
     "answerable": true
   },
   {
@@ -1298,7 +1298,7 @@
       "HR-0087",
       "HR-0088"
     ],
-    "expected_fact": "1 times a year.",
+    "expected_fact": "2 times a year.",
     "answerable": true
   },
   {
@@ -1361,7 +1361,7 @@
       "HR-0095",
       "HR-0096"
     ],
-    "expected_fact": "At least 24 months in role.",
+    "expected_fact": "At least 12 months in role.",
     "answerable": true
   },
   {
@@ -1382,7 +1382,7 @@
       "HR-0095",
       "HR-0096"
     ],
-    "expected_fact": "At least 24 months in role.",
+    "expected_fact": "At least 12 months in role.",
     "answerable": true
   },
   {
@@ -1403,7 +1403,7 @@
       "HR-0095",
       "HR-0096"
     ],
-    "expected_fact": "18 أشهر على الأقل في الدور.",
+    "expected_fact": "12 أشهر على الأقل في الدور.",
     "answerable": true
   },
   {
@@ -1424,7 +1424,7 @@
       "HR-0095",
       "HR-0096"
     ],
-    "expected_fact": "18 أشهر على الأقل في الدور.",
+    "expected_fact": "12 أشهر على الأقل في الدور.",
     "answerable": true
   },
   {
@@ -1487,7 +1487,7 @@
       "HR-0103",
       "HR-0104"
     ],
-    "expected_fact": "اعتبارًا من 1 January.",
+    "expected_fact": "اعتبارًا من 1 April.",
     "answerable": true
   },
   {
@@ -1508,7 +1508,7 @@
       "HR-0103",
       "HR-0104"
     ],
-    "expected_fact": "اعتبارًا من 1 January.",
+    "expected_fact": "اعتبارًا من 1 April.",
     "answerable": true
   },
   {
@@ -1529,7 +1529,7 @@
       "HR-0111",
       "HR-0112"
     ],
-    "expected_fact": "Conduct, data privacy and security, in the first 1 weeks.",
+    "expected_fact": "Conduct, data privacy and security, in the first 2 weeks.",
     "answerable": true
   },
   {
@@ -1550,7 +1550,7 @@
       "HR-0111",
       "HR-0112"
     ],
-    "expected_fact": "Conduct, data privacy and security, in the first 1 weeks.",
+    "expected_fact": "Conduct, data privacy and security, in the first 2 weeks.",
     "answerable": true
   },
   {
@@ -1571,7 +1571,7 @@
       "HR-0111",
       "HR-0112"
     ],
-    "expected_fact": "السلوك وخصوصية البيانات والأمن، خلال أول 1 أسابيع.",
+    "expected_fact": "السلوك وخصوصية البيانات والأمن، خلال أول 2 أسابيع.",
     "answerable": true
   },
   {
@@ -1592,7 +1592,7 @@
       "HR-0111",
       "HR-0112"
     ],
-    "expected_fact": "السلوك وخصوصية البيانات والأمن، خلال أول 1 أسابيع.",
+    "expected_fact": "السلوك وخصوصية البيانات والأمن، خلال أول 2 أسابيع.",
     "answerable": true
   },
   {
@@ -1613,7 +1613,7 @@
       "HR-0119",
       "HR-0120"
     ],
-    "expected_fact": "Within 30 days of the last working day.",
+    "expected_fact": "Within 7 days of the last working day.",
     "answerable": true
   },
   {
@@ -1634,7 +1634,7 @@
       "HR-0119",
       "HR-0120"
     ],
-    "expected_fact": "Within 30 days of the last working day.",
+    "expected_fact": "Within 7 days of the last working day.",
     "answerable": true
   },
   {
@@ -1697,7 +1697,7 @@
       "HR-0127",
       "HR-0128"
     ],
-    "expected_fact": "2 weeks for most roles.",
+    "expected_fact": "4 weeks for most roles.",
     "answerable": true
   },
   {
@@ -1718,7 +1718,7 @@
       "HR-0127",
       "HR-0128"
     ],
-    "expected_fact": "2 weeks for most roles.",
+    "expected_fact": "4 weeks for most roles.",
     "answerable": true
   },
   {
@@ -2075,7 +2075,7 @@
       "HR-0159",
       "HR-0160"
     ],
-    "expected_fact": "خلال 3 أيام عمل.",
+    "expected_fact": "خلال 5 أيام عمل.",
     "answerable": true
   },
   {
@@ -2096,7 +2096,7 @@
       "HR-0159",
       "HR-0160"
     ],
-    "expected_fact": "خلال 3 أيام عمل.",
+    "expected_fact": "خلال 5 أيام عمل.",
     "answerable": true
   },
   {
@@ -2243,7 +2243,7 @@
       "HR-0175",
       "HR-0176"
     ],
-    "expected_fact": "3000 SAR سنويًا.",
+    "expected_fact": "8000 AED سنويًا.",
     "answerable": true
   },
   {
@@ -2264,7 +2264,7 @@
       "HR-0175",
       "HR-0176"
     ],
-    "expected_fact": "3000 SAR سنويًا.",
+    "expected_fact": "8000 AED سنويًا.",
     "answerable": true
   },
   {
@@ -2285,7 +2285,7 @@
       "HR-0183",
       "HR-0184"
     ],
-    "expected_fact": "Up to 18 months.",
+    "expected_fact": "Up to 12 months.",
     "answerable": true
   },
   {
@@ -2306,7 +2306,7 @@
       "HR-0183",
       "HR-0184"
     ],
-    "expected_fact": "Up to 18 months.",
+    "expected_fact": "Up to 12 months.",
     "answerable": true
   },
   {
@@ -2411,7 +2411,7 @@
       "HR-0191",
       "HR-0192"
     ],
-    "expected_fact": "نعم، 5000 SAR، تُدفع مرة واحدة عند الوصول.",
+    "expected_fact": "نعم، 10000 SAR، تُدفع مرة واحدة عند الوصول.",
     "answerable": true
   },
   {
@@ -2432,7 +2432,7 @@
       "HR-0191",
       "HR-0192"
     ],
-    "expected_fact": "نعم، 5000 SAR، تُدفع مرة واحدة عند الوصول.",
+    "expected_fact": "نعم، 10000 SAR، تُدفع مرة واحدة عند الوصول.",
     "answerable": true
   },
   {
@@ -2453,7 +2453,7 @@
       "IT-0007",
       "IT-0008"
     ],
-    "expected_fact": "At least 16 characters.",
+    "expected_fact": "At least 12 characters.",
     "answerable": true
   },
   {
@@ -2474,7 +2474,7 @@
       "IT-0007",
       "IT-0008"
     ],
-    "expected_fact": "At least 16 characters.",
+    "expected_fact": "At least 12 characters.",
     "answerable": true
   },
   {
@@ -2537,7 +2537,7 @@
       "IT-0007",
       "IT-0008"
     ],
-    "expected_fact": "14 حرفًا على الأقل.",
+    "expected_fact": "12 حرفًا على الأقل.",
     "answerable": true
   },
   {
@@ -2558,7 +2558,7 @@
       "IT-0007",
       "IT-0008"
     ],
-    "expected_fact": "14 حرفًا على الأقل.",
+    "expected_fact": "12 حرفًا على الأقل.",
     "answerable": true
   },
   {
@@ -2579,7 +2579,7 @@
       "IT-0007",
       "IT-0008"
     ],
-    "expected_fact": "كل 180 يومًا.",
+    "expected_fact": "كل 90 يومًا.",
     "answerable": true
   },
   {
@@ -2600,7 +2600,7 @@
       "IT-0007",
       "IT-0008"
     ],
-    "expected_fact": "كل 180 يومًا.",
+    "expected_fact": "كل 90 يومًا.",
     "answerable": true
   },
   {
@@ -3209,7 +3209,7 @@
       "IT-0071",
       "IT-0072"
     ],
-    "expected_fact": "For up to 14 days, then it must be licensed or removed.",
+    "expected_fact": "For up to 30 days, then it must be licensed or removed.",
     "answerable": true
   },
   {
@@ -3230,7 +3230,7 @@
       "IT-0071",
       "IT-0072"
     ],
-    "expected_fact": "For up to 14 days, then it must be licensed or removed.",
+    "expected_fact": "For up to 30 days, then it must be licensed or removed.",
     "answerable": true
   },
   {
@@ -3251,7 +3251,7 @@
       "IT-0071",
       "IT-0072"
     ],
-    "expected_fact": "حتى 14 يومًا، ثم يجب ترخيصها أو إزالتها.",
+    "expected_fact": "حتى 30 يومًا، ثم يجب ترخيصها أو إزالتها.",
     "answerable": true
   },
   {
@@ -3272,7 +3272,7 @@
       "IT-0071",
       "IT-0072"
     ],
-    "expected_fact": "حتى 14 يومًا، ثم يجب ترخيصها أو إزالتها.",
+    "expected_fact": "حتى 30 يومًا، ثم يجب ترخيصها أو إزالتها.",
     "answerable": true
   },
   {
@@ -3293,7 +3293,7 @@
       "IT-0079",
       "IT-0080"
     ],
-    "expected_fact": "Standard requests are fulfilled within 3 working days.",
+    "expected_fact": "Standard requests are fulfilled within 10 working days.",
     "answerable": true
   },
   {
@@ -3314,7 +3314,7 @@
       "IT-0079",
       "IT-0080"
     ],
-    "expected_fact": "Standard requests are fulfilled within 3 working days.",
+    "expected_fact": "Standard requests are fulfilled within 10 working days.",
     "answerable": true
   },
   {
@@ -3503,7 +3503,7 @@
       "IT-0095",
       "IT-0096"
     ],
-    "expected_fact": "خلال 1 ساعة.",
+    "expected_fact": "خلال 2 ساعة.",
     "answerable": true
   },
   {
@@ -3524,7 +3524,7 @@
       "IT-0095",
       "IT-0096"
     ],
-    "expected_fact": "خلال 1 ساعة.",
+    "expected_fact": "خلال 2 ساعة.",
     "answerable": true
   },
   {
@@ -3881,7 +3881,7 @@
       "IT-0135",
       "IT-0136"
     ],
-    "expected_fact": "Within 2 hour(s) during business hours.",
+    "expected_fact": "Within 1 hour(s) during business hours.",
     "answerable": true
   },
   {
@@ -3902,7 +3902,7 @@
       "IT-0135",
       "IT-0136"
     ],
-    "expected_fact": "Within 2 hour(s) during business hours.",
+    "expected_fact": "Within 1 hour(s) during business hours.",
     "answerable": true
   },
   {
@@ -3965,7 +3965,7 @@
       "FIN-0007",
       "FIN-0008"
     ],
-    "expected_fact": "Within 14 days of the expense.",
+    "expected_fact": "Within 30 days of the expense.",
     "answerable": true
   },
   {
@@ -3986,13 +3986,13 @@
       "FIN-0007",
       "FIN-0008"
     ],
-    "expected_fact": "Within 14 days of the expense.",
+    "expected_fact": "Within 30 days of the expense.",
     "answerable": true
   },
   {
     "id": "A0096",
     "family": "faq_exact",
-    "question": "Do I need approval before spending 500 SAR?",
+    "question": "Do I need approval before spending 200 SAR?",
     "language": "en",
     "department": "FIN",
     "topic": "expense_reimbursement",
@@ -4007,13 +4007,13 @@
       "FIN-0007",
       "FIN-0008"
     ],
-    "expected_fact": "Yes, single items over 500 SAR need manager approval first.",
+    "expected_fact": "Yes, single items over 200 SAR need manager approval first.",
     "answerable": true
   },
   {
     "id": "B0096",
     "family": "faq_paraphrased",
-    "question": "I have a question: Do I need approval before spending 500 SAR?",
+    "question": "I have a question: Do I need approval before spending 200 SAR?",
     "language": "en",
     "department": "FIN",
     "topic": "expense_reimbursement",
@@ -4028,7 +4028,7 @@
       "FIN-0007",
       "FIN-0008"
     ],
-    "expected_fact": "Yes, single items over 500 SAR need manager approval first.",
+    "expected_fact": "Yes, single items over 200 SAR need manager approval first.",
     "answerable": true
   },
   {
@@ -4049,7 +4049,7 @@
       "FIN-0007",
       "FIN-0008"
     ],
-    "expected_fact": "خلال 45 يومًا من الصرف.",
+    "expected_fact": "خلال 30 يومًا من الصرف.",
     "answerable": true
   },
   {
@@ -4070,13 +4070,13 @@
       "FIN-0007",
       "FIN-0008"
     ],
-    "expected_fact": "خلال 45 يومًا من الصرف.",
+    "expected_fact": "خلال 30 يومًا من الصرف.",
     "answerable": true
   },
   {
     "id": "A0098",
     "family": "faq_exact",
-    "question": "هل أحتاج موافقة قبل صرف 200 AED؟",
+    "question": "هل أحتاج موافقة قبل صرف 200 SAR؟",
     "language": "ar",
     "department": "FIN",
     "topic": "expense_reimbursement",
@@ -4091,13 +4091,13 @@
       "FIN-0007",
       "FIN-0008"
     ],
-    "expected_fact": "نعم، البنود المفردة التي تتجاوز 200 AED تتطلب موافقة المدير أولًا.",
+    "expected_fact": "نعم، البنود المفردة التي تتجاوز 200 SAR تتطلب موافقة المدير أولًا.",
     "answerable": true
   },
   {
     "id": "B0098",
     "family": "faq_paraphrased",
-    "question": "لدي سؤال: هل أحتاج موافقة قبل صرف 200 AED؟",
+    "question": "لدي سؤال: هل أحتاج موافقة قبل صرف 200 SAR؟",
     "language": "ar",
     "department": "FIN",
     "topic": "expense_reimbursement",
@@ -4112,7 +4112,7 @@
       "FIN-0007",
       "FIN-0008"
     ],
-    "expected_fact": "نعم، البنود المفردة التي تتجاوز 200 AED تتطلب موافقة المدير أولًا.",
+    "expected_fact": "نعم، البنود المفردة التي تتجاوز 200 SAR تتطلب موافقة المدير أولًا.",
     "answerable": true
   },
   {
@@ -4370,7 +4370,7 @@
   {
     "id": "A0105",
     "family": "faq_exact",
-    "question": "How many quotes do I need for a 5000 EGP purchase?",
+    "question": "How many quotes do I need for a 5000 AED purchase?",
     "language": "en",
     "department": "FIN",
     "topic": "procurement",
@@ -4385,13 +4385,13 @@
       "FIN-0039",
       "FIN-0040"
     ],
-    "expected_fact": "One quote up to 5000 EGP.",
+    "expected_fact": "One quote up to 5000 AED.",
     "answerable": true
   },
   {
     "id": "B0105",
     "family": "faq_paraphrased",
-    "question": "Could you tell me how many quotes do I need for a 5000 EGP purchase?",
+    "question": "Could you tell me how many quotes do I need for a 5000 AED purchase?",
     "language": "en",
     "department": "FIN",
     "topic": "procurement",
@@ -4406,13 +4406,13 @@
       "FIN-0039",
       "FIN-0040"
     ],
-    "expected_fact": "One quote up to 5000 EGP.",
+    "expected_fact": "One quote up to 5000 AED.",
     "answerable": true
   },
   {
     "id": "A0106",
     "family": "faq_exact",
-    "question": "كم عرض سعر أحتاج لشراء بقيمة 10000 SAR؟",
+    "question": "كم عرض سعر أحتاج لشراء بقيمة 5000 AED؟",
     "language": "ar",
     "department": "FIN",
     "topic": "procurement",
@@ -4427,13 +4427,13 @@
       "FIN-0039",
       "FIN-0040"
     ],
-    "expected_fact": "عرض واحد حتى 10000 SAR.",
+    "expected_fact": "عرض واحد حتى 5000 AED.",
     "answerable": true
   },
   {
     "id": "B0106",
     "family": "faq_paraphrased",
-    "question": "هل يمكنك أن تخبرني: كم عرض سعر أحتاج لشراء بقيمة 10000 SAR؟",
+    "question": "هل يمكنك أن تخبرني: كم عرض سعر أحتاج لشراء بقيمة 5000 AED؟",
     "language": "ar",
     "department": "FIN",
     "topic": "procurement",
@@ -4448,7 +4448,7 @@
       "FIN-0039",
       "FIN-0040"
     ],
-    "expected_fact": "عرض واحد حتى 10000 SAR.",
+    "expected_fact": "عرض واحد حتى 5000 AED.",
     "answerable": true
   },
   {
@@ -4511,7 +4511,7 @@
       "FIN-0047",
       "FIN-0048"
     ],
-    "expected_fact": "60 يومًا من تاريخ الفاتورة.",
+    "expected_fact": "30 يومًا من تاريخ الفاتورة.",
     "answerable": true
   },
   {
@@ -4532,7 +4532,7 @@
       "FIN-0047",
       "FIN-0048"
     ],
-    "expected_fact": "60 يومًا من تاريخ الفاتورة.",
+    "expected_fact": "30 يومًا من تاريخ الفاتورة.",
     "answerable": true
   },
   {
@@ -4553,7 +4553,7 @@
       "FIN-0055",
       "FIN-0056"
     ],
-    "expected_fact": "Up to 5000 SAR per item within budget.",
+    "expected_fact": "Up to 10000 EGP per item within budget.",
     "answerable": true
   },
   {
@@ -4574,7 +4574,7 @@
       "FIN-0055",
       "FIN-0056"
     ],
-    "expected_fact": "Up to 5000 SAR per item within budget.",
+    "expected_fact": "Up to 10000 EGP per item within budget.",
     "answerable": true
   },
   {
@@ -4595,7 +4595,7 @@
       "FIN-0055",
       "FIN-0056"
     ],
-    "expected_fact": "حتى 10000 AED لكل بند ضمن الميزانية.",
+    "expected_fact": "حتى 10000 EGP لكل بند ضمن الميزانية.",
     "answerable": true
   },
   {
@@ -4616,7 +4616,7 @@
       "FIN-0055",
       "FIN-0056"
     ],
-    "expected_fact": "حتى 10000 AED لكل بند ضمن الميزانية.",
+    "expected_fact": "حتى 10000 EGP لكل بند ضمن الميزانية.",
     "answerable": true
   },
   {
@@ -4637,7 +4637,7 @@
       "FIN-0063",
       "FIN-0064"
     ],
-    "expected_fact": "Up to 200 AED.",
+    "expected_fact": "Up to 100 SAR.",
     "answerable": true
   },
   {
@@ -4658,7 +4658,7 @@
       "FIN-0063",
       "FIN-0064"
     ],
-    "expected_fact": "Up to 200 AED.",
+    "expected_fact": "Up to 100 SAR.",
     "answerable": true
   },
   {
@@ -4679,7 +4679,7 @@
       "FIN-0063",
       "FIN-0064"
     ],
-    "expected_fact": "حتى 200 AED.",
+    "expected_fact": "حتى 100 SAR.",
     "answerable": true
   },
   {
@@ -4700,7 +4700,7 @@
       "FIN-0063",
       "FIN-0064"
     ],
-    "expected_fact": "حتى 200 AED.",
+    "expected_fact": "حتى 100 SAR.",
     "answerable": true
   },
   {
@@ -4721,7 +4721,7 @@
       "FIN-0071",
       "FIN-0072"
     ],
-    "expected_fact": "On the 25th of each month.",
+    "expected_fact": "On the 27th of each month.",
     "answerable": true
   },
   {
@@ -4742,7 +4742,7 @@
       "FIN-0071",
       "FIN-0072"
     ],
-    "expected_fact": "On the 25th of each month.",
+    "expected_fact": "On the 27th of each month.",
     "answerable": true
   },
   {
@@ -4763,7 +4763,7 @@
       "FIN-0071",
       "FIN-0072"
     ],
-    "expected_fact": "في last day من كل شهر.",
+    "expected_fact": "في 27th من كل شهر.",
     "answerable": true
   },
   {
@@ -4784,7 +4784,7 @@
       "FIN-0071",
       "FIN-0072"
     ],
-    "expected_fact": "في last day من كل شهر.",
+    "expected_fact": "في 27th من كل شهر.",
     "answerable": true
   },
   {
@@ -4847,7 +4847,7 @@
       "FIN-0079",
       "FIN-0080"
     ],
-    "expected_fact": "اطلبها عبر نظام الموارد البشرية، وتُصدر خلال 5 أيام عمل.",
+    "expected_fact": "اطلبها عبر نظام الموارد البشرية، وتُصدر خلال 3 أيام عمل.",
     "answerable": true
   },
   {
@@ -4868,7 +4868,7 @@
       "FIN-0079",
       "FIN-0080"
     ],
-    "expected_fact": "اطلبها عبر نظام الموارد البشرية، وتُصدر خلال 5 أيام عمل.",
+    "expected_fact": "اطلبها عبر نظام الموارد البشرية، وتُصدر خلال 3 أيام عمل.",
     "answerable": true
   },
   {
@@ -5057,7 +5057,7 @@
       "FAC-0015",
       "FAC-0016"
     ],
-    "expected_fact": "Join the waiting list; spaces are reviewed every 3 months.",
+    "expected_fact": "Join the waiting list; spaces are reviewed every 6 months.",
     "answerable": true
   },
   {
@@ -5078,7 +5078,7 @@
       "FAC-0015",
       "FAC-0016"
     ],
-    "expected_fact": "Join the waiting list; spaces are reviewed every 3 months.",
+    "expected_fact": "Join the waiting list; spaces are reviewed every 6 months.",
     "answerable": true
   },
   {
@@ -5099,7 +5099,7 @@
       "FAC-0015",
       "FAC-0016"
     ],
-    "expected_fact": "انضم إلى قائمة الانتظار، وتُراجع الأماكن كل 3 أشهر.",
+    "expected_fact": "انضم إلى قائمة الانتظار، وتُراجع الأماكن كل 6 أشهر.",
     "answerable": true
   },
   {
@@ -5120,7 +5120,7 @@
       "FAC-0015",
       "FAC-0016"
     ],
-    "expected_fact": "انضم إلى قائمة الانتظار، وتُراجع الأماكن كل 3 أشهر.",
+    "expected_fact": "انضم إلى قائمة الانتظار، وتُراجع الأماكن كل 6 أشهر.",
     "answerable": true
   },
   {
@@ -5141,7 +5141,7 @@
       "FAC-0023",
       "FAC-0024"
     ],
-    "expected_fact": "Report it the same day; a replacement costs 100 AED.",
+    "expected_fact": "Report it the same day; a replacement costs 100 SAR.",
     "answerable": true
   },
   {
@@ -5162,7 +5162,7 @@
       "FAC-0023",
       "FAC-0024"
     ],
-    "expected_fact": "Report it the same day; a replacement costs 100 AED.",
+    "expected_fact": "Report it the same day; a replacement costs 100 SAR.",
     "answerable": true
   },
   {
@@ -5183,7 +5183,7 @@
       "FAC-0023",
       "FAC-0024"
     ],
-    "expected_fact": "أبلغ عنها في اليوم نفسه، وتكلفة البدل 50 AED.",
+    "expected_fact": "أبلغ عنها في اليوم نفسه، وتكلفة البدل 100 SAR.",
     "answerable": true
   },
   {
@@ -5204,7 +5204,7 @@
       "FAC-0023",
       "FAC-0024"
     ],
-    "expected_fact": "أبلغ عنها في اليوم نفسه، وتكلفة البدل 50 AED.",
+    "expected_fact": "أبلغ عنها في اليوم نفسه، وتكلفة البدل 100 SAR.",
     "answerable": true
   },
   {
@@ -5309,7 +5309,7 @@
       "FAC-0039",
       "FAC-0040"
     ],
-    "expected_fact": "Yes, within 24 hours using the incident form.",
+    "expected_fact": "Yes, within 48 hours using the incident form.",
     "answerable": true
   },
   {
@@ -5330,7 +5330,7 @@
       "FAC-0039",
       "FAC-0040"
     ],
-    "expected_fact": "Yes, within 24 hours using the incident form.",
+    "expected_fact": "Yes, within 48 hours using the incident form.",
     "answerable": true
   },
   {
@@ -5393,7 +5393,7 @@
       "FAC-0047",
       "FAC-0048"
     ],
-    "expected_fact": "4 times a year.",
+    "expected_fact": "2 times a year.",
     "answerable": true
   },
   {
@@ -5414,7 +5414,7 @@
       "FAC-0047",
       "FAC-0048"
     ],
-    "expected_fact": "4 times a year.",
+    "expected_fact": "2 times a year.",
     "answerable": true
   },
   {
@@ -5645,7 +5645,7 @@
       "FAC-0071",
       "FAC-0072"
     ],
-    "expected_fact": "Every Friday.",
+    "expected_fact": "Every Thursday.",
     "answerable": true
   },
   {
@@ -5666,7 +5666,7 @@
       "FAC-0071",
       "FAC-0072"
     ],
-    "expected_fact": "Every Friday.",
+    "expected_fact": "Every Thursday.",
     "answerable": true
   },
   {
@@ -5939,7 +5939,7 @@
       "LEG-0007",
       "LEG-0008"
     ],
-    "expected_fact": "خلال 1 ساعة من اكتشافه.",
+    "expected_fact": "خلال 4 ساعة من اكتشافه.",
     "answerable": true
   },
   {
@@ -5960,7 +5960,7 @@
       "LEG-0007",
       "LEG-0008"
     ],
-    "expected_fact": "خلال 1 ساعة من اكتشافه.",
+    "expected_fact": "خلال 4 ساعة من اكتشافه.",
     "answerable": true
   },
   {
@@ -6359,7 +6359,7 @@
       "LEG-0047",
       "LEG-0048"
     ],
-    "expected_fact": "10 سنوات.",
+    "expected_fact": "7 سنوات.",
     "answerable": true
   },
   {
@@ -6380,7 +6380,7 @@
       "LEG-0047",
       "LEG-0048"
     ],
-    "expected_fact": "10 سنوات.",
+    "expected_fact": "7 سنوات.",
     "answerable": true
   },
   {
@@ -6485,7 +6485,7 @@
       "LEG-0063",
       "LEG-0064"
     ],
-    "expected_fact": "Yes, if it is worth more than 500 AED.",
+    "expected_fact": "Yes, if it is worth more than 200 AED.",
     "answerable": true
   },
   {
@@ -6506,7 +6506,7 @@
       "LEG-0063",
       "LEG-0064"
     ],
-    "expected_fact": "Yes, if it is worth more than 500 AED.",
+    "expected_fact": "Yes, if it is worth more than 200 AED.",
     "answerable": true
   },
   {
@@ -6527,7 +6527,7 @@
       "LEG-0063",
       "LEG-0064"
     ],
-    "expected_fact": "نعم، إذا زادت قيمتها عن 500 EGP.",
+    "expected_fact": "نعم، إذا زادت قيمتها عن 200 AED.",
     "answerable": true
   },
   {
@@ -6548,7 +6548,7 @@
       "LEG-0063",
       "LEG-0064"
     ],
-    "expected_fact": "نعم، إذا زادت قيمتها عن 500 EGP.",
+    "expected_fact": "نعم، إذا زادت قيمتها عن 200 AED.",
     "answerable": true
   },
   {
@@ -6722,7 +6722,7 @@
   {
     "id": "A0161",
     "family": "faq_exact",
-    "question": "A client problem is not fixed in a day - what happens next?",
+    "question": "A client problem is not fixed within 48 hours - what happens next?",
     "language": "en",
     "department": "OPS",
     "topic": "client_escalation",
@@ -6743,7 +6743,7 @@
   {
     "id": "B0161",
     "family": "faq_paraphrased",
-    "question": "Could you tell me a client problem is not fixed in a day - what happens next?",
+    "question": "Could you tell me a client problem is not fixed within 48 hours - what happens next?",
     "language": "en",
     "department": "OPS",
     "topic": "client_escalation",
@@ -6764,7 +6764,7 @@
   {
     "id": "A0162",
     "family": "faq_exact",
-    "question": "مشكلة عميل لم تُحل في يوم - ماذا يحدث؟",
+    "question": "مشكلة عميل لم تُحل خلال 48 ساعة - ماذا يحدث؟",
     "language": "ar",
     "department": "OPS",
     "topic": "client_escalation",
@@ -6785,7 +6785,7 @@
   {
     "id": "B0162",
     "family": "faq_paraphrased",
-    "question": "هل يمكنك أن تخبرني: مشكلة عميل لم تُحل في يوم - ماذا يحدث؟",
+    "question": "هل يمكنك أن تخبرني: مشكلة عميل لم تُحل خلال 48 ساعة - ماذا يحدث؟",
     "language": "ar",
     "department": "OPS",
     "topic": "client_escalation",
@@ -6821,7 +6821,7 @@
       "OPS-0015",
       "OPS-0016"
     ],
-    "expected_fact": "Every 15 minutes.",
+    "expected_fact": "Every 30 minutes.",
     "answerable": true
   },
   {
@@ -6842,7 +6842,7 @@
       "OPS-0015",
       "OPS-0016"
     ],
-    "expected_fact": "Every 15 minutes.",
+    "expected_fact": "Every 30 minutes.",
     "answerable": true
   },
   {
@@ -6905,7 +6905,7 @@
       "OPS-0023",
       "OPS-0024"
     ],
-    "expected_fact": "Not on Thursday or during a change freeze.",
+    "expected_fact": "Not on Friday or during a change freeze.",
     "answerable": true
   },
   {
@@ -6926,7 +6926,7 @@
       "OPS-0023",
       "OPS-0024"
     ],
-    "expected_fact": "Not on Thursday or during a change freeze.",
+    "expected_fact": "Not on Friday or during a change freeze.",
     "answerable": true
   },
   {
@@ -6947,7 +6947,7 @@
       "OPS-0023",
       "OPS-0024"
     ],
-    "expected_fact": "ليس يوم Thursday أو أثناء تجميد التغيير.",
+    "expected_fact": "ليس يوم Friday أو أثناء تجميد التغيير.",
     "answerable": true
   },
   {
@@ -6968,7 +6968,7 @@
       "OPS-0023",
       "OPS-0024"
     ],
-    "expected_fact": "ليس يوم Thursday أو أثناء تجميد التغيير.",
+    "expected_fact": "ليس يوم Friday أو أثناء تجميد التغيير.",
     "answerable": true
   },
   {
@@ -7115,7 +7115,7 @@
       "OPS-0039",
       "OPS-0040"
     ],
-    "expected_fact": "خلال 2 ساعات عمل.",
+    "expected_fact": "خلال 4 ساعات عمل.",
     "answerable": true
   },
   {
@@ -7136,7 +7136,7 @@
       "OPS-0039",
       "OPS-0040"
     ],
-    "expected_fact": "خلال 2 ساعات عمل.",
+    "expected_fact": "خلال 4 ساعات عمل.",
     "answerable": true
   },
   {
@@ -7199,7 +7199,7 @@
       "OPS-0047",
       "OPS-0048"
     ],
-    "expected_fact": "800 SAR أسبوعيًا.",
+    "expected_fact": "800 EGP أسبوعيًا.",
     "answerable": true
   },
   {
@@ -7220,7 +7220,7 @@
       "OPS-0047",
       "OPS-0048"
     ],
-    "expected_fact": "800 SAR أسبوعيًا.",
+    "expected_fact": "800 EGP أسبوعيًا.",
     "answerable": true
   },
   {
@@ -7661,7 +7661,7 @@
       "MKT-0039",
       "MKT-0040"
     ],
-    "expected_fact": "At least 8 weeks ahead.",
+    "expected_fact": "At least 6 weeks ahead.",
     "answerable": true
   },
   {
@@ -7682,7 +7682,7 @@
       "MKT-0039",
       "MKT-0040"
     ],
-    "expected_fact": "At least 8 weeks ahead.",
+    "expected_fact": "At least 6 weeks ahead.",
     "answerable": true
   },
   {
@@ -7703,7 +7703,7 @@
       "MKT-0039",
       "MKT-0040"
     ],
-    "expected_fact": "قبل 4 أسابيع على الأقل.",
+    "expected_fact": "قبل 6 أسابيع على الأقل.",
     "answerable": true
   },
   {
@@ -7724,7 +7724,7 @@
       "MKT-0039",
       "MKT-0040"
     ],
-    "expected_fact": "قبل 4 أسابيع على الأقل.",
+    "expected_fact": "قبل 6 أسابيع على الأقل.",
     "answerable": true
   },
   {
@@ -7829,7 +7829,7 @@
       "PRC-0015",
       "PRC-0016"
     ],
-    "expected_fact": "At least 3 for spend over 10000 SAR.",
+    "expected_fact": "At least 3 for spend over 25000 SAR.",
     "answerable": true
   },
   {
@@ -7850,7 +7850,7 @@
       "PRC-0015",
       "PRC-0016"
     ],
-    "expected_fact": "At least 3 for spend over 10000 SAR.",
+    "expected_fact": "At least 3 for spend over 25000 SAR.",
     "answerable": true
   },
   {
@@ -7913,7 +7913,7 @@
       "PRC-0023",
       "PRC-0024"
     ],
-    "expected_fact": "6 months before the renewal date.",
+    "expected_fact": "2 months before the renewal date.",
     "answerable": true
   },
   {
@@ -7934,7 +7934,7 @@
       "PRC-0023",
       "PRC-0024"
     ],
-    "expected_fact": "6 months before the renewal date.",
+    "expected_fact": "2 months before the renewal date.",
     "answerable": true
   },
   {
@@ -7955,7 +7955,7 @@
       "PRC-0023",
       "PRC-0024"
     ],
-    "expected_fact": "قبل 3 أشهر من تاريخ التجديد.",
+    "expected_fact": "قبل 2 أشهر من تاريخ التجديد.",
     "answerable": true
   },
   {
@@ -7976,13 +7976,13 @@
       "PRC-0023",
       "PRC-0024"
     ],
-    "expected_fact": "قبل 3 أشهر من تاريخ التجديد.",
+    "expected_fact": "قبل 2 أشهر من تاريخ التجديد.",
     "answerable": true
   },
   {
     "id": "A0191",
     "family": "faq_exact",
-    "question": "Who approves a 5000 AED purchase?",
+    "question": "Who approves a 10000 AED purchase?",
     "language": "en",
     "department": "PRC",
     "topic": "purchase_thresholds",
@@ -7997,13 +7997,13 @@
       "PRC-0031",
       "PRC-0032"
     ],
-    "expected_fact": "Your line manager, up to 5000 AED.",
+    "expected_fact": "Your line manager, up to 10000 AED.",
     "answerable": true
   },
   {
     "id": "B0191",
     "family": "faq_paraphrased",
-    "question": "Could you tell me who approves a 5000 AED purchase?",
+    "question": "Could you tell me who approves a 10000 AED purchase?",
     "language": "en",
     "department": "PRC",
     "topic": "purchase_thresholds",
@@ -8018,13 +8018,13 @@
       "PRC-0031",
       "PRC-0032"
     ],
-    "expected_fact": "Your line manager, up to 5000 AED.",
+    "expected_fact": "Your line manager, up to 10000 AED.",
     "answerable": true
   },
   {
     "id": "A0192",
     "family": "faq_exact",
-    "question": "من يعتمد شراء بقيمة 10000 SAR؟",
+    "question": "من يعتمد شراء بقيمة 10000 AED؟",
     "language": "ar",
     "department": "PRC",
     "topic": "purchase_thresholds",
@@ -8039,13 +8039,13 @@
       "PRC-0031",
       "PRC-0032"
     ],
-    "expected_fact": "مديرك المباشر، حتى 10000 SAR.",
+    "expected_fact": "مديرك المباشر، حتى 10000 AED.",
     "answerable": true
   },
   {
     "id": "B0192",
     "family": "faq_paraphrased",
-    "question": "هل يمكنك أن تخبرني: من يعتمد شراء بقيمة 10000 SAR؟",
+    "question": "هل يمكنك أن تخبرني: من يعتمد شراء بقيمة 10000 AED؟",
     "language": "ar",
     "department": "PRC",
     "topic": "purchase_thresholds",
@@ -8060,7 +8060,7 @@
       "PRC-0031",
       "PRC-0032"
     ],
-    "expected_fact": "مديرك المباشر، حتى 10000 SAR.",
+    "expected_fact": "مديرك المباشر، حتى 10000 AED.",
     "answerable": true
   },
   {

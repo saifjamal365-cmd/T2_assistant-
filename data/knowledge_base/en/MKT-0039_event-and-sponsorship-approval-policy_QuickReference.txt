@@ -3,7 +3,7 @@ Document ID: MKT-0039
 Department: Marketing & Communications
 Type: Quick Reference
 Version: 3.4
-Effective date: 2025-04-29
+Effective date: 2024-06-10
 Status: Active
 Owner: Corporate Communications
 Applies to: All employees
@@ -14,6 +14,6 @@ Quick reference - Event and Sponsorship Approval - Quick Reference.
 Key points
 - Any event or sponsorship using the T2 name needs Corporate Communications approval before commitments are made.
 - Requests are submitted at least 6 weeks ahead with a budget and objective.
-- Sponsorships over 25000 SAR also need Finance approval.
+- Sponsorships over 50000 SAR also need Finance approval.
 
 Owner: Corporate Communications. Full policy: MKT policy set.

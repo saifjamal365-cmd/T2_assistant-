@@ -2,12 +2,13 @@ Title: System Access Request Policy (Riyadh Office)
 Document ID: IT-0149
 Department: Information Technology
 Type: Policy
-Version: 2.2
-Effective date: 2025-01-19
-Status: Active
+Version: 1.2
+Effective date: 2024-01-10
+Status: Superseded
 Owner: IT Service Desk
 Applies to: Riyadh Office employees
 Related documents: IT-0007, IT-0031, HR-0111
+Superseded by: IT-0017
 
 1. Purpose
 This policy explains how access to systems is requested and reviewed.
@@ -18,7 +19,7 @@ This policy applies to Riyadh Office employees.
 3. Policy
 - Access is requested through the service desk, stating the system and the business reason.
 - Access to client or financial data needs the manager and the system owner to approve.
-- Access unused for 60 days may be revoked and must be requested again.
+- Access unused for 90 days may be revoked and must be requested again.
 - All access is reviewed every quarter.
 
 4. Exceptions

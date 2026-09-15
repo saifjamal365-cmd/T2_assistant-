@@ -2,11 +2,12 @@ Title: Mail and Courier - Quick Reference (Riyadh Office)
 Document ID: FAC-0131
 Department: Facilities
 Type: Quick Reference
-Version: 2.1
-Effective date: 2023-12-27
-Status: Active
+Version: 1.1
+Effective date: 2023-06-30
+Status: Superseded
 Owner: Facilities Management
 Applies to: Riyadh Office employees
+Superseded by: FAC-0079
 
 Quick reference - Mail and Courier - Quick Reference (Riyadh Office).
 

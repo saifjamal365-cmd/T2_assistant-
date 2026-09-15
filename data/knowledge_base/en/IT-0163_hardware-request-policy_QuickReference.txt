@@ -13,7 +13,7 @@ Quick reference - Hardware Request - Quick Reference (Riyadh Office).
 
 Key points
 - Standard equipment is requested through the asset portal with a business justification.
-- Standard requests are approved by the manager and fulfilled within 5 working days.
+- Standard requests are approved by the manager and fulfilled within 3 working days.
 - Non-standard items also need IT approval and may take longer.
 
 Owner: IT Service Desk. Full policy: IT policy set.

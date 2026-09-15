@@ -3,7 +3,7 @@ Document ID: HR-0187
 Department: Human Resources
 Type: Procedure
 Version: 3.3
-Effective date: 2025-05-05
+Effective date: 2023-01-12
 Status: Active
 Owner: HR Operations
 Applies to: All employees
@@ -20,9 +20,9 @@ Steps
 5. Keep a copy of the approval for your records.
 
 Rules that apply
-- The company covers shipping up to 100 kg and 7 nights of temporary accommodation.
-- A relocation allowance of 5000 EGP is paid once, on arrival.
-- If the employee resigns within 12 months, the allowance is repaid pro-rata.
+- The company covers shipping up to 300 kg and 30 nights of temporary accommodation.
+- A relocation allowance of 10000 SAR is paid once, on arrival.
+- If the employee resigns within 24 months, the allowance is repaid pro-rata.
 
 Contact
 HR Operations: hr@t2.example

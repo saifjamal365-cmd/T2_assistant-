@@ -98,7 +98,10 @@
     const form = document.getElementById("form");
     const text = document.getElementById("text");
     const send = document.getElementById("send");
+    // remembered across a page reload, so refreshing does not silently start
+    // a new conversation and split the history in two
     let conversationId = null;
+    try { conversationId = localStorage.getItem("t2_conversation_id"); } catch (e) { /* ignore */ }
 
     const isArabic = (s) => /[؀-ۿ]/.test(s);
     const esc = (s) => s.replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
@@ -161,16 +164,26 @@
       }
     }
 
-    async function openConversation(id) {
+    function rememberConversation(id) {
       conversationId = id;
-      const c = await (await fetch("/conversations/" + id)).json();
+      try {
+        if (id) localStorage.setItem("t2_conversation_id", id);
+        else localStorage.removeItem("t2_conversation_id");
+      } catch (e) { /* ignore */ }
+    }
+
+    async function openConversation(id) {
+      const res = await fetch("/conversations/" + id);
+      if (!res.ok) { newChat(); return; } // e.g. deleted, or from another install
+      const c = await res.json();
+      rememberConversation(id);
       log.innerHTML = "";
       for (const m of c.messages) addMsg(m.role, m.content);
       loadConversations();
     }
 
     function newChat() {
-      conversationId = null;
+      rememberConversation(null);
       log.innerHTML = '<div class="empty">Ask a question about company policy, or paste meeting notes to summarise.</div>';
       loadConversations();
     }
@@ -186,7 +199,14 @@
           body: JSON.stringify({ message, conversation_id: conversationId }),
         });
         const data = await res.json();
-        conversationId = data.conversation_id;
+        if (!res.ok) {
+          // a clean error from the API (422 bad input, 503 provider down, 500
+          // unexpected) - show its message instead of assuming a reply exists
+          thinking.querySelector(".bubble").textContent =
+            data.detail || `Something went wrong (${res.status}). Try again.`;
+          return;
+        }
+        rememberConversation(data.conversation_id);
         thinking.remove();
         addMsg("bot", data.reply, data.route, { runId: data.run_id, traceUrl: data.trace_url });
         loadConversations();
@@ -215,7 +235,8 @@
     };
     document.getElementById("new").onclick = newChat;
 
-    loadConversations();
+    if (conversationId) openConversation(conversationId);
+    else loadConversations();
     text.focus();
   </script>
 </body>

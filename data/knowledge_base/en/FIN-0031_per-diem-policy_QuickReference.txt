@@ -2,8 +2,8 @@ Title: Per Diem - Quick Reference
 Document ID: FIN-0031
 Department: Finance
 Type: Quick Reference
-Version: 3.3
-Effective date: 2025-01-31
+Version: 3.2
+Effective date: 2023-02-14
 Status: Active
 Owner: Finance Shared Services
 Applies to: All employees
@@ -13,7 +13,7 @@ Quick reference - Per Diem - Quick Reference.
 
 Key points
 - The per diem covers meals and small incidentals and removes the need for individual meal receipts.
-- The daily rate is 250 SAR for domestic travel and 400 SAR for international travel.
+- The daily rate is 250 EGP for domestic travel and 500 EGP for international travel.
 - The per diem is not paid for days where all meals are provided.
 
 Owner: Finance Shared Services. Full policy: FIN policy set.

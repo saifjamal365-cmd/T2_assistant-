@@ -2,8 +2,8 @@ Title: Relocation Support Policy
 Document ID: HR-0185
 Department: Human Resources
 Type: Policy
-Version: 3.2
-Effective date: 2024-12-07
+Version: 3.4
+Effective date: 2023-06-19
 Status: Active
 Owner: HR Operations
 Applies to: All employees
@@ -17,7 +17,7 @@ This policy applies to all employees.
 
 3. Policy
 - The company covers shipping up to 300 kg and 30 nights of temporary accommodation.
-- A relocation allowance of 5000 EGP is paid once, on arrival.
+- A relocation allowance of 10000 SAR is paid once, on arrival.
 - If the employee resigns within 24 months, the allowance is repaid pro-rata.
 
 4. Exceptions

@@ -3,7 +3,7 @@ Document ID: HR-0245
 Department: Human Resources
 Type: Procedure
 Version: 2.2
-Effective date: 2023-05-08
+Effective date: 2024-11-19
 Status: Active
 Owner: HR Operations
 Applies to: Riyadh Office employees
@@ -20,7 +20,7 @@ Steps
 5. Keep a copy of the approval for your records.
 
 Rules that apply
-- Start time may be chosen between 07:30 and 10:00, keeping the full daily hours.
+- Start time may be chosen between 07:30 and 09:30, keeping the full daily hours.
 - Any flexible arrangement must still cover the core hours.
 
 Contact

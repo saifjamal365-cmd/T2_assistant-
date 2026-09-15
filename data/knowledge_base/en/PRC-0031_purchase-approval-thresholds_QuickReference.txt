@@ -2,8 +2,8 @@ Title: Purchase Approval Thresholds - Quick Reference
 Document ID: PRC-0031
 Department: Procurement
 Type: Quick Reference
-Version: 3.1
-Effective date: 2023-01-24
+Version: 3.0
+Effective date: 2023-04-18
 Status: Active
 Owner: Procurement Office
 Applies to: All employees
@@ -12,8 +12,8 @@ Related documents: FIN-0055, FIN-0039, PRC-0007
 Quick reference - Purchase Approval Thresholds - Quick Reference.
 
 Key points
-- Up to 5000 AED: line manager.
-- 5000 to 50000 AED: department head.
+- Up to 10000 AED: line manager.
+- 10000 to 50000 AED: department head.
 - Over 50000 AED: Procurement Committee and CFO.
 
 Owner: Procurement Office. Full policy: PRC policy set.

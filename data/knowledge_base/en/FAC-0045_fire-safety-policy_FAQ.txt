@@ -2,8 +2,8 @@ Title: Fire Safety - FAQ
 Document ID: FAC-0045
 Department: Facilities
 Type: FAQ
-Version: 3.1
-Effective date: 2023-06-23
+Version: 3.4
+Effective date: 2023-09-07
 Status: Active
 Owner: Facilities Management
 Applies to: All employees
@@ -12,6 +12,6 @@ Related documents: FAC-0039, FAC-0023
 Frequently asked questions about fire safety - faq.
 
 Q: How often are fire drills?
-A: 4 times a year.
+A: 2 times a year.
 
 More detail is in the matching policy document.

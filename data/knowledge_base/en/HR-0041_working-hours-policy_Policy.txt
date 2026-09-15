@@ -2,8 +2,8 @@ Title: Working Hours Policy
 Document ID: HR-0041
 Department: Human Resources
 Type: Policy
-Version: 3.0
-Effective date: 2025-06-05
+Version: 3.2
+Effective date: 2023-10-10
 Status: Active
 Owner: HR Operations
 Applies to: All employees

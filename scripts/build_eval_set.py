@@ -238,8 +238,10 @@ def _faq_items() -> list[dict]:
             if not doc_id or not docs:
                 continue  # this topic's documents didn't make the 1000-document slice
 
-            # Reproduce the exact values used when this FAQ document was built.
-            rng = random.Random(f"{gen.SEED}:{topic.key}:FAQ:{lang}:HO")
+            # Reproduce the exact values used when this document's facts were
+            # built (shared across doc types AND languages - see
+            # generate_kb.py's facts_rng).
+            rng = random.Random(f"{gen.SEED}:{topic.key}:HO:facts")
             values = gen.pick_params(topic, rng, 0)
             values["owner"] = gen.owner_name(topic.dept, lang)
 

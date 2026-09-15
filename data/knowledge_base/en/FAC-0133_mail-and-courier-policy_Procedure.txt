@@ -2,8 +2,8 @@ Title: Mail and Courier - Procedure (Riyadh Office)
 Document ID: FAC-0133
 Department: Facilities
 Type: Procedure
-Version: 2.4
-Effective date: 2024-07-14
+Version: 2.3
+Effective date: 2025-06-17
 Status: Active
 Owner: Facilities Management
 Applies to: Riyadh Office employees
@@ -21,7 +21,7 @@ Steps
 Rules that apply
 - Personal parcels should not be sent to the office address.
 - Outgoing business courier is booked through reception with a cost code.
-- Reception holds parcels for 10 days before returning them to sender.
+- Reception holds parcels for 5 days before returning them to sender.
 
 Contact
 Facilities Management: fac@t2.example

@@ -2,8 +2,8 @@ Title: Petty Cash - Quick Reference (Riyadh Office)
 Document ID: FIN-0097
 Department: Finance
 Type: Quick Reference
-Version: 2.4
-Effective date: 2024-10-20
+Version: 2.2
+Effective date: 2024-10-06
 Status: Active
 Owner: Finance Shared Services
 Applies to: Riyadh Office employees

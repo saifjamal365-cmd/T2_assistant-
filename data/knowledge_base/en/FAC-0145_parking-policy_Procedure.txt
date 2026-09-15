@@ -2,8 +2,8 @@ Title: Parking - Procedure (Jeddah Office)
 Document ID: FAC-0145
 Department: Facilities
 Type: Procedure
-Version: 2.3
-Effective date: 2025-02-13
+Version: 2.0
+Effective date: 2024-05-05
 Status: Active
 Owner: Facilities Management
 Applies to: Jeddah Office employees
@@ -20,7 +20,7 @@ Steps
 5. Keep a copy of the approval for your records.
 
 Rules that apply
-- Parking is limited. Spaces are assigned by the waiting list, reviewed every 6 months.
+- Parking is limited. Spaces are assigned by the waiting list, reviewed every 3 months.
 - Reserved spaces are for visitors and accessibility needs only.
 - Parking in a reserved space without a permit may lead to the car being clamped.
 

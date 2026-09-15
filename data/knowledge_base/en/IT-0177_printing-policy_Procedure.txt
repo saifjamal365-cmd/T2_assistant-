@@ -3,7 +3,7 @@ Document ID: IT-0177
 Department: Information Technology
 Type: Procedure
 Version: 2.0
-Effective date: 2025-01-13
+Effective date: 2023-02-12
 Status: Active
 Owner: IT Service Desk
 Applies to: Riyadh Office employees
@@ -22,7 +22,7 @@ Steps
 Rules that apply
 - Printing needs a badge tap at the printer to release the job.
 - Default printing is double-sided and black-and-white.
-- Unreleased jobs are deleted after 24 hours.
+- Unreleased jobs are deleted after 4 hours.
 
 Contact
 IT Service Desk: it@t2.example

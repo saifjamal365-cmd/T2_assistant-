@@ -3,7 +3,7 @@ Document ID: FAC-0007
 Department: Facilities
 Type: Quick Reference
 Version: 3.2
-Effective date: 2025-04-29
+Effective date: 2023-02-24
 Status: Active
 Owner: Facilities Management
 Applies to: All employees
@@ -13,7 +13,7 @@ Quick reference - Meeting Room Booking - Quick Reference.
 
 Key points
 - Rooms are booked through the shared calendar. Walk-in use is allowed only if the room is free for the next 15 minutes.
-- Bookings longer than 3 hours need an office administrator to approve.
+- Bookings longer than 2 hours need an office administrator to approve.
 - If a meeting ends early or is cancelled, release the room in the calendar.
 
 Owner: Facilities Management. Full policy: FAC policy set.

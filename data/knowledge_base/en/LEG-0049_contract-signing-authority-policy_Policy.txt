@@ -3,7 +3,7 @@ Document ID: LEG-0049
 Department: Legal & Compliance
 Type: Policy
 Version: 3.2
-Effective date: 2024-02-25
+Effective date: 2024-12-17
 Status: Active
 Owner: Legal & Compliance Office
 Applies to: All employees
@@ -17,7 +17,7 @@ This policy applies to all employees.
 
 3. Policy
 - Only named signatories in the authority matrix may sign contracts for T2.
-- Contracts over 1000000 EGP or longer than 5 years need board approval.
+- Contracts over 500000 AED or longer than 3 years need board approval.
 - Legal reviews every contract before signing.
 
 4. Exceptions

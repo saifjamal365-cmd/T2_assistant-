@@ -2,8 +2,8 @@ Title: Fire Safety Policy (Riyadh Office)
 Document ID: FAC-0111
 Department: Facilities
 Type: Policy
-Version: 2.3
-Effective date: 2023-12-16
+Version: 2.0
+Effective date: 2024-03-02
 Status: Active
 Owner: Facilities Management
 Applies to: Riyadh Office employees

@@ -2,8 +2,8 @@ Title: Tax Documents - FAQ
 Document ID: FIN-0077
 Department: Finance
 Type: FAQ
-Version: 3.3
-Effective date: 2025-03-23
+Version: 3.2
+Effective date: 2025-04-18
 Status: Active
 Owner: Finance Shared Services
 Applies to: All employees

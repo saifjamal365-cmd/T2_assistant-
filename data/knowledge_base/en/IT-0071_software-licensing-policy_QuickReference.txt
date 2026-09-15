@@ -3,7 +3,7 @@ Document ID: IT-0071
 Department: Information Technology
 Type: Quick Reference
 Version: 3.0
-Effective date: 2024-12-29
+Effective date: 2023-04-10
 Status: Active
 Owner: IT Service Desk
 Applies to: All employees
@@ -13,7 +13,7 @@ Quick reference - Software Licensing - Quick Reference.
 
 Key points
 - Only software approved and licensed by IT may be installed on company devices.
-- Free or trial software may be used for evaluation for up to 14 days, then licensed or removed.
+- Free or trial software may be used for evaluation for up to 30 days, then licensed or removed.
 - Using pirated software is a serious policy violation.
 
 Owner: IT Service Desk. Full policy: IT policy set.

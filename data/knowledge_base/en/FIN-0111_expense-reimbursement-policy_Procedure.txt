@@ -2,12 +2,13 @@ Title: Expense Reimbursement - Procedure (Jeddah Office)
 Document ID: FIN-0111
 Department: Finance
 Type: Procedure
-Version: 2.3
-Effective date: 2024-07-31
-Status: Active
+Version: 1.2
+Effective date: 2023-07-14
+Status: Superseded
 Owner: Finance Shared Services
 Applies to: Jeddah Office employees
 Related documents: FIN-0015, FIN-0023, FIN-0031
+Superseded by: FIN-0003
 
 Purpose
 This policy explains how to claim back approved business expenses.
@@ -20,8 +21,8 @@ Steps
 5. Keep a copy of the approval for your records.
 
 Rules that apply
-- Claims are submitted through the finance portal within 14 days of the expense, with a receipt.
-- Any single item over 200 AED needs the manager's approval before it is spent.
+- Claims are submitted through the finance portal within 30 days of the expense, with a receipt.
+- Any single item over 200 SAR needs the manager's approval before it is spent.
 - Alcohol, personal entertainment and traffic fines are never reimbursed.
 - Approved claims are paid with the next payroll run.
 

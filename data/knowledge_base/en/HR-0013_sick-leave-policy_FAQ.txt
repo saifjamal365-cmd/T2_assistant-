@@ -12,9 +12,9 @@ Related documents: HR-0007, HR-0039, FAC-0063
 Frequently asked questions about sick leave - faq.
 
 Q: Do I need a doctor's note for two sick days?
-A: No. A report is only needed after 2 consecutive days.
+A: No. A report is only needed after 3 consecutive days.
 
 Q: How many paid sick days per year?
-A: Up to 15 days.
+A: Up to 10 days.
 
 More detail is in the matching policy document.

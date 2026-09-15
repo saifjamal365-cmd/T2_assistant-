@@ -2,8 +2,8 @@ Title: Printing - Procedure
 Document ID: IT-0123
 Department: Information Technology
 Type: Procedure
-Version: 3.0
-Effective date: 2025-02-15
+Version: 3.4
+Effective date: 2024-07-09
 Status: Active
 Owner: IT Service Desk
 Applies to: All employees
@@ -22,7 +22,7 @@ Steps
 Rules that apply
 - Printing needs a badge tap at the printer to release the job.
 - Default printing is double-sided and black-and-white.
-- Unreleased jobs are deleted after 24 hours.
+- Unreleased jobs are deleted after 2 hours.
 
 Contact
 IT Service Desk: it@t2.example

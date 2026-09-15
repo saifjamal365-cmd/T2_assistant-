@@ -2,8 +2,8 @@ Title: Multi-Factor Authentication Policy (Jeddah Office)
 Document ID: IT-0191
 Department: Information Technology
 Type: Policy
-Version: 2.1
-Effective date: 2024-10-01
+Version: 2.3
+Effective date: 2023-05-14
 Status: Active
 Owner: IT Service Desk
 Applies to: Jeddah Office employees
@@ -18,7 +18,7 @@ This policy applies to Jeddah Office employees.
 3. Policy
 - MFA is required for email, the VPN and any system holding client or financial data.
 - The approved second factor is the authenticator app; SMS is allowed only as a fallback.
-- Lost devices must be reported to the service desk within 1 hours.
+- Lost devices must be reported to the service desk within 2 hours.
 
 4. Exceptions
 Exceptions need written approval from IT Service Desk.

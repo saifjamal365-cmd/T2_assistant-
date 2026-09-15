@@ -2,8 +2,8 @@ Title: Probation Policy (Riyadh Office)
 Document ID: HR-0247
 Department: Human Resources
 Type: Policy
-Version: 2.0
-Effective date: 2023-03-10
+Version: 2.1
+Effective date: 2025-05-09
 Status: Active
 Owner: HR Operations
 Applies to: Riyadh Office employees
@@ -16,9 +16,9 @@ This policy sets the probation period for new hires and how it is assessed.
 This policy applies to Riyadh Office employees.
 
 3. Policy
-- The probation period is 6 months from the start date.
+- The probation period is 3 months from the start date.
 - A review meeting is held at the midpoint and at the end of probation.
-- During probation, either side may end the contract with 7 days' notice.
+- During probation, either side may end the contract with 14 days' notice.
 
 4. Exceptions
 Exceptions need written approval from HR Operations.

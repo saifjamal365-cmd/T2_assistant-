@@ -3,7 +3,7 @@ Document ID: HR-0181
 Department: Human Resources
 Type: FAQ
 Version: 3.3
-Effective date: 2023-07-01
+Effective date: 2024-05-04
 Status: Active
 Owner: HR Operations
 Applies to: All employees
@@ -12,6 +12,6 @@ Related documents: HR-0191, HR-0095
 Frequently asked questions about secondment - faq.
 
 Q: How long can a secondment last?
-A: Up to 18 months.
+A: Up to 12 months.
 
 More detail is in the matching policy document.

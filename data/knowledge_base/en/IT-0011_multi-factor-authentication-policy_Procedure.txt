@@ -2,8 +2,8 @@ Title: Multi-Factor Authentication - Procedure
 Document ID: IT-0011
 Department: Information Technology
 Type: Procedure
-Version: 3.3
-Effective date: 2023-01-20
+Version: 3.4
+Effective date: 2024-04-20
 Status: Active
 Owner: IT Service Desk
 Applies to: All employees

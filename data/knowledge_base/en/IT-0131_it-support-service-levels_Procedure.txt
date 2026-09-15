@@ -2,8 +2,8 @@ Title: IT Support Service Levels - Procedure
 Document ID: IT-0131
 Department: Information Technology
 Type: Procedure
-Version: 3.0
-Effective date: 2023-02-03
+Version: 3.4
+Effective date: 2023-11-19
 Status: Active
 Owner: IT Service Desk
 Applies to: All employees
@@ -21,7 +21,7 @@ Steps
 
 Rules that apply
 - Standard tickets are responded to within 1 business day(s).
-- Critical issues, such as a full outage, are responded to within 4 hour(s) during business hours.
+- Critical issues, such as a full outage, are responded to within 1 hour(s) during business hours.
 - Raise a ticket through the service desk portal, not by contacting staff directly.
 
 Contact

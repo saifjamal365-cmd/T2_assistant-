@@ -18,7 +18,7 @@ This policy applies to all employees.
 3. Policy
 - Every recurring task should have a short written procedure in the shared knowledge base.
 - Post-incident reviews and design decisions are written up and shared, not kept private.
-- Pages unreviewed for 12 months are flagged for an owner to update or archive.
+- Pages unreviewed for 6 months are flagged for an owner to update or archive.
 
 4. Exceptions
 Exceptions need written approval from Operations Excellence.

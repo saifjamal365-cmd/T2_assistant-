@@ -2,8 +2,8 @@ Title: Change Management - Quick Reference
 Document ID: OPS-0023
 Department: Operations
 Type: Quick Reference
-Version: 3.2
-Effective date: 2023-12-25
+Version: 3.1
+Effective date: 2024-01-13
 Status: Active
 Owner: Operations Excellence
 Applies to: All employees
@@ -14,6 +14,6 @@ Quick reference - Change Management - Quick Reference.
 Key points
 - Every change to a live system is recorded with a plan, a test and a rollback step.
 - Standard low-risk changes are pre-approved; other changes go to the change board.
-- Changes are not deployed on Thursday or during a change freeze.
+- Changes are not deployed on Friday or during a change freeze.
 
 Owner: Operations Excellence. Full policy: OPS policy set.

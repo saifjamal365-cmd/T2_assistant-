@@ -3,7 +3,7 @@ Document ID: FAC-0113
 Department: Facilities
 Type: Quick Reference
 Version: 2.1
-Effective date: 2023-09-28
+Effective date: 2023-08-01
 Status: Active
 Owner: Facilities Management
 Applies to: Riyadh Office employees

@@ -2,8 +2,8 @@ Title: Tax Documents Policy
 Document ID: FIN-0073
 Department: Finance
 Type: Policy
-Version: 3.0
-Effective date: 2024-09-16
+Version: 3.3
+Effective date: 2024-09-04
 Status: Active
 Owner: Finance Shared Services
 Applies to: All employees
@@ -17,7 +17,7 @@ This policy applies to all employees.
 
 3. Policy
 - Salary certificates are requested through the HR system and issued within 3 working days.
-- Annual tax summaries are published in the HR system by February each year.
+- Annual tax summaries are published in the HR system by March each year.
 
 4. Exceptions
 Exceptions need written approval from Finance Shared Services.

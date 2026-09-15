@@ -2,8 +2,8 @@ Title: Clear Desk and Screen - Quick Reference (Riyadh Office)
 Document ID: IT-0169
 Department: Information Technology
 Type: Quick Reference
-Version: 2.4
-Effective date: 2025-02-19
+Version: 2.2
+Effective date: 2025-06-17
 Status: Active
 Owner: IT Service Desk
 Applies to: Riyadh Office employees
@@ -14,6 +14,6 @@ Quick reference - Clear Desk and Screen - Quick Reference (Riyadh Office).
 Key points
 - Lock your screen whenever you leave your desk.
 - Documents with client or personal data are locked away at the end of the day.
-- Printouts left on the printer for more than 30 minutes are shredded.
+- Printouts left on the printer for more than 15 minutes are shredded.
 
 Owner: IT Service Desk. Full policy: IT policy set.

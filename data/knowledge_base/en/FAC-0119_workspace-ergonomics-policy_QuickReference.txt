@@ -2,8 +2,8 @@ Title: Workspace Ergonomics - Quick Reference (Riyadh Office)
 Document ID: FAC-0119
 Department: Facilities
 Type: Quick Reference
-Version: 2.1
-Effective date: 2023-03-09
+Version: 2.3
+Effective date: 2023-06-15
 Status: Active
 Owner: Facilities Management
 Applies to: Riyadh Office employees
@@ -14,6 +14,6 @@ Quick reference - Workspace Ergonomics - Quick Reference (Riyadh Office).
 Key points
 - A workstation assessment is offered to every new employee and on request.
 - The company provides an adjustable chair and, on assessment, extras such as a footrest or riser.
-- Remote employees can claim up to 1000 AED toward a home-office chair or desk.
+- Remote employees can claim up to 1500 SAR toward a home-office chair or desk.
 
 Owner: Facilities Management. Full policy: FAC policy set.

@@ -2,8 +2,8 @@ Title: Secondment - Procedure
 Document ID: HR-0179
 Department: Human Resources
 Type: Procedure
-Version: 3.4
-Effective date: 2024-07-30
+Version: 3.3
+Effective date: 2024-08-06
 Status: Active
 Owner: HR Operations
 Applies to: All employees
@@ -20,7 +20,7 @@ Steps
 5. Keep a copy of the approval for your records.
 
 Rules that apply
-- A secondment lasts 6 to 12 months and needs both managers to agree.
+- A secondment lasts 3 to 12 months and needs both managers to agree.
 - The employee returns to their original role or an equivalent one at the end.
 
 Contact

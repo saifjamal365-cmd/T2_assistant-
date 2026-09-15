@@ -2,8 +2,8 @@ Title: Clear Desk and Screen - Procedure (Riyadh Office)
 Document ID: IT-0171
 Department: Information Technology
 Type: Procedure
-Version: 2.0
-Effective date: 2023-10-14
+Version: 2.3
+Effective date: 2025-03-10
 Status: Active
 Owner: IT Service Desk
 Applies to: Riyadh Office employees
@@ -22,7 +22,7 @@ Steps
 Rules that apply
 - Lock your screen whenever you leave your desk.
 - Documents with client or personal data are locked away at the end of the day.
-- Printouts left on the printer for more than 30 minutes are shredded.
+- Printouts left on the printer for more than 15 minutes are shredded.
 
 Contact
 IT Service Desk: it@t2.example

@@ -3,7 +3,7 @@ Document ID: OPS-0003
 Department: Operations
 Type: Procedure
 Version: 3.0
-Effective date: 2024-03-20
+Effective date: 2023-12-30
 Status: Active
 Owner: Operations Excellence
 Applies to: All employees
@@ -20,8 +20,8 @@ Steps
 5. Keep a copy of the approval for your records.
 
 Rules that apply
-- If the first point of contact cannot resolve an issue within 24 hours, it is escalated to the account manager.
-- Issues with possible financial loss or a public complaint are flagged to the department head within 4 hours.
+- If the first point of contact cannot resolve an issue within 48 hours, it is escalated to the account manager.
+- Issues with possible financial loss or a public complaint are flagged to the department head within 2 hours.
 - Every escalation is logged in the CRM with a timeline of actions.
 
 Contact

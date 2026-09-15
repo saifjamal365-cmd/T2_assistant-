@@ -2,8 +2,8 @@ Title: Workplace Health and Safety Policy
 Document ID: FAC-0033
 Department: Facilities
 Type: Policy
-Version: 3.3
-Effective date: 2024-08-04
+Version: 3.4
+Effective date: 2023-10-29
 Status: Active
 Owner: Facilities Management
 Applies to: All employees
@@ -16,7 +16,7 @@ This policy sets basic health and safety rules for the office.
 This policy applies to all employees.
 
 3. Policy
-- Any workplace injury, however minor, is reported to the office manager within 24 hours using the incident form.
+- Any workplace injury, however minor, is reported to the office manager within 48 hours using the incident form.
 - Keep walkways and fire exits clear at all times.
 - Employees with symptoms of a contagious illness work from home instead of coming in.
 

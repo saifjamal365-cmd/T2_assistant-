@@ -2,8 +2,8 @@ Title: IT Support Service Levels - Quick Reference
 Document ID: IT-0135
 Department: Information Technology
 Type: Quick Reference
-Version: 3.2
-Effective date: 2023-04-09
+Version: 3.0
+Effective date: 2023-10-15
 Status: Active
 Owner: IT Service Desk
 Applies to: All employees
@@ -13,7 +13,7 @@ Quick reference - IT Support Service Levels - Quick Reference.
 
 Key points
 - Standard tickets are responded to within 1 business day(s).
-- Critical issues, such as a full outage, are responded to within 2 hour(s) during business hours.
+- Critical issues, such as a full outage, are responded to within 1 hour(s) during business hours.
 - Raise a ticket through the service desk portal, not by contacting staff directly.
 
 Owner: IT Service Desk. Full policy: IT policy set.

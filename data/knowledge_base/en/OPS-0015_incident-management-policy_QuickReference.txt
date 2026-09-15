@@ -2,8 +2,8 @@ Title: Incident Management - Quick Reference
 Document ID: OPS-0015
 Department: Operations
 Type: Quick Reference
-Version: 3.4
-Effective date: 2023-12-01
+Version: 3.3
+Effective date: 2024-08-25
 Status: Active
 Owner: Operations Excellence
 Applies to: All employees
@@ -13,7 +13,7 @@ Quick reference - Incident Management - Quick Reference.
 
 Key points
 - Incidents are logged with a severity from 1 (critical) to 4 (low).
-- Severity 1 incidents get an incident commander and updates every 15 minutes.
-- A written post-incident review is completed within 5 working days.
+- Severity 1 incidents get an incident commander and updates every 30 minutes.
+- A written post-incident review is completed within 3 working days.
 
 Owner: Operations Excellence. Full policy: OPS policy set.

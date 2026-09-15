@@ -2,8 +2,8 @@ Title: Client Escalation Policy
 Document ID: OPS-0001
 Department: Operations
 Type: Policy
-Version: 3.4
-Effective date: 2024-07-30
+Version: 3.3
+Effective date: 2024-10-08
 Status: Active
 Owner: Operations Excellence
 Applies to: All employees

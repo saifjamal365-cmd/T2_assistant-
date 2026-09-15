@@ -2,8 +2,8 @@ Title: Bereavement Leave - FAQ
 Document ID: HR-0029
 Department: Human Resources
 Type: FAQ
-Version: 3.0
-Effective date: 2023-04-07
+Version: 3.2
+Effective date: 2024-06-18
 Status: Active
 Owner: HR Operations
 Applies to: All employees

@@ -2,8 +2,8 @@ Title: Overtime Policy (Riyadh Office)
 Document ID: HR-0229
 Department: Human Resources
 Type: Policy
-Version: 2.3
-Effective date: 2023-04-27
+Version: 2.2
+Effective date: 2025-03-26
 Status: Active
 Owner: HR Operations
 Applies to: Riyadh Office employees
@@ -17,8 +17,8 @@ This policy applies to Riyadh Office employees.
 
 3. Policy
 - Overtime must be approved in writing by the manager before it is worked.
-- Overtime is paid at 1.25 times the normal hourly rate.
-- Employees at grade M3 and above are not eligible for overtime pay.
+- Overtime is paid at 1.5 times the normal hourly rate.
+- Employees at grade D1 and above are not eligible for overtime pay.
 
 4. Exceptions
 Exceptions need written approval from HR Operations.

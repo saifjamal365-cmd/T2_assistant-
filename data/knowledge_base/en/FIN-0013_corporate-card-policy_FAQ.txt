@@ -3,7 +3,7 @@ Document ID: FIN-0013
 Department: Finance
 Type: FAQ
 Version: 3.2
-Effective date: 2024-07-24
+Effective date: 2024-08-05
 Status: Active
 Owner: Finance Shared Services
 Applies to: All employees

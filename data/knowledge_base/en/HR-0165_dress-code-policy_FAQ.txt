@@ -2,8 +2,8 @@ Title: Dress Code - FAQ
 Document ID: HR-0165
 Department: Human Resources
 Type: FAQ
-Version: 3.2
-Effective date: 2023-08-20
+Version: 3.4
+Effective date: 2024-01-27
 Status: Active
 Owner: HR Operations
 Applies to: All employees

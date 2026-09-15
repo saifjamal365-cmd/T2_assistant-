@@ -2,8 +2,8 @@ Title: Supplier Selection - FAQ
 Document ID: PRC-0013
 Department: Procurement
 Type: FAQ
-Version: 3.2
-Effective date: 2023-07-01
+Version: 3.1
+Effective date: 2023-01-26
 Status: Active
 Owner: Procurement Office
 Applies to: All employees
@@ -12,6 +12,6 @@ Related documents: PRC-0007, FIN-0039, LEG-0023
 Frequently asked questions about supplier selection - faq.
 
 Q: How many suppliers must quote for a large purchase?
-A: At least 3 for spend over 10000 SAR.
+A: At least 3 for spend over 25000 SAR.
 
 More detail is in the matching policy document.

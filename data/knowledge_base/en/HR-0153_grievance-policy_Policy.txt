@@ -2,8 +2,8 @@ Title: Grievance Policy
 Document ID: HR-0153
 Department: Human Resources
 Type: Policy
-Version: 3.1
-Effective date: 2024-01-28
+Version: 3.3
+Effective date: 2024-04-08
 Status: Active
 Owner: HR Operations
 Applies to: All employees
@@ -17,7 +17,7 @@ This policy applies to all employees.
 
 3. Policy
 - Raise the issue informally with the manager first where possible.
-- A formal grievance is submitted in writing and acknowledged within 3 working days.
+- A formal grievance is submitted in writing and acknowledged within 5 working days.
 - A hearing is held within 15 working days, and the outcome is given in writing.
 
 4. Exceptions

@@ -3,7 +3,7 @@ Document ID: IT-0067
 Department: Information Technology
 Type: Procedure
 Version: 3.2
-Effective date: 2025-01-25
+Effective date: 2023-10-28
 Status: Active
 Owner: IT Service Desk
 Applies to: All employees
@@ -21,7 +21,7 @@ Steps
 
 Rules that apply
 - Only software approved and licensed by IT may be installed on company devices.
-- Free or trial software may be used for evaluation for up to 14 days, then licensed or removed.
+- Free or trial software may be used for evaluation for up to 30 days, then licensed or removed.
 - Using pirated software is a serious policy violation.
 
 Contact

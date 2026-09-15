@@ -2,8 +2,8 @@ Title: Clear Desk and Screen - Procedure
 Document ID: IT-0115
 Department: Information Technology
 Type: Procedure
-Version: 3.3
-Effective date: 2023-02-01
+Version: 3.0
+Effective date: 2024-07-16
 Status: Active
 Owner: IT Service Desk
 Applies to: All employees

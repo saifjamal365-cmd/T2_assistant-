@@ -2,8 +2,8 @@ Title: Parental Leave - Quick Reference
 Document ID: HR-0023
 Department: Human Resources
 Type: Quick Reference
-Version: 3.2
-Effective date: 2023-05-24
+Version: 3.3
+Effective date: 2025-04-15
 Status: Active
 Owner: HR Operations
 Applies to: All employees

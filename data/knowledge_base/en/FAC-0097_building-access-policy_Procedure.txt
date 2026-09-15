@@ -2,12 +2,13 @@ Title: Building Access - Procedure (Riyadh Office)
 Document ID: FAC-0097
 Department: Facilities
 Type: Procedure
-Version: 2.3
-Effective date: 2023-06-08
-Status: Active
+Version: 1.0
+Effective date: 2023-09-11
+Status: Superseded
 Owner: Facilities Management
 Applies to: Riyadh Office employees
 Related documents: FAC-0015, FAC-0031
+Superseded by: FAC-0019
 
 Purpose
 This policy covers access cards and entry to the office.
@@ -21,7 +22,7 @@ Steps
 
 Rules that apply
 - Every employee has an access card. Do not let anyone "tailgate" in behind you.
-- Lost cards are reported the same day; a replacement costs 25 AED.
+- Lost cards are reported the same day; a replacement costs 50 AED.
 - After-hours access is logged and may need manager approval.
 
 Contact

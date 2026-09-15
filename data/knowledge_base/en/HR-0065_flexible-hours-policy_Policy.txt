@@ -2,8 +2,8 @@ Title: Flexible Hours Policy
 Document ID: HR-0065
 Department: Human Resources
 Type: Policy
-Version: 3.3
-Effective date: 2023-05-10
+Version: 3.2
+Effective date: 2024-06-30
 Status: Active
 Owner: HR Operations
 Applies to: All employees
@@ -16,7 +16,7 @@ This policy lets employees shift their start and end times within limits.
 This policy applies to all employees.
 
 3. Policy
-- Start time may be chosen between 07:00 and 09:30, keeping the full daily hours.
+- Start time may be chosen between 07:00 and 10:00, keeping the full daily hours.
 - Any flexible arrangement must still cover the core hours.
 
 4. Exceptions

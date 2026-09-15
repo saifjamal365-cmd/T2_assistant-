@@ -2,8 +2,8 @@ Title: Annual Leave Policy
 Document ID: HR-0001
 Department: Human Resources
 Type: Policy
-Version: 3.2
-Effective date: 2023-07-05
+Version: 3.1
+Effective date: 2023-06-13
 Status: Active
 Owner: HR Operations
 Applies to: All employees

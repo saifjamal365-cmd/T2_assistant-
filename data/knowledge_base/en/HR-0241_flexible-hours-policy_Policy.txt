@@ -2,8 +2,8 @@ Title: Flexible Hours Policy (Riyadh Office)
 Document ID: HR-0241
 Department: Human Resources
 Type: Policy
-Version: 2.3
-Effective date: 2025-01-22
+Version: 2.2
+Effective date: 2024-03-16
 Status: Active
 Owner: HR Operations
 Applies to: Riyadh Office employees
@@ -16,7 +16,7 @@ This policy lets employees shift their start and end times within limits.
 This policy applies to Riyadh Office employees.
 
 3. Policy
-- Start time may be chosen between 07:30 and 10:00, keeping the full daily hours.
+- Start time may be chosen between 07:30 and 09:30, keeping the full daily hours.
 - Any flexible arrangement must still cover the core hours.
 
 4. Exceptions

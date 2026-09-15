@@ -2,8 +2,8 @@ Title: Sick Leave Policy
 Document ID: HR-0009
 Department: Human Resources
 Type: Policy
-Version: 3.2
-Effective date: 2025-05-18
+Version: 3.1
+Effective date: 2024-10-17
 Status: Active
 Owner: HR Operations
 Applies to: All employees
@@ -16,7 +16,7 @@ This policy explains sick-leave entitlement and when a medical report is needed.
 This policy applies to all employees.
 
 3. Policy
-- Employees may take up to 12 paid sick days per year.
+- Employees may take up to 10 paid sick days per year.
 - A medical report is required for any sick leave longer than 3 consecutive days.
 - The employee must notify their manager on the first day of absence.
 - Unused sick days do not carry over and are not paid out.

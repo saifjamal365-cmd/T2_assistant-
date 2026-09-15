@@ -2,8 +2,8 @@ Title: Workspace Ergonomics - Procedure (Riyadh Office)
 Document ID: FAC-0121
 Department: Facilities
 Type: Procedure
-Version: 2.3
-Effective date: 2023-06-29
+Version: 2.2
+Effective date: 2024-01-22
 Status: Active
 Owner: Facilities Management
 Applies to: Riyadh Office employees

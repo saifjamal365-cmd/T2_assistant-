@@ -3,7 +3,7 @@ Document ID: OPS-0035
 Department: Operations
 Type: Procedure
 Version: 3.4
-Effective date: 2023-10-30
+Effective date: 2025-05-15
 Status: Active
 Owner: Operations Excellence
 Applies to: All employees
@@ -20,7 +20,7 @@ Steps
 5. Keep a copy of the approval for your records.
 
 Rules that apply
-- First response to a client request is within 8 business hours.
+- First response to a client request is within 4 business hours.
 - Standard requests are resolved within 5 business days.
 - Service levels are reviewed with each client every quarter.
 

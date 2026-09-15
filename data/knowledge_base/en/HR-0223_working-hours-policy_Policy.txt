@@ -2,8 +2,8 @@ Title: Working Hours Policy (Riyadh Office)
 Document ID: HR-0223
 Department: Human Resources
 Type: Policy
-Version: 2.3
-Effective date: 2023-05-22
+Version: 2.2
+Effective date: 2024-06-25
 Status: Active
 Owner: HR Operations
 Applies to: Riyadh Office employees

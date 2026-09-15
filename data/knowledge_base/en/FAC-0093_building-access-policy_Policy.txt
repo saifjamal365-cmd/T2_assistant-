@@ -2,8 +2,8 @@ Title: Building Access Policy (Riyadh Office)
 Document ID: FAC-0093
 Department: Facilities
 Type: Policy
-Version: 2.2
-Effective date: 2024-01-30
+Version: 2.3
+Effective date: 2023-09-17
 Status: Active
 Owner: Facilities Management
 Applies to: Riyadh Office employees

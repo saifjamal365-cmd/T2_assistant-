@@ -2,8 +2,8 @@ Title: Expense Reimbursement - FAQ
 Document ID: FIN-0005
 Department: Finance
 Type: FAQ
-Version: 3.0
-Effective date: 2023-12-18
+Version: 3.3
+Effective date: 2023-07-13
 Status: Active
 Owner: Finance Shared Services
 Applies to: All employees
@@ -12,9 +12,9 @@ Related documents: FIN-0015, FIN-0023, FIN-0031
 Frequently asked questions about expense reimbursement - faq.
 
 Q: How long do I have to claim an expense?
-A: Within 14 days of the expense.
+A: Within 30 days of the expense.
 
-Q: Do I need approval before spending 500 SAR?
-A: Yes, single items over 500 SAR need manager approval first.
+Q: Do I need approval before spending 200 SAR?
+A: Yes, single items over 200 SAR need manager approval first.
 
 More detail is in the matching policy document.

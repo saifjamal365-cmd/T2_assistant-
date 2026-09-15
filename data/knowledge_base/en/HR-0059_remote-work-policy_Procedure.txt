@@ -2,8 +2,8 @@ Title: Remote Work - Procedure
 Document ID: HR-0059
 Department: Human Resources
 Type: Procedure
-Version: 3.2
-Effective date: 2024-03-09
+Version: 3.3
+Effective date: 2023-06-25
 Status: Active
 Owner: HR Operations
 Applies to: All employees
@@ -20,10 +20,10 @@ Steps
 5. Keep a copy of the approval for your records.
 
 Rules that apply
-- Approved employees may work remotely up to 2 days per week.
+- Approved employees may work remotely up to 3 days per week.
 - Remote employees must join scheduled meetings with the camera on unless agreed otherwise.
 - Company equipment used remotely must connect only through the approved VPN.
-- A fully remote arrangement needs HR approval and is reviewed every 6 months.
+- A fully remote arrangement needs HR approval and is reviewed every 12 months.
 
 Contact
 HR Operations: hr@t2.example

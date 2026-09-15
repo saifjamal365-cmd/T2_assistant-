@@ -2,8 +2,8 @@ Title: Annual Leave - Quick Reference
 Document ID: HR-0007
 Department: Human Resources
 Type: Quick Reference
-Version: 3.3
-Effective date: 2023-01-05
+Version: 3.0
+Effective date: 2023-11-07
 Status: Active
 Owner: HR Operations
 Applies to: All employees
@@ -13,7 +13,7 @@ Quick reference - Annual Leave - Quick Reference.
 
 Key points
 - Full-time employees are entitled to 25 paid annual leave days per year, accrued monthly.
-- Requests must be submitted at least 7 working days in advance through the HR system.
+- Requests must be submitted at least 3 working days in advance through the HR system.
 - Up to 5 unused days may be carried into the next year; any excess is forfeited.
 - Leave cannot be combined with sick leave for the same period.
 

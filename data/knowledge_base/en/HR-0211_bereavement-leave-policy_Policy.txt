@@ -3,7 +3,7 @@ Document ID: HR-0211
 Department: Human Resources
 Type: Policy
 Version: 2.1
-Effective date: 2025-06-09
+Effective date: 2024-03-07
 Status: Active
 Owner: HR Operations
 Applies to: Riyadh Office employees
@@ -16,8 +16,8 @@ This policy sets paid leave after the death of a close family member.
 This policy applies to Riyadh Office employees.
 
 3. Policy
-- Employees receive 7 paid days on the death of a spouse, parent, child or sibling.
-- For other relatives, 2 paid day(s) are granted.
+- Employees receive 3 paid days on the death of a spouse, parent, child or sibling.
+- For other relatives, 1 paid day(s) are granted.
 - The manager may approve additional unpaid days on request.
 
 4. Exceptions

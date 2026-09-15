@@ -22,7 +22,7 @@ Steps
 Rules that apply
 - Each team has a continuity plan naming its critical services and recovery time objective.
 - Continuity plans are tested at least once a year.
-- During a major disruption, the crisis team leads and communicates every 2 hour(s).
+- During a major disruption, the crisis team leads and communicates every 4 hour(s).
 
 Contact
 Operations Excellence: ops@t2.example

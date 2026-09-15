@@ -2,8 +2,8 @@ Title: Building Access Policy
 Document ID: FAC-0017
 Department: Facilities
 Type: Policy
-Version: 3.1
-Effective date: 2024-07-13
+Version: 3.0
+Effective date: 2023-06-30
 Status: Active
 Owner: Facilities Management
 Applies to: All employees
@@ -17,7 +17,7 @@ This policy applies to all employees.
 
 3. Policy
 - Every employee has an access card. Do not let anyone "tailgate" in behind you.
-- Lost cards are reported the same day; a replacement costs 25 EGP.
+- Lost cards are reported the same day; a replacement costs 100 SAR.
 - After-hours access is logged and may need manager approval.
 
 4. Exceptions

@@ -2,8 +2,8 @@ Title: Performance Review - Procedure
 Document ID: HR-0083
 Department: Human Resources
 Type: Procedure
-Version: 3.3
-Effective date: 2024-08-10
+Version: 3.2
+Effective date: 2024-12-17
 Status: Active
 Owner: HR Operations
 Applies to: All employees
@@ -20,7 +20,7 @@ Steps
 5. Keep a copy of the approval for your records.
 
 Rules that apply
-- Formal reviews take place 2 times a year, in June and December.
+- Formal reviews take place 2 times a year, in March, June, September and December.
 - Each review includes a self-assessment, manager feedback and, for senior roles, peer input.
 - A rating of "needs improvement" for two cycles in a row triggers a performance plan.
 

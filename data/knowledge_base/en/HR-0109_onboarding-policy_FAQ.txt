@@ -2,8 +2,8 @@ Title: Onboarding - FAQ
 Document ID: HR-0109
 Department: Human Resources
 Type: FAQ
-Version: 3.1
-Effective date: 2023-08-20
+Version: 3.4
+Effective date: 2023-04-26
 Status: Active
 Owner: HR Operations
 Applies to: All employees
@@ -12,6 +12,6 @@ Related documents: HR-0079, HR-0143, IT-0023
 Frequently asked questions about onboarding - faq.
 
 Q: What training must a new hire complete?
-A: Conduct, data privacy and security, in the first 1 weeks.
+A: Conduct, data privacy and security, in the first 2 weeks.
 
 More detail is in the matching policy document.

@@ -2,8 +2,8 @@ Title: Parental Leave - Procedure
 Document ID: HR-0019
 Department: Human Resources
 Type: Procedure
-Version: 3.1
-Effective date: 2024-05-07
+Version: 3.4
+Effective date: 2025-01-19
 Status: Active
 Owner: HR Operations
 Applies to: All employees
@@ -21,7 +21,7 @@ Steps
 
 Rules that apply
 - The primary caregiver receives 90 paid days; the secondary caregiver receives 10 paid days.
-- Requests should reach HR at least 30 days before the expected start date with supporting documents.
+- Requests should reach HR at least 15 days before the expected start date with supporting documents.
 - Leave may be split into two blocks within the first year after the birth or adoption.
 - Job protection applies: the employee returns to the same or an equivalent role.
 

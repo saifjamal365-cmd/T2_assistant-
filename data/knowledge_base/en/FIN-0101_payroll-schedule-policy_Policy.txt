@@ -2,13 +2,12 @@ Title: Payroll Schedule Policy (Riyadh Office)
 Document ID: FIN-0101
 Department: Finance
 Type: Policy
-Version: 1.3
-Effective date: 2024-01-19
-Status: Superseded
+Version: 2.0
+Effective date: 2023-01-29
+Status: Active
 Owner: Finance Shared Services
 Applies to: Riyadh Office employees
 Related documents: HR-0103, FIN-0079
-Superseded by: FIN-0065
 
 1. Purpose
 This document states when salaries are paid.
@@ -17,8 +16,8 @@ This document states when salaries are paid.
 This policy applies to Riyadh Office employees.
 
 3. Policy
-- Salaries are paid on the last day of each month, or the previous working day if that is a weekend or holiday.
-- Changes to bank details must reach Payroll 3 working days before payday.
+- Salaries are paid on the 27th of each month, or the previous working day if that is a weekend or holiday.
+- Changes to bank details must reach Payroll 5 working days before payday.
 - Payslips are available in the HR system on payday.
 
 4. Exceptions

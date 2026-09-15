@@ -2,8 +2,8 @@ Title: Workspace Ergonomics Policy
 Document ID: FAC-0057
 Department: Facilities
 Type: Policy
-Version: 3.0
-Effective date: 2024-01-16
+Version: 3.3
+Effective date: 2023-04-04
 Status: Active
 Owner: Facilities Management
 Applies to: All employees
@@ -18,7 +18,7 @@ This policy applies to all employees.
 3. Policy
 - A workstation assessment is offered to every new employee and on request.
 - The company provides an adjustable chair and, on assessment, extras such as a footrest or riser.
-- Remote employees can claim up to 1500 AED toward a home-office chair or desk.
+- Remote employees can claim up to 1500 EGP toward a home-office chair or desk.
 
 4. Exceptions
 Exceptions need written approval from Facilities Management.

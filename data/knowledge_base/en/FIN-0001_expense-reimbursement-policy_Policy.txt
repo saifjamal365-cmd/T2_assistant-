@@ -2,8 +2,8 @@ Title: Expense Reimbursement Policy
 Document ID: FIN-0001
 Department: Finance
 Type: Policy
-Version: 3.4
-Effective date: 2025-05-04
+Version: 3.2
+Effective date: 2024-10-02
 Status: Active
 Owner: Finance Shared Services
 Applies to: All employees
@@ -16,8 +16,8 @@ This policy explains how to claim back approved business expenses.
 This policy applies to all employees.
 
 3. Policy
-- Claims are submitted through the finance portal within 14 days of the expense, with a receipt.
-- Any single item over 1000 AED needs the manager's approval before it is spent.
+- Claims are submitted through the finance portal within 30 days of the expense, with a receipt.
+- Any single item over 200 SAR needs the manager's approval before it is spent.
 - Alcohol, personal entertainment and traffic fines are never reimbursed.
 - Approved claims are paid with the next payroll run.
 

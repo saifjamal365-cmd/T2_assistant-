@@ -2,8 +2,8 @@ Title: Building Access - Quick Reference (Riyadh Office)
 Document ID: FAC-0095
 Department: Facilities
 Type: Quick Reference
-Version: 2.0
-Effective date: 2023-02-02
+Version: 2.3
+Effective date: 2024-11-09
 Status: Active
 Owner: Facilities Management
 Applies to: Riyadh Office employees
@@ -13,7 +13,7 @@ Quick reference - Building Access - Quick Reference (Riyadh Office).
 
 Key points
 - Every employee has an access card. Do not let anyone "tailgate" in behind you.
-- Lost cards are reported the same day; a replacement costs 100 AED.
+- Lost cards are reported the same day; a replacement costs 50 AED.
 - After-hours access is logged and may need manager approval.
 
 Owner: Facilities Management. Full policy: FAC policy set.

@@ -2,8 +2,8 @@ Title: Resignation and Notice - Procedure
 Document ID: HR-0123
 Department: Human Resources
 Type: Procedure
-Version: 3.0
-Effective date: 2025-04-25
+Version: 3.3
+Effective date: 2023-08-21
 Status: Active
 Owner: HR Operations
 Applies to: All employees

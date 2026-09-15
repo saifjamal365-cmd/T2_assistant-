@@ -2,8 +2,8 @@ Title: Performance Review - Quick Reference (Riyadh Office)
 Document ID: HR-0255
 Department: Human Resources
 Type: Quick Reference
-Version: 2.3
-Effective date: 2025-02-17
+Version: 2.2
+Effective date: 2024-05-21
 Status: Active
 Owner: HR Operations
 Applies to: Riyadh Office employees

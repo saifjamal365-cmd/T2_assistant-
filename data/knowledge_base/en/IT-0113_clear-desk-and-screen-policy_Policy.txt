@@ -2,8 +2,8 @@ Title: Clear Desk and Screen Policy
 Document ID: IT-0113
 Department: Information Technology
 Type: Policy
-Version: 3.4
-Effective date: 2024-01-01
+Version: 3.3
+Effective date: 2023-08-15
 Status: Active
 Owner: IT Service Desk
 Applies to: All employees
@@ -18,7 +18,7 @@ This policy applies to all employees.
 3. Policy
 - Lock your screen whenever you leave your desk.
 - Documents with client or personal data are locked away at the end of the day.
-- Printouts left on the printer for more than 30 minutes are shredded.
+- Printouts left on the printer for more than 15 minutes are shredded.
 
 4. Exceptions
 Exceptions need written approval from IT Service Desk.

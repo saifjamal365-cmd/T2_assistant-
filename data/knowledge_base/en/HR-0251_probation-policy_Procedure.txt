@@ -2,13 +2,12 @@ Title: Probation - Procedure (Riyadh Office)
 Document ID: HR-0251
 Department: Human Resources
 Type: Procedure
-Version: 1.5
-Effective date: 2023-05-06
-Status: Superseded
+Version: 2.0
+Effective date: 2023-04-30
+Status: Active
 Owner: HR Operations
 Applies to: Riyadh Office employees
 Related documents: HR-0111, HR-0087, HR-0127
-Superseded by: HR-0075
 
 Purpose
 This policy sets the probation period for new hires and how it is assessed.
@@ -23,7 +22,7 @@ Steps
 Rules that apply
 - The probation period is 3 months from the start date.
 - A review meeting is held at the midpoint and at the end of probation.
-- During probation, either side may end the contract with 7 days' notice.
+- During probation, either side may end the contract with 14 days' notice.
 
 Contact
 HR Operations: hr@t2.example

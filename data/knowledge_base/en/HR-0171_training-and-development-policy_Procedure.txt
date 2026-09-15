@@ -2,8 +2,8 @@ Title: Training and Development - Procedure
 Document ID: HR-0171
 Department: Human Resources
 Type: Procedure
-Version: 3.2
-Effective date: 2023-01-15
+Version: 3.1
+Effective date: 2023-03-03
 Status: Active
 Owner: HR Operations
 Applies to: All employees
@@ -20,7 +20,7 @@ Steps
 5. Keep a copy of the approval for your records.
 
 Rules that apply
-- Each employee has an annual training budget of 8000 SAR.
+- Each employee has an annual training budget of 8000 AED.
 - Courses must be approved by the manager and be relevant to the current or next role.
 - For a certification the company pays for, the employee agrees to stay 6 months or repay pro-rata.
 

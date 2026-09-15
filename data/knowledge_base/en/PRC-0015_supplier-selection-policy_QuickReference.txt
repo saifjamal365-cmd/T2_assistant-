@@ -2,8 +2,8 @@ Title: Supplier Selection - Quick Reference
 Document ID: PRC-0015
 Department: Procurement
 Type: Quick Reference
-Version: 3.2
-Effective date: 2023-03-08
+Version: 3.4
+Effective date: 2024-06-09
 Status: Active
 Owner: Procurement Office
 Applies to: All employees
@@ -13,7 +13,7 @@ Quick reference - Supplier Selection - Quick Reference.
 
 Key points
 - Selection is based on written criteria: price, quality, delivery, and risk.
-- For spend over 25000 AED, at least 3 suppliers are invited to quote.
+- For spend over 25000 SAR, at least 3 suppliers are invited to quote.
 - A conflict of interest with a supplier is declared and the person steps out of the decision.
 
 Owner: Procurement Office. Full policy: PRC policy set.

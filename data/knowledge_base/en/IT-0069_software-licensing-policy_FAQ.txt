@@ -2,8 +2,8 @@ Title: Software Licensing - FAQ
 Document ID: IT-0069
 Department: Information Technology
 Type: FAQ
-Version: 3.2
-Effective date: 2025-02-19
+Version: 3.3
+Effective date: 2023-12-12
 Status: Active
 Owner: IT Service Desk
 Applies to: All employees
@@ -12,6 +12,6 @@ Related documents: IT-0031, IT-0079
 Frequently asked questions about software licensing - faq.
 
 Q: Can I use a free trial tool at work?
-A: For up to 14 days, then it must be licensed or removed.
+A: For up to 30 days, then it must be licensed or removed.
 
 More detail is in the matching policy document.

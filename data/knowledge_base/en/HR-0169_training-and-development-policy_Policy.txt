@@ -2,8 +2,8 @@ Title: Training and Development Policy
 Document ID: HR-0169
 Department: Human Resources
 Type: Policy
-Version: 3.1
-Effective date: 2023-05-06
+Version: 3.2
+Effective date: 2024-08-28
 Status: Active
 Owner: HR Operations
 Applies to: All employees
@@ -16,9 +16,9 @@ This policy covers the training budget and study support.
 This policy applies to all employees.
 
 3. Policy
-- Each employee has an annual training budget of 5000 AED.
+- Each employee has an annual training budget of 8000 AED.
 - Courses must be approved by the manager and be relevant to the current or next role.
-- For a certification the company pays for, the employee agrees to stay 12 months or repay pro-rata.
+- For a certification the company pays for, the employee agrees to stay 6 months or repay pro-rata.
 
 4. Exceptions
 Exceptions need written approval from HR Operations.

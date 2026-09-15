@@ -2,8 +2,8 @@ Title: Records Retention - FAQ
 Document ID: LEG-0045
 Department: Legal & Compliance
 Type: FAQ
-Version: 3.1
-Effective date: 2023-01-28
+Version: 3.0
+Effective date: 2024-03-11
 Status: Active
 Owner: Legal & Compliance Office
 Applies to: All employees

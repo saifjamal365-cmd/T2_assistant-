@@ -2,8 +2,8 @@ Title: Meeting Room Booking Policy (Riyadh Office)
 Document ID: FAC-0081
 Department: Facilities
 Type: Policy
-Version: 2.3
-Effective date: 2024-04-07
+Version: 2.4
+Effective date: 2025-01-21
 Status: Active
 Owner: Facilities Management
 Applies to: Riyadh Office employees
@@ -16,7 +16,7 @@ This policy explains how to reserve and use meeting rooms.
 This policy applies to Riyadh Office employees.
 
 3. Policy
-- Rooms are booked through the shared calendar. Walk-in use is allowed only if the room is free for the next 30 minutes.
+- Rooms are booked through the shared calendar. Walk-in use is allowed only if the room is free for the next 15 minutes.
 - Bookings longer than 2 hours need an office administrator to approve.
 - If a meeting ends early or is cancelled, release the room in the calendar.
 

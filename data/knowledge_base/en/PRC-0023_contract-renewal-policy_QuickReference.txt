@@ -12,7 +12,7 @@ Related documents: FIN-0039, FIN-0047
 Quick reference - Contract Renewal - Quick Reference.
 
 Key points
-- Procurement reviews every contract 6 months before its renewal date.
+- Procurement reviews every contract 2 months before its renewal date.
 - Auto-renewal clauses are avoided; renewals are an active decision.
 - The review checks price, usage, service quality and whether the need still exists.
 

@@ -2,8 +2,8 @@ Title: Clear Desk and Screen - Quick Reference
 Document ID: IT-0119
 Department: Information Technology
 Type: Quick Reference
-Version: 3.0
-Effective date: 2023-10-27
+Version: 3.1
+Effective date: 2023-04-21
 Status: Active
 Owner: IT Service Desk
 Applies to: All employees
@@ -14,6 +14,6 @@ Quick reference - Clear Desk and Screen - Quick Reference.
 Key points
 - Lock your screen whenever you leave your desk.
 - Documents with client or personal data are locked away at the end of the day.
-- Printouts left on the printer for more than 60 minutes are shredded.
+- Printouts left on the printer for more than 15 minutes are shredded.
 
 Owner: IT Service Desk. Full policy: IT policy set.

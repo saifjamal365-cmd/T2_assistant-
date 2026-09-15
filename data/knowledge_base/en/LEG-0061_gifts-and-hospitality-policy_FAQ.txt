@@ -2,8 +2,8 @@ Title: Gifts and Hospitality - FAQ
 Document ID: LEG-0061
 Department: Legal & Compliance
 Type: FAQ
-Version: 3.0
-Effective date: 2024-03-09
+Version: 3.3
+Effective date: 2025-04-28
 Status: Active
 Owner: Legal & Compliance Office
 Applies to: All employees
@@ -12,6 +12,6 @@ Related documents: LEG-0023, LEG-0031
 Frequently asked questions about gifts and hospitality - faq.
 
 Q: Do I need to declare a client gift?
-A: Yes, if it is worth more than 500 AED.
+A: Yes, if it is worth more than 200 AED.
 
 More detail is in the matching policy document.

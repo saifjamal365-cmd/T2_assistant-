@@ -2,8 +2,8 @@ Title: Per Diem Policy
 Document ID: FIN-0025
 Department: Finance
 Type: Policy
-Version: 3.1
-Effective date: 2023-02-06
+Version: 3.0
+Effective date: 2023-04-24
 Status: Active
 Owner: Finance Shared Services
 Applies to: All employees
@@ -17,7 +17,7 @@ This policy applies to all employees.
 
 3. Policy
 - The per diem covers meals and small incidentals and removes the need for individual meal receipts.
-- The daily rate is 150 SAR for domestic travel and 300 SAR for international travel.
+- The daily rate is 250 EGP for domestic travel and 500 EGP for international travel.
 - The per diem is not paid for days where all meals are provided.
 
 4. Exceptions

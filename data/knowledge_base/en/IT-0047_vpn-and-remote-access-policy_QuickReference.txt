@@ -2,8 +2,8 @@ Title: VPN and Remote Access - Quick Reference
 Document ID: IT-0047
 Department: Information Technology
 Type: Quick Reference
-Version: 3.3
-Effective date: 2024-06-03
+Version: 3.4
+Effective date: 2023-01-21
 Status: Active
 Owner: IT Service Desk
 Applies to: All employees

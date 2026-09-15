@@ -2,8 +2,8 @@ Title: Unpaid Leave - Quick Reference (Riyadh Office)
 Document ID: HR-0219
 Department: Human Resources
 Type: Quick Reference
-Version: 2.1
-Effective date: 2023-03-08
+Version: 2.2
+Effective date: 2023-09-08
 Status: Active
 Owner: HR Operations
 Applies to: Riyadh Office employees
@@ -12,8 +12,8 @@ Related documents: HR-0007, HR-0015
 Quick reference - Unpaid Leave - Quick Reference (Riyadh Office).
 
 Key points
-- Unpaid leave of up to 3 months may be requested after paid leave is exhausted.
+- Unpaid leave of up to 12 months may be requested after paid leave is exhausted.
 - Approval requires the line manager and the department head to sign off.
-- Benefits are paused during unpaid leave longer than 60 days.
+- Benefits are paused during unpaid leave longer than 30 days.
 
 Owner: HR Operations. Full policy: HR policy set.

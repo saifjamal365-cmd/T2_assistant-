@@ -16,8 +16,8 @@ This policy states the response and resolution targets for client-facing service
 This policy applies to all employees.
 
 3. Policy
-- First response to a client request is within 8 business hours.
-- Standard requests are resolved within 2 business days.
+- First response to a client request is within 4 business hours.
+- Standard requests are resolved within 5 business days.
 - Service levels are reviewed with each client every quarter.
 
 4. Exceptions

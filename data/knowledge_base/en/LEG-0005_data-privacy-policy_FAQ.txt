@@ -2,8 +2,8 @@ Title: Data Privacy - FAQ
 Document ID: LEG-0005
 Department: Legal & Compliance
 Type: FAQ
-Version: 3.0
-Effective date: 2024-12-08
+Version: 3.2
+Effective date: 2023-11-21
 Status: Active
 Owner: Legal & Compliance Office
 Applies to: All employees

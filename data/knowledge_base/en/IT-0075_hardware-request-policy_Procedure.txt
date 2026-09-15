@@ -3,7 +3,7 @@ Document ID: IT-0075
 Department: Information Technology
 Type: Procedure
 Version: 3.4
-Effective date: 2024-10-28
+Effective date: 2024-09-13
 Status: Active
 Owner: IT Service Desk
 Applies to: All employees
@@ -21,7 +21,7 @@ Steps
 
 Rules that apply
 - Standard equipment is requested through the asset portal with a business justification.
-- Standard requests are approved by the manager and fulfilled within 3 working days.
+- Standard requests are approved by the manager and fulfilled within 10 working days.
 - Non-standard items also need IT approval and may take longer.
 
 Contact

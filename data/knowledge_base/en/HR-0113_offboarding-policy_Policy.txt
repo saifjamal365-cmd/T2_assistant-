@@ -2,8 +2,8 @@ Title: Offboarding Policy
 Document ID: HR-0113
 Department: Human Resources
 Type: Policy
-Version: 3.0
-Effective date: 2024-06-11
+Version: 3.3
+Effective date: 2023-09-21
 Status: Active
 Owner: HR Operations
 Applies to: All employees
@@ -18,7 +18,7 @@ This policy applies to all employees.
 3. Policy
 - The manager submits the leaver form at least 5 working days before the last day.
 - On the last day, all equipment and access cards are returned and accounts are disabled.
-- Final pay, including unused annual leave, is settled within 30 days.
+- Final pay, including unused annual leave, is settled within 7 days.
 
 4. Exceptions
 Exceptions need written approval from HR Operations.

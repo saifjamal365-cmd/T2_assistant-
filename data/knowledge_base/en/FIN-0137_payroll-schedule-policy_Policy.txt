@@ -16,7 +16,7 @@ This document states when salaries are paid.
 This policy applies to Dubai Office employees.
 
 3. Policy
-- Salaries are paid on the 27th of each month, or the previous working day if that is a weekend or holiday.
+- Salaries are paid on the 25th of each month, or the previous working day if that is a weekend or holiday.
 - Changes to bank details must reach Payroll 5 working days before payday.
 - Payslips are available in the HR system on payday.
 

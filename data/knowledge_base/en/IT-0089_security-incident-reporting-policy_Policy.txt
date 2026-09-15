@@ -2,8 +2,8 @@ Title: Security Incident Reporting Policy
 Document ID: IT-0089
 Department: Information Technology
 Type: Policy
-Version: 3.3
-Effective date: 2023-01-07
+Version: 3.0
+Effective date: 2024-08-30
 Status: Active
 Owner: IT Service Desk
 Applies to: All employees
@@ -18,7 +18,7 @@ This policy applies to all employees.
 3. Policy
 - Report any suspected breach, lost device or leaked data to the security team within 2 hour(s).
 - Do not try to investigate or fix it yourself; preserve evidence.
-- A written summary is filed within 2 working day(s) of the report.
+- A written summary is filed within 1 working day(s) of the report.
 
 4. Exceptions
 Exceptions need written approval from IT Service Desk.

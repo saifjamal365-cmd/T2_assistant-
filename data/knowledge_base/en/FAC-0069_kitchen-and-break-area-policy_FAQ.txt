@@ -3,7 +3,7 @@ Document ID: FAC-0069
 Department: Facilities
 Type: FAQ
 Version: 3.3
-Effective date: 2025-05-01
+Effective date: 2025-02-03
 Status: Active
 Owner: Facilities Management
 Applies to: All employees
@@ -11,6 +11,6 @@ Applies to: All employees
 Frequently asked questions about kitchen and break area - faq.
 
 Q: When is the office fridge cleared?
-A: Every Friday.
+A: Every Thursday.
 
 More detail is in the matching policy document.

@@ -2,8 +2,8 @@ Title: Kitchen and Break Area - Procedure (Riyadh Office)
 Document ID: FAC-0127
 Department: Facilities
 Type: Procedure
-Version: 2.4
-Effective date: 2024-09-21
+Version: 2.3
+Effective date: 2025-05-30
 Status: Active
 Owner: Facilities Management
 Applies to: Riyadh Office employees

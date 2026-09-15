@@ -2,8 +2,8 @@ Title: Vendor Onboarding Policy
 Document ID: FIN-0081
 Department: Finance
 Type: Policy
-Version: 3.3
-Effective date: 2023-11-26
+Version: 3.2
+Effective date: 2024-03-24
 Status: Active
 Owner: Finance Shared Services
 Applies to: All employees
@@ -18,7 +18,7 @@ This policy applies to all employees.
 3. Policy
 - A new vendor provides a trade licence, bank letter and tax registration before setup.
 - Bank details are verified by a call-back to a number on the trade licence, not the invoice.
-- Vendor records are reviewed every 24 months.
+- Vendor records are reviewed every 12 months.
 
 4. Exceptions
 Exceptions need written approval from Finance Shared Services.

@@ -22,7 +22,7 @@ Steps
 Rules that apply
 - Internal systems are reachable from outside only through the approved VPN with MFA.
 - Split tunnelling is disabled; all traffic goes through the VPN while connected.
-- Sessions time out after 60 minutes of inactivity.
+- Sessions time out after 15 minutes of inactivity.
 
 Contact
 IT Service Desk: it@t2.example

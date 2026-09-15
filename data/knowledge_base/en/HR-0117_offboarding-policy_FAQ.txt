@@ -2,8 +2,8 @@ Title: Offboarding - FAQ
 Document ID: HR-0117
 Department: Human Resources
 Type: FAQ
-Version: 3.2
-Effective date: 2023-01-04
+Version: 3.3
+Effective date: 2025-04-20
 Status: Active
 Owner: HR Operations
 Applies to: All employees
@@ -12,6 +12,6 @@ Related documents: HR-0127, IT-0087, IT-0023
 Frequently asked questions about offboarding - faq.
 
 Q: When is final pay settled?
-A: Within 30 days of the last working day.
+A: Within 7 days of the last working day.
 
 More detail is in the matching policy document.

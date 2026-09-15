@@ -2,8 +2,8 @@ Title: Grievance - Procedure
 Document ID: HR-0155
 Department: Human Resources
 Type: Procedure
-Version: 3.1
-Effective date: 2023-08-15
+Version: 3.0
+Effective date: 2023-02-24
 Status: Active
 Owner: HR Operations
 Applies to: All employees
@@ -22,7 +22,7 @@ Steps
 Rules that apply
 - Raise the issue informally with the manager first where possible.
 - A formal grievance is submitted in writing and acknowledged within 5 working days.
-- A hearing is held within 10 working days, and the outcome is given in writing.
+- A hearing is held within 15 working days, and the outcome is given in writing.
 
 Contact
 HR Operations: hr@t2.example

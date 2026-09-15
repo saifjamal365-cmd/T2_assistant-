@@ -3,7 +3,7 @@ Document ID: HR-0011
 Department: Human Resources
 Type: Procedure
 Version: 3.0
-Effective date: 2023-11-22
+Effective date: 2023-02-13
 Status: Active
 Owner: HR Operations
 Applies to: All employees
@@ -20,8 +20,8 @@ Steps
 5. Keep a copy of the approval for your records.
 
 Rules that apply
-- Employees may take up to 12 paid sick days per year.
-- A medical report is required for any sick leave longer than 2 consecutive days.
+- Employees may take up to 10 paid sick days per year.
+- A medical report is required for any sick leave longer than 3 consecutive days.
 - The employee must notify their manager on the first day of absence.
 - Unused sick days do not carry over and are not paid out.
 

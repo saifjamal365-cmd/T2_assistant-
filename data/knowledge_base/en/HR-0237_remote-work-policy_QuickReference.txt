@@ -2,8 +2,8 @@ Title: Remote Work - Quick Reference (Riyadh Office)
 Document ID: HR-0237
 Department: Human Resources
 Type: Quick Reference
-Version: 2.3
-Effective date: 2023-09-10
+Version: 2.2
+Effective date: 2024-02-23
 Status: Active
 Owner: HR Operations
 Applies to: Riyadh Office employees
@@ -12,7 +12,7 @@ Related documents: HR-0047, IT-0047, IT-0079
 Quick reference - Remote Work - Quick Reference (Riyadh Office).
 
 Key points
-- Approved employees may work remotely up to 2 days per week.
+- Approved employees may work remotely up to 3 days per week.
 - Remote employees must join scheduled meetings with the camera on unless agreed otherwise.
 - Company equipment used remotely must connect only through the approved VPN.
 - A fully remote arrangement needs HR approval and is reviewed every 6 months.

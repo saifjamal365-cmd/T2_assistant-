@@ -3,7 +3,7 @@ Document ID: IT-0203
 Department: Information Technology
 Type: Policy
 Version: 2.2
-Effective date: 2024-01-27
+Effective date: 2023-10-23
 Status: Active
 Owner: IT Service Desk
 Applies to: Jeddah Office employees
@@ -18,7 +18,7 @@ This policy applies to Jeddah Office employees.
 3. Policy
 - Internal systems are reachable from outside only through the approved VPN with MFA.
 - Split tunnelling is disabled; all traffic goes through the VPN while connected.
-- Sessions time out after 30 minutes of inactivity.
+- Sessions time out after 15 minutes of inactivity.
 
 4. Exceptions
 Exceptions need written approval from IT Service Desk.

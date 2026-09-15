@@ -3,7 +3,7 @@ Document ID: FIN-0055
 Department: Finance
 Type: Quick Reference
 Version: 3.3
-Effective date: 2024-07-28
+Effective date: 2024-10-10
 Status: Active
 Owner: Finance Shared Services
 Applies to: All employees
@@ -12,8 +12,8 @@ Related documents: FIN-0039, PRC-0031
 Quick reference - Budget Approval - Quick Reference.
 
 Key points
-- Managers may approve spend within their budget up to 5000 EGP per item.
-- Department heads approve up to 100000 EGP; anything higher needs the CFO.
+- Managers may approve spend within their budget up to 10000 EGP per item.
+- Department heads approve up to 50000 EGP; anything higher needs the CFO.
 - Spend not in the approved budget needs a business case.
 
 Owner: Finance Shared Services. Full policy: FIN policy set.

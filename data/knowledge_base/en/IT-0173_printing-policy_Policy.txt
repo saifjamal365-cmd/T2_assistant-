@@ -2,12 +2,13 @@ Title: Printing Policy (Riyadh Office)
 Document ID: IT-0173
 Department: Information Technology
 Type: Policy
-Version: 2.0
-Effective date: 2024-04-04
-Status: Active
+Version: 1.1
+Effective date: 2023-11-21
+Status: Superseded
 Owner: IT Service Desk
 Applies to: Riyadh Office employees
 Related documents: IT-0119
+Superseded by: IT-0121
 
 1. Purpose
 This policy covers secure and economical printing.
@@ -18,7 +19,7 @@ This policy applies to Riyadh Office employees.
 3. Policy
 - Printing needs a badge tap at the printer to release the job.
 - Default printing is double-sided and black-and-white.
-- Unreleased jobs are deleted after 2 hours.
+- Unreleased jobs are deleted after 4 hours.
 
 4. Exceptions
 Exceptions need written approval from IT Service Desk.

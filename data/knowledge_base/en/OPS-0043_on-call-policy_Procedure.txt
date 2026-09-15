@@ -2,8 +2,8 @@ Title: On-Call - Procedure
 Document ID: OPS-0043
 Department: Operations
 Type: Procedure
-Version: 3.4
-Effective date: 2024-01-23
+Version: 3.0
+Effective date: 2023-10-02
 Status: Active
 Owner: Operations Excellence
 Applies to: All employees
@@ -20,8 +20,8 @@ Steps
 5. Keep a copy of the approval for your records.
 
 Rules that apply
-- On-call runs in 1-week rotations; the schedule is published a month ahead.
-- An on-call allowance of 300 SAR per week is paid, plus overtime for call-outs.
+- On-call runs in 2-week rotations; the schedule is published a month ahead.
+- An on-call allowance of 800 EGP per week is paid, plus overtime for call-outs.
 - The on-call engineer acknowledges an alert within 15 minutes.
 
 Contact

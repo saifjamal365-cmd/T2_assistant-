@@ -2,8 +2,8 @@ Title: Records Retention - Quick Reference
 Document ID: LEG-0047
 Department: Legal & Compliance
 Type: Quick Reference
-Version: 3.0
-Effective date: 2024-08-09
+Version: 3.4
+Effective date: 2023-10-21
 Status: Active
 Owner: Legal & Compliance Office
 Applies to: All employees
@@ -12,7 +12,7 @@ Related documents: LEG-0007, IT-0063, IT-0055
 Quick reference - Records Retention - Quick Reference.
 
 Key points
-- Financial records are kept for 5 years; HR records for 7 years after an employee leaves.
+- Financial records are kept for 7 years; HR records for 7 years after an employee leaves.
 - Records past their retention period are deleted in a controlled way, with a log.
 - Do not delete records that are subject to a legal hold.
 

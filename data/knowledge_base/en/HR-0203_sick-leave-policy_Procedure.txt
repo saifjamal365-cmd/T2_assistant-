@@ -2,8 +2,8 @@ Title: Sick Leave - Procedure (Riyadh Office)
 Document ID: HR-0203
 Department: Human Resources
 Type: Procedure
-Version: 2.3
-Effective date: 2023-01-28
+Version: 2.1
+Effective date: 2024-06-18
 Status: Active
 Owner: HR Operations
 Applies to: Riyadh Office employees
@@ -20,7 +20,7 @@ Steps
 5. Keep a copy of the approval for your records.
 
 Rules that apply
-- Employees may take up to 20 paid sick days per year.
+- Employees may take up to 12 paid sick days per year.
 - A medical report is required for any sick leave longer than 5 consecutive days.
 - The employee must notify their manager on the first day of absence.
 - Unused sick days do not carry over and are not paid out.

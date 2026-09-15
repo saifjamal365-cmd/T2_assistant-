@@ -3,7 +3,7 @@ Document ID: IT-0207
 Department: Information Technology
 Type: Procedure
 Version: 2.2
-Effective date: 2025-02-23
+Effective date: 2023-10-25
 Status: Active
 Owner: IT Service Desk
 Applies to: Jeddah Office employees

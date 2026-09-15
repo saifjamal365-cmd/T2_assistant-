@@ -2,8 +2,8 @@ Title: Multi-Factor Authentication Policy
 Document ID: IT-0009
 Department: Information Technology
 Type: Policy
-Version: 3.2
-Effective date: 2024-12-09
+Version: 3.0
+Effective date: 2023-10-01
 Status: Active
 Owner: IT Service Desk
 Applies to: All employees

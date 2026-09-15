@@ -2,8 +2,8 @@ Title: Payroll Schedule - Quick Reference (Dubai Office)
 Document ID: FIN-0139
 Department: Finance
 Type: Quick Reference
-Version: 2.4
-Effective date: 2024-12-07
+Version: 2.0
+Effective date: 2023-12-27
 Status: Active
 Owner: Finance Shared Services
 Applies to: Dubai Office employees
@@ -12,7 +12,7 @@ Related documents: HR-0103, FIN-0079
 Quick reference - Payroll Schedule - Quick Reference (Dubai Office).
 
 Key points
-- Salaries are paid on the last day of each month, or the previous working day if that is a weekend or holiday.
+- Salaries are paid on the 25th of each month, or the previous working day if that is a weekend or holiday.
 - Changes to bank details must reach Payroll 5 working days before payday.
 - Payslips are available in the HR system on payday.
 

@@ -2,8 +2,8 @@ Title: VPN and Remote Access - Quick Reference (Riyadh Office)
 Document ID: IT-0157
 Department: Information Technology
 Type: Quick Reference
-Version: 2.1
-Effective date: 2025-01-24
+Version: 2.4
+Effective date: 2023-06-14
 Status: Active
 Owner: IT Service Desk
 Applies to: Riyadh Office employees
@@ -14,6 +14,6 @@ Quick reference - VPN and Remote Access - Quick Reference (Riyadh Office).
 Key points
 - Internal systems are reachable from outside only through the approved VPN with MFA.
 - Split tunnelling is disabled; all traffic goes through the VPN while connected.
-- Sessions time out after 60 minutes of inactivity.
+- Sessions time out after 15 minutes of inactivity.
 
 Owner: IT Service Desk. Full policy: IT policy set.

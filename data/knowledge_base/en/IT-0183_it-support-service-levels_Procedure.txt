@@ -2,8 +2,8 @@ Title: IT Support Service Levels - Procedure (Riyadh Office)
 Document ID: IT-0183
 Department: Information Technology
 Type: Procedure
-Version: 2.3
-Effective date: 2025-06-15
+Version: 2.2
+Effective date: 2024-11-13
 Status: Active
 Owner: IT Service Desk
 Applies to: Riyadh Office employees
@@ -20,8 +20,8 @@ Steps
 5. Keep a copy of the approval for your records.
 
 Rules that apply
-- Standard tickets are responded to within 2 business day(s).
-- Critical issues, such as a full outage, are responded to within 4 hour(s) during business hours.
+- Standard tickets are responded to within 1 business day(s).
+- Critical issues, such as a full outage, are responded to within 2 hour(s) during business hours.
 - Raise a ticket through the service desk portal, not by contacting staff directly.
 
 Contact

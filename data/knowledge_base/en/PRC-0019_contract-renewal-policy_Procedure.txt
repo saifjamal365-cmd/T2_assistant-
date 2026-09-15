@@ -20,7 +20,7 @@ Steps
 5. Keep a copy of the approval for your records.
 
 Rules that apply
-- Procurement reviews every contract 6 months before its renewal date.
+- Procurement reviews every contract 2 months before its renewal date.
 - Auto-renewal clauses are avoided; renewals are an active decision.
 - The review checks price, usage, service quality and whether the need still exists.
 

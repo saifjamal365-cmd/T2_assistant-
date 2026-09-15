@@ -3,7 +3,7 @@ Document ID: FIN-0015
 Department: Finance
 Type: Quick Reference
 Version: 3.0
-Effective date: 2024-09-01
+Effective date: 2024-12-02
 Status: Active
 Owner: Finance Shared Services
 Applies to: All employees

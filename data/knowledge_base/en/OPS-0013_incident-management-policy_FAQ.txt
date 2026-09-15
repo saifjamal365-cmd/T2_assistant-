@@ -2,8 +2,8 @@ Title: Incident Management - FAQ
 Document ID: OPS-0013
 Department: Operations
 Type: FAQ
-Version: 3.0
-Effective date: 2024-06-20
+Version: 3.4
+Effective date: 2023-01-23
 Status: Active
 Owner: Operations Excellence
 Applies to: All employees
@@ -12,6 +12,6 @@ Related documents: OPS-0007, OPS-0023, OPS-0047
 Frequently asked questions about incident management - faq.
 
 Q: How often are updates given during a critical incident?
-A: Every 15 minutes.
+A: Every 30 minutes.
 
 More detail is in the matching policy document.

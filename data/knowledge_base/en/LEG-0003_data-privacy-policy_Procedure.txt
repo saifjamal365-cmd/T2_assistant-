@@ -3,7 +3,7 @@ Document ID: LEG-0003
 Department: Legal & Compliance
 Type: Procedure
 Version: 3.2
-Effective date: 2023-11-03
+Effective date: 2023-09-22
 Status: Active
 Owner: Legal & Compliance Office
 Applies to: All employees

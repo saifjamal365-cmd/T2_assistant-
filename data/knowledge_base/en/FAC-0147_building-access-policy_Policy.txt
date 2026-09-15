@@ -2,8 +2,8 @@ Title: Building Access Policy (Jeddah Office)
 Document ID: FAC-0147
 Department: Facilities
 Type: Policy
-Version: 2.2
-Effective date: 2023-05-20
+Version: 2.4
+Effective date: 2025-06-03
 Status: Active
 Owner: Facilities Management
 Applies to: Jeddah Office employees
@@ -17,7 +17,7 @@ This policy applies to Jeddah Office employees.
 
 3. Policy
 - Every employee has an access card. Do not let anyone "tailgate" in behind you.
-- Lost cards are reported the same day; a replacement costs 50 EGP.
+- Lost cards are reported the same day; a replacement costs 25 EGP.
 - After-hours access is logged and may need manager approval.
 
 4. Exceptions

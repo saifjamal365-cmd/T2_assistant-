@@ -2,12 +2,13 @@ Title: System Access Request - Quick Reference (Jeddah Office)
 Document ID: IT-0199
 Department: Information Technology
 Type: Quick Reference
-Version: 2.3
-Effective date: 2024-10-10
-Status: Active
+Version: 1.6
+Effective date: 2023-07-25
+Status: Superseded
 Owner: IT Service Desk
 Applies to: Jeddah Office employees
 Related documents: IT-0007, IT-0031, HR-0111
+Superseded by: IT-0023
 
 Quick reference - System Access Request - Quick Reference (Jeddah Office).
 

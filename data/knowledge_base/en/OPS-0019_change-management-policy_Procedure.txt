@@ -2,8 +2,8 @@ Title: Change Management - Procedure
 Document ID: OPS-0019
 Department: Operations
 Type: Procedure
-Version: 3.3
-Effective date: 2024-01-15
+Version: 3.2
+Effective date: 2023-07-10
 Status: Active
 Owner: Operations Excellence
 Applies to: All employees
@@ -22,7 +22,7 @@ Steps
 Rules that apply
 - Every change to a live system is recorded with a plan, a test and a rollback step.
 - Standard low-risk changes are pre-approved; other changes go to the change board.
-- Changes are not deployed on Thursday or during a change freeze.
+- Changes are not deployed on Friday or during a change freeze.
 
 Contact
 Operations Excellence: ops@t2.example

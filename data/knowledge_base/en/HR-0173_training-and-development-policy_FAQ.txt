@@ -2,8 +2,8 @@ Title: Training and Development - FAQ
 Document ID: HR-0173
 Department: Human Resources
 Type: FAQ
-Version: 3.0
-Effective date: 2023-11-15
+Version: 3.3
+Effective date: 2023-06-16
 Status: Active
 Owner: HR Operations
 Applies to: All employees

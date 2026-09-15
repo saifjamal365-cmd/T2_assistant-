@@ -2,8 +2,8 @@ Title: Printing Policy
 Document ID: IT-0121
 Department: Information Technology
 Type: Policy
-Version: 3.2
-Effective date: 2023-01-15
+Version: 3.4
+Effective date: 2023-12-13
 Status: Active
 Owner: IT Service Desk
 Applies to: All employees
@@ -18,7 +18,7 @@ This policy applies to all employees.
 3. Policy
 - Printing needs a badge tap at the printer to release the job.
 - Default printing is double-sided and black-and-white.
-- Unreleased jobs are deleted after 4 hours.
+- Unreleased jobs are deleted after 2 hours.
 
 4. Exceptions
 Exceptions need written approval from IT Service Desk.

@@ -2,12 +2,13 @@ Title: Expense Reimbursement Policy (Remote-first Teams)
 Document ID: FIN-0161
 Department: Finance
 Type: Policy
-Version: 2.0
-Effective date: 2024-08-20
-Status: Active
+Version: 1.0
+Effective date: 2023-12-14
+Status: Superseded
 Owner: Finance Shared Services
 Applies to: Remote-first Teams employees
 Related documents: FIN-0015, FIN-0023, FIN-0031
+Superseded by: FIN-0001
 
 1. Purpose
 This policy explains how to claim back approved business expenses.
@@ -16,8 +17,8 @@ This policy explains how to claim back approved business expenses.
 This policy applies to Remote-first Teams employees.
 
 3. Policy
-- Claims are submitted through the finance portal within 30 days of the expense, with a receipt.
-- Any single item over 1000 SAR needs the manager's approval before it is spent.
+- Claims are submitted through the finance portal within 45 days of the expense, with a receipt.
+- Any single item over 500 EGP needs the manager's approval before it is spent.
 - Alcohol, personal entertainment and traffic fines are never reimbursed.
 - Approved claims are paid with the next payroll run.
 

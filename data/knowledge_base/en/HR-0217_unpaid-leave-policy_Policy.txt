@@ -2,8 +2,8 @@ Title: Unpaid Leave Policy (Riyadh Office)
 Document ID: HR-0217
 Department: Human Resources
 Type: Policy
-Version: 2.4
-Effective date: 2024-03-04
+Version: 2.3
+Effective date: 2025-03-22
 Status: Active
 Owner: HR Operations
 Applies to: Riyadh Office employees
@@ -16,9 +16,9 @@ This policy explains when employees can take unpaid leave.
 This policy applies to Riyadh Office employees.
 
 3. Policy
-- Unpaid leave of up to 6 months may be requested after paid leave is exhausted.
+- Unpaid leave of up to 12 months may be requested after paid leave is exhausted.
 - Approval requires the line manager and the department head to sign off.
-- Benefits are paused during unpaid leave longer than 60 days.
+- Benefits are paused during unpaid leave longer than 30 days.
 
 4. Exceptions
 Exceptions need written approval from HR Operations.

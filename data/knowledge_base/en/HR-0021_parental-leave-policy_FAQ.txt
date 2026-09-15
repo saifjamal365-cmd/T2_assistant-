@@ -2,8 +2,8 @@ Title: Parental Leave - FAQ
 Document ID: HR-0021
 Department: Human Resources
 Type: FAQ
-Version: 3.4
-Effective date: 2023-11-28
+Version: 3.2
+Effective date: 2023-10-05
 Status: Active
 Owner: HR Operations
 Applies to: All employees
@@ -12,7 +12,7 @@ Related documents: HR-0007, HR-0015, HR-0191
 Frequently asked questions about parental leave - faq.
 
 Q: How much parental leave for the primary caregiver?
-A: 45 paid days.
+A: 90 paid days.
 
 Q: Can the leave be split?
 A: Yes, into two blocks in the first year.

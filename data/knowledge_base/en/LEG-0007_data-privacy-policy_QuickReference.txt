@@ -2,8 +2,8 @@ Title: Data Privacy - Quick Reference
 Document ID: LEG-0007
 Department: Legal & Compliance
 Type: Quick Reference
-Version: 3.1
-Effective date: 2024-09-25
+Version: 3.3
+Effective date: 2023-06-13
 Status: Active
 Owner: Legal & Compliance Office
 Applies to: All employees
@@ -14,7 +14,7 @@ Quick reference - Data Privacy - Quick Reference.
 Key points
 - Personal and client data is used only for the purpose it was collected for.
 - Do not store client or personal data on personal devices or personal cloud accounts.
-- A suspected data breach is reported to the security team within 2 hour(s).
+- A suspected data breach is reported to the security team within 4 hour(s).
 - Access to personal data is limited to those who need it for their work.
 
 Owner: Legal & Compliance Office. Full policy: LEG policy set.

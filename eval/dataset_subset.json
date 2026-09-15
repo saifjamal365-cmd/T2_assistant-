@@ -101,7 +101,7 @@
       "FIN-0063",
       "FIN-0064"
     ],
-    "expected_fact": "حتى 200 AED.",
+    "expected_fact": "حتى 100 SAR.",
     "answerable": true
   },
   {
@@ -197,7 +197,7 @@
       "FIN-0063",
       "FIN-0064"
     ],
-    "expected_fact": "Up to 200 AED.",
+    "expected_fact": "Up to 100 SAR.",
     "answerable": true
   },
   {
@@ -293,7 +293,7 @@
       "FIN-0063",
       "FIN-0064"
     ],
-    "expected_fact": "حتى 200 AED.",
+    "expected_fact": "حتى 100 SAR.",
     "answerable": true
   },
   {
@@ -326,7 +326,7 @@
       "HR-0111",
       "HR-0112"
     ],
-    "expected_fact": "Conduct, data privacy and security, in the first 1 weeks.",
+    "expected_fact": "Conduct, data privacy and security, in the first 2 weeks.",
     "answerable": true
   },
   {
@@ -389,7 +389,7 @@
       "IT-0095",
       "IT-0096"
     ],
-    "expected_fact": "خلال 1 ساعة.",
+    "expected_fact": "خلال 2 ساعة.",
     "answerable": true
   },
   {
@@ -410,7 +410,7 @@
       "IT-0095",
       "IT-0096"
     ],
-    "expected_fact": "خلال 1 ساعة.",
+    "expected_fact": "خلال 2 ساعة.",
     "answerable": true
   },
   {
@@ -593,7 +593,7 @@
       "HR-0023",
       "HR-0024"
     ],
-    "expected_fact": "60 يومًا مدفوعًا.",
+    "expected_fact": "90 يومًا مدفوعًا.",
     "answerable": true
   },
   {
@@ -614,7 +614,7 @@
       "HR-0023",
       "HR-0024"
     ],
-    "expected_fact": "45 paid days.",
+    "expected_fact": "90 paid days.",
     "answerable": true
   },
   {
@@ -647,7 +647,7 @@
       "HR-0023",
       "HR-0024"
     ],
-    "expected_fact": "60 يومًا مدفوعًا.",
+    "expected_fact": "90 يومًا مدفوعًا.",
     "answerable": true
   },
   {
@@ -680,7 +680,7 @@
       "HR-0079",
       "HR-0080"
     ],
-    "expected_fact": "3 months.",
+    "expected_fact": "6 months.",
     "answerable": true
   },
   {
@@ -830,7 +830,7 @@
       "IT-0071",
       "IT-0072"
     ],
-    "expected_fact": "For up to 14 days, then it must be licensed or removed.",
+    "expected_fact": "For up to 30 days, then it must be licensed or removed.",
     "answerable": true
   },
   {
@@ -947,7 +947,7 @@
       "FIN-0007",
       "FIN-0008"
     ],
-    "expected_fact": "Within 14 days of the expense.",
+    "expected_fact": "Within 30 days of the expense.",
     "answerable": true
   }
 ]

@@ -2,8 +2,8 @@ Title: Dress Code - Quick Reference
 Document ID: HR-0167
 Department: Human Resources
 Type: Quick Reference
-Version: 3.1
-Effective date: 2023-09-05
+Version: 3.2
+Effective date: 2023-02-15
 Status: Active
 Owner: HR Operations
 Applies to: All employees

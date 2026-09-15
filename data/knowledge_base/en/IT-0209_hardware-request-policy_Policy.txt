@@ -2,8 +2,8 @@ Title: Hardware Request Policy (Jeddah Office)
 Document ID: IT-0209
 Department: Information Technology
 Type: Policy
-Version: 2.0
-Effective date: 2023-04-01
+Version: 2.1
+Effective date: 2025-04-02
 Status: Active
 Owner: IT Service Desk
 Applies to: Jeddah Office employees

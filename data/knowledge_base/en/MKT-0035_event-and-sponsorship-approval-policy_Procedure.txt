@@ -2,8 +2,8 @@ Title: Event and Sponsorship Approval - Procedure
 Document ID: MKT-0035
 Department: Marketing & Communications
 Type: Procedure
-Version: 3.4
-Effective date: 2024-09-18
+Version: 3.2
+Effective date: 2025-04-13
 Status: Active
 Owner: Corporate Communications
 Applies to: All employees

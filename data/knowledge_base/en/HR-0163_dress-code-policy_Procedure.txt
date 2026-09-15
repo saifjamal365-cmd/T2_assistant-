@@ -2,8 +2,8 @@ Title: Dress Code - Procedure
 Document ID: HR-0163
 Department: Human Resources
 Type: Procedure
-Version: 3.0
-Effective date: 2024-09-26
+Version: 3.4
+Effective date: 2024-03-02
 Status: Active
 Owner: HR Operations
 Applies to: All employees
@@ -22,7 +22,7 @@ Steps
 Rules that apply
 - Standard office wear is smart-casual.
 - Client meetings and external events require business attire.
-- Thursday is a casual day, except where a client is on site.
+- Friday is a casual day, except where a client is on site.
 
 Contact
 HR Operations: hr@t2.example

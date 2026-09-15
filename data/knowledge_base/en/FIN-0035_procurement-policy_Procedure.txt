@@ -2,8 +2,8 @@ Title: Procurement - Procedure
 Document ID: FIN-0035
 Department: Finance
 Type: Procedure
-Version: 3.1
-Effective date: 2024-01-12
+Version: 3.4
+Effective date: 2024-10-11
 Status: Active
 Owner: Finance Shared Services
 Applies to: All employees
@@ -21,8 +21,8 @@ Steps
 
 Rules that apply
 - A purchase request is raised before any commitment to a supplier.
-- Purchases up to 10000 EGP need one quote; above 10000 need 3 quotes.
-- Purchases over 100000 EGP go to the Procurement Committee.
+- Purchases up to 5000 AED need one quote; above 5000 need 2 quotes.
+- Purchases over 50000 AED go to the Procurement Committee.
 
 Contact
 Finance Shared Services: fin@t2.example

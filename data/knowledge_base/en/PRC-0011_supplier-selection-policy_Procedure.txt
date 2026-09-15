@@ -2,8 +2,8 @@ Title: Supplier Selection - Procedure
 Document ID: PRC-0011
 Department: Procurement
 Type: Procedure
-Version: 3.1
-Effective date: 2024-07-14
+Version: 3.2
+Effective date: 2023-06-26
 Status: Active
 Owner: Procurement Office
 Applies to: All employees
@@ -21,7 +21,7 @@ Steps
 
 Rules that apply
 - Selection is based on written criteria: price, quality, delivery, and risk.
-- For spend over 25000 AED, at least 3 suppliers are invited to quote.
+- For spend over 25000 SAR, at least 3 suppliers are invited to quote.
 - A conflict of interest with a supplier is declared and the person steps out of the decision.
 
 Contact
