@@ -1,0 +1,28 @@
+Title: Unpaid Leave Policy (Jeddah Office)
+Document ID: HR-0395
+Department: Human Resources
+Type: Policy
+Version: 1.3
+Effective date: 2023-09-26
+Status: Superseded
+Owner: HR Operations
+Applies to: Jeddah Office employees
+Related documents: HR-0007, HR-0015
+Superseded by: HR-0033
+
+1. Purpose
+This policy explains when employees can take unpaid leave.
+
+2. Scope
+This policy applies to Jeddah Office employees.
+
+3. Policy
+- Unpaid leave of up to 6 months may be requested after paid leave is exhausted.
+- Approval requires the line manager and the department head to sign off.
+- Benefits are paused during unpaid leave longer than 30 days.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

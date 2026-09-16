@@ -1,0 +1,20 @@
+Title: Health Insurance - FAQ
+Document ID: HR-0221
+Department: Human Resources
+Type: FAQ
+Version: 3.1
+Effective date: 2024-02-27
+Status: Active
+Owner: HR Operations
+Applies to: All employees
+Related documents: HR-0111, FIN-0071
+
+Frequently asked questions about health insurance - faq.
+
+Q: When does my health insurance start?
+A: On your first working day, no waiting period.
+
+Q: How many dependents can I add?
+A: Up to 4.
+
+More detail is in the matching policy document.

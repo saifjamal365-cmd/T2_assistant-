@@ -1,0 +1,19 @@
+Title: Removable Media - Quick Reference
+Document ID: IT-0159
+Department: Information Technology
+Type: Quick Reference
+Version: 3.1
+Effective date: 2024-10-10
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: IT-0063, IT-0111, IT-0095
+
+Quick reference - Removable Media - Quick Reference.
+
+Key points
+- Company data may only be copied to removable media that is encrypted and IT-issued.
+- Personal USB drives must not be connected to a company device.
+- Lost removable media containing company data is reported to IT within 4 hours.
+
+Owner: IT Service Desk. Full policy: IT policy set.

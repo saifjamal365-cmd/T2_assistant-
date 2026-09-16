@@ -1,0 +1,19 @@
+Title: Hot Desk Booking - Quick Reference (Riyadh Office)
+Document ID: FAC-0169
+Department: Facilities
+Type: Quick Reference
+Version: 2.3
+Effective date: 2024-04-10
+Status: Active
+Owner: Facilities Management
+Applies to: Riyadh Office employees
+Related documents: FAC-0007, HR-0063
+
+Quick reference - Hot Desk Booking - Quick Reference (Riyadh Office).
+
+Key points
+- Desks in shared-seating areas are booked through the office app up to 14 days ahead.
+- A desk not checked into within 30 minutes of the booking start is released to others.
+- Personal items are cleared at the end of the day; the desk is shared the next day.
+
+Owner: Facilities Management. Full policy: FAC policy set.

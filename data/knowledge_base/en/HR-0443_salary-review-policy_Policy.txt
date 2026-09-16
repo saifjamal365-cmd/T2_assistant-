@@ -1,0 +1,27 @@
+Title: Salary Review Policy (Jeddah Office)
+Document ID: HR-0443
+Department: Human Resources
+Type: Policy
+Version: 2.3
+Effective date: 2023-02-18
+Status: Active
+Owner: HR Operations
+Applies to: Jeddah Office employees
+Related documents: HR-0087, HR-0095
+
+1. Purpose
+This policy explains the annual salary review.
+
+2. Scope
+This policy applies to Jeddah Office employees.
+
+3. Policy
+- Salaries are reviewed once a year, effective 1 April.
+- Adjustments depend on the performance rating, the salary band and the annual budget.
+- Out-of-cycle adjustments need Compensation Committee approval.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

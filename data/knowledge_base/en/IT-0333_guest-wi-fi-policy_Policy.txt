@@ -1,0 +1,27 @@
+Title: Guest Wi-Fi Policy (Dubai Office)
+Document ID: IT-0333
+Department: Information Technology
+Type: Policy
+Version: 2.0
+Effective date: 2025-01-29
+Status: Active
+Owner: IT Service Desk
+Applies to: Dubai Office employees
+Related documents: FAC-0031, IT-0047
+
+1. Purpose
+This policy covers internet access for visitors.
+
+2. Scope
+This policy applies to Dubai Office employees.
+
+3. Policy
+- Guests are given access to a separate guest network only; it cannot reach internal systems.
+- The guest Wi-Fi password is changed every 30 days and is available from reception.
+- A staff member sponsoring a guest is responsible for that guest's network use.
+
+4. Exceptions
+Exceptions need written approval from IT Service Desk.
+
+5. Contact
+For questions, contact it@t2.example.

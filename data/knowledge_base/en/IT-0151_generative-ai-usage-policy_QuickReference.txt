@@ -1,0 +1,19 @@
+Title: Generative AI Usage - Quick Reference
+Document ID: IT-0151
+Department: Information Technology
+Type: Quick Reference
+Version: 3.1
+Effective date: 2023-09-03
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: LEG-0007, IT-0031, LEG-0015
+
+Quick reference - Generative AI Usage - Quick Reference.
+
+Key points
+- Only AI tools on the IT-approved list may be used; a new tool needs IT review before use.
+- Client data, personal data and unreleased company information must never be entered into a public AI tool.
+- AI-generated content used externally must be reviewed by a person before it is sent or published.
+
+Owner: IT Service Desk. Full policy: IT policy set.

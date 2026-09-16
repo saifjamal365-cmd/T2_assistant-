@@ -1,0 +1,20 @@
+Title: Employee Assistance Program - FAQ
+Document ID: HR-0245
+Department: Human Resources
+Type: FAQ
+Version: 3.0
+Effective date: 2024-05-13
+Status: Active
+Owner: HR Operations
+Applies to: All employees
+Related documents: HR-0223, HR-0151
+
+Frequently asked questions about employee assistance program - faq.
+
+Q: How many free counselling sessions do I get?
+A: Up to 6 a year, for you and your immediate family.
+
+Q: Will my manager know I used the EAP?
+A: No, sessions are confidential.
+
+More detail is in the matching policy document.

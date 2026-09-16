@@ -1,0 +1,19 @@
+Title: Clear Desk and Screen - Quick Reference (Jeddah Office)
+Document ID: IT-0263
+Department: Information Technology
+Type: Quick Reference
+Version: 2.0
+Effective date: 2025-05-21
+Status: Active
+Owner: IT Service Desk
+Applies to: Jeddah Office employees
+Related documents: IT-0127, LEG-0007
+
+Quick reference - Clear Desk and Screen - Quick Reference (Jeddah Office).
+
+Key points
+- Lock your screen whenever you leave your desk.
+- Documents with client or personal data are locked away at the end of the day.
+- Printouts left on the printer for more than 30 minutes are shredded.
+
+Owner: IT Service Desk. Full policy: IT policy set.

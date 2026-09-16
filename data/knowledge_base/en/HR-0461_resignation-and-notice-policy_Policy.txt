@@ -1,0 +1,27 @@
+Title: Resignation and Notice Policy (Jeddah Office)
+Document ID: HR-0461
+Department: Human Resources
+Type: Policy
+Version: 2.1
+Effective date: 2023-01-31
+Status: Active
+Owner: HR Operations
+Applies to: Jeddah Office employees
+Related documents: HR-0119, HR-0135
+
+1. Purpose
+This policy sets the notice period for resignation.
+
+2. Scope
+This policy applies to Jeddah Office employees.
+
+3. Policy
+- Employees give 2 weeks' written notice; grade M3 and above give 8 weeks.
+- Notice may be shortened only with the manager's written agreement.
+- An exit interview is offered before the last day.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

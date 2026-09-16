@@ -1,0 +1,27 @@
+Title: Unpaid Leave Policy (Dubai Office)
+Document ID: HR-0509
+Department: Human Resources
+Type: Policy
+Version: 2.1
+Effective date: 2024-12-08
+Status: Active
+Owner: HR Operations
+Applies to: Dubai Office employees
+Related documents: HR-0007, HR-0015
+
+1. Purpose
+This policy explains when employees can take unpaid leave.
+
+2. Scope
+This policy applies to Dubai Office employees.
+
+3. Policy
+- Unpaid leave of up to 12 months may be requested after paid leave is exhausted.
+- Approval requires the line manager and the department head to sign off.
+- Benefits are paused during unpaid leave longer than 60 days.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

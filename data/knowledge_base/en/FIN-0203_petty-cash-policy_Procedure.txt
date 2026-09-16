@@ -1,0 +1,29 @@
+Title: Petty Cash - Procedure (Cairo Office)
+Document ID: FIN-0203
+Department: Finance
+Type: Procedure
+Version: 1.1
+Effective date: 2023-01-21
+Status: Superseded
+Owner: Finance Shared Services
+Applies to: Cairo Office employees
+Related documents: FIN-0007
+Superseded by: FIN-0059
+
+Purpose
+This policy covers small cash payments held at each office.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- Petty cash is for small items only, up to 100 EGP per payment.
+- Every payment needs a receipt and a signed voucher.
+- The float is reconciled and topped up every month.
+
+Contact
+Finance Shared Services: fin@t2.example

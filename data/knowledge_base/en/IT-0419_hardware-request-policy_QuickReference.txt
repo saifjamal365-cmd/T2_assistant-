@@ -1,0 +1,19 @@
+Title: Hardware Request - Quick Reference (Remote-first Teams)
+Document ID: IT-0419
+Department: Information Technology
+Type: Quick Reference
+Version: 2.2
+Effective date: 2023-09-29
+Status: Active
+Owner: IT Service Desk
+Applies to: Remote-first Teams employees
+Related documents: IT-0087, IT-0071, FAC-0063
+
+Quick reference - Hardware Request - Quick Reference (Remote-first Teams).
+
+Key points
+- Standard equipment is requested through the asset portal with a business justification.
+- Standard requests are approved by the manager and fulfilled within 10 working days.
+- Non-standard items also need IT approval and may take longer.
+
+Owner: IT Service Desk. Full policy: IT policy set.

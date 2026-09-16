@@ -1,0 +1,28 @@
+Title: Expense Reimbursement Policy (Jeddah Office)
+Document ID: FIN-0145
+Department: Finance
+Type: Policy
+Version: 2.4
+Effective date: 2024-05-16
+Status: Active
+Owner: Finance Shared Services
+Applies to: Jeddah Office employees
+Related documents: FIN-0015, FIN-0023, FIN-0031
+
+1. Purpose
+This policy explains how to claim back approved business expenses.
+
+2. Scope
+This policy applies to Jeddah Office employees.
+
+3. Policy
+- Claims are submitted through the finance portal within 30 days of the expense, with a receipt.
+- Any single item over 200 SAR needs the manager's approval before it is spent.
+- Alcohol, personal entertainment and traffic fines are never reimbursed.
+- Approved claims are paid with the next payroll run.
+
+4. Exceptions
+Exceptions need written approval from Finance Shared Services.
+
+5. Contact
+For questions, contact fin@t2.example.

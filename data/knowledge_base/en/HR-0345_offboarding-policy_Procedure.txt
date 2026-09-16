@@ -1,0 +1,28 @@
+Title: Offboarding - Procedure (Riyadh Office)
+Document ID: HR-0345
+Department: Human Resources
+Type: Procedure
+Version: 2.1
+Effective date: 2023-12-22
+Status: Active
+Owner: HR Operations
+Applies to: Riyadh Office employees
+Related documents: HR-0127, IT-0087, IT-0023
+
+Purpose
+This policy lists what must happen when an employee leaves.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- The manager submits the leaver form at least 5 working days before the last day.
+- On the last day, all equipment and access cards are returned and accounts are disabled.
+- Final pay, including unused annual leave, is settled within 14 days.
+
+Contact
+HR Operations: hr@t2.example

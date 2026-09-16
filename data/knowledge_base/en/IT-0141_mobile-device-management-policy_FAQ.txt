@@ -1,0 +1,20 @@
+Title: Mobile Device Management - FAQ
+Document ID: IT-0141
+Department: Information Technology
+Type: FAQ
+Version: 3.1
+Effective date: 2024-12-19
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: IT-0055, IT-0039, IT-0095
+
+Frequently asked questions about mobile device management - faq.
+
+Q: Do I have to enrol my phone to get company email?
+A: Yes, any device used for company email must be enrolled.
+
+Q: What happens if I lose my enrolled phone?
+A: Report it within 2 hours so it can be remotely wiped.
+
+More detail is in the matching policy document.

@@ -1,0 +1,27 @@
+Title: Training and Development Policy (Riyadh Office)
+Document ID: HR-0359
+Department: Human Resources
+Type: Policy
+Version: 2.2
+Effective date: 2023-03-02
+Status: Active
+Owner: HR Operations
+Applies to: Riyadh Office employees
+Related documents: HR-0087
+
+1. Purpose
+This policy covers the training budget and study support.
+
+2. Scope
+This policy applies to Riyadh Office employees.
+
+3. Policy
+- Each employee has an annual training budget of 5000 EGP.
+- Courses must be approved by the manager and be relevant to the current or next role.
+- For a certification the company pays for, the employee agrees to stay 6 months or repay pro-rata.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

@@ -1,0 +1,28 @@
+Title: Salary Review - Procedure (Riyadh Office)
+Document ID: HR-0333
+Department: Human Resources
+Type: Procedure
+Version: 2.2
+Effective date: 2024-01-17
+Status: Active
+Owner: HR Operations
+Applies to: Riyadh Office employees
+Related documents: HR-0087, HR-0095
+
+Purpose
+This policy explains the annual salary review.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- Salaries are reviewed once a year, effective 1 January.
+- Adjustments depend on the performance rating, the salary band and the annual budget.
+- Out-of-cycle adjustments need Compensation Committee approval.
+
+Contact
+HR Operations: hr@t2.example

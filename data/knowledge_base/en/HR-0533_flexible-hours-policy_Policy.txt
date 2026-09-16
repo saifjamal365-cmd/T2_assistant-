@@ -1,0 +1,26 @@
+Title: Flexible Hours Policy (Dubai Office)
+Document ID: HR-0533
+Department: Human Resources
+Type: Policy
+Version: 2.2
+Effective date: 2024-09-28
+Status: Active
+Owner: HR Operations
+Applies to: Dubai Office employees
+Related documents: HR-0047, HR-0063
+
+1. Purpose
+This policy lets employees shift their start and end times within limits.
+
+2. Scope
+This policy applies to Dubai Office employees.
+
+3. Policy
+- Start time may be chosen between 07:00 and 09:30, keeping the full daily hours.
+- Any flexible arrangement must still cover the core hours.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

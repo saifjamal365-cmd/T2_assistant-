@@ -1,0 +1,19 @@
+Title: Customer Feedback Handling - Quick Reference
+Document ID: OPS-0063
+Department: Operations
+Type: Quick Reference
+Version: 3.4
+Effective date: 2024-06-13
+Status: Active
+Owner: Operations Excellence
+Applies to: All employees
+Related documents: OPS-0007, OPS-0015
+
+Quick reference - Customer Feedback Handling - Quick Reference.
+
+Key points
+- All customer feedback, positive or negative, is logged in the CRM within 24 hours of receipt.
+- A negative comment about safety or fraud is escalated to the department head immediately.
+- The customer receives an acknowledgement within one business day, even if the fix takes longer.
+
+Owner: Operations Excellence. Full policy: OPS policy set.

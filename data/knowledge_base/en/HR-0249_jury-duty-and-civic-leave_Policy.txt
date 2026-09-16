@@ -1,0 +1,27 @@
+Title: Jury Duty and Civic Leave
+Document ID: HR-0249
+Department: Human Resources
+Type: Policy
+Version: 3.4
+Effective date: 2025-02-19
+Status: Active
+Owner: HR Operations
+Applies to: All employees
+Related documents: HR-0007, HR-0039
+
+1. Purpose
+This policy covers paid leave for jury duty or a court summons.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Employees summoned for jury duty or as a witness receive up to 10 paid days.
+- A copy of the official summons must be given to HR as soon as it is received.
+- Any fee paid by the court for attendance belongs to the employee, not the company.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

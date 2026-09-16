@@ -1,0 +1,27 @@
+Title: Bereavement Leave Policy (Jeddah Office)
+Document ID: HR-0389
+Department: Human Resources
+Type: Policy
+Version: 2.1
+Effective date: 2023-09-20
+Status: Active
+Owner: HR Operations
+Applies to: Jeddah Office employees
+Related documents: HR-0007, HR-0159
+
+1. Purpose
+This policy sets paid leave after the death of a close family member.
+
+2. Scope
+This policy applies to Jeddah Office employees.
+
+3. Policy
+- Employees receive 5 paid days on the death of a spouse, parent, child or sibling.
+- For other relatives, 1 paid day(s) are granted.
+- The manager may approve additional unpaid days on request.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

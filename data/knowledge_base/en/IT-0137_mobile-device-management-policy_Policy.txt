@@ -1,0 +1,27 @@
+Title: Mobile Device Management Policy
+Document ID: IT-0137
+Department: Information Technology
+Type: Policy
+Version: 3.2
+Effective date: 2024-04-20
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: IT-0055, IT-0039, IT-0095
+
+1. Purpose
+This policy covers enrolling phones and tablets that access company email or data.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Any device used for company email must be enrolled in the mobile device management (MDM) system.
+- A lost or stolen enrolled device must be reported within 2 hours so it can be remotely wiped.
+- Leaving the company or removing the device from MDM erases company data from it, not personal data.
+
+4. Exceptions
+Exceptions need written approval from IT Service Desk.
+
+5. Contact
+For questions, contact it@t2.example.

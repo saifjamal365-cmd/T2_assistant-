@@ -1,0 +1,20 @@
+Title: Expense Reimbursement - Quick Reference (Dubai Office)
+Document ID: FIN-0171
+Department: Finance
+Type: Quick Reference
+Version: 2.1
+Effective date: 2024-08-30
+Status: Active
+Owner: Finance Shared Services
+Applies to: Dubai Office employees
+Related documents: FIN-0015, FIN-0023, FIN-0031
+
+Quick reference - Expense Reimbursement - Quick Reference (Dubai Office).
+
+Key points
+- Claims are submitted through the finance portal within 45 days of the expense, with a receipt.
+- Any single item over 1000 AED needs the manager's approval before it is spent.
+- Alcohol, personal entertainment and traffic fines are never reimbursed.
+- Approved claims are paid with the next payroll run.
+
+Owner: Finance Shared Services. Full policy: FIN policy set.

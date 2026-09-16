@@ -1,0 +1,29 @@
+Title: Workspace Ergonomics - Procedure (Jeddah Office)
+Document ID: FAC-0231
+Department: Facilities
+Type: Procedure
+Version: 1.6
+Effective date: 2023-08-20
+Status: Superseded
+Owner: Facilities Management
+Applies to: Jeddah Office employees
+Related documents: IT-0079, FAC-0039, HR-0063
+Superseded by: FAC-0059
+
+Purpose
+This policy helps employees set up a healthy workspace.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- A workstation assessment is offered to every new employee and on request.
+- The company provides an adjustable chair and, on assessment, extras such as a footrest or riser.
+- Remote employees can claim up to 500 EGP toward a home-office chair or desk.
+
+Contact
+Facilities Management: fac@t2.example

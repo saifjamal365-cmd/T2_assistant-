@@ -1,0 +1,20 @@
+Title: Hot Desk Booking - FAQ
+Document ID: FAC-0085
+Department: Facilities
+Type: FAQ
+Version: 3.4
+Effective date: 2024-08-22
+Status: Active
+Owner: Facilities Management
+Applies to: All employees
+Related documents: FAC-0007, HR-0063
+
+Frequently asked questions about hot desk booking - faq.
+
+Q: How far ahead can I book a hot desk?
+A: Up to 7 days ahead.
+
+Q: What happens if I don't check in to my booked desk?
+A: It's released to others after 15 minutes.
+
+More detail is in the matching policy document.

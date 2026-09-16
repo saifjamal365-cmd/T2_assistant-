@@ -1,0 +1,28 @@
+Title: Promotion Policy (Dubai Office)
+Document ID: HR-0551
+Department: Human Resources
+Type: Policy
+Version: 1.6
+Effective date: 2023-10-31
+Status: Superseded
+Owner: HR Operations
+Applies to: Dubai Office employees
+Related documents: HR-0087, HR-0103
+Superseded by: HR-0089
+
+1. Purpose
+This policy describes how promotions are proposed and approved.
+
+2. Scope
+This policy applies to Dubai Office employees.
+
+3. Policy
+- Promotions are considered 2 time(s) a year, aligned with the review cycle.
+- An employee must have at least 24 months in role and a rating of "meets" or above.
+- Promotions require the department head and HR to approve.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

@@ -1,0 +1,27 @@
+Title: Customer Feedback Handling Policy
+Document ID: OPS-0057
+Department: Operations
+Type: Policy
+Version: 3.4
+Effective date: 2024-08-08
+Status: Active
+Owner: Operations Excellence
+Applies to: All employees
+Related documents: OPS-0007, OPS-0015
+
+1. Purpose
+This policy covers logging and responding to customer feedback.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- All customer feedback, positive or negative, is logged in the CRM within 24 hours of receipt.
+- A negative comment about safety or fraud is escalated to the department head immediately.
+- The customer receives an acknowledgement within one business day, even if the fix takes longer.
+
+4. Exceptions
+Exceptions need written approval from Operations Excellence.
+
+5. Contact
+For questions, contact ops@t2.example.

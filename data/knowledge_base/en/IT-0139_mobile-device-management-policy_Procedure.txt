@@ -1,0 +1,28 @@
+Title: Mobile Device Management - Procedure
+Document ID: IT-0139
+Department: Information Technology
+Type: Procedure
+Version: 3.2
+Effective date: 2023-04-17
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: IT-0055, IT-0039, IT-0095
+
+Purpose
+This policy covers enrolling phones and tablets that access company email or data.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- Any device used for company email must be enrolled in the mobile device management (MDM) system.
+- A lost or stolen enrolled device must be reported within 2 hours so it can be remotely wiped.
+- Leaving the company or removing the device from MDM erases company data from it, not personal data.
+
+Contact
+IT Service Desk: it@t2.example

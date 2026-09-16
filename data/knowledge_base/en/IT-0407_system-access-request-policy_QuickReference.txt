@@ -1,0 +1,20 @@
+Title: System Access Request - Quick Reference (Remote-first Teams)
+Document ID: IT-0407
+Department: Information Technology
+Type: Quick Reference
+Version: 2.0
+Effective date: 2024-04-20
+Status: Active
+Owner: IT Service Desk
+Applies to: Remote-first Teams employees
+Related documents: IT-0007, IT-0031, HR-0111
+
+Quick reference - System Access Request - Quick Reference (Remote-first Teams).
+
+Key points
+- Access is requested through the service desk, stating the system and the business reason.
+- Access to client or financial data needs the manager and the system owner to approve.
+- Access unused for 90 days may be revoked and must be requested again.
+- All access is reviewed every quarter.
+
+Owner: IT Service Desk. Full policy: IT policy set.

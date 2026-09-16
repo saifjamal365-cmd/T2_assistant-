@@ -1,0 +1,27 @@
+Title: Travel Cash Advance Policy (Jeddah Office)
+Document ID: FIN-0163
+Department: Finance
+Type: Policy
+Version: 2.0
+Effective date: 2023-08-13
+Status: Active
+Owner: Finance Shared Services
+Applies to: Jeddah Office employees
+Related documents: FIN-0023, FIN-0031, FIN-0007
+
+1. Purpose
+This policy covers requesting a cash advance before a business trip.
+
+2. Scope
+This policy applies to Jeddah Office employees.
+
+3. Policy
+- An advance of up to 3000 may be requested for trip costs not covered by the corporate card.
+- The advance is requested at least 3 days before travel through the finance portal.
+- The advance is reconciled against receipts within 14 days of returning; any unused amount is returned.
+
+4. Exceptions
+Exceptions need written approval from Finance Shared Services.
+
+5. Contact
+For questions, contact fin@t2.example.

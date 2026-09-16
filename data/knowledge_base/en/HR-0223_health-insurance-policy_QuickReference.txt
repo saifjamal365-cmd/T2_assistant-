@@ -1,0 +1,19 @@
+Title: Health Insurance - Quick Reference
+Document ID: HR-0223
+Department: Human Resources
+Type: Quick Reference
+Version: 3.2
+Effective date: 2024-06-24
+Status: Active
+Owner: HR Operations
+Applies to: All employees
+Related documents: HR-0111, FIN-0071
+
+Quick reference - Health Insurance - Quick Reference.
+
+Key points
+- Coverage starts on the employee's first working day; no waiting period applies.
+- Employees may add up to 4 dependents, with the premium shared as per the HR rate card.
+- Claims are submitted through the insurer's app within 90 days of treatment.
+
+Owner: HR Operations. Full policy: HR policy set.

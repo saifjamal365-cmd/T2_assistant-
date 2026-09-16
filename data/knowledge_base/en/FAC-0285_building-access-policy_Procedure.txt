@@ -1,0 +1,28 @@
+Title: Building Access - Procedure (Dubai Office)
+Document ID: FAC-0285
+Department: Facilities
+Type: Procedure
+Version: 2.2
+Effective date: 2023-08-15
+Status: Active
+Owner: Facilities Management
+Applies to: Dubai Office employees
+Related documents: FAC-0015, FAC-0031
+
+Purpose
+This policy covers access cards and entry to the office.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- Every employee has an access card. Do not let anyone "tailgate" in behind you.
+- Lost cards are reported the same day; a replacement costs 50 EGP.
+- After-hours access is logged and may need manager approval.
+
+Contact
+Facilities Management: fac@t2.example

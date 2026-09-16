@@ -1,0 +1,28 @@
+Title: Clear Desk and Screen Policy (Remote-first Teams)
+Document ID: IT-0423
+Department: Information Technology
+Type: Policy
+Version: 1.5
+Effective date: 2023-09-01
+Status: Superseded
+Owner: IT Service Desk
+Applies to: Remote-first Teams employees
+Related documents: IT-0127, LEG-0007
+Superseded by: IT-0113
+
+1. Purpose
+This policy protects information left on desks and screens.
+
+2. Scope
+This policy applies to Remote-first Teams employees.
+
+3. Policy
+- Lock your screen whenever you leave your desk.
+- Documents with client or personal data are locked away at the end of the day.
+- Printouts left on the printer for more than 60 minutes are shredded.
+
+4. Exceptions
+Exceptions need written approval from IT Service Desk.
+
+5. Contact
+For questions, contact it@t2.example.

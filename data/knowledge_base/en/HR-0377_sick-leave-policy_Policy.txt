@@ -1,0 +1,29 @@
+Title: Sick Leave Policy (Jeddah Office)
+Document ID: HR-0377
+Department: Human Resources
+Type: Policy
+Version: 1.3
+Effective date: 2023-04-17
+Status: Superseded
+Owner: HR Operations
+Applies to: Jeddah Office employees
+Related documents: HR-0007, HR-0039, FAC-0063
+Superseded by: HR-0009
+
+1. Purpose
+This policy explains sick-leave entitlement and when a medical report is needed.
+
+2. Scope
+This policy applies to Jeddah Office employees.
+
+3. Policy
+- Employees may take up to 10 paid sick days per year.
+- A medical report is required for any sick leave longer than 2 consecutive days.
+- The employee must notify their manager on the first day of absence.
+- Unused sick days do not carry over and are not paid out.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

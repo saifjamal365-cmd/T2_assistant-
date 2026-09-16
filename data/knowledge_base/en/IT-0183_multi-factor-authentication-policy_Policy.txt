@@ -1,0 +1,27 @@
+Title: Multi-Factor Authentication Policy (Riyadh Office)
+Document ID: IT-0183
+Department: Information Technology
+Type: Policy
+Version: 2.4
+Effective date: 2024-07-26
+Status: Active
+Owner: IT Service Desk
+Applies to: Riyadh Office employees
+Related documents: IT-0007, IT-0047
+
+1. Purpose
+This policy requires a second factor for sign-in.
+
+2. Scope
+This policy applies to Riyadh Office employees.
+
+3. Policy
+- MFA is required for email, the VPN and any system holding client or financial data.
+- The approved second factor is the authenticator app; SMS is allowed only as a fallback.
+- Lost devices must be reported to the service desk within 1 hours.
+
+4. Exceptions
+Exceptions need written approval from IT Service Desk.
+
+5. Contact
+For questions, contact it@t2.example.

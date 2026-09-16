@@ -1,0 +1,27 @@
+Title: Performance Review Policy (Dubai Office)
+Document ID: HR-0545
+Department: Human Resources
+Type: Policy
+Version: 2.3
+Effective date: 2023-11-25
+Status: Active
+Owner: HR Operations
+Applies to: Dubai Office employees
+Related documents: HR-0079, HR-0095, HR-0103
+
+1. Purpose
+This policy explains how and when performance is reviewed.
+
+2. Scope
+This policy applies to Dubai Office employees.
+
+3. Policy
+- Formal reviews take place 2 times a year, in June and December.
+- Each review includes a self-assessment, manager feedback and, for senior roles, peer input.
+- A rating of "needs improvement" for two cycles in a row triggers a performance plan.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

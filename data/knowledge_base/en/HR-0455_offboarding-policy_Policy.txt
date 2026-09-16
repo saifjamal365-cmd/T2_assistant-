@@ -1,0 +1,27 @@
+Title: Offboarding Policy (Jeddah Office)
+Document ID: HR-0455
+Department: Human Resources
+Type: Policy
+Version: 2.0
+Effective date: 2023-01-24
+Status: Active
+Owner: HR Operations
+Applies to: Jeddah Office employees
+Related documents: HR-0127, IT-0087, IT-0023
+
+1. Purpose
+This policy lists what must happen when an employee leaves.
+
+2. Scope
+This policy applies to Jeddah Office employees.
+
+3. Policy
+- The manager submits the leaver form at least 5 working days before the last day.
+- On the last day, all equipment and access cards are returned and accounts are disabled.
+- Final pay, including unused annual leave, is settled within 14 days.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

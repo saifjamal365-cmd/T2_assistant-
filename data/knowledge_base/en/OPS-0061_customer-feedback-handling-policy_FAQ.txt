@@ -1,0 +1,20 @@
+Title: Customer Feedback Handling - FAQ
+Document ID: OPS-0061
+Department: Operations
+Type: FAQ
+Version: 3.2
+Effective date: 2023-03-02
+Status: Active
+Owner: Operations Excellence
+Applies to: All employees
+Related documents: OPS-0007, OPS-0015
+
+Frequently asked questions about customer feedback handling - faq.
+
+Q: How fast must customer feedback be logged?
+A: Within 24 hours of receipt.
+
+Q: What if the feedback is about a safety issue?
+A: It is escalated to the department head immediately.
+
+More detail is in the matching policy document.

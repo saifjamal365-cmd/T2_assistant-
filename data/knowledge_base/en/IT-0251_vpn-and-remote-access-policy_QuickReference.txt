@@ -1,0 +1,19 @@
+Title: VPN and Remote Access - Quick Reference (Jeddah Office)
+Document ID: IT-0251
+Department: Information Technology
+Type: Quick Reference
+Version: 2.1
+Effective date: 2023-04-12
+Status: Active
+Owner: IT Service Desk
+Applies to: Jeddah Office employees
+Related documents: HR-0063, IT-0015
+
+Quick reference - VPN and Remote Access - Quick Reference (Jeddah Office).
+
+Key points
+- Internal systems are reachable from outside only through the approved VPN with MFA.
+- Split tunnelling is disabled; all traffic goes through the VPN while connected.
+- Sessions time out after 15 minutes of inactivity.
+
+Owner: IT Service Desk. Full policy: IT policy set.

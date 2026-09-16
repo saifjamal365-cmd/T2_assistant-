@@ -1,0 +1,27 @@
+Title: Company Car Policy (Dubai Office)
+Document ID: HR-0593
+Department: Human Resources
+Type: Policy
+Version: 2.2
+Effective date: 2023-10-26
+Status: Active
+Owner: HR Operations
+Applies to: Dubai Office employees
+Related documents: FIN-0007, FIN-0015
+
+1. Purpose
+This policy covers eligibility for a company car and its personal use.
+
+2. Scope
+This policy applies to Dubai Office employees.
+
+3. Policy
+- Employees at grade M3 and above are eligible for a company car or a monthly car allowance.
+- Personal use is allowed; fuel for personal use beyond 500 km a month is the employee's own cost.
+- The vehicle must be serviced on schedule and any accident reported within 24 hours.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

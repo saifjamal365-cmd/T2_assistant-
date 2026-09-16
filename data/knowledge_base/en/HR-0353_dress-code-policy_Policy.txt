@@ -1,0 +1,27 @@
+Title: Dress Code Policy (Riyadh Office)
+Document ID: HR-0353
+Department: Human Resources
+Type: Policy
+Version: 2.1
+Effective date: 2023-04-29
+Status: Active
+Owner: HR Operations
+Applies to: Riyadh Office employees
+Related documents: FAC-0031
+
+1. Purpose
+This policy describes what to wear in the office and with clients.
+
+2. Scope
+This policy applies to Riyadh Office employees.
+
+3. Policy
+- Standard office wear is smart-casual.
+- Client meetings and external events require business attire.
+- Friday is a casual day, except where a client is on site.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

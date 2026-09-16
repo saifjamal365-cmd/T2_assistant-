@@ -1,0 +1,27 @@
+Title: Working Hours Policy (Riyadh Office)
+Document ID: HR-0287
+Department: Human Resources
+Type: Policy
+Version: 2.2
+Effective date: 2024-06-25
+Status: Active
+Owner: HR Operations
+Applies to: Riyadh Office employees
+Related documents: HR-0055, HR-0071, HR-0063
+
+1. Purpose
+This policy defines standard working hours and core hours.
+
+2. Scope
+This policy applies to Riyadh Office employees.
+
+3. Policy
+- The standard work week is 45 hours over 5 days.
+- Core hours, when everyone must be reachable, are 10:00 to 15:00.
+- Time is recorded in the HR system; managers review timesheets weekly.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

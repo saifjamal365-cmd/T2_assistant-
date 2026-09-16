@@ -1,0 +1,20 @@
+Title: Asset Capitalization - FAQ
+Document ID: FIN-0117
+Department: Finance
+Type: FAQ
+Version: 3.1
+Effective date: 2023-07-09
+Status: Active
+Owner: Finance Shared Services
+Applies to: All employees
+Related documents: FIN-0039, PRC-0031
+
+Frequently asked questions about asset capitalization - faq.
+
+Q: What purchase amount counts as a capital asset?
+A: 5000 AED or more, with a useful life over one year.
+
+Q: Over how many years is an asset depreciated?
+A: 3 years, straight-line.
+
+More detail is in the matching policy document.

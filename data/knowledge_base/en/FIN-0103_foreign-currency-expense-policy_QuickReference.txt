@@ -1,0 +1,19 @@
+Title: Foreign Currency Expense - Quick Reference
+Document ID: FIN-0103
+Department: Finance
+Type: Quick Reference
+Version: 3.1
+Effective date: 2023-04-04
+Status: Active
+Owner: Finance Shared Services
+Applies to: All employees
+Related documents: FIN-0007, FIN-0095, FIN-0015
+
+Quick reference - Foreign Currency Expense - Quick Reference.
+
+Key points
+- Foreign-currency receipts are converted using the exchange rate on the date of the transaction.
+- The rate source is the corporate card statement rate, or the central bank rate if paid in cash.
+- Reimbursement is always paid in the employee's home payroll currency.
+
+Owner: Finance Shared Services. Full policy: FIN policy set.

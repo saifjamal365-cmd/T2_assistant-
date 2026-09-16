@@ -1,0 +1,27 @@
+Title: Sabbatical Leave Policy
+Document ID: HR-0209
+Department: Human Resources
+Type: Policy
+Version: 3.1
+Effective date: 2023-04-15
+Status: Active
+Owner: HR Operations
+Applies to: All employees
+Related documents: HR-0007, HR-0039, HR-0127
+
+1. Purpose
+This policy covers extended unpaid leave for long-serving employees.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Employees with 3+ years of service may request up to 6 months of unpaid sabbatical leave.
+- The request needs department head and HR approval at least 3 months in advance.
+- Job protection is not guaranteed; the employee returns to an available role of similar level.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

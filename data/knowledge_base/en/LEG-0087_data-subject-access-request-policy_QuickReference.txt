@@ -1,0 +1,19 @@
+Title: Data Subject Access Request - Quick Reference
+Document ID: LEG-0087
+Department: Legal & Compliance
+Type: Quick Reference
+Version: 3.2
+Effective date: 2023-09-26
+Status: Active
+Owner: Legal & Compliance Office
+Applies to: All employees
+Related documents: LEG-0007, LEG-0015, LEG-0047
+
+Quick reference - Data Subject Access Request - Quick Reference.
+
+Key points
+- A data subject request is forwarded to Legal & Compliance the same day it is received.
+- The company responds within 45 days, as required by data protection law.
+- The requester's identity is verified before any personal data is shared or deleted.
+
+Owner: Legal & Compliance Office. Full policy: LEG policy set.

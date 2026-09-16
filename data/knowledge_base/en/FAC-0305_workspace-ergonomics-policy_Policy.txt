@@ -1,0 +1,28 @@
+Title: Workspace Ergonomics Policy (Dubai Office)
+Document ID: FAC-0305
+Department: Facilities
+Type: Policy
+Version: 1.5
+Effective date: 2023-11-06
+Status: Superseded
+Owner: Facilities Management
+Applies to: Dubai Office employees
+Related documents: IT-0079, FAC-0039, HR-0063
+Superseded by: FAC-0057
+
+1. Purpose
+This policy helps employees set up a healthy workspace.
+
+2. Scope
+This policy applies to Dubai Office employees.
+
+3. Policy
+- A workstation assessment is offered to every new employee and on request.
+- The company provides an adjustable chair and, on assessment, extras such as a footrest or riser.
+- Remote employees can claim up to 1000 SAR toward a home-office chair or desk.
+
+4. Exceptions
+Exceptions need written approval from Facilities Management.
+
+5. Contact
+For questions, contact fac@t2.example.

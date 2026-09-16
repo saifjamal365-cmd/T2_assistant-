@@ -1,0 +1,20 @@
+Title: Meeting Room Booking - Quick Reference (Remote-first Teams)
+Document ID: FAC-0427
+Department: Facilities
+Type: Quick Reference
+Version: 1.4
+Effective date: 2023-11-26
+Status: Superseded
+Owner: Facilities Management
+Applies to: Remote-first Teams employees
+Related documents: FAC-0031, FAC-0015
+Superseded by: FAC-0007
+
+Quick reference - Meeting Room Booking - Quick Reference (Remote-first Teams).
+
+Key points
+- Rooms are booked through the shared calendar. Walk-in use is allowed only if the room is free for the next 30 minutes.
+- Bookings longer than 3 hours need an office administrator to approve.
+- If a meeting ends early or is cancelled, release the room in the calendar.
+
+Owner: Facilities Management. Full policy: FAC policy set.

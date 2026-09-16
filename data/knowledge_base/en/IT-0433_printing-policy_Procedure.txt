@@ -1,0 +1,28 @@
+Title: Printing - Procedure (Remote-first Teams)
+Document ID: IT-0433
+Department: Information Technology
+Type: Procedure
+Version: 2.4
+Effective date: 2025-02-12
+Status: Active
+Owner: IT Service Desk
+Applies to: Remote-first Teams employees
+Related documents: IT-0119
+
+Purpose
+This policy covers secure and economical printing.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- Printing needs a badge tap at the printer to release the job.
+- Default printing is double-sided and black-and-white.
+- Unreleased jobs are deleted after 4 hours.
+
+Contact
+IT Service Desk: it@t2.example

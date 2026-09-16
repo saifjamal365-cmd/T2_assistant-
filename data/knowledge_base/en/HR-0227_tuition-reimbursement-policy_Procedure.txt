@@ -1,0 +1,28 @@
+Title: Tuition Reimbursement - Procedure
+Document ID: HR-0227
+Department: Human Resources
+Type: Procedure
+Version: 3.0
+Effective date: 2024-07-29
+Status: Active
+Owner: HR Operations
+Applies to: All employees
+Related documents: HR-0175, HR-0127
+
+Purpose
+This policy covers reimbursement for job-related further education.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- Up to 5000 AED per year is reimbursed for approved, job-related courses with a passing grade.
+- The course must be approved by the manager before it starts; retroactive claims are not accepted.
+- The employee agrees to stay 12 months after completion or repay the amount pro-rata.
+
+Contact
+HR Operations: hr@t2.example

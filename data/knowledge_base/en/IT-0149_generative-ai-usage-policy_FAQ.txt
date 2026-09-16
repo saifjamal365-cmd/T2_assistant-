@@ -1,0 +1,20 @@
+Title: Generative AI Usage - FAQ
+Document ID: IT-0149
+Department: Information Technology
+Type: FAQ
+Version: 3.3
+Effective date: 2024-05-04
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: LEG-0007, IT-0031, LEG-0015
+
+Frequently asked questions about generative ai usage - faq.
+
+Q: Can I paste client data into a public AI chatbot?
+A: No, client and personal data must never be entered into a public AI tool.
+
+Q: Can I use any AI tool I find useful?
+A: No, only tools on the IT-approved list; new tools need IT review first.
+
+More detail is in the matching policy document.

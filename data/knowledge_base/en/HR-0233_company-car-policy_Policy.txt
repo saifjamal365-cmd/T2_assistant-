@@ -1,0 +1,27 @@
+Title: Company Car Policy
+Document ID: HR-0233
+Department: Human Resources
+Type: Policy
+Version: 3.3
+Effective date: 2023-11-25
+Status: Active
+Owner: HR Operations
+Applies to: All employees
+Related documents: FIN-0007, FIN-0015
+
+1. Purpose
+This policy covers eligibility for a company car and its personal use.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Employees at grade M3 and above are eligible for a company car or a monthly car allowance.
+- Personal use is allowed; fuel for personal use beyond 300 km a month is the employee's own cost.
+- The vehicle must be serviced on schedule and any accident reported within 24 hours.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

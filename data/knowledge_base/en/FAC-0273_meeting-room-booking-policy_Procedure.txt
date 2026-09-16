@@ -1,0 +1,28 @@
+Title: Meeting Room Booking - Procedure (Dubai Office)
+Document ID: FAC-0273
+Department: Facilities
+Type: Procedure
+Version: 2.4
+Effective date: 2023-01-15
+Status: Active
+Owner: Facilities Management
+Applies to: Dubai Office employees
+Related documents: FAC-0031, FAC-0015
+
+Purpose
+This policy explains how to reserve and use meeting rooms.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- Rooms are booked through the shared calendar. Walk-in use is allowed only if the room is free for the next 30 minutes.
+- Bookings longer than 3 hours need an office administrator to approve.
+- If a meeting ends early or is cancelled, release the room in the calendar.
+
+Contact
+Facilities Management: fac@t2.example

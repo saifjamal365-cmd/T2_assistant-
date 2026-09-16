@@ -1,0 +1,27 @@
+Title: IT Support Service Levels (Jeddah Office)
+Document ID: IT-0273
+Department: Information Technology
+Type: Policy
+Version: 2.1
+Effective date: 2024-08-14
+Status: Active
+Owner: IT Service Desk
+Applies to: Jeddah Office employees
+Related documents: IT-0023, IT-0079
+
+1. Purpose
+This document sets response times for IT support tickets.
+
+2. Scope
+This policy applies to Jeddah Office employees.
+
+3. Policy
+- Standard tickets are responded to within 1 business day(s).
+- Critical issues, such as a full outage, are responded to within 2 hour(s) during business hours.
+- Raise a ticket through the service desk portal, not by contacting staff directly.
+
+4. Exceptions
+Exceptions need written approval from IT Service Desk.
+
+5. Contact
+For questions, contact it@t2.example.

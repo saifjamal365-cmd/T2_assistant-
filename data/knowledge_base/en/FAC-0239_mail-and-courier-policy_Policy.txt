@@ -1,0 +1,26 @@
+Title: Mail and Courier Policy (Jeddah Office)
+Document ID: FAC-0239
+Department: Facilities
+Type: Policy
+Version: 2.4
+Effective date: 2023-02-19
+Status: Active
+Owner: Facilities Management
+Applies to: Jeddah Office employees
+
+1. Purpose
+This policy covers incoming and outgoing post and parcels.
+
+2. Scope
+This policy applies to Jeddah Office employees.
+
+3. Policy
+- Personal parcels should not be sent to the office address.
+- Outgoing business courier is booked through reception with a cost code.
+- Reception holds parcels for 5 days before returning them to sender.
+
+4. Exceptions
+Exceptions need written approval from Facilities Management.
+
+5. Contact
+For questions, contact fac@t2.example.

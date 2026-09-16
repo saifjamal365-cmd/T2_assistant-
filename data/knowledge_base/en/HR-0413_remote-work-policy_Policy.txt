@@ -1,0 +1,28 @@
+Title: Remote Work Policy (Jeddah Office)
+Document ID: HR-0413
+Department: Human Resources
+Type: Policy
+Version: 2.4
+Effective date: 2023-09-19
+Status: Active
+Owner: HR Operations
+Applies to: Jeddah Office employees
+Related documents: HR-0047, IT-0047, IT-0079
+
+1. Purpose
+This policy covers working from home and fully remote arrangements.
+
+2. Scope
+This policy applies to Jeddah Office employees.
+
+3. Policy
+- Approved employees may work remotely up to 3 days per week.
+- Remote employees must join scheduled meetings with the camera on unless agreed otherwise.
+- Company equipment used remotely must connect only through the approved VPN.
+- A fully remote arrangement needs HR approval and is reviewed every 6 months.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

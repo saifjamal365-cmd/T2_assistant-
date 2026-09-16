@@ -1,0 +1,27 @@
+Title: Printing Policy (Jeddah Office)
+Document ID: IT-0267
+Department: Information Technology
+Type: Policy
+Version: 2.4
+Effective date: 2025-05-09
+Status: Active
+Owner: IT Service Desk
+Applies to: Jeddah Office employees
+Related documents: IT-0119
+
+1. Purpose
+This policy covers secure and economical printing.
+
+2. Scope
+This policy applies to Jeddah Office employees.
+
+3. Policy
+- Printing needs a badge tap at the printer to release the job.
+- Default printing is double-sided and black-and-white.
+- Unreleased jobs are deleted after 2 hours.
+
+4. Exceptions
+Exceptions need written approval from IT Service Desk.
+
+5. Contact
+For questions, contact it@t2.example.

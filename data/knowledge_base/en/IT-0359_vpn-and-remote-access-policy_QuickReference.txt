@@ -1,0 +1,19 @@
+Title: VPN and Remote Access - Quick Reference (Cairo Office)
+Document ID: IT-0359
+Department: Information Technology
+Type: Quick Reference
+Version: 2.3
+Effective date: 2024-08-03
+Status: Active
+Owner: IT Service Desk
+Applies to: Cairo Office employees
+Related documents: HR-0063, IT-0015
+
+Quick reference - VPN and Remote Access - Quick Reference (Cairo Office).
+
+Key points
+- Internal systems are reachable from outside only through the approved VPN with MFA.
+- Split tunnelling is disabled; all traffic goes through the VPN while connected.
+- Sessions time out after 15 minutes of inactivity.
+
+Owner: IT Service Desk. Full policy: IT policy set.

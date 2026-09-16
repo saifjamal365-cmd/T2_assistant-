@@ -1,0 +1,27 @@
+Title: Bereavement Leave Policy (Dubai Office)
+Document ID: HR-0503
+Department: Human Resources
+Type: Policy
+Version: 2.0
+Effective date: 2024-12-26
+Status: Active
+Owner: HR Operations
+Applies to: Dubai Office employees
+Related documents: HR-0007, HR-0159
+
+1. Purpose
+This policy sets paid leave after the death of a close family member.
+
+2. Scope
+This policy applies to Dubai Office employees.
+
+3. Policy
+- Employees receive 7 paid days on the death of a spouse, parent, child or sibling.
+- For other relatives, 2 paid day(s) are granted.
+- The manager may approve additional unpaid days on request.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

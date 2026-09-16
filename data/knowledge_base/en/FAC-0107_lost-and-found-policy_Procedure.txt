@@ -1,0 +1,28 @@
+Title: Lost and Found - Procedure
+Document ID: FAC-0107
+Department: Facilities
+Type: Procedure
+Version: 3.1
+Effective date: 2023-07-07
+Status: Active
+Owner: Facilities Management
+Applies to: All employees
+Related documents: FAC-0023, FAC-0031
+
+Purpose
+This policy covers items found on company premises.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- Found items are handed to reception and logged with the date and location found.
+- Unclaimed items are kept for 60 days, then donated or disposed of.
+- Cash, cards and ID documents are handed to security immediately, not kept at reception.
+
+Contact
+Facilities Management: fac@t2.example

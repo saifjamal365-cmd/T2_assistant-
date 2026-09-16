@@ -1,0 +1,28 @@
+Title: Annual Leave Policy (Dubai Office)
+Document ID: HR-0485
+Department: Human Resources
+Type: Policy
+Version: 2.0
+Effective date: 2023-04-14
+Status: Active
+Owner: HR Operations
+Applies to: Dubai Office employees
+Related documents: HR-0015, HR-0023, HR-0039
+
+1. Purpose
+This policy sets out how much paid annual leave employees receive and how to request it.
+
+2. Scope
+This policy applies to Dubai Office employees.
+
+3. Policy
+- Full-time employees are entitled to 30 paid annual leave days per year, accrued monthly.
+- Requests must be submitted at least 7 working days in advance through the HR system.
+- Up to 10 unused days may be carried into the next year; any excess is forfeited.
+- Leave cannot be combined with sick leave for the same period.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

@@ -1,0 +1,19 @@
+Title: Company Car - Quick Reference
+Document ID: HR-0239
+Department: Human Resources
+Type: Quick Reference
+Version: 3.0
+Effective date: 2023-06-23
+Status: Active
+Owner: HR Operations
+Applies to: All employees
+Related documents: FIN-0007, FIN-0015
+
+Quick reference - Company Car - Quick Reference.
+
+Key points
+- Employees at grade M3 and above are eligible for a company car or a monthly car allowance.
+- Personal use is allowed; fuel for personal use beyond 300 km a month is the employee's own cost.
+- The vehicle must be serviced on schedule and any accident reported within 24 hours.
+
+Owner: HR Operations. Full policy: HR policy set.

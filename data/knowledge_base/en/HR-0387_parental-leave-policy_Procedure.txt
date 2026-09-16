@@ -1,0 +1,29 @@
+Title: Parental Leave - Procedure (Jeddah Office)
+Document ID: HR-0387
+Department: Human Resources
+Type: Procedure
+Version: 2.4
+Effective date: 2025-03-10
+Status: Active
+Owner: HR Operations
+Applies to: Jeddah Office employees
+Related documents: HR-0007, HR-0015, HR-0191
+
+Purpose
+This policy covers paid leave for the birth or adoption of a child.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- The primary caregiver receives 45 paid days; the secondary caregiver receives 5 paid days.
+- Requests should reach HR at least 15 days before the expected start date with supporting documents.
+- Leave may be split into two blocks within the first year after the birth or adoption.
+- Job protection applies: the employee returns to the same or an equivalent role.
+
+Contact
+HR Operations: hr@t2.example

@@ -1,0 +1,19 @@
+Title: Printing - Quick Reference (Cairo Office)
+Document ID: IT-0377
+Department: Information Technology
+Type: Quick Reference
+Version: 2.3
+Effective date: 2023-06-09
+Status: Active
+Owner: IT Service Desk
+Applies to: Cairo Office employees
+Related documents: IT-0119
+
+Quick reference - Printing - Quick Reference (Cairo Office).
+
+Key points
+- Printing needs a badge tap at the printer to release the job.
+- Default printing is double-sided and black-and-white.
+- Unreleased jobs are deleted after 2 hours.
+
+Owner: IT Service Desk. Full policy: IT policy set.

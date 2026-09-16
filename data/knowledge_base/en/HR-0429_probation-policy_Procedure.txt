@@ -1,0 +1,28 @@
+Title: Probation - Procedure (Jeddah Office)
+Document ID: HR-0429
+Department: Human Resources
+Type: Procedure
+Version: 2.3
+Effective date: 2024-12-22
+Status: Active
+Owner: HR Operations
+Applies to: Jeddah Office employees
+Related documents: HR-0111, HR-0087, HR-0127
+
+Purpose
+This policy sets the probation period for new hires and how it is assessed.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- The probation period is 3 months from the start date.
+- A review meeting is held at the midpoint and at the end of probation.
+- During probation, either side may end the contract with 7 days' notice.
+
+Contact
+HR Operations: hr@t2.example

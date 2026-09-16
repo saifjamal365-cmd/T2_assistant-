@@ -1,0 +1,27 @@
+Title: Removable Media Policy
+Document ID: IT-0153
+Department: Information Technology
+Type: Policy
+Version: 3.0
+Effective date: 2024-03-10
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: IT-0063, IT-0111, IT-0095
+
+1. Purpose
+This policy covers using USB drives and other removable storage.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Company data may only be copied to removable media that is encrypted and IT-issued.
+- Personal USB drives must not be connected to a company device.
+- Lost removable media containing company data is reported to IT within 4 hours.
+
+4. Exceptions
+Exceptions need written approval from IT Service Desk.
+
+5. Contact
+For questions, contact it@t2.example.

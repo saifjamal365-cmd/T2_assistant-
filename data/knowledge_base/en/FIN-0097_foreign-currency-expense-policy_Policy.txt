@@ -1,0 +1,27 @@
+Title: Foreign Currency Expense Policy
+Document ID: FIN-0097
+Department: Finance
+Type: Policy
+Version: 3.3
+Effective date: 2025-06-19
+Status: Active
+Owner: Finance Shared Services
+Applies to: All employees
+Related documents: FIN-0007, FIN-0095, FIN-0015
+
+1. Purpose
+This policy covers converting foreign-currency expenses for reimbursement.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Foreign-currency receipts are converted using the exchange rate on the date of the transaction.
+- The rate source is the corporate card statement rate, or the central bank rate if paid in cash.
+- Reimbursement is always paid in the employee's home payroll currency.
+
+4. Exceptions
+Exceptions need written approval from Finance Shared Services.
+
+5. Contact
+For questions, contact fin@t2.example.

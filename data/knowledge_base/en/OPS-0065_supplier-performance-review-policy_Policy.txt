@@ -1,0 +1,27 @@
+Title: Supplier Performance Review Policy
+Document ID: OPS-0065
+Department: Operations
+Type: Policy
+Version: 3.4
+Effective date: 2023-02-07
+Status: Active
+Owner: Operations Excellence
+Applies to: All employees
+Related documents: PRC-0015, FIN-0087, PRC-0023
+
+1. Purpose
+This policy covers scoring supplier performance over time.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Key suppliers are scored every 3 months on quality, delivery and responsiveness.
+- A score below 60 out of 100 triggers a formal improvement plan.
+- Two consecutive low scores are referred to Procurement for a sourcing review.
+
+4. Exceptions
+Exceptions need written approval from Operations Excellence.
+
+5. Contact
+For questions, contact ops@t2.example.

@@ -1,0 +1,20 @@
+Title: Non-Compete and Non-Solicit - FAQ
+Document ID: LEG-0101
+Department: Legal & Compliance
+Type: FAQ
+Version: 3.0
+Effective date: 2023-01-08
+Status: Active
+Owner: Legal & Compliance Office
+Applies to: All employees
+Related documents: HR-0127, LEG-0015, LEG-0023
+
+Frequently asked questions about non-compete and non-solicit - faq.
+
+Q: Does the non-compete apply to everyone?
+A: No, only senior roles at grade M4 and above.
+
+Q: How long does the non-solicit rule last after I leave?
+A: 12 months.
+
+More detail is in the matching policy document.

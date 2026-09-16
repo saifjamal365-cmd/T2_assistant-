@@ -1,0 +1,20 @@
+Title: Guest Wi-Fi - FAQ
+Document ID: IT-0165
+Department: Information Technology
+Type: FAQ
+Version: 3.0
+Effective date: 2023-07-18
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: FAC-0031, IT-0047
+
+Frequently asked questions about guest wi-fi - faq.
+
+Q: Can guests access our internal systems over the guest Wi-Fi?
+A: No, the guest network cannot reach internal systems.
+
+Q: How often does the guest Wi-Fi password change?
+A: Every 30 days.
+
+More detail is in the matching policy document.

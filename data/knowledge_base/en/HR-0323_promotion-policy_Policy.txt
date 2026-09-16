@@ -1,0 +1,27 @@
+Title: Promotion Policy (Riyadh Office)
+Document ID: HR-0323
+Department: Human Resources
+Type: Policy
+Version: 2.0
+Effective date: 2023-06-29
+Status: Active
+Owner: HR Operations
+Applies to: Riyadh Office employees
+Related documents: HR-0087, HR-0103
+
+1. Purpose
+This policy describes how promotions are proposed and approved.
+
+2. Scope
+This policy applies to Riyadh Office employees.
+
+3. Policy
+- Promotions are considered 1 time(s) a year, aligned with the review cycle.
+- An employee must have at least 18 months in role and a rating of "meets" or above.
+- Promotions require the department head and HR to approve.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

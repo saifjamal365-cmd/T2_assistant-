@@ -1,0 +1,28 @@
+Title: Employee Referral Program - Procedure
+Document ID: HR-0203
+Department: Human Resources
+Type: Procedure
+Version: 3.3
+Effective date: 2023-03-10
+Status: Active
+Owner: HR Operations
+Applies to: All employees
+Related documents: HR-0111, HR-0143
+
+Purpose
+This policy explains the bonus for referring a candidate who is hired.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- A successful referral earns the employee a 2000 AED bonus, paid after the new hire completes probation.
+- The role must be advertised internally; referrals for roles at grade M3 and above are not eligible.
+- An employee may not refer a close relative.
+
+Contact
+HR Operations: hr@t2.example

@@ -1,0 +1,19 @@
+Title: Hardware Request - Quick Reference (Jeddah Office)
+Document ID: IT-0257
+Department: Information Technology
+Type: Quick Reference
+Version: 2.3
+Effective date: 2023-04-10
+Status: Active
+Owner: IT Service Desk
+Applies to: Jeddah Office employees
+Related documents: IT-0087, IT-0071, FAC-0063
+
+Quick reference - Hardware Request - Quick Reference (Jeddah Office).
+
+Key points
+- Standard equipment is requested through the asset portal with a business justification.
+- Standard requests are approved by the manager and fulfilled within 3 working days.
+- Non-standard items also need IT approval and may take longer.
+
+Owner: IT Service Desk. Full policy: IT policy set.

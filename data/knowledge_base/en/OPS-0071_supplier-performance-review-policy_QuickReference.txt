@@ -1,0 +1,19 @@
+Title: Supplier Performance Review - Quick Reference
+Document ID: OPS-0071
+Department: Operations
+Type: Quick Reference
+Version: 3.0
+Effective date: 2023-03-07
+Status: Active
+Owner: Operations Excellence
+Applies to: All employees
+Related documents: PRC-0015, FIN-0087, PRC-0023
+
+Quick reference - Supplier Performance Review - Quick Reference.
+
+Key points
+- Key suppliers are scored every 3 months on quality, delivery and responsiveness.
+- A score below 60 out of 100 triggers a formal improvement plan.
+- Two consecutive low scores are referred to Procurement for a sourcing review.
+
+Owner: Operations Excellence. Full policy: OPS policy set.

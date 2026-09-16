@@ -13,7 +13,7 @@ phase-by-phase log are in **`T2_Assistant_Project_Documentation.docx`**.
 |---|---|---|
 | 0 | Project setup and planning | done |
 | 1 | Requirements and architecture | done (Sections 7 and 9) |
-| 2 | Data and knowledge base | done — 1000 documents + manifest |
+| 2 | Data and knowledge base | done — 2000 documents (1000 EN + 1000 AR) + manifest |
 | 3 | Agentic core (router + specialist agents) | done — router, greeting, clarify, summarise, API, tracing, tests |
 | 4 | Retrieval and the answer agent | done — index build, Chroma search, grounded sourced answers |
 | 5 | Persistence and memory | done — SQLite store, conversations, follow-up questions |
@@ -30,14 +30,14 @@ t2-assistant/
 ├── .env.example              template for secrets (copy to .env)
 ├── scripts/
 │   ├── generate_kb.py         builds the synthetic knowledge base
-│   ├── build_eval_set.py      builds eval/dataset.json (500 fair questions)
+│   ├── build_eval_set.py      builds eval/dataset.json (fair questions, sized to the KB)
 │   └── build_eval_subset.py   picks a smaller, still-fair slice for a quick run
 ├── data/
-│   └── knowledge_base/       1000 generated policy documents + manifest.csv
-│       ├── en/  ar/          500 documents each
+│   └── knowledge_base/       2000 generated policy documents + manifest.csv
+│       ├── en/  ar/          1000 documents each
 │       └── manifest.csv      one row per document (id, title, dept, type, ...)
 ├── eval/
-│   ├── dataset.json           the full 500-question evaluation set
+│   ├── dataset.json           the full evaluation set (grows with the KB)
 │   ├── dataset_subset.json    a fair 50-question sample (free-tier daily cap)
 │   └── results/                report.md, report.json, answers.jsonl
 ├── src/t2_assistant/
@@ -91,15 +91,15 @@ against the real index and Groq).
 
 ## The knowledge base
 
-`data/knowledge_base/` holds 1000 synthetic company-policy documents. They are
+`data/knowledge_base/` holds 2000 synthetic company-policy documents. They are
 **not real** — they are generated to give the retrieval layer a realistic
 scale and shape to work against, and are replaced by real documents when those
 become available (no code change).
 
-- **88 topics** across 8 departments (HR, IT, Finance, Facilities,
+- **114 topics** across 8 departments (HR, IT, Finance, Facilities,
   Legal & Compliance, Operations, Marketing & Communications, Procurement).
 - **4 document types** per topic: Policy, Procedure, FAQ, Quick Reference.
-- **English and Arabic** (500 each).
+- **English and Arabic** (1000 each).
 - **Per-office variants** — some policies differ by office (Riyadh, Jeddah,
   Dubai, Cairo, Remote), with different numbers and scope.
 - **Old versions** — a number of documents are marked `Superseded` and point
@@ -110,7 +110,7 @@ become available (no code change).
 ### Rebuild it
 
 ```bash
-python scripts/generate_kb.py                 # 1000 documents (default)
+python scripts/generate_kb.py                 # 2000 documents (default)
 python scripts/generate_kb.py --count 300     # smaller set for quick tests
 python scripts/generate_kb.py --out data/kb2  # write elsewhere
 ```
@@ -120,13 +120,15 @@ only the Python standard library.
 
 ## Evaluation
 
-`eval/dataset.json` is 500 questions built straight from the same generator
-that built the knowledge base (never hand-written), so every expected answer
-traces back to a real document — 384 answerable (exact wording + paraphrased)
-and 116 deliberately unanswerable, split evenly EN/AR.
+`eval/dataset.json` is built straight from the same generator that built the
+knowledge base (never hand-written), so every expected answer traces back to
+a real document - answerable questions (exact wording + paraphrased) and a
+block of deliberately unanswerable ones, split evenly EN/AR. Its size grows
+with the knowledge base (run `python scripts/build_eval_set.py` after
+regenerating the KB to refresh it).
 
 ```bash
-python -m t2_assistant.evaluation.run                              # full 500
+python -m t2_assistant.evaluation.run                              # the full set
 python -m t2_assistant.evaluation.run --dataset eval/dataset_subset.json  # fair 50-question sample
 python -m t2_assistant.evaluation.run --resume                     # keep successes, retry only failures
 ```

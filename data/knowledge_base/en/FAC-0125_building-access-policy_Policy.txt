@@ -1,0 +1,27 @@
+Title: Building Access Policy (Riyadh Office)
+Document ID: FAC-0125
+Department: Facilities
+Type: Policy
+Version: 2.3
+Effective date: 2023-09-17
+Status: Active
+Owner: Facilities Management
+Applies to: Riyadh Office employees
+Related documents: FAC-0015, FAC-0031
+
+1. Purpose
+This policy covers access cards and entry to the office.
+
+2. Scope
+This policy applies to Riyadh Office employees.
+
+3. Policy
+- Every employee has an access card. Do not let anyone "tailgate" in behind you.
+- Lost cards are reported the same day; a replacement costs 50 AED.
+- After-hours access is logged and may need manager approval.
+
+4. Exceptions
+Exceptions need written approval from Facilities Management.
+
+5. Contact
+For questions, contact fac@t2.example.

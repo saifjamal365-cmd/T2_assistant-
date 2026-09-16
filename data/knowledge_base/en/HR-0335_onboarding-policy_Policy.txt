@@ -1,0 +1,28 @@
+Title: Onboarding Policy (Riyadh Office)
+Document ID: HR-0335
+Department: Human Resources
+Type: Policy
+Version: 1.3
+Effective date: 2023-12-15
+Status: Superseded
+Owner: HR Operations
+Applies to: Riyadh Office employees
+Related documents: HR-0079, HR-0143, IT-0023
+Superseded by: HR-0105
+
+1. Purpose
+This policy lists what must happen when a new employee joins.
+
+2. Scope
+This policy applies to Riyadh Office employees.
+
+3. Policy
+- Before day one, HR sends a welcome email with the start date, location and documents to bring.
+- On day one, the manager introduces the team and confirms system access is active.
+- Within the first 2 weeks, the employee completes mandatory training on conduct, privacy and security.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

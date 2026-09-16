@@ -1,0 +1,20 @@
+Title: Employee Referral Program - FAQ
+Document ID: HR-0205
+Department: Human Resources
+Type: FAQ
+Version: 3.0
+Effective date: 2024-05-24
+Status: Active
+Owner: HR Operations
+Applies to: All employees
+Related documents: HR-0111, HR-0143
+
+Frequently asked questions about employee referral program - faq.
+
+Q: How much is the referral bonus?
+A: 2000 AED, paid after the new hire completes probation.
+
+Q: Can I refer a family member?
+A: No, close relatives are not eligible.
+
+More detail is in the matching policy document.

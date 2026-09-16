@@ -1,0 +1,27 @@
+Title: Lost and Found Policy (Cairo Office)
+Document ID: FAC-0419
+Department: Facilities
+Type: Policy
+Version: 2.2
+Effective date: 2024-10-05
+Status: Active
+Owner: Facilities Management
+Applies to: Cairo Office employees
+Related documents: FAC-0023, FAC-0031
+
+1. Purpose
+This policy covers items found on company premises.
+
+2. Scope
+This policy applies to Cairo Office employees.
+
+3. Policy
+- Found items are handed to reception and logged with the date and location found.
+- Unclaimed items are kept for 60 days, then donated or disposed of.
+- Cash, cards and ID documents are handed to security immediately, not kept at reception.
+
+4. Exceptions
+Exceptions need written approval from Facilities Management.
+
+5. Contact
+For questions, contact fac@t2.example.

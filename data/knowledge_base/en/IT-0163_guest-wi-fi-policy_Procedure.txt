@@ -1,0 +1,28 @@
+Title: Guest Wi-Fi - Procedure
+Document ID: IT-0163
+Department: Information Technology
+Type: Procedure
+Version: 3.3
+Effective date: 2024-08-11
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: FAC-0031, IT-0047
+
+Purpose
+This policy covers internet access for visitors.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- Guests are given access to a separate guest network only; it cannot reach internal systems.
+- The guest Wi-Fi password is changed every 30 days and is available from reception.
+- A staff member sponsoring a guest is responsible for that guest's network use.
+
+Contact
+IT Service Desk: it@t2.example

@@ -1,0 +1,27 @@
+Title: Non-Compete and Non-Solicit Policy
+Document ID: LEG-0097
+Department: Legal & Compliance
+Type: Policy
+Version: 3.1
+Effective date: 2024-09-13
+Status: Active
+Owner: Legal & Compliance Office
+Applies to: All employees
+Related documents: HR-0127, LEG-0015, LEG-0023
+
+1. Purpose
+This policy explains restrictions that continue after an employee leaves.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Senior roles (grade M4 and above) may not join a direct competitor for 12 months after leaving.
+- No employee may solicit T2 clients or staff for 12 months after leaving.
+- The exact terms are set out in the employee's contract, not this policy alone.
+
+4. Exceptions
+Exceptions need written approval from Legal & Compliance Office.
+
+5. Contact
+For questions, contact leg@t2.example.

@@ -1,0 +1,19 @@
+Title: Printing - Quick Reference (Remote-first Teams)
+Document ID: IT-0431
+Department: Information Technology
+Type: Quick Reference
+Version: 2.0
+Effective date: 2023-05-16
+Status: Active
+Owner: IT Service Desk
+Applies to: Remote-first Teams employees
+Related documents: IT-0119
+
+Quick reference - Printing - Quick Reference (Remote-first Teams).
+
+Key points
+- Printing needs a badge tap at the printer to release the job.
+- Default printing is double-sided and black-and-white.
+- Unreleased jobs are deleted after 4 hours.
+
+Owner: IT Service Desk. Full policy: IT policy set.

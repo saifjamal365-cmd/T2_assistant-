@@ -1,0 +1,27 @@
+Title: EV Charging Policy (Cairo Office)
+Document ID: FAC-0407
+Department: Facilities
+Type: Policy
+Version: 2.2
+Effective date: 2023-05-08
+Status: Active
+Owner: Facilities Management
+Applies to: Cairo Office employees
+Related documents: FAC-0015, FAC-0023
+
+1. Purpose
+This policy covers using electric-vehicle charging points at the office.
+
+2. Scope
+This policy applies to Cairo Office employees.
+
+3. Policy
+- EV charging bays are booked through the office app; a session is limited to 2 hours.
+- Charging is free for employees; moving the car promptly once charged is expected.
+- Non-EVs must not park in a charging bay, even briefly.
+
+4. Exceptions
+Exceptions need written approval from Facilities Management.
+
+5. Contact
+For questions, contact fac@t2.example.

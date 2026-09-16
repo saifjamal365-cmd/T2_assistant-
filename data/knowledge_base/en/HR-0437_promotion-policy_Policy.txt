@@ -1,0 +1,27 @@
+Title: Promotion Policy (Jeddah Office)
+Document ID: HR-0437
+Department: Human Resources
+Type: Policy
+Version: 2.1
+Effective date: 2025-01-08
+Status: Active
+Owner: HR Operations
+Applies to: Jeddah Office employees
+Related documents: HR-0087, HR-0103
+
+1. Purpose
+This policy describes how promotions are proposed and approved.
+
+2. Scope
+This policy applies to Jeddah Office employees.
+
+3. Policy
+- Promotions are considered 1 time(s) a year, aligned with the review cycle.
+- An employee must have at least 18 months in role and a rating of "meets" or above.
+- Promotions require the department head and HR to approve.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

@@ -1,0 +1,20 @@
+Title: Data Subject Access Request - FAQ
+Document ID: LEG-0085
+Department: Legal & Compliance
+Type: FAQ
+Version: 3.2
+Effective date: 2023-06-05
+Status: Active
+Owner: Legal & Compliance Office
+Applies to: All employees
+Related documents: LEG-0007, LEG-0015, LEG-0047
+
+Frequently asked questions about data subject access request - faq.
+
+Q: What do I do if a customer asks to see their data?
+A: Forward the request to Legal & Compliance the same day.
+
+Q: How long does the company have to respond?
+A: 45 days.
+
+More detail is in the matching policy document.

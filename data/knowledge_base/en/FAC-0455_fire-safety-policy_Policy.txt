@@ -1,0 +1,27 @@
+Title: Fire Safety Policy (Remote-first Teams)
+Document ID: FAC-0455
+Department: Facilities
+Type: Policy
+Version: 2.3
+Effective date: 2024-05-04
+Status: Active
+Owner: Facilities Management
+Applies to: Remote-first Teams employees
+Related documents: FAC-0039, FAC-0023
+
+1. Purpose
+This policy covers fire drills and evacuation.
+
+2. Scope
+This policy applies to Remote-first Teams employees.
+
+3. Policy
+- Fire drills are held 3 times a year and attendance is mandatory for everyone on site.
+- On the alarm, leave by the nearest exit and go to the assembly point. Do not use lifts.
+- Fire wardens check their area and report headcount at the assembly point.
+
+4. Exceptions
+Exceptions need written approval from Facilities Management.
+
+5. Contact
+For questions, contact fac@t2.example.

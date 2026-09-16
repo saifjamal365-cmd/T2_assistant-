@@ -1,0 +1,19 @@
+Title: Guest Wi-Fi - Quick Reference (Remote-first Teams)
+Document ID: IT-0443
+Department: Information Technology
+Type: Quick Reference
+Version: 2.0
+Effective date: 2025-03-18
+Status: Active
+Owner: IT Service Desk
+Applies to: Remote-first Teams employees
+Related documents: FAC-0031, IT-0047
+
+Quick reference - Guest Wi-Fi - Quick Reference (Remote-first Teams).
+
+Key points
+- Guests are given access to a separate guest network only; it cannot reach internal systems.
+- The guest Wi-Fi password is changed every 30 days and is available from reception.
+- A staff member sponsoring a guest is responsible for that guest's network use.
+
+Owner: IT Service Desk. Full policy: IT policy set.

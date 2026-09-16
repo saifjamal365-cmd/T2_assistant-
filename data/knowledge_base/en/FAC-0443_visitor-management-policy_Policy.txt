@@ -1,0 +1,27 @@
+Title: Visitor Management Policy (Remote-first Teams)
+Document ID: FAC-0443
+Department: Facilities
+Type: Policy
+Version: 2.4
+Effective date: 2024-01-26
+Status: Active
+Owner: Facilities Management
+Applies to: Remote-first Teams employees
+Related documents: FAC-0023, LEG-0007
+
+1. Purpose
+This policy covers hosting visitors in the office.
+
+2. Scope
+This policy applies to Remote-first Teams employees.
+
+3. Policy
+- Visitors are registered in advance and are met and escorted by their host.
+- Visitors sign in at reception, wear a badge, and sign out when leaving.
+- Visitors are not left alone in areas with client or personal data.
+
+4. Exceptions
+Exceptions need written approval from Facilities Management.
+
+5. Contact
+For questions, contact fac@t2.example.

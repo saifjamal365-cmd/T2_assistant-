@@ -1,0 +1,28 @@
+Title: Trademark and Logo Usage - Procedure
+Document ID: LEG-0091
+Department: Legal & Compliance
+Type: Procedure
+Version: 3.4
+Effective date: 2025-05-18
+Status: Active
+Owner: Legal & Compliance Office
+Applies to: All employees
+Related documents: MKT-0023, MKT-0015, LEG-0071
+
+Purpose
+This policy covers using the company name, logo and brand assets.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- The logo and brand assets may only be used in their approved form, from the brand portal.
+- Any external use - a partner site, an event, a press item - needs Corporate Communications approval.
+- Employees may not register a domain, page or account using the company name without approval.
+
+Contact
+Legal & Compliance Office: leg@t2.example

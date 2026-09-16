@@ -1,0 +1,27 @@
+Title: Probation Policy (Dubai Office)
+Document ID: HR-0539
+Department: Human Resources
+Type: Policy
+Version: 2.2
+Effective date: 2023-04-21
+Status: Active
+Owner: HR Operations
+Applies to: Dubai Office employees
+Related documents: HR-0111, HR-0087, HR-0127
+
+1. Purpose
+This policy sets the probation period for new hires and how it is assessed.
+
+2. Scope
+This policy applies to Dubai Office employees.
+
+3. Policy
+- The probation period is 6 months from the start date.
+- A review meeting is held at the midpoint and at the end of probation.
+- During probation, either side may end the contract with 14 days' notice.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

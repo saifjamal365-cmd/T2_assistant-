@@ -1,0 +1,19 @@
+Title: Guest Wi-Fi - Quick Reference (Jeddah Office)
+Document ID: IT-0281
+Department: Information Technology
+Type: Quick Reference
+Version: 2.4
+Effective date: 2023-02-06
+Status: Active
+Owner: IT Service Desk
+Applies to: Jeddah Office employees
+Related documents: FAC-0031, IT-0047
+
+Quick reference - Guest Wi-Fi - Quick Reference (Jeddah Office).
+
+Key points
+- Guests are given access to a separate guest network only; it cannot reach internal systems.
+- The guest Wi-Fi password is changed every 7 days and is available from reception.
+- A staff member sponsoring a guest is responsible for that guest's network use.
+
+Owner: IT Service Desk. Full policy: IT policy set.

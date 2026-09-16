@@ -1,0 +1,20 @@
+Title: IT Support Service Levels - Quick Reference (Jeddah Office)
+Document ID: IT-0275
+Department: Information Technology
+Type: Quick Reference
+Version: 1.0
+Effective date: 2023-01-13
+Status: Superseded
+Owner: IT Service Desk
+Applies to: Jeddah Office employees
+Related documents: IT-0023, IT-0079
+Superseded by: IT-0135
+
+Quick reference - IT Support Service Levels - Quick Reference (Jeddah Office).
+
+Key points
+- Standard tickets are responded to within 1 business day(s).
+- Critical issues, such as a full outage, are responded to within 2 hour(s) during business hours.
+- Raise a ticket through the service desk portal, not by contacting staff directly.
+
+Owner: IT Service Desk. Full policy: IT policy set.

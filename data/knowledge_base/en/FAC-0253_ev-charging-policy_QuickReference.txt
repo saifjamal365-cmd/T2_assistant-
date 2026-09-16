@@ -1,0 +1,19 @@
+Title: EV Charging - Quick Reference (Jeddah Office)
+Document ID: FAC-0253
+Department: Facilities
+Type: Quick Reference
+Version: 2.1
+Effective date: 2025-05-05
+Status: Active
+Owner: Facilities Management
+Applies to: Jeddah Office employees
+Related documents: FAC-0015, FAC-0023
+
+Quick reference - EV Charging - Quick Reference (Jeddah Office).
+
+Key points
+- EV charging bays are booked through the office app; a session is limited to 2 hours.
+- Charging is free for employees; moving the car promptly once charged is expected.
+- Non-EVs must not park in a charging bay, even briefly.
+
+Owner: Facilities Management. Full policy: FAC policy set.

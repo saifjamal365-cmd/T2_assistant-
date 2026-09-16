@@ -1,0 +1,28 @@
+Title: Multi-Factor Authentication - Procedure (Jeddah Office)
+Document ID: IT-0241
+Department: Information Technology
+Type: Procedure
+Version: 2.4
+Effective date: 2025-05-14
+Status: Active
+Owner: IT Service Desk
+Applies to: Jeddah Office employees
+Related documents: IT-0007, IT-0047
+
+Purpose
+This policy requires a second factor for sign-in.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- MFA is required for email, the VPN and any system holding client or financial data.
+- The approved second factor is the authenticator app; SMS is allowed only as a fallback.
+- Lost devices must be reported to the service desk within 2 hours.
+
+Contact
+IT Service Desk: it@t2.example

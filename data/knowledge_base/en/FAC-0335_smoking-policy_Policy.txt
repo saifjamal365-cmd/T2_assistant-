@@ -1,0 +1,28 @@
+Title: Smoking Policy (Dubai Office)
+Document ID: FAC-0335
+Department: Facilities
+Type: Policy
+Version: 1.2
+Effective date: 2023-01-21
+Status: Superseded
+Owner: Facilities Management
+Applies to: Dubai Office employees
+Related documents: FAC-0039, FAC-0047
+Superseded by: FAC-0097
+
+1. Purpose
+This policy covers where smoking is allowed on company premises.
+
+2. Scope
+This policy applies to Dubai Office employees.
+
+3. Policy
+- Smoking, including e-cigarettes, is allowed only in designated outdoor areas.
+- Designated areas are at least 15 metres from any building entrance.
+- Smoking anywhere else on the premises, including company vehicles, is not permitted.
+
+4. Exceptions
+Exceptions need written approval from Facilities Management.
+
+5. Contact
+For questions, contact fac@t2.example.

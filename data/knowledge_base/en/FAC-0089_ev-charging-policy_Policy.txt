@@ -1,0 +1,27 @@
+Title: EV Charging Policy
+Document ID: FAC-0089
+Department: Facilities
+Type: Policy
+Version: 3.1
+Effective date: 2024-12-15
+Status: Active
+Owner: Facilities Management
+Applies to: All employees
+Related documents: FAC-0015, FAC-0023
+
+1. Purpose
+This policy covers using electric-vehicle charging points at the office.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- EV charging bays are booked through the office app; a session is limited to 3 hours.
+- Charging is free for employees; moving the car promptly once charged is expected.
+- Non-EVs must not park in a charging bay, even briefly.
+
+4. Exceptions
+Exceptions need written approval from Facilities Management.
+
+5. Contact
+For questions, contact fac@t2.example.

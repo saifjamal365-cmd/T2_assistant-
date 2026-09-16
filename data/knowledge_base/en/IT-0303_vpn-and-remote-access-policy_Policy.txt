@@ -1,0 +1,27 @@
+Title: VPN and Remote Access Policy (Dubai Office)
+Document ID: IT-0303
+Department: Information Technology
+Type: Policy
+Version: 2.2
+Effective date: 2023-08-04
+Status: Active
+Owner: IT Service Desk
+Applies to: Dubai Office employees
+Related documents: HR-0063, IT-0015
+
+1. Purpose
+This policy explains how to connect to internal systems from outside the office.
+
+2. Scope
+This policy applies to Dubai Office employees.
+
+3. Policy
+- Internal systems are reachable from outside only through the approved VPN with MFA.
+- Split tunnelling is disabled; all traffic goes through the VPN while connected.
+- Sessions time out after 60 minutes of inactivity.
+
+4. Exceptions
+Exceptions need written approval from IT Service Desk.
+
+5. Contact
+For questions, contact it@t2.example.

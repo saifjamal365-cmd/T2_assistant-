@@ -1,0 +1,28 @@
+Title: IT Support Service Levels (Remote-first Teams)
+Document ID: IT-0435
+Department: Information Technology
+Type: Policy
+Version: 1.3
+Effective date: 2023-04-06
+Status: Superseded
+Owner: IT Service Desk
+Applies to: Remote-first Teams employees
+Related documents: IT-0023, IT-0079
+Superseded by: IT-0129
+
+1. Purpose
+This document sets response times for IT support tickets.
+
+2. Scope
+This policy applies to Remote-first Teams employees.
+
+3. Policy
+- Standard tickets are responded to within 2 business day(s).
+- Critical issues, such as a full outage, are responded to within 4 hour(s) during business hours.
+- Raise a ticket through the service desk portal, not by contacting staff directly.
+
+4. Exceptions
+Exceptions need written approval from IT Service Desk.
+
+5. Contact
+For questions, contact it@t2.example.

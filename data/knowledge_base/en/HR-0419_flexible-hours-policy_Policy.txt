@@ -1,0 +1,26 @@
+Title: Flexible Hours Policy (Jeddah Office)
+Document ID: HR-0419
+Department: Human Resources
+Type: Policy
+Version: 2.3
+Effective date: 2024-04-11
+Status: Active
+Owner: HR Operations
+Applies to: Jeddah Office employees
+Related documents: HR-0047, HR-0063
+
+1. Purpose
+This policy lets employees shift their start and end times within limits.
+
+2. Scope
+This policy applies to Jeddah Office employees.
+
+3. Policy
+- Start time may be chosen between 07:30 and 10:00, keeping the full daily hours.
+- Any flexible arrangement must still cover the core hours.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

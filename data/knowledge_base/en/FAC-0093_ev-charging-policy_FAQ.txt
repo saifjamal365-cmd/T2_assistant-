@@ -1,0 +1,20 @@
+Title: EV Charging - FAQ
+Document ID: FAC-0093
+Department: Facilities
+Type: FAQ
+Version: 3.3
+Effective date: 2025-03-22
+Status: Active
+Owner: Facilities Management
+Applies to: All employees
+Related documents: FAC-0015, FAC-0023
+
+Frequently asked questions about ev charging - faq.
+
+Q: Is EV charging free?
+A: Yes, free for employees.
+
+Q: How long can I charge for?
+A: Sessions are limited to 3 hours.
+
+More detail is in the matching policy document.

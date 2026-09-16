@@ -1,0 +1,27 @@
+Title: Smoking Policy (Jeddah Office)
+Document ID: FAC-0257
+Department: Facilities
+Type: Policy
+Version: 2.0
+Effective date: 2023-11-06
+Status: Active
+Owner: Facilities Management
+Applies to: Jeddah Office employees
+Related documents: FAC-0039, FAC-0047
+
+1. Purpose
+This policy covers where smoking is allowed on company premises.
+
+2. Scope
+This policy applies to Jeddah Office employees.
+
+3. Policy
+- Smoking, including e-cigarettes, is allowed only in designated outdoor areas.
+- Designated areas are at least 10 metres from any building entrance.
+- Smoking anywhere else on the premises, including company vehicles, is not permitted.
+
+4. Exceptions
+Exceptions need written approval from Facilities Management.
+
+5. Contact
+For questions, contact fac@t2.example.

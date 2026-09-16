@@ -1,0 +1,28 @@
+Title: Public Holidays - Procedure
+Document ID: HR-0195
+Department: Human Resources
+Type: Procedure
+Version: 3.2
+Effective date: 2023-05-03
+Status: Active
+Owner: HR Operations
+Applies to: All employees
+Related documents: HR-0007, HR-0071
+
+Purpose
+This policy lists paid public holidays and what happens if one falls on a weekend.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- T2 observes 13 paid public holidays a year, published on the HR calendar each January.
+- If a holiday falls on a weekend, a floating day is given instead, to be used within 3 months.
+- Employees required to work on a public holiday receive a replacement day plus their normal pay.
+
+Contact
+HR Operations: hr@t2.example

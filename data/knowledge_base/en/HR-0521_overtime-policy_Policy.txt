@@ -1,0 +1,28 @@
+Title: Overtime Policy (Dubai Office)
+Document ID: HR-0521
+Department: Human Resources
+Type: Policy
+Version: 1.1
+Effective date: 2024-01-09
+Status: Superseded
+Owner: HR Operations
+Applies to: Dubai Office employees
+Related documents: HR-0047, OPS-0047
+Superseded by: HR-0049
+
+1. Purpose
+This policy explains when overtime is paid and how it is approved.
+
+2. Scope
+This policy applies to Dubai Office employees.
+
+3. Policy
+- Overtime must be approved in writing by the manager before it is worked.
+- Overtime is paid at 1.25 times the normal hourly rate.
+- Employees at grade M3 and above are not eligible for overtime pay.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

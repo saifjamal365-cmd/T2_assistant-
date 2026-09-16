@@ -1,0 +1,19 @@
+Title: Hot Desk Booking - Quick Reference (Cairo Office)
+Document ID: FAC-0403
+Department: Facilities
+Type: Quick Reference
+Version: 2.4
+Effective date: 2024-05-13
+Status: Active
+Owner: Facilities Management
+Applies to: Cairo Office employees
+Related documents: FAC-0007, HR-0063
+
+Quick reference - Hot Desk Booking - Quick Reference (Cairo Office).
+
+Key points
+- Desks in shared-seating areas are booked through the office app up to 7 days ahead.
+- A desk not checked into within 15 minutes of the booking start is released to others.
+- Personal items are cleared at the end of the day; the desk is shared the next day.
+
+Owner: Facilities Management. Full policy: FAC policy set.

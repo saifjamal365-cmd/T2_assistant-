@@ -1,0 +1,27 @@
+Title: Kitchen and Break Area - Procedure (Cairo Office)
+Document ID: FAC-0393
+Department: Facilities
+Type: Procedure
+Version: 2.2
+Effective date: 2023-10-05
+Status: Active
+Owner: Facilities Management
+Applies to: Cairo Office employees
+
+Purpose
+This policy covers shared kitchens and break areas.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- Clean up after yourself; label personal food with your name and the date.
+- The fridge is emptied every Thursday; anything unlabelled is thrown away.
+- Report broken appliances to facilities.
+
+Contact
+Facilities Management: fac@t2.example

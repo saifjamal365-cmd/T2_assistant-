@@ -1,0 +1,27 @@
+Title: Generative AI Usage Policy
+Document ID: IT-0145
+Department: Information Technology
+Type: Policy
+Version: 3.4
+Effective date: 2024-10-29
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: LEG-0007, IT-0031, LEG-0015
+
+1. Purpose
+This policy covers using AI chat and coding tools for work.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Only AI tools on the IT-approved list may be used; a new tool needs IT review before use.
+- Client data, personal data and unreleased company information must never be entered into a public AI tool.
+- AI-generated content used externally must be reviewed by a person before it is sent or published.
+
+4. Exceptions
+Exceptions need written approval from IT Service Desk.
+
+5. Contact
+For questions, contact it@t2.example.

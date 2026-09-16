@@ -1,0 +1,20 @@
+Title: Supplier Performance Review - FAQ
+Document ID: OPS-0069
+Department: Operations
+Type: FAQ
+Version: 3.3
+Effective date: 2024-01-17
+Status: Active
+Owner: Operations Excellence
+Applies to: All employees
+Related documents: PRC-0015, FIN-0087, PRC-0023
+
+Frequently asked questions about supplier performance review - faq.
+
+Q: How often are suppliers scored?
+A: Every 3 months.
+
+Q: What happens if a supplier scores poorly?
+A: Below 60/100 triggers a formal improvement plan.
+
+More detail is in the matching policy document.

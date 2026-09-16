@@ -1,0 +1,28 @@
+Title: Hardware Request - Procedure (Cairo Office)
+Document ID: IT-0367
+Department: Information Technology
+Type: Procedure
+Version: 2.4
+Effective date: 2024-08-15
+Status: Active
+Owner: IT Service Desk
+Applies to: Cairo Office employees
+Related documents: IT-0087, IT-0071, FAC-0063
+
+Purpose
+This policy explains how to request laptops, monitors and phones.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- Standard equipment is requested through the asset portal with a business justification.
+- Standard requests are approved by the manager and fulfilled within 3 working days.
+- Non-standard items also need IT approval and may take longer.
+
+Contact
+IT Service Desk: it@t2.example

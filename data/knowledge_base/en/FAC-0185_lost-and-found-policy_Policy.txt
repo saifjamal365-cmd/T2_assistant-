@@ -1,0 +1,28 @@
+Title: Lost and Found Policy (Riyadh Office)
+Document ID: FAC-0185
+Department: Facilities
+Type: Policy
+Version: 1.1
+Effective date: 2023-04-23
+Status: Superseded
+Owner: Facilities Management
+Applies to: Riyadh Office employees
+Related documents: FAC-0023, FAC-0031
+Superseded by: FAC-0105
+
+1. Purpose
+This policy covers items found on company premises.
+
+2. Scope
+This policy applies to Riyadh Office employees.
+
+3. Policy
+- Found items are handed to reception and logged with the date and location found.
+- Unclaimed items are kept for 90 days, then donated or disposed of.
+- Cash, cards and ID documents are handed to security immediately, not kept at reception.
+
+4. Exceptions
+Exceptions need written approval from Facilities Management.
+
+5. Contact
+For questions, contact fac@t2.example.

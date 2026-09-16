@@ -1,0 +1,19 @@
+Title: Clear Desk and Screen - Quick Reference (Dubai Office)
+Document ID: IT-0317
+Department: Information Technology
+Type: Quick Reference
+Version: 2.4
+Effective date: 2024-12-13
+Status: Active
+Owner: IT Service Desk
+Applies to: Dubai Office employees
+Related documents: IT-0127, LEG-0007
+
+Quick reference - Clear Desk and Screen - Quick Reference (Dubai Office).
+
+Key points
+- Lock your screen whenever you leave your desk.
+- Documents with client or personal data are locked away at the end of the day.
+- Printouts left on the printer for more than 60 minutes are shredded.
+
+Owner: IT Service Desk. Full policy: IT policy set.

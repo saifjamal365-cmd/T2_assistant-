@@ -1,0 +1,19 @@
+Title: EV Charging - Quick Reference
+Document ID: FAC-0095
+Department: Facilities
+Type: Quick Reference
+Version: 3.2
+Effective date: 2023-07-27
+Status: Active
+Owner: Facilities Management
+Applies to: All employees
+Related documents: FAC-0015, FAC-0023
+
+Quick reference - EV Charging - Quick Reference.
+
+Key points
+- EV charging bays are booked through the office app; a session is limited to 3 hours.
+- Charging is free for employees; moving the car promptly once charged is expected.
+- Non-EVs must not park in a charging bay, even briefly.
+
+Owner: Facilities Management. Full policy: FAC policy set.

@@ -1,0 +1,19 @@
+Title: Mobile Device Management - Quick Reference
+Document ID: IT-0143
+Department: Information Technology
+Type: Quick Reference
+Version: 3.4
+Effective date: 2024-11-03
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: IT-0055, IT-0039, IT-0095
+
+Quick reference - Mobile Device Management - Quick Reference.
+
+Key points
+- Any device used for company email must be enrolled in the mobile device management (MDM) system.
+- A lost or stolen enrolled device must be reported within 2 hours so it can be remotely wiped.
+- Leaving the company or removing the device from MDM erases company data from it, not personal data.
+
+Owner: IT Service Desk. Full policy: IT policy set.

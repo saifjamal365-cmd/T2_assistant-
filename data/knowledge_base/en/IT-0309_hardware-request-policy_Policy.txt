@@ -1,0 +1,27 @@
+Title: Hardware Request Policy (Dubai Office)
+Document ID: IT-0309
+Department: Information Technology
+Type: Policy
+Version: 2.3
+Effective date: 2023-03-12
+Status: Active
+Owner: IT Service Desk
+Applies to: Dubai Office employees
+Related documents: IT-0087, IT-0071, FAC-0063
+
+1. Purpose
+This policy explains how to request laptops, monitors and phones.
+
+2. Scope
+This policy applies to Dubai Office employees.
+
+3. Policy
+- Standard equipment is requested through the asset portal with a business justification.
+- Standard requests are approved by the manager and fulfilled within 10 working days.
+- Non-standard items also need IT approval and may take longer.
+
+4. Exceptions
+Exceptions need written approval from IT Service Desk.
+
+5. Contact
+For questions, contact it@t2.example.

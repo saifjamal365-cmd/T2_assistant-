@@ -1,0 +1,27 @@
+Title: Employee Assistance Program
+Document ID: HR-0241
+Department: Human Resources
+Type: Policy
+Version: 3.0
+Effective date: 2024-05-24
+Status: Active
+Owner: HR Operations
+Applies to: All employees
+Related documents: HR-0223, HR-0151
+
+1. Purpose
+This policy covers free, confidential counselling for employees.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Employees and their immediate family may access up to 6 free counselling sessions a year.
+- Sessions are confidential; HR and managers are not told who used the service.
+- The service is reached through the EAP hotline, available 24/7.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

@@ -1,0 +1,19 @@
+Title: Petty Cash - Quick Reference (Remote-first Teams)
+Document ID: FIN-0225
+Department: Finance
+Type: Quick Reference
+Version: 2.3
+Effective date: 2023-02-27
+Status: Active
+Owner: Finance Shared Services
+Applies to: Remote-first Teams employees
+Related documents: FIN-0007
+
+Quick reference - Petty Cash - Quick Reference (Remote-first Teams).
+
+Key points
+- Petty cash is for small items only, up to 200 AED per payment.
+- Every payment needs a receipt and a signed voucher.
+- The float is reconciled and topped up every week.
+
+Owner: Finance Shared Services. Full policy: FIN policy set.

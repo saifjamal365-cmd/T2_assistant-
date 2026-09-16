@@ -1,0 +1,27 @@
+Title: Data Subject Access Request Policy
+Document ID: LEG-0081
+Department: Legal & Compliance
+Type: Policy
+Version: 3.3
+Effective date: 2023-08-16
+Status: Active
+Owner: Legal & Compliance Office
+Applies to: All employees
+Related documents: LEG-0007, LEG-0015, LEG-0047
+
+1. Purpose
+This policy covers a request from a person to see or delete their personal data.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- A data subject request is forwarded to Legal & Compliance the same day it is received.
+- The company responds within 45 days, as required by data protection law.
+- The requester's identity is verified before any personal data is shared or deleted.
+
+4. Exceptions
+Exceptions need written approval from Legal & Compliance Office.
+
+5. Contact
+For questions, contact leg@t2.example.

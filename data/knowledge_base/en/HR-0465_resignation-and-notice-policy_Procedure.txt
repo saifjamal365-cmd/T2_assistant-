@@ -1,0 +1,28 @@
+Title: Resignation and Notice - Procedure (Jeddah Office)
+Document ID: HR-0465
+Department: Human Resources
+Type: Procedure
+Version: 2.1
+Effective date: 2024-10-10
+Status: Active
+Owner: HR Operations
+Applies to: Jeddah Office employees
+Related documents: HR-0119, HR-0135
+
+Purpose
+This policy sets the notice period for resignation.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- Employees give 2 weeks' written notice; grade M3 and above give 8 weeks.
+- Notice may be shortened only with the manager's written agreement.
+- An exit interview is offered before the last day.
+
+Contact
+HR Operations: hr@t2.example

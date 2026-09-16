@@ -1,0 +1,27 @@
+Title: Guest Wi-Fi Policy (Remote-first Teams)
+Document ID: IT-0441
+Department: Information Technology
+Type: Policy
+Version: 2.4
+Effective date: 2023-10-01
+Status: Active
+Owner: IT Service Desk
+Applies to: Remote-first Teams employees
+Related documents: FAC-0031, IT-0047
+
+1. Purpose
+This policy covers internet access for visitors.
+
+2. Scope
+This policy applies to Remote-first Teams employees.
+
+3. Policy
+- Guests are given access to a separate guest network only; it cannot reach internal systems.
+- The guest Wi-Fi password is changed every 30 days and is available from reception.
+- A staff member sponsoring a guest is responsible for that guest's network use.
+
+4. Exceptions
+Exceptions need written approval from IT Service Desk.
+
+5. Contact
+For questions, contact it@t2.example.

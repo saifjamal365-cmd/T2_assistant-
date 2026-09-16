@@ -1,0 +1,28 @@
+Title: Resignation and Notice Policy (Dubai Office)
+Document ID: HR-0575
+Department: Human Resources
+Type: Policy
+Version: 1.6
+Effective date: 2023-05-22
+Status: Superseded
+Owner: HR Operations
+Applies to: Dubai Office employees
+Related documents: HR-0119, HR-0135
+Superseded by: HR-0121
+
+1. Purpose
+This policy sets the notice period for resignation.
+
+2. Scope
+This policy applies to Dubai Office employees.
+
+3. Policy
+- Employees give 4 weeks' written notice; grade M4 and above give 12 weeks.
+- Notice may be shortened only with the manager's written agreement.
+- An exit interview is offered before the last day.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

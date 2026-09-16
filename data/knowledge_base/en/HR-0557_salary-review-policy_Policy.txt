@@ -1,0 +1,27 @@
+Title: Salary Review Policy (Dubai Office)
+Document ID: HR-0557
+Department: Human Resources
+Type: Policy
+Version: 2.2
+Effective date: 2023-12-22
+Status: Active
+Owner: HR Operations
+Applies to: Dubai Office employees
+Related documents: HR-0087, HR-0095
+
+1. Purpose
+This policy explains the annual salary review.
+
+2. Scope
+This policy applies to Dubai Office employees.
+
+3. Policy
+- Salaries are reviewed once a year, effective 1 July.
+- Adjustments depend on the performance rating, the salary band and the annual budget.
+- Out-of-cycle adjustments need Compensation Committee approval.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

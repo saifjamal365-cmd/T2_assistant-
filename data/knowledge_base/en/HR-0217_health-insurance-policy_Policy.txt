@@ -1,0 +1,27 @@
+Title: Health Insurance Policy
+Document ID: HR-0217
+Department: Human Resources
+Type: Policy
+Version: 3.0
+Effective date: 2024-04-15
+Status: Active
+Owner: HR Operations
+Applies to: All employees
+Related documents: HR-0111, FIN-0071
+
+1. Purpose
+This policy explains medical insurance coverage for employees and dependents.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Coverage starts on the employee's first working day; no waiting period applies.
+- Employees may add up to 4 dependents, with the premium shared as per the HR rate card.
+- Claims are submitted through the insurer's app within 90 days of treatment.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

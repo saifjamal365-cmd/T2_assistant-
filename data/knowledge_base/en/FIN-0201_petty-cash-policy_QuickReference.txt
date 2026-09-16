@@ -1,0 +1,19 @@
+Title: Petty Cash - Quick Reference (Cairo Office)
+Document ID: FIN-0201
+Department: Finance
+Type: Quick Reference
+Version: 2.2
+Effective date: 2025-03-29
+Status: Active
+Owner: Finance Shared Services
+Applies to: Cairo Office employees
+Related documents: FIN-0007
+
+Quick reference - Petty Cash - Quick Reference (Cairo Office).
+
+Key points
+- Petty cash is for small items only, up to 100 EGP per payment.
+- Every payment needs a receipt and a signed voucher.
+- The float is reconciled and topped up every month.
+
+Owner: Finance Shared Services. Full policy: FIN policy set.

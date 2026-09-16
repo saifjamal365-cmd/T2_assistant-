@@ -1,0 +1,20 @@
+Title: Removable Media - FAQ
+Document ID: IT-0157
+Department: Information Technology
+Type: FAQ
+Version: 3.3
+Effective date: 2025-03-08
+Status: Active
+Owner: IT Service Desk
+Applies to: All employees
+Related documents: IT-0063, IT-0111, IT-0095
+
+Frequently asked questions about removable media - faq.
+
+Q: Can I use my personal USB drive at work?
+A: No, personal USB drives must not be connected to a company device.
+
+Q: What kind of removable media is allowed for company data?
+A: Only encrypted, IT-issued removable media.
+
+More detail is in the matching policy document.

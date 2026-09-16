@@ -1,0 +1,28 @@
+Title: Payroll Bank Account Change - Procedure
+Document ID: FIN-0107
+Department: Finance
+Type: Procedure
+Version: 3.2
+Effective date: 2024-08-07
+Status: Active
+Owner: Finance Shared Services
+Applies to: All employees
+Related documents: FIN-0071, FIN-0079
+
+Purpose
+This policy covers updating the bank account salary is paid into.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- A bank account change is submitted through the HR system with a bank letter or void cheque.
+- Changes submitted after the 25 of the month apply from the following month's payroll.
+- Payroll will call the employee directly to confirm any account change before paying it.
+
+Contact
+Finance Shared Services: fin@t2.example

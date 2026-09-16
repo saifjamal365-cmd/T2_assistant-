@@ -1,0 +1,27 @@
+Title: Meeting Room Booking Policy (Dubai Office)
+Document ID: FAC-0269
+Department: Facilities
+Type: Policy
+Version: 2.1
+Effective date: 2024-07-29
+Status: Active
+Owner: Facilities Management
+Applies to: Dubai Office employees
+Related documents: FAC-0031, FAC-0015
+
+1. Purpose
+This policy explains how to reserve and use meeting rooms.
+
+2. Scope
+This policy applies to Dubai Office employees.
+
+3. Policy
+- Rooms are booked through the shared calendar. Walk-in use is allowed only if the room is free for the next 30 minutes.
+- Bookings longer than 3 hours need an office administrator to approve.
+- If a meeting ends early or is cancelled, release the room in the calendar.
+
+4. Exceptions
+Exceptions need written approval from Facilities Management.
+
+5. Contact
+For questions, contact fac@t2.example.

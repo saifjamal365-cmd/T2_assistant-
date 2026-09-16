@@ -1,0 +1,27 @@
+Title: Tuition Reimbursement Policy
+Document ID: HR-0225
+Department: Human Resources
+Type: Policy
+Version: 3.1
+Effective date: 2023-03-22
+Status: Active
+Owner: HR Operations
+Applies to: All employees
+Related documents: HR-0175, HR-0127
+
+1. Purpose
+This policy covers reimbursement for job-related further education.
+
+2. Scope
+This policy applies to all employees.
+
+3. Policy
+- Up to 5000 AED per year is reimbursed for approved, job-related courses with a passing grade.
+- The course must be approved by the manager before it starts; retroactive claims are not accepted.
+- The employee agrees to stay 12 months after completion or repay the amount pro-rata.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

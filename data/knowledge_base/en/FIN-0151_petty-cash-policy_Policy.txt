@@ -1,0 +1,27 @@
+Title: Petty Cash Policy (Jeddah Office)
+Document ID: FIN-0151
+Department: Finance
+Type: Policy
+Version: 2.0
+Effective date: 2023-12-23
+Status: Active
+Owner: Finance Shared Services
+Applies to: Jeddah Office employees
+Related documents: FIN-0007
+
+1. Purpose
+This policy covers small cash payments held at each office.
+
+2. Scope
+This policy applies to Jeddah Office employees.
+
+3. Policy
+- Petty cash is for small items only, up to 100 AED per payment.
+- Every payment needs a receipt and a signed voucher.
+- The float is reconciled and topped up every week.
+
+4. Exceptions
+Exceptions need written approval from Finance Shared Services.
+
+5. Contact
+For questions, contact fin@t2.example.

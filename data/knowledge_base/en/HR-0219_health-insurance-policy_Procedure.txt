@@ -1,0 +1,28 @@
+Title: Health Insurance - Procedure
+Document ID: HR-0219
+Department: Human Resources
+Type: Procedure
+Version: 3.1
+Effective date: 2024-07-15
+Status: Active
+Owner: HR Operations
+Applies to: All employees
+Related documents: HR-0111, FIN-0071
+
+Purpose
+This policy explains medical insurance coverage for employees and dependents.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- Coverage starts on the employee's first working day; no waiting period applies.
+- Employees may add up to 4 dependents, with the premium shared as per the HR rate card.
+- Claims are submitted through the insurer's app within 90 days of treatment.
+
+Contact
+HR Operations: hr@t2.example

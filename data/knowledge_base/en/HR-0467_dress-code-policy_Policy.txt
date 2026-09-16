@@ -1,0 +1,27 @@
+Title: Dress Code Policy (Jeddah Office)
+Document ID: HR-0467
+Department: Human Resources
+Type: Policy
+Version: 2.3
+Effective date: 2024-05-18
+Status: Active
+Owner: HR Operations
+Applies to: Jeddah Office employees
+Related documents: FAC-0031
+
+1. Purpose
+This policy describes what to wear in the office and with clients.
+
+2. Scope
+This policy applies to Jeddah Office employees.
+
+3. Policy
+- Standard office wear is smart-casual.
+- Client meetings and external events require business attire.
+- Thursday is a casual day, except where a client is on site.
+
+4. Exceptions
+Exceptions need written approval from HR Operations.
+
+5. Contact
+For questions, contact hr@t2.example.

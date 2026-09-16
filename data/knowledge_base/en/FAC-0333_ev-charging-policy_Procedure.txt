@@ -1,0 +1,29 @@
+Title: EV Charging - Procedure (Dubai Office)
+Document ID: FAC-0333
+Department: Facilities
+Type: Procedure
+Version: 1.6
+Effective date: 2023-12-19
+Status: Superseded
+Owner: Facilities Management
+Applies to: Dubai Office employees
+Related documents: FAC-0015, FAC-0023
+Superseded by: FAC-0091
+
+Purpose
+This policy covers using electric-vehicle charging points at the office.
+
+Steps
+1. Check this document and any related policy before you start.
+2. Prepare the information you need.
+3. Submit the request in the correct system.
+4. Wait for the required approval.
+5. Keep a copy of the approval for your records.
+
+Rules that apply
+- EV charging bays are booked through the office app; a session is limited to 3 hours.
+- Charging is free for employees; moving the car promptly once charged is expected.
+- Non-EVs must not park in a charging bay, even briefly.
+
+Contact
+Facilities Management: fac@t2.example
