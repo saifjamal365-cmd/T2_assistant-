@@ -38,11 +38,10 @@ from pathlib import Path
 
 from groq import RateLimitError
 
-from t2_assistant.agents.answer import _DONT_KNOW
+from t2_assistant.agents.answer import _is_decline
 from t2_assistant.conversation import ChatResult, chat
 from t2_assistant.evaluation.dataset import EvalItem
 
-_DONT_KNOW_PREFIX = _DONT_KNOW[:15]  # same prefix answer.py itself checks
 _MAX_RATE_LIMIT_RETRIES = 8
 _RETRY_AFTER = re.compile(r"try again in ([\d.]+)s", re.IGNORECASE)
 
@@ -87,7 +86,7 @@ def _evaluate_one(item: EvalItem) -> AnswerResult:
     try:
         result, retries, duration_ms = _chat_with_rate_limit_retry(item.question)
 
-        said_dont_know = _DONT_KNOW_PREFIX in result.reply
+        said_dont_know = _is_decline(result.reply)
         cited = any(doc in result.reply for doc in item.expected_docs)
 
         if item.answerable:

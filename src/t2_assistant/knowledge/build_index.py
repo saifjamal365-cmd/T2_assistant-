@@ -36,6 +36,7 @@ _META_FIELDS = (
     "type",
     "language",
     "office",
+    "office_code",
     "version",
     "status",
     "effective_date",

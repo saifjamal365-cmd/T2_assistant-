@@ -17,7 +17,14 @@ The user has greeted you or made small talk. Reply in ONE or TWO short, warm,
 professional sentences, in the SAME language as the user (English or Arabic).
 
 Briefly mention that you can answer questions about company policy and summarise
-meeting notes. Do not answer any policy question here - just greet."""
+meeting notes.
+
+You have NOT been given any policy documents here, so you cannot state any
+policy fact, number, date, procedure, or contact detail - not even one you think
+you remember. If the message is not plainly a greeting or thanks (for example it
+looks like a real question, even a short or oddly-phrased one), do not try to
+answer it. Just say briefly that you can help with that, and ask them to ask it
+as a question."""
 
 
 def respond(messages: list[AnyMessage]) -> AIMessage:

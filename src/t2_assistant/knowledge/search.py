@@ -37,7 +37,11 @@ def _filter(active_only: bool, head_office_only: bool) -> dict[str, object] | No
     if active_only:
         clauses.append({"status": "Active"})
     if head_office_only:
-        clauses.append({"office": "Head Office"})
+        # office_code ("HO"), not the "office" display name: that name is
+        # localized per document language (English "Head Office" vs Arabic
+        # "المكتب الرئيسي"), so filtering on it would silently exclude every
+        # Arabic head-office document from every default search.
+        clauses.append({"office_code": "HO"})
     if not clauses:
         return None
     return clauses[0] if len(clauses) == 1 else {"$and": clauses}

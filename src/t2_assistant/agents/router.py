@@ -45,8 +45,17 @@ you just say?"). Both are handled by the same agent, which can see the chat so f
 - "summarise": the user has given meeting notes, a transcript, or a report and \
 wants a summary and/or a list of action items.
 - "clarify": the message is too vague or incomplete to act on, and a single \
-short follow-up question is needed first - use this only when the message itself \
-is unclear, not when the answer might need more context.
+short follow-up question is needed first. Also use this for a short message \
+about something being done TO the employee (by "them"/the company/someone else) \
+using a term that has more than one real company meaning - check who is doing \
+the action to whom before picking a meaning. For example a short Arabic HR \
+message using "إحالة" about the employee ("هل يحق لهم إحالتي") is NOT \
+automatically about the employee-referral bonus program (which is the employee \
+referring a candidate, the opposite direction) - it is at least as likely to \
+mean the company transferring or letting the employee go. When the direction or \
+meaning is genuinely unclear like this, ask rather than pick the more common \
+association of the word. Do not use "clarify" just because the answer needs \
+more context beyond that.
 
 Decide from the meaning of the message, not from specific words. The message may \
 be in English or Arabic. Give a short reason of one sentence."""
