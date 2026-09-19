@@ -18,6 +18,14 @@
     GET    /kb/documents               -> browse the knowledge base (filter by department,
                                            language, topic, or a title search)
     GET    /kb/documents/{doc_id}      -> one document's full text and metadata
+    POST   /auth/request-code          -> email a sign-in code to an allowed address
+    POST   /auth/verify-code           -> check a code, sign in on success
+    POST   /auth/logout                -> end the current session
+    GET    /auth/me                    -> the signed-in email, or null
+
+Every route other than the page itself, /health, and /auth/* requires a
+signed-in session (a cookie set by /auth/verify-code) - see require_session
+below.
 
 The server owns the conversation history now: send a `conversation_id` to
 continue a thread, or leave it out to start a new one.
@@ -39,12 +47,13 @@ import logging
 from functools import lru_cache
 from pathlib import Path
 
-from fastapi import FastAPI, HTTPException, Request
+import httpx
+from fastapi import FastAPI, HTTPException, Request, Response
 from fastapi.responses import HTMLResponse, JSONResponse
 from groq import APIError
 from pydantic import BaseModel, Field, field_validator
 
-from t2_assistant import store
+from t2_assistant import auth, store
 from t2_assistant.config import settings
 from t2_assistant.conversation import run_turn
 from t2_assistant.observability import record_feedback, trace_url
@@ -55,6 +64,24 @@ app = FastAPI(title="T2 Assistant", version="0.1.0")
 
 _INDEX_HTML = Path(__file__).parent / "web" / "index.html"
 _MAX_MESSAGE_LENGTH = 4000  # generous for a question or a page of meeting notes
+_SESSION_COOKIE = "t2_session"
+_PUBLIC_PATHS = {"/", "/health", "/docs", "/redoc", "/openapi.json"}
+
+
+@app.middleware("http")
+async def require_session(request: Request, call_next):  # type: ignore[no-untyped-def]
+    """Every route needs a signed-in session, except the page itself, the
+    health check, API docs, and the sign-in endpoints (which must be usable
+    before signing in)."""
+    path = request.url.path
+    if path in _PUBLIC_PATHS or path.startswith("/auth/"):
+        return await call_next(request)
+    token = request.cookies.get(_SESSION_COOKIE)
+    email = store.session_email(token) if token else None
+    if email is None:
+        return JSONResponse(status_code=401, content={"detail": "sign in required"})
+    request.state.user_email = email
+    return await call_next(request)
 
 
 @app.exception_handler(Exception)
@@ -130,7 +157,9 @@ class RenameIn(BaseModel):
 
 
 class SetFolderIn(BaseModel):
-    folder_id: str | None = Field(description="Folder to move this conversation into, or null to unfile it.")
+    folder_id: str | None = Field(
+        description="Folder to move this conversation into, or null to unfile it."
+    )
 
 
 class FolderOut(BaseModel):
@@ -218,6 +247,65 @@ def health() -> dict[str, str]:
     return {"status": "ok"}
 
 
+class RequestCodeIn(BaseModel):
+    email: str = Field(min_length=3, max_length=200)
+
+
+class VerifyCodeIn(BaseModel):
+    email: str = Field(min_length=3, max_length=200)
+    code: str = Field(min_length=4, max_length=10)
+
+
+class MeOut(BaseModel):
+    email: str | None
+
+
+@app.post("/auth/request-code")
+def request_code(body: RequestCodeIn) -> dict[str, str]:
+    try:
+        auth.request_code(body.email)
+    except ValueError as exc:
+        raise HTTPException(status_code=403, detail="that email can't sign in here") from exc
+    except httpx.HTTPError as exc:
+        logger.warning("failed to send sign-in email: %s", exc)
+        raise HTTPException(
+            status_code=502, detail="couldn't send the email right now - please try again"
+        ) from exc
+    return {"status": "sent"}
+
+
+@app.post("/auth/verify-code")
+def verify_code(body: VerifyCodeIn, response: Response) -> dict[str, str]:
+    token = auth.verify_code(body.email, body.code)
+    if token is None:
+        raise HTTPException(status_code=401, detail="that code is incorrect or has expired")
+    response.set_cookie(
+        _SESSION_COOKIE,
+        token,
+        max_age=settings.session_ttl_days * 24 * 3600,
+        httponly=True,
+        samesite="lax",
+        # not marked secure: this app is served over plain http on localhost;
+        # set secure=True once it's deployed behind https.
+    )
+    return {"status": "ok", "email": body.email.strip().lower()}
+
+
+@app.post("/auth/logout")
+def logout(request: Request, response: Response) -> dict[str, str]:
+    token = request.cookies.get(_SESSION_COOKIE)
+    if token:
+        store.delete_session(token)
+    response.delete_cookie(_SESSION_COOKIE)
+    return {"status": "ok"}
+
+
+@app.get("/auth/me", response_model=MeOut)
+def get_me(request: Request) -> MeOut:
+    token = request.cookies.get(_SESSION_COOKIE)
+    return MeOut(email=store.session_email(token) if token else None)
+
+
 @app.post("/chat", response_model=ChatOut)
 def post_chat(body: ChatIn) -> ChatOut:
     try:
@@ -237,7 +325,7 @@ def post_chat(body: ChatIn) -> ChatOut:
         route=result.route,
         route_reason=result.route_reason,
         trace_url=trace_url(result.trace_id),
-        sources=[SourceOut(**s) for s in result.sources],
+        sources=[SourceOut.model_validate(s) for s in result.sources],
     )
 
 

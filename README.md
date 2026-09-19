@@ -86,6 +86,20 @@ Chats can be organized into folders: `POST /folders` creates one, `GET
 and `DELETE /conversations/{id}` removes it completely, including its run and
 source records.
 
+## Signing in
+
+There are no passwords. `POST /auth/request-code` emails a 6-digit code (via
+[Resend](https://resend.com)) to an address ending in `AUTH_EMAIL_DOMAIN`
+(`t2.sa` by default) - or to one of a short list of real inboxes in
+`AUTH_ALLOWED_TEST_EMAILS`, for testing before a real company inbox is
+connected. `POST /auth/verify-code` checks the code and, on success, sets a
+session cookie; `GET /auth/me` returns the signed-in email (or `null`), and
+`POST /auth/logout` ends the session. Every other route requires that cookie.
+
+With no `RESEND_API_KEY` set, or while testing, the generated code is also
+printed to the server's console - useful for trying the flow without a real
+inbox.
+
 ## Run it
 
 ```bash

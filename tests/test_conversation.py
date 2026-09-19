@@ -13,7 +13,9 @@ def test_run_turn_saves_both_turns_and_passes_history(monkeypatch: pytest.Monkey
 
     def fake_chat(message: str, history: list[object] | None = None) -> ChatResult:
         seen_history.append(list(history or []))
-        return ChatResult(reply=f"reply to: {message}", route="answer", route_reason="q")
+        return ChatResult(
+            reply=f"reply to: {message}", route="answer", route_reason="q", sources=[]
+        )
 
     monkeypatch.setattr(conversation, "chat", fake_chat)
 
@@ -41,7 +43,7 @@ def test_run_turn_starts_fresh_for_unknown_id(monkeypatch: pytest.MonkeyPatch) -
     monkeypatch.setattr(
         conversation,
         "chat",
-        lambda message, history=None: ChatResult("ok", "greeting", "hi"),
+        lambda message, history=None: ChatResult("ok", "greeting", "hi", []),
     )
     result = conversation.run_turn("hello", conversation_id="not-a-real-id")
     assert store.conversation_exists(result.conversation_id)

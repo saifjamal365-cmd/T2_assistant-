@@ -102,7 +102,10 @@ def _best_highlights(answer: str, passage_text: str) -> list[str]:
     ]
 
 
-_DONT_KNOW_EN = "I don't know based on the current company documents. Could you rephrase your question or add a bit more detail?"
+_DONT_KNOW_EN = (
+    "I don't know based on the current company documents. "
+    "Could you rephrase your question or add a bit more detail?"
+)
 _DONT_KNOW_AR = "لا أملك إجابة لذلك بناءً على مستندات الشركة الحالية. هل يمكنك توضيح سؤالك أكثر؟"
 _DONT_KNOW = _DONT_KNOW_EN  # default / fallback only - the model is told to pick EN or AR
 

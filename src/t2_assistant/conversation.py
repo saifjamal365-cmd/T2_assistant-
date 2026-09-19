@@ -33,7 +33,7 @@ class ChatResult:
     reply: str
     route: Route
     route_reason: str
-    sources: list[dict]
+    sources: list[dict[str, object]]
 
 
 @dataclass
@@ -46,7 +46,7 @@ class TurnResult:
     reply: str
     route: Route
     route_reason: str
-    sources: list[dict]
+    sources: list[dict[str, object]]
 
 
 @mlflow.trace(span_type=SpanType.AGENT)

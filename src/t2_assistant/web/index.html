@@ -25,6 +25,12 @@
                display: flex; flex-direction: column; }
     #sidebar h1 { font-size: 16px; margin: 0; padding: 18px 16px; color: var(--text);
                   font-weight: 600; border-bottom: 1px solid var(--border); }
+    #userBar { display: flex; align-items: center; gap: 8px; padding: 10px 16px;
+               border-bottom: 1px solid var(--border); font-size: 12.5px; color: var(--muted); }
+    #userEmail { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    #signOut { border: none; background: none; color: var(--accent); cursor: pointer;
+               font-size: 12.5px; padding: 0; }
+    #signOut:hover { color: var(--accent-hover); text-decoration: underline; }
     #new, #newFolder { margin: 12px 12px 0; padding: 9px 12px; border: 1px solid var(--border); color: var(--text);
            background: var(--surface); border-radius: 10px; cursor: pointer; font-size: 14px;
            transition: background .15s ease, border-color .15s ease; display: block; width: calc(100% - 24px); text-align: left; }
@@ -118,6 +124,13 @@
     .modalActions .modalDanger:hover { background: #a83636; }
     .modalActions .modalCancel:hover { background: #f1eee7; }
 
+    /* sign-in overlay */
+    #authOverlay .modalBox { width: 360px; }
+    #authOverlay .modalActions { justify-content: stretch; }
+    #authOverlay .modalActions button { flex: 1; }
+    .authHint { font-size: 13px; color: var(--muted); margin-bottom: 12px; }
+    .authError { font-size: 12.5px; color: #c94242; margin: -8px 0 12px; min-height: 1em; }
+
     /* input */
     #bar { border-top: 1px solid var(--border); background: var(--surface); padding: 16px 24px; }
     #bar form { max-width: 720px; margin: 0 auto; display: flex; gap: 10px; }
@@ -175,6 +188,10 @@
 <body>
   <aside id="sidebar">
     <h1>T2 Assistant</h1>
+    <div id="userBar">
+      <span id="userEmail"></span>
+      <button id="signOut">Sign out</button>
+    </div>
     <div id="nav">
       <button id="navChat" class="active">Chat</button>
       <button id="navKb">Knowledge Base</button>
@@ -217,6 +234,29 @@
       <div id="kbDetail"><div class="empty">Pick a document from the list to read it.</div></div>
     </div>
   </section>
+
+  <div id="authOverlay" class="modalOverlay" style="display:none;">
+    <div class="modalBox">
+      <div class="modalTitle">Sign in to T2 Assistant</div>
+      <div id="authStep1">
+        <div class="authHint">Use your company email to get a one-time sign-in code.</div>
+        <input id="authEmail" class="modalInput" type="email" placeholder="you@t2.sa" autocomplete="email" />
+        <div id="authError1" class="authError"></div>
+        <div class="modalActions">
+          <button id="authSendCode" class="modalOk">Send code</button>
+        </div>
+      </div>
+      <div id="authStep2" style="display:none;">
+        <div class="authHint">Code sent to <b id="authEmailShown"></b> - check your inbox.</div>
+        <input id="authCode" class="modalInput" type="text" inputmode="numeric" maxlength="6" placeholder="6-digit code" autocomplete="one-time-code" />
+        <div id="authError2" class="authError"></div>
+        <div class="modalActions">
+          <button id="authBack" class="modalCancel">Back</button>
+          <button id="authVerify" class="modalOk">Verify</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script>
     const log = document.getElementById("log");
@@ -618,9 +658,101 @@
       });
     };
 
-    if (conversationId) openConversation(conversationId);
-    else loadConversations();
-    text.focus();
+    // ---- sign-in gate -----------------------------------------------------
+    const authOverlay = document.getElementById("authOverlay");
+    const authEmail = document.getElementById("authEmail");
+    const authCode = document.getElementById("authCode");
+
+    function showAuthOverlay() {
+      authOverlay.style.display = "flex";
+      document.getElementById("authStep1").style.display = "block";
+      document.getElementById("authStep2").style.display = "none";
+      document.getElementById("authError1").textContent = "";
+      document.getElementById("authError2").textContent = "";
+      authCode.value = "";
+      authEmail.focus();
+    }
+
+    function enterApp(email) {
+      authOverlay.style.display = "none";
+      document.getElementById("userEmail").textContent = email;
+      if (conversationId) openConversation(conversationId);
+      else loadConversations();
+      text.focus();
+    }
+
+    async function checkAuth() {
+      const res = await fetch("/auth/me");
+      const data = await res.json();
+      if (data.email) enterApp(data.email);
+      else showAuthOverlay();
+    }
+
+    document.getElementById("authSendCode").onclick = async () => {
+      const email = authEmail.value.trim();
+      const err = document.getElementById("authError1");
+      err.textContent = "";
+      if (!email) { err.textContent = "Enter your email."; return; }
+      const btn = document.getElementById("authSendCode");
+      btn.disabled = true; btn.textContent = "Sending…";
+      try {
+        const res = await fetch("/auth/request-code", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email }),
+        });
+        const data = await res.json();
+        if (!res.ok) { err.textContent = data.detail || "Something went wrong."; return; }
+        document.getElementById("authEmailShown").textContent = email;
+        document.getElementById("authStep1").style.display = "none";
+        document.getElementById("authStep2").style.display = "block";
+        authCode.focus();
+      } catch (e) {
+        err.textContent = "Something went wrong. Try again.";
+      } finally {
+        btn.disabled = false; btn.textContent = "Send code";
+      }
+    };
+
+    document.getElementById("authBack").onclick = () => {
+      document.getElementById("authStep1").style.display = "block";
+      document.getElementById("authStep2").style.display = "none";
+    };
+
+    async function submitCode() {
+      const email = authEmail.value.trim();
+      const code = authCode.value.trim();
+      const err = document.getElementById("authError2");
+      err.textContent = "";
+      if (!code) { err.textContent = "Enter the code."; return; }
+      const btn = document.getElementById("authVerify");
+      btn.disabled = true; btn.textContent = "Verifying…";
+      try {
+        const res = await fetch("/auth/verify-code", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email, code }),
+        });
+        const data = await res.json();
+        if (!res.ok) { err.textContent = data.detail || "Something went wrong."; return; }
+        enterApp(data.email);
+      } catch (e) {
+        err.textContent = "Something went wrong. Try again.";
+      } finally {
+        btn.disabled = false; btn.textContent = "Verify";
+      }
+    }
+    document.getElementById("authVerify").onclick = submitCode;
+    authEmail.onkeydown = (e) => { if (e.key === "Enter") document.getElementById("authSendCode").click(); };
+    authCode.onkeydown = (e) => { if (e.key === "Enter") submitCode(); };
+
+    document.getElementById("signOut").onclick = async () => {
+      await fetch("/auth/logout", { method: "POST" });
+      rememberConversation(null);
+      showAuthOverlay();
+    };
+
+    checkAuth();
 
     // ---- knowledge base panel -------------------------------------------
     const mainSection = document.getElementById("main");

@@ -1,7 +1,7 @@
 """Saving conversations and run records.
 
 Until now every request stood alone. This module keeps them in a small SQLite
-file (settings.store_db) with five tables:
+file (settings.store_db) with seven tables:
 
     conversations   one row per chat thread (id, title, folder, timestamps)
     folders         one row per user-created folder, to group conversations
@@ -10,6 +10,9 @@ file (settings.store_db) with five tables:
     sources         the exact passages a run's answer cited (if any), so a
                      source in the reply can be clicked to show the real text
                      behind it, not just the document id
+    otp_codes       a sign-in code sent to an email, waiting to be verified
+    sessions        a signed-in session (email -> session token), created
+                     once a code is verified
 
 Plain `sqlite3` - no ORM. Each call opens its own short-lived connection, which
 is simple and safe when FastAPI runs endpoints on different threads.
@@ -17,11 +20,13 @@ is simple and safe when FastAPI runs endpoints on different threads.
 
 from __future__ import annotations
 
+import hashlib
 import json
+import secrets
 import sqlite3
 import uuid
 from dataclasses import dataclass
-from datetime import UTC, datetime
+from datetime import UTC, datetime, timedelta
 
 from t2_assistant.config import settings
 
@@ -78,6 +83,25 @@ CREATE TABLE IF NOT EXISTS sources (
     highlights    TEXT NOT NULL DEFAULT '[]'  -- JSON list of sentences to highlight
 );
 CREATE INDEX IF NOT EXISTS ix_sources_run ON sources(run_id);
+
+-- A sign-in code sent to an email, waiting to be verified. `code_hash` is a
+-- hash, not the raw code - the same reasoning as a password, even though this
+-- one expires in minutes.
+CREATE TABLE IF NOT EXISTS otp_codes (
+    email       TEXT PRIMARY KEY,
+    code_hash   TEXT NOT NULL,
+    expires_at  TEXT NOT NULL,
+    attempts    INTEGER NOT NULL DEFAULT 0,
+    created_at  TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS sessions (
+    token       TEXT PRIMARY KEY,
+    email       TEXT NOT NULL,
+    created_at  TEXT NOT NULL,
+    expires_at  TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS ix_sessions_expires ON sessions(expires_at);
 """
 
 _schema_ready = False
@@ -311,7 +335,9 @@ def create_folder(name: str) -> str:
 
 def list_folders() -> list[Folder]:
     with _connect() as connection:
-        rows = connection.execute("SELECT id, name, created_at FROM folders ORDER BY name").fetchall()
+        rows = connection.execute(
+            "SELECT id, name, created_at FROM folders ORDER BY name"
+        ).fetchall()
     return [Folder(id=r["id"], name=r["name"], created_at=r["created_at"]) for r in rows]
 
 
@@ -385,14 +411,15 @@ def save_run(
     return run_id
 
 
-def save_sources(run_id: str, passages: list[dict]) -> None:
+def save_sources(run_id: str, passages: list[dict[str, object]]) -> None:
     """Record the exact passages a run's answer cited (skipped entirely for a
     decline or a non-answer route, since `passages` is empty for those)."""
     with _connect() as connection:
         connection.executemany(
             """
             INSERT INTO sources
-              (run_id, doc_id, title, department, doc_type, version, passage_text, score, highlights)
+              (run_id, doc_id, title, department, doc_type, version, passage_text, score,
+               highlights)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
             """,
             [
@@ -476,3 +503,83 @@ def set_feedback(run_id: str, feedback: str, comment: str | None) -> bool:
             (feedback, comment, run_id),
         )
     return cursor.rowcount > 0
+
+
+# ---- sign-in: one-time codes and sessions ----------------------------
+
+
+def _hash_code(code: str) -> str:
+    return hashlib.sha256(code.encode()).hexdigest()
+
+
+def create_otp(email: str, code: str) -> None:
+    """Replace any existing code for this email with a fresh one."""
+    expires_at = (datetime.now(UTC) + timedelta(minutes=settings.otp_ttl_minutes)).isoformat(
+        timespec="milliseconds"
+    )
+    with _connect() as connection:
+        connection.execute(
+            """
+            INSERT INTO otp_codes (email, code_hash, expires_at, attempts, created_at)
+            VALUES (?, ?, ?, 0, ?)
+            ON CONFLICT(email) DO UPDATE SET
+                code_hash = excluded.code_hash,
+                expires_at = excluded.expires_at,
+                attempts = 0,
+                created_at = excluded.created_at
+            """,
+            (email, _hash_code(code), expires_at, _now()),
+        )
+
+
+def verify_otp(email: str, code: str) -> str:
+    """Check a code against the one on file for this email. Returns "ok",
+    "expired", "wrong", "too_many_attempts", or "not_found"."""
+    with _connect() as connection:
+        row = connection.execute(
+            "SELECT code_hash, expires_at, attempts FROM otp_codes WHERE email = ?", (email,)
+        ).fetchone()
+        if row is None:
+            return "not_found"
+        if row["attempts"] >= settings.otp_max_attempts:
+            return "too_many_attempts"
+        if row["expires_at"] < _now():
+            connection.execute("DELETE FROM otp_codes WHERE email = ?", (email,))
+            return "expired"
+        if row["code_hash"] != _hash_code(code):
+            connection.execute(
+                "UPDATE otp_codes SET attempts = attempts + 1 WHERE email = ?", (email,)
+            )
+            return "wrong"
+        connection.execute("DELETE FROM otp_codes WHERE email = ?", (email,))
+    return "ok"
+
+
+def create_session(email: str) -> str:
+    token = secrets.token_urlsafe(32)
+    expires_at = (datetime.now(UTC) + timedelta(days=settings.session_ttl_days)).isoformat(
+        timespec="milliseconds"
+    )
+    with _connect() as connection:
+        connection.execute(
+            "INSERT INTO sessions (token, email, created_at, expires_at) VALUES (?, ?, ?, ?)",
+            (token, email, _now(), expires_at),
+        )
+    return token
+
+
+def session_email(token: str) -> str | None:
+    """The signed-in email for this session token, or None if it's missing,
+    unknown, or expired."""
+    with _connect() as connection:
+        row = connection.execute(
+            "SELECT email, expires_at FROM sessions WHERE token = ?", (token,)
+        ).fetchone()
+    if row is None or row["expires_at"] < _now():
+        return None
+    return str(row["email"])
+
+
+def delete_session(token: str) -> None:
+    with _connect() as connection:
+        connection.execute("DELETE FROM sessions WHERE token = ?", (token,))
