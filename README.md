@@ -78,6 +78,14 @@ lists past requests each with a link to its MLflow trace, and
 `GET /kb/documents/{doc_id}` returns one document's full text - the web page's
 "Knowledge Base" tab is built on these two.
 
+Chats can be organized into folders: `POST /folders` creates one, `GET
+/folders` lists them, `PATCH /folders/{id}` renames one, and `DELETE
+/folders/{id}` removes it (its conversations are kept, just unfiled).
+`PATCH /conversations/{id}` renames a conversation, `PUT
+/conversations/{id}/folder` moves it into a folder (or `null` to unfile it),
+and `DELETE /conversations/{id}` removes it completely, including its run and
+source records.
+
 ## Run it
 
 ```bash

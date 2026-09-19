@@ -1,9 +1,10 @@
 """Saving conversations and run records.
 
 Until now every request stood alone. This module keeps them in a small SQLite
-file (settings.store_db) with four tables:
+file (settings.store_db) with five tables:
 
-    conversations   one row per chat thread (id, title, timestamps)
+    conversations   one row per chat thread (id, title, folder, timestamps)
+    folders         one row per user-created folder, to group conversations
     messages        every user and assistant turn, in order
     runs            one row per request: the route taken, timing, trace id
     sources         the exact passages a run's answer cited (if any), so a
@@ -25,9 +26,16 @@ from datetime import UTC, datetime
 from t2_assistant.config import settings
 
 _SCHEMA = """
+CREATE TABLE IF NOT EXISTS folders (
+    id          TEXT PRIMARY KEY,
+    name        TEXT NOT NULL,
+    created_at  TEXT NOT NULL
+);
+
 CREATE TABLE IF NOT EXISTS conversations (
     id          TEXT PRIMARY KEY,
     title       TEXT NOT NULL,
+    folder_id   TEXT REFERENCES folders(id),
     created_at  TEXT NOT NULL,
     updated_at  TEXT NOT NULL
 );
@@ -92,11 +100,17 @@ def _connect() -> sqlite3.Connection:
             ("runs", "feedback TEXT"),
             ("runs", "feedback_comment TEXT"),
             ("sources", "highlights TEXT NOT NULL DEFAULT '[]'"),
+            ("conversations", "folder_id TEXT REFERENCES folders(id)"),
         ):
             try:
                 connection.execute(f"ALTER TABLE {table} ADD COLUMN {column}")
             except sqlite3.OperationalError:
                 pass  # already there
+        # only safe to create now: folder_id is guaranteed to exist by this point,
+        # whether the table was just created above or just migrated
+        connection.execute(
+            "CREATE INDEX IF NOT EXISTS ix_conversations_folder ON conversations(folder_id)"
+        )
         connection.commit()
         _schema_ready = True
     return connection
@@ -113,9 +127,17 @@ class Message:
 
 
 @dataclass
+class Folder:
+    id: str
+    name: str
+    created_at: str
+
+
+@dataclass
 class ConversationSummary:
     id: str
     title: str
+    folder_id: str | None
     updated_at: str
     message_count: int
 
@@ -124,6 +146,7 @@ class ConversationSummary:
 class Conversation:
     id: str
     title: str
+    folder_id: str | None
     created_at: str
     updated_at: str
     messages: list[Message]
@@ -184,7 +207,7 @@ def list_conversations(limit: int = 50) -> list[ConversationSummary]:
     with _connect() as connection:
         rows = connection.execute(
             """
-            SELECT c.id, c.title, c.updated_at, COUNT(m.id) AS message_count
+            SELECT c.id, c.title, c.folder_id, c.updated_at, COUNT(m.id) AS message_count
             FROM conversations c
             LEFT JOIN messages m ON m.conversation_id = c.id
             GROUP BY c.id
@@ -197,6 +220,7 @@ def list_conversations(limit: int = 50) -> list[ConversationSummary]:
         ConversationSummary(
             id=row["id"],
             title=row["title"],
+            folder_id=row["folder_id"],
             updated_at=row["updated_at"],
             message_count=row["message_count"],
         )
@@ -207,7 +231,7 @@ def list_conversations(limit: int = 50) -> list[ConversationSummary]:
 def get_conversation(conversation_id: str) -> Conversation | None:
     with _connect() as connection:
         head = connection.execute(
-            "SELECT id, title, created_at, updated_at FROM conversations WHERE id = ?",
+            "SELECT id, title, folder_id, created_at, updated_at FROM conversations WHERE id = ?",
             (conversation_id,),
         ).fetchone()
         if head is None:
@@ -219,6 +243,7 @@ def get_conversation(conversation_id: str) -> Conversation | None:
     return Conversation(
         id=head["id"],
         title=head["title"],
+        folder_id=head["folder_id"],
         created_at=head["created_at"],
         updated_at=head["updated_at"],
         messages=[Message(r["role"], r["content"], r["created_at"]) for r in rows],
@@ -228,6 +253,86 @@ def get_conversation(conversation_id: str) -> Conversation | None:
 def get_messages(conversation_id: str) -> list[Message]:
     conversation = get_conversation(conversation_id)
     return conversation.messages if conversation else []
+
+
+def rename_conversation(conversation_id: str, title: str) -> bool:
+    title = title.strip()
+    if not title:
+        return False
+    with _connect() as connection:
+        cursor = connection.execute(
+            "UPDATE conversations SET title = ? WHERE id = ?", (title, conversation_id)
+        )
+    return cursor.rowcount > 0
+
+
+def set_conversation_folder(conversation_id: str, folder_id: str | None) -> bool:
+    with _connect() as connection:
+        cursor = connection.execute(
+            "UPDATE conversations SET folder_id = ? WHERE id = ?", (folder_id, conversation_id)
+        )
+    return cursor.rowcount > 0
+
+
+def delete_conversation(conversation_id: str) -> bool:
+    """Delete a conversation completely: its messages, its run records, and
+    those runs' sources - deleting a chat means it's actually gone, not
+    lingering in the observability views the user doesn't see."""
+    with _connect() as connection:
+        run_ids = [
+            row["id"]
+            for row in connection.execute(
+                "SELECT id FROM runs WHERE conversation_id = ?", (conversation_id,)
+            ).fetchall()
+        ]
+        for run_id in run_ids:
+            connection.execute("DELETE FROM sources WHERE run_id = ?", (run_id,))
+        connection.execute("DELETE FROM runs WHERE conversation_id = ?", (conversation_id,))
+        connection.execute("DELETE FROM messages WHERE conversation_id = ?", (conversation_id,))
+        cursor = connection.execute("DELETE FROM conversations WHERE id = ?", (conversation_id,))
+    return cursor.rowcount > 0
+
+
+# ---- folders --------------------------------------------------------
+
+
+def create_folder(name: str) -> str:
+    name = name.strip()
+    if not name:
+        raise ValueError("folder name cannot be empty")
+    folder_id = uuid.uuid4().hex
+    with _connect() as connection:
+        connection.execute(
+            "INSERT INTO folders (id, name, created_at) VALUES (?, ?, ?)",
+            (folder_id, name, _now()),
+        )
+    return folder_id
+
+
+def list_folders() -> list[Folder]:
+    with _connect() as connection:
+        rows = connection.execute("SELECT id, name, created_at FROM folders ORDER BY name").fetchall()
+    return [Folder(id=r["id"], name=r["name"], created_at=r["created_at"]) for r in rows]
+
+
+def rename_folder(folder_id: str, name: str) -> bool:
+    name = name.strip()
+    if not name:
+        return False
+    with _connect() as connection:
+        cursor = connection.execute("UPDATE folders SET name = ? WHERE id = ?", (name, folder_id))
+    return cursor.rowcount > 0
+
+
+def delete_folder(folder_id: str) -> bool:
+    """Delete a folder. Its conversations are kept, just un-filed - deleting
+    a folder should never delete chat history."""
+    with _connect() as connection:
+        connection.execute(
+            "UPDATE conversations SET folder_id = NULL WHERE folder_id = ?", (folder_id,)
+        )
+        cursor = connection.execute("DELETE FROM folders WHERE id = ?", (folder_id,))
+    return cursor.rowcount > 0
 
 
 # ---- writing a turn ----------------------------------------------

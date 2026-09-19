@@ -25,17 +25,36 @@
                display: flex; flex-direction: column; }
     #sidebar h1 { font-size: 16px; margin: 0; padding: 18px 16px; color: var(--text);
                   font-weight: 600; border-bottom: 1px solid var(--border); }
-    #new { margin: 12px; padding: 9px 12px; border: 1px solid var(--border); color: var(--text);
+    #new, #newFolder { margin: 12px 12px 0; padding: 9px 12px; border: 1px solid var(--border); color: var(--text);
            background: var(--surface); border-radius: 10px; cursor: pointer; font-size: 14px;
-           transition: background .15s ease, border-color .15s ease; }
-    #new:hover { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-hover); }
+           transition: background .15s ease, border-color .15s ease; display: block; width: calc(100% - 24px); text-align: left; }
+    #newFolder { margin: 6px 12px 6px; font-size: 13px; color: var(--muted); }
+    #new:hover, #newFolder:hover { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-hover); }
     #convs { flex: 1; overflow-y: auto; padding: 0 8px 12px; }
     .conv { padding: 9px 10px; border-radius: 10px; cursor: pointer; font-size: 14px;
-            white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+            display: flex; align-items: center; gap: 6px;
             transition: background .15s ease; }
     .conv:hover { background: #f1eee7; }
     .conv.active { background: var(--accent-soft); color: var(--accent-hover); font-weight: 600; }
-    .conv small { color: var(--muted); font-weight: 400; }
+    .conv .convTitle { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .conv small { color: var(--muted); font-weight: 400; display: block; }
+    .convActions { display: none; gap: 2px; flex-shrink: 0; }
+    .conv:hover .convActions { display: flex; }
+    .convActions button { border: none; background: none; cursor: pointer; font-size: 12.5px;
+            padding: 3px 4px; border-radius: 6px; opacity: .6; line-height: 1; }
+    .convActions button:hover { opacity: 1; background: #e7e2da; }
+    .folderHeader { display: flex; align-items: center; gap: 6px; padding: 8px 10px 4px;
+            font-size: 12px; font-weight: 600; color: var(--muted); text-transform: uppercase;
+            letter-spacing: .03em; cursor: pointer; margin-top: 6px; }
+    .folderHeader .arrow { transition: transform .15s ease; display: inline-block; font-size: 10px; }
+    .folderHeader.collapsed .arrow { transform: rotate(-90deg); }
+    .folderHeader .folderName { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .folderHeader .convActions { }
+    .folderHeader:hover .convActions { display: flex; }
+    .folderGroup.collapsed .folderItems { display: none; }
+    .moveMenu { padding: 2px 10px 8px; }
+    .moveMenu select { width: 100%; padding: 5px 8px; border: 1px solid var(--border);
+            border-radius: 8px; font-size: 13px; background: var(--bg); color: var(--text); }
     #convs::-webkit-scrollbar, #log::-webkit-scrollbar { width: 8px; }
     #convs::-webkit-scrollbar-thumb, #log::-webkit-scrollbar-thumb { background: var(--border); border-radius: 8px; }
 
@@ -80,6 +99,24 @@
     .citationLink:hover { text-decoration: underline; }
     .citationText mark { background: #fcefd9; color: var(--accent-hover); padding: 1px 3px;
                      border-radius: 3px; font-weight: 600; }
+
+    /* small modal dialogs (rename / new folder / delete confirm) */
+    .modalOverlay { position: fixed; inset: 0; background: rgba(36,33,29,.35); display: flex;
+            align-items: center; justify-content: center; z-index: 50; }
+    .modalBox { background: var(--surface); border-radius: 14px; padding: 20px; width: 320px;
+            box-shadow: 0 12px 32px rgba(0,0,0,.18); }
+    .modalTitle { font-size: 14.5px; font-weight: 600; margin-bottom: 12px; color: var(--text); }
+    .modalInput { width: 100%; padding: 9px 12px; border: 1px solid var(--border); border-radius: 10px;
+            font: inherit; background: var(--bg); color: var(--text); margin-bottom: 14px; }
+    .modalInput:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+    .modalActions { display: flex; justify-content: flex-end; gap: 8px; }
+    .modalActions button { padding: 7px 14px; border-radius: 9px; font-size: 13.5px; cursor: pointer;
+            border: 1px solid var(--border); background: var(--surface); color: var(--text); }
+    .modalActions .modalOk { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .modalActions .modalOk:hover { background: var(--accent-hover); }
+    .modalActions .modalDanger { background: #c94242; color: #fff; border-color: #c94242; }
+    .modalActions .modalDanger:hover { background: #a83636; }
+    .modalActions .modalCancel:hover { background: #f1eee7; }
 
     /* input */
     #bar { border-top: 1px solid var(--border); background: var(--surface); padding: 16px 24px; }
@@ -143,6 +180,7 @@
       <button id="navKb">Knowledge Base</button>
     </div>
     <button id="new">+ New chat</button>
+    <button id="newFolder">+ New folder</button>
     <div id="convs"></div>
   </aside>
 
@@ -296,17 +334,201 @@
       return bar;
     }
 
+    function showPrompt(title, defaultValue, onConfirm) {
+      const overlay = document.createElement("div");
+      overlay.className = "modalOverlay";
+      overlay.innerHTML =
+        `<div class="modalBox">
+           <div class="modalTitle">${esc(title)}</div>
+           <input class="modalInput" type="text" />
+           <div class="modalActions">
+             <button class="modalCancel">Cancel</button>
+             <button class="modalOk">OK</button>
+           </div>
+         </div>`;
+      document.body.appendChild(overlay);
+      const input = overlay.querySelector(".modalInput");
+      input.value = defaultValue || "";
+      input.focus();
+      input.select();
+      const close = () => overlay.remove();
+      overlay.querySelector(".modalCancel").onclick = close;
+      overlay.onclick = (e) => { if (e.target === overlay) close(); };
+      const confirmIt = () => {
+        const value = input.value.trim();
+        close();
+        if (value) onConfirm(value);
+      };
+      overlay.querySelector(".modalOk").onclick = confirmIt;
+      input.onkeydown = (e) => {
+        if (e.key === "Enter") confirmIt();
+        if (e.key === "Escape") close();
+      };
+    }
+
+    function showConfirm(message, onConfirm) {
+      const overlay = document.createElement("div");
+      overlay.className = "modalOverlay";
+      overlay.innerHTML =
+        `<div class="modalBox">
+           <div class="modalTitle">${esc(message)}</div>
+           <div class="modalActions">
+             <button class="modalCancel">Cancel</button>
+             <button class="modalDanger">Delete</button>
+           </div>
+         </div>`;
+      document.body.appendChild(overlay);
+      const close = () => overlay.remove();
+      overlay.querySelector(".modalCancel").onclick = close;
+      overlay.onclick = (e) => { if (e.target === overlay) close(); };
+      overlay.querySelector(".modalDanger").onclick = () => { close(); onConfirm(); };
+    }
+
+    const collapsedFolders = new Set();
+    try {
+      const saved = JSON.parse(localStorage.getItem("t2_collapsed_folders") || "[]");
+      saved.forEach((id) => collapsedFolders.add(id));
+    } catch (e) { /* ignore */ }
+    function saveCollapsed() {
+      try { localStorage.setItem("t2_collapsed_folders", JSON.stringify([...collapsedFolders])); }
+      catch (e) { /* ignore */ }
+    }
+
+    async function apiJson(method, url, body) {
+      await fetch(url, {
+        method,
+        headers: body ? { "Content-Type": "application/json" } : undefined,
+        body: body ? JSON.stringify(body) : undefined,
+      });
+    }
+
     async function loadConversations() {
-      const list = await (await fetch("/conversations")).json();
+      const [list, folders] = await Promise.all([
+        fetch("/conversations").then((r) => r.json()),
+        fetch("/folders").then((r) => r.json()),
+      ]);
       convs.innerHTML = "";
+
+      const byFolder = new Map(folders.map((f) => [f.id, []]));
+      const unfiled = [];
       for (const c of list) {
-        const el = document.createElement("div");
-        el.className = "conv" + (c.id === conversationId ? " active" : "");
-        el.innerHTML = `${esc(c.title)}<br><small>${c.message_count} messages</small>`;
-        el.onclick = () => openConversation(c.id);
-        convs.appendChild(el);
+        if (c.folder_id && byFolder.has(c.folder_id)) byFolder.get(c.folder_id).push(c);
+        else unfiled.push(c);
+      }
+      for (const folder of folders) {
+        renderFolderGroup(folder.id, folder.name, byFolder.get(folder.id) || [], folders);
+      }
+      if (unfiled.length || folders.length === 0) {
+        renderFolderGroup(null, folders.length ? "No folder" : null, unfiled, folders);
       }
     }
+
+    function renderFolderGroup(folderId, folderName, items, allFolders) {
+      const key = folderId || "__none__";
+      if (folderName) {
+        const collapsed = collapsedFolders.has(key);
+        const header = document.createElement("div");
+        header.className = "folderHeader" + (collapsed ? " collapsed" : "");
+        header.innerHTML =
+          `<span class="arrow">▾</span><span class="folderName">${esc(folderName)}</span>` +
+          (folderId
+            ? `<span class="convActions">
+                 <button class="newInFolderBtn" title="New chat in this folder">+</button>
+                 <button class="renameFolderBtn" title="Rename folder">✏️</button>
+                 <button class="deleteFolderBtn" title="Delete folder">🗑️</button>
+               </span>`
+            : "");
+        header.onclick = (e) => {
+          if (e.target.closest("button")) return;
+          if (collapsedFolders.has(key)) collapsedFolders.delete(key); else collapsedFolders.add(key);
+          saveCollapsed();
+          loadConversations();
+        };
+        if (folderId) {
+          header.querySelector(".newInFolderBtn").onclick = (e) => {
+            e.stopPropagation();
+            newChat(folderId, folderName);
+            text.focus();
+          };
+          header.querySelector(".renameFolderBtn").onclick = (e) => {
+            e.stopPropagation();
+            showPrompt("Rename folder", folderName, async (name) => {
+              await apiJson("PATCH", `/folders/${folderId}`, { name });
+              loadConversations();
+            });
+          };
+          header.querySelector(".deleteFolderBtn").onclick = (e) => {
+            e.stopPropagation();
+            showConfirm(`Delete folder "${folderName}"? Chats inside will be kept, just unfiled.`, async () => {
+              await apiJson("DELETE", `/folders/${folderId}`);
+              loadConversations();
+            });
+          };
+        }
+        convs.appendChild(header);
+        if (collapsed) return;
+      }
+      for (const c of items) convs.appendChild(convRow(c, allFolders));
+    }
+
+    function convRow(c, allFolders) {
+      const el = document.createElement("div");
+      el.className = "conv" + (c.id === conversationId ? " active" : "");
+      el.innerHTML =
+        `<span class="convTitle">${esc(c.title)}<small>${c.message_count} messages</small></span>` +
+        `<span class="convActions">
+           <button class="renameBtn" title="Rename">✏️</button>
+           <button class="moveBtn" title="Move to folder">📁</button>
+           <button class="deleteBtn" title="Delete">🗑️</button>
+         </span>`;
+      el.querySelector(".convTitle").onclick = () => openConversation(c.id);
+      el.querySelector(".renameBtn").onclick = (e) => {
+        e.stopPropagation();
+        showPrompt("Rename chat", c.title, async (title) => {
+          await apiJson("PATCH", `/conversations/${c.id}`, { title });
+          loadConversations();
+        });
+      };
+      el.querySelector(".deleteBtn").onclick = (e) => {
+        e.stopPropagation();
+        showConfirm(`Delete "${c.title}"? This cannot be undone.`, async () => {
+          await apiJson("DELETE", `/conversations/${c.id}`);
+          if (c.id === conversationId) newChat(); else loadConversations();
+        });
+      };
+      el.querySelector(".moveBtn").onclick = (e) => {
+        e.stopPropagation();
+        showMoveMenu(el, c, allFolders);
+      };
+      return el;
+    }
+
+    function showMoveMenu(anchorEl, c, allFolders) {
+      const existing = convs.querySelector(".moveMenu");
+      if (existing) existing.remove();
+      const wrap = document.createElement("div");
+      wrap.className = "moveMenu";
+      const select = document.createElement("select");
+      select.innerHTML =
+        `<option value="">No folder</option>` +
+        allFolders
+          .map((f) => `<option value="${f.id}"${f.id === c.folder_id ? " selected" : ""}>${esc(f.name)}</option>`)
+          .join("");
+      select.onclick = (e) => e.stopPropagation();
+      select.onchange = async () => {
+        await apiJson("PUT", `/conversations/${c.id}/folder`, { folder_id: select.value || null });
+        loadConversations();
+      };
+      wrap.appendChild(select);
+      anchorEl.after(wrap);
+      select.focus();
+    }
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest(".moveMenu") && !e.target.closest(".moveBtn")) {
+        const m = convs.querySelector(".moveMenu");
+        if (m) m.remove();
+      }
+    });
 
     function rememberConversation(id) {
       conversationId = id;
@@ -321,14 +543,20 @@
       if (!res.ok) { newChat(); return; } // e.g. deleted, or from another install
       const c = await res.json();
       rememberConversation(id);
+      pendingFolderId = null;
       log.innerHTML = "";
       for (const m of c.messages) addMsg(m.role, m.content);
       loadConversations();
     }
 
-    function newChat() {
+    let pendingFolderId = null;  // set by "+ new chat in this folder"; applied once the first message creates it
+
+    function newChat(folderId, folderName) {
       rememberConversation(null);
-      log.innerHTML = '<div class="empty">Ask a question about company policy, or paste meeting notes to summarise.</div>';
+      pendingFolderId = folderId || null;
+      log.innerHTML = folderName
+        ? `<div class="empty">New chat &mdash; will be saved in <b>${esc(folderName)}</b></div>`
+        : '<div class="empty">Ask a question about company policy, or paste meeting notes to summarise.</div>';
       loadConversations();
     }
 
@@ -336,6 +564,7 @@
       addMsg("user", message);
       send.disabled = true;
       const thinking = addMsg("bot", "…");
+      const folderForNewChat = conversationId ? null : pendingFolderId;
       try {
         const res = await fetch("/chat", {
           method: "POST",
@@ -351,6 +580,10 @@
           return;
         }
         rememberConversation(data.conversation_id);
+        if (folderForNewChat) {
+          pendingFolderId = null;
+          await apiJson("PUT", `/conversations/${data.conversation_id}/folder`, { folder_id: folderForNewChat });
+        }
         thinking.remove();
         addMsg("bot", data.reply, data.route, { runId: data.run_id, traceUrl: data.trace_url }, data.sources);
         loadConversations();
@@ -378,6 +611,12 @@
       if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); form.requestSubmit(); }
     };
     document.getElementById("new").onclick = newChat;
+    document.getElementById("newFolder").onclick = () => {
+      showPrompt("New folder", "", async (name) => {
+        await apiJson("POST", "/folders", { name });
+        loadConversations();
+      });
+    };
 
     if (conversationId) openConversation(conversationId);
     else loadConversations();

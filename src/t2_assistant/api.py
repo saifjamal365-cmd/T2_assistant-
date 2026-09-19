@@ -3,14 +3,21 @@
     GET  /                      -> the web chat page
     GET  /health                -> {"status": "ok"}
     POST /chat                  -> send a message, get the reply + route + run id
-    GET  /conversations         -> list past conversations
-    GET  /conversations/{id}    -> one conversation with all its messages
-    GET  /runs                  -> recent requests, each with a link to its trace
-    GET  /runs/{id}             -> one request
-    POST /runs/{id}/feedback    -> rate a run (helpful / not) - also sent to MLflow
-    GET  /kb/documents          -> browse the knowledge base (filter by department,
-                                   language, topic, or a title search)
-    GET  /kb/documents/{doc_id} -> one document's full text and metadata
+    GET    /conversations              -> list past conversations
+    GET    /conversations/{id}         -> one conversation with all its messages
+    PATCH  /conversations/{id}         -> rename a conversation
+    PUT    /conversations/{id}/folder  -> move a conversation into a folder (or null to unfile it)
+    DELETE /conversations/{id}         -> delete a conversation and its messages
+    GET    /folders                    -> list folders
+    POST   /folders                    -> create a folder
+    PATCH  /folders/{id}               -> rename a folder
+    DELETE /folders/{id}               -> delete a folder (its conversations are kept, just unfiled)
+    GET    /runs                       -> recent requests, each with a link to its trace
+    GET    /runs/{id}                  -> one request
+    POST   /runs/{id}/feedback         -> rate a run (helpful / not) - also sent to MLflow
+    GET    /kb/documents               -> browse the knowledge base (filter by department,
+                                           language, topic, or a title search)
+    GET    /kb/documents/{doc_id}      -> one document's full text and metadata
 
 The server owns the conversation history now: send a `conversation_id` to
 continue a thread, or leave it out to start a new one.
@@ -104,6 +111,7 @@ class MessageOut(BaseModel):
 class ConversationSummaryOut(BaseModel):
     id: str
     title: str
+    folder_id: str | None
     updated_at: str
     message_count: int
 
@@ -111,9 +119,28 @@ class ConversationSummaryOut(BaseModel):
 class ConversationOut(BaseModel):
     id: str
     title: str
+    folder_id: str | None
     created_at: str
     updated_at: str
     messages: list[MessageOut]
+
+
+class RenameIn(BaseModel):
+    title: str = Field(min_length=1, max_length=200)
+
+
+class SetFolderIn(BaseModel):
+    folder_id: str | None = Field(description="Folder to move this conversation into, or null to unfile it.")
+
+
+class FolderOut(BaseModel):
+    id: str
+    name: str
+    created_at: str
+
+
+class FolderIn(BaseModel):
+    name: str = Field(min_length=1, max_length=100)
 
 
 class RunOut(BaseModel):
@@ -218,7 +245,11 @@ def post_chat(body: ChatIn) -> ChatOut:
 def get_conversations() -> list[ConversationSummaryOut]:
     return [
         ConversationSummaryOut(
-            id=c.id, title=c.title, updated_at=c.updated_at, message_count=c.message_count
+            id=c.id,
+            title=c.title,
+            folder_id=c.folder_id,
+            updated_at=c.updated_at,
+            message_count=c.message_count,
         )
         for c in store.list_conversations()
     ]
@@ -232,6 +263,7 @@ def get_conversation(conversation_id: str) -> ConversationOut:
     return ConversationOut(
         id=conversation.id,
         title=conversation.title,
+        folder_id=conversation.folder_id,
         created_at=conversation.created_at,
         updated_at=conversation.updated_at,
         messages=[
@@ -239,6 +271,68 @@ def get_conversation(conversation_id: str) -> ConversationOut:
             for m in conversation.messages
         ],
     )
+
+
+@app.patch("/conversations/{conversation_id}", response_model=ConversationSummaryOut)
+def rename_conversation(conversation_id: str, body: RenameIn) -> ConversationSummaryOut:
+    if not store.rename_conversation(conversation_id, body.title):
+        raise HTTPException(status_code=404, detail="conversation not found")
+    updated = next(c for c in store.list_conversations() if c.id == conversation_id)
+    return ConversationSummaryOut(
+        id=updated.id,
+        title=updated.title,
+        folder_id=updated.folder_id,
+        updated_at=updated.updated_at,
+        message_count=updated.message_count,
+    )
+
+
+@app.put("/conversations/{conversation_id}/folder", response_model=ConversationSummaryOut)
+def move_conversation(conversation_id: str, body: SetFolderIn) -> ConversationSummaryOut:
+    if not store.set_conversation_folder(conversation_id, body.folder_id):
+        raise HTTPException(status_code=404, detail="conversation not found")
+    updated = next(c for c in store.list_conversations() if c.id == conversation_id)
+    return ConversationSummaryOut(
+        id=updated.id,
+        title=updated.title,
+        folder_id=updated.folder_id,
+        updated_at=updated.updated_at,
+        message_count=updated.message_count,
+    )
+
+
+@app.delete("/conversations/{conversation_id}")
+def delete_conversation(conversation_id: str) -> dict[str, str]:
+    if not store.delete_conversation(conversation_id):
+        raise HTTPException(status_code=404, detail="conversation not found")
+    return {"status": "deleted"}
+
+
+@app.get("/folders", response_model=list[FolderOut])
+def get_folders() -> list[FolderOut]:
+    return [FolderOut(id=f.id, name=f.name, created_at=f.created_at) for f in store.list_folders()]
+
+
+@app.post("/folders", response_model=FolderOut)
+def post_folder(body: FolderIn) -> FolderOut:
+    folder_id = store.create_folder(body.name)
+    created = next(f for f in store.list_folders() if f.id == folder_id)
+    return FolderOut(id=created.id, name=created.name, created_at=created.created_at)
+
+
+@app.patch("/folders/{folder_id}", response_model=FolderOut)
+def patch_folder(folder_id: str, body: FolderIn) -> FolderOut:
+    if not store.rename_folder(folder_id, body.name):
+        raise HTTPException(status_code=404, detail="folder not found")
+    updated = next(f for f in store.list_folders() if f.id == folder_id)
+    return FolderOut(id=updated.id, name=updated.name, created_at=updated.created_at)
+
+
+@app.delete("/folders/{folder_id}")
+def remove_folder(folder_id: str) -> dict[str, str]:
+    if not store.delete_folder(folder_id):
+        raise HTTPException(status_code=404, detail="folder not found")
+    return {"status": "deleted"}
 
 
 def _run_out(run: store.Run) -> RunOut:
