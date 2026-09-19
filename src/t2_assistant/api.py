@@ -8,6 +8,9 @@
     GET  /runs                  -> recent requests, each with a link to its trace
     GET  /runs/{id}             -> one request
     POST /runs/{id}/feedback    -> rate a run (helpful / not) - also sent to MLflow
+    GET  /kb/documents          -> browse the knowledge base (filter by department,
+                                   language, topic, or a title search)
+    GET  /kb/documents/{doc_id} -> one document's full text and metadata
 
 The server owns the conversation history now: send a `conversation_id` to
 continue a thread, or leave it out to start a new one.
@@ -24,7 +27,9 @@ Web page:  http://localhost:8000/     Interactive API docs:  http://localhost:80
 
 from __future__ import annotations
 
+import csv
 import logging
+from functools import lru_cache
 from pathlib import Path
 
 from fastapi import FastAPI, HTTPException, Request
@@ -33,6 +38,7 @@ from groq import APIError
 from pydantic import BaseModel, Field, field_validator
 
 from t2_assistant import store
+from t2_assistant.config import settings
 from t2_assistant.conversation import run_turn
 from t2_assistant.observability import record_feedback, trace_url
 
@@ -115,6 +121,52 @@ class RunOut(BaseModel):
 class FeedbackIn(BaseModel):
     helpful: bool = Field(description="Thumbs up (true) or thumbs down (false).")
     comment: str | None = Field(default=None, description="Optional note.")
+
+
+class KbDocumentSummary(BaseModel):
+    doc_id: str
+    title: str
+    department: str
+    topic: str
+    type: str
+    language: str
+    office: str
+    version: str
+    status: str
+    effective_date: str
+
+
+class KbDocumentOut(KbDocumentSummary):
+    text: str
+
+
+@lru_cache
+def _kb_manifest() -> list[KbDocumentSummary]:
+    """The manifest, read once and cached - it does not change while the
+    server runs (rebuilding the knowledge base restarts the process)."""
+    with (settings.knowledge_base_dir / "manifest.csv").open(encoding="utf-8") as handle:
+        return [
+            KbDocumentSummary(
+                doc_id=row["doc_id"],
+                title=row["title"],
+                department=row["department"],
+                topic=row["topic_key"],
+                type=row["type"],
+                language=row["language"],
+                office=row["office"],
+                version=row["version"],
+                status=row["status"],
+                effective_date=row["effective_date"],
+            )
+            for row in csv.DictReader(handle)
+        ]
+
+
+@lru_cache
+def _kb_file_by_id() -> dict[str, str]:
+    """doc_id -> its file path (relative to knowledge_base_dir), also cached."""
+    with (settings.knowledge_base_dir / "manifest.csv").open(encoding="utf-8") as handle:
+        return {row["doc_id"]: row["file"] for row in csv.DictReader(handle)}
 
 
 @app.get("/", response_class=HTMLResponse)
@@ -210,3 +262,33 @@ def post_feedback(run_id: str, body: FeedbackIn) -> dict[str, str]:
     if not record_feedback(run_id, body.helpful, body.comment):
         raise HTTPException(status_code=404, detail="run not found")
     return {"status": "recorded"}
+
+
+@app.get("/kb/documents", response_model=list[KbDocumentSummary])
+def list_kb_documents(
+    department: str | None = None,
+    language: str | None = None,
+    topic: str | None = None,
+    q: str | None = None,
+) -> list[KbDocumentSummary]:
+    docs = _kb_manifest()
+    if department:
+        docs = [d for d in docs if d.department == department]
+    if language:
+        docs = [d for d in docs if d.language == language]
+    if topic:
+        docs = [d for d in docs if d.topic == topic]
+    if q:
+        needle = q.strip().lower()
+        docs = [d for d in docs if needle in d.title.lower()]
+    return docs
+
+
+@app.get("/kb/documents/{doc_id}", response_model=KbDocumentOut)
+def get_kb_document(doc_id: str) -> KbDocumentOut:
+    summary = next((d for d in _kb_manifest() if d.doc_id == doc_id), None)
+    file_path = _kb_file_by_id().get(doc_id)
+    if summary is None or file_path is None:
+        raise HTTPException(status_code=404, detail="document not found")
+    text = (settings.knowledge_base_dir / file_path).read_text(encoding="utf-8")
+    return KbDocumentOut(**summary.model_dump(), text=text)

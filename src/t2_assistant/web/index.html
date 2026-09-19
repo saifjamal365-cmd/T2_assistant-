@@ -73,11 +73,55 @@
             transition: background .15s ease; }
     #send:hover:not(:disabled) { background: var(--accent-hover); }
     #send:disabled { opacity: .5; cursor: default; }
+
+    /* sidebar nav (chat / knowledge base) */
+    #nav { display: flex; gap: 6px; padding: 0 12px 10px; }
+    #nav button { flex: 1; padding: 7px 8px; border: 1px solid transparent; background: none;
+                  color: var(--muted); border-radius: 8px; cursor: pointer; font-size: 13px;
+                  font-weight: 500; transition: background .15s ease, color .15s ease; }
+    #nav button:hover { background: #f1eee7; }
+    #nav button.active { background: var(--accent-soft); color: var(--accent-hover); }
+
+    /* knowledge base panel */
+    #kb { flex: 1; display: none; flex-direction: column; overflow: hidden; }
+    #kbTop { padding: 16px 24px; border-bottom: 1px solid var(--border); background: var(--surface);
+             display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+    #kbTop input[type="search"] { flex: 1; min-width: 200px; padding: 9px 12px; border: 1px solid var(--border);
+             border-radius: 10px; font: inherit; background: var(--bg); color: var(--text); }
+    #kbTop select { padding: 9px 10px; border: 1px solid var(--border); border-radius: 10px;
+             font: inherit; background: var(--bg); color: var(--text); }
+    #kbCount { font-size: 12px; color: var(--muted); white-space: nowrap; }
+    #kbBody { flex: 1; display: flex; overflow: hidden; }
+    #kbList { width: 340px; border-right: 1px solid var(--border); overflow-y: auto; padding: 8px; }
+    #kbList::-webkit-scrollbar { width: 8px; }
+    #kbList::-webkit-scrollbar-thumb { background: var(--border); border-radius: 8px; }
+    .kbItem { padding: 10px 12px; border-radius: 10px; cursor: pointer; margin-bottom: 2px; }
+    .kbItem:hover { background: #f1eee7; }
+    .kbItem.active { background: var(--accent-soft); }
+    .kbItem .t { font-size: 13.5px; font-weight: 500; color: var(--text); }
+    .kbItem .m { font-size: 11.5px; color: var(--muted); margin-top: 2px; }
+    .kbBadge { display: inline-block; font-size: 10px; padding: 1px 7px; border-radius: 999px;
+               background: #e4ede1; color: #4f7a45; margin-left: 6px; }
+    .kbBadge.superseded { background: #fcefd9; color: #a46b12; }
+    #kbDetail { flex: 1; overflow-y: auto; padding: 28px 32px; }
+    #kbDetail::-webkit-scrollbar { width: 8px; }
+    #kbDetail::-webkit-scrollbar-thumb { background: var(--border); border-radius: 8px; }
+    #kbDetail .empty { color: var(--muted); text-align: center; margin-top: 20vh; }
+    #kbDetailHead h2 { margin: 0 0 6px; font-size: 20px; }
+    #kbDetailMeta { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 18px; }
+    #kbDetailMeta span { font-size: 11.5px; padding: 3px 9px; border-radius: 999px;
+               background: var(--accent-soft); color: var(--accent-hover); }
+    #kbDetailText { max-width: 760px; white-space: pre-wrap; overflow-wrap: anywhere;
+               font-size: 15px; line-height: 1.7; }
   </style>
 </head>
 <body>
   <aside id="sidebar">
     <h1>T2 Assistant</h1>
+    <div id="nav">
+      <button id="navChat" class="active">Chat</button>
+      <button id="navKb">Knowledge Base</button>
+    </div>
     <button id="new">+ New chat</button>
     <div id="convs"></div>
   </aside>
@@ -89,6 +133,30 @@
         <textarea id="text" rows="1" placeholder="Type a message…" autocomplete="off"></textarea>
         <button id="send" type="submit">Send</button>
       </form>
+    </div>
+  </section>
+
+  <section id="kb">
+    <div id="kbTop">
+      <input id="kbSearch" type="search" placeholder="Search documents by title…" />
+      <select id="kbDept"><option value="">All departments</option></select>
+      <select id="kbLang">
+        <option value="">Both languages</option>
+        <option value="en">English</option>
+        <option value="ar">Arabic</option>
+      </select>
+      <select id="kbType">
+        <option value="">All types</option>
+        <option value="Policy">Policy</option>
+        <option value="Procedure">Procedure</option>
+        <option value="FAQ">FAQ</option>
+        <option value="Quick Reference">Quick Reference</option>
+      </select>
+      <span id="kbCount"></span>
+    </div>
+    <div id="kbBody">
+      <div id="kbList"></div>
+      <div id="kbDetail"><div class="empty">Pick a document from the list to read it.</div></div>
     </div>
   </section>
 
@@ -238,6 +306,94 @@
     if (conversationId) openConversation(conversationId);
     else loadConversations();
     text.focus();
+
+    // ---- knowledge base panel -------------------------------------------
+    const mainSection = document.getElementById("main");
+    const kbSection = document.getElementById("kb");
+    const navChat = document.getElementById("navChat");
+    const navKb = document.getElementById("navKb");
+    const kbSearch = document.getElementById("kbSearch");
+    const kbDept = document.getElementById("kbDept");
+    const kbLang = document.getElementById("kbLang");
+    const kbType = document.getElementById("kbType");
+    const kbCount = document.getElementById("kbCount");
+    const kbList = document.getElementById("kbList");
+    const kbDetail = document.getElementById("kbDetail");
+
+    let kbAllDocs = null;   // fetched once, filtered client-side after that
+    let kbActiveId = null;
+
+    function showChat() {
+      navChat.classList.add("active"); navKb.classList.remove("active");
+      mainSection.style.display = "flex"; kbSection.style.display = "none";
+    }
+    function showKb() {
+      navKb.classList.add("active"); navChat.classList.remove("active");
+      mainSection.style.display = "none"; kbSection.style.display = "flex";
+      if (kbAllDocs === null) loadKbDocuments();
+    }
+    navChat.onclick = showChat;
+    navKb.onclick = showKb;
+
+    async function loadKbDocuments() {
+      kbList.innerHTML = '<div style="padding:12px;color:var(--muted);font-size:13px;">Loading…</div>';
+      const res = await fetch("/kb/documents");
+      kbAllDocs = res.ok ? await res.json() : [];
+      const depts = [...new Set(kbAllDocs.map((d) => d.department))].sort();
+      for (const dep of depts) {
+        const opt = document.createElement("option");
+        opt.value = dep; opt.textContent = dep;
+        kbDept.appendChild(opt);
+      }
+      renderKbList();
+    }
+
+    function renderKbList() {
+      const q = kbSearch.value.trim().toLowerCase();
+      const dep = kbDept.value, lang = kbLang.value, type = kbType.value;
+      const filtered = (kbAllDocs || []).filter((d) =>
+        (!q || d.title.toLowerCase().includes(q)) &&
+        (!dep || d.department === dep) &&
+        (!lang || d.language === lang) &&
+        (!type || d.type === type)
+      );
+      kbCount.textContent = `${filtered.length} document${filtered.length === 1 ? "" : "s"}`;
+      kbList.innerHTML = "";
+      for (const d of filtered) {  // every matching document, not a capped preview
+        const el = document.createElement("div");
+        el.className = "kbItem" + (d.doc_id === kbActiveId ? " active" : "");
+        const badge = d.status === "Active" ? "" : `<span class="kbBadge superseded">${esc(d.status)}</span>`;
+        el.innerHTML =
+          `<div class="t">${esc(d.title)}${badge}</div>` +
+          `<div class="m">${esc(d.doc_id)} · ${esc(d.type)} · ${d.language.toUpperCase()} · ${esc(d.office)}</div>`;
+        el.onclick = () => openKbDocument(d.doc_id);
+        kbList.appendChild(el);
+      }
+    }
+
+    async function openKbDocument(docId) {
+      kbActiveId = docId;
+      renderKbList();
+      kbDetail.innerHTML = '<div class="empty">Loading…</div>';
+      const res = await fetch("/kb/documents/" + encodeURIComponent(docId));
+      if (!res.ok) { kbDetail.innerHTML = '<div class="empty">Could not load that document.</div>'; return; }
+      const d = await res.json();
+      const dir = isArabic(d.text) ? ' dir="rtl"' : "";
+      kbDetail.innerHTML =
+        `<div id="kbDetailHead"><h2>${esc(d.title)}</h2></div>` +
+        `<div id="kbDetailMeta">` +
+          `<span>${esc(d.doc_id)}</span><span>${esc(d.department)}</span><span>${esc(d.type)}</span>` +
+          `<span>${d.language.toUpperCase()}</span><span>${esc(d.office)}</span>` +
+          `<span>v${esc(d.version)}</span><span>${esc(d.status)}</span><span>${esc(d.effective_date)}</span>` +
+        `</div>` +
+        `<div id="kbDetailText"${dir}>${fmt(d.text)}</div>`;
+      kbDetail.scrollTop = 0;
+    }
+
+    kbSearch.oninput = renderKbList;
+    kbDept.onchange = renderKbList;
+    kbLang.onchange = renderKbList;
+    kbType.onchange = renderKbList;
   </script>
 </body>
 </html>

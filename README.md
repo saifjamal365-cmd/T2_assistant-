@@ -73,6 +73,10 @@ continues a thread (leave it out to start one); `GET /conversations` lists them
 and `GET /conversations/{id}` returns one with all its messages. `GET /runs`
 lists past requests each with a link to its MLflow trace, and
 `POST /runs/{id}/feedback` records a 👍/👎 (also attached to the trace).
+`GET /kb/documents` browses the knowledge base itself (filter by `department`,
+`language`, `topic`, or a title search with `q`), and
+`GET /kb/documents/{doc_id}` returns one document's full text - the web page's
+"Knowledge Base" tab is built on these two.
 
 ## Run it
 
