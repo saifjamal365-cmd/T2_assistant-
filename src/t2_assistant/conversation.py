@@ -33,6 +33,7 @@ class ChatResult:
     reply: str
     route: Route
     route_reason: str
+    sources: list[dict]
 
 
 @dataclass
@@ -45,6 +46,7 @@ class TurnResult:
     reply: str
     route: Route
     route_reason: str
+    sources: list[dict]
 
 
 @mlflow.trace(span_type=SpanType.AGENT)
@@ -65,6 +67,7 @@ def chat(message: str, history: list[AnyMessage] | None = None) -> ChatResult:
         reply=str(last.content),
         route=final_state["route"] or "clarify",
         route_reason=final_state["route_reason"] or "",
+        sources=last.additional_kwargs.get("passages", []),
     )
 
 
@@ -110,6 +113,8 @@ def run_turn(message: str, conversation_id: str | None = None) -> TurnResult:
         trace_id=trace_id,
         duration_ms=duration_ms,
     )
+    if result.sources:
+        store.save_sources(run_id, result.sources)
 
     return TurnResult(
         conversation_id=conversation_id,
@@ -118,4 +123,5 @@ def run_turn(message: str, conversation_id: str | None = None) -> TurnResult:
         reply=result.reply,
         route=result.route,
         route_reason=result.route_reason,
+        sources=result.sources,
     )

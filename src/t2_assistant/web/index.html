@@ -61,6 +61,26 @@
     .foot a { color: var(--accent); text-decoration: none; }
     .foot a:hover { color: var(--accent-hover); text-decoration: underline; }
 
+    /* clickable sources */
+    .bubble .src { color: var(--accent); cursor: pointer; font-weight: 600;
+                   border-bottom: 1px dashed var(--accent); }
+    .bubble .src:hover, .bubble .src.srcOpen { color: var(--accent-hover); }
+    .citation { margin-top: 10px; padding: 12px 14px; border: 1px solid var(--border);
+                border-radius: 12px; background: var(--surface); max-width: 640px; }
+    .citationHead { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+    .citationMeta { font-size: 12px; color: var(--muted); }
+    .citationClose { margin-left: auto; border: none; background: none; cursor: pointer;
+                      font-size: 16px; color: var(--muted); line-height: 1; padding: 0 2px; }
+    .citationClose:hover { color: var(--text); }
+    .citationText { font-size: 13.5px; line-height: 1.6; white-space: pre-wrap; overflow-wrap: anywhere;
+                     background: var(--bg); border-radius: 8px; padding: 10px 12px;
+                     max-height: 220px; overflow-y: auto; }
+    .citationLink { display: inline-block; margin-top: 8px; font-size: 12.5px;
+                     color: var(--accent); text-decoration: none; }
+    .citationLink:hover { text-decoration: underline; }
+    .citationText mark { background: #fcefd9; color: var(--accent-hover); padding: 1px 3px;
+                     border-radius: 3px; font-weight: 600; }
+
     /* input */
     #bar { border-top: 1px solid var(--border); background: var(--surface); padding: 16px 24px; }
     #bar form { max-width: 720px; margin: 0 auto; display: flex; gap: 10px; }
@@ -175,17 +195,73 @@
     const esc = (s) => s.replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
     const fmt = (s) => esc(s).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>").replace(/\n/g, "<br>");
 
-    function addMsg(role, content, route, meta) {
+    function linkifySources(html, sources) {
+      if (!sources || !sources.length) return { html, byId: new Map() };
+      const byId = new Map(sources.map((s) => [s.doc_id, s]));
+      const linked = html.replace(/\b([A-Z]{2,4}-\d{3,4})\b/g, (m) =>
+        byId.has(m) ? `<span class="src" data-doc="${m}">${m}</span>` : m
+      );
+      return { html: linked, byId };
+    }
+
+    function markHighlights(escapedText, highlights) {
+      let out = escapedText;
+      for (const h of highlights || []) {
+        const escH = esc(h);
+        if (escH && out.includes(escH)) out = out.split(escH).join(`<mark>${escH}</mark>`);
+      }
+      return out;
+    }
+
+    function citationPanel(source) {
+      const box = document.createElement("div");
+      box.className = "citation";
+      const dir = isArabic(source.text) ? ' dir="rtl"' : "";
+      const marked = markHighlights(esc(source.text), source.highlights)
+        .replace(/\*\*(.+?)\*\*/g, "<b>$1</b>").replace(/\n/g, "<br>");
+      box.innerHTML =
+        `<div class="citationHead"><b>${esc(source.title)}</b>` +
+        `<span class="citationMeta">${esc(source.doc_id)} · ${esc(source.doc_type)} · v${esc(source.version)}</span>` +
+        `<button class="citationClose" title="Close">×</button></div>` +
+        `<div class="citationText"${dir}>${marked}</div>` +
+        `<a class="citationLink" href="#">View full document →</a>`;
+      box.querySelector(".citationClose").onclick = () => box.remove();
+      box.querySelector(".citationLink").onclick = (e) => {
+        e.preventDefault();
+        showKb();
+        openKbDocument(source.doc_id);
+      };
+      return box;
+    }
+
+    function addMsg(role, content, route, meta, sources) {
       const empty = log.querySelector(".empty");
       if (empty) empty.remove();
       const wrap = document.createElement("div");
       wrap.className = "msg " + (role === "user" ? "user" : "bot");
       const tag = route ? `<span class="tag ${route}">${route}</span>` : "";
       const dir = isArabic(content) ? ' dir="rtl"' : "";
+      const { html, byId } = linkifySources(fmt(content), sources);
       wrap.innerHTML =
         `<span class="who">${role === "user" ? "You" : "Assistant"}</span>` +
         tag +
-        `<div class="bubble"${dir}>${fmt(content)}</div>`;
+        `<div class="bubble"${dir}>${html}</div>`;
+      if (byId.size) {
+        wrap.querySelectorAll(".src").forEach((el) => {
+          el.onclick = () => {
+            const wasOpen = el.classList.contains("srcOpen");
+            const existing = wrap.querySelector(".citation");
+            if (existing) existing.remove();
+            wrap.querySelectorAll(".src").forEach((s) => s.classList.remove("srcOpen"));
+            if (wasOpen) return;  // clicking the open one again just closes it
+            el.classList.add("srcOpen");
+            const panel = citationPanel(byId.get(el.dataset.doc));
+            wrap.appendChild(panel);
+            const mark = panel.querySelector("mark");
+            if (mark) mark.scrollIntoView({ block: "center" });
+          };
+        });
+      }
       if (meta && meta.runId) wrap.appendChild(feedbackBar(meta));
       log.appendChild(wrap);
       log.scrollTop = log.scrollHeight;
@@ -276,7 +352,7 @@
         }
         rememberConversation(data.conversation_id);
         thinking.remove();
-        addMsg("bot", data.reply, data.route, { runId: data.run_id, traceUrl: data.trace_url });
+        addMsg("bot", data.reply, data.route, { runId: data.run_id, traceUrl: data.trace_url }, data.sources);
         loadConversations();
       } catch (e) {
         thinking.querySelector(".bubble").textContent = "Something went wrong. Try again.";

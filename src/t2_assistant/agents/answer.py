@@ -22,15 +22,85 @@ It never invents a policy fact from outside the retrieved passages (FR-03,
 FR-05). It is also given the recent conversation, so a question about the
 conversation itself ("what did I ask you first?") is answered from that
 history instead of being searched for in the documents.
+
+The exact passages behind a non-decline answer - only the ones actually named
+in its "Sources:" line - are attached to the returned message's
+`additional_kwargs["passages"]`, so a caller can show the user precisely what
+grounded the answer, not just the document id. Each passage also carries
+`highlights`: the specific sentence(s) in it closest in meaning to the answer,
+found with the same local embedding model used for search - no extra model
+call, so this costs nothing beyond a few short CPU encodes.
 """
 
 from __future__ import annotations
+
+import re
+from dataclasses import asdict
 
 from langchain_core.messages import AIMessage, AnyMessage, HumanMessage, SystemMessage
 
 from t2_assistant.agents.llm import get_llm
 from t2_assistant.config import settings
+from t2_assistant.knowledge.embeddings import embed_passages, embed_query
 from t2_assistant.knowledge.search import Passage, search
+
+_DOC_ID = re.compile(r"\b[A-Z]{2,4}-\d{3,4}\b")
+_SOURCES_LINE = re.compile(r"\n?(?:Sources?|المصدر|المصادر)\s*:.*$", re.IGNORECASE | re.DOTALL)
+_SENTENCE_SPLIT = re.compile(r"(?<=[.!?؟])\s+")
+_MIN_HIGHLIGHT_CHARS = 15  # skips short section headers like "3. Policy"
+
+
+def _cited_doc_ids(answer: str) -> set[str]:
+    """The document codes the answer actually named, anywhere in its text -
+    not just after "Sources:", since that label differs by language."""
+    return set(_DOC_ID.findall(answer))
+
+
+def _answer_body(answer: str) -> str:
+    """The answer's substance, with the trailing "Sources: ..." line removed -
+    that label isn't meaningful content to compare against a passage."""
+    return _SOURCES_LINE.sub("", answer).strip()
+
+
+def _candidate_sentences(passage_text: str) -> list[str]:
+    """Passage text broken into short, highlightable pieces: split on blank
+    lines/bullets first (this knowledge base is bullet-heavy), then on
+    sentence endings within a line. Section headers and other short lines
+    are dropped - nothing worth highlighting is that short."""
+    candidates: list[str] = []
+    for line in passage_text.split("\n"):
+        line = line.strip().lstrip("-•").strip()
+        if not line:
+            continue
+        for piece in _SENTENCE_SPLIT.split(line):
+            piece = piece.strip()
+            if len(piece) >= _MIN_HIGHLIGHT_CHARS:
+                candidates.append(piece)
+    return candidates
+
+
+def _best_highlights(answer: str, passage_text: str) -> list[str]:
+    """The sentence(s) in `passage_text` closest in meaning to `answer` - the
+    local embedding model already used for search, not a model call, so this
+    is free and fast. Ties close to the top score are included too, since the
+    answer may be supported by more than one sentence."""
+    candidates = _candidate_sentences(passage_text)
+    if not candidates:
+        return []
+    answer_vec = embed_query(_answer_body(answer))
+    sentence_vecs = embed_passages(candidates)
+    scored = sorted(
+        zip(candidates, sentence_vecs, strict=True),
+        key=lambda pair: sum(a * b for a, b in zip(answer_vec, pair[1], strict=True)),
+        reverse=True,
+    )
+    top_score = sum(a * b for a, b in zip(answer_vec, scored[0][1], strict=True))
+    return [
+        sentence
+        for sentence, vec in scored[:3]
+        if top_score - sum(a * b for a, b in zip(answer_vec, vec, strict=True)) < 0.02
+    ]
+
 
 _DONT_KNOW_EN = "I don't know based on the current company documents. Could you rephrase your question or add a bit more detail?"
 _DONT_KNOW_AR = "لا أملك إجابة لذلك بناءً على مستندات الشركة الحالية. هل يمكنك توضيح سؤالك أكثر؟"
@@ -241,8 +311,10 @@ def respond(messages: list[AnyMessage]) -> AIMessage:
     query = question
     answer = _dont_know_for(question)
     seen_passages: dict[str, Passage] = {}
+    last_passages: list[Passage] = []
     for attempt in range(settings.max_retrieval_tries):
         passages = search(query)
+        last_passages = passages
         for passage in passages:
             existing = seen_passages.get(passage.doc_id)
             if existing is None or passage.score > existing.score:
@@ -254,12 +326,21 @@ def respond(messages: list[AnyMessage]) -> AIMessage:
             query = _better_query(question)
 
     if _is_decline(answer):
-        answer = _judge_before_declining(question, list(seen_passages.values()), transcript)
+        last_passages = list(seen_passages.values())
+        answer = _judge_before_declining(question, last_passages, transcript)
 
     if _is_decline(answer):
         # The model is asked to match the question's language for this exact
         # sentence, but doesn't always get it right - pick it in code instead
         # of trusting that, so a decline is never in the wrong language.
         answer = _dont_know_for(question)
+        sources: list[Passage] = []
+    else:
+        cited = _cited_doc_ids(answer)
+        sources = [p for p in last_passages if p.doc_id in cited] or last_passages
 
-    return AIMessage(answer)
+    passages_out = [
+        {**asdict(p), "highlights": _best_highlights(answer, p.text)} for p in sources
+    ]
+    kwargs = {"passages": passages_out} if passages_out else {}
+    return AIMessage(content=answer, additional_kwargs=kwargs)

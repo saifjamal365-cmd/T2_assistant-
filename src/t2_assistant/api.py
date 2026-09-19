@@ -74,6 +74,17 @@ class ChatIn(BaseModel):
         return stripped
 
 
+class SourceOut(BaseModel):
+    doc_id: str
+    title: str
+    department: str
+    doc_type: str
+    version: str
+    text: str
+    score: float
+    highlights: list[str] = []
+
+
 class ChatOut(BaseModel):
     conversation_id: str
     run_id: str
@@ -81,6 +92,7 @@ class ChatOut(BaseModel):
     route: str
     route_reason: str
     trace_url: str | None
+    sources: list[SourceOut] = []
 
 
 class MessageOut(BaseModel):
@@ -198,6 +210,7 @@ def post_chat(body: ChatIn) -> ChatOut:
         route=result.route,
         route_reason=result.route_reason,
         trace_url=trace_url(result.trace_id),
+        sources=[SourceOut(**s) for s in result.sources],
     )
 
 

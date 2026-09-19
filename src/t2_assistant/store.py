@@ -1,11 +1,14 @@
 """Saving conversations and run records.
 
 Until now every request stood alone. This module keeps them in a small SQLite
-file (settings.store_db) with three tables:
+file (settings.store_db) with four tables:
 
     conversations   one row per chat thread (id, title, timestamps)
     messages        every user and assistant turn, in order
     runs            one row per request: the route taken, timing, trace id
+    sources         the exact passages a run's answer cited (if any), so a
+                     source in the reply can be clicked to show the real text
+                     behind it, not just the document id
 
 Plain `sqlite3` - no ORM. Each call opens its own short-lived connection, which
 is simple and safe when FastAPI runs endpoints on different threads.
@@ -13,6 +16,7 @@ is simple and safe when FastAPI runs endpoints on different threads.
 
 from __future__ import annotations
 
+import json
 import sqlite3
 import uuid
 from dataclasses import dataclass
@@ -50,6 +54,22 @@ CREATE TABLE IF NOT EXISTS runs (
     feedback          TEXT,           -- 'helpful' | 'not_helpful' | NULL
     feedback_comment  TEXT
 );
+
+-- The exact passages an answer cited, so the app can show the user precisely
+-- what grounded it (not just the document id) when they click a source.
+CREATE TABLE IF NOT EXISTS sources (
+    id            INTEGER PRIMARY KEY AUTOINCREMENT,
+    run_id        TEXT NOT NULL REFERENCES runs(id),
+    doc_id        TEXT NOT NULL,
+    title         TEXT NOT NULL,
+    department    TEXT NOT NULL,
+    doc_type      TEXT NOT NULL,
+    version       TEXT NOT NULL,
+    passage_text  TEXT NOT NULL,
+    score         REAL NOT NULL,
+    highlights    TEXT NOT NULL DEFAULT '[]'  -- JSON list of sentences to highlight
+);
+CREATE INDEX IF NOT EXISTS ix_sources_run ON sources(run_id);
 """
 
 _schema_ready = False
@@ -68,9 +88,13 @@ def _connect() -> sqlite3.Connection:
     if not _schema_ready:
         connection.executescript(_SCHEMA)
         # add columns that older store.db files are missing
-        for column in ("feedback TEXT", "feedback_comment TEXT"):
+        for table, column in (
+            ("runs", "feedback TEXT"),
+            ("runs", "feedback_comment TEXT"),
+            ("sources", "highlights TEXT NOT NULL DEFAULT '[]'"),
+        ):
             try:
-                connection.execute(f"ALTER TABLE runs ADD COLUMN {column}")
+                connection.execute(f"ALTER TABLE {table} ADD COLUMN {column}")
             except sqlite3.OperationalError:
                 pass  # already there
         connection.commit()
@@ -118,6 +142,18 @@ class Run:
     created_at: str
     feedback: str | None
     feedback_comment: str | None
+
+
+@dataclass
+class Source:
+    doc_id: str
+    title: str
+    department: str
+    doc_type: str
+    version: str
+    text: str
+    score: float
+    highlights: list[str]
 
 
 # ---- conversations -------------------------------------------------
@@ -242,6 +278,55 @@ def save_run(
             ),
         )
     return run_id
+
+
+def save_sources(run_id: str, passages: list[dict]) -> None:
+    """Record the exact passages a run's answer cited (skipped entirely for a
+    decline or a non-answer route, since `passages` is empty for those)."""
+    with _connect() as connection:
+        connection.executemany(
+            """
+            INSERT INTO sources
+              (run_id, doc_id, title, department, doc_type, version, passage_text, score, highlights)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+            """,
+            [
+                (
+                    run_id,
+                    p["doc_id"],
+                    p["title"],
+                    p["department"],
+                    p["doc_type"],
+                    p["version"],
+                    p["text"],
+                    p["score"],
+                    json.dumps(p.get("highlights", [])),
+                )
+                for p in passages
+            ],
+        )
+
+
+def get_sources(run_id: str) -> list[Source]:
+    with _connect() as connection:
+        rows = connection.execute(
+            "SELECT doc_id, title, department, doc_type, version, passage_text, score, highlights "
+            "FROM sources WHERE run_id = ? ORDER BY id",
+            (run_id,),
+        ).fetchall()
+    return [
+        Source(
+            doc_id=r["doc_id"],
+            title=r["title"],
+            department=r["department"],
+            doc_type=r["doc_type"],
+            version=r["version"],
+            text=r["passage_text"],
+            score=r["score"],
+            highlights=json.loads(r["highlights"]),
+        )
+        for r in rows
+    ]
 
 
 # ---- reading runs (observability) -------------------------------
