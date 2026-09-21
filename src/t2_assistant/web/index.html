@@ -749,6 +749,10 @@
     document.getElementById("signOut").onclick = async () => {
       await fetch("/auth/logout", { method: "POST" });
       rememberConversation(null);
+      pendingFolderId = null;
+      document.getElementById("userEmail").textContent = "";
+      convs.innerHTML = "";
+      log.innerHTML = '<div class="empty">Ask a question about company policy, or paste meeting notes to summarise.</div>';
       showAuthOverlay();
     };
 
