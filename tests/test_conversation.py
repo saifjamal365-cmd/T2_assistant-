@@ -5,16 +5,27 @@ from __future__ import annotations
 import pytest
 
 from t2_assistant import conversation, store
+from t2_assistant.config import settings
 from t2_assistant.conversation import ChatResult
 
 
 def test_run_turn_saves_both_turns_and_passes_history(monkeypatch: pytest.MonkeyPatch) -> None:
     seen_history: list[list[object]] = []
 
-    def fake_chat(message: str, history: list[object] | None = None) -> ChatResult:
+    def fake_chat(
+        message: str,
+        history: list[object] | None = None,
+        *,
+        model: str | None = None,
+        user_email: str | None = None,
+    ) -> ChatResult:
         seen_history.append(list(history or []))
         return ChatResult(
-            reply=f"reply to: {message}", route="answer", route_reason="q", sources=[]
+            reply=f"reply to: {message}",
+            route="answer",
+            route_reason="q",
+            sources=[],
+            model=model or settings.llm_model,
         )
 
     monkeypatch.setattr(conversation, "chat", fake_chat)
@@ -43,7 +54,34 @@ def test_run_turn_starts_fresh_for_unknown_id(monkeypatch: pytest.MonkeyPatch) -
     monkeypatch.setattr(
         conversation,
         "chat",
-        lambda message, history=None: ChatResult("ok", "greeting", "hi", []),
+        lambda message, history=None, **kw: ChatResult("ok", "greeting", "hi", [], "test-model"),
     )
     result = conversation.run_turn("hello", conversation_id="not-a-real-id")
     assert store.conversation_exists(result.conversation_id)
+
+
+def test_run_turn_threads_and_persists_the_chosen_model(monkeypatch: pytest.MonkeyPatch) -> None:
+    seen_models: list[str | None] = []
+
+    def fake_chat(
+        message: str,
+        history: list[object] | None = None,
+        *,
+        model: str | None = None,
+        user_email: str | None = None,
+    ) -> ChatResult:
+        seen_models.append(model)
+        resolved = model or settings.llm_model
+        return ChatResult(reply="ok", route="answer", route_reason="q", sources=[], model=resolved)
+
+    monkeypatch.setattr(conversation, "chat", fake_chat)
+
+    with_model = conversation.run_turn("a question", model="qwen/qwen3.8-27b")
+    assert seen_models[-1] == "qwen/qwen3.8-27b"
+    saved = store.get_run(with_model.run_id)
+    assert saved is not None
+    assert saved.model == "qwen/qwen3.8-27b"
+
+    without_model = conversation.run_turn("another question")
+    assert seen_models[-1] is None
+    assert without_model.model == settings.llm_model

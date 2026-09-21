@@ -26,29 +26,36 @@ from langgraph.graph.state import CompiledStateGraph
 from t2_assistant.agents import answer, clarify, greeting, summarise
 from t2_assistant.agents.router import decide_route
 from t2_assistant.agents.state import AgentState
+from t2_assistant.config import settings
 
 # ---- nodes -------------------------------------------------------------
 
 
 def _router_node(state: AgentState) -> dict[str, object]:
-    decision = decide_route(state["messages"])
+    # Always the fixed default model, never the user's per-turn choice: the
+    # router needs tool-calling for its structured output, and not every
+    # offered model supports that (confirmed: allam-2-7b flatly rejects tool
+    # calls). The user's choice still drives whichever specialist actually
+    # writes the visible reply - only this internal classification step is
+    # pinned.
+    decision = decide_route(state["messages"], settings.llm_model)
     return {"route": decision.route, "route_reason": decision.reason}
 
 
 def _greeting_node(state: AgentState) -> dict[str, object]:
-    return {"messages": [greeting.respond(state["messages"])]}
+    return {"messages": [greeting.respond(state["messages"], state["model"])]}
 
 
 def _answer_node(state: AgentState) -> dict[str, object]:
-    return {"messages": [answer.respond(state["messages"])]}
+    return {"messages": [answer.respond(state["messages"], state["model"])]}
 
 
 def _summarise_node(state: AgentState) -> dict[str, object]:
-    return {"messages": [summarise.respond(state["messages"])]}
+    return {"messages": [summarise.respond(state["messages"], state["model"])]}
 
 
 def _clarify_node(state: AgentState) -> dict[str, object]:
-    return {"messages": [clarify.respond(state["messages"])]}
+    return {"messages": [clarify.respond(state["messages"], state["model"])]}
 
 
 # ---- the branch after the router -------------------------------------

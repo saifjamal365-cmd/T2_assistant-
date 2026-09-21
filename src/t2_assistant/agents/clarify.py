@@ -40,8 +40,8 @@ any number, date, or policy detail below is correct.
 Reply in the SAME language as the user (English or Arabic)."""
 
 
-def respond(messages: list[AnyMessage]) -> AIMessage:
+def respond(messages: list[AnyMessage], model: str) -> AIMessage:
     """Return one short clarifying question."""
-    reply = get_llm().invoke([SystemMessage(CLARIFY_SYSTEM), *messages])
+    reply = get_llm(model).invoke([SystemMessage(CLARIFY_SYSTEM), *messages])
     assert isinstance(reply, AIMessage)  # narrow the type for mypy
     return reply

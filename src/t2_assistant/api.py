@@ -18,14 +18,13 @@
     GET    /kb/documents               -> browse the knowledge base (filter by department,
                                            language, topic, or a title search)
     GET    /kb/documents/{doc_id}      -> one document's full text and metadata
-    POST   /auth/request-code          -> email a sign-in code to an allowed address
-    POST   /auth/verify-code           -> check a code, sign in on success
+    POST   /auth/login                 -> sign in with email + password (registers
+                                           a new allowed email on first use)
     POST   /auth/logout                -> end the current session
     GET    /auth/me                    -> the signed-in email, or null
 
 Every route other than the page itself, /health, and /auth/* requires a
-signed-in session (a cookie set by /auth/verify-code) - see require_session
-below.
+signed-in session (a cookie set by /auth/login) - see require_session below.
 
 The server owns the conversation history now: send a `conversation_id` to
 continue a thread, or leave it out to start a new one.
@@ -47,13 +46,13 @@ import logging
 from functools import lru_cache
 from pathlib import Path
 
-import httpx
 from fastapi import FastAPI, HTTPException, Request, Response
 from fastapi.responses import HTMLResponse, JSONResponse
 from groq import APIError
 from pydantic import BaseModel, Field, field_validator
 
 from t2_assistant import auth, store
+from t2_assistant.agents.llm import ModelId
 from t2_assistant.config import settings
 from t2_assistant.conversation import run_turn
 from t2_assistant.observability import record_feedback, trace_url
@@ -96,6 +95,9 @@ class ChatIn(BaseModel):
     conversation_id: str | None = Field(
         default=None, description="Continue this conversation; omit to start a new one."
     )
+    model: ModelId | None = Field(
+        default=None, description="Groq model id for this turn; omit to use the server default."
+    )
 
     @field_validator("message")
     @classmethod
@@ -127,6 +129,7 @@ class ChatOut(BaseModel):
     route_reason: str
     trace_url: str | None
     sources: list[SourceOut] = []
+    model: str
 
 
 class MessageOut(BaseModel):
@@ -179,6 +182,7 @@ class RunOut(BaseModel):
     route: str
     route_reason: str
     reply: str
+    model: str | None
     duration_ms: int
     created_at: str
     trace_url: str | None
@@ -247,38 +251,30 @@ def health() -> dict[str, str]:
     return {"status": "ok"}
 
 
-class RequestCodeIn(BaseModel):
+class LoginIn(BaseModel):
     email: str = Field(min_length=3, max_length=200)
+    password: str = Field(min_length=8, max_length=200)
 
 
-class VerifyCodeIn(BaseModel):
-    email: str = Field(min_length=3, max_length=200)
-    code: str = Field(min_length=4, max_length=10)
+class LoginOut(BaseModel):
+    status: str
+    email: str
+    created: bool = Field(description="True if this call just registered the account.")
 
 
 class MeOut(BaseModel):
     email: str | None
 
 
-@app.post("/auth/request-code")
-def request_code(body: RequestCodeIn) -> dict[str, str]:
+@app.post("/auth/login", response_model=LoginOut)
+def login(body: LoginIn, response: Response) -> LoginOut:
     try:
-        auth.request_code(body.email)
+        result = auth.register_or_sign_in(body.email, body.password)
     except ValueError as exc:
         raise HTTPException(status_code=403, detail="that email can't sign in here") from exc
-    except httpx.HTTPError as exc:
-        logger.warning("failed to send sign-in email: %s", exc)
-        raise HTTPException(
-            status_code=502, detail="couldn't send the email right now - please try again"
-        ) from exc
-    return {"status": "sent"}
-
-
-@app.post("/auth/verify-code")
-def verify_code(body: VerifyCodeIn, response: Response) -> dict[str, str]:
-    token = auth.verify_code(body.email, body.code)
-    if token is None:
-        raise HTTPException(status_code=401, detail="that code is incorrect or has expired")
+    if result is None:
+        raise HTTPException(status_code=401, detail="incorrect password")
+    token, created = result
     response.set_cookie(
         _SESSION_COOKIE,
         token,
@@ -288,7 +284,7 @@ def verify_code(body: VerifyCodeIn, response: Response) -> dict[str, str]:
         # not marked secure: this app is served over plain http on localhost;
         # set secure=True once it's deployed behind https.
     )
-    return {"status": "ok", "email": body.email.strip().lower()}
+    return LoginOut(status="ok", email=body.email.strip().lower(), created=created)
 
 
 @app.post("/auth/logout")
@@ -307,9 +303,14 @@ def get_me(request: Request) -> MeOut:
 
 
 @app.post("/chat", response_model=ChatOut)
-def post_chat(body: ChatIn) -> ChatOut:
+def post_chat(body: ChatIn, request: Request) -> ChatOut:
     try:
-        result = run_turn(body.message, body.conversation_id)
+        result = run_turn(
+            body.message,
+            body.conversation_id,
+            model=body.model,
+            user_email=request.state.user_email,
+        )
     except APIError as exc:
         # the language model provider failed or is rate-limited - not our bug,
         # but the user still needs a clear answer instead of a crash (NFR-07)
@@ -326,6 +327,7 @@ def post_chat(body: ChatIn) -> ChatOut:
         route_reason=result.route_reason,
         trace_url=trace_url(result.trace_id),
         sources=[SourceOut.model_validate(s) for s in result.sources],
+        model=result.model,
     )
 
 
@@ -431,6 +433,7 @@ def _run_out(run: store.Run) -> RunOut:
         route=run.route,
         route_reason=run.route_reason,
         reply=run.reply,
+        model=run.model,
         duration_ms=run.duration_ms,
         created_at=run.created_at,
         trace_url=trace_url(run.trace_id),

@@ -6,6 +6,8 @@ and returns the fields it wants to change. We keep it small:
     messages      the whole conversation (user + assistant turns)
     route         which specialist the router chose
     route_reason  the router's one-line reason (shown in the trace / API)
+    model         the Groq model id this turn uses (router + specialist alike),
+                   already resolved to a concrete value before the graph runs
 
 `messages` uses LangGraph's `add_messages` reducer: when a node returns new
 messages, they are appended to the list rather than replacing it.
@@ -25,3 +27,4 @@ class AgentState(TypedDict):
     messages: Annotated[list[AnyMessage], add_messages]
     route: Route | None
     route_reason: str | None
+    model: str

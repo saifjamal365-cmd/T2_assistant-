@@ -32,7 +32,13 @@ def test_web_page_loads() -> None:
 def test_chat_shape_and_persistence(monkeypatch: pytest.MonkeyPatch) -> None:
     """/chat returns the turn and the conversation is saved (agent call faked)."""
 
-    def fake_run_turn(message: str, conversation_id: str | None = None) -> TurnResult:
+    def fake_run_turn(
+        message: str,
+        conversation_id: str | None = None,
+        *,
+        model: str | None = None,
+        user_email: str | None = None,
+    ) -> TurnResult:
         cid = conversation_id or store.create_conversation(message)
         store.add_message(cid, "user", message)
         store.add_message(cid, "assistant", "hello!")
@@ -42,10 +48,13 @@ def test_chat_shape_and_persistence(monkeypatch: pytest.MonkeyPatch) -> None:
             route="greeting",
             route_reason="a greeting",
             reply="hello!",
+            model=model or "test-model",
             trace_id=None,
             duration_ms=1,
         )
-        return TurnResult(cid, run_id, None, "hello!", "greeting", "a greeting", [])
+        return TurnResult(
+            cid, run_id, None, "hello!", "greeting", "a greeting", [], model or "test-model"
+        )
 
     monkeypatch.setattr(api, "run_turn", fake_run_turn)
 
@@ -71,6 +80,40 @@ def test_chat_shape_and_persistence(monkeypatch: pytest.MonkeyPatch) -> None:
     assert client.get(f"/runs/{first['run_id']}").json()["feedback"] == "helpful"
 
 
+def test_chat_rejects_an_unknown_model() -> None:
+    response = client.post("/chat", json={"message": "hi", "model": "not-a-real-model"})
+    assert response.status_code == 422
+
+
+def test_chat_echoes_a_valid_chosen_model(monkeypatch: pytest.MonkeyPatch) -> None:
+    def fake_run_turn(
+        message: str,
+        conversation_id: str | None = None,
+        *,
+        model: str | None = None,
+        user_email: str | None = None,
+    ) -> TurnResult:
+        cid = conversation_id or store.create_conversation(message)
+        resolved = model or "openai/gpt-oss-120b"
+        run_id = store.save_run(
+            conversation_id=cid,
+            user_message=message,
+            route="greeting",
+            route_reason="a greeting",
+            reply="hello!",
+            model=resolved,
+            trace_id=None,
+            duration_ms=1,
+        )
+        return TurnResult(cid, run_id, None, "hello!", "greeting", "a greeting", [], resolved)
+
+    monkeypatch.setattr(api, "run_turn", fake_run_turn)
+
+    response = client.post("/chat", json={"message": "hi", "model": "qwen/qwen3.8-27b"})
+    assert response.status_code == 200
+    assert response.json()["model"] == "qwen/qwen3.8-27b"
+
+
 def test_unknown_conversation_is_404() -> None:
     assert client.get("/conversations/nope").status_code == 404
 
@@ -94,7 +137,13 @@ def test_provider_failure_returns_a_clean_503(monkeypatch: pytest.MonkeyPatch) -
     import httpx
     from groq import APIConnectionError
 
-    def failing_run_turn(message: str, conversation_id: str | None = None) -> TurnResult:
+    def failing_run_turn(
+        message: str,
+        conversation_id: str | None = None,
+        *,
+        model: str | None = None,
+        user_email: str | None = None,
+    ) -> TurnResult:
         raise APIConnectionError(request=httpx.Request("POST", "https://groq.example"))
 
     monkeypatch.setattr(api, "run_turn", failing_run_turn)
@@ -106,7 +155,13 @@ def test_provider_failure_returns_a_clean_503(monkeypatch: pytest.MonkeyPatch) -
 
 
 def test_unexpected_error_returns_500_not_a_crash(monkeypatch: pytest.MonkeyPatch) -> None:
-    def broken_run_turn(message: str, conversation_id: str | None = None) -> TurnResult:
+    def broken_run_turn(
+        message: str,
+        conversation_id: str | None = None,
+        *,
+        model: str | None = None,
+        user_email: str | None = None,
+    ) -> TurnResult:
         raise ValueError("something unrelated broke")
 
     monkeypatch.setattr(api, "run_turn", broken_run_turn)
@@ -144,24 +199,15 @@ def test_public_routes_work_without_a_session() -> None:
     assert anon.get("/auth/me").json() == {"email": None}
 
 
-def test_sign_in_flow_end_to_end(monkeypatch: pytest.MonkeyPatch) -> None:
-    from t2_assistant import auth
-
-    seen: dict[str, str] = {}
-    monkeypatch.setattr(auth, "_send_email", lambda to, code: seen.__setitem__("code", code))
+def test_sign_in_flow_end_to_end() -> None:
+    import uuid
 
     anon = TestClient(app)
-    email = "flow-test@t2.sa"
+    email = f"flow-test-{uuid.uuid4().hex[:10]}@t2.sa"
 
-    sent = anon.post("/auth/request-code", json={"email": email})
-    assert sent.status_code == 200
-
-    wrong = anon.post("/auth/verify-code", json={"email": email, "code": "000000"})
-    assert wrong.status_code == 401
-    assert anon.get("/auth/me").json() == {"email": None}  # still signed out
-
-    right = anon.post("/auth/verify-code", json={"email": email, "code": seen["code"]})
-    assert right.status_code == 200
+    registered = anon.post("/auth/login", json={"email": email, "password": "correct-password"})
+    assert registered.status_code == 200
+    assert registered.json() == {"status": "ok", "email": email, "created": True}
     assert anon.get("/auth/me").json() == {"email": email}
     assert anon.get("/conversations").status_code == 200  # now allowed in
 
@@ -169,8 +215,17 @@ def test_sign_in_flow_end_to_end(monkeypatch: pytest.MonkeyPatch) -> None:
     assert anon.get("/auth/me").json() == {"email": None}
     assert anon.get("/conversations").status_code == 401
 
+    wrong = anon.post("/auth/login", json={"email": email, "password": "a-wrong-guess"})
+    assert wrong.status_code == 401
+    assert anon.get("/auth/me").json() == {"email": None}  # still signed out
 
-def test_disallowed_email_cannot_request_a_code() -> None:
+    right = anon.post("/auth/login", json={"email": email, "password": "correct-password"})
+    assert right.status_code == 200
+    assert right.json()["created"] is False  # already existed - not a fresh registration
+    assert anon.get("/auth/me").json() == {"email": email}
+
+
+def test_disallowed_email_cannot_sign_in() -> None:
     anon = TestClient(app)
-    response = anon.post("/auth/request-code", json={"email": "someone@gmail.com"})
+    response = anon.post("/auth/login", json={"email": "someone@gmail.com", "password": "whatever"})
     assert response.status_code == 403

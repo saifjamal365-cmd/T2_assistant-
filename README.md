@@ -69,8 +69,15 @@ t2-assistant/
 ```
 
 The API keeps the conversation history: `POST /chat` with a `conversation_id`
-continues a thread (leave it out to start one); `GET /conversations` lists them
-and `GET /conversations/{id}` returns one with all its messages. `GET /runs`
+continues a thread (leave it out to start one). An optional `model` field
+picks the Groq model for that turn (`openai/gpt-oss-120b`,
+`openai/gpt-oss-20b`, `qwen/qwen3.8-27b` - each run through the real test
+battery in `tests/test_models.py`, not just listed on Groq's docs; several
+other candidates looked fine in isolation but failed it, see that file);
+omitted, it falls back to `LLM_MODEL`, and the model used is echoed back in
+the response and tagged on the turn's MLflow trace. `GET /conversations`
+lists past conversations and `GET /conversations/{id}` returns one with all
+its messages. `GET /runs`
 lists past requests each with a link to its MLflow trace, and
 `POST /runs/{id}/feedback` records a 👍/👎 (also attached to the trace).
 `GET /kb/documents` browses the knowledge base itself (filter by `department`,
@@ -88,17 +95,18 @@ source records.
 
 ## Signing in
 
-There are no passwords. `POST /auth/request-code` emails a 6-digit code (via
-[Resend](https://resend.com)) to an address ending in `AUTH_EMAIL_DOMAIN`
-(`t2.sa` by default) - or to one of a short list of real inboxes in
-`AUTH_ALLOWED_TEST_EMAILS`, for testing before a real company inbox is
-connected. `POST /auth/verify-code` checks the code and, on success, sets a
-session cookie; `GET /auth/me` returns the signed-in email (or `null`), and
-`POST /auth/logout` ends the session. Every other route requires that cookie.
+`POST /auth/login` takes an email and a password. The email must end in
+`AUTH_EMAIL_DOMAIN` (`t2.sa` by default) - or be one of a short list of real
+inboxes in `AUTH_ALLOWED_TEST_EMAILS`, for testing before a real company
+inbox is connected. An email seen for the first time is registered with the
+password given; one already on file must match its stored password. On
+success it sets a session cookie; `GET /auth/me` returns the signed-in email
+(or `null`), and `POST /auth/logout` ends the session. Every other route
+requires that cookie.
 
-With no `RESEND_API_KEY` set, or while testing, the generated code is also
-printed to the server's console - useful for trying the flow without a real
-inbox.
+Passwords are hashed (scrypt, salted) before they're stored - never kept in
+the clear. There is no email-verification step, so `AUTH_EMAIL_DOMAIN` /
+`AUTH_ALLOWED_TEST_EMAILS` is the only check on who is allowed to register.
 
 ## Run it
 

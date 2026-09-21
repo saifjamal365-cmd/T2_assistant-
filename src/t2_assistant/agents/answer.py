@@ -204,13 +204,13 @@ def _last_user_text(messages: list[AnyMessage]) -> str:
     return ""
 
 
-def _correct_spelling(text: str) -> str:
+def _correct_spelling(text: str, model: str) -> str:
     """Fix typos before anything else sees the message - a single, focused
     step, kept separate from standalone-question rewriting (which already has
     several other jobs to do) so it isn't competing for the model's attention."""
     if not text.strip():
         return text
-    reply = get_llm().invoke([SystemMessage(_SPELLCHECK_SYSTEM), HumanMessage(text)])
+    reply = get_llm(model).invoke([SystemMessage(_SPELLCHECK_SYSTEM), HumanMessage(text)])
     return str(reply.content).strip() or text
 
 
@@ -222,14 +222,14 @@ def _transcript(messages: list[AnyMessage]) -> str:
     )
 
 
-def _standalone_question(messages: list[AnyMessage], transcript: str) -> str:
+def _standalone_question(messages: list[AnyMessage], transcript: str, model: str) -> str:
     """The latest question, with earlier context folded in (for follow-ups)."""
     latest = _last_user_text(messages)
     earlier = [m for m in messages if isinstance(m, HumanMessage | AIMessage)][:-1]
     if not earlier:
         return latest
 
-    reply = get_llm().invoke([SystemMessage(_STANDALONE_SYSTEM), HumanMessage(transcript)])
+    reply = get_llm(model).invoke([SystemMessage(_STANDALONE_SYSTEM), HumanMessage(transcript)])
     return str(reply.content).strip() or latest
 
 
@@ -241,7 +241,7 @@ def _format_passages(passages: list[Passage]) -> str:
     return "\n\n".join(blocks)
 
 
-def _write_answer(question: str, passages: list[Passage], transcript: str) -> str:
+def _write_answer(question: str, passages: list[Passage], transcript: str, model: str) -> str:
     if not passages:
         return _dont_know_for(question)
     prompt = [
@@ -254,12 +254,12 @@ def _write_answer(question: str, passages: list[Passage], transcript: str) -> st
         ),
         HumanMessage(question),
     ]
-    reply = get_llm().invoke(prompt)
+    reply = get_llm(model).invoke(prompt)
     return str(reply.content).strip()
 
 
-def _better_query(question: str) -> str:
-    reply = get_llm().invoke([SystemMessage(_REPHRASE_SYSTEM), HumanMessage(question)])
+def _better_query(question: str, model: str) -> str:
+    reply = get_llm(model).invoke([SystemMessage(_REPHRASE_SYSTEM), HumanMessage(question)])
     return str(reply.content).strip() or question
 
 
@@ -283,7 +283,9 @@ Never add a fact that is not in the passages. Reply in the same language as the
 question."""
 
 
-def _judge_before_declining(question: str, passages: list[Passage], transcript: str) -> str:
+def _judge_before_declining(
+    question: str, passages: list[Passage], transcript: str, model: str
+) -> str:
     """A last, careful look before giving up - the one place a second LLM
     pass is worth its extra cost, since a wrong "I don't know" is the failure
     that matters most for a policy assistant."""
@@ -299,17 +301,17 @@ def _judge_before_declining(question: str, passages: list[Passage], transcript: 
         ),
         HumanMessage(question),
     ]
-    reply = get_llm().invoke(prompt)
+    reply = get_llm(model).invoke(prompt)
     return str(reply.content).strip()
 
 
-def respond(messages: list[AnyMessage]) -> AIMessage:
+def respond(messages: list[AnyMessage], model: str) -> AIMessage:
     """Answer the latest question from the knowledge base."""
-    corrected = _correct_spelling(_last_user_text(messages))
+    corrected = _correct_spelling(_last_user_text(messages), model)
     fixed_messages = [*messages[:-1], HumanMessage(corrected)]
 
     transcript = _transcript(fixed_messages)
-    question = _standalone_question(fixed_messages, transcript)
+    question = _standalone_question(fixed_messages, transcript, model)
 
     query = question
     answer = _dont_know_for(question)
@@ -322,15 +324,15 @@ def respond(messages: list[AnyMessage]) -> AIMessage:
             existing = seen_passages.get(passage.doc_id)
             if existing is None or passage.score > existing.score:
                 seen_passages[passage.doc_id] = passage
-        answer = _write_answer(question, passages, transcript)
+        answer = _write_answer(question, passages, transcript, model)
         if not _is_decline(answer):
             break
         if attempt + 1 < settings.max_retrieval_tries:
-            query = _better_query(question)
+            query = _better_query(question, model)
 
     if _is_decline(answer):
         last_passages = list(seen_passages.values())
-        answer = _judge_before_declining(question, last_passages, transcript)
+        answer = _judge_before_declining(question, last_passages, transcript, model)
 
     if _is_decline(answer):
         # The model is asked to match the question's language for this exact

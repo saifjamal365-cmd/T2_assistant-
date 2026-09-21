@@ -27,8 +27,8 @@ answer it. Just say briefly that you can help with that, and ask them to ask it
 as a question."""
 
 
-def respond(messages: list[AnyMessage]) -> AIMessage:
+def respond(messages: list[AnyMessage], model: str) -> AIMessage:
     """Return a short greeting reply."""
-    reply = get_llm().invoke([SystemMessage(GREETING_SYSTEM), *messages])
+    reply = get_llm(model).invoke([SystemMessage(GREETING_SYSTEM), *messages])
     assert isinstance(reply, AIMessage)  # narrow the type for mypy
     return reply

@@ -1,6 +1,8 @@
-"""Sign-in: allowed emails, one-time codes, and sessions."""
+"""Sign-in: allowed emails, password accounts, and sessions."""
 
 from __future__ import annotations
+
+import uuid
 
 import pytest
 
@@ -8,11 +10,11 @@ from t2_assistant import auth, store
 from t2_assistant.config import settings
 
 
-@pytest.fixture(autouse=True)
-def _no_real_email(monkeypatch: pytest.MonkeyPatch) -> None:
-    """Every test in this file must be able to run with no network access -
-    replace the real Resend call with a no-op."""
-    monkeypatch.setattr(auth, "_send_email", lambda to, code: None)
+def _unique_email() -> str:
+    """A fresh, never-before-seen email each call - `users` is keyed on
+    email, and tests share the on-disk store.db, so a fixed literal would
+    collide (IntegrityError) on a second test run."""
+    return f"test-{uuid.uuid4().hex[:10]}@{settings.auth_email_domain}"
 
 
 def test_domain_email_is_allowed() -> None:
@@ -32,38 +34,56 @@ def test_listed_test_email_is_allowed(monkeypatch: pytest.MonkeyPatch) -> None:
     assert not auth.is_allowed_email("someone-else@gmail.com")
 
 
-def test_request_code_rejects_a_disallowed_email() -> None:
+def test_disallowed_email_is_rejected() -> None:
     with pytest.raises(ValueError):
-        auth.request_code("someone@gmail.com")
+        auth.register_or_sign_in("someone@gmail.com", "whatever-password")
 
 
-def test_full_round_trip_with_the_real_generated_code(monkeypatch: pytest.MonkeyPatch) -> None:
-    email = f"person2@{settings.auth_email_domain}"
-    seen: dict[str, str] = {}
-    monkeypatch.setattr(auth, "_send_email", lambda to, code: seen.__setitem__("code", code))
-
-    auth.request_code(email)
-    real_code = seen["code"]
-
-    assert auth.verify_code(email, "000000") is None  # wrong code
-    token = auth.verify_code(email, real_code)
-    assert token is not None
+def test_new_email_registers_and_signs_in() -> None:
+    email = _unique_email()
+    result = auth.register_or_sign_in(email, "correct horse battery staple")
+    assert result is not None
+    token, created = result
+    assert created is True
     assert store.session_email(token) == email
 
-    # the same code cannot be used again
-    assert auth.verify_code(email, real_code) is None
+
+def test_existing_email_signs_in_with_the_right_password() -> None:
+    email = _unique_email()
+    first = auth.register_or_sign_in(email, "my-real-password")
+    assert first is not None
+    first_token, _ = first
+
+    second = auth.register_or_sign_in(email, "my-real-password")
+    assert second is not None
+    second_token, created = second
+    assert created is False  # already existed - not a fresh registration
+    assert second_token != first_token  # each sign-in gets its own session
+    assert store.session_email(second_token) == email
 
 
-def test_too_many_wrong_attempts_locks_the_code(monkeypatch: pytest.MonkeyPatch) -> None:
-    email = f"person3@{settings.auth_email_domain}"
-    seen: dict[str, str] = {}
-    monkeypatch.setattr(auth, "_send_email", lambda to, code: seen.__setitem__("code", code))
-    auth.request_code(email)
+def test_wrong_password_is_rejected_and_the_real_one_still_works() -> None:
+    email = _unique_email()
+    auth.register_or_sign_in(email, "the-real-password")
 
-    for _ in range(settings.otp_max_attempts):
-        assert auth.verify_code(email, "000000") is None
-    # even the real code is now refused - the attempt budget is spent
-    assert auth.verify_code(email, seen["code"]) is None
+    assert auth.register_or_sign_in(email, "a-guess") is None
+
+    retry = auth.register_or_sign_in(email, "the-real-password")
+    assert retry is not None
+
+
+def test_password_is_hashed_and_salted() -> None:
+    email_a, email_b = _unique_email(), _unique_email()
+    auth.register_or_sign_in(email_a, "same-password")
+    auth.register_or_sign_in(email_b, "same-password")
+
+    hash_a = store.get_password_hash(email_a)
+    hash_b = store.get_password_hash(email_b)
+    assert hash_a is not None
+    assert hash_b is not None
+    assert hash_a.startswith("scrypt$")
+    assert "same-password" not in hash_a
+    assert hash_a != hash_b  # different salts, even for the same password
 
 
 def test_logout_ends_the_session() -> None:

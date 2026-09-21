@@ -25,7 +25,9 @@ def fake_agents(monkeypatch: pytest.MonkeyPatch) -> None:
         "clarify": clarify,
     }.items():
         monkeypatch.setattr(
-            module, "respond", lambda _messages, _n=name: AIMessage(f"[{_n}] handled it")
+            module,
+            "respond",
+            lambda _messages, _model, _n=name: AIMessage(f"[{_n}] handled it"),
         )
 
 
@@ -34,7 +36,7 @@ def _route_to(monkeypatch: pytest.MonkeyPatch, route: Route) -> None:
     monkeypatch.setattr(
         graph,
         "decide_route",
-        lambda _messages: RouterDecision(route=route, reason=f"forced {route}"),
+        lambda _messages, _model: RouterDecision(route=route, reason=f"forced {route}"),
     )
 
 
@@ -46,7 +48,12 @@ def test_router_choice_selects_matching_specialist(
     graph = build_graph()
 
     final = graph.invoke(
-        {"messages": [HumanMessage("anything")], "route": None, "route_reason": None}
+        {
+            "messages": [HumanMessage("anything")],
+            "route": None,
+            "route_reason": None,
+            "model": "test-model",
+        }
     )
 
     assert final["route"] == route
@@ -62,6 +69,7 @@ def test_history_is_preserved(monkeypatch: pytest.MonkeyPatch, fake_agents: None
             "messages": [HumanMessage("hi"), AIMessage("hello"), HumanMessage("hi again")],
             "route": None,
             "route_reason": None,
+            "model": "test-model",
         }
     )
 

@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import uuid
+
 from t2_assistant import store
 
 
@@ -32,14 +34,27 @@ def test_list_is_newest_first_with_counts() -> None:
     assert next(c for c in listed if c.id == first).message_count == 1
 
 
+def test_create_user_and_read_the_password_hash() -> None:
+    email = f"store-test-{uuid.uuid4().hex[:10]}@t2.sa"
+
+    assert store.get_password_hash(email) is None  # unknown email
+
+    store.create_user(email, "scrypt$abc$def")
+    assert store.get_password_hash(email) == "scrypt$abc$def"
+
+
 def test_save_run() -> None:
     cid = store.create_conversation("run test")
-    store.save_run(
+    run_id = store.save_run(
         conversation_id=cid,
         user_message="how many leave days?",
         route="answer",
         route_reason="a policy question",
         reply="25 days.",
+        model="openai/gpt-oss-120b",
         trace_id="trace-123",
         duration_ms=1400,
-    )  # just needs to not raise
+    )
+    saved = store.get_run(run_id)
+    assert saved is not None
+    assert saved.model == "openai/gpt-oss-120b"

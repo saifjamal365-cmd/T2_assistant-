@@ -134,6 +134,10 @@
     /* input */
     #bar { border-top: 1px solid var(--border); background: var(--surface); padding: 16px 24px; }
     #bar form { max-width: 720px; margin: 0 auto; display: flex; gap: 10px; }
+    #modelRow { max-width: 720px; margin: 0 auto 8px; display: flex; align-items: center; gap: 8px; }
+    #modelRow label { font-size: 12.5px; color: var(--muted); }
+    #modelRow select { padding: 6px 10px; border: 1px solid var(--border); border-radius: 10px;
+            font: inherit; font-size: 13px; background: var(--bg); color: var(--text); }
     #text { flex: 1; resize: none; padding: 11px 14px; border: 1px solid var(--border);
             border-radius: 14px; font: inherit; max-height: 140px; background: var(--bg);
             color: var(--text); transition: border-color .15s ease, box-shadow .15s ease; }
@@ -204,6 +208,14 @@
   <section id="main">
     <div id="log"><div class="empty">Ask a question about company policy, or paste meeting notes to summarise.</div></div>
     <div id="bar">
+      <div id="modelRow">
+        <label for="modelSelect">Model</label>
+        <select id="modelSelect">
+          <option value="openai/gpt-oss-120b">GPT-OSS 120B (default)</option>
+          <option value="openai/gpt-oss-20b">GPT-OSS 20B (fast)</option>
+          <option value="qwen/qwen3.8-27b">Qwen3.8 27B</option>
+        </select>
+      </div>
       <form id="form">
         <textarea id="text" rows="1" placeholder="Type a message…" autocomplete="off"></textarea>
         <button id="send" type="submit">Send</button>
@@ -238,22 +250,12 @@
   <div id="authOverlay" class="modalOverlay" style="display:none;">
     <div class="modalBox">
       <div class="modalTitle">Sign in to T2 Assistant</div>
-      <div id="authStep1">
-        <div class="authHint">Use your company email to get a one-time sign-in code.</div>
-        <input id="authEmail" class="modalInput" type="email" placeholder="you@t2.sa" autocomplete="email" />
-        <div id="authError1" class="authError"></div>
-        <div class="modalActions">
-          <button id="authSendCode" class="modalOk">Send code</button>
-        </div>
-      </div>
-      <div id="authStep2" style="display:none;">
-        <div class="authHint">Code sent to <b id="authEmailShown"></b> - check your inbox.</div>
-        <input id="authCode" class="modalInput" type="text" inputmode="numeric" maxlength="6" placeholder="6-digit code" autocomplete="one-time-code" />
-        <div id="authError2" class="authError"></div>
-        <div class="modalActions">
-          <button id="authBack" class="modalCancel">Back</button>
-          <button id="authVerify" class="modalOk">Verify</button>
-        </div>
+      <div class="authHint">Use your company email and a password. New here? Just pick a password below and you're in.</div>
+      <input id="authEmail" class="modalInput" type="email" placeholder="you@t2.sa" autocomplete="email" />
+      <input id="authPassword" class="modalInput" type="password" placeholder="Password" autocomplete="current-password" />
+      <div id="authError" class="authError"></div>
+      <div class="modalActions">
+        <button id="authSubmit" class="modalOk">Sign in</button>
       </div>
     </div>
   </div>
@@ -264,10 +266,24 @@
     const form = document.getElementById("form");
     const text = document.getElementById("text");
     const send = document.getElementById("send");
+    const modelSelect = document.getElementById("modelSelect");
     // remembered across a page reload, so refreshing does not silently start
     // a new conversation and split the history in two
     let conversationId = null;
     try { conversationId = localStorage.getItem("t2_conversation_id"); } catch (e) { /* ignore */ }
+    // which model to use - per-browser only, never synced to the server.
+    // Only applied if it's still a real option - the list of models can
+    // change, and a stale saved value would otherwise leave the dropdown on
+    // no selection at all (and every message would then be sent with an
+    // empty model, which the server rejects).
+    try {
+      const savedModel = localStorage.getItem("t2_model");
+      const isValidOption = [...modelSelect.options].some((o) => o.value === savedModel);
+      if (savedModel && isValidOption) modelSelect.value = savedModel;
+    } catch (e) { /* ignore */ }
+    modelSelect.onchange = () => {
+      try { localStorage.setItem("t2_model", modelSelect.value); } catch (e) { /* ignore */ }
+    };
 
     const isArabic = (s) => /[؀-ۿ]/.test(s);
     const esc = (s) => s.replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
@@ -609,7 +625,7 @@
         const res = await fetch("/chat", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ message, conversation_id: conversationId }),
+          body: JSON.stringify({ message, conversation_id: conversationId, model: modelSelect.value }),
         });
         const data = await res.json();
         if (!res.ok) {
@@ -661,15 +677,12 @@
     // ---- sign-in gate -----------------------------------------------------
     const authOverlay = document.getElementById("authOverlay");
     const authEmail = document.getElementById("authEmail");
-    const authCode = document.getElementById("authCode");
+    const authPassword = document.getElementById("authPassword");
 
     function showAuthOverlay() {
       authOverlay.style.display = "flex";
-      document.getElementById("authStep1").style.display = "block";
-      document.getElementById("authStep2").style.display = "none";
-      document.getElementById("authError1").textContent = "";
-      document.getElementById("authError2").textContent = "";
-      authCode.value = "";
+      document.getElementById("authError").textContent = "";
+      authPassword.value = "";
       authEmail.focus();
     }
 
@@ -688,50 +701,19 @@
       else showAuthOverlay();
     }
 
-    document.getElementById("authSendCode").onclick = async () => {
+    async function submitLogin() {
       const email = authEmail.value.trim();
-      const err = document.getElementById("authError1");
+      const password = authPassword.value;
+      const err = document.getElementById("authError");
       err.textContent = "";
-      if (!email) { err.textContent = "Enter your email."; return; }
-      const btn = document.getElementById("authSendCode");
-      btn.disabled = true; btn.textContent = "Sending…";
+      if (!email || !password) { err.textContent = "Enter your email and password."; return; }
+      const btn = document.getElementById("authSubmit");
+      btn.disabled = true; btn.textContent = "Signing in…";
       try {
-        const res = await fetch("/auth/request-code", {
+        const res = await fetch("/auth/login", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ email }),
-        });
-        const data = await res.json();
-        if (!res.ok) { err.textContent = data.detail || "Something went wrong."; return; }
-        document.getElementById("authEmailShown").textContent = email;
-        document.getElementById("authStep1").style.display = "none";
-        document.getElementById("authStep2").style.display = "block";
-        authCode.focus();
-      } catch (e) {
-        err.textContent = "Something went wrong. Try again.";
-      } finally {
-        btn.disabled = false; btn.textContent = "Send code";
-      }
-    };
-
-    document.getElementById("authBack").onclick = () => {
-      document.getElementById("authStep1").style.display = "block";
-      document.getElementById("authStep2").style.display = "none";
-    };
-
-    async function submitCode() {
-      const email = authEmail.value.trim();
-      const code = authCode.value.trim();
-      const err = document.getElementById("authError2");
-      err.textContent = "";
-      if (!code) { err.textContent = "Enter the code."; return; }
-      const btn = document.getElementById("authVerify");
-      btn.disabled = true; btn.textContent = "Verifying…";
-      try {
-        const res = await fetch("/auth/verify-code", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ email, code }),
+          body: JSON.stringify({ email, password }),
         });
         const data = await res.json();
         if (!res.ok) { err.textContent = data.detail || "Something went wrong."; return; }
@@ -739,12 +721,12 @@
       } catch (e) {
         err.textContent = "Something went wrong. Try again.";
       } finally {
-        btn.disabled = false; btn.textContent = "Verify";
+        btn.disabled = false; btn.textContent = "Sign in";
       }
     }
-    document.getElementById("authVerify").onclick = submitCode;
-    authEmail.onkeydown = (e) => { if (e.key === "Enter") document.getElementById("authSendCode").click(); };
-    authCode.onkeydown = (e) => { if (e.key === "Enter") submitCode(); };
+    document.getElementById("authSubmit").onclick = submitLogin;
+    authEmail.onkeydown = (e) => { if (e.key === "Enter") authPassword.focus(); };
+    authPassword.onkeydown = (e) => { if (e.key === "Enter") submitLogin(); };
 
     document.getElementById("signOut").onclick = async () => {
       await fetch("/auth/logout", { method: "POST" });

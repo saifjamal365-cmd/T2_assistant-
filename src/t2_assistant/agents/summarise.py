@@ -24,8 +24,8 @@ known. If the text names no actions, write "No action items."
 Use only what is in the user's text. Do not add anything that is not there."""
 
 
-def respond(messages: list[AnyMessage]) -> AIMessage:
+def respond(messages: list[AnyMessage], model: str) -> AIMessage:
     """Return a summary and action items for the user's text."""
-    reply = get_llm().invoke([SystemMessage(SUMMARISE_SYSTEM), *messages])
+    reply = get_llm(model).invoke([SystemMessage(SUMMARISE_SYSTEM), *messages])
     assert isinstance(reply, AIMessage)  # narrow the type for mypy
     return reply

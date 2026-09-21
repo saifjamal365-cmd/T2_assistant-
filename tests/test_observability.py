@@ -24,6 +24,7 @@ def test_record_feedback_updates_the_store() -> None:
         route="answer",
         route_reason="r",
         reply="a",
+        model="openai/gpt-oss-120b",
         trace_id=None,
         duration_ms=1,
     )

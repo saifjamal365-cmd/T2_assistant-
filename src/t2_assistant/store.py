@@ -10,9 +10,9 @@ file (settings.store_db) with seven tables:
     sources         the exact passages a run's answer cited (if any), so a
                      source in the reply can be clicked to show the real text
                      behind it, not just the document id
-    otp_codes       a sign-in code sent to an email, waiting to be verified
+    users           a registered email + its (hashed) password
     sessions        a signed-in session (email -> session token), created
-                     once a code is verified
+                     once a password is verified
 
 Plain `sqlite3` - no ORM. Each call opens its own short-lived connection, which
 is simple and safe when FastAPI runs endpoints on different threads.
@@ -20,7 +20,6 @@ is simple and safe when FastAPI runs endpoints on different threads.
 
 from __future__ import annotations
 
-import hashlib
 import json
 import secrets
 import sqlite3
@@ -84,15 +83,12 @@ CREATE TABLE IF NOT EXISTS sources (
 );
 CREATE INDEX IF NOT EXISTS ix_sources_run ON sources(run_id);
 
--- A sign-in code sent to an email, waiting to be verified. `code_hash` is a
--- hash, not the raw code - the same reasoning as a password, even though this
--- one expires in minutes.
-CREATE TABLE IF NOT EXISTS otp_codes (
-    email       TEXT PRIMARY KEY,
-    code_hash   TEXT NOT NULL,
-    expires_at  TEXT NOT NULL,
-    attempts    INTEGER NOT NULL DEFAULT 0,
-    created_at  TEXT NOT NULL
+-- A registered sign-in: email + password hash. `password_hash` is a salted
+-- hash (see auth.py), never the raw password.
+CREATE TABLE IF NOT EXISTS users (
+    email          TEXT PRIMARY KEY,
+    password_hash  TEXT NOT NULL,
+    created_at     TEXT NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS sessions (
@@ -125,6 +121,7 @@ def _connect() -> sqlite3.Connection:
             ("runs", "feedback_comment TEXT"),
             ("sources", "highlights TEXT NOT NULL DEFAULT '[]'"),
             ("conversations", "folder_id TEXT REFERENCES folders(id)"),
+            ("runs", f"model TEXT NOT NULL DEFAULT '{settings.llm_model}'"),
         ):
             try:
                 connection.execute(f"ALTER TABLE {table} ADD COLUMN {column}")
@@ -189,6 +186,7 @@ class Run:
     created_at: str
     feedback: str | None
     feedback_comment: str | None
+    model: str | None
 
 
 @dataclass
@@ -383,6 +381,7 @@ def save_run(
     route: str,
     route_reason: str,
     reply: str,
+    model: str,
     trace_id: str | None,
     duration_ms: int,
 ) -> str:
@@ -393,8 +392,8 @@ def save_run(
             """
             INSERT INTO runs
               (id, conversation_id, user_message, route, route_reason, reply,
-               trace_id, duration_ms, created_at)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+               model, trace_id, duration_ms, created_at)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """,
             (
                 run_id,
@@ -403,6 +402,7 @@ def save_run(
                 route,
                 route_reason,
                 reply,
+                model,
                 trace_id,
                 duration_ms,
                 _now(),
@@ -477,6 +477,7 @@ def _row_to_run(row: sqlite3.Row) -> Run:
         created_at=row["created_at"],
         feedback=row["feedback"],
         feedback_comment=row["feedback_comment"],
+        model=row["model"],
     )
 
 
@@ -505,54 +506,28 @@ def set_feedback(run_id: str, feedback: str, comment: str | None) -> bool:
     return cursor.rowcount > 0
 
 
-# ---- sign-in: one-time codes and sessions ----------------------------
+# ---- sign-in: accounts and sessions ----------------------------------
 
 
-def _hash_code(code: str) -> str:
-    return hashlib.sha256(code.encode()).hexdigest()
-
-
-def create_otp(email: str, code: str) -> None:
-    """Replace any existing code for this email with a fresh one."""
-    expires_at = (datetime.now(UTC) + timedelta(minutes=settings.otp_ttl_minutes)).isoformat(
-        timespec="milliseconds"
-    )
-    with _connect() as connection:
-        connection.execute(
-            """
-            INSERT INTO otp_codes (email, code_hash, expires_at, attempts, created_at)
-            VALUES (?, ?, ?, 0, ?)
-            ON CONFLICT(email) DO UPDATE SET
-                code_hash = excluded.code_hash,
-                expires_at = excluded.expires_at,
-                attempts = 0,
-                created_at = excluded.created_at
-            """,
-            (email, _hash_code(code), expires_at, _now()),
-        )
-
-
-def verify_otp(email: str, code: str) -> str:
-    """Check a code against the one on file for this email. Returns "ok",
-    "expired", "wrong", "too_many_attempts", or "not_found"."""
+def get_password_hash(email: str) -> str | None:
+    """The stored password hash for this email, or None if no account exists.
+    `store` treats the hash as an opaque string - hashing and verifying it is
+    auth.py's job, not this module's."""
     with _connect() as connection:
         row = connection.execute(
-            "SELECT code_hash, expires_at, attempts FROM otp_codes WHERE email = ?", (email,)
+            "SELECT password_hash FROM users WHERE email = ?", (email,)
         ).fetchone()
-        if row is None:
-            return "not_found"
-        if row["attempts"] >= settings.otp_max_attempts:
-            return "too_many_attempts"
-        if row["expires_at"] < _now():
-            connection.execute("DELETE FROM otp_codes WHERE email = ?", (email,))
-            return "expired"
-        if row["code_hash"] != _hash_code(code):
-            connection.execute(
-                "UPDATE otp_codes SET attempts = attempts + 1 WHERE email = ?", (email,)
-            )
-            return "wrong"
-        connection.execute("DELETE FROM otp_codes WHERE email = ?", (email,))
-    return "ok"
+    return str(row["password_hash"]) if row else None
+
+
+def create_user(email: str, password_hash: str) -> None:
+    """Register a new account. Raises sqlite3.IntegrityError if the email is
+    already registered - callers check get_password_hash() first."""
+    with _connect() as connection:
+        connection.execute(
+            "INSERT INTO users (email, password_hash, created_at) VALUES (?, ?, ?)",
+            (email, password_hash, _now()),
+        )
 
 
 def create_session(email: str) -> str:

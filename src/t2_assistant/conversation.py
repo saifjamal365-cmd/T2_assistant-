@@ -20,6 +20,7 @@ from mlflow.entities import SpanType
 from t2_assistant import store
 from t2_assistant.agents.graph import compiled_graph
 from t2_assistant.agents.state import Route
+from t2_assistant.config import settings
 from t2_assistant.tracing import init_tracing
 
 # Configure MLflow tracing as soon as this module is imported.
@@ -34,6 +35,7 @@ class ChatResult:
     route: Route
     route_reason: str
     sources: list[dict[str, object]]
+    model: str
 
 
 @dataclass
@@ -47,18 +49,37 @@ class TurnResult:
     route: Route
     route_reason: str
     sources: list[dict[str, object]]
+    model: str
 
 
 @mlflow.trace(span_type=SpanType.AGENT)
-def chat(message: str, history: list[AnyMessage] | None = None) -> ChatResult:
+def chat(
+    message: str,
+    history: list[AnyMessage] | None = None,
+    *,
+    model: str | None = None,
+    user_email: str | None = None,
+) -> ChatResult:
     """Answer one user message.
 
     `history` is the earlier conversation (list of messages), or None for a new
-    conversation.
+    conversation. `model` picks the Groq model for the whole turn (router and
+    whichever specialist runs); omitted, it falls back to settings.llm_model.
+    `user_email`, when known, tags the trace with who asked.
     """
+    resolved_model = model or settings.llm_model
     messages: list[AnyMessage] = [*(history or []), HumanMessage(message)]
 
-    final_state = compiled_graph.invoke({"messages": messages, "route": None, "route_reason": None})
+    # Tag the trace before the graph runs, so even a mid-turn failure is
+    # still attributable to a model and a user.
+    mlflow.update_current_trace(
+        tags={"model": resolved_model},
+        metadata={"mlflow.trace.user": user_email} if user_email else None,
+    )
+
+    final_state = compiled_graph.invoke(
+        {"messages": messages, "route": None, "route_reason": None, "model": resolved_model}
+    )
 
     last = final_state["messages"][-1]
     assert isinstance(last, AIMessage)  # the specialist always adds an AI reply
@@ -68,6 +89,7 @@ def chat(message: str, history: list[AnyMessage] | None = None) -> ChatResult:
         route=final_state["route"] or "clarify",
         route_reason=final_state["route_reason"] or "",
         sources=last.additional_kwargs.get("passages", []),
+        model=resolved_model,
     )
 
 
@@ -86,7 +108,13 @@ def _title_from(message: str) -> str:
     return text[:60] + ("..." if len(text) > 60 else "")
 
 
-def run_turn(message: str, conversation_id: str | None = None) -> TurnResult:
+def run_turn(
+    message: str,
+    conversation_id: str | None = None,
+    *,
+    model: str | None = None,
+    user_email: str | None = None,
+) -> TurnResult:
     """Answer a message inside a conversation, saving the turn and a run record.
 
     Starts a new conversation when `conversation_id` is None.
@@ -97,7 +125,7 @@ def run_turn(message: str, conversation_id: str | None = None) -> TurnResult:
     history = _to_messages(store.get_messages(conversation_id))
 
     started = time.perf_counter()
-    result = chat(message, history=history)
+    result = chat(message, history=history, model=model, user_email=user_email)
     duration_ms = int((time.perf_counter() - started) * 1000)
 
     trace_id = mlflow.get_last_active_trace_id()
@@ -110,6 +138,7 @@ def run_turn(message: str, conversation_id: str | None = None) -> TurnResult:
         route=result.route,
         route_reason=result.route_reason,
         reply=result.reply,
+        model=result.model,
         trace_id=trace_id,
         duration_ms=duration_ms,
     )
@@ -124,4 +153,5 @@ def run_turn(message: str, conversation_id: str | None = None) -> TurnResult:
         route=result.route,
         route_reason=result.route_reason,
         sources=result.sources,
+        model=result.model,
     )

@@ -95,8 +95,7 @@ class Settings(BaseSettings):
         2, description="How many times the answer agent may re-search before replying."
     )
 
-    # --- Sign-in (email + one-time code, no passwords) --------------------
-    resend_api_key: str = Field("", description="Resend API key, for sending the code by email.")
+    # --- Sign-in (email + password) ----------------------------------------
     auth_email_domain: str = Field(
         "t2.sa", description="Only emails ending in this domain may sign in."
     )
@@ -105,13 +104,6 @@ class Settings(BaseSettings):
         description="Exact email addresses allowed to sign in even outside auth_email_domain - "
         "for testing before a real company inbox is connected.",
     )
-    auth_from_email: str = Field(
-        "T2 Assistant <onboarding@resend.dev>",
-        description="Sender address. Resend's shared onboarding@resend.dev works with no domain "
-        "setup; switch to an address on a verified domain once one is connected.",
-    )
-    otp_ttl_minutes: int = Field(10, description="How long a sign-in code stays valid.")
-    otp_max_attempts: int = Field(5, description="Wrong codes allowed before one must be resent.")
     session_ttl_days: int = Field(30, description="How long a signed-in session lasts.")
 
 

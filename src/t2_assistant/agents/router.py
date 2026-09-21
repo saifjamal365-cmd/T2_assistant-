@@ -68,9 +68,9 @@ class RouterDecision(BaseModel):
     reason: str = Field(description="One short sentence explaining the choice.")
 
 
-def decide_route(messages: list[AnyMessage]) -> RouterDecision:
+def decide_route(messages: list[AnyMessage], model: str) -> RouterDecision:
     """Ask the LLM which specialist should handle the latest message."""
-    decider = get_llm().with_structured_output(RouterDecision)
+    decider = get_llm(model).with_structured_output(RouterDecision)
     recent = messages[-_MAX_HISTORY_MESSAGES:]
     prompt: list[AnyMessage] = [SystemMessage(ROUTER_SYSTEM), *recent]
     last_error: Exception | None = None
