@@ -27,6 +27,7 @@ re-spending tokens on ones that already succeeded.
 
 from __future__ import annotations
 
+import contextvars
 import json
 import random
 import re
@@ -45,6 +46,20 @@ from t2_assistant.evaluation.dataset import EvalItem
 _MAX_RATE_LIMIT_RETRIES = 8
 _RETRY_AFTER = re.compile(r"try again in ([\d.]+)s", re.IGNORECASE)
 
+# Fewest LLM calls (router excluded) a route could ever take for a fresh,
+# standalone question - every eval item is one, since EvalItem carries no
+# conversation history. See answer.py's respond() for what a "step" is.
+_OPTIMAL_STEPS_BY_ROUTE: dict[str, int] = {
+    "answer": 2,  # spelling-fix + one successful write-answer pass
+    "greeting": 1,
+    "clarify": 1,
+    "summarise": 1,
+}
+
+
+def _optimal_steps(route: str) -> int:
+    return _OPTIMAL_STEPS_BY_ROUTE.get(route, 1)
+
 
 @dataclass
 class AnswerResult:
@@ -57,6 +72,10 @@ class AnswerResult:
     duration_ms: int
     error: str | None
     retries: int = 0
+    # None on an errored item - it never reached a ChatResult, so there is
+    # nothing to measure. See report.py's _convergence_pairs.
+    steps: int | None = None
+    optimal_steps: int | None = None
 
 
 def _chat_with_rate_limit_retry(question: str) -> tuple[ChatResult, int, int]:
@@ -104,6 +123,8 @@ def _evaluate_one(item: EvalItem) -> AnswerResult:
             duration_ms=duration_ms,
             error=None,
             retries=retries,
+            steps=result.steps,
+            optimal_steps=_optimal_steps(result.route),
         )
     except Exception as exc:  # noqa: BLE001 - one bad question must not stop the run
         duration_ms = int((time.perf_counter() - started) * 1000)
@@ -126,7 +147,20 @@ def evaluate_answers(
 ) -> list[AnswerResult]:
     results: list[AnswerResult] = []
     with ThreadPoolExecutor(max_workers=workers) as pool:
-        futures = {pool.submit(_evaluate_one, item): item for item in items}
+        # Copy the tracing context into each worker thread - MLflow tracks
+        # the active run/trace via contextvars, which a plain pool.submit()
+        # does not inherit, so without this every question's trace would be
+        # orphaned instead of attached to the run started around this call.
+        # A fresh copy per item, not one shared context reused for all of
+        # them: a single Context object can only be entered by one thread
+        # at a time, and reusing it across concurrent submissions crashes
+        # with "cannot enter context: ... already entered" the moment two
+        # workers genuinely overlap - confirmed live, workers=2 hits this on
+        # nearly every run, not just in theory.
+        futures = {
+            pool.submit(contextvars.copy_context().run, _evaluate_one, item): item
+            for item in items
+        }
         for done, future in enumerate(as_completed(futures), start=1):
             result = future.result()
             results.append(result)

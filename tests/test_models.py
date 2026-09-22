@@ -74,7 +74,9 @@ _MAX_SANE_ANSWER_CHARS = 600
 @pytest.mark.integration
 @pytest.mark.parametrize("model", AVAILABLE_MODELS)
 def test_model_answers_an_english_question_correctly(model: str) -> None:
-    reply = answer._write_answer("How many annual leave days do I get?", _LEAVE_PASSAGE, "", model)
+    reply = answer._write_answer(
+        "How many annual leave days do I get?", _LEAVE_PASSAGE, "", model, answer._StepCounter()
+    )
     assert "25" in reply
     assert "HR-0008" in reply
     assert len(reply) < _MAX_SANE_ANSWER_CHARS
@@ -84,7 +86,11 @@ def test_model_answers_an_english_question_correctly(model: str) -> None:
 @pytest.mark.parametrize("model", AVAILABLE_MODELS)
 def test_model_answers_an_arabic_question_correctly(model: str) -> None:
     reply = answer._write_answer(
-        "كم عدد أيام الإجازة السنوية التي أحصل عليها؟", _LEAVE_PASSAGE_AR, "", model
+        "كم عدد أيام الإجازة السنوية التي أحصل عليها؟",
+        _LEAVE_PASSAGE_AR,
+        "",
+        model,
+        answer._StepCounter(),
     )
     assert "25" in reply
     assert "HR-0008" in reply
@@ -95,7 +101,11 @@ def test_model_answers_an_arabic_question_correctly(model: str) -> None:
 @pytest.mark.parametrize("model", AVAILABLE_MODELS)
 def test_model_handles_a_harder_multi_passage_question(model: str) -> None:
     reply = answer._write_answer(
-        "how can get my salary before his period come", _SALARY_PASSAGES, "", model
+        "how can get my salary before his period come",
+        _SALARY_PASSAGES,
+        "",
+        model,
+        answer._StepCounter(),
     )
     assert not answer._is_decline(reply)
     assert "HR-0127" in reply
@@ -106,6 +116,10 @@ def test_model_handles_a_harder_multi_passage_question(model: str) -> None:
 @pytest.mark.parametrize("model", AVAILABLE_MODELS)
 def test_model_declines_when_the_passages_dont_cover_it(model: str) -> None:
     reply = answer._write_answer(
-        "Can I buy a pet dragon with the company credit card?", _LEAVE_PASSAGE, "", model
+        "Can I buy a pet dragon with the company credit card?",
+        _LEAVE_PASSAGE,
+        "",
+        model,
+        answer._StepCounter(),
     )
     assert answer._is_decline(reply)

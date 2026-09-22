@@ -23,6 +23,9 @@ import sys
 import time
 from pathlib import Path
 
+import mlflow
+
+from t2_assistant.config import settings
 from t2_assistant.evaluation.dataset import DATASET_PATH, load_dataset
 from t2_assistant.evaluation.quality import AnswerResult, evaluate_answers, load_previous_results
 from t2_assistant.evaluation.report import RESULTS_DIR, build_report, log_to_mlflow, write_report
@@ -66,6 +69,7 @@ def main() -> None:
         print(f"  done in {time.perf_counter() - started:.0f}s" + " " * 10)
 
     answer_results = []
+    run_id: str | None = None
     if not args.skip_answers:
         to_run = items
         reused: list[AnswerResult] = []
@@ -83,7 +87,17 @@ def main() -> None:
         def _answer_progress(_result: object, done: int, total: int) -> None:
             print(f"  {done}/{total}", end="\r", file=sys.stderr)
 
-        new_results = evaluate_answers(to_run, workers=args.workers, on_result=_answer_progress)
+        # Opened here, not just around the later metric-logging step, so
+        # each question's own trace (chat() is @mlflow.trace'd) attaches to
+        # this run while it's actually being asked - not after the fact,
+        # when there would be nothing left to attach it to. Reused (resumed)
+        # results don't call chat() again, so they have no fresh trace to
+        # attach either way - only newly-run questions show up under it.
+        mlflow.set_tracking_uri(settings.mlflow_tracking_uri)
+        mlflow.set_experiment(settings.mlflow_experiment)
+        with mlflow.start_run(run_name="evaluation") as run:
+            run_id = run.info.run_id
+            new_results = evaluate_answers(to_run, workers=args.workers, on_result=_answer_progress)
         answer_results = reused + new_results
         print(f"  done in {time.perf_counter() - started:.0f}s" + " " * 10)
 
@@ -100,7 +114,7 @@ def main() -> None:
     print(f"\nFull report: {report_path}")
 
     if answer_results:
-        log_to_mlflow(report)
+        log_to_mlflow(report, run_id=run_id)
         print("Metrics logged to MLflow (run: evaluation).")
 
 

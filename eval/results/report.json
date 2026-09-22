@@ -1,74 +1,92 @@
 {
   "metrics": {
-    "dataset_size": 708,
-    "answerable_count": 592,
-    "unanswerable_count": 116,
-    "retrieval_recall_at_k": 99.2,
-    "answer_accuracy_answerable": 0.0,
-    "honesty_rate_unanswerable": 0.0,
-    "false_answer_rate_unanswerable": 100.0,
-    "overall_accuracy": 0.0,
+    "dataset_size": 20,
+    "answerable_count": 18,
+    "unanswerable_count": 2,
+    "retrieval_recall_at_k": 88.9,
+    "answer_accuracy_answerable": 88.9,
+    "honesty_rate_unanswerable": 100.0,
+    "false_answer_rate_unanswerable": 0.0,
+    "overall_accuracy": 90.0,
     "error_rate": 0.0,
-    "avg_duration_ms": null,
-    "p95_duration_ms": null
+    "avg_duration_ms": 25064,
+    "p95_duration_ms": 53294,
+    "avg_steps": 2.3,
+    "avg_optimal_steps": 2,
+    "convergence_score": 0.94,
+    "convergence_sample_size": 20
   },
   "by_family": {
     "faq_exact": {
-      "total": 296,
-      "correct": 0
+      "total": 11,
+      "correct": 10
     },
     "faq_paraphrased": {
-      "total": 296,
-      "correct": 0
+      "total": 7,
+      "correct": 6
     },
     "unanswerable": {
-      "total": 116,
-      "correct": 0
+      "total": 2,
+      "correct": 2
     }
   },
   "by_department": {
-    "HR": {
-      "total": 180,
-      "correct": 0
-    },
-    "IT": {
-      "total": 112,
-      "correct": 0
+    "LEG": {
+      "total": 4,
+      "correct": 2
     },
     "FIN": {
-      "total": 80,
-      "correct": 0
+      "total": 2,
+      "correct": 2
+    },
+    "HR": {
+      "total": 6,
+      "correct": 6
     },
     "FAC": {
-      "total": 72,
-      "correct": 0
+      "total": 3,
+      "correct": 3
     },
-    "LEG": {
-      "total": 68,
-      "correct": 0
-    },
-    "OPS": {
-      "total": 44,
-      "correct": 0
+    "IT": {
+      "total": 2,
+      "correct": 2
     },
     "MKT": {
-      "total": 20,
-      "correct": 0
-    },
-    "PRC": {
-      "total": 16,
-      "correct": 0
+      "total": 1,
+      "correct": 1
     }
   },
   "by_language": {
     "en": {
-      "total": 354,
-      "correct": 0
+      "total": 8,
+      "correct": 8
     },
     "ar": {
-      "total": 354,
-      "correct": 0
+      "total": 12,
+      "correct": 10
     }
   },
-  "route_counts": {}
+  "convergence_by_family": {
+    "faq_exact": {
+      "n": 11,
+      "avg_steps": 2,
+      "avg_optimal_steps": 2,
+      "convergence_score": 1.0
+    },
+    "faq_paraphrased": {
+      "n": 7,
+      "avg_steps": 2,
+      "avg_optimal_steps": 2,
+      "convergence_score": 1.0
+    },
+    "unanswerable": {
+      "n": 2,
+      "avg_steps": 5,
+      "avg_optimal_steps": 2,
+      "convergence_score": 0.4
+    }
+  },
+  "route_counts": {
+    "answer": 20
+  }
 }

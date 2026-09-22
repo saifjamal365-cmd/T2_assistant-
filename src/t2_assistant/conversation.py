@@ -36,6 +36,11 @@ class ChatResult:
     route_reason: str
     sources: list[dict[str, object]]
     model: str
+    # LLM calls the chosen specialist needed (router excluded - a fixed cost,
+    # see graph.py). Only the answer route ever varies from 1; the default
+    # covers greeting/summarise/clarify, none of which set it explicitly -
+    # see answer.py's respond() for what counts as a step.
+    steps: int = 1
 
 
 @dataclass
@@ -50,6 +55,7 @@ class TurnResult:
     route_reason: str
     sources: list[dict[str, object]]
     model: str
+    steps: int = 1
 
 
 @mlflow.trace(span_type=SpanType.AGENT)
@@ -91,6 +97,13 @@ def chat(
 
     last = final_state["messages"][-1]
     assert isinstance(last, AIMessage)  # the specialist always adds an AI reply
+    steps = last.additional_kwargs.get("steps", 1)
+
+    # A second tag, after the graph runs: unlike model/router_model above,
+    # this isn't known until the specialist finishes, so it can't be set
+    # up front. update_current_trace merges into the existing tags rather
+    # than replacing them, so model/router_model/user stay intact.
+    mlflow.update_current_trace(tags={"steps": str(steps)})
 
     return ChatResult(
         reply=str(last.content),
@@ -98,6 +111,7 @@ def chat(
         route_reason=final_state["route_reason"] or "",
         sources=last.additional_kwargs.get("passages", []),
         model=resolved_model,
+        steps=steps,
     )
 
 
@@ -162,4 +176,5 @@ def run_turn(
         route_reason=result.route_reason,
         sources=result.sources,
         model=result.model,
+        steps=result.steps,
     )

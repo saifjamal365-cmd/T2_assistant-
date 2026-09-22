@@ -30,12 +30,19 @@ grounded the answer, not just the document id. Each passage also carries
 `highlights`: the specific sentence(s) in it closest in meaning to the answer,
 found with the same local embedding model used for search - no extra model
 call, so this costs nothing beyond a few short CPU encodes.
+
+`additional_kwargs["steps"]` carries how many of the LLM calls above (steps
+1, 2, 4, 5, 6) actually ran for this reply - a fresh question that's answered
+on the first pass is 2 (spelling-fix + one write); a harder one that retries
+and gets judged can reach 6. Used to measure how often the retry/judge
+machinery triggers versus the minimum possible - see
+evaluation/quality.py's `_optimal_steps`.
 """
 
 from __future__ import annotations
 
 import re
-from dataclasses import asdict
+from dataclasses import asdict, dataclass
 
 from langchain_core.messages import AIMessage, AnyMessage, HumanMessage, SystemMessage
 
@@ -48,6 +55,15 @@ _DOC_ID = re.compile(r"\b[A-Z]{2,4}-\d{3,4}\b")
 _SOURCES_LINE = re.compile(r"\n?(?:Sources?|المصدر|المصادر)\s*:.*$", re.IGNORECASE | re.DOTALL)
 _SENTENCE_SPLIT = re.compile(r"(?<=[.!?؟])\s+")
 _MIN_HIGHLIGHT_CHARS = 15  # skips short section headers like "3. Policy"
+
+
+@dataclass
+class _StepCounter:
+    """LLM calls made by one respond() call so far - created fresh per call and
+    threaded through the helpers below, never shared/global: evaluate_answers()
+    runs many respond() calls concurrently on a thread pool."""
+
+    count: int = 0
 
 
 def _cited_doc_ids(answer: str) -> set[str]:
@@ -204,12 +220,13 @@ def _last_user_text(messages: list[AnyMessage]) -> str:
     return ""
 
 
-def _correct_spelling(text: str, model: str) -> str:
+def _correct_spelling(text: str, model: str, steps: _StepCounter) -> str:
     """Fix typos before anything else sees the message - a single, focused
     step, kept separate from standalone-question rewriting (which already has
     several other jobs to do) so it isn't competing for the model's attention."""
     if not text.strip():
         return text
+    steps.count += 1
     reply = get_llm(model).invoke([SystemMessage(_SPELLCHECK_SYSTEM), HumanMessage(text)])
     return str(reply.content).strip() or text
 
@@ -222,13 +239,16 @@ def _transcript(messages: list[AnyMessage]) -> str:
     )
 
 
-def _standalone_question(messages: list[AnyMessage], transcript: str, model: str) -> str:
+def _standalone_question(
+    messages: list[AnyMessage], transcript: str, model: str, steps: _StepCounter
+) -> str:
     """The latest question, with earlier context folded in (for follow-ups)."""
     latest = _last_user_text(messages)
     earlier = [m for m in messages if isinstance(m, HumanMessage | AIMessage)][:-1]
     if not earlier:
         return latest
 
+    steps.count += 1
     reply = get_llm(model).invoke([SystemMessage(_STANDALONE_SYSTEM), HumanMessage(transcript)])
     return str(reply.content).strip() or latest
 
@@ -241,7 +261,9 @@ def _format_passages(passages: list[Passage]) -> str:
     return "\n\n".join(blocks)
 
 
-def _write_answer(question: str, passages: list[Passage], transcript: str, model: str) -> str:
+def _write_answer(
+    question: str, passages: list[Passage], transcript: str, model: str, steps: _StepCounter
+) -> str:
     if not passages:
         return _dont_know_for(question)
     prompt = [
@@ -254,11 +276,13 @@ def _write_answer(question: str, passages: list[Passage], transcript: str, model
         ),
         HumanMessage(question),
     ]
+    steps.count += 1
     reply = get_llm(model).invoke(prompt)
     return str(reply.content).strip()
 
 
-def _better_query(question: str, model: str) -> str:
+def _better_query(question: str, model: str, steps: _StepCounter) -> str:
+    steps.count += 1
     reply = get_llm(model).invoke([SystemMessage(_REPHRASE_SYSTEM), HumanMessage(question)])
     return str(reply.content).strip() or question
 
@@ -284,7 +308,7 @@ question."""
 
 
 def _judge_before_declining(
-    question: str, passages: list[Passage], transcript: str, model: str
+    question: str, passages: list[Passage], transcript: str, model: str, steps: _StepCounter
 ) -> str:
     """A last, careful look before giving up - the one place a second LLM
     pass is worth its extra cost, since a wrong "I don't know" is the failure
@@ -301,17 +325,19 @@ def _judge_before_declining(
         ),
         HumanMessage(question),
     ]
+    steps.count += 1
     reply = get_llm(model).invoke(prompt)
     return str(reply.content).strip()
 
 
 def respond(messages: list[AnyMessage], model: str) -> AIMessage:
     """Answer the latest question from the knowledge base."""
-    corrected = _correct_spelling(_last_user_text(messages), model)
+    steps = _StepCounter()
+    corrected = _correct_spelling(_last_user_text(messages), model, steps)
     fixed_messages = [*messages[:-1], HumanMessage(corrected)]
 
     transcript = _transcript(fixed_messages)
-    question = _standalone_question(fixed_messages, transcript, model)
+    question = _standalone_question(fixed_messages, transcript, model, steps)
 
     query = question
     answer = _dont_know_for(question)
@@ -324,15 +350,15 @@ def respond(messages: list[AnyMessage], model: str) -> AIMessage:
             existing = seen_passages.get(passage.doc_id)
             if existing is None or passage.score > existing.score:
                 seen_passages[passage.doc_id] = passage
-        answer = _write_answer(question, passages, transcript, model)
+        answer = _write_answer(question, passages, transcript, model, steps)
         if not _is_decline(answer):
             break
         if attempt + 1 < settings.max_retrieval_tries:
-            query = _better_query(question, model)
+            query = _better_query(question, model, steps)
 
     if _is_decline(answer):
         last_passages = list(seen_passages.values())
-        answer = _judge_before_declining(question, last_passages, transcript, model)
+        answer = _judge_before_declining(question, last_passages, transcript, model, steps)
 
     if _is_decline(answer):
         # The model is asked to match the question's language for this exact
@@ -347,5 +373,7 @@ def respond(messages: list[AnyMessage], model: str) -> AIMessage:
     passages_out = [
         {**asdict(p), "highlights": _best_highlights(answer, p.text)} for p in sources
     ]
-    kwargs = {"passages": passages_out} if passages_out else {}
+    kwargs: dict[str, object] = {"steps": steps.count}
+    if passages_out:
+        kwargs["passages"] = passages_out
     return AIMessage(content=answer, additional_kwargs=kwargs)

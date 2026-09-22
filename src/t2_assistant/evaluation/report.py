@@ -23,6 +23,20 @@ def _pct(numerator: int, denominator: int) -> float:
     return round(100 * numerator / denominator, 1) if denominator else 0.0
 
 
+def _convergence_pairs(answers: list[AnswerResult]) -> list[tuple[int, int]]:
+    """(steps, optimal_steps) for runs that actually exercised the answer
+    agent's retry/judge machinery. greeting/clarify/summarise always score
+    1.0 by construction (no loops, no branches - see answer.py's respond())
+    and would dilute the one signal this is meant to expose; an errored run
+    has no step count at all."""
+    pairs: list[tuple[int, int]] = []
+    for a in answers:
+        steps, optimal = a.steps, a.optimal_steps
+        if a.error is None and a.route == "answer" and steps and optimal:
+            pairs.append((steps, optimal))
+    return pairs
+
+
 def build_report(
     items: list[EvalItem],
     retrieval: list[RetrievalResult],
@@ -75,7 +89,29 @@ def build_report(
         if result and result.correct:
             row["correct"] += 1
 
+    # breakdown by family, for convergence specifically - same answer-route-
+    # only eligibility as _convergence_pairs, just grouped instead of flat
+    family_pairs: dict[str, list[tuple[int, int]]] = {}
+    for item in items:
+        result = answer_by_id.get(item.id)
+        if result is None or result.error is not None or result.route != "answer":
+            continue
+        steps, optimal = result.steps, result.optimal_steps
+        if not steps or not optimal:
+            continue
+        family_pairs.setdefault(item.family, []).append((steps, optimal))
+    convergence_by_family = {
+        family: {
+            "n": len(pairs),
+            "avg_steps": round(statistics.mean(s for s, _ in pairs), 2),
+            "avg_optimal_steps": round(statistics.mean(o for _, o in pairs), 2),
+            "convergence_score": round(statistics.mean(o / s for s, o in pairs), 3),
+        }
+        for family, pairs in family_pairs.items()
+    }
+
     route_counts = Counter(a.route for a in answers)
+    convergence_pairs = _convergence_pairs(answers)
 
     metrics = {
         "dataset_size": len(items),
@@ -91,6 +127,22 @@ def build_report(
         "p95_duration_ms": (
             round(statistics.quantiles(durations, n=20)[18]) if len(durations) >= 20 else None
         ),
+        "avg_steps": (
+            round(statistics.mean(s for s, _ in convergence_pairs), 2)
+            if convergence_pairs
+            else None
+        ),
+        "avg_optimal_steps": (
+            round(statistics.mean(o for _, o in convergence_pairs), 2)
+            if convergence_pairs
+            else None
+        ),
+        "convergence_score": (
+            round(statistics.mean(o / s for s, o in convergence_pairs), 3)
+            if convergence_pairs
+            else None
+        ),
+        "convergence_sample_size": len(convergence_pairs),
     }
 
     return {
@@ -98,6 +150,7 @@ def build_report(
         "by_family": by_family,
         "by_department": by_department,
         "by_language": by_language,
+        "convergence_by_family": convergence_by_family,
         "route_counts": dict(route_counts),
         "_by_id": by_id,  # not written to the report file, used by callers
     }
@@ -149,12 +202,37 @@ def write_report(report: dict[str, Any], answers: list[AnswerResult]) -> Path:
         f"| Error rate | {m['error_rate']}% | NFR-07 |",
         f"| Average answer time | {m['avg_duration_ms']} ms | NFR-01 |",
         f"| 95th percentile answer time | {m['p95_duration_ms']} ms | NFR-01 |",
+        f"| Convergence score (answer route) | {m['convergence_score']} | — |",
     ]
     by_department = dict(sorted(report["by_department"].items()))
     by_language = dict(sorted(report["by_language"].items()))
     lines += counts_table("By question type", "Family", report["by_family"])
     lines += counts_table("By department (answerable questions)", "Department", by_department)
     lines += counts_table("By language (NFR-05, bilingual quality)", "Language", by_language)
+
+    lines += [
+        "",
+        "## Convergence (answer-agent efficiency)",
+        "",
+        "How many LLM calls the answer agent actually needed versus the fewest "
+        "it could ever need for a fresh question - the router's own fixed call "
+        "is excluded, since it never varies. 1.0 means no wasted retries or "
+        "judge passes; lower means the retry/judge machinery is triggering "
+        "more than strictly necessary.",
+        "",
+        "| Avg steps | Avg optimal steps | Convergence score | Sample size |",
+        "|---|---|---|---|",
+        f"| {m['avg_steps']} | {m['avg_optimal_steps']} | {m['convergence_score']} "
+        f"| {m['convergence_sample_size']} |",
+        "",
+        "| Family | N | Avg steps | Avg optimal | Convergence |",
+        "|---|---|---|---|---|",
+    ]
+    for family, row in report["convergence_by_family"].items():
+        lines.append(
+            f"| {family} | {row['n']} | {row['avg_steps']} | {row['avg_optimal_steps']} "
+            f"| {row['convergence_score']} |"
+        )
 
     lines += ["", "## Routes chosen", "", "| Route | Count |", "|---|---|"]
     for route, count in sorted(report["route_counts"].items(), key=lambda kv: -kv[1]):
@@ -165,10 +243,20 @@ def write_report(report: dict[str, Any], answers: list[AnswerResult]) -> Path:
     return report_path
 
 
-def log_to_mlflow(report: dict[str, Any]) -> None:
+def log_to_mlflow(report: dict[str, Any], run_id: str | None = None) -> None:
+    """Log the summary metrics and report files to MLflow.
+
+    `run_id`, when given, logs into that already-open run instead of
+    starting a new one - run.py passes the id of the run it opened around
+    the answer pass itself, so each question's trace (see quality.py's
+    evaluate_answers) and this run's summary numbers end up in the same
+    place, and the run can be expanded to see the individual questions
+    behind it. Left as None, this creates its own fresh run, exactly as
+    before - unchanged for any other caller.
+    """
     mlflow.set_tracking_uri(settings.mlflow_tracking_uri)
     mlflow.set_experiment(settings.mlflow_experiment)
-    with mlflow.start_run(run_name="evaluation"):
+    with mlflow.start_run(run_id=run_id, run_name="evaluation" if run_id is None else None):
         for key, value in report["metrics"].items():
             if isinstance(value, int | float):
                 mlflow.log_metric(key, value)

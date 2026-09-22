@@ -3,8 +3,12 @@
 from __future__ import annotations
 
 import pytest
+from langchain_core.messages import AIMessage
 
 from t2_assistant import conversation, store
+from t2_assistant.agents import answer, graph, greeting
+from t2_assistant.agents.router import RouterDecision
+from t2_assistant.agents.state import Route
 from t2_assistant.config import settings
 from t2_assistant.conversation import ChatResult
 
@@ -85,3 +89,36 @@ def test_run_turn_threads_and_persists_the_chosen_model(monkeypatch: pytest.Monk
     without_model = conversation.run_turn("another question")
     assert seen_models[-1] is None
     assert without_model.model == settings.llm_model
+
+
+def _route_to(monkeypatch: pytest.MonkeyPatch, route: Route) -> None:
+    # graph.py imported decide_route by name, so patch it on the graph module -
+    # same pattern as test_graph.py's own _route_to
+    monkeypatch.setattr(
+        graph,
+        "decide_route",
+        lambda _messages, _model: RouterDecision(route=route, reason=f"forced {route}"),
+    )
+
+
+def test_chat_reads_steps_from_the_specialists_reply(monkeypatch: pytest.MonkeyPatch) -> None:
+    _route_to(monkeypatch, "answer")
+    monkeypatch.setattr(
+        answer, "respond", lambda _messages, _model: AIMessage("x", additional_kwargs={"steps": 3})
+    )
+
+    result = conversation.chat("a policy question")
+
+    assert result.steps == 3
+
+
+def test_chat_defaults_steps_to_one_when_the_specialist_omits_it(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    _route_to(monkeypatch, "greeting")
+    # a real greeting reply has no additional_kwargs at all - only answer.py sets "steps"
+    monkeypatch.setattr(greeting, "respond", lambda _messages, _model: AIMessage("hi"))
+
+    result = conversation.chat("hey")
+
+    assert result.steps == 1
