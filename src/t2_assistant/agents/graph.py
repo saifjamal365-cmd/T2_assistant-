@@ -43,19 +43,19 @@ def _router_node(state: AgentState) -> dict[str, object]:
 
 
 def _greeting_node(state: AgentState) -> dict[str, object]:
-    return {"messages": [greeting.respond(state["messages"], state["model"])]}
+    return {"messages": [greeting.respond(state["messages"], state["answer_model"])]}
 
 
 def _answer_node(state: AgentState) -> dict[str, object]:
-    return {"messages": [answer.respond(state["messages"], state["model"])]}
+    return {"messages": [answer.respond(state["messages"], state["answer_model"])]}
 
 
 def _summarise_node(state: AgentState) -> dict[str, object]:
-    return {"messages": [summarise.respond(state["messages"], state["model"])]}
+    return {"messages": [summarise.respond(state["messages"], state["answer_model"])]}
 
 
 def _clarify_node(state: AgentState) -> dict[str, object]:
-    return {"messages": [clarify.respond(state["messages"], state["model"])]}
+    return {"messages": [clarify.respond(state["messages"], state["answer_model"])]}
 
 
 # ---- the branch after the router -------------------------------------

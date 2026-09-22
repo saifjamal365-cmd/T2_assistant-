@@ -63,8 +63,11 @@ def chat(
     """Answer one user message.
 
     `history` is the earlier conversation (list of messages), or None for a new
-    conversation. `model` picks the Groq model for the whole turn (router and
-    whichever specialist runs); omitted, it falls back to settings.llm_model.
+    conversation. `model` picks the Groq model for whichever specialist writes
+    the visible reply; omitted, it falls back to settings.llm_model. Routing
+    itself always uses that same fixed default, never the caller's choice -
+    see graph.py's _router_node - so the trace is tagged with both, under
+    separate keys, rather than leaving the router's model implicit.
     `user_email`, when known, tags the trace with who asked.
     """
     resolved_model = model or settings.llm_model
@@ -73,12 +76,17 @@ def chat(
     # Tag the trace before the graph runs, so even a mid-turn failure is
     # still attributable to a model and a user.
     mlflow.update_current_trace(
-        tags={"model": resolved_model},
+        tags={"model": resolved_model, "router_model": settings.llm_model},
         metadata={"mlflow.trace.user": user_email} if user_email else None,
     )
 
     final_state = compiled_graph.invoke(
-        {"messages": messages, "route": None, "route_reason": None, "model": resolved_model}
+        {
+            "messages": messages,
+            "route": None,
+            "route_reason": None,
+            "answer_model": resolved_model,
+        }
     )
 
     last = final_state["messages"][-1]

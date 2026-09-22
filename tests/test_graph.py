@@ -52,7 +52,7 @@ def test_router_choice_selects_matching_specialist(
             "messages": [HumanMessage("anything")],
             "route": None,
             "route_reason": None,
-            "model": "test-model",
+            "answer_model": "test-model",
         }
     )
 
@@ -69,7 +69,7 @@ def test_history_is_preserved(monkeypatch: pytest.MonkeyPatch, fake_agents: None
             "messages": [HumanMessage("hi"), AIMessage("hello"), HumanMessage("hi again")],
             "route": None,
             "route_reason": None,
-            "model": "test-model",
+            "answer_model": "test-model",
         }
     )
 

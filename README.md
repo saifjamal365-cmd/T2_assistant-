@@ -75,7 +75,10 @@ picks the Groq model for that turn (`openai/gpt-oss-120b`,
 battery in `tests/test_models.py`, not just listed on Groq's docs; several
 other candidates looked fine in isolation but failed it, see that file);
 omitted, it falls back to `LLM_MODEL`, and the model used is echoed back in
-the response and tagged on the turn's MLflow trace. `GET /conversations`
+the response and tagged on the turn's MLflow trace as `model`. Routing
+itself always runs on the fixed default regardless of this choice, tagged
+separately as `router_model` so both are visible on the trace, not just the
+one implied by `model`. `GET /conversations`
 lists past conversations and `GET /conversations/{id}` returns one with all
 its messages. `GET /runs`
 lists past requests each with a link to its MLflow trace, and
