@@ -33,18 +33,21 @@ def test_run_turn_saves_both_turns_and_passes_history(monkeypatch: pytest.Monkey
         )
 
     monkeypatch.setattr(conversation, "chat", fake_chat)
+    email = "conv-test@t2.sa"
 
-    first = conversation.run_turn("how many leave days?")
+    first = conversation.run_turn("how many leave days?", user_email=email)
     assert seen_history[0] == []  # new conversation, no history
 
     assert first.run_id  # a run was recorded
 
-    second = conversation.run_turn("what about part-time?", first.conversation_id)
+    second = conversation.run_turn(
+        "what about part-time?", first.conversation_id, user_email=email
+    )
     assert second.conversation_id == first.conversation_id
     # the second turn was given the first turn's two messages as history
     assert len(seen_history[1]) == 2
 
-    saved = store.get_conversation(first.conversation_id)
+    saved = store.get_conversation(first.conversation_id, email)
     assert saved is not None
     assert [m.content for m in saved.messages] == [
         "how many leave days?",
@@ -60,8 +63,9 @@ def test_run_turn_starts_fresh_for_unknown_id(monkeypatch: pytest.MonkeyPatch) -
         "chat",
         lambda message, history=None, **kw: ChatResult("ok", "greeting", "hi", [], "test-model"),
     )
-    result = conversation.run_turn("hello", conversation_id="not-a-real-id")
-    assert store.conversation_exists(result.conversation_id)
+    email = "conv-test@t2.sa"
+    result = conversation.run_turn("hello", conversation_id="not-a-real-id", user_email=email)
+    assert store.conversation_exists(result.conversation_id, email)
 
 
 def test_run_turn_threads_and_persists_the_chosen_model(monkeypatch: pytest.MonkeyPatch) -> None:
@@ -79,14 +83,15 @@ def test_run_turn_threads_and_persists_the_chosen_model(monkeypatch: pytest.Monk
         return ChatResult(reply="ok", route="answer", route_reason="q", sources=[], model=resolved)
 
     monkeypatch.setattr(conversation, "chat", fake_chat)
+    email = "conv-test@t2.sa"
 
-    with_model = conversation.run_turn("a question", model="qwen/qwen3.8-27b")
+    with_model = conversation.run_turn("a question", model="qwen/qwen3.8-27b", user_email=email)
     assert seen_models[-1] == "qwen/qwen3.8-27b"
-    saved = store.get_run(with_model.run_id)
+    saved = store.get_run(with_model.run_id, email)
     assert saved is not None
     assert saved.model == "qwen/qwen3.8-27b"
 
-    without_model = conversation.run_turn("another question")
+    without_model = conversation.run_turn("another question", user_email=email)
     assert seen_models[-1] is None
     assert without_model.model == settings.llm_model
 

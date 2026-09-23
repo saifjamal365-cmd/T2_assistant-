@@ -40,9 +40,10 @@ def trace_url(trace_id: str | None) -> str | None:
     return f"{base}/#/experiments/{experiment_id}/traces?selectedEvaluationId={trace_id}"
 
 
-def record_feedback(run_id: str, helpful: bool, comment: str | None) -> bool:
-    """Save a rating for a run and attach it to its trace. False if the run is unknown."""
-    run = store.get_run(run_id)
+def record_feedback(run_id: str, helpful: bool, comment: str | None, user_email: str) -> bool:
+    """Save a rating for a run and attach it to its trace. False if the run
+    is unknown, or belongs to someone other than `user_email`."""
+    run = store.get_run(run_id, user_email)
     if run is None:
         return False
 

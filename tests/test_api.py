@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import uuid
+
 import pytest
 from fastapi.testclient import TestClient
 
@@ -37,9 +39,9 @@ def test_chat_shape_and_persistence(monkeypatch: pytest.MonkeyPatch) -> None:
         conversation_id: str | None = None,
         *,
         model: str | None = None,
-        user_email: str | None = None,
+        user_email: str = "test@t2.sa",
     ) -> TurnResult:
-        cid = conversation_id or store.create_conversation(message)
+        cid = conversation_id or store.create_conversation(message, user_email)
         store.add_message(cid, "user", message)
         store.add_message(cid, "assistant", "hello!")
         run_id = store.save_run(
@@ -91,9 +93,9 @@ def test_chat_echoes_a_valid_chosen_model(monkeypatch: pytest.MonkeyPatch) -> No
         conversation_id: str | None = None,
         *,
         model: str | None = None,
-        user_email: str | None = None,
+        user_email: str = "test@t2.sa",
     ) -> TurnResult:
-        cid = conversation_id or store.create_conversation(message)
+        cid = conversation_id or store.create_conversation(message, user_email)
         resolved = model or "openai/gpt-oss-120b"
         run_id = store.save_run(
             conversation_id=cid,
@@ -200,8 +202,6 @@ def test_public_routes_work_without_a_session() -> None:
 
 
 def test_sign_in_flow_end_to_end() -> None:
-    import uuid
-
     anon = TestClient(app)
     email = f"flow-test-{uuid.uuid4().hex[:10]}@t2.sa"
 
@@ -229,3 +229,70 @@ def test_disallowed_email_cannot_sign_in() -> None:
     anon = TestClient(app)
     response = anon.post("/auth/login", json={"email": "someone@gmail.com", "password": "whatever"})
     assert response.status_code == 403
+
+
+def _authed_client(email: str) -> TestClient:
+    c = TestClient(app)
+    c.cookies.set("t2_session", store.create_session(email))
+    return c
+
+
+def test_user_cannot_see_or_touch_another_users_conversation() -> None:
+    email_a = f"a-{uuid.uuid4().hex[:8]}@t2.sa"
+    email_b = f"b-{uuid.uuid4().hex[:8]}@t2.sa"
+    client_a, client_b = _authed_client(email_a), _authed_client(email_b)
+    cid = store.create_conversation("A's private chat", email_a)
+
+    assert client_b.get(f"/conversations/{cid}").status_code == 404
+    assert client_b.patch(f"/conversations/{cid}", json={"title": "hijacked"}).status_code == 404
+    assert client_b.put(f"/conversations/{cid}/folder", json={"folder_id": None}).status_code == 404
+    assert client_b.delete(f"/conversations/{cid}").status_code == 404
+    assert cid not in {c["id"] for c in client_b.get("/conversations").json()}
+
+    assert client_a.get(f"/conversations/{cid}").status_code == 200  # still A's, untouched
+
+
+def test_user_cannot_see_or_touch_another_users_folder() -> None:
+    email_a = f"a-{uuid.uuid4().hex[:8]}@t2.sa"
+    email_b = f"b-{uuid.uuid4().hex[:8]}@t2.sa"
+    client_a, client_b = _authed_client(email_a), _authed_client(email_b)
+    fid = store.create_folder("A's folder", email_a)
+
+    assert client_b.patch(f"/folders/{fid}", json={"name": "hijacked"}).status_code == 404
+    assert client_b.delete(f"/folders/{fid}").status_code == 404
+    assert fid not in {f["id"] for f in client_b.get("/folders").json()}
+    assert fid in {f["id"] for f in client_a.get("/folders").json()}
+
+
+def test_user_cannot_move_a_conversation_into_another_users_folder() -> None:
+    email_a = f"a-{uuid.uuid4().hex[:8]}@t2.sa"
+    email_b = f"b-{uuid.uuid4().hex[:8]}@t2.sa"
+    client_a = _authed_client(email_a)
+    cid = store.create_conversation("A's chat", email_a)
+    other_folder = store.create_folder("B's folder", email_b)
+
+    response = client_a.put(f"/conversations/{cid}/folder", json={"folder_id": other_folder})
+    assert response.status_code == 404
+
+
+def test_user_cannot_see_or_touch_another_users_run() -> None:
+    email_a = f"a-{uuid.uuid4().hex[:8]}@t2.sa"
+    email_b = f"b-{uuid.uuid4().hex[:8]}@t2.sa"
+    client_a, client_b = _authed_client(email_a), _authed_client(email_b)
+    cid = store.create_conversation("A's chat", email_a)
+    run_id = store.save_run(
+        conversation_id=cid,
+        user_message="q",
+        route="answer",
+        route_reason="r",
+        reply="a",
+        model="openai/gpt-oss-120b",
+        trace_id=None,
+        duration_ms=10,
+    )
+
+    assert client_b.get(f"/runs/{run_id}").status_code == 404
+    assert client_b.post(f"/runs/{run_id}/feedback", json={"helpful": True}).status_code == 404
+    assert run_id not in {r["id"] for r in client_b.get("/runs").json()}
+
+    assert client_a.get(f"/runs/{run_id}").status_code == 200

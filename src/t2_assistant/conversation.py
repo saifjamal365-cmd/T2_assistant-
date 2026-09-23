@@ -135,16 +135,19 @@ def run_turn(
     conversation_id: str | None = None,
     *,
     model: str | None = None,
-    user_email: str | None = None,
+    user_email: str,
 ) -> TurnResult:
     """Answer a message inside a conversation, saving the turn and a run record.
 
-    Starts a new conversation when `conversation_id` is None.
+    Starts a new conversation when `conversation_id` is None - also when it
+    names a conversation that exists but belongs to someone else: the same
+    "unknown id" behaviour, on purpose, since a non-owner should never learn
+    a conversation exists at all.
     """
-    if conversation_id is None or not store.conversation_exists(conversation_id):
-        conversation_id = store.create_conversation(_title_from(message))
+    if conversation_id is None or not store.conversation_exists(conversation_id, user_email):
+        conversation_id = store.create_conversation(_title_from(message), user_email)
 
-    history = _to_messages(store.get_messages(conversation_id))
+    history = _to_messages(store.get_messages(conversation_id, user_email))
 
     started = time.perf_counter()
     result = chat(message, history=history, model=model, user_email=user_email)

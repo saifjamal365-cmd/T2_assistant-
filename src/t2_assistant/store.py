@@ -3,7 +3,7 @@
 Until now every request stood alone. This module keeps them in a small SQLite
 file (settings.store_db) with seven tables:
 
-    conversations   one row per chat thread (id, title, folder, timestamps)
+    conversations   one row per chat thread (id, title, owner, folder, timestamps)
     folders         one row per user-created folder, to group conversations
     messages        every user and assistant turn, in order
     runs            one row per request: the route taken, timing, trace id
@@ -13,6 +13,14 @@ file (settings.store_db) with seven tables:
     users           a registered email + its (hashed) password
     sessions        a signed-in session (email -> session token), created
                      once a password is verified
+
+conversations and folders each carry a `user_email` owner - every function
+that reads or changes one takes the caller's email and only ever touches
+rows that belong to them; a non-owner gets exactly the same `None`/`False`
+a missing id would. `runs` (and `sources`, which hangs off a run) carry no
+email of their own - ownership is derived by joining back to the run's
+conversation, since a run can never outlive the conversation it belongs to
+(see delete_conversation).
 
 Plain `sqlite3` - no ORM. Each call opens its own short-lived connection, which
 is simple and safe when FastAPI runs endpoints on different threads.
@@ -28,6 +36,10 @@ from dataclasses import dataclass
 from datetime import UTC, datetime, timedelta
 
 from t2_assistant.config import settings
+
+# Backfill target for conversations/folders that predate per-user ownership -
+# a real, already-allowed test account (AUTH_ALLOWED_TEST_EMAILS).
+_LEGACY_OWNER_EMAIL = "saifjamal365@gmail.com"
 
 _SCHEMA = """
 CREATE TABLE IF NOT EXISTS folders (
@@ -122,15 +134,23 @@ def _connect() -> sqlite3.Connection:
             ("sources", "highlights TEXT NOT NULL DEFAULT '[]'"),
             ("conversations", "folder_id TEXT REFERENCES folders(id)"),
             ("runs", f"model TEXT NOT NULL DEFAULT '{settings.llm_model}'"),
+            ("conversations", f"user_email TEXT NOT NULL DEFAULT '{_LEGACY_OWNER_EMAIL}'"),
+            ("folders", f"user_email TEXT NOT NULL DEFAULT '{_LEGACY_OWNER_EMAIL}'"),
         ):
             try:
                 connection.execute(f"ALTER TABLE {table} ADD COLUMN {column}")
             except sqlite3.OperationalError:
                 pass  # already there
-        # only safe to create now: folder_id is guaranteed to exist by this point,
-        # whether the table was just created above or just migrated
+        # only safe to create now: folder_id/user_email are guaranteed to exist
+        # by this point, whether the table was just created above or migrated
         connection.execute(
             "CREATE INDEX IF NOT EXISTS ix_conversations_folder ON conversations(folder_id)"
+        )
+        connection.execute(
+            "CREATE INDEX IF NOT EXISTS ix_conversations_user_email ON conversations(user_email)"
+        )
+        connection.execute(
+            "CREATE INDEX IF NOT EXISTS ix_folders_user_email ON folders(user_email)"
         )
         connection.commit()
         _schema_ready = True
@@ -204,39 +224,42 @@ class Source:
 # ---- conversations -------------------------------------------------
 
 
-def create_conversation(title: str) -> str:
-    """Start a new conversation and return its id."""
+def create_conversation(title: str, user_email: str) -> str:
+    """Start a new conversation, owned by `user_email`, and return its id."""
     conversation_id = uuid.uuid4().hex
     now = _now()
     with _connect() as connection:
         connection.execute(
-            "INSERT INTO conversations (id, title, created_at, updated_at) VALUES (?, ?, ?, ?)",
-            (conversation_id, title.strip() or "New conversation", now, now),
+            "INSERT INTO conversations (id, title, created_at, updated_at, user_email) "
+            "VALUES (?, ?, ?, ?, ?)",
+            (conversation_id, title.strip() or "New conversation", now, now, user_email),
         )
     return conversation_id
 
 
-def conversation_exists(conversation_id: str) -> bool:
+def conversation_exists(conversation_id: str, user_email: str) -> bool:
     with _connect() as connection:
         row = connection.execute(
-            "SELECT 1 FROM conversations WHERE id = ?", (conversation_id,)
+            "SELECT 1 FROM conversations WHERE id = ? AND user_email = ?",
+            (conversation_id, user_email),
         ).fetchone()
     return row is not None
 
 
-def list_conversations(limit: int = 50) -> list[ConversationSummary]:
-    """Most recently updated conversations first."""
+def list_conversations(user_email: str, limit: int = 50) -> list[ConversationSummary]:
+    """This user's conversations, most recently updated first."""
     with _connect() as connection:
         rows = connection.execute(
             """
             SELECT c.id, c.title, c.folder_id, c.updated_at, COUNT(m.id) AS message_count
             FROM conversations c
             LEFT JOIN messages m ON m.conversation_id = c.id
+            WHERE c.user_email = ?
             GROUP BY c.id
             ORDER BY c.updated_at DESC, c.rowid DESC
             LIMIT ?
             """,
-            (limit,),
+            (user_email, limit),
         ).fetchall()
     return [
         ConversationSummary(
@@ -250,11 +273,12 @@ def list_conversations(limit: int = 50) -> list[ConversationSummary]:
     ]
 
 
-def get_conversation(conversation_id: str) -> Conversation | None:
+def get_conversation(conversation_id: str, user_email: str) -> Conversation | None:
     with _connect() as connection:
         head = connection.execute(
-            "SELECT id, title, folder_id, created_at, updated_at FROM conversations WHERE id = ?",
-            (conversation_id,),
+            "SELECT id, title, folder_id, created_at, updated_at FROM conversations "
+            "WHERE id = ? AND user_email = ?",
+            (conversation_id, user_email),
         ).fetchone()
         if head is None:
             return None
@@ -272,35 +296,58 @@ def get_conversation(conversation_id: str) -> Conversation | None:
     )
 
 
-def get_messages(conversation_id: str) -> list[Message]:
-    conversation = get_conversation(conversation_id)
+def get_messages(conversation_id: str, user_email: str) -> list[Message]:
+    conversation = get_conversation(conversation_id, user_email)
     return conversation.messages if conversation else []
 
 
-def rename_conversation(conversation_id: str, title: str) -> bool:
+def rename_conversation(conversation_id: str, title: str, user_email: str) -> bool:
     title = title.strip()
     if not title:
         return False
     with _connect() as connection:
         cursor = connection.execute(
-            "UPDATE conversations SET title = ? WHERE id = ?", (title, conversation_id)
+            "UPDATE conversations SET title = ? WHERE id = ? AND user_email = ?",
+            (title, conversation_id, user_email),
         )
     return cursor.rowcount > 0
 
 
-def set_conversation_folder(conversation_id: str, folder_id: str | None) -> bool:
+def set_conversation_folder(conversation_id: str, folder_id: str | None, user_email: str) -> bool:
+    """Move a conversation into `folder_id` (or unfile it, if None). Fails if
+    the conversation isn't the caller's, or the target folder isn't either -
+    otherwise a user could file their own conversation into someone else's
+    folder."""
     with _connect() as connection:
+        if folder_id is not None:
+            owned_folder = connection.execute(
+                "SELECT 1 FROM folders WHERE id = ? AND user_email = ?", (folder_id, user_email)
+            ).fetchone()
+            if owned_folder is None:
+                return False
         cursor = connection.execute(
-            "UPDATE conversations SET folder_id = ? WHERE id = ?", (folder_id, conversation_id)
+            "UPDATE conversations SET folder_id = ? WHERE id = ? AND user_email = ?",
+            (folder_id, conversation_id, user_email),
         )
     return cursor.rowcount > 0
 
 
-def delete_conversation(conversation_id: str) -> bool:
+def delete_conversation(conversation_id: str, user_email: str) -> bool:
     """Delete a conversation completely: its messages, its run records, and
     those runs' sources - deleting a chat means it's actually gone, not
-    lingering in the observability views the user doesn't see."""
+    lingering in the observability views the user doesn't see.
+
+    Ownership is checked up front, before any deletion - the cascade below
+    looks runs up by conversation_id alone, so filtering only the final
+    DELETE would still let a non-owner trigger it against someone else's
+    runs."""
     with _connect() as connection:
+        owned = connection.execute(
+            "SELECT 1 FROM conversations WHERE id = ? AND user_email = ?",
+            (conversation_id, user_email),
+        ).fetchone()
+        if owned is None:
+            return False
         run_ids = [
             row["id"]
             for row in connection.execute(
@@ -318,40 +365,52 @@ def delete_conversation(conversation_id: str) -> bool:
 # ---- folders --------------------------------------------------------
 
 
-def create_folder(name: str) -> str:
+def create_folder(name: str, user_email: str) -> str:
     name = name.strip()
     if not name:
         raise ValueError("folder name cannot be empty")
     folder_id = uuid.uuid4().hex
     with _connect() as connection:
         connection.execute(
-            "INSERT INTO folders (id, name, created_at) VALUES (?, ?, ?)",
-            (folder_id, name, _now()),
+            "INSERT INTO folders (id, name, created_at, user_email) VALUES (?, ?, ?, ?)",
+            (folder_id, name, _now(), user_email),
         )
     return folder_id
 
 
-def list_folders() -> list[Folder]:
+def list_folders(user_email: str) -> list[Folder]:
     with _connect() as connection:
         rows = connection.execute(
-            "SELECT id, name, created_at FROM folders ORDER BY name"
+            "SELECT id, name, created_at FROM folders WHERE user_email = ? ORDER BY name",
+            (user_email,),
         ).fetchall()
     return [Folder(id=r["id"], name=r["name"], created_at=r["created_at"]) for r in rows]
 
 
-def rename_folder(folder_id: str, name: str) -> bool:
+def rename_folder(folder_id: str, name: str, user_email: str) -> bool:
     name = name.strip()
     if not name:
         return False
     with _connect() as connection:
-        cursor = connection.execute("UPDATE folders SET name = ? WHERE id = ?", (name, folder_id))
+        cursor = connection.execute(
+            "UPDATE folders SET name = ? WHERE id = ? AND user_email = ?",
+            (name, folder_id, user_email),
+        )
     return cursor.rowcount > 0
 
 
-def delete_folder(folder_id: str) -> bool:
+def delete_folder(folder_id: str, user_email: str) -> bool:
     """Delete a folder. Its conversations are kept, just un-filed - deleting
-    a folder should never delete chat history."""
+    a folder should never delete chat history. Ownership checked up front,
+    same reasoning as delete_conversation: the unfiling UPDATE below matches
+    by folder_id alone, so it must never run against a folder that isn't
+    the caller's."""
     with _connect() as connection:
+        owned = connection.execute(
+            "SELECT 1 FROM folders WHERE id = ? AND user_email = ?", (folder_id, user_email)
+        ).fetchone()
+        if owned is None:
+            return False
         connection.execute(
             "UPDATE conversations SET folder_id = NULL WHERE folder_id = ?", (folder_id,)
         )
@@ -481,18 +540,33 @@ def _row_to_run(row: sqlite3.Row) -> Run:
     )
 
 
-def list_runs(limit: int = 100) -> list[Run]:
-    """Most recent runs first."""
+def list_runs(user_email: str, limit: int = 100) -> list[Run]:
+    """This user's runs, most recent first - ownership comes from the
+    conversation a run belongs to (runs carry no email of their own)."""
     with _connect() as connection:
         rows = connection.execute(
-            "SELECT * FROM runs ORDER BY created_at DESC, rowid DESC LIMIT ?", (limit,)
+            """
+            SELECT runs.* FROM runs
+            JOIN conversations ON conversations.id = runs.conversation_id
+            WHERE conversations.user_email = ?
+            ORDER BY runs.created_at DESC, runs.rowid DESC
+            LIMIT ?
+            """,
+            (user_email, limit),
         ).fetchall()
     return [_row_to_run(row) for row in rows]
 
 
-def get_run(run_id: str) -> Run | None:
+def get_run(run_id: str, user_email: str) -> Run | None:
     with _connect() as connection:
-        row = connection.execute("SELECT * FROM runs WHERE id = ?", (run_id,)).fetchone()
+        row = connection.execute(
+            """
+            SELECT runs.* FROM runs
+            JOIN conversations ON conversations.id = runs.conversation_id
+            WHERE runs.id = ? AND conversations.user_email = ?
+            """,
+            (run_id, user_email),
+        ).fetchone()
     return _row_to_run(row) if row else None
 
 

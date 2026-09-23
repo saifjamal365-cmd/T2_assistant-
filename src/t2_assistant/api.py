@@ -332,7 +332,7 @@ def post_chat(body: ChatIn, request: Request) -> ChatOut:
 
 
 @app.get("/conversations", response_model=list[ConversationSummaryOut])
-def get_conversations() -> list[ConversationSummaryOut]:
+def get_conversations(request: Request) -> list[ConversationSummaryOut]:
     return [
         ConversationSummaryOut(
             id=c.id,
@@ -341,13 +341,13 @@ def get_conversations() -> list[ConversationSummaryOut]:
             updated_at=c.updated_at,
             message_count=c.message_count,
         )
-        for c in store.list_conversations()
+        for c in store.list_conversations(request.state.user_email)
     ]
 
 
 @app.get("/conversations/{conversation_id}", response_model=ConversationOut)
-def get_conversation(conversation_id: str) -> ConversationOut:
-    conversation = store.get_conversation(conversation_id)
+def get_conversation(conversation_id: str, request: Request) -> ConversationOut:
+    conversation = store.get_conversation(conversation_id, request.state.user_email)
     if conversation is None:
         raise HTTPException(status_code=404, detail="conversation not found")
     return ConversationOut(
@@ -364,10 +364,16 @@ def get_conversation(conversation_id: str) -> ConversationOut:
 
 
 @app.patch("/conversations/{conversation_id}", response_model=ConversationSummaryOut)
-def rename_conversation(conversation_id: str, body: RenameIn) -> ConversationSummaryOut:
-    if not store.rename_conversation(conversation_id, body.title):
+def rename_conversation(
+    conversation_id: str, body: RenameIn, request: Request
+) -> ConversationSummaryOut:
+    if not store.rename_conversation(conversation_id, body.title, request.state.user_email):
         raise HTTPException(status_code=404, detail="conversation not found")
-    updated = next(c for c in store.list_conversations() if c.id == conversation_id)
+    updated = next(
+        c
+        for c in store.list_conversations(request.state.user_email)
+        if c.id == conversation_id
+    )
     return ConversationSummaryOut(
         id=updated.id,
         title=updated.title,
@@ -378,10 +384,18 @@ def rename_conversation(conversation_id: str, body: RenameIn) -> ConversationSum
 
 
 @app.put("/conversations/{conversation_id}/folder", response_model=ConversationSummaryOut)
-def move_conversation(conversation_id: str, body: SetFolderIn) -> ConversationSummaryOut:
-    if not store.set_conversation_folder(conversation_id, body.folder_id):
+def move_conversation(
+    conversation_id: str, body: SetFolderIn, request: Request
+) -> ConversationSummaryOut:
+    if not store.set_conversation_folder(
+        conversation_id, body.folder_id, request.state.user_email
+    ):
         raise HTTPException(status_code=404, detail="conversation not found")
-    updated = next(c for c in store.list_conversations() if c.id == conversation_id)
+    updated = next(
+        c
+        for c in store.list_conversations(request.state.user_email)
+        if c.id == conversation_id
+    )
     return ConversationSummaryOut(
         id=updated.id,
         title=updated.title,
@@ -392,35 +406,38 @@ def move_conversation(conversation_id: str, body: SetFolderIn) -> ConversationSu
 
 
 @app.delete("/conversations/{conversation_id}")
-def delete_conversation(conversation_id: str) -> dict[str, str]:
-    if not store.delete_conversation(conversation_id):
+def delete_conversation(conversation_id: str, request: Request) -> dict[str, str]:
+    if not store.delete_conversation(conversation_id, request.state.user_email):
         raise HTTPException(status_code=404, detail="conversation not found")
     return {"status": "deleted"}
 
 
 @app.get("/folders", response_model=list[FolderOut])
-def get_folders() -> list[FolderOut]:
-    return [FolderOut(id=f.id, name=f.name, created_at=f.created_at) for f in store.list_folders()]
+def get_folders(request: Request) -> list[FolderOut]:
+    return [
+        FolderOut(id=f.id, name=f.name, created_at=f.created_at)
+        for f in store.list_folders(request.state.user_email)
+    ]
 
 
 @app.post("/folders", response_model=FolderOut)
-def post_folder(body: FolderIn) -> FolderOut:
-    folder_id = store.create_folder(body.name)
-    created = next(f for f in store.list_folders() if f.id == folder_id)
+def post_folder(body: FolderIn, request: Request) -> FolderOut:
+    folder_id = store.create_folder(body.name, request.state.user_email)
+    created = next(f for f in store.list_folders(request.state.user_email) if f.id == folder_id)
     return FolderOut(id=created.id, name=created.name, created_at=created.created_at)
 
 
 @app.patch("/folders/{folder_id}", response_model=FolderOut)
-def patch_folder(folder_id: str, body: FolderIn) -> FolderOut:
-    if not store.rename_folder(folder_id, body.name):
+def patch_folder(folder_id: str, body: FolderIn, request: Request) -> FolderOut:
+    if not store.rename_folder(folder_id, body.name, request.state.user_email):
         raise HTTPException(status_code=404, detail="folder not found")
-    updated = next(f for f in store.list_folders() if f.id == folder_id)
+    updated = next(f for f in store.list_folders(request.state.user_email) if f.id == folder_id)
     return FolderOut(id=updated.id, name=updated.name, created_at=updated.created_at)
 
 
 @app.delete("/folders/{folder_id}")
-def remove_folder(folder_id: str) -> dict[str, str]:
-    if not store.delete_folder(folder_id):
+def remove_folder(folder_id: str, request: Request) -> dict[str, str]:
+    if not store.delete_folder(folder_id, request.state.user_email):
         raise HTTPException(status_code=404, detail="folder not found")
     return {"status": "deleted"}
 
@@ -443,21 +460,21 @@ def _run_out(run: store.Run) -> RunOut:
 
 
 @app.get("/runs", response_model=list[RunOut])
-def get_runs() -> list[RunOut]:
-    return [_run_out(run) for run in store.list_runs()]
+def get_runs(request: Request) -> list[RunOut]:
+    return [_run_out(run) for run in store.list_runs(request.state.user_email)]
 
 
 @app.get("/runs/{run_id}", response_model=RunOut)
-def get_run(run_id: str) -> RunOut:
-    run = store.get_run(run_id)
+def get_run(run_id: str, request: Request) -> RunOut:
+    run = store.get_run(run_id, request.state.user_email)
     if run is None:
         raise HTTPException(status_code=404, detail="run not found")
     return _run_out(run)
 
 
 @app.post("/runs/{run_id}/feedback")
-def post_feedback(run_id: str, body: FeedbackIn) -> dict[str, str]:
-    if not record_feedback(run_id, body.helpful, body.comment):
+def post_feedback(run_id: str, body: FeedbackIn, request: Request) -> dict[str, str]:
+    if not record_feedback(run_id, body.helpful, body.comment, request.state.user_email):
         raise HTTPException(status_code=404, detail="run not found")
     return {"status": "recorded"}
 
