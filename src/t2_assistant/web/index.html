@@ -4,21 +4,61 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>T2 Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #f7f5f1;            /* warm paper background */
+      --bg: #f8f6ef;            /* T2 warm paper background */
       --surface: #ffffff;       /* sidebar / input bar */
-      --border: #e7e2da;        /* warm hairline */
-      --text: #24211d;          /* warm near-black */
-      --muted: #8a8478;         /* warm secondary text */
-      --accent: #c96442;        /* clay / terracotta */
-      --accent-hover: #b5573a;
-      --accent-soft: #f3e4dc;   /* light tint of the accent */
+      --border: #e7e3d6;        /* T2 stone hairline */
+      --text: #161616;          /* T2 ink */
+      --muted: #6b6659;         /* warm secondary text, readable on paper */
+      --accent: #ffcc00;        /* T2 gold - primary action fills only */
+      --accent-hover: #e6b800;  /* darker gold - hover on gold fills */
+      --accent-soft: #fff6d6;   /* pale gold tint - selected / hover backgrounds */
+      --link: #1e7a45;          /* T2 green - links, active states, text on light bg */
+      --link-hover: #145c33;    /* darker green - link hover */
+      --ink: #161616;           /* fixed T2 ink - stays dark in both themes (gold always gets dark text) */
+      --ink-contrast: #f8f6ef;  /* text to put on ink-filled surfaces */
+      --bubble-user-bg: #161616;   /* your chat bubble - adapts per theme, unlike --ink */
+      --bubble-user-text: #f8f6ef;
     }
+    /* dark mode - same tokens, easier on the eyes in low light. Toggled via the
+       sidebar button; remembered in localStorage; follows the OS preference
+       the first time a visitor has no saved choice. */
+    :root[data-theme="dark"] {
+      --bg: #161513;
+      --surface: #201f1c;
+      --border: #34322c;
+      --text: #f2efe8;
+      --muted: #a9a599;
+      --accent-soft: #362d14;
+      --link: #4cbe7d;
+      --link-hover: #74d89b;
+      --bubble-user-bg: #2a2820;
+      --bubble-user-text: #f2efe8;
+    }
+    [data-theme="dark"] .conv:hover, [data-theme="dark"] .convActions button:hover,
+    [data-theme="dark"] #nav button:hover, [data-theme="dark"] .kbItem:hover,
+    [data-theme="dark"] .modalActions .modalCancel:hover { background: #2a2820; }
+    [data-theme="dark"] .tag.answer, [data-theme="dark"] .kbBadge { background: #1c3423; color: #7fd9a8; }
+    [data-theme="dark"] .tag.clarify, [data-theme="dark"] .kbBadge.superseded { background: #3a2c12; color: #e0ab5c; }
+    [data-theme="dark"] .tag.summarise { background: #29223f; color: #b6a3e8; }
     * { box-sizing: border-box; }
     body { margin: 0; -webkit-font-smoothing: antialiased;
-           font: 15px/1.6 ui-sans-serif, system-ui, "Segoe UI", Roboto, sans-serif;
-           color: var(--text); background: var(--bg); height: 100vh; display: flex; }
+           font: 15px/1.6 'Archivo', ui-sans-serif, system-ui, "Segoe UI", Roboto, sans-serif;
+           color: var(--text); background: var(--bg); height: 100vh; display: flex;
+           transition: background .2s ease, color .2s ease; }
+
+    /* theme toggle */
+    #themeToggle { border: 1px solid var(--border); background: var(--surface); color: var(--muted);
+            width: 30px; height: 30px; border-radius: 8px; cursor: pointer; display: flex;
+            align-items: center; justify-content: center; flex-shrink: 0; transition: border-color .15s ease, color .15s ease; }
+    #themeToggle:hover { border-color: var(--accent); color: var(--text); }
+    #themeToggle svg { width: 16px; height: 16px; }
+    #iconMoon { display: none; }
+    :root[data-theme="dark"] #iconSun { display: none; }
+    :root[data-theme="dark"] #iconMoon { display: block; }
 
     /* sidebar */
     #sidebar { width: 260px; border-right: 1px solid var(--border); background: var(--surface);
@@ -28,20 +68,20 @@
     #userBar { display: flex; align-items: center; gap: 8px; padding: 10px 16px;
                border-bottom: 1px solid var(--border); font-size: 12.5px; color: var(--muted); }
     #userEmail { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-    #signOut { border: none; background: none; color: var(--accent); cursor: pointer;
+    #signOut { border: none; background: none; color: var(--link); cursor: pointer;
                font-size: 12.5px; padding: 0; }
-    #signOut:hover { color: var(--accent-hover); text-decoration: underline; }
+    #signOut:hover { color: var(--link-hover); text-decoration: underline; }
     #new, #newFolder { margin: 12px 12px 0; padding: 9px 12px; border: 1px solid var(--border); color: var(--text);
            background: var(--surface); border-radius: 10px; cursor: pointer; font-size: 14px;
            transition: background .15s ease, border-color .15s ease; display: block; width: calc(100% - 24px); text-align: left; }
     #newFolder { margin: 6px 12px 6px; font-size: 13px; color: var(--muted); }
-    #new:hover, #newFolder:hover { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-hover); }
+    #new:hover, #newFolder:hover { background: var(--accent-soft); border-color: var(--accent); color: var(--link-hover); }
     #convs { flex: 1; overflow-y: auto; padding: 0 8px 12px; }
     .conv { padding: 9px 10px; border-radius: 10px; cursor: pointer; font-size: 14px;
             display: flex; align-items: center; gap: 6px;
             transition: background .15s ease; }
     .conv:hover { background: #f1eee7; }
-    .conv.active { background: var(--accent-soft); color: var(--accent-hover); font-weight: 600; }
+    .conv.active { background: var(--accent-soft); color: var(--link-hover); font-weight: 600; }
     .conv .convTitle { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     .conv small { color: var(--muted); font-weight: 400; display: block; }
     .convActions { display: none; gap: 2px; flex-shrink: 0; }
@@ -67,29 +107,41 @@
     /* chat */
     #main { flex: 1; display: flex; flex-direction: column; }
     #log { flex: 1; overflow-y: auto; padding: 28px 24px; }
-    #log .empty { color: var(--muted); text-align: center; margin-top: 20vh; font-size: 15px; }
-    .msg { max-width: 720px; margin: 0 auto 20px; display: flex; flex-direction: column; }
+    #log .empty { color: var(--muted); text-align: center; margin-top: 16vh; font-size: 15px; position: relative; }
+    #log .empty::before { content: ""; display: block; width: 96px; height: 96px; margin: 0 auto 18px;
+            opacity: .5; background-repeat: no-repeat; background-position: center; background-size: contain;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='100,100 52,100 100,52' fill='%23ffcc00'/%3E%3Cpolygon points='40,100 10,100 40,70' fill='%231e7a45'/%3E%3C/svg%3E"); }
+    [data-theme="dark"] #log .empty::before { opacity: .35; }
+    .msg { max-width: 720px; margin: 0 auto 20px; display: flex; flex-direction: column;
+           animation: msgIn .25s ease; }
+    @keyframes msgIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
     .msg .who { font-size: 12px; color: var(--muted); margin-bottom: 4px; }
     .bubble { padding: 12px 16px; border-radius: 16px; white-space: pre-wrap; overflow-wrap: anywhere; }
     .msg.user { align-items: flex-end; }
-    .msg.user .bubble { background: var(--accent); color: #fff; border-bottom-right-radius: 4px; }
+    .msg.user .bubble { background: var(--bubble-user-bg); color: var(--bubble-user-text); border-bottom-right-radius: 4px; }
+    .typingDots { display: inline-flex; gap: 4px; align-items: center; height: 1.2em; padding: 2px 0; }
+    .typingDots span { width: 6px; height: 6px; border-radius: 50%; background: var(--muted);
+            animation: typingBounce 1.2s infinite ease-in-out; }
+    .typingDots span:nth-child(2) { animation-delay: .15s; }
+    .typingDots span:nth-child(3) { animation-delay: .3s; }
+    @keyframes typingBounce { 0%, 60%, 100% { transform: translateY(0); opacity: .4; } 30% { transform: translateY(-4px); opacity: 1; } }
     .msg.bot .bubble { background: transparent; border: none; padding: 2px 0 0;
                         border-radius: 0; }
     .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 999px;
-           background: var(--accent-soft); color: var(--accent-hover); margin-bottom: 6px; }
+           background: var(--accent-soft); color: var(--link-hover); margin-bottom: 6px; }
     .tag.answer { background: #e4ede1; color: #4f7a45; }
     .tag.clarify { background: #fcefd9; color: #a46b12; }
     .tag.summarise { background: #ede7f6; color: #6a4fa0; }
     .foot { margin-top: 6px; font-size: 12px; color: var(--muted); display: flex; gap: 10px; align-items: center; }
     .foot button { border: none; background: none; cursor: pointer; font-size: 14px; padding: 0 2px; opacity: .55; }
     .foot button:hover, .foot button.on { opacity: 1; }
-    .foot a { color: var(--accent); text-decoration: none; }
-    .foot a:hover { color: var(--accent-hover); text-decoration: underline; }
+    .foot a { color: var(--link); text-decoration: none; }
+    .foot a:hover { color: var(--link-hover); text-decoration: underline; }
 
     /* clickable sources */
-    .bubble .src { color: var(--accent); cursor: pointer; font-weight: 600;
-                   border-bottom: 1px dashed var(--accent); }
-    .bubble .src:hover, .bubble .src.srcOpen { color: var(--accent-hover); }
+    .bubble .src { color: var(--link); cursor: pointer; font-weight: 600;
+                   border-bottom: 1px dashed var(--link); }
+    .bubble .src:hover, .bubble .src.srcOpen { color: var(--link-hover); }
     .citation { margin-top: 10px; padding: 12px 14px; border: 1px solid var(--border);
                 border-radius: 12px; background: var(--surface); max-width: 640px; }
     .citationHead { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
@@ -101,9 +153,9 @@
                      background: var(--bg); border-radius: 8px; padding: 10px 12px;
                      max-height: 220px; overflow-y: auto; }
     .citationLink { display: inline-block; margin-top: 8px; font-size: 12.5px;
-                     color: var(--accent); text-decoration: none; }
+                     color: var(--link); text-decoration: none; }
     .citationLink:hover { text-decoration: underline; }
-    .citationText mark { background: #fcefd9; color: var(--accent-hover); padding: 1px 3px;
+    .citationText mark { background: var(--accent-soft); color: var(--link-hover); padding: 1px 3px;
                      border-radius: 3px; font-weight: 600; }
 
     /* small modal dialogs (rename / new folder / delete confirm) */
@@ -118,17 +170,35 @@
     .modalActions { display: flex; justify-content: flex-end; gap: 8px; }
     .modalActions button { padding: 7px 14px; border-radius: 9px; font-size: 13.5px; cursor: pointer;
             border: 1px solid var(--border); background: var(--surface); color: var(--text); }
-    .modalActions .modalOk { background: var(--accent); color: #fff; border-color: var(--accent); }
-    .modalActions .modalOk:hover { background: var(--accent-hover); }
+    .modalActions .modalOk { background: var(--accent); color: var(--ink); border-color: var(--accent); font-weight: 700;
+            transition: background .15s ease, transform .15s ease; }
+    .modalActions .modalOk:hover { background: var(--accent-hover); transform: translateY(-1px); }
     .modalActions .modalDanger { background: #c94242; color: #fff; border-color: #c94242; }
     .modalActions .modalDanger:hover { background: #a83636; }
     .modalActions .modalCancel:hover { background: #f1eee7; }
 
     /* sign-in overlay */
-    #authOverlay .modalBox { width: 360px; }
+    #authOverlay { background: var(--ink); align-items: stretch; justify-content: center; padding: 0; }
+    #authBrand { flex: 1; min-width: 0; background: var(--ink); color: var(--ink-contrast);
+            display: flex; flex-direction: column; justify-content: space-between;
+            padding: 56px; position: relative; overflow: hidden; }
+    #authBrand svg { width: 190px; height: auto; display: block; position: relative; }
+    #authBrand .authEyebrow { margin: 0 0 16px; text-transform: uppercase; letter-spacing: .14em;
+            font-size: 13px; font-weight: 700; color: var(--accent); position: relative; }
+    #authBrand h2 { margin: 0 0 16px; font-size: 40px; line-height: 1.12; font-weight: 800;
+            max-width: 440px; position: relative; }
+    #authBrand p { margin: 0; font-size: 15px; line-height: 1.6; color: #c9c6bc; max-width: 400px;
+            position: relative; }
+    #authBrandFoot { display: flex; align-items: center; gap: 12px; position: relative; }
+    #authBrandFoot span { width: 24px; height: 2px; background: var(--accent); display: inline-block; }
+    #authAccent { position: absolute; right: -140px; bottom: -120px; opacity: .1; pointer-events: none; }
+    #authOverlay .modalBox { flex: 0 0 440px; max-width: 90%; width: 440px; border-radius: 0;
+            box-shadow: none; background: var(--bg); display: flex; flex-direction: column;
+            justify-content: center; padding: 56px; }
+    #authOverlay .modalTitle { font-size: 26px; font-weight: 800; }
     #authOverlay .modalActions { justify-content: stretch; }
-    #authOverlay .modalActions button { flex: 1; }
-    .authHint { font-size: 13px; color: var(--muted); margin-bottom: 12px; }
+    #authOverlay .modalActions button { flex: 1; height: 46px; }
+    .authHint { font-size: 13px; color: var(--muted); margin-bottom: 20px; line-height: 1.5; }
     .authError { font-size: 12.5px; color: #c94242; margin: -8px 0 12px; min-height: 1em; }
 
     /* input */
@@ -142,10 +212,10 @@
             border-radius: 14px; font: inherit; max-height: 140px; background: var(--bg);
             color: var(--text); transition: border-color .15s ease, box-shadow .15s ease; }
     #text:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
-    #send { padding: 0 22px; border: none; background: var(--accent); color: #fff;
-            border-radius: 14px; cursor: pointer; font-size: 14px; font-weight: 500;
-            transition: background .15s ease; }
-    #send:hover:not(:disabled) { background: var(--accent-hover); }
+    #send { padding: 0 22px; border: none; background: var(--accent); color: var(--ink);
+            border-radius: 14px; cursor: pointer; font-size: 14px; font-weight: 700;
+            transition: background .15s ease, transform .15s ease; }
+    #send:hover:not(:disabled) { background: var(--accent-hover); transform: translateY(-1px); }
     #send:disabled { opacity: .5; cursor: default; }
 
     /* sidebar nav (chat / knowledge base) */
@@ -154,7 +224,7 @@
                   color: var(--muted); border-radius: 8px; cursor: pointer; font-size: 13px;
                   font-weight: 500; transition: background .15s ease, color .15s ease; }
     #nav button:hover { background: #f1eee7; }
-    #nav button.active { background: var(--accent-soft); color: var(--accent-hover); }
+    #nav button.active { background: var(--accent-soft); color: var(--link-hover); }
 
     /* knowledge base panel */
     #kb { flex: 1; display: none; flex-direction: column; overflow: hidden; }
@@ -184,14 +254,26 @@
     #kbDetailHead h2 { margin: 0 0 6px; font-size: 20px; }
     #kbDetailMeta { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 18px; }
     #kbDetailMeta span { font-size: 11.5px; padding: 3px 9px; border-radius: 999px;
-               background: var(--accent-soft); color: var(--accent-hover); }
+               background: var(--accent-soft); color: var(--link-hover); }
     #kbDetailText { max-width: 760px; white-space: pre-wrap; overflow-wrap: anywhere;
                font-size: 15px; line-height: 1.7; }
   </style>
 </head>
 <body>
   <aside id="sidebar">
-    <h1>T2 Assistant</h1>
+    <h1 style="display:flex;align-items:center;gap:10px;justify-content:space-between;">
+      <span style="display:flex;align-items:center;gap:10px;min-width:0;">
+        <svg viewBox="0 0 705 582" fill="#161616" style="width:32px;height:auto;display:block;flex-shrink:0;" aria-hidden="true">
+          <path d="m564.83 422.08 140.5-140.53V141.01l-140.74-140-148.65.16v134.49L281.27 1.01V.75H281l-.7-.74v.74C211.33.75 176 .58 140.6.37 105.08.19 69.55 0 0 0l141.26 141.27h140v-.05l140-.25 143.28.5c0 93.69.19 186.88.19 280.56-93.35-.22-187.08-.54-279.61-.54l140 141.29h280.21V422.27c-46.59 0-93.43-.07-140.5-.2Z"></path>
+          <path d="M143.53 561.43h140.55c0-139.18.74-281 .74-420.17l-141.29 140v280.17Z"></path>
+        </svg>
+        <span style="font-weight:800;">T2 Assistant</span>
+      </span>
+      <button id="themeToggle" type="button" title="Toggle dark mode" aria-label="Toggle dark mode">
+        <svg id="iconSun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>
+        <svg id="iconMoon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.4 14.7A8.5 8.5 0 0 1 9.3 3.6a8.5 8.5 0 1 0 11.1 11.1Z"></path></svg>
+      </button>
+    </h1>
     <div id="userBar">
       <span id="userEmail"></span>
       <button id="signOut">Sign out</button>
@@ -248,6 +330,25 @@
   </section>
 
   <div id="authOverlay" class="modalOverlay" style="display:none;">
+    <div id="authBrand">
+      <svg id="authAccent" width="520" height="520" viewBox="0 0 520 520" aria-hidden="true">
+        <polygon points="520,520 260,520 520,260" fill="#ffcc00"></polygon>
+        <polygon points="180,520 60,520 180,400" fill="#1e7a45"></polygon>
+      </svg>
+      <svg viewBox="0 0 1379.13 581.01" fill="#f8f6ef" aria-label="T2">
+        <path d="M895.75 436.01v-80.62h36.09c8.67 0 15.17 1.96 19.51 5.87s6.48 8.95 6.42 15.11c0 7.89-4.21 13.26-12.63 16.13v.34c4.31 1.22 8.11 3.79 10.86 7.33 2.77 3.62 4.22 8.07 4.11 12.63 0 7.14-2.37 12.74-7.1 16.8-4.89 4.29-11.66 6.44-20.3 6.43l-36.96-.02Zm16.35-48.16h17.71c3.1.16 6.15-.74 8.68-2.53a9.465 9.465 0 0 0 .17-14.16c-2.07-1.65-4.91-2.48-8.52-2.48h-18l-.04 19.17Zm0 12.07v22.55h18.83c3.91 0 7-1 9.25-3 2.27-2.01 3.51-4.93 3.38-7.95a10.53 10.53 0 0 0-3.66-8.51 14.259 14.259 0 0 0-9.42-3.05l-18.38-.04Zm107.7 36.09H1005v-6.77h-.34c-1.81 2.6-4.19 4.76-6.94 6.32-3 1.45-6.31 2.13-9.64 2-6.32 0-11.24-1.88-14.77-5.64s-5.3-8.82-5.31-15.18v-38.57h15.23v36c0 6.99 3.2 10.49 9.59 10.49 3.22.14 6.32-1.19 8.45-3.61 2.2-2.65 3.32-6.03 3.16-9.47v-33.41h15.34l.03 57.84Zm33.38 1.7c-8.27 0-14.73-1.82-19.4-5.47-4.64-3.6-7.44-9.07-7.66-14.94h14.21c.97 6.39 5.18 9.58 12.63 9.58 3.38 0 5.99-.6 7.83-1.8 1.73-1 2.79-2.85 2.77-4.85 0-.69-.13-1.37-.4-2-.3-.65-.77-1.22-1.35-1.64-.64-.48-1.2-.88-1.69-1.18-.8-.41-1.66-.72-2.54-.9l-2.76-.68c-.64-.15-1.73-.35-3.27-.62s-2.62-.47-3.22-.62c-2.61-.47-5.19-1.09-7.72-1.86-2.18-.72-4.28-1.67-6.26-2.82a12.004 12.004 0 0 1-4.91-5.07c-1.15-2.41-1.7-5.06-1.63-7.73 0-6 2.2-10.59 6.6-13.76s10.07-4.75 17-4.73c7.44 0 13.28 1.71 17.53 5.13 4.27 3.45 6.9 8.52 7.28 14h-13.87c-.61-5.64-4.33-8.46-11.17-8.46-2.53-.14-5.06.45-7.27 1.69-1.68.98-2.7 2.79-2.65 4.74 0 .64.13 1.28.39 1.86.31.61.78 1.11 1.36 1.47.59.39 1.21.72 1.86 1 .84.34 1.71.6 2.59.79l2.93.68c.83.19 2 .41 3.39.67l3.38.62c2.41.53 4.38 1 5.92 1.41 1.84.52 3.63 1.19 5.36 2 1.77.77 3.39 1.84 4.79 3.16 1.28 1.38 2.3 2.99 3 4.74.9 2.2 1.34 4.56 1.29 6.93.17 5.37-2.34 10.46-6.71 13.59-4.45 3.39-10.33 5.08-17.63 5.07Zm31.24-68.56v-13.76h15.34v13.76h-15.34Zm0 66.88v-57.86h15.34v57.84l-15.34.02Zm40.26-57.86v7.9h.34a19.09 19.09 0 0 1 17.14-9.47c5.94 0 10.75 2 14.44 6s5.53 9.21 5.52 15.62v37.79h-15.34V400.5c.13-2.8-.82-5.54-2.64-7.66a9.423 9.423 0 0 0-7.39-2.94c-3.21-.07-6.29 1.29-8.4 3.72a13.89 13.89 0 0 0-3.33 9.59v32.8h-15.34v-57.84h15Zm74.09 59.54c-9.33 0-16.67-2.88-22-8.63s-8-13.09-8-22 2.67-15.9 8-21.71 12.18-8.72 20.53-8.74c9.09 0 16.12 3.16 21.09 9.47s7.45 14.77 7.44 25.37h-41.95c.6 4.59 2.14 8.14 4.62 10.66s5.86 3.78 10.15 3.78c5.64 0 9.36-2.37 11.17-7.11h15.11a22.795 22.795 0 0 1-8.57 13.54c-4.58 3.59-10.44 5.38-17.59 5.37Zm-1.24-49.28c-7.44 0-11.91 4.13-13.42 12.4h25.72c-.08-3.36-1.4-6.57-3.72-9a11.522 11.522 0 0 0-8.58-3.4Zm58.87 49.28c-8.27 0-14.73-1.82-19.39-5.47-4.64-3.6-7.45-9.07-7.67-14.94h14.21c.97 6.39 5.18 9.58 12.63 9.58 3.38 0 5.99-.6 7.83-1.8 1.73-1 2.79-2.85 2.77-4.85 0-.69-.13-1.37-.4-2-.3-.65-.77-1.22-1.35-1.64-.64-.48-1.2-.88-1.69-1.18-.8-.41-1.66-.72-2.54-.9l-2.76-.68c-.64-.15-1.73-.35-3.27-.62s-2.62-.47-3.22-.62c-2.61-.47-5.19-1.09-7.72-1.86-2.18-.72-4.28-1.67-6.26-2.82a12.004 12.004 0 0 1-4.91-5.07c-1.15-2.41-1.7-5.06-1.63-7.73 0-6 2.2-10.59 6.6-13.76s10.07-4.75 17-4.73c7.44 0 13.28 1.71 17.53 5.13 4.27 3.45 6.9 8.52 7.28 14h-13.87c-.61-5.64-4.33-8.46-11.17-8.46-2.53-.14-5.06.45-7.27 1.69-1.68.98-2.7 2.79-2.65 4.74 0 .64.13 1.28.39 1.86.31.61.78 1.11 1.36 1.47.59.38 1.21.72 1.86 1 .84.34 1.71.6 2.6.79l2.93.68c.82.19 2 .41 3.38.67l3.39.62c2.4.53 4.37 1 5.92 1.41 1.84.52 3.62 1.19 5.35 2 1.77.77 3.39 1.84 4.8 3.16 1.28 1.38 2.3 2.99 3 4.74.9 2.2 1.35 4.56 1.3 6.93.17 5.37-2.34 10.46-6.71 13.59-4.47 3.39-10.34 5.08-17.61 5.07Zm-380.77 126.3c-10.82 0-19.21-2.29-25.18-6.88s-9.1-11.13-9.4-19.64h15.89c.52 4.78 2.22 8.21 5.09 10.29 2.87 2.08 7.18 3.13 12.93 3.14 3.89.16 7.75-.71 11.19-2.52a8.382 8.382 0 0 0 4.37-7.78c.02-1.16-.16-2.31-.51-3.41a5.572 5.572 0 0 0-2.07-2.69c-1-.78-1.94-1.41-2.69-1.9-1.3-.71-2.7-1.23-4.14-1.57-2-.55-3.54-1-4.58-1.23s-3-.73-5.82-1.4c-3.44-.82-6.25-1.53-8.45-2.12a43.08 43.08 0 0 1-7.28-2.8 22.674 22.674 0 0 1-6.27-4.2 18.486 18.486 0 0 1-3.86-6 21.997 21.997 0 0 1-1.57-8.56c0-7.69 2.82-13.61 8.45-17.74s13.04-6.2 22.22-6.21c9.1 0 16.38 2.16 21.83 6.49s8.47 10.48 9.06 18.47H944c-.25-3.56-2.02-6.84-4.86-9a17.173 17.173 0 0 0-10.58-3.13c-4.4 0-7.91.86-10.52 2.57-2.44 1.4-3.94 4-3.94 6.82a7.111 7.111 0 0 0 3.86 6.71c2.58 1.42 7.11 2.84 13.6 4.26 3.88.82 7.05 1.58 9.51 2.29 2.73.81 5.41 1.81 8 3 2.47 1.04 4.74 2.5 6.71 4.31a18.4 18.4 0 0 1 4 6.21 22.8 22.8 0 0 1 1.62 8.9c0 7.91-2.87 14.11-8.61 18.58s-13.23 6.72-22.46 6.74ZM970 495.83v-13.65h15.22v13.65H970Zm0 66.38V504.8h15.22v57.41H970Zm25 0V504.8h14.66v7.72h.34c3.65-6.19 9.2-9.28 16.67-9.29 6.83-.1 13.07 3.85 15.9 10.07h.22c4.18-6.71 9.93-10.06 17.24-10.07 5.96 0 10.6 1.81 13.93 5.43 3.33 3.62 4.99 8.6 5 14.94v38.61h-15.22v-36c0-6.57-2.95-9.85-8.84-9.85a9.164 9.164 0 0 0-7.56 3.41c-1.83 2.28-2.74 5.32-2.74 9.12v33.32h-15.22v-36c0-6.57-2.95-9.85-8.84-9.85a9.189 9.189 0 0 0-7.44 3.41c-1.91 2.28-2.86 5.32-2.86 9.12v33.32H995Zm93.36 18.8V504.8H1103v7.21h.34a19.934 19.934 0 0 1 16.9-8.73c7.53 0 13.57 2.8 18.13 8.4 4.56 5.6 6.84 12.91 6.83 21.93 0 9.26-2.28 16.63-6.83 22.11-4.55 5.48-10.55 8.22-18 8.22s-12.98-2.72-16.56-8.17h-.23v25.24h-15.22Zm28.77-29.78c3.65.11 7.11-1.61 9.23-4.59 2.27-3.06 3.41-7.28 3.41-12.65 0-5.74-1.08-10.25-3.24-13.54s-5.49-4.93-10-4.93-7.91 1.7-10.08 5.1-3.24 7.85-3.24 13.37 1.19 9.5 3.58 12.59 5.83 4.65 10.34 4.66Zm35.36 10.98v-80h15.22v80h-15.22Zm25.3-66.38v-13.65H1193v13.65h-15.21Zm0 66.38V504.8H1193v57.41h-15.21Zm21.71-46.89V504.8h7.83v-5.15c0-6.72 2.31-11.5 6.94-14.33 4.63-2.83 10.82-3.83 18.58-3v11.69c-3.81-.14-6.47.19-8 1s-2.3 2.65-2.3 5.49v4.25h10.3v10.52h-10.3v46.94h-15.22v-46.89h-7.83Zm40.18-19.49v-13.65h15.22v13.65h-15.22Zm0 66.38V504.8h15.22v57.41h-15.22Zm52.04 1.68c-9.25 0-16.52-2.85-21.82-8.56-5.3-5.71-7.97-13-8-21.88 0-8.58 2.67-15.76 8-21.55 5.33-5.79 12.12-8.68 20.36-8.67 9.03 0 16 3.13 20.93 9.4 4.93 6.27 7.39 14.66 7.39 25.18H1277c.59 4.56 2.12 8.09 4.59 10.58s5.83 3.74 10.07 3.75c5.59 0 9.29-2.33 11.08-7h15a22.573 22.573 0 0 1-8.51 13.43c-4.58 3.55-10.42 5.32-17.51 5.32Zm-1.23-48.88c-7.39 0-11.83 4.1-13.32 12.31h25.52c-.09-3.32-1.4-6.48-3.69-8.89a11.407 11.407 0 0 0-8.51-3.42Zm56.63 48.88c-6.83.19-13.34-2.86-17.57-8.22-4.48-5.49-6.72-12.86-6.72-22.11s2.3-16.24 6.89-21.88c4.2-5.45 10.74-8.58 17.62-8.45 7.17 0 12.58 2.84 16.23 8.51h.34v-29.55h15.22v80h-14.66v-7.49h-.23c-3.73 6.13-9.43 9.19-17.12 9.19Zm3.36-12.77c4.47 0 7.88-1.53 10.24-4.58s3.53-7.27 3.52-12.65c0-12.24-4.44-18.36-13.31-18.36-3.79-.16-7.38 1.72-9.41 4.93-2.16 3.28-3.24 7.64-3.24 13.09s1.06 9.93 3.19 13c2 2.99 5.42 4.72 9.01 4.57Z"></path>
+        <path d="m564.83 422.08 140.5-140.53V141.01l-140.74-140-148.65.16v134.49L281.27 1.01V.75H281l-.7-.74v.74C211.33.75 176 .58 140.6.37 105.08.19 69.55 0 0 0l141.26 141.27h140v-.05l140-.25 143.28.5c0 93.69.19 186.88.19 280.56-93.35-.22-187.08-.54-279.61-.54l140 141.29h280.21V422.27c-46.59 0-93.43-.07-140.5-.2Z"></path>
+        <path d="M143.53 561.43h140.55c0-139.18.74-281 .74-420.17l-141.29 140v280.17Z"></path>
+        <path d="M1116.46 268.82c.45-15.32 4.24-30.36 11.11-44.06 6.9-14.05 14.31-25.29 22.23-33.72 9.35-9.48 19.33-18.31 29.88-26.43 4.09-3.33 10.47-8.19 19.16-14.56 8.94-6.39 15.58-11.37 19.92-14.95 4.34-3.58 9.19-8.05 14.56-13.41 5.62-5.62 9.58-11.24 11.88-16.85 2.3-5.86 3.47-12.1 3.45-18.4 0-12.51-3.19-22.47-9.58-29.88-6.39-7.41-15.33-11.11-26.82-11.11-13.29 0-23.76 4.6-31.42 13.79-7.41 9.18-11.24 22.34-11.49 39.47h-49c0-30.67 7.79-54.55 23.38-71.65 15.8-17.37 39.03-26.05 69.68-26.05 27.58 0 49.29 8.05 65.13 24.14 16.09 16.09 24.13 36.02 24.14 59.77a92.645 92.645 0 0 1-5.36 32.19 73.858 73.858 0 0 1-16.09 26 181.394 181.394 0 0 1-19.93 18.77c-5.87 4.6-14.04 10.35-24.52 17.25-28.61 18.39-46.23 33.97-52.88 46.74H1305v42.91l-188.54.04ZM892.06 47.01V1.37h215.08v45.64h-80.42v221.81h-54.24V47.01h-80.42Z"></path>
+        <path d="M803.77.99h4v561.83h-4z"></path>
+      </svg>
+      <div>
+        <p class="authEyebrow">T2 Assistant</p>
+        <h2>Company knowledge, simplified.</h2>
+        <p>Ask about HR and finance policy, or paste in meeting notes for a clean summary — sourced answers, in Arabic or English, in seconds.</p>
+      </div>
+      <div id="authBrandFoot"><span></span>Internal tool — T2 employees only</div>
+    </div>
     <div class="modalBox">
       <div class="modalTitle">Sign in to T2 Assistant</div>
       <div class="authHint">Use your company email and a password. New here? Just pick a password below and you're in.</div>
@@ -261,6 +362,20 @@
   </div>
 
   <script>
+    // ---- theme (light / dark) ---------------------------------------------
+    (function initTheme() {
+      const root = document.documentElement;
+      let saved = null;
+      try { saved = localStorage.getItem("t2_theme"); } catch (e) { /* ignore */ }
+      const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+      root.dataset.theme = saved || (prefersDark ? "dark" : "light");
+      document.getElementById("themeToggle").onclick = () => {
+        const next = root.dataset.theme === "dark" ? "light" : "dark";
+        root.dataset.theme = next;
+        try { localStorage.setItem("t2_theme", next); } catch (e) { /* ignore */ }
+      };
+    })();
+
     const log = document.getElementById("log");
     const convs = document.getElementById("convs");
     const form = document.getElementById("form");
@@ -620,6 +735,7 @@
       addMsg("user", message);
       send.disabled = true;
       const thinking = addMsg("bot", "…");
+      thinking.querySelector(".bubble").innerHTML = '<span class="typingDots"><span></span><span></span><span></span></span>';
       const folderForNewChat = conversationId ? null : pendingFolderId;
       try {
         const res = await fetch("/chat", {
