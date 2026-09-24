@@ -178,6 +178,14 @@ Rules:
   does not make clear which one is meant, say in one short sentence what the two
   possible meanings are and ask which one they meant - do not silently pick one
   and answer as if the question were unambiguous.
+- The question may name a leave/benefit informally or generically (for example
+  "travel leave", "family leave") in a way that matches no passage's title
+  exactly, while several passages describe specific, differently-named policies
+  that could plausibly be what is meant (for example Annual Leave, Unpaid Leave,
+  Sabbatical Leave, Civil Duty Leave). Do not decline outright in this case -
+  name the specific policies you actually found that could apply, in one short
+  sentence, and ask which one they mean. Only decline flatly if nothing among
+  the passages resembles a leave/benefit of that kind at all.
 - Never add a policy fact that is not in the passages.
 - Reply in the same language as the question.
 """
@@ -297,6 +305,11 @@ the passages actually DO answer the question - even if it takes connecting two
 passages, or the answer is a general rule that covers this specific case - write
 that answer now: a short, direct answer (2-4 sentences), then on a new line
 "Sources: " followed by the document codes used.
+
+If the question names a leave/benefit informally (for example "travel leave")
+and does not match any passage's title exactly, but several passages describe
+specific, differently-named policies that could plausibly be what is meant,
+do not decline - name the specific policies found and ask which one they mean.
 
 Only if the passages genuinely do not cover this question, even after this
 second look, confirm the decline: reply with exactly this sentence and nothing
