@@ -193,12 +193,17 @@
     #authBrandFoot span { width: 24px; height: 2px; background: var(--accent); display: inline-block; }
     #authAccent { position: absolute; right: -140px; bottom: -120px; opacity: .1; pointer-events: none; }
     #authOverlay .modalBox { flex: 0 0 440px; max-width: 90%; width: 440px; border-radius: 0;
-            box-shadow: none; background: var(--bg); display: flex; flex-direction: column;
+            box-shadow: none; background: var(--surface); display: flex; flex-direction: column;
             justify-content: center; padding: 56px; }
     #authOverlay .modalTitle { font-size: 26px; font-weight: 800; }
     #authOverlay .modalActions { justify-content: stretch; }
     #authOverlay .modalActions button { flex: 1; height: 46px; }
     .authHint { font-size: 13px; color: var(--muted); margin-bottom: 20px; line-height: 1.5; }
+    .pwToggle { position: absolute; right: 4px; top: 0; height: 100%; width: 34px; border: none;
+            background: none; color: var(--muted); cursor: pointer; display: flex;
+            align-items: center; justify-content: center; }
+    .pwToggle:hover { color: var(--text); }
+    .pwToggle svg { width: 18px; height: 18px; }
     .authError { font-size: 12.5px; color: #c94242; margin: -8px 0 12px; min-height: 1em; }
 
     /* input */
@@ -353,7 +358,13 @@
       <div class="modalTitle">Sign in to T2 Assistant</div>
       <div class="authHint">Use your company email and a password. New here? Just pick a password below and you're in.</div>
       <input id="authEmail" class="modalInput" type="email" placeholder="you@t2.sa" autocomplete="email" />
-      <input id="authPassword" class="modalInput" type="password" placeholder="Password" autocomplete="current-password" />
+      <div style="position:relative;">
+        <input id="authPassword" class="modalInput" type="password" placeholder="Password" autocomplete="current-password" style="padding-right:42px;" />
+        <button type="button" id="authPasswordToggle" class="pwToggle" aria-label="Show password" title="Show password">
+          <svg id="pwEyeOpen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+          <svg id="pwEyeClosed" style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.94 10.94 0 0 1 12 19c-7 0-11-7-11-7a21.6 21.6 0 0 1 5.17-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 7 11 7a21.6 21.6 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line></svg>
+        </button>
+      </div>
       <div id="authError" class="authError"></div>
       <div class="modalActions">
         <button id="authSubmit" class="modalOk">Sign in</button>
@@ -794,11 +805,26 @@
     const authOverlay = document.getElementById("authOverlay");
     const authEmail = document.getElementById("authEmail");
     const authPassword = document.getElementById("authPassword");
+    const authPasswordToggle = document.getElementById("authPasswordToggle");
+    const pwEyeOpen = document.getElementById("pwEyeOpen");
+    const pwEyeClosed = document.getElementById("pwEyeClosed");
+
+    authPasswordToggle.onclick = () => {
+      const reveal = authPassword.type === "password";
+      authPassword.type = reveal ? "text" : "password";
+      pwEyeOpen.style.display = reveal ? "none" : "block";
+      pwEyeClosed.style.display = reveal ? "block" : "none";
+      authPasswordToggle.title = reveal ? "Hide password" : "Show password";
+      authPasswordToggle.setAttribute("aria-label", reveal ? "Hide password" : "Show password");
+    };
 
     function showAuthOverlay() {
       authOverlay.style.display = "flex";
       document.getElementById("authError").textContent = "";
       authPassword.value = "";
+      authPassword.type = "password";
+      pwEyeOpen.style.display = "block";
+      pwEyeClosed.style.display = "none";
       authEmail.focus();
     }
 
