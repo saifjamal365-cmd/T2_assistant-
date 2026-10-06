@@ -23,7 +23,7 @@ dependencies = [
     "uvicorn[standard]==0.52.4", # the web server that runs FastAPI
     "pydantic-settings==2.15.0", # load settings from .env into a typed object
     "chromadb==1.5.9",          # local vector index (needs: pip install --only-binary=:all:)
-    "sentence-transformers==3.4.1", # BGE-M3 embeddings, run locally (pulls in torch)
+    "sentence-transformers==3.4.1", # multilingual E5 embeddings, run locally (pulls in torch)
     "groq==0.37.1",              # speech-to-text for voice mode (already pulled in by langchain-groq)
     "edge-tts==7.2.8",           # reads the answer aloud in a Saudi voice (voice mode)
 ]

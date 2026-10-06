@@ -1,217 +1,547 @@
 # T2 Assistant
 
-An agentic AI knowledge assistant for company policy questions and meeting-note
-summarisation, in Arabic and English.
+An AI assistant for the employees of T2. You ask it a question about company
+policy - by typing or by speaking - and it answers from the company's own
+documents, tells you which documents it used, and says "I don't know" when the
+documents do not contain the answer. It works in Arabic and English, and it can
+also summarise meeting notes.
 
-This is a clean rebuild of the assistant. An earlier prototype was built and
-reviewed; its approach is reference only. Full context, requirements and the
-phase-by-phase log are in **`T2_Assistant_Project_Documentation.docx`**.
+> **Read this first.** This is a working prototype, not a finished product.
+> The policy documents in this repository are **generated sample data, not real
+> T2 policies**. Everything else (search, agents, web pages, voice) is real and
+> runs on your own computer.
 
-## Status
+## Contents
 
-| Phase | Focus | State |
-|---|---|---|
-| 0 | Project setup and planning | done |
-| 1 | Requirements and architecture | done (Sections 7 and 9) |
-| 2 | Data and knowledge base | done — 2000 documents (1000 EN + 1000 AR) + manifest |
-| 3 | Agentic core (router + specialist agents) | done — router, greeting, clarify, summarise, API, tracing, tests |
-| 4 | Retrieval and the answer agent | done — index build, Chroma search, grounded sourced answers |
-| 5 | Persistence and memory | done — SQLite store, conversations, follow-up questions |
-| 6 | Observability | done — run records linked to traces, 👍/👎 feedback logged to MLflow |
-| 7 | Interface | done — web chat page at `/` (bilingual, conversation sidebar, feedback) |
-| 8 | Evaluation and hardening | done — 500-question fair eval set, scored 50-question run (98% overall accuracy), API hardening |
+- [What it can do](#what-it-can-do)
+- [How it works](#how-it-works)
+- [Run it on your computer](#run-it-on-your-computer)
+- [Using it](#using-it)
+- [Voice mode](#voice-mode)
+- [Tracing: seeing how an answer was made](#tracing-seeing-how-an-answer-was-made)
+- [Settings](#settings)
+- [The knowledge base](#the-knowledge-base)
+- [How well it works](#how-well-it-works)
+- [Tests and code checks](#tests-and-code-checks)
+- [Project layout](#project-layout)
+- [The HTTP API](#the-http-api)
+- [Known limits](#known-limits)
+- [Technology used, and why](#technology-used-and-why)
 
-## Folder structure
+## What it can do
 
-```
-t2-assistant/
-├── T2_Assistant_Project_Documentation.docx   the project documentation (living)
-├── pyproject.toml            project metadata + pinned dependencies
-├── .env.example              template for secrets (copy to .env)
-├── scripts/
-│   ├── generate_kb.py         builds the synthetic knowledge base
-│   ├── build_eval_set.py      builds eval/dataset.json (fair questions, sized to the KB)
-│   └── build_eval_subset.py   picks a smaller, still-fair slice for a quick run
-├── data/
-│   └── knowledge_base/       2000 generated policy documents + manifest.csv
-│       ├── en/  ar/          1000 documents each
-│       └── manifest.csv      one row per document (id, title, dept, type, ...)
-├── eval/
-│   ├── dataset.json           the full evaluation set (grows with the KB)
-│   ├── dataset_subset.json    a fair 50-question sample (free-tier daily cap)
-│   └── results/                report.md, report.json, answers.jsonl
-├── src/t2_assistant/
-│   ├── config.py             settings loaded from .env
-│   ├── tracing.py            switches MLflow tracing on
-│   ├── store.py              conversations, messages, run records (SQLite)
-│   ├── conversation.py       runs one chat turn with memory (loads/saves history)
-│   ├── observability.py      trace links + 👍/👎 feedback (also sent to MLflow)
-│   ├── api.py                the HTTP API + serves the web page at / (input validation, clean error responses)
-│   ├── web/index.html        the chat page (one file, no build step)
-│   ├── agents/
-│   │   ├── router.py         picks the route with the LLM (no keyword list)
-│   │   ├── graph.py          wires router -> specialist
-│   │   ├── greeting.py  clarify.py  summarise.py   working specialists
-│   │   └── answer.py         retrieves passages, writes a sourced answer
-│   ├── knowledge/
-│   │   ├── embeddings.py     text -> vectors (multilingual E5, local)
-│   │   ├── chunking.py       split a document into overlapping passages
-│   │   ├── vector_store.py   opens / creates the Chroma index
-│   │   ├── build_index.py    rebuild the index from the knowledge base
-│   │   └── search.py         question -> closest passages
-│   └── evaluation/
-│       ├── dataset.py         loads an eval dataset json file
-│       ├── retrieval.py       retrieval-only pass (no LLM cost)
-│       ├── quality.py         full-pipeline pass, calls the real assistant
-│       ├── report.py          scores both passes into report.md / report.json
-│       └── run.py             CLI: python -m t2_assistant.evaluation.run
-└── tests/                    test_graph.py, test_api.py, test_store.py, test_evaluation.py, ...
+| Feature | What it means |
+|---|---|
+| Answers policy questions | "How many annual leave days do I get?" is answered in 2-4 sentences, from the documents only. |
+| Shows its sources | Every answer lists the document codes it used (for example `HR-0006`). The chat page shows the exact passage and highlights the sentence that supports the answer. |
+| Says "I don't know" | If the documents do not cover the question, it declines instead of inventing an answer. |
+| Arabic and English | It replies in the language of the question. The documents exist in both languages. |
+| Remembers the conversation | A follow-up such as "and for part-time staff?" is understood from the earlier messages. |
+| Asks when a question is unclear | If a word could mean two different policies, it asks which one you mean. |
+| Summarises meeting notes | Paste notes and get a short summary and a list of action items. |
+| **Voice mode** | Ask out loud and hear the answer in a Saudi voice, with the words appearing on screen as they are spoken. |
+| Accounts | Each person signs in and sees only their own conversations and folders. |
+| Feedback and traces | 👍 / 👎 on each answer, and a link to a full trace of how the answer was produced. |
+
+## How it works
+
+### The big picture
+
+The assistant is a small **team of agents**. One agent (the router) reads your
+message and decides which specialist should handle it.
+
+```mermaid
+flowchart TD
+    U["Your message"] --> R{"Router agent<br/>decides by meaning,<br/>not by keywords"}
+    R -->|"hello, thanks"| G["Greeting agent"]
+    R -->|"a question"| A["Answer agent"]
+    R -->|"meeting notes"| S["Summary agent"]
+    R -->|"too vague"| C["Clarify agent<br/>asks one short question"]
+    A <--> K[("Knowledge base<br/>2,000 documents")]
+    G --> O["Reply"]
+    A --> O
+    S --> O
+    C --> O
 ```
 
-The API keeps the conversation history: `POST /chat` with a `conversation_id`
-continues a thread (leave it out to start one). An optional `model` field
-picks the Groq model for that turn (`openai/gpt-oss-120b`,
-`openai/gpt-oss-20b`, `qwen/qwen3.8-27b` - each run through the real test
-battery in `tests/test_models.py`, not just listed on Groq's docs; several
-other candidates looked fine in isolation but failed it, see that file);
-omitted, it falls back to `LLM_MODEL`, and the model used is echoed back in
-the response and tagged on the turn's MLflow trace as `model`. Routing
-itself always runs on the fixed default regardless of this choice, tagged
-separately as `router_model` so both are visible on the trace, not just the
-one implied by `model`. `GET /conversations`
-lists past conversations and `GET /conversations/{id}` returns one with all
-its messages. `GET /runs`
-lists past requests each with a link to its MLflow trace, and
-`POST /runs/{id}/feedback` records a 👍/👎 (also attached to the trace).
-`GET /kb/documents` browses the knowledge base itself (filter by `department`,
-`language`, `topic`, or a title search with `q`), and
-`GET /kb/documents/{doc_id}` returns one document's full text - the web page's
-"Knowledge Base" tab is built on these two.
+### How a policy question is answered
 
-Chats can be organized into folders: `POST /folders` creates one, `GET
-/folders` lists them, `PATCH /folders/{id}` renames one, and `DELETE
-/folders/{id}` removes it (its conversations are kept, just unfiled).
-`PATCH /conversations/{id}` renames a conversation, `PUT
-/conversations/{id}/folder` moves it into a folder (or `null` to unfile it),
-and `DELETE /conversations/{id}` removes it completely, including its run and
-source records.
+This is the most important part, because it is what keeps the answers honest.
+The answer agent (`src/t2_assistant/agents/answer.py`) does this:
+
+1. **Fixes typing mistakes** in your message.
+2. **Makes the question complete.** In a conversation, "and for part-time
+   staff?" is rewritten as a full question so the search understands it.
+3. **Searches the knowledge base** for the 5 documents closest in *meaning* to
+   the question (not just matching words). Old, replaced versions of a policy
+   are left out.
+4. **Writes the answer using only those passages**, and lists the document
+   codes it used. If the passages do not contain the answer, it says so.
+5. **Tries once more** with a better search query if the first attempt found
+   nothing.
+6. **Double-checks before saying "I don't know"**: one last careful look at
+   everything it found, because a wrong "I don't know" is also a failure.
+
+The language model is never allowed to answer a policy question from its own
+general knowledge.
+
+### What happens to a spoken question
+
+```mermaid
+flowchart LR
+    M["Microphone"] --> W["Speech to text<br/>(Groq Whisper)"]
+    W --> T["The normal answer<br/>(same steps as above)"]
+    T --> D["Rewrite in spoken<br/>Saudi dialect"]
+    D --> N{"Same numbers as<br/>the written answer?"}
+    N -->|yes| V["Saudi voice"]
+    N -->|no| F["Read the written<br/>answer instead"]
+    F --> V
+    V --> P["You hear it, and each<br/>word appears as it is said"]
+```
+
+Voice mode does not have its own way of finding answers. It wraps the normal
+answer with three extra steps, described in [Voice mode](#voice-mode).
+
+## Run it on your computer
+
+### What you need
+
+- **Python 3.12** or newer.
+- A **Groq API key**. It is free: create one at <https://console.groq.com> →
+  *API Keys*.
+- An **internet connection** (the language model, speech recognition and the
+  voice are online services).
+- About **1.5 GB of free disk space**. The first run downloads a search model
+  of about 1.1 GB.
+- For voice mode: **Chrome or Edge**, and a microphone.
+
+The project was developed and tested on Windows 10. The commands below are for
+Windows; on macOS or Linux use `.venv/bin/` instead of `.venv\Scripts\` and
+`cp` instead of `copy`.
+
+### Steps
+
+Run every command from the project folder.
+
+**1. Get the code and create a private Python environment**
+
+```bash
+git clone https://github.com/saifjamal365-cmd/T2_assistant-.git
+cd T2_assistant-
+python -m venv .venv
+.venv\Scripts\activate
+```
+
+**2. Install the libraries**
+
+```bash
+pip install -e ".[dev]" --only-binary=:all:
+```
+
+(`--only-binary=:all:` is needed on Windows for the `chromadb` library.)
+
+**3. Add your Groq key**
+
+```bash
+copy .env.example .env
+```
+
+Open `.env` in a text editor and put your key after `GROQ_API_KEY=`. This file
+stays on your computer; git ignores it.
+
+**4. Build the search index** (once, and again whenever the documents change)
+
+```bash
+python -m t2_assistant.knowledge.build_index
+```
+
+This reads the 2,000 documents and prepares them for search. The first time, it
+also downloads the search model. It runs on your processor and prints its
+progress; let it finish.
+
+**5. Start the assistant**
+
+```bash
+python -m t2_assistant
+```
+
+Open <http://127.0.0.1:8000> in your browser.
+
+**6. (Optional) See the traces**
+
+In a second terminal, from the same folder:
+
+```bash
+mlflow ui --backend-store-uri sqlite:///mlflow.db
+```
+
+Then open <http://127.0.0.1:5000>. Every question appears there with each step
+the agents took.
+
+## Using it
+
+### Signing in
+
+The first screen asks for an email and a password.
+
+- The email must end in **`@t2.sa`**. To try the project, any such address
+  works, for example `you@t2.sa`.
+- The **first time** an email is used, the account is created with the password
+  you type (at least 8 characters). After that, the same password is required.
+- Passwords are stored only as a salted hash, never as plain text.
+
+There is no "confirm your email" step, so this sign-in is suitable for a local
+prototype only. See [Known limits](#known-limits).
+
+### The chat page (`/`)
+
+- Type a question and press Enter. Try: *"How many annual leave days do I
+  get?"*, *"كيف أحجز غرفة اجتماعات؟"*, or paste some meeting notes.
+- Under each answer: the **sources** (click one to read the passage, with the
+  supporting sentence highlighted), 👍 / 👎, and a **trace** link.
+- The sidebar keeps your past conversations. You can rename them, delete them,
+  and group them in folders.
+- **Model** lets you choose between three Groq models for the answer.
+- **Knowledge Base** lets you browse and read the documents themselves.
+- **Voice** opens voice mode.
+- The sun/moon button switches between light and dark.
 
 ## Voice mode
 
-`/voice` is a second page: press the microphone, ask out loud, and hear the
-answer in a Saudi voice. It is three steps around the normal chat turn, which
-is not changed (`src/t2_assistant/voice.py`):
+Open <http://127.0.0.1:8000/voice> (or click **Voice** on the chat page) after
+signing in.
 
-1. `POST /voice/transcribe` - the recording becomes text (Groq Whisper, same
-   API key as the LLM).
-2. `POST /voice/ask` - the usual `/chat` turn, then the written reply is
-   restyled into spoken Saudi dialect and read aloud (`ar-SA` neural voice via
-   `edge-tts`). The response is a stream of JSON lines: first the answer
-   (`reply` - written, with sources, also what is saved - and `spoken`), then
-   one line per spoken sentence with its mp3 audio and the moment each word
-   starts. The page plays the sentences in order and writes each word on
-   screen as the voice says it.
+1. Press the yellow microphone and allow microphone access when the browser
+   asks.
+2. Ask your question in Arabic.
+3. Stop talking. After 2 seconds of silence the recording ends by itself.
+4. You hear the answer in a Saudi voice. Each word appears on screen at the
+   moment it is spoken.
 
-The page decides the speaker has finished after 2 seconds of quiet, judged
-against the room's own noise level; a switch turns that off so the recording
-only ends when the microphone button is pressed again.
+Under each spoken answer you can open **"الجواب المكتوب والمصادر"** to read the
+original written answer and its sources. There is also a text box if you prefer
+to type and only listen.
 
-The dialect rewrite is guarded: if it does not contain exactly the same
-numbers as the written answer, it is dropped and the written answer is read
-instead. The page always shows the written answer and its sources under the
-spoken one.
+Two switches under the microphone:
 
-Known limits: it is turn-based (tap to interrupt, not a phone call); the
-recogniser is fixed to Arabic (`STT_LANGUAGE`); the voice reads dialect text
-with a fairly formal accent; and `edge-tts` is an unofficial free service -
-fine for a prototype, replace it with Azure Speech for production. The
-microphone only works on `localhost` or over https.
+| Switch | What it does |
+|---|---|
+| وقّف التسجيل لحالك إذا سكتّ | On (default): recording stops after 2 seconds of silence. Off: it stops only when you press the button again - useful in a noisy room or if you pause a lot. |
+| كمّل تسمعني بعد كل جواب | On: after each answer it starts listening again, so you can keep talking without pressing the button. |
 
-## Signing in
+Press the button while it is talking to interrupt it.
 
-`POST /auth/login` takes an email and a password. The email must end in
-`AUTH_EMAIL_DOMAIN` (`t2.sa` by default) - or be one of a short list of real
-inboxes in `AUTH_ALLOWED_TEST_EMAILS`, for testing before a real company
-inbox is connected. An email seen for the first time is registered with the
-password given; one already on file must match its stored password. On
-success it sets a session cookie; `GET /auth/me` returns the signed-in email
-(or `null`), and `POST /auth/logout` ends the session. Every other route
-requires that cookie.
+### How voice mode stays accurate
 
-Passwords are hashed (scrypt, salted) before they're stored - never kept in
-the clear. There is no email-verification step, so `AUTH_EMAIL_DOMAIN` /
-`AUTH_ALLOWED_TEST_EMAILS` is the only check on who is allowed to register.
+The spoken answer is a *rewrite* of the written answer into everyday Saudi
+dialect. A rewrite could change a fact by mistake, so it is checked: **if the
+spoken version does not contain exactly the same numbers as the written answer,
+it is thrown away and the written answer is read instead.** A slightly formal
+answer is better than a Saudi-sounding wrong one. Only the written answer is
+saved in the conversation.
 
-## Run it
+This check covers numbers only. A changed word that is not a number can still
+pass, which is why the written answer is always one click away.
 
-```bash
-python -m venv .venv
-.venv\Scripts\pip install -e ".[dev]" --only-binary=:all:   # Windows; --only-binary needed for chromadb
-copy .env.example .env                          # then paste your Groq API key
-python -m t2_assistant.knowledge.build_index    # build the search index (downloads the model once)
-python -m t2_assistant                          # chat page at http://127.0.0.1:8000/  (API docs at /docs)
-mlflow ui --backend-store-uri sqlite:///mlflow.db   # traces at http://127.0.0.1:5000
-```
+### What to expect for speed
 
-Run every command from the project folder. Checks: `ruff check src tests` ·
-`mypy src tests` · `pytest -m "not integration"` (add `-m integration` to test
-against the real index and Groq).
+Measured on the development laptop, with the free Groq plan:
+
+- The answer is usually ready **3-7 seconds** after you stop speaking.
+- The first sound usually follows in **under 1 second**, but the free voice
+  service is uneven and it sometimes takes several seconds.
+
+It is a turn-based conversation (you speak, then it speaks), not a live phone
+call.
+
+### The pieces
+
+| Step | Service | Code |
+|---|---|---|
+| Speech to text | Groq Whisper (same key as the language model) | `voice.transcribe()` |
+| Dialect rewrite + number check | Groq language model | `voice.to_spoken()` |
+| Text to speech | Microsoft `ar-SA` neural voice, through the `edge-tts` library (no key needed) | `voice.speak()` |
+
+## Tracing: seeing how an answer was made
+
+A *trace* is a recording of one request, step by step: which agent ran, what
+was searched, what was sent to the language model, what came back, and how long
+each step took. MLflow records it automatically; nothing is logged by hand.
+Start the viewer with `mlflow ui --backend-store-uri sqlite:///mlflow.db` and
+open the **Traces** tab.
+
+**A typed question** is one trace named `chat`. It contains the router's
+decision, every search, and every language-model call, and it is labelled with
+the model used, the number of steps the answer needed, and who asked. On the
+chat page, the **trace** link under an answer opens it, and a 👍 / 👎 is
+attached to it.
+
+**A spoken question** is only partly traced:
+
+| Step of a voice turn | Traced? |
+|---|---|
+| Finding and writing the answer | Yes - the same `chat` trace as a typed question. |
+| Rewriting the answer into Saudi dialect | Yes - but as a second, separate trace named `voice_dialect` (the written answer in, the spoken text out). |
+| Speech to text | No. |
+| Text to speech | No. |
+
+The two traces of a voice turn are not linked to each other, the `chat` trace
+does not say that it came from voice, and the voice page does not show a trace
+link. So today you can see *how the answer was produced* for a voice turn, but
+not the voice turn as one complete record.
+
+## Settings
+
+All settings live in the `.env` file. Only `GROQ_API_KEY` is required; the rest
+have defaults (defined in `src/t2_assistant/config.py`).
+
+| Setting | Default | Meaning |
+|---|---|---|
+| `GROQ_API_KEY` | - (required) | Your Groq key. |
+| `LLM_MODEL` | `openai/gpt-oss-120b` | The Groq model used for routing and answering. |
+| `LLM_TEMPERATURE` | `0.2` | Lower = more consistent answers (0-1). |
+| `EMBEDDING_MODEL` | `intfloat/multilingual-e5-base` | The local model that turns text into vectors for search. |
+| `RETRIEVAL_K` | `5` | How many documents the answer agent reads per search. |
+| `MAX_RETRIEVAL_TRIES` | `2` | How many searches it may try before deciding. |
+| `CHUNK_SIZE` / `CHUNK_OVERLAP` | `900` / `150` | How documents are split into passages (in characters). Rebuild the index after changing these. |
+| `STT_MODEL` | `whisper-large-v3` | Speech-to-text model. `whisper-large-v3-turbo` is faster, slightly less accurate. |
+| `STT_LANGUAGE` | `ar` | Language the speaker is expected to use. |
+| `TTS_VOICE` | `ar-SA-HamedNeural` | The voice. `ar-SA-ZariyahNeural` is the female voice. |
+| `AUTH_EMAIL_DOMAIN` | `t2.sa` | Only emails ending in this domain may sign in. |
+| `AUTH_ALLOWED_TEST_EMAILS` | `[]` | Extra exact addresses allowed to sign in, as a JSON list. |
+| `SESSION_TTL_DAYS` | `30` | How long a sign-in lasts. |
+| `MLFLOW_TRACKING_URI` | `sqlite:///mlflow.db` | Where traces are stored. |
+| `MLFLOW_UI_URL` | `http://localhost:5000` | Where `mlflow ui` runs, used to build trace links. |
 
 ## The knowledge base
 
-`data/knowledge_base/` holds 2000 synthetic company-policy documents. They are
-**not real** — they are generated to give the retrieval layer a realistic
-scale and shape to work against, and are replaced by real documents when those
-become available (no code change).
+`data/knowledge_base/` holds the documents the assistant answers from.
 
-- **114 topics** across 8 departments (HR, IT, Finance, Facilities,
-  Legal & Compliance, Operations, Marketing & Communications, Procurement).
-- **4 document types** per topic: Policy, Procedure, FAQ, Quick Reference.
-- **English and Arabic** (1000 each).
-- **Per-office variants** — some policies differ by office (Riyadh, Jeddah,
-  Dubai, Cairo, Remote), with different numbers and scope.
-- **Old versions** — a number of documents are marked `Superseded` and point
-  to the current version, so retrieval has to prefer the live one.
-- Every document has a header: document ID, department, type, version,
-  effective date, status, owner, who it applies to, and related documents.
+**They are not real.** They are generated by `scripts/generate_kb.py` to give
+the search a realistic amount and variety of material. When real documents are
+available they replace these, with no change to the code.
+
+What is in it (counted from `manifest.csv`):
+
+- **2,000 documents**: 1,001 English and 999 Arabic.
+- **8 departments**: Human Resources, Information Technology, Finance,
+  Facilities, Legal & Compliance, Operations, Marketing & Communications,
+  Procurement.
+- **114 topics**, each written as up to 4 document types: Policy, Procedure,
+  FAQ, Quick Reference.
+- **Office variants**: besides the Head Office version, some policies have
+  versions for Riyadh, Jeddah, Dubai, Cairo and remote teams, with different
+  numbers.
+- **Old versions**: 125 documents are marked *Superseded* and point to the
+  current version. Search ignores them, so answers come from the live policy.
+
+Every document starts with a header: document code, department, type, version,
+effective date, status, owner, who it applies to, and related documents.
+
+Two things worth knowing:
+
+- `manifest.csv` is the list that counts. Only documents listed there are
+  indexed. The `en/` and `ar/` folders also contain about 300 older files from
+  an earlier generation that are not in the manifest and are not used.
+- By default, search uses the general (Head Office) version of a policy. The
+  office variants are in the knowledge base, but a normal question is not
+  answered from them.
 
 ### Rebuild it
 
 ```bash
-python scripts/generate_kb.py                 # 2000 documents (default)
-python scripts/generate_kb.py --count 300     # smaller set for quick tests
-python scripts/generate_kb.py --out data/kb2  # write elsewhere
+python scripts/generate_kb.py                 # the default set
+python scripts/generate_kb.py --count 300     # a smaller set for quick tests
+python scripts/generate_kb.py --out data/kb2  # write somewhere else
+python -m t2_assistant.knowledge.build_index  # always rebuild the index afterwards
 ```
 
-The generator is seeded, so it produces the same corpus every time. It needs
-only the Python standard library.
+The generator always produces the same documents (it uses a fixed seed) and
+needs only standard Python.
 
-## Evaluation
+## How well it works
 
-`eval/dataset.json` is built straight from the same generator that built the
-knowledge base (never hand-written), so every expected answer traces back to
-a real document - answerable questions (exact wording + paraphrased) and a
-block of deliberately unanswerable ones, split evenly EN/AR. Its size grows
-with the knowledge base (run `python scripts/build_eval_set.py` after
-regenerating the KB to refresh it).
+### How it is measured
+
+The test questions are not written by hand. `scripts/build_eval_set.py` builds
+them from the same generator that built the documents, so every expected answer
+can be traced to a real document. The set contains:
+
+- questions that use the document's own words,
+- the same questions reworded,
+- questions that **cannot** be answered from the documents (the assistant
+  should decline),
+
+split between English and Arabic. `eval/dataset.json` has 708 questions;
+`eval/dataset_subset.json` is a fair 50-question sample, because the free Groq
+plan cannot run the full set in one day.
 
 ```bash
-python -m t2_assistant.evaluation.run                              # the full set
-python -m t2_assistant.evaluation.run --dataset eval/dataset_subset.json  # fair 50-question sample
-python -m t2_assistant.evaluation.run --resume                     # keep successes, retry only failures
+python -m t2_assistant.evaluation.run                                     # the full set
+python -m t2_assistant.evaluation.run --dataset eval/dataset_subset.json  # the 50-question sample
+python -m t2_assistant.evaluation.run --resume                            # continue a run that was cut short
 ```
 
-Groq's free plan caps tokens per day as well as per minute; `--resume` picks
-up a run that was cut short by the daily cap without re-asking questions it
-already got right. Results (`report.md`, `report.json`, `answers.jsonl`) land
-in `eval/results/` and are also logged as an MLflow run named "evaluation".
-See Section 12 and 13.8 of the documentation for the current results.
+Results are written to `eval/results/` and logged to MLflow as a run named
+"evaluation".
 
-## Stack
+### Results so far
 
-Python 3.12 · LangGraph — a small team of agents: a **router agent** that picks
-a route by reasoning (no keyword list) and specialist agents for **greeting**,
-**answer**, **summary** and **clarify** · Groq LLM · multilingual‑E5 embeddings
-(local; BGE‑M3 is higher quality but needs a GPU) · Chroma vector store (local) ·
-MLflow tracing (local) · SQLite · FastAPI. See Section 9 of the documentation for
-the reasoning.
+| Run | Overall accuracy | Finds the right document | Correct on answerable questions | Declines when it should | Where it is recorded |
+|---|---|---|---|---|---|
+| 50-question sample | 98% | 100% | 100% | 90.9% (10 of 11) | Project documentation, Section 12 |
+| 20-question run | 90% | 88.9% | 88.9% | 100% (2 of 2) | `eval/results/report.md` (the report currently in this repository) |
+
+Read these with care:
+
+- Both runs are small. The full 708-question run has not been completed.
+- All questions are about the generated documents, so the numbers say how well
+  the *method* works, not how it will do on real T2 policies.
+- **Voice mode has no scored evaluation yet.** It was checked with automatic
+  tests and a small manual run of 8 spoken questions, in which every answer
+  kept the correct facts. Recognition of real voices, accents and noisy rooms
+  has not been measured.
+
+## Tests and code checks
+
+```bash
+pytest -m "not integration"   # 84 tests, no internet needed, about a minute
+pytest -m integration         # 16 more tests that call the real Groq API and the real index
+ruff check src tests          # code style
+mypy src tests                # type checking (strict)
+```
+
+The normal tests replace the language model and the speech services with
+fakes, so they check this project's own logic and never spend API quota.
+
+## Project layout
+
+```
+T2_assistant-/
+├── README.md                              this file
+├── T2_Assistant_Project_Documentation.docx  full requirements, design decisions, phase-by-phase log
+├── T2_Assistant_Presentation.pptx         slides
+├── pyproject.toml                         project description and pinned library versions
+├── .env.example                           template for your settings (copy to .env)
+├── data/knowledge_base/
+│   ├── en/  ar/                           the generated policy documents
+│   └── manifest.csv                       one row per document - the list that counts
+├── scripts/
+│   ├── generate_kb.py                     builds the sample knowledge base
+│   ├── build_eval_set.py                  builds eval/dataset.json
+│   └── build_eval_subset.py               picks the fair 50-question sample
+├── eval/
+│   ├── dataset.json  dataset_subset.json  the test questions
+│   └── results/                           report.md, report.json, answers.jsonl
+├── src/t2_assistant/
+│   ├── __main__.py                        starts the server (python -m t2_assistant)
+│   ├── api.py                             every HTTP route; serves the two web pages
+│   ├── config.py                          settings, loaded from .env
+│   ├── auth.py                            sign-in: allowed emails, password hashing
+│   ├── store.py                           the database: users, conversations, messages, runs (SQLite)
+│   ├── conversation.py                    runs one chat turn, with memory
+│   ├── voice.py                           voice mode: speech to text, dialect rewrite, text to speech
+│   ├── observability.py  tracing.py       trace links, 👍/👎 feedback, MLflow setup
+│   ├── agents/
+│   │   ├── router.py                      chooses the specialist
+│   │   ├── graph.py                       connects router → specialist (LangGraph)
+│   │   ├── answer.py                      searches, then writes a sourced answer
+│   │   ├── greeting.py  clarify.py  summarise.py   the other specialists
+│   │   ├── llm.py                         the one place that connects to Groq
+│   │   └── state.py                       the data passed between agents
+│   ├── knowledge/
+│   │   ├── build_index.py                 builds the search index from the manifest
+│   │   ├── chunking.py                    splits a document into passages
+│   │   ├── embeddings.py                  text → vectors (multilingual E5, runs locally)
+│   │   ├── vector_store.py                opens the Chroma index
+│   │   └── search.py                      question → closest passages
+│   ├── evaluation/                        the scoring code behind "How well it works"
+│   └── web/
+│       ├── index.html                     the chat page (one file, no build step)
+│       └── voice.html                     the voice page (one file, no build step)
+└── tests/                                 the automatic tests
+```
+
+Created on your computer when you run it, and never committed: `.env` (your
+key), `chroma/` (the search index), `store.db` (accounts and conversations),
+`mlflow.db` (traces).
+
+## The HTTP API
+
+The web pages use this API, and you can use it directly. Interactive
+documentation is at <http://127.0.0.1:8000/docs> while the server runs. Every
+route except the two pages, `/health` and `/auth/*` needs a signed-in session
+(a cookie set by `/auth/login`).
+
+| Route | What it does |
+|---|---|
+| `GET /` , `GET /voice` | The chat page and the voice page. |
+| `GET /health` | `{"status": "ok"}` when the server is up. |
+| `POST /auth/login` | Sign in with `email` and `password`; creates the account on first use. |
+| `POST /auth/logout` , `GET /auth/me` | Sign out; who is signed in. |
+| `POST /chat` | Send `message` (and `conversation_id` to continue a conversation, `model` to pick a model). Returns the reply, the route chosen, the sources and a trace link. |
+| `GET /conversations` , `GET /conversations/{id}` | List your conversations; read one with all its messages. |
+| `PATCH /conversations/{id}` , `DELETE /conversations/{id}` | Rename; delete. |
+| `PUT /conversations/{id}/folder` | Move a conversation into a folder (or `null` to take it out). |
+| `GET` / `POST /folders` , `PATCH` / `DELETE /folders/{id}` | Manage folders. Deleting a folder keeps its conversations. |
+| `GET /runs` , `GET /runs/{id}` | Past requests, each with its trace link and feedback. |
+| `POST /runs/{id}/feedback` | Record 👍 / 👎 (`helpful`, optional `comment`). |
+| `GET /kb/documents` , `GET /kb/documents/{doc_id}` | Browse the knowledge base (filter by `department`, `language`, `topic`, or title search `q`); read one document. |
+| `POST /voice/transcribe` | The request body is a recording; returns its text. |
+| `POST /voice/ask` | Like `/chat`, but the response is a stream of JSON lines: first the answer (written `reply` plus `spoken` text), then one line per spoken sentence with its mp3 audio and the time each word starts. |
+
+## Known limits
+
+**The data**
+
+- The policy documents are generated samples, not real T2 policies.
+
+**The free services**
+
+- The free Groq plan limits how much you can ask per minute and per day. When
+  the limit is hit, an answer can wait 10 seconds or more, and long test runs
+  cannot finish in one day.
+- The voice comes from `edge-tts`, which uses the free read-aloud service
+  behind Microsoft Edge. It needs no key, but it is unofficial and its speed is
+  uneven. **Replace it with a licensed service (for example Azure Speech, which
+  has the same voices) before any real use.**
+
+**Voice mode**
+
+- It is turn-based, not a live two-way call.
+- Speech recognition is fixed to Arabic. A question spoken in English will not
+  be understood. Change `STT_LANGUAGE` to use another language.
+- The voice has a Saudi accent but reads in a fairly formal style, even when
+  the text is in dialect.
+- The quality of the dialect has not been reviewed by a native Saudi speaker.
+- The microphone works only on `localhost` or over https, in Chrome or Edge.
+- A voice turn is only partly traced in MLflow - see
+  [Tracing](#tracing-seeing-how-an-answer-was-made).
+
+**Security and deployment**
+
+- Sign-in has no email verification: anyone who can reach the server and types
+  an `@t2.sa` address that is not yet registered gets that account.
+- It is set up to run on one computer over plain `http`. Putting it on a
+  network needs https, a secure session cookie, and a proper sign-in method.
+- Accounts, conversations and the search index are local files (SQLite and
+  Chroma), suitable for one machine.
+
+## Technology used, and why
+
+| Part | Choice | Why |
+|---|---|---|
+| Language | Python 3.12 | - |
+| Agents | LangGraph | Makes the router → specialist flow explicit and easy to trace. |
+| Language model | Groq (`openai/gpt-oss-120b` by default) | Fast, and has a free plan. Each model offered was tested against this project's own questions first (`tests/test_models.py`). |
+| Search model | multilingual E5 (base), run locally | Handles Arabic and English, built for search, fast enough without a graphics card. |
+| Search index | Chroma, local | No server to set up. |
+| Speech to text | Groq Whisper | Same key as the language model; handles Arabic. |
+| Text to speech | `edge-tts`, `ar-SA` voices | Free, no key, gives the timing of every word. A prototype choice - see [Known limits](#known-limits). |
+| Storage | SQLite | One file, nothing to install. |
+| Tracing | MLflow, local | Shows every step of every answer. |
+| Web | FastAPI + two plain HTML pages | No front-end build step. |
+
+The reasoning behind each choice, the full requirements, and a log of how the
+project was built phase by phase are in
+`T2_Assistant_Project_Documentation.docx`.
