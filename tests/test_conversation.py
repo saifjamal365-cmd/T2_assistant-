@@ -22,6 +22,7 @@ def test_run_turn_saves_both_turns_and_passes_history(monkeypatch: pytest.Monkey
         *,
         model: str | None = None,
         user_email: str | None = None,
+        highlights: bool = True,
     ) -> ChatResult:
         seen_history.append(list(history or []))
         return ChatResult(
@@ -77,6 +78,7 @@ def test_run_turn_threads_and_persists_the_chosen_model(monkeypatch: pytest.Monk
         *,
         model: str | None = None,
         user_email: str | None = None,
+        highlights: bool = True,
     ) -> ChatResult:
         seen_models.append(model)
         resolved = model or settings.llm_model
@@ -109,7 +111,9 @@ def _route_to(monkeypatch: pytest.MonkeyPatch, route: Route) -> None:
 def test_chat_reads_steps_from_the_specialists_reply(monkeypatch: pytest.MonkeyPatch) -> None:
     _route_to(monkeypatch, "answer")
     monkeypatch.setattr(
-        answer, "respond", lambda _messages, _model: AIMessage("x", additional_kwargs={"steps": 3})
+        answer,
+        "respond",
+        lambda _messages, _model, **_options: AIMessage("x", additional_kwargs={"steps": 3}),
     )
 
     result = conversation.chat("a policy question")

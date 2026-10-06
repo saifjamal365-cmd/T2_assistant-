@@ -22,8 +22,12 @@
                                            a new allowed email on first use)
     POST   /auth/logout                -> end the current session
     GET    /auth/me                    -> the signed-in email, or null
+    GET    /voice                      -> the voice page (speak a question, hear the answer)
+    POST   /voice/transcribe           -> a recording (raw audio body) -> its text
+    POST   /voice/ask                  -> like /chat, answered as a stream: the reply,
+                                           then each spoken sentence with its audio
 
-Every route other than the page itself, /health, and /auth/* requires a
+Every route other than the two pages, /health, and /auth/* requires a
 signed-in session (a cookie set by /auth/login) - see require_session below.
 
 The server owns the conversation history now: send a `conversation_id` to
@@ -41,20 +45,24 @@ Web page:  http://localhost:8000/     Interactive API docs:  http://localhost:80
 
 from __future__ import annotations
 
+import base64
 import csv
+import json
 import logging
+from collections.abc import AsyncIterator
 from functools import lru_cache
 from pathlib import Path
 
 from fastapi import FastAPI, HTTPException, Request, Response
-from fastapi.responses import HTMLResponse, JSONResponse
+from fastapi.concurrency import run_in_threadpool
+from fastapi.responses import HTMLResponse, JSONResponse, StreamingResponse
 from groq import APIError
 from pydantic import BaseModel, Field, field_validator
 
-from t2_assistant import auth, store
+from t2_assistant import auth, store, voice
 from t2_assistant.agents.llm import ModelId
 from t2_assistant.config import settings
-from t2_assistant.conversation import run_turn
+from t2_assistant.conversation import TurnResult, run_turn
 from t2_assistant.observability import record_feedback, trace_url
 
 logger = logging.getLogger("t2_assistant.api")
@@ -62,9 +70,20 @@ logger = logging.getLogger("t2_assistant.api")
 app = FastAPI(title="T2 Assistant", version="0.1.0")
 
 _INDEX_HTML = Path(__file__).parent / "web" / "index.html"
+_VOICE_HTML = Path(__file__).parent / "web" / "voice.html"
 _MAX_MESSAGE_LENGTH = 4000  # generous for a question or a page of meeting notes
+_MAX_AUDIO_BYTES = 10 * 1024 * 1024  # minutes of compressed speech; a question is seconds
+# what the browser recorded -> the file extension Groq uses to recognise the format
+_AUDIO_EXTENSIONS = {
+    "audio/webm": "webm",
+    "audio/ogg": "ogg",
+    "audio/mp4": "mp4",
+    "audio/mpeg": "mp3",
+    "audio/wav": "wav",
+    "audio/x-wav": "wav",
+}
 _SESSION_COOKIE = "t2_session"
-_PUBLIC_PATHS = {"/", "/health", "/docs", "/redoc", "/openapi.json"}
+_PUBLIC_PATHS = {"/", "/voice", "/health", "/docs", "/redoc", "/openapi.json"}
 
 
 @app.middleware("http")
@@ -319,6 +338,10 @@ def post_chat(body: ChatIn, request: Request) -> ChatOut:
             status_code=503, detail="The assistant is temporarily unavailable. Please try again."
         ) from exc
 
+    return _chat_out(result)
+
+
+def _chat_out(result: TurnResult) -> ChatOut:
     return ChatOut(
         conversation_id=result.conversation_id,
         run_id=result.run_id,
@@ -329,6 +352,103 @@ def post_chat(body: ChatIn, request: Request) -> ChatOut:
         sources=[SourceOut.model_validate(s) for s in result.sources],
         model=result.model,
     )
+
+
+class TranscriptOut(BaseModel):
+    text: str
+
+
+class VoiceAskOut(ChatOut):
+    spoken: str = Field(description="The reply as Saudi-dialect text to read aloud.")
+
+
+@app.get("/voice", response_class=HTMLResponse)
+def voice_page() -> HTMLResponse:
+    return HTMLResponse(_VOICE_HTML.read_text(encoding="utf-8"))
+
+
+@app.post("/voice/transcribe", response_model=TranscriptOut)
+async def post_transcribe(request: Request) -> TranscriptOut:
+    """The request body is the recording itself; Content-Type says its format."""
+    content_type = request.headers.get("content-type", "").split(";")[0].strip().lower()
+    extension = _AUDIO_EXTENSIONS.get(content_type)
+    if extension is None:
+        raise HTTPException(status_code=415, detail="unsupported audio format")
+    audio = await request.body()
+    if not audio:
+        raise HTTPException(status_code=422, detail="the recording is empty")
+    if len(audio) > _MAX_AUDIO_BYTES:
+        raise HTTPException(status_code=413, detail="the recording is too long")
+    try:
+        text = await run_in_threadpool(voice.transcribe, audio, f"speech.{extension}")
+    except APIError as exc:
+        logger.warning("speech-to-text call failed: %s", exc)
+        raise HTTPException(
+            status_code=503, detail="Speech recognition is temporarily unavailable."
+        ) from exc
+    return TranscriptOut(text=text)
+
+
+def _event(kind: str, **fields: object) -> str:
+    """One line of the /voice/ask stream."""
+    return json.dumps({"type": kind, **fields}, ensure_ascii=False) + "\n"
+
+
+async def _voice_events(answer: VoiceAskOut) -> AsyncIterator[str]:
+    yield _event("answer", **answer.model_dump())
+    index = 0
+    async for sentence, speech in voice.speak(answer.spoken):
+        yield _event(
+            "sentence",
+            index=index,
+            text=sentence,
+            # null when the voice failed on this sentence - the page shows its text anyway
+            audio=base64.b64encode(speech.audio).decode("ascii") if speech else None,
+            word_starts_ms=speech.word_starts_ms if speech else [],
+            speech_end_ms=speech.end_ms if speech else 0,
+        )
+        index += 1
+    yield _event("done")
+
+
+@app.post("/voice/ask")
+async def post_voice_ask(body: ChatIn, request: Request) -> StreamingResponse:
+    """One voice turn: the normal chat turn (saved to the conversation as
+    usual), then that reply restyled for speech. Only the written reply is
+    stored - the spoken text is a rendering of it, not a second answer.
+
+    The response is a stream of JSON lines, so the page can start talking
+    before the whole answer has been turned into audio:
+
+        {"type": "answer", ...}    the /chat fields plus `spoken` - sent first
+        {"type": "sentence", "index", "text", "audio", "word_starts_ms",
+         "speech_end_ms"}          one per spoken sentence, in order; `audio`
+                                   is base64 mp3, `word_starts_ms` says when
+                                   each word of `text` begins in it, and
+                                   `speech_end_ms` when the last one ends
+                                   (the clip has silence after that)
+        {"type": "done"}
+
+    A failure before the answer exists is a normal error response (503), not
+    a stream.
+    """
+    try:
+        result = await run_in_threadpool(
+            run_turn,
+            body.message,
+            body.conversation_id,
+            model=body.model,
+            user_email=request.state.user_email,
+            highlights=False,  # the voice page lists sources by name only
+        )
+        spoken = await run_in_threadpool(voice.to_spoken, result.reply, result.model)
+    except APIError as exc:
+        logger.warning("language model call failed: %s", exc)
+        raise HTTPException(
+            status_code=503, detail="The assistant is temporarily unavailable. Please try again."
+        ) from exc
+    answer = VoiceAskOut(**_chat_out(result).model_dump(), spoken=spoken)
+    return StreamingResponse(_voice_events(answer), media_type="application/x-ndjson")
 
 
 @app.get("/conversations", response_model=list[ConversationSummaryOut])

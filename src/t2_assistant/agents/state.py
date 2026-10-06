@@ -8,6 +8,9 @@ and returns the fields it wants to change. We keep it small:
     route_reason   the router's one-line reason (shown in the trace / API)
     answer_model   the Groq model id the chosen specialist writes the reply
                     with, already resolved before the graph runs
+    highlights     optional; False skips marking the supporting sentence in
+                    each source (voice mode: nothing shows it, and it costs
+                    seconds of CPU). Left out, sources are highlighted.
 
 Named `answer_model`, not `model`: LangGraph hands this whole dictionary to
 every node, including the router - which never reads this field, since
@@ -22,7 +25,7 @@ messages, they are appended to the list rather than replacing it.
 
 from __future__ import annotations
 
-from typing import Annotated, Literal, TypedDict
+from typing import Annotated, Literal, NotRequired, TypedDict
 
 from langchain_core.messages import AnyMessage
 from langgraph.graph.message import add_messages
@@ -35,3 +38,4 @@ class AgentState(TypedDict):
     route: Route | None
     route_reason: str | None
     answer_model: str
+    highlights: NotRequired[bool]

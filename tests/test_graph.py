@@ -27,7 +27,7 @@ def fake_agents(monkeypatch: pytest.MonkeyPatch) -> None:
         monkeypatch.setattr(
             module,
             "respond",
-            lambda _messages, _model, _n=name: AIMessage(f"[{_n}] handled it"),
+            lambda _messages, _model, _n=name, **_options: AIMessage(f"[{_n}] handled it"),
         )
 
 

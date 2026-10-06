@@ -1,0 +1,613 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>T2 Assistant · Voice</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* same T2 tokens as index.html, so both pages read as one product */
+    :root {
+      --bg: #f8f6ef;
+      --surface: #ffffff;
+      --border: #e7e3d6;
+      --text: #161616;
+      --muted: #6b6659;
+      --accent: #ffcc00;
+      --accent-hover: #e6b800;
+      --accent-soft: #fff6d6;
+      --link: #1e7a45;
+      --ink: #161616;
+      --bubble-user-bg: #161616;
+      --bubble-user-text: #f8f6ef;
+      --danger: #b3261e;
+    }
+    :root[data-theme="dark"] {
+      --bg: #161513;
+      --surface: #201f1c;
+      --border: #34322c;
+      --text: #f2efe8;
+      --muted: #a9a599;
+      --accent-soft: #362d14;
+      --link: #4cbe7d;
+      --bubble-user-bg: #2a2820;
+      --bubble-user-text: #f2efe8;
+      --danger: #f2877f;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; display: flex; flex-direction: column; align-items: center;
+           font: 16px/1.8 'IBM Plex Sans Arabic', 'Archivo', "Segoe UI", system-ui, sans-serif;
+           color: var(--text); background: var(--bg); -webkit-font-smoothing: antialiased; }
+    button, input { font: inherit; color: inherit; }
+
+    header { width: 100%; max-width: 760px; padding: 16px 20px; display: flex; align-items: center;
+             justify-content: space-between; gap: 12px; }
+    .brand { font: 800 17px 'Archivo', sans-serif; direction: ltr; }
+    .brand small { font: 500 13px 'IBM Plex Sans Arabic', sans-serif; color: var(--muted); margin-inline-start: 8px; }
+    .headLinks { display: flex; gap: 8px; }
+    .headLinks a, .headLinks button { border: 1px solid var(--border); background: var(--surface); border-radius: 8px;
+             padding: 4px 12px; font-size: 14px; text-decoration: none; color: var(--text); cursor: pointer; }
+    .headLinks a:hover, .headLinks button:hover { border-color: var(--accent); }
+
+    #log { flex: 1; width: 100%; max-width: 760px; padding: 8px 20px 24px; display: flex;
+           flex-direction: column; gap: 14px; }
+    .empty { margin: auto; text-align: center; color: var(--muted); max-width: 440px; }
+    .empty b { display: block; color: var(--text); font-size: 20px; margin-bottom: 6px; }
+    .turn { display: flex; flex-direction: column; gap: 4px; max-width: 88%; }
+    .turn.user { align-self: flex-start; }
+    .turn.agent { align-self: flex-end; }
+    .bubble { padding: 10px 16px; border-radius: 16px; overflow-wrap: anywhere; }
+    .user .bubble { background: var(--bubble-user-bg); color: var(--bubble-user-text); border-start-start-radius: 4px; }
+    .agent .bubble { background: var(--surface); border: 1px solid var(--border); border-start-end-radius: 4px; }
+    /* the answer exists but its first words have not been spoken yet */
+    .bubble.waiting::after { content: "● ● ●"; font-size: 9px; letter-spacing: 3px; color: var(--muted);
+             animation: blink 1.2s ease-in-out infinite; }
+    @keyframes blink { 50% { opacity: .25; } }
+    .meta { font-size: 12.5px; color: var(--muted); padding: 0 6px; }
+    details { font-size: 14px; color: var(--muted); padding: 0 6px; }
+    details summary { cursor: pointer; width: fit-content; }
+    details .written { margin: 6px 0; padding: 10px 14px; border-inline-start: 3px solid var(--accent);
+             background: var(--accent-soft); color: var(--text); border-radius: 6px; white-space: pre-wrap;
+             unicode-bidi: plaintext; text-align: start; }
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+    .chip { border: 1px solid var(--border); background: var(--surface); border-radius: 999px;
+            padding: 0 10px; font-size: 12.5px; color: var(--text); unicode-bidi: plaintext; }
+
+    #dock { position: sticky; bottom: 0; width: 100%; background: linear-gradient(transparent, var(--bg) 26%);
+            padding: 28px 20px 18px; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+    #status { min-height: 1.8em; color: var(--muted); font-size: 15px; text-align: center; }
+    #status.error { color: var(--danger); }
+    #mic { --level: 0; position: relative; width: 84px; height: 84px; border-radius: 50%; border: none;
+           background: var(--accent); color: var(--ink); cursor: pointer; display: grid; place-items: center;
+           transition: background .15s ease, transform .1s ease; }
+    #mic:hover { background: var(--accent-hover); }
+    #mic:active { transform: scale(.96); }
+    #mic:disabled { cursor: progress; }
+    #mic:focus-visible { outline: 3px solid var(--link); outline-offset: 4px; }
+    #mic svg { width: 34px; height: 34px; }
+    #mic::before { content: ""; position: absolute; inset: 0; border-radius: 50%; pointer-events: none; }
+    #mic[data-phase="listening"]::before { background: var(--accent); opacity: .35;
+           transform: scale(calc(1.12 + var(--level) * 1.1)); transition: transform .08s linear; }
+    #mic[data-phase="thinking"]::before { inset: -7px; border: 3px solid var(--border);
+           border-top-color: var(--accent-hover); animation: spin .9s linear infinite; }
+    #mic[data-phase="speaking"] { background: var(--ink); color: var(--accent); }
+    :root[data-theme="dark"] #mic[data-phase="speaking"] { background: var(--surface); border: 1px solid var(--border); }
+    #mic .iconStop { display: none; }
+    #mic[data-phase="speaking"] .iconMic, #mic[data-phase="listening"] .iconMic { display: none; }
+    #mic[data-phase="speaking"] .iconStop, #mic[data-phase="listening"] .iconStop { display: block; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @media (prefers-reduced-motion: reduce) {
+      #mic[data-phase="thinking"]::before { animation-duration: 3s; }
+      .bubble.waiting::after { animation: none; }
+    }
+    #options { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 18px; }
+
+    #controls { width: 100%; max-width: 560px; display: flex; gap: 8px; align-items: center; }
+    #typed { flex: 1; min-width: 0; border: 1px solid var(--border); background: var(--surface);
+             border-radius: 10px; padding: 7px 14px; }
+    #typed:focus { outline: 2px solid var(--accent); border-color: transparent; }
+    #sendTyped { border: 1px solid var(--border); background: var(--surface); border-radius: 10px;
+             padding: 7px 16px; cursor: pointer; }
+    #sendTyped:hover { border-color: var(--accent); }
+    .toggle { display: flex; align-items: center; gap: 6px; font-size: 14px; color: var(--muted); cursor: pointer; }
+    .toggle input { accent-color: var(--link); width: 16px; height: 16px; }
+  </style>
+</head>
+<body>
+  <header>
+    <span class="brand">T2 Assistant<small>المساعد الصوتي</small></span>
+    <span class="headLinks">
+      <button id="newChat" type="button">محادثة جديدة</button>
+      <a href="/">المحادثة الكتابية</a>
+    </span>
+  </header>
+
+  <main id="log" aria-live="polite">
+    <div class="empty" id="empty">
+      <b>اسأل بصوتك</b>
+      اضغط على المايك واسأل عن أي سياسة في الشركة، وبجاوبك بصوتي من مستندات الشركة.
+    </div>
+  </main>
+
+  <div id="dock">
+    <div id="status" role="status"></div>
+    <button id="mic" type="button" data-phase="idle" aria-label="اضغط وتكلم">
+      <svg class="iconMic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0M12 18v3"></path></svg>
+      <svg class="iconStop" viewBox="0 0 24 24" fill="currentColor"><rect x="7" y="7" width="10" height="10" rx="2"></rect></svg>
+    </button>
+    <div id="options">
+      <label class="toggle"><input id="autoStop" type="checkbox" checked /> وقّف التسجيل لحالك إذا سكتّ</label>
+      <label class="toggle"><input id="handsFree" type="checkbox" /> كمّل تسمعني بعد كل جواب</label>
+    </div>
+    <form id="controls">
+      <input id="typed" type="text" maxlength="4000" placeholder="أو اكتب سؤالك هنا" autocomplete="off" />
+      <button id="sendTyped" type="submit">إرسال</button>
+    </form>
+  </div>
+
+  <script>
+    // same saved theme as the chat page
+    (function initTheme() {
+      let saved = null;
+      try { saved = localStorage.getItem("t2_theme"); } catch (e) { /* ignore */ }
+      const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.dataset.theme = saved || (prefersDark ? "dark" : "light");
+    })();
+
+    const log = document.getElementById("log");
+    const mic = document.getElementById("mic");
+    const statusEl = document.getElementById("status");
+    const autoStop = document.getElementById("autoStop");
+    const handsFree = document.getElementById("handsFree");
+    const typed = document.getElementById("typed");
+
+    // ---- tuning -------------------------------------------------------------
+    const TICK_MS = 50;             // how often the microphone level is read
+    const WARMUP_MS = 200;          // the first readings only measure the room
+    const SILENCE_MS = 2000;        // this much quiet after speech = the question is finished;
+                                    // long enough for a pause to think in the middle of a sentence
+    const NO_SPEECH_MS = 8000;      // give up if nobody says anything
+    const MAX_RECORDING_MS = 60000;
+    const MIN_RECORDING_MS = 600;   // shorter than this cannot be a question
+    const START_LEVEL = 0.015;      // quietest level that can count as the start of speech
+    const KEEP_LEVEL = 0.01;        // quietest level that keeps a sentence already begun alive
+    const MAX_NOISE = 0.02;         // the room is never assumed louder than quiet speech
+    const REVEAL_TICK_MS = 40;      // how often the spoken words on screen catch up with the voice
+    const SENTENCE_PAUSE_MS = 350;  // breath left after a sentence's last word before the next one
+
+    const STATUS = {
+      idle: "اضغط على المايك وتكلم",
+      transcribing: "أكتب اللي قلته...",
+      thinking: "أدوّر لك في مستندات الشركة...",
+      speaking: "اضغط إذا تبي توقفني",
+    };
+
+    let phase = "idle";
+    let conversationId = null;
+    try { conversationId = sessionStorage.getItem("t2_voice_conversation_id"); } catch (e) { /* ignore */ }
+
+    // both switches are remembered between visits
+    for (const box of [autoStop, handsFree]) {
+      const key = "t2_voice_" + box.id;
+      try {
+        const saved = localStorage.getItem(key);
+        if (saved !== null) box.checked = saved === "1";
+      } catch (e) { /* ignore */ }
+      box.onchange = () => {
+        try { localStorage.setItem(key, box.checked ? "1" : "0"); } catch (e) { /* ignore */ }
+      };
+    }
+
+    function setPhase(next, message, isError) {
+      phase = next;
+      mic.dataset.phase = next === "transcribing" ? "thinking" : next;
+      mic.disabled = next === "transcribing" || next === "thinking";
+      statusEl.textContent = message || STATUS[next];
+      statusEl.classList.toggle("error", Boolean(isError));
+    }
+
+    function addTurn(role, text) {
+      const empty = document.getElementById("empty");
+      if (empty) empty.remove();
+      const turn = document.createElement("div");
+      turn.className = "turn " + role;
+      const bubble = document.createElement("div");
+      bubble.className = "bubble";
+      bubble.textContent = text;
+      turn.appendChild(bubble);
+      log.appendChild(turn);
+      turn.scrollIntoView({ behavior: "smooth", block: "end" });
+      return turn;
+    }
+
+    // the timing line, and the written answer with its sources, under a spoken reply
+    function addDetails(turn, data) {
+      const meta = document.createElement("div");
+      meta.className = "meta";
+      turn.appendChild(meta);
+
+      const details = document.createElement("details");
+      const summary = document.createElement("summary");
+      summary.textContent = data.sources.length ? "الجواب المكتوب والمصادر" : "الجواب المكتوب";
+      const written = document.createElement("div");
+      written.className = "written";
+      written.textContent = data.reply;
+      details.append(summary, written);
+      if (data.sources.length) {
+        const chips = document.createElement("div");
+        chips.className = "chips";
+        for (const source of data.sources) {
+          const chip = document.createElement("span");
+          chip.className = "chip";
+          chip.textContent = source.doc_id + " · " + source.title;
+          chips.appendChild(chip);
+        }
+        details.appendChild(chips);
+      }
+      turn.appendChild(details);
+      return meta;
+    }
+
+    async function api(path, options) {
+      const res = await fetch(path, options);
+      if (res.status === 401) {
+        const err = new Error("signed out");
+        err.signedOut = true;
+        throw err;
+      }
+      return res;
+    }
+
+    function showFailure(err, fallback) {
+      if (err && err.signedOut) {
+        setPhase("idle", "لازم تسجّل دخولك أول من صفحة المحادثة الكتابية", true);
+      } else {
+        setPhase("idle", fallback, true);
+      }
+    }
+
+    // ---- listening ----------------------------------------------------------
+    // Decides, from one loudness reading every TICK_MS, whether someone has
+    // spoken and how long it has been quiet since.
+    //
+    // "Speech" is judged against the room's own noise, and that noise is
+    // followed all through the recording: it drops at once to any quieter
+    // reading and only creeps back up. So a loud start (the click on the mic
+    // button, or a first word said straight away) cannot leave the bar so
+    // high that normal speech stops counting and the question is cut short.
+    function createEndpointer(startedAt) {
+      const warmup = [];
+      let noise = null;
+      let heardSpeech = false;
+      let lastVoiceAt = startedAt;
+      return {
+        get heardSpeech() { return heardSpeech; },
+        // returns how many ms it has been quiet
+        update(level, now) {
+          if (noise === null) {
+            warmup.push(level);
+            if (now - startedAt < WARMUP_MS) return 0;
+            // the middle reading, not the loudest: the button click is in here
+            noise = Math.min(MAX_NOISE, [...warmup].sort((a, b) => a - b)[warmup.length >> 1]);
+            lastVoiceAt = now;
+            return 0;
+          }
+          noise = level < noise ? level : Math.min(MAX_NOISE, noise * 1.01);
+          const starts = level > Math.max(START_LEVEL, noise * 3);
+          // once someone is talking, a quieter level is enough to mean "still talking":
+          // the soft end of a word must not start the silence clock
+          const continues = heardSpeech && level > Math.max(KEEP_LEVEL, noise * 1.8);
+          if (starts) heardSpeech = true;
+          if (starts || continues) lastVoiceAt = now;
+          return now - lastVoiceAt;
+        },
+      };
+    }
+
+    let recorder = null;
+    let recording = null;   // the recording in progress, or null
+
+    async function startListening() {
+      stopSpeaking();
+      if (!navigator.mediaDevices || !window.MediaRecorder) {
+        setPhase("idle", "هالمتصفح ما يدعم التسجيل. جرّب Chrome أو Edge، أو اكتب سؤالك", true);
+        return;
+      }
+      let stream;
+      try {
+        stream = await navigator.mediaDevices.getUserMedia({
+          audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true },
+        });
+      } catch (e) {
+        setPhase("idle", "اسمح للصفحة تستخدم المايك عشان أسمعك", true);
+        return;
+      }
+
+      const mime = ["audio/webm;codecs=opus", "audio/webm", "audio/mp4", "audio/ogg;codecs=opus"]
+        .find((type) => MediaRecorder.isTypeSupported(type));
+      recorder = new MediaRecorder(stream, mime ? { mimeType: mime } : undefined);
+      const chunks = [];
+      const context = new AudioContext();
+      const analyser = context.createAnalyser();
+      analyser.fftSize = 2048;   // ~43 ms of sound per reading, so little is missed between ticks
+      context.createMediaStreamSource(stream).connect(analyser);
+      const samples = new Float32Array(analyser.fftSize);
+
+      const startedAt = performance.now();
+      const endpointer = createEndpointer(startedAt);
+      const session = { discard: false, stoppedByUser: false, timer: null };
+      recording = session;
+
+      // a timer, not requestAnimationFrame: it must keep running in a background tab
+      session.timer = setInterval(() => {
+        analyser.getFloatTimeDomainData(samples);
+        let sum = 0;
+        for (const sample of samples) sum += sample * sample;
+        const level = Math.sqrt(sum / samples.length);
+        const now = performance.now();
+        mic.style.setProperty("--level", Math.min(1, level * 6).toFixed(3));
+
+        const quietMs = endpointer.update(level, now);
+        const elapsed = now - startedAt;
+        if (elapsed > MAX_RECORDING_MS) { stopListening(); return; }
+        if (!autoStop.checked) return;   // the speaker ends the recording by hand
+        if (endpointer.heardSpeech ? quietMs > SILENCE_MS : elapsed > NO_SPEECH_MS) stopListening();
+      }, TICK_MS);
+
+      recorder.ondataavailable = (event) => { if (event.data.size) chunks.push(event.data); };
+      recorder.onstop = () => {
+        clearInterval(session.timer);
+        stream.getTracks().forEach((track) => track.stop());
+        context.close();
+        mic.style.setProperty("--level", 0);
+        const type = recorder.mimeType || mime || "audio/webm";
+        const longEnough = performance.now() - startedAt >= MIN_RECORDING_MS;
+        recording = null;
+        if (session.discard) return;
+        // Silence is never sent: speech recognition invents words when given
+        // none. A recording the speaker ended by hand is trusted to hold speech
+        // even if the level meter never rose (a very quiet microphone).
+        if (!longEnough || !(endpointer.heardSpeech || session.stoppedByUser)) {
+          setPhase("idle", "ما سمعت شي. قرّب من المايك وجرّب مرة ثانية");
+          return;
+        }
+        handleRecording(new Blob(chunks, { type }));
+      };
+      recorder.start();
+      setPhase("listening", autoStop.checked
+        ? "أسمعك... بوقف لحالي إذا سكتّ، أو اضغط إذا خلصت"
+        : "أسمعك... اضغط على المربع إذا خلصت");
+    }
+
+    function stopListening(how) {
+      if (!recording || !recorder || recorder.state === "inactive") return;
+      recording.discard = how === "discard";
+      recording.stoppedByUser = how === "by user";
+      recorder.stop();
+    }
+
+    async function handleRecording(blob) {
+      setPhase("transcribing");
+      const startedAt = performance.now();
+      let text;
+      try {
+        const res = await api("/voice/transcribe", {
+          method: "POST",
+          headers: { "Content-Type": blob.type },
+          body: blob,
+        });
+        if (!res.ok) throw new Error("transcribe failed");
+        text = (await res.json()).text;
+      } catch (err) {
+        showFailure(err, "ما قدرت أسمعك زين. جرّب مرة ثانية أو اكتب سؤالك");
+        return;
+      }
+      if (!text) { setPhase("idle", "ما فهمت اللي قلته. جرّب مرة ثانية"); return; }
+      await ask(text, performance.now() - startedAt);
+    }
+
+    // ---- asking and speaking ------------------------------------------------
+    const player = new Audio();
+    let turnToken = 0;         // bumping it cancels the answer being spoken
+    let abortStream = null;    // stops the answer still arriving from the server
+    let finishPlayback = null; // ends the sentence being played
+    let showRest = null;       // puts the unspoken rest of the answer on screen
+
+    // the /voice/ask stream: one JSON object per line
+    async function* readEvents(res) {
+      const reader = res.body.getReader();
+      const decoder = new TextDecoder();
+      let buffer = "";
+      try {
+        for (;;) {
+          const { value, done } = await reader.read();
+          if (done) return;
+          buffer += decoder.decode(value, { stream: true });
+          let newline;
+          while ((newline = buffer.indexOf("\n")) >= 0) {
+            const line = buffer.slice(0, newline).trim();
+            buffer = buffer.slice(newline + 1);
+            if (line) yield JSON.parse(line);
+          }
+        }
+      } finally {
+        reader.cancel().catch(() => { /* already closed */ });
+      }
+    }
+
+    // Plays one sentence and writes its words into `bubble` after `shown`,
+    // each word at the moment the voice starts saying it.
+    function playSentence(event, bubble, shown) {
+      return new Promise((resolve) => {
+        const words = event.text.split(/\s+/).filter(Boolean);
+        const given = event.word_starts_ms;
+        // normally one start time per word; if the voice counted the words
+        // differently, share out the times it did give
+        const starts = given.length
+          ? words.map((_, i) => given[Math.floor(i * given.length / words.length)])
+          : null;
+        const bytes = Uint8Array.from(atob(event.audio), (char) => char.charCodeAt(0));
+        const url = URL.createObjectURL(new Blob([bytes], { type: "audio/mpeg" }));
+        let timer = 0;
+        let visible = 0;
+        let over = false;
+
+        // ends this sentence, once - a late event from it can never end the next one
+        const finish = () => {
+          if (over) return;
+          over = true;
+          finishPlayback = null;
+          clearInterval(timer);
+          URL.revokeObjectURL(url);
+          resolve();
+        };
+
+        const render = () => {
+          const at = player.currentTime * 1000;
+          // the clip ends with close to a second of silence: do not sit through it
+          if (event.speech_end_ms && at > event.speech_end_ms + SENTENCE_PAUSE_MS) {
+            player.pause();
+            finish();
+            return;
+          }
+          let count;
+          if (starts) count = starts.filter((start) => start <= at).length;
+          // no timings at all: spread the words evenly over the clip
+          else if (Number.isFinite(player.duration)) count = Math.ceil(words.length * player.currentTime / player.duration);
+          else count = 0;
+          if (count > visible) {
+            visible = count;
+            bubble.classList.remove("waiting");
+            bubble.textContent = shown + words.slice(0, count).join(" ");
+            bubble.scrollIntoView({ block: "end" });
+          }
+        };
+
+        finishPlayback = finish;
+        player.onended = player.onerror = finish;
+        player.src = url;
+        player.play().then(() => {
+          // a timer, not requestAnimationFrame: the words must keep appearing
+          // while the tab is in the background and the voice plays on
+          if (!over) timer = setInterval(render, REVEAL_TICK_MS);
+        }).catch(finish);
+      });
+    }
+
+    async function ask(message, heardMs) {
+      addTurn("user", message);
+      setPhase("thinking");
+      const token = ++turnToken;
+      const startedAt = performance.now();
+      const seconds = (ms) => (ms / 1000).toFixed(1) + " ث";
+      const controller = new AbortController();
+      abortStream = () => controller.abort();
+
+      let answer = null;
+      let bubble = null;
+      let meta = null;
+      let shown = "";            // the sentences already spoken
+      let spokeSomething = false;
+      try {
+        const res = await api("/voice/ask", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ message, conversation_id: conversationId }),
+          signal: controller.signal,
+        });
+        if (!res.ok) throw new Error("ask failed");
+
+        for await (const event of readEvents(res)) {
+          if (token !== turnToken) return;
+          if (event.type === "answer") {
+            answer = event;
+            conversationId = answer.conversation_id;
+            try { sessionStorage.setItem("t2_voice_conversation_id", conversationId); } catch (e) { /* ignore */ }
+            // the bubble starts empty: its words arrive with the voice
+            const turn = addTurn("agent", "");
+            bubble = turn.firstChild;
+            bubble.classList.add("waiting");
+            meta = addDetails(turn, answer);
+            meta.textContent = (heardMs ? "تحويل الصوت لنص " + seconds(heardMs) + " · " : "")
+              + "الجواب " + seconds(performance.now() - startedAt);
+            showRest = () => { bubble.classList.remove("waiting"); bubble.textContent = answer.spoken; };
+          } else if (event.type === "sentence") {
+            if (event.audio) {
+              if (!spokeSomething) {
+                spokeSomething = true;
+                setPhase("speaking");
+                meta.textContent += " · أول صوت " + seconds(performance.now() - startedAt);
+              }
+              await playSentence(event, bubble, shown);
+              if (token !== turnToken) return;
+            }
+            // also covers a sentence the voice failed on: its text still appears
+            shown += event.text + " ";
+            bubble.classList.remove("waiting");
+            bubble.textContent = shown.trimEnd();
+          }
+        }
+      } catch (err) {
+        if (token !== turnToken) return;   // cancelled on purpose
+        if (!answer) { showFailure(err, "المساعد مو متاح الحين. جرّب بعد شوي"); return; }
+        // the connection dropped part-way: the text below is still shown
+      }
+      if (token !== turnToken) return;
+
+      abortStream = null;
+      if (!answer) { showFailure(null, "المساعد مو متاح الحين. جرّب بعد شوي"); return; }
+      showRest();
+      showRest = null;
+      if (!spokeSomething) {
+        setPhase("idle", "الصوت مو متاح الحين، بس الجواب مكتوب قدامك", true);
+        return;
+      }
+      setPhase("idle");
+      if (handsFree.checked) startListening();
+    }
+
+    function stopSpeaking() {
+      turnToken++;
+      if (abortStream) { abortStream(); abortStream = null; }
+      player.pause();
+      if (finishPlayback) finishPlayback();
+      if (showRest) { showRest(); showRest = null; }
+    }
+
+    // ---- controls -----------------------------------------------------------
+    mic.onclick = () => {
+      if (phase === "listening") stopListening("by user");
+      else if (phase === "speaking") { stopSpeaking(); setPhase("idle"); }
+      else if (phase === "idle") startListening();
+    };
+
+    document.getElementById("controls").onsubmit = (event) => {
+      event.preventDefault();
+      const message = typed.value.trim();
+      if (!message || phase === "transcribing" || phase === "thinking") return;
+      stopListening("discard");
+      stopSpeaking();
+      typed.value = "";
+      ask(message, 0);
+    };
+
+    document.getElementById("newChat").onclick = () => {
+      stopListening("discard");
+      stopSpeaking();
+      conversationId = null;
+      try { sessionStorage.removeItem("t2_voice_conversation_id"); } catch (e) { /* ignore */ }
+      log.replaceChildren();
+      setPhase("idle");
+    };
+
+    (async function init() {
+      setPhase("idle");
+      try {
+        const me = await (await fetch("/auth/me")).json();
+        if (!me.email) setPhase("idle", "لازم تسجّل دخولك أول من صفحة المحادثة الكتابية", true);
+      } catch (e) { /* the first request will report it */ }
+    })();
+  </script>
+</body>
+</html>

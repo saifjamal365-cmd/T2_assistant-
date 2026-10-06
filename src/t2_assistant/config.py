@@ -95,6 +95,23 @@ class Settings(BaseSettings):
         2, description="How many times the answer agent may re-search before replying."
     )
 
+    # --- Voice mode ------------------------------------------------------
+    stt_model: str = Field(
+        "whisper-large-v3",
+        description="Groq speech-to-text model. whisper-large-v3-turbo is ~2x faster, "
+        "slightly less accurate.",
+    )
+    stt_language: str = Field(
+        "ar",
+        description="Language the speaker is expected to use. Fixed rather than "
+        "auto-detected: detection is unreliable on a few seconds of dialect speech.",
+    )
+    tts_voice: str = Field(
+        "ar-SA-HamedNeural",
+        description="edge-tts voice that reads the answer aloud "
+        "(ar-SA-HamedNeural = male, ar-SA-ZariyahNeural = female).",
+    )
+
     # --- Sign-in (email + password) ----------------------------------------
     auth_email_domain: str = Field(
         "t2.sa", description="Only emails ending in this domain may sign in."

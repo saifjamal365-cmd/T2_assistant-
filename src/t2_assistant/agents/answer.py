@@ -343,8 +343,12 @@ def _judge_before_declining(
     return str(reply.content).strip()
 
 
-def respond(messages: list[AnyMessage], model: str) -> AIMessage:
-    """Answer the latest question from the knowledge base."""
+def respond(messages: list[AnyMessage], model: str, *, highlights: bool = True) -> AIMessage:
+    """Answer the latest question from the knowledge base.
+
+    `highlights=False` returns the sources without their highlighted
+    sentences - finding those is seconds of CPU embedding work, wasted where
+    nothing displays them (voice mode)."""
     steps = _StepCounter()
     corrected = _correct_spelling(_last_user_text(messages), model, steps)
     fixed_messages = [*messages[:-1], HumanMessage(corrected)]
@@ -384,7 +388,8 @@ def respond(messages: list[AnyMessage], model: str) -> AIMessage:
         sources = [p for p in last_passages if p.doc_id in cited] or last_passages
 
     passages_out = [
-        {**asdict(p), "highlights": _best_highlights(answer, p.text)} for p in sources
+        {**asdict(p), "highlights": _best_highlights(answer, p.text) if highlights else []}
+        for p in sources
     ]
     kwargs: dict[str, object] = {"steps": steps.count}
     if passages_out:

@@ -47,7 +47,10 @@ def _greeting_node(state: AgentState) -> dict[str, object]:
 
 
 def _answer_node(state: AgentState) -> dict[str, object]:
-    return {"messages": [answer.respond(state["messages"], state["answer_model"])]}
+    reply = answer.respond(
+        state["messages"], state["answer_model"], highlights=state.get("highlights", True)
+    )
+    return {"messages": [reply]}
 
 
 def _summarise_node(state: AgentState) -> dict[str, object]:

@@ -96,6 +96,37 @@ Chats can be organized into folders: `POST /folders` creates one, `GET
 and `DELETE /conversations/{id}` removes it completely, including its run and
 source records.
 
+## Voice mode
+
+`/voice` is a second page: press the microphone, ask out loud, and hear the
+answer in a Saudi voice. It is three steps around the normal chat turn, which
+is not changed (`src/t2_assistant/voice.py`):
+
+1. `POST /voice/transcribe` - the recording becomes text (Groq Whisper, same
+   API key as the LLM).
+2. `POST /voice/ask` - the usual `/chat` turn, then the written reply is
+   restyled into spoken Saudi dialect and read aloud (`ar-SA` neural voice via
+   `edge-tts`). The response is a stream of JSON lines: first the answer
+   (`reply` - written, with sources, also what is saved - and `spoken`), then
+   one line per spoken sentence with its mp3 audio and the moment each word
+   starts. The page plays the sentences in order and writes each word on
+   screen as the voice says it.
+
+The page decides the speaker has finished after 2 seconds of quiet, judged
+against the room's own noise level; a switch turns that off so the recording
+only ends when the microphone button is pressed again.
+
+The dialect rewrite is guarded: if it does not contain exactly the same
+numbers as the written answer, it is dropped and the written answer is read
+instead. The page always shows the written answer and its sources under the
+spoken one.
+
+Known limits: it is turn-based (tap to interrupt, not a phone call); the
+recogniser is fixed to Arabic (`STT_LANGUAGE`); the voice reads dialect text
+with a fairly formal accent; and `edge-tts` is an unofficial free service -
+fine for a prototype, replace it with Azure Speech for production. The
+microphone only works on `localhost` or over https.
+
 ## Signing in
 
 `POST /auth/login` takes an email and a password. The email must end in

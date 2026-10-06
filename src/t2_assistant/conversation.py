@@ -65,6 +65,7 @@ def chat(
     *,
     model: str | None = None,
     user_email: str | None = None,
+    highlights: bool = True,
 ) -> ChatResult:
     """Answer one user message.
 
@@ -74,7 +75,8 @@ def chat(
     itself always uses that same fixed default, never the caller's choice -
     see graph.py's _router_node - so the trace is tagged with both, under
     separate keys, rather than leaving the router's model implicit.
-    `user_email`, when known, tags the trace with who asked.
+    `user_email`, when known, tags the trace with who asked. `highlights=False`
+    skips marking the supporting sentence in each source (see answer.respond).
     """
     resolved_model = model or settings.llm_model
     messages: list[AnyMessage] = [*(history or []), HumanMessage(message)]
@@ -92,6 +94,7 @@ def chat(
             "route": None,
             "route_reason": None,
             "answer_model": resolved_model,
+            "highlights": highlights,
         }
     )
 
@@ -136,6 +139,7 @@ def run_turn(
     *,
     model: str | None = None,
     user_email: str,
+    highlights: bool = True,
 ) -> TurnResult:
     """Answer a message inside a conversation, saving the turn and a run record.
 
@@ -150,7 +154,9 @@ def run_turn(
     history = _to_messages(store.get_messages(conversation_id, user_email))
 
     started = time.perf_counter()
-    result = chat(message, history=history, model=model, user_email=user_email)
+    result = chat(
+        message, history=history, model=model, user_email=user_email, highlights=highlights
+    )
     duration_ms = int((time.perf_counter() - started) * 1000)
 
     trace_id = mlflow.get_last_active_trace_id()
