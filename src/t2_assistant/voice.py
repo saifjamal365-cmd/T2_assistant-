@@ -16,6 +16,11 @@ the rewrite does not carry exactly the same numbers as the written answer, it
 is thrown away and the written answer is spoken instead. A slightly formal
 answer is better than a Saudi-sounding wrong one.
 
+Each step records itself in MLflow as one span - `speech_to_text`,
+`voice_dialect`, and one `text_to_speech` per sentence - so that when they run
+inside a voice turn (see api.py) the whole turn is a single trace. Sound is
+never stored in a trace, only its size and length; the text is.
+
 edge-tts uses the free read-aloud service behind Microsoft Edge. It needs no
 key, which suits a prototype, but it is not a licensed production service -
 swap `_synthesize()` for Azure Speech (same voices) before a real rollout.
@@ -93,13 +98,24 @@ def _groq() -> Groq:
 def transcribe(audio: bytes, filename: str) -> str:
     """The words in a short recording. `filename` only tells Groq the audio
     format (its extension), so it must match what the browser recorded."""
-    result = _groq().audio.transcriptions.create(
-        file=(filename, audio),
-        model=settings.stt_model,
-        language=settings.stt_language,
-        temperature=0.0,
-    )
-    return result.text.strip()
+    with mlflow.start_span(name="speech_to_text", span_type=SpanType.TOOL) as span:
+        span.set_inputs(
+            {
+                "audio_bytes": len(audio),
+                "format": filename.rsplit(".", 1)[-1],
+                "model": settings.stt_model,
+                "language": settings.stt_language,
+            }
+        )
+        result = _groq().audio.transcriptions.create(
+            file=(filename, audio),
+            model=settings.stt_model,
+            language=settings.stt_language,
+            temperature=0.0,
+        )
+        text = result.text.strip()
+        span.set_outputs(text)
+        return text
 
 
 def _speakable(reply: str) -> str:
@@ -113,6 +129,17 @@ def _numbers(text: str) -> set[str]:
     return set(_NUMBER.findall(text.translate(_ARABIC_INDIC_DIGITS)))
 
 
+def _record_spoken_from(source: str, **details: object) -> None:
+    """Note on the trace which text ended up being spoken - "rewrite" (the
+    dialect version), "written" (the rewrite was rejected, or there was nothing
+    to rewrite) or "decline". As a tag as well, so MLflow can list every turn
+    where the accuracy check refused the rewrite: tags.`voice.spoken_from` = 'written'."""
+    span = mlflow.get_current_active_span()
+    if span is not None:
+        span.set_attributes({"spoken_from": source, **details})
+    mlflow.update_current_trace(tags={"voice.spoken_from": source})
+
+
 @mlflow.trace(name="voice_dialect", span_type=SpanType.LLM)
 def to_spoken(reply: str, model: str) -> str:
     """`reply` (a finished written answer) as Saudi-dialect text to read aloud.
@@ -121,15 +148,24 @@ def to_spoken(reply: str, model: str) -> str:
     dialect rewrite does not carry exactly the same numbers - see the module
     docstring."""
     if _is_decline(reply):
+        _record_spoken_from("decline")
         return _DONT_KNOW_SPOKEN
     written = _speakable(reply)
     if not written:
+        _record_spoken_from("written")
         return written
 
     rewrite = get_llm(model).invoke([SystemMessage(_SPOKEN_SYSTEM), HumanMessage(written)])
     spoken = _speakable(str(rewrite.content))
     if not spoken or _numbers(spoken) != _numbers(written):
+        _record_spoken_from(
+            "written",
+            rejected_rewrite=spoken,
+            numbers_in_written=sorted(_numbers(written)),
+            numbers_in_rewrite=sorted(_numbers(spoken)),
+        )
         return written
+    _record_spoken_from("rewrite")
     return spoken
 
 
@@ -149,17 +185,28 @@ def split_sentences(text: str) -> list[str]:
 
 async def _synthesize(text: str) -> Speech:
     """`text` read aloud by the configured Saudi voice."""
-    audio = bytearray()
-    word_starts_ms: list[int] = []
-    end_ms = 0
-    stream = edge_tts.Communicate(text, settings.tts_voice, boundary="WordBoundary").stream()
-    async for chunk in stream:
-        if chunk["type"] == "audio":
-            audio.extend(chunk["data"])
-        elif chunk["type"] == "WordBoundary":
-            word_starts_ms.append(int(chunk["offset"]) // _TICKS_PER_MS)
-            end_ms = (int(chunk["offset"]) + int(chunk["duration"])) // _TICKS_PER_MS
-    return Speech(audio=bytes(audio), word_starts_ms=word_starts_ms, end_ms=end_ms)
+    with mlflow.start_span(name="text_to_speech", span_type=SpanType.TOOL) as span:
+        span.set_inputs({"text": text, "voice": settings.tts_voice})
+        audio = bytearray()
+        word_starts_ms: list[int] = []
+        end_ms = 0
+        stream = edge_tts.Communicate(text, settings.tts_voice, boundary="WordBoundary").stream()
+        try:
+            async for chunk in stream:
+                if chunk["type"] == "audio":
+                    audio.extend(chunk["data"])
+                elif chunk["type"] == "WordBoundary":
+                    word_starts_ms.append(int(chunk["offset"]) // _TICKS_PER_MS)
+                    end_ms = (int(chunk["offset"]) + int(chunk["duration"])) // _TICKS_PER_MS
+        except asyncio.CancelledError:
+            # the listener stopped the answer before this sentence was ready:
+            # say so, or the span reads as a success that produced nothing
+            span.set_attribute("cancelled", True)
+            raise
+        span.set_outputs(
+            {"audio_bytes": len(audio), "speech_ms": end_ms, "words": len(word_starts_ms)}
+        )
+        return Speech(audio=bytes(audio), word_starts_ms=word_starts_ms, end_ms=end_ms)
 
 
 async def speak(text: str) -> AsyncIterator[tuple[str, Speech | None]]:
@@ -194,3 +241,6 @@ async def speak(text: str) -> AsyncIterator[tuple[str, Speech | None]]:
         # the listener interrupted or left: stop paying for audio nobody will hear
         for task in tasks:
             task.cancel()
+        # ...and wait for them to actually stop, so each one's span is closed
+        # before the trace it belongs to is
+        await asyncio.gather(*tasks, return_exceptions=True)

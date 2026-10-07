@@ -276,19 +276,35 @@ the model used, the number of steps the answer needed, and who asked. On the
 chat page, the **trace** link under an answer opens it, and a 👍 / 👎 is
 attached to it.
 
-**A spoken question** is only partly traced:
+**A voice turn** is one trace named `voice_turn`, whether the question was
+spoken or typed on the voice page. Every step of the turn is inside it:
 
-| Step of a voice turn | Traced? |
+| Step in the trace | What it records |
 |---|---|
-| Finding and writing the answer | Yes - the same `chat` trace as a typed question. |
-| Rewriting the answer into Saudi dialect | Yes - but as a second, separate trace named `voice_dialect` (the written answer in, the spoken text out). |
-| Speech to text | No. |
-| Text to speech | No. |
+| `speech_to_text` | The size and format of the recording, the model, and the text that was heard. Only for a spoken question. |
+| `chat` | The whole answer: the same steps as a typed question (router, searches, model calls). |
+| `voice_dialect` | The written answer going in, the spoken text coming out, and whether the rewrite was kept. |
+| `text_to_speech` | One per sentence: the sentence, the voice, and the length of the audio produced. |
 
-The two traces of a voice turn are not linked to each other, the `chat` trace
-does not say that it came from voice, and the voice page does not show a trace
-link. So today you can see *how the answer was produced* for a voice turn, but
-not the voice turn as one complete record.
+The top of the trace shows the turn as a whole: what was heard, the written
+reply, what was spoken, and how many sentences were read. On the voice page,
+the **trace** link under an answer opens it.
+
+**Sound is never stored in a trace** - neither your recording nor the spoken
+answer. Only text, sizes and timings are.
+
+Voice traces carry labels you can filter by in the MLflow search box:
+
+| Filter | Finds |
+|---|---|
+| `tags.channel = 'voice'` | Every voice turn (typed chat has no such label). |
+| ``tags.`voice.input` = 'speech'`` | Turns where the question was spoken (`'text'` = typed on the voice page). |
+| ``tags.`voice.spoken_from` = 'written'`` | Turns where the accuracy check **refused** the dialect rewrite and the written answer was read instead. The `voice_dialect` step shows the numbers that did not match. |
+| ``tags.`voice.interrupted` = 'true'`` | Turns the listener stopped while the answer was still being produced. |
+
+One thing a trace cannot show: what happened on the listener's device. It
+records the answer being *produced*, not being *played*, so an answer that was
+stopped after all its audio had already been made is not marked as interrupted.
 
 ## Settings
 
@@ -405,7 +421,7 @@ Read these with care:
 ## Tests and code checks
 
 ```bash
-pytest -m "not integration"   # 84 tests, no internet needed, about a minute
+pytest -m "not integration"   # 90 tests, no internet needed, about a minute
 pytest -m integration         # 16 more tests that call the real Groq API and the real index
 ruff check src tests          # code style
 mypy src tests                # type checking (strict)
@@ -413,6 +429,8 @@ mypy src tests                # type checking (strict)
 
 The normal tests replace the language model and the speech services with
 fakes, so they check this project's own logic and never spend API quota.
+They also use a throwaway database and a throwaway trace store, so running
+them never changes your conversations or adds fake traces to `mlflow.db`.
 
 ## Project layout
 
@@ -487,8 +505,8 @@ route except the two pages, `/health` and `/auth/*` needs a signed-in session
 | `GET /runs` , `GET /runs/{id}` | Past requests, each with its trace link and feedback. |
 | `POST /runs/{id}/feedback` | Record 👍 / 👎 (`helpful`, optional `comment`). |
 | `GET /kb/documents` , `GET /kb/documents/{doc_id}` | Browse the knowledge base (filter by `department`, `language`, `topic`, or title search `q`); read one document. |
-| `POST /voice/transcribe` | The request body is a recording; returns its text. |
-| `POST /voice/ask` | Like `/chat`, but the response is a stream of JSON lines: first the answer (written `reply` plus `spoken` text), then one line per spoken sentence with its mp3 audio and the time each word starts. |
+| `POST /voice/turn` | A spoken question. The request body is the recording (`conversation_id` as a query parameter to continue a conversation). The response is a stream of JSON lines: what was heard, then the answer (written `reply` plus `spoken` text), then one line per spoken sentence with its mp3 audio and the time each word starts. |
+| `POST /voice/ask` | The same for a typed question (`message`, `conversation_id`); the stream starts with the answer. |
 
 ## Known limits
 
@@ -515,8 +533,6 @@ route except the two pages, `/health` and `/auth/*` needs a signed-in session
   the text is in dialect.
 - The quality of the dialect has not been reviewed by a native Saudi speaker.
 - The microphone works only on `localhost` or over https, in Chrome or Edge.
-- A voice turn is only partly traced in MLflow - see
-  [Tracing](#tracing-seeing-how-an-answer-was-made).
 
 **Security and deployment**
 

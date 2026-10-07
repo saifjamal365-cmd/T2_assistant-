@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import mlflow
 import pytest
 from langchain_core.messages import AIMessage
 
@@ -131,3 +132,33 @@ def test_chat_defaults_steps_to_one_when_the_specialist_omits_it(
     result = conversation.chat("hey")
 
     assert result.steps == 1
+
+
+def test_run_turn_links_the_enclosing_trace_when_it_is_one_step_of_a_larger_one(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    """A voice turn runs run_turn() inside its own trace. The saved run must
+    then point at that trace - not at whichever trace happened to finish last."""
+
+    def fake_chat(
+        message: str,
+        history: list[object] | None = None,
+        *,
+        model: str | None = None,
+        user_email: str | None = None,
+        highlights: bool = True,
+    ) -> ChatResult:
+        return ChatResult(reply="ok", route="answer", route_reason="q", sources=[], model="m")
+
+    monkeypatch.setattr(conversation, "chat", fake_chat)
+    email = "conv-test@t2.sa"
+
+    with mlflow.start_span(name="an earlier, unrelated trace"):
+        pass
+    with mlflow.start_span(name="enclosing") as enclosing:
+        result = conversation.run_turn("a question", user_email=email)
+
+    assert result.trace_id == enclosing.trace_id
+    run = store.get_run(result.run_id, email)
+    assert run is not None
+    assert run.trace_id == enclosing.trace_id

@@ -5,6 +5,9 @@
   really call Groq are marked `integration` and skipped by default.
 - Point the SQLite store at a throwaway file so tests never touch the real
   store.db.
+- Point MLflow at a throwaway file too. Several tests run code that is traced
+  (chat turns, the voice steps); without this every test run would leave fake
+  traces in the real mlflow.db, mixed in with the real ones.
 """
 
 from __future__ import annotations
@@ -19,4 +22,8 @@ if not _env_file.exists() and "GROQ_API_KEY" not in os.environ:
 
 from t2_assistant.config import settings  # noqa: E402  (must follow the env setup)
 
-settings.store_db = Path(tempfile.mkdtemp(prefix="t2-test-")) / "store.db"
+_scratch = Path(tempfile.mkdtemp(prefix="t2-test-"))
+settings.store_db = _scratch / "store.db"
+# must be set before anything imports t2_assistant.conversation, which switches
+# tracing on at import time using this setting
+settings.mlflow_tracking_uri = f"sqlite:///{(_scratch / 'mlflow.db').as_posix()}"

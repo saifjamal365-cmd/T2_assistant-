@@ -23,9 +23,10 @@
     POST   /auth/logout                -> end the current session
     GET    /auth/me                    -> the signed-in email, or null
     GET    /voice                      -> the voice page (speak a question, hear the answer)
-    POST   /voice/transcribe           -> a recording (raw audio body) -> its text
-    POST   /voice/ask                  -> like /chat, answered as a stream: the reply,
-                                           then each spoken sentence with its audio
+    POST   /voice/turn                 -> a recording (raw audio body), answered as a
+                                           stream: what was heard, the reply, then
+                                           each spoken sentence with its audio
+    POST   /voice/ask                  -> the same for a typed question
 
 Every route other than the two pages, /health, and /auth/* requires a
 signed-in session (a cookie set by /auth/login) - see require_session below.
@@ -39,12 +40,18 @@ Hardening (NFR-07): a bad message is rejected before it reaches the agent
 (500) rather than an unhandled-error page. Every failure is still traced -
 the @mlflow.trace on chat() records it even when it raises.
 
+A voice turn is one MLflow trace named `voice_turn`, whichever of the two
+voice routes started it: hearing the question, the same chat turn as /chat,
+the rewrite into dialect, and reading each sentence aloud are steps inside it
+(see _voice_turn below).
+
 Run it with:  python -m t2_assistant     (see __main__.py)
 Web page:  http://localhost:8000/     Interactive API docs:  http://localhost:8000/docs
 """
 
 from __future__ import annotations
 
+import asyncio
 import base64
 import csv
 import json
@@ -53,10 +60,12 @@ from collections.abc import AsyncIterator
 from functools import lru_cache
 from pathlib import Path
 
+import mlflow
 from fastapi import FastAPI, HTTPException, Request, Response
 from fastapi.concurrency import run_in_threadpool
 from fastapi.responses import HTMLResponse, JSONResponse, StreamingResponse
 from groq import APIError
+from mlflow.entities import SpanType
 from pydantic import BaseModel, Field, field_validator
 
 from t2_assistant import auth, store, voice
@@ -354,10 +363,6 @@ def _chat_out(result: TurnResult) -> ChatOut:
     )
 
 
-class TranscriptOut(BaseModel):
-    text: str
-
-
 class VoiceAskOut(ChatOut):
     spoken: str = Field(description="The reply as Saudi-dialect text to read aloud.")
 
@@ -367,9 +372,209 @@ def voice_page() -> HTMLResponse:
     return HTMLResponse(_VOICE_HTML.read_text(encoding="utf-8"))
 
 
-@app.post("/voice/transcribe", response_model=TranscriptOut)
-async def post_transcribe(request: Request) -> TranscriptOut:
-    """The request body is the recording itself; Content-Type says its format."""
+# The events of one voice turn, in order; None marks the end.
+_VoiceEvents = asyncio.Queue[dict[str, object] | None]
+
+
+async def _voice_turn(
+    events: _VoiceEvents,
+    *,
+    user_email: str,
+    conversation_id: str | None,
+    model: str | None,
+    message: str | None = None,
+    recording: tuple[bytes, str] | None = None,
+) -> None:
+    """One whole voice turn, put on `events` piece by piece as it is produced:
+    what was heard (only when a `recording` - audio and its file name - was
+    sent instead of a typed `message`), the answer, each spoken sentence.
+
+    The turn is one MLflow trace, `voice_turn`. Everything below runs inside
+    that span, so each step files itself under it: `speech_to_text`, `chat`
+    (the very same turn /chat runs, with its router, searches and model
+    calls), `voice_dialect`, and a `text_to_speech` per sentence. The trace is
+    tagged `channel: voice` so voice turns can be told from typed chat.
+
+    It runs as a task of its own rather than inside the response stream, so
+    the span is opened and closed by one task: a stream can be dropped by the
+    client at any point, and a span left open across that would be closed from
+    somewhere else, or not at all.
+
+    Only the written reply is stored in the conversation - the spoken text is
+    a rendering of it, not a second answer.
+    """
+    outputs: dict[str, object] = {}
+    interrupted = False
+    with mlflow.start_span(name="voice_turn", span_type=SpanType.AGENT) as turn:
+        # the recording itself is never put in a trace - only its size
+        turn.set_inputs(
+            {"audio_bytes": len(recording[0]), "conversation_id": conversation_id}
+            if recording
+            else {"message": message, "conversation_id": conversation_id}
+        )
+        mlflow.update_current_trace(
+            tags={"channel": "voice", "voice.input": "speech" if recording else "text"},
+            metadata={"mlflow.trace.user": user_email},
+        )
+        try:
+            if recording:
+                message = await run_in_threadpool(voice.transcribe, *recording)
+                outputs["heard"] = message
+                events.put_nowait({"type": "heard", "text": message})
+            if message:  # nothing understood in the recording = nothing to answer
+                result = await run_in_threadpool(
+                    run_turn,
+                    message,
+                    conversation_id,
+                    model=model,
+                    user_email=user_email,
+                    highlights=False,  # the voice page lists sources by name only
+                )
+                spoken = await run_in_threadpool(voice.to_spoken, result.reply, result.model)
+                answer = VoiceAskOut(**_chat_out(result).model_dump(), spoken=spoken)
+                outputs.update(route=result.route, reply=result.reply, spoken=spoken)
+                events.put_nowait({"type": "answer", **answer.model_dump()})
+
+                sentences = without_audio = 0
+                outputs.update(sentences=0, sentences_without_audio=0)
+                async for sentence, speech in voice.speak(spoken):
+                    events.put_nowait(
+                        {
+                            "type": "sentence",
+                            "index": sentences,
+                            "text": sentence,
+                            # null when the voice failed on this sentence - the
+                            # page shows its text anyway
+                            "audio": base64.b64encode(speech.audio).decode("ascii")
+                            if speech
+                            else None,
+                            "word_starts_ms": speech.word_starts_ms if speech else [],
+                            "speech_end_ms": speech.end_ms if speech else 0,
+                        }
+                    )
+                    sentences += 1
+                    without_audio += speech is None
+                    outputs.update(sentences=sentences, sentences_without_audio=without_audio)
+            events.put_nowait({"type": "done"})
+        except asyncio.CancelledError:
+            # the listener cut the answer short (or left) while it was still
+            # being produced: worth seeing in the trace, but not a failure
+            interrupted = True
+            mlflow.update_current_trace(tags={"voice.interrupted": "true"})
+        except APIError as exc:
+            # the language model or speech recognition failed or is rate-limited
+            logger.warning("voice turn: a model call failed: %s", exc)
+            turn.record_exception(exc)
+            events.put_nowait(
+                {
+                    "type": "error",
+                    "status": 503,
+                    "detail": "The assistant is temporarily unavailable. Please try again.",
+                }
+            )
+        except Exception as exc:
+            # same promise as unhandled_error above: never a raw crash
+            logger.exception("voice turn failed")
+            turn.record_exception(exc)
+            events.put_nowait(
+                {"type": "error", "status": 500, "detail": f"Unexpected error: {exc}"[:300]}
+            )
+        finally:
+            turn.set_outputs(outputs)
+            events.put_nowait(None)
+    if interrupted:
+        raise asyncio.CancelledError
+
+
+async def _voice_response(
+    *,
+    user_email: str,
+    conversation_id: str | None,
+    model: str | None,
+    message: str | None = None,
+    recording: tuple[bytes, str] | None = None,
+) -> StreamingResponse:
+    """Start a voice turn and stream its events as JSON lines.
+
+    The response only begins once the turn has produced its first event, so a
+    turn that fails before anything was produced is still a normal error
+    response (503 / 500) rather than a stream that opens and reports failure.
+    """
+    events: _VoiceEvents = asyncio.Queue()
+    turn = asyncio.create_task(
+        _voice_turn(
+            events,
+            user_email=user_email,
+            conversation_id=conversation_id,
+            model=model,
+            message=message,
+            recording=recording,
+        )
+    )
+    try:
+        first = await events.get()
+    except asyncio.CancelledError:
+        turn.cancel()
+        raise
+    if first is not None and first["type"] == "error":
+        raise HTTPException(status_code=int(str(first["status"])), detail=str(first["detail"]))
+
+    async def lines() -> AsyncIterator[str]:
+        try:
+            event = first
+            while event is not None:
+                yield json.dumps(event, ensure_ascii=False) + "\n"
+                event = await events.get()
+        finally:
+            turn.cancel()  # the client stopped listening; does nothing once the turn is over
+
+    return StreamingResponse(lines(), media_type="application/x-ndjson")
+
+
+@app.post("/voice/ask")
+async def post_voice_ask(body: ChatIn, request: Request) -> StreamingResponse:
+    """A typed question, answered aloud.
+
+    The response is a stream of JSON lines, so the page can start talking
+    before the whole answer has been turned into audio:
+
+        {"type": "answer", ...}    the /chat fields plus `spoken`
+        {"type": "sentence", "index", "text", "audio", "word_starts_ms",
+         "speech_end_ms"}          one per spoken sentence, in order; `audio`
+                                   is base64 mp3, `word_starts_ms` says when
+                                   each word of `text` begins in it, and
+                                   `speech_end_ms` when the last one ends
+                                   (the clip has silence after that)
+        {"type": "done"}
+        {"type": "error", "status", "detail"}
+                                   instead of the rest, if the turn fails
+                                   after the stream has started
+
+    A failure before the first line is a normal error response (503), not a
+    stream.
+    """
+    return await _voice_response(
+        user_email=request.state.user_email,
+        conversation_id=body.conversation_id,
+        model=body.model,
+        message=body.message,
+    )
+
+
+@app.post("/voice/turn")
+async def post_voice_turn(
+    request: Request, conversation_id: str | None = None, model: ModelId | None = None
+) -> StreamingResponse:
+    """A spoken question, answered aloud.
+
+    The request body is the recording itself; Content-Type says its format.
+    `conversation_id` continues a conversation, as in /chat.
+
+    The response is the same stream as /voice/ask, with one line before the
+    answer: {"type": "heard", "text": ...} - what the recording was understood
+    to say. If that text is empty there is nothing to answer, and the stream
+    ends there.
+    """
     content_type = request.headers.get("content-type", "").split(";")[0].strip().lower()
     extension = _AUDIO_EXTENSIONS.get(content_type)
     if extension is None:
@@ -379,76 +584,12 @@ async def post_transcribe(request: Request) -> TranscriptOut:
         raise HTTPException(status_code=422, detail="the recording is empty")
     if len(audio) > _MAX_AUDIO_BYTES:
         raise HTTPException(status_code=413, detail="the recording is too long")
-    try:
-        text = await run_in_threadpool(voice.transcribe, audio, f"speech.{extension}")
-    except APIError as exc:
-        logger.warning("speech-to-text call failed: %s", exc)
-        raise HTTPException(
-            status_code=503, detail="Speech recognition is temporarily unavailable."
-        ) from exc
-    return TranscriptOut(text=text)
-
-
-def _event(kind: str, **fields: object) -> str:
-    """One line of the /voice/ask stream."""
-    return json.dumps({"type": kind, **fields}, ensure_ascii=False) + "\n"
-
-
-async def _voice_events(answer: VoiceAskOut) -> AsyncIterator[str]:
-    yield _event("answer", **answer.model_dump())
-    index = 0
-    async for sentence, speech in voice.speak(answer.spoken):
-        yield _event(
-            "sentence",
-            index=index,
-            text=sentence,
-            # null when the voice failed on this sentence - the page shows its text anyway
-            audio=base64.b64encode(speech.audio).decode("ascii") if speech else None,
-            word_starts_ms=speech.word_starts_ms if speech else [],
-            speech_end_ms=speech.end_ms if speech else 0,
-        )
-        index += 1
-    yield _event("done")
-
-
-@app.post("/voice/ask")
-async def post_voice_ask(body: ChatIn, request: Request) -> StreamingResponse:
-    """One voice turn: the normal chat turn (saved to the conversation as
-    usual), then that reply restyled for speech. Only the written reply is
-    stored - the spoken text is a rendering of it, not a second answer.
-
-    The response is a stream of JSON lines, so the page can start talking
-    before the whole answer has been turned into audio:
-
-        {"type": "answer", ...}    the /chat fields plus `spoken` - sent first
-        {"type": "sentence", "index", "text", "audio", "word_starts_ms",
-         "speech_end_ms"}          one per spoken sentence, in order; `audio`
-                                   is base64 mp3, `word_starts_ms` says when
-                                   each word of `text` begins in it, and
-                                   `speech_end_ms` when the last one ends
-                                   (the clip has silence after that)
-        {"type": "done"}
-
-    A failure before the answer exists is a normal error response (503), not
-    a stream.
-    """
-    try:
-        result = await run_in_threadpool(
-            run_turn,
-            body.message,
-            body.conversation_id,
-            model=body.model,
-            user_email=request.state.user_email,
-            highlights=False,  # the voice page lists sources by name only
-        )
-        spoken = await run_in_threadpool(voice.to_spoken, result.reply, result.model)
-    except APIError as exc:
-        logger.warning("language model call failed: %s", exc)
-        raise HTTPException(
-            status_code=503, detail="The assistant is temporarily unavailable. Please try again."
-        ) from exc
-    answer = VoiceAskOut(**_chat_out(result).model_dump(), spoken=spoken)
-    return StreamingResponse(_voice_events(answer), media_type="application/x-ndjson")
+    return await _voice_response(
+        user_email=request.state.user_email,
+        conversation_id=conversation_id,
+        model=model,
+        recording=(audio, f"speech.{extension}"),
+    )
 
 
 @app.get("/conversations", response_model=list[ConversationSummaryOut])

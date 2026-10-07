@@ -159,7 +159,12 @@ def run_turn(
     )
     duration_ms = int((time.perf_counter() - started) * 1000)
 
-    trace_id = mlflow.get_last_active_trace_id()
+    # Normally chat() was its own trace and has just finished. But a caller may
+    # run this turn inside a larger trace of its own (a voice turn does: speech
+    # in, this turn, speech out) - then chat() was one step of that trace, which
+    # is still open, and "the last finished trace" would be somebody else's.
+    enclosing = mlflow.get_current_active_span()
+    trace_id = enclosing.trace_id if enclosing else mlflow.get_last_active_trace_id()
 
     store.add_message(conversation_id, "user", message)
     store.add_message(conversation_id, "assistant", result.reply)

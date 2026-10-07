@@ -65,6 +65,9 @@
              animation: blink 1.2s ease-in-out infinite; }
     @keyframes blink { 50% { opacity: .25; } }
     .meta { font-size: 12.5px; color: var(--muted); padding: 0 6px; }
+    .meta a { color: var(--link); text-decoration: none; margin-inline-start: 10px;
+              display: inline-block; direction: ltr; }
+    .meta a:hover { text-decoration: underline; }
     details { font-size: 14px; color: var(--muted); padding: 0 6px; }
     details summary { cursor: pointer; width: fit-content; }
     details .written { margin: 6px 0; padding: 10px 14px; border-inline-start: 3px solid var(--accent);
@@ -225,6 +228,17 @@
     function addDetails(turn, data) {
       const meta = document.createElement("div");
       meta.className = "meta";
+      const timings = document.createElement("span");
+      meta.appendChild(timings);
+      if (data.trace_url) {
+        // the whole turn - hearing, answering, speaking - as one MLflow trace
+        const link = document.createElement("a");
+        link.href = data.trace_url;
+        link.target = "_blank";
+        link.rel = "noopener";
+        link.textContent = "trace ↗";
+        meta.appendChild(link);
+      }
       turn.appendChild(meta);
 
       const details = document.createElement("details");
@@ -246,7 +260,7 @@
         details.appendChild(chips);
       }
       turn.appendChild(details);
-      return meta;
+      return timings;
     }
 
     async function api(path, options) {
@@ -387,26 +401,6 @@
       recorder.stop();
     }
 
-    async function handleRecording(blob) {
-      setPhase("transcribing");
-      const startedAt = performance.now();
-      let text;
-      try {
-        const res = await api("/voice/transcribe", {
-          method: "POST",
-          headers: { "Content-Type": blob.type },
-          body: blob,
-        });
-        if (!res.ok) throw new Error("transcribe failed");
-        text = (await res.json()).text;
-      } catch (err) {
-        showFailure(err, "ما قدرت أسمعك زين. جرّب مرة ثانية أو اكتب سؤالك");
-        return;
-      }
-      if (!text) { setPhase("idle", "ما فهمت اللي قلته. جرّب مرة ثانية"); return; }
-      await ask(text, performance.now() - startedAt);
-    }
-
     // ---- asking and speaking ------------------------------------------------
     const player = new Audio();
     let turnToken = 0;         // bumping it cancels the answer being spoken
@@ -495,32 +489,59 @@
       });
     }
 
-    async function ask(message, heardMs) {
+    // A recording goes to the server as it is, in one request: it is heard,
+    // answered and read back as a single turn (and so a single trace).
+    function handleRecording(blob) {
+      setPhase("transcribing");
+      const query = conversationId ? "?conversation_id=" + encodeURIComponent(conversationId) : "";
+      return runTurn(true, (signal) => api("/voice/turn" + query, {
+        method: "POST",
+        headers: { "Content-Type": blob.type },
+        body: blob,
+        signal,
+      }));
+    }
+
+    function askTyped(message) {
       addTurn("user", message);
       setPhase("thinking");
+      return runTurn(false, (signal) => api("/voice/ask", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message, conversation_id: conversationId }),
+        signal,
+      }));
+    }
+
+    // One turn: `send` makes the request, and the answer is played as it
+    // streams back. `spoken` = the question was a recording, so the stream
+    // starts by saying what was heard.
+    async function runTurn(spoken, send) {
       const token = ++turnToken;
       const startedAt = performance.now();
       const seconds = (ms) => (ms / 1000).toFixed(1) + " ث";
       const controller = new AbortController();
       abortStream = () => controller.abort();
 
+      let knownAt = spoken ? null : startedAt;   // when the question's words were known
+      let understood = true;
       let answer = null;
       let bubble = null;
-      let meta = null;
+      let timings = null;
       let shown = "";            // the sentences already spoken
       let spokeSomething = false;
       try {
-        const res = await api("/voice/ask", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ message, conversation_id: conversationId }),
-          signal: controller.signal,
-        });
-        if (!res.ok) throw new Error("ask failed");
+        const res = await send(controller.signal);
+        if (!res.ok) throw new Error("turn failed");
 
         for await (const event of readEvents(res)) {
           if (token !== turnToken) return;
-          if (event.type === "answer") {
+          if (event.type === "heard") {
+            knownAt = performance.now();
+            if (!event.text) { understood = false; break; }
+            addTurn("user", event.text);
+            setPhase("thinking");
+          } else if (event.type === "answer") {
             answer = event;
             conversationId = answer.conversation_id;
             try { sessionStorage.setItem("t2_voice_conversation_id", conversationId); } catch (e) { /* ignore */ }
@@ -528,16 +549,16 @@
             const turn = addTurn("agent", "");
             bubble = turn.firstChild;
             bubble.classList.add("waiting");
-            meta = addDetails(turn, answer);
-            meta.textContent = (heardMs ? "تحويل الصوت لنص " + seconds(heardMs) + " · " : "")
-              + "الجواب " + seconds(performance.now() - startedAt);
+            timings = addDetails(turn, answer);
+            timings.textContent = (spoken ? "تحويل الصوت لنص " + seconds(knownAt - startedAt) + " · " : "")
+              + "الجواب " + seconds(performance.now() - knownAt);
             showRest = () => { bubble.classList.remove("waiting"); bubble.textContent = answer.spoken; };
           } else if (event.type === "sentence") {
             if (event.audio) {
               if (!spokeSomething) {
                 spokeSomething = true;
                 setPhase("speaking");
-                meta.textContent += " · أول صوت " + seconds(performance.now() - startedAt);
+                timings.textContent += " · أول صوت " + seconds(performance.now() - knownAt);
               }
               await playSentence(event, bubble, shown);
               if (token !== turnToken) return;
@@ -547,15 +568,23 @@
             bubble.classList.remove("waiting");
             bubble.textContent = shown.trimEnd();
           }
+          // an "error" line needs nothing here: the stream ends after it, and
+          // the code below already handles a turn that stopped short
         }
       } catch (err) {
         if (token !== turnToken) return;   // cancelled on purpose
-        if (!answer) { showFailure(err, "المساعد مو متاح الحين. جرّب بعد شوي"); return; }
+        if (!answer) {
+          showFailure(err, knownAt === null
+            ? "ما قدرت أسمعك زين. جرّب مرة ثانية أو اكتب سؤالك"
+            : "المساعد مو متاح الحين. جرّب بعد شوي");
+          return;
+        }
         // the connection dropped part-way: the text below is still shown
       }
       if (token !== turnToken) return;
 
       abortStream = null;
+      if (!understood) { setPhase("idle", "ما فهمت اللي قلته. جرّب مرة ثانية"); return; }
       if (!answer) { showFailure(null, "المساعد مو متاح الحين. جرّب بعد شوي"); return; }
       showRest();
       showRest = null;
@@ -589,7 +618,7 @@
       stopListening("discard");
       stopSpeaking();
       typed.value = "";
-      ask(message, 0);
+      askTyped(message);
     };
 
     document.getElementById("newChat").onclick = () => {
